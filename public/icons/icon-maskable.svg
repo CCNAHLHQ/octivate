@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Octivate">
+  <rect width="512" height="512" rx="108" fill="#070B17"/>
+  <g transform="translate(156 172) scale(2.35)">
+    <circle cx="30" cy="28" r="26" fill="#8A4FFF" opacity="0.88"/>
+    <circle cx="30" cy="52" r="26" fill="#FF5C5C" opacity="0.88"/>
+    <circle cx="56" cy="40" r="26" fill="#3399FF" opacity="0.88"/>
+    <path fill="#fff" d="M44 31.5 C45.8 35.2 47.2 37.4 50 39.5 C47.2 41.6 45.8 43.8 44 47.5 C42.2 43.8 40.8 41.6 38 39.5 C40.8 37.4 42.2 35.2 44 31.5 Z"/>
+  </g>
+</svg>

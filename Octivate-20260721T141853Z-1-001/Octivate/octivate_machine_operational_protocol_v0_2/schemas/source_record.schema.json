@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/source_record.schema.json",
+  "title": "Octivate Source Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "title",
+    "evidence_class",
+    "reliability",
+    "decision_relevance"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "author_or_issuer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publication_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_class": {
+      "type": "string",
+      "enum": [
+        "primary_authoritative",
+        "direct_actor",
+        "independent_reporting",
+        "expert_interpretation",
+        "behavioural_operational_signal",
+        "public_discourse_signal",
+        "weak_unverified_signal"
+      ]
+    },
+    "reliability": {
+      "type": "string",
+      "enum": [
+        "high",
+        "moderate",
+        "low",
+        "unclear"
+      ]
+    },
+    "decision_relevance": {
+      "type": "string"
+    },
+    "known_biases_or_incentives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "corroborating_source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

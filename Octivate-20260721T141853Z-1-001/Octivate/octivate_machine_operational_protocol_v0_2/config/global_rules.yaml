@@ -1,0 +1,50 @@
+protocol:
+  name: Octivate Machine-Operational Protocol
+  version: "0.2"
+  doctrine_version: "0.1.1"
+  owner: CENSII
+
+runtime_principle:
+  rule: Agents inspect broadly but report narrowly.
+
+materiality_test:
+  include_when:
+    - changes_decision
+    - changes_confidence
+    - changes_option_choice
+    - changes_timing
+    - changes_exposure
+    - changes_monitoring
+  exclude_when:
+    - background_only
+    - weakly_related
+    - duplicative
+    - weakly_evidenced
+    - immaterial
+    - taxonomy_completion_only
+
+binding_rules:
+  - id: SCOPE-DECISION-01
+    rule: Begin with a defined decision, not a broad topic.
+  - id: MATERIALITY-01
+    rule: Report only material, evidenced and decision-relevant findings.
+  - id: EVIDENCE-LINK-01
+    rule: Link every material finding to evidence identifiers.
+  - id: EVIDENCE-TYPE-01
+    rule: Classify every material finding as fact, inference, assumption, forecast or unknown.
+  - id: POWER-FORMAL-01
+    rule: Distinguish formal authority from effective power.
+  - id: SYSTEMS-PRACTICE-01
+    rule: Distinguish official process from operating practice.
+  - id: NARRATIVE-VISIBILITY-01
+    rule: Distinguish visible discourse from representative opinion.
+  - id: INTENT-DISCIPLINE-01
+    rule: Do not infer intent as fact.
+  - id: ETHICS-ASSOCIATION-01
+    rule: Do not treat relationships as proof of misconduct.
+  - id: ANALYSIS-RECOMMENDATION-01
+    rule: Separate analytical judgement from strategic recommendation.
+  - id: PSN-SYNTHESIS-01
+    rule: Identify at least one salient PSN interaction unless evidence is insufficient.
+  - id: HUMAN-APPROVAL-01
+    rule: No final delivery without explicit human approval.

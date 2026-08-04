@@ -1,0 +1,791 @@
+/* Export template studio — professional SaaS layout */
+
+/* —— Command bar —— */
+.exp-command-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2);
+}
+
+.exp-command-search {
+  flex: 1;
+  min-width: min(100%, 200px);
+}
+
+.exp-command-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.exp-count-pill {
+  font-family: var(--f-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--pill-bg);
+  white-space: nowrap;
+}
+
+/* —— Studio shell —— */
+.exp-studio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  min-width: 0;
+}
+
+.exp-studio.is-dragover::after {
+  content: "Drop HTML or ZIP to import";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-lg);
+  border: 2px dashed var(--accent-soft-border);
+  background: color-mix(in srgb, var(--drawer-bg) 88%, var(--accent-soft-bg));
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+
+.exp-studio-upper {
+  display: grid;
+  gap: var(--s3);
+  align-items: start;
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .exp-studio-upper {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+}
+
+.exp-studio-divider {
+  border: 0;
+  border-top: 1px solid var(--line-strong);
+  margin: 0;
+  width: 100%;
+}
+
+/* —— Template rail —— */
+.exp-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.exp-rail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-height: min(280px, 32vh);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 0.1rem;
+}
+
+.exp-rail-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.65rem 0.75rem;
+  padding-left: 1.65rem;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--drawer-bg) 90%, transparent);
+  cursor: pointer;
+  min-width: 0;
+  overflow: hidden;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.exp-rail-card.is-selected {
+  border-color: var(--accent-soft-border);
+  background: var(--accent-soft-bg);
+  box-shadow: var(--shadow-panel);
+}
+
+.exp-rail-card.is-disabled {
+  opacity: 0.65;
+}
+
+.exp-rail-card.is-dragging {
+  opacity: 0.4;
+}
+
+/* Drop outline showing where a dragged card will land. */
+.exp-rail-card.is-drop-target {
+  border-color: var(--violet);
+  box-shadow: inset 0 3px 0 -1px var(--violet), 0 0 0 1px var(--accent-soft-border);
+}
+
+.exp-rail-rename {
+  width: 100%;
+  min-width: 0;
+  border-radius: var(--r-sm, 6px);
+  border: 1px solid var(--violet);
+  background: var(--abyss, rgba(0, 0, 0, 0.35));
+  color: var(--foam);
+  padding: 0.2rem 0.4rem;
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.exp-rail-grip {
+  position: absolute;
+  left: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--faint);
+  cursor: grab;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.exp-rail-card:hover .exp-rail-grip,
+.exp-rail-card.is-selected .exp-rail-grip {
+  opacity: 1;
+}
+
+.exp-rail-name {
+  font-family: var(--f-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--foam);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.exp-rail-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.exp-rail-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.exp-rail-tag {
+  font-family: var(--f-mono);
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.08rem 0.35rem;
+  border-radius: 999px;
+  flex: none;
+}
+
+.exp-rail-tag.is-live {
+  color: var(--tide);
+  background: color-mix(in srgb, var(--tide) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tide) 28%, transparent);
+}
+
+.exp-rail-tag.is-hidden {
+  color: var(--faint);
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+}
+
+.exp-rail-tag.is-import {
+  color: var(--accent-soft-text);
+  background: var(--accent-soft-bg);
+  border: 1px solid var(--accent-soft-border);
+}
+
+.exp-rail-tag.is-draft {
+  color: var(--amber, #f59e0b);
+  background: color-mix(in srgb, #f59e0b 12%, transparent);
+  border: 1px solid color-mix(in srgb, #f59e0b 28%, transparent);
+}
+
+.exp-rail-card.is-dirty {
+  border-color: color-mix(in srgb, #f59e0b 35%, var(--line));
+}
+
+.exp-rail-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  flex: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.exp-rail-card:hover .exp-rail-actions,
+.exp-rail-card.is-selected .exp-rail-actions {
+  opacity: 1;
+}
+
+.exp-rail-action {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--faint);
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.exp-rail-action:hover:not(:disabled) {
+  background: var(--ghost-hover-bg);
+  color: var(--foam);
+}
+
+.exp-rail-action.is-danger:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--coral) 12%, transparent);
+  color: var(--coral);
+}
+
+.exp-rail-action:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.exp-rail-empty {
+  padding: var(--s2);
+  font-size: 0.8125rem;
+  color: var(--mist);
+  text-align: center;
+}
+
+/* —— Config bar —— */
+.exp-config {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  min-width: 0;
+}
+
+.exp-config-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--s2);
+  min-width: 0;
+}
+
+.exp-config-row-name {
+  flex: 1;
+  min-width: min(100%, 200px);
+}
+
+.exp-config-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: none;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--pill-bg);
+  font-family: var(--f-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  cursor: default;
+}
+
+.exp-config-status.is-saved {
+  color: var(--tide);
+  border-color: color-mix(in srgb, var(--tide) 28%, transparent);
+}
+
+.exp-config-status.is-dirty {
+  color: #f59e0b;
+  border-color: color-mix(in srgb, #f59e0b 35%, transparent);
+  cursor: pointer;
+}
+
+.exp-config-status.is-error {
+  color: var(--coral);
+  border-color: color-mix(in srgb, var(--coral) 35%, transparent);
+  cursor: pointer;
+}
+
+.exp-config-status:not(:disabled):hover {
+  background: var(--ghost-hover-bg);
+}
+
+.exp-config-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.exp-config-grid {
+  display: grid;
+  gap: var(--s2);
+  grid-template-columns: 1fr;
+  min-width: 0;
+}
+
+@media (min-width: 560px) {
+  .exp-config-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.exp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.exp-field label {
+  font-family: var(--f-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.exp-field input,
+.exp-field select {
+  min-width: 0;
+}
+
+.exp-config-more {
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.exp-config-more:hover {
+  color: var(--mist);
+}
+
+.exp-config-more svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  transition: transform 0.2s ease;
+}
+
+.exp-config-more.is-open svg {
+  transform: rotate(90deg);
+}
+
+.exp-config-advanced {
+  display: grid;
+  gap: var(--s2);
+  grid-template-columns: 1fr;
+  padding-top: 0.25rem;
+}
+
+@media (min-width: 560px) {
+  .exp-config-advanced {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.exp-config-empty {
+  display: grid;
+  place-items: center;
+  min-height: 160px;
+  padding: var(--s2);
+  border-radius: var(--r-lg);
+  border: 1px dashed var(--line-strong);
+  background: var(--ghost-bg);
+  text-align: center;
+}
+
+.exp-config-empty p {
+  font-size: 0.8125rem;
+  color: var(--mist);
+  margin: 0 0 0.75rem;
+}
+
+/* —— Full-bleed workspace —— */
+.exp-workspace-shell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: clamp(480px, calc(100vh - 320px), 720px);
+  min-height: clamp(480px, calc(100vh - 320px), 720px);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line-strong);
+  background: color-mix(in srgb, var(--drawer-bg) 92%, transparent);
+  overflow: hidden;
+  box-shadow: var(--shadow-panel);
+}
+
+.exp-workspace-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2);
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--ghost-bg) 80%, transparent);
+  flex: none;
+}
+
+.exp-workspace-title {
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.exp-workspace-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.exp-workspace-tools-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--line);
+  margin: 0 0.15rem;
+}
+
+/* IDE-style split: source | preview */
+.exp-workspace-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .exp-workspace-split {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(200px, 1fr) 1px minmax(200px, 1fr);
+  }
+}
+
+.exp-workspace-split-divider {
+  background: var(--line-strong);
+  min-height: 0;
+}
+
+.exp-split-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.exp-split-pane-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: none;
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--ghost-bg) 60%, transparent);
+  font-family: var(--f-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.exp-split-pane-head-tabs {
+  padding: 0 0.35rem;
+}
+
+.exp-split-pane-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.exp-source-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.exp-source-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  font-family: var(--f-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.exp-source-tab:hover {
+  color: var(--mist);
+  background: var(--ghost-hover-bg);
+}
+
+.exp-source-tab.is-active {
+  color: var(--foam);
+  border-bottom-color: var(--violet);
+}
+
+.exp-source-tab.is-static {
+  cursor: default;
+  pointer-events: none;
+}
+
+.exp-source-tab.is-static:hover {
+  background: transparent;
+  color: var(--foam);
+}
+
+.exp-source-tab svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.exp-source-save-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: auto;
+  padding: 0.2rem 0.45rem;
+  font-family: var(--f-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.exp-source-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.exp-source-pane.is-hidden {
+  display: none;
+}
+
+.exp-split-pane-preview .exp-split-pane-body {
+  background: #fff;
+}
+
+.exp-workspace-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-workspace-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.exp-workspace-pane.is-hidden {
+  display: none;
+}
+
+.exp-workspace-pane-preview {
+  flex: 1;
+  min-height: 0;
+}
+
+.exp-code-editor {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+  resize: none;
+  padding: var(--s3);
+  border: none;
+  border-radius: 0;
+  background: var(--abyss);
+  color: var(--foam);
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  outline: none;
+}
+
+.exp-code-editor:focus {
+  box-shadow: inset 0 0 0 1px var(--accent-soft-border);
+}
+
+/* —— Visual (click-to-edit) editor pane —— */
+.exp-visual-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.exp-visual-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.7rem;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.25);
+  background: linear-gradient(90deg, rgba(168, 85, 247, 0.14), rgba(45, 212, 191, 0.06));
+  color: var(--foam);
+  font-family: var(--f-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.exp-visual-hint svg {
+  color: var(--violet);
+  flex: none;
+}
+
+.exp-visual-frame {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  border: none;
+  background: #fff;
+}
+
+.exp-preview-frame-wrap {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.exp-preview-frame-wrap.is-updating .exp-preview-frame {
+  opacity: 0.72;
+  filter: saturate(0.92);
+}
+
+.exp-preview-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background: color-mix(in srgb, #0f172a 18%, transparent);
+  color: #f8fafc;
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.exp-preview-stale-label {
+  margin-left: auto;
+  font-family: var(--f-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f59e0b;
+}
+
+.exp-preview-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--f-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.exp-preview-frame {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+
+.exp-preview-empty {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  color: var(--faint);
+  font-size: 0.875rem;
+}
+
+.exp-export-btn {
+  min-width: auto;
+  padding-left: 0.55rem;
+  padding-right: 0.65rem;
+}

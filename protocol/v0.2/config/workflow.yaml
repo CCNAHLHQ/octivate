@@ -1,0 +1,43 @@
+states:
+  - DECISION_INTAKE
+  - DECISION_VALIDATED
+  - RESEARCH_PLAN
+  - SOURCE_RETRIEVAL
+  - SOURCE_VALIDATION
+  - EVIDENCE_EXTRACTION
+  - POWER_ANALYSIS
+  - SYSTEMS_ANALYSIS
+  - NARRATIVE_ANALYSIS
+  - PSN_SYNTHESIS
+  - CAUSAL_ASSESSMENT
+  - SCENARIO_DEVELOPMENT
+  - DECISION_OPTIONS
+  - RECOMMENDATION_DRAFT
+  - HUMAN_REVIEW
+  - APPROVED_DELIVERY
+  - MONITORING
+
+gates:
+  DECISION_VALIDATED:
+    required:
+      - decision_question
+      - decision_owner
+      - timeframe
+      - geographic_scope
+      - options
+      - consequence_of_error
+      - principal_uncertainty
+  PSN_SYNTHESIS:
+    requires_one_of:
+      - all_three_lens_outputs
+      - explicit_insufficient_evidence_status
+  RECOMMENDATION_DRAFT:
+    required:
+      - analytical_judgement
+      - options
+      - tradeoffs
+  APPROVED_DELIVERY:
+    required:
+      - schema_valid
+      - human_review_complete
+      - final_approval_true

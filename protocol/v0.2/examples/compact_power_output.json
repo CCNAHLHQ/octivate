@@ -1,0 +1,48 @@
+{
+  "agent": "power_analyst",
+  "decision_id": "DEC-EXAMPLE-001",
+  "analysis_depth": "standard",
+  "output_status": "complete",
+  "material_findings": [
+    {
+      "finding_id": "PWR-001",
+      "finding": "The sector regulator can materially delay market entry.",
+      "decision_effect": "The proposed launch date remains conditional on regulatory processing.",
+      "evidence_ids": [
+        "SRC-012",
+        "SRC-018"
+      ],
+      "judgement_type": "inference",
+      "confidence": "high",
+      "competing_explanations": [],
+      "disconfirming_evidence": [],
+      "monitoring_indicators": [
+        "Publication of the final licence decision"
+      ],
+      "review_flags": [
+        "inference"
+      ],
+      "materiality_justification": "Timing affects financing, launch cost and the proceed-or-delay decision.",
+      "actor": "Sector regulator",
+      "power_types": [
+        "authoritative",
+        "institutional"
+      ],
+      "source_of_power": "Licensing authority",
+      "mechanism": "Conditions or delays licence approval",
+      "target": "Proposed market entry",
+      "condition": "A final licence is required before operations begin",
+      "constraints": [
+        "Statutory procedure",
+        "Judicial review"
+      ]
+    }
+  ],
+  "evidence_gaps": [],
+  "overall_confidence": "high",
+  "review_flags": [
+    "inference"
+  ],
+  "additional_research_requests": [],
+  "limit_exceeded_reason": null
+}

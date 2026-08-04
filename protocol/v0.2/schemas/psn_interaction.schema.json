@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/psn_interaction.schema.json",
+  "title": "Octivate PSN Interaction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "interaction_id",
+    "power_component",
+    "systems_component",
+    "narrative_component",
+    "causal_interaction",
+    "decision_effect",
+    "evidence_ids",
+    "confidence",
+    "review_flags"
+  ],
+  "properties": {
+    "interaction_id": {
+      "type": "string"
+    },
+    "power_component": {
+      "type": "string"
+    },
+    "systems_component": {
+      "type": "string"
+    },
+    "narrative_component": {
+      "type": "string"
+    },
+    "causal_interaction": {
+      "type": "string"
+    },
+    "decision_effect": {
+      "type": "string"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "moderate",
+        "low",
+        "plausible_unverified",
+        "insufficient_evidence"
+      ]
+    },
+    "monitoring_indicators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

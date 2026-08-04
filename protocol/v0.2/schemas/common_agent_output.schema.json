@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/common_agent_output.schema.json",
+  "title": "Octivate Common Agent Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "agent",
+    "decision_id",
+    "analysis_depth",
+    "output_status",
+    "material_findings",
+    "evidence_gaps",
+    "overall_confidence",
+    "review_flags"
+  ],
+  "properties": {
+    "agent": {
+      "type": "string"
+    },
+    "decision_id": {
+      "type": "string"
+    },
+    "analysis_depth": {
+      "type": "string",
+      "enum": [
+        "rapid",
+        "standard",
+        "deep_dive"
+      ]
+    },
+    "output_status": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "partial",
+        "insufficient_evidence",
+        "not_applicable",
+        "invalid_input",
+        "further_research_required"
+      ]
+    },
+    "material_findings": {
+      "type": "array",
+      "items": {
+        "$ref": "common_finding.schema.json"
+      }
+    },
+    "evidence_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "overall_confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "moderate",
+        "low",
+        "plausible_unverified",
+        "insufficient_evidence"
+      ]
+    },
+    "review_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "additional_research_requests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limit_exceeded_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

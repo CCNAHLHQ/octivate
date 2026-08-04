@@ -1,0 +1,58 @@
+/* Lightweight hover / focus tooltips — portaled + fixed (see Tooltip.tsx) */
+
+.ui-tooltip-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.ui-tooltip-wrap:focus-visible {
+  outline: 2px solid var(--accent-soft-border);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.ui-tooltip {
+  pointer-events: none;
+  z-index: 400;
+  min-width: max-content;
+  max-width: 240px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: var(--drawer-bg);
+  box-shadow: var(--shadow-pop);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--mist);
+  text-align: center;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.14s ease,
+    visibility 0.14s ease;
+}
+
+.ui-tooltip.is-portal {
+  position: fixed;
+  margin: 0;
+  transform: none;
+}
+
+.ui-tooltip.is-portal.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ui-tooltip.is-right {
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-tooltip {
+    transition: none;
+  }
+}

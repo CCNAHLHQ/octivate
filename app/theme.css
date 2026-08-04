@@ -1,0 +1,320 @@
+/* ============================================================
+   OCTIVATE THEME — light default · dark secondary
+   Single source of truth for surface, text, chrome, and ambient tokens.
+   ============================================================ */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* —— Surfaces —— */
+  --ink: #f4f7fc;
+  --abyss: #ffffff;
+  --abyss-2: #eef2fa;
+  --line: rgba(71, 85, 120, 0.12);
+  --line-strong: rgba(71, 85, 120, 0.22);
+
+  /* —— Text —— */
+  --foam: #101a2e;
+  --mist: #475569;
+  --faint: #64748b;
+
+  /* —— Brand (PSN) — Phase 1 ticket tokens —— */
+  --octivate-purple: #8950ee;
+  --octivate-blue: #4d9df7;
+  --octivate-coral: #ed6d6c;
+  --octivate-power: var(--octivate-purple);
+  --octivate-systems: var(--octivate-blue);
+  --octivate-narratives: var(--octivate-coral);
+
+  --violet: var(--octivate-purple);
+  --violet-deep: #6b3ad4;
+  --tide: var(--octivate-blue);
+  --coral: var(--octivate-coral);
+  --amber: #d97706;
+  --glow-v: rgba(137, 80, 238, 0.22);
+  --glow-c: rgba(237, 109, 108, 0.16);
+  --glow-t: rgba(77, 157, 247, 0.18);
+
+  /* —— Semantic UI —— */
+  --accent-soft: #6b3ad4;
+  --accent-soft-bg: rgba(137, 80, 238, 0.1);
+  --accent-soft-border: rgba(137, 80, 238, 0.24);
+  --accent-soft-text: #5b21b6;
+  --active-link-bg: rgba(137, 80, 238, 0.1);
+  --active-link-text: #5b21b6;
+  --active-link-border: rgba(137, 80, 238, 0.28);
+
+  /* —— Chrome & overlays —— */
+  --chrome-nav-bg: rgba(255, 255, 255, 0.92);
+  --chrome-nav-bg-scrolled: rgba(255, 255, 255, 0.98);
+  --chrome-overlay: rgba(15, 23, 42, 0.38);
+  --drawer-bg: #ffffff;
+  --drawer-shadow: rgba(15, 23, 42, 0.14);
+
+  /* —— Elevation —— */
+  --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.92) inset, 0 18px 42px -20px rgba(15, 23, 42, 0.18),
+    0 4px 14px -8px rgba(15, 23, 42, 0.1);
+  --shadow-pop: 0 28px 64px -24px rgba(15, 23, 42, 0.28), 0 0 0 1px var(--line);
+
+  /* —— Glass & cards —— */
+  --glass-top: rgba(255, 255, 255, 0.92);
+  --glass-bottom: rgba(246, 248, 252, 0.72);
+  --ghost-bg: rgba(137, 80, 238, 0.04);
+  --ghost-hover-bg: rgba(137, 80, 238, 0.08);
+  --pill-bg: rgba(71, 85, 120, 0.05);
+  --sidebar-gradient-top: rgba(255, 255, 255, 0.96);
+  --sidebar-gradient-bottom: rgba(244, 247, 252, 0.88);
+
+  /* —— Ambient canvas lighting —— */
+  --ambient-1: rgba(137, 80, 238, 0.08);
+  --ambient-2: rgba(237, 109, 108, 0.04);
+  --ambient-3: rgba(77, 157, 247, 0.06);
+  --selection-bg: rgba(137, 80, 238, 0.22);
+  --selection-fg: #101a2e;
+
+  /* —— Hero dither backdrop (mono grain) —— */
+  --dither-tint: 137, 80, 238;
+  --dither-alpha: 0.09;
+
+  /* —— Form controls —— */
+  --input-hover: #e8edf7;
+  --select-chevron: %2394a3b8;
+
+  /* —— Hero network viz (dark output panel — light type in every theme) —— */
+  --hero-viz-card-shadow: 0 28px 64px -24px rgba(15, 23, 42, 0.28), 0 0 0 1px rgba(154, 171, 255, 0.18);
+
+  /* —— Mailing panel (theme-aware glass) —— */
+  --mailing-title: var(--foam);
+  --mailing-body: var(--mist);
+  --mailing-label: var(--faint);
+  --mailing-faint: var(--faint);
+  --mailing-benefit: color-mix(in srgb, var(--foam) 92%, transparent);
+  --mailing-input-text: var(--foam);
+  --mailing-input-placeholder: color-mix(in srgb, var(--mist) 72%, transparent);
+  --mailing-form-bg: color-mix(in srgb, var(--abyss) 78%, transparent);
+  --mailing-form-border: var(--line);
+  --mailing-copy-shadow: none;
+  --mailing-panel-border: color-mix(in srgb, var(--violet) 28%, var(--line));
+  --mailing-panel-bg:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--violet) 12%, transparent) 0%,
+      var(--glass-top) 42%,
+      color-mix(in srgb, var(--tide) 8%, var(--glass-bottom)) 100%
+    );
+  --mailing-panel-shadow: var(--shadow-panel);
+  --mailing-glow: var(--glow-v);
+  --mailing-backdrop: var(--chrome-overlay);
+  --mailing-input-bg: color-mix(in srgb, var(--mist) 8%, transparent);
+  --mailing-input-focus-bg: var(--accent-soft-bg);
+  --mailing-ghost-bg: var(--ghost-bg);
+  --mailing-ghost-hover-bg: var(--ghost-hover-bg);
+  --mailing-status-ok: #0f766e;
+  --mailing-status-err: var(--coral);
+  --mailing-close-bg: color-mix(in srgb, var(--mist) 6%, transparent);
+}
+
+/* Shared hero viz tokens — card stays dark glass; text never inherits page theme */
+:root,
+[data-theme="light"],
+[data-theme="dark"] {
+  --hero-viz-card-bg-top: rgba(16, 27, 49, 0.96);
+  --hero-viz-card-bg-bottom: rgba(12, 21, 38, 0.96);
+  --hero-viz-card-border: rgba(154, 171, 255, 0.26);
+  --hero-viz-card-title: #eaf0ff;
+  --hero-viz-card-label: #9aa8c7;
+  --hero-viz-card-faint: #66759b;
+  --hero-viz-card-value: #eaf0ff;
+  --hero-viz-card-row-line: rgba(154, 171, 255, 0.14);
+  --hero-viz-chip-bg: rgba(12, 21, 38, 0.88);
+  --hero-viz-chip-text: #9aa8c7;
+  --hero-viz-chip-border: rgba(154, 171, 255, 0.18);
+  --hero-viz-accent-teal: #7dede0;
+  --hero-viz-accent-violet: #d8b4fe;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --ink: #070b17;
+  --abyss: #0c1526;
+  --abyss-2: #101b31;
+  --line: rgba(154, 171, 255, 0.14);
+  --line-strong: rgba(154, 171, 255, 0.26);
+
+  --foam: #eaf0ff;
+  --mist: #9aa8c7;
+  --faint: #66759b;
+
+  --octivate-purple: #9b6af5;
+  --octivate-blue: #6bb0ff;
+  --octivate-coral: #ff8584;
+  --octivate-power: var(--octivate-purple);
+  --octivate-systems: var(--octivate-blue);
+  --octivate-narratives: var(--octivate-coral);
+
+  --violet: var(--octivate-purple);
+  --violet-deep: #8950ee;
+  --tide: var(--octivate-blue);
+  --coral: var(--octivate-coral);
+  --amber: #f5b84b;
+  --glow-v: rgba(155, 106, 245, 0.35);
+  --glow-c: rgba(255, 133, 132, 0.22);
+  --glow-t: rgba(107, 176, 255, 0.25);
+
+  --accent-soft: #d8b4fe;
+  --accent-soft-bg: rgba(155, 106, 245, 0.13);
+  --accent-soft-border: rgba(155, 106, 245, 0.3);
+  --accent-soft-text: #e5d0ff;
+  --active-link-bg: rgba(155, 106, 245, 0.13);
+  --active-link-text: #e5d0ff;
+  --active-link-border: rgba(155, 106, 245, 0.3);
+
+  --chrome-nav-bg: rgba(7, 11, 23, 0.97);
+  --chrome-nav-bg-scrolled: rgba(7, 11, 23, 0.99);
+  --chrome-overlay: rgba(4, 7, 15, 0.72);
+  --drawer-bg: #0c1526;
+  --drawer-shadow: rgba(3, 6, 18, 0.95);
+
+  --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 24px 60px -24px rgba(3, 6, 18, 0.9);
+  --shadow-pop: 0 30px 80px -20px rgba(3, 6, 18, 0.95), 0 0 0 1px var(--line);
+
+  --glass-top: rgba(255, 255, 255, 0.045);
+  --glass-bottom: rgba(255, 255, 255, 0.015);
+  --ghost-bg: rgba(255, 255, 255, 0.02);
+  --ghost-hover-bg: rgba(155, 106, 245, 0.08);
+  --pill-bg: rgba(255, 255, 255, 0.03);
+  --sidebar-gradient-top: rgba(255, 255, 255, 0.045);
+  --sidebar-gradient-bottom: rgba(255, 255, 255, 0.01);
+
+  --ambient-1: rgba(137, 80, 238, 0.2);
+  --ambient-2: rgba(237, 109, 108, 0.1);
+  --ambient-3: rgba(77, 157, 247, 0.08);
+  --selection-bg: rgba(155, 106, 245, 0.4);
+  --selection-fg: #ffffff;
+
+  /* —— Hero dither backdrop (mono grain, matches the old periwinkle grid) —— */
+  --dither-tint: 154, 171, 255;
+  --dither-alpha: 0.17;
+
+  --input-hover: #101b31;
+  --select-chevron: %239aa8c7;
+
+  --hero-viz-card-shadow: 0 30px 80px -20px rgba(3, 6, 18, 0.95), 0 0 0 1px rgba(154, 171, 255, 0.14);
+
+  /* —— Mailing panel (dark glass island) —— */
+  --mailing-title: #eaf0ff;
+  --mailing-body: #c5cde0;
+  --mailing-label: #9aa8c7;
+  --mailing-faint: #7a88a8;
+  --mailing-benefit: rgba(234, 240, 255, 0.88);
+  --mailing-input-text: #eaf0ff;
+  --mailing-input-placeholder: rgba(154, 171, 255, 0.55);
+  --mailing-form-bg: rgba(4, 7, 15, 0.62);
+  --mailing-form-border: rgba(255, 255, 255, 0.08);
+  --mailing-copy-shadow: 0 1px 2px rgba(4, 7, 15, 0.72), 0 0 18px rgba(4, 7, 15, 0.35);
+  --mailing-panel-border: rgba(168, 85, 247, 0.35);
+  --mailing-panel-bg: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.14) 0%,
+    rgba(7, 11, 23, 0.94) 42%,
+    rgba(45, 212, 191, 0.08) 100%
+  );
+  --mailing-panel-shadow: var(--land-shadow-card, 0 16px 44px -22px rgba(3, 6, 18, 0.82));
+  --mailing-glow: rgba(168, 85, 247, 0.28);
+  --mailing-backdrop: rgba(4, 7, 15, 0.72);
+  --mailing-input-bg: rgba(255, 255, 255, 0.04);
+  --mailing-input-focus-bg: rgba(168, 85, 247, 0.06);
+  --mailing-ghost-bg: rgba(255, 255, 255, 0.03);
+  --mailing-ghost-hover-bg: rgba(168, 85, 247, 0.12);
+  --mailing-status-ok: #7dede0;
+  --mailing-status-err: #ffa79c;
+  --mailing-close-bg: rgba(255, 255, 255, 0.04);
+}
+
+/* Theme toggle control — icon only */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--mist);
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--octivate-purple, var(--violet));
+  border-color: rgba(137, 80, 238, 0.4);
+  background: rgba(137, 80, 238, 0.1);
+}
+
+.theme-toggle-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
+
+.theme-toggle .is-sun {
+  display: inline;
+}
+
+.theme-toggle .is-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .is-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .is-moon {
+  display: inline;
+}
+
+.theme-toggle--footer {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html[data-theme],
+  html[data-theme] body,
+  html[data-theme] .site-nav,
+  html[data-theme] .dash-aside,
+  html[data-theme] .dash-main,
+  html[data-theme] .footer,
+  html[data-theme] .card,
+  html[data-theme] .btn-ghost,
+  html[data-theme] .ui-select,
+  html[data-theme] .ui-icon-select-trigger,
+  html[data-theme] .ui-icon-select-panel,
+  html[data-theme] .intro-modal-panel,
+  html[data-theme] .intro-modal-backdrop,
+  html[data-theme] .ws-tutorial-inline,
+  html[data-theme] .ws-tutorial-fab,
+  html[data-theme] .ws-tutorial-sidebar {
+    transition:
+      background-color 0.22s ease,
+      border-color 0.22s ease,
+      color 0.18s ease,
+      box-shadow 0.22s ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme] *,
+  html[data-theme] *::before,
+  html[data-theme] *::after {
+    transition: none !important;
+  }
+}

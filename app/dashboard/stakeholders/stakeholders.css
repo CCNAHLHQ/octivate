@@ -1,0 +1,362 @@
+/* Stakeholders — ceremonial sponsorship gallery (no charts / valuations) */
+
+.sth-page {
+  --sth-atmosphere: radial-gradient(
+      ellipse 70% 50% at 8% 0%,
+      color-mix(in srgb, var(--octivate-coral) 14%, transparent),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 55% 45% at 92% 12%,
+      color-mix(in srgb, var(--octivate-blue) 12%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 50% 100%,
+      color-mix(in srgb, var(--octivate-purple) 10%, transparent),
+      transparent 60%
+    );
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100dvh - var(--chrome-top, 64px) - 2rem);
+  padding: clamp(1.25rem, 3vw, 2.25rem) clamp(1rem, 3vw, 1.75rem) 3rem;
+  overflow: clip;
+}
+
+.sth-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--sth-atmosphere);
+}
+
+.sth-page-inner {
+  position: relative;
+  z-index: 1;
+  width: min(920px, 100%);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.sth-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+  max-width: 38rem;
+}
+
+.sth-hero-brand {
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.sth-hero-eyebrow {
+  margin: 0;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.sth-hero-title {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(2rem, 4.5vw, 2.85rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--foam);
+}
+
+.sth-hero-lede {
+  margin: 0;
+  max-width: 42ch;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--mist);
+}
+
+.sth-gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sth-entry {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 1.65rem);
+  align-items: center;
+  padding: clamp(1.15rem, 2.5vw, 1.55rem) 0;
+  border-top: 1px solid var(--line);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: sth-entry-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.sth-entry:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+@keyframes sth-entry-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sth-entry-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sth-entry-kicker {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.sth-entry-dot {
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--mist) 55%, transparent);
+}
+
+.sth-entry-name {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--foam);
+}
+
+.sth-entry-cause {
+  margin: 0.1rem 0 0;
+  font-size: 0.92rem;
+  font-weight: 650;
+  color: color-mix(in srgb, var(--tide) 75%, var(--foam));
+  line-height: 1.35;
+}
+
+.sth-entry-sponsorship {
+  margin: 0.25rem 0 0;
+  max-width: 48ch;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--mist);
+}
+
+.sth-empty {
+  margin: 0;
+  padding: 1.5rem 0;
+  color: var(--mist);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-top: 1px solid var(--line);
+}
+
+/* —— Emblem + medal + glint —— */
+.sth-emblem {
+  position: relative;
+  width: 6.5rem;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--foam);
+}
+
+.sth-emblem-svg {
+  display: block;
+  width: 6.5rem;
+  height: 6.5rem;
+  overflow: visible;
+}
+
+.sth-medal {
+  transform-origin: 60px 60px;
+  animation: sth-medal-breathe 5.5s ease-in-out infinite;
+}
+
+.sth-medal-dash {
+  transform-origin: 60px 60px;
+  animation: sth-medal-spin 28s linear infinite;
+}
+
+.sth-glint-track {
+  transform-origin: 60px 60px;
+  transform: rotate(18deg);
+  animation: sth-glint 4.8s ease-in-out infinite;
+}
+
+.sth-glint {
+  fill: rgba(255, 255, 255, 0.38);
+  mix-blend-mode: soft-light;
+}
+
+.sth-mark-star {
+  fill: var(--ink);
+}
+
+.sth-medal-label {
+  font-family: var(--f-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* Emblem palette — Octivate mark accents */
+.sth-emblem.is-violet .sth-grad-hi {
+  stop-color: color-mix(in srgb, var(--octivate-purple) 55%, #fff);
+}
+.sth-emblem.is-violet .sth-grad-mid {
+  stop-color: color-mix(in srgb, var(--octivate-purple) 38%, var(--abyss));
+}
+.sth-emblem.is-violet .sth-grad-lo {
+  stop-color: color-mix(in srgb, var(--octivate-purple) 22%, var(--ink));
+}
+.sth-emblem.is-violet .sth-ring-a {
+  stop-color: color-mix(in srgb, var(--octivate-purple) 70%, #fff);
+}
+.sth-emblem.is-violet .sth-ring-b {
+  stop-color: color-mix(in srgb, var(--octivate-blue) 55%, var(--octivate-purple));
+}
+
+.sth-emblem.is-tide .sth-grad-hi {
+  stop-color: color-mix(in srgb, var(--octivate-blue) 55%, #fff);
+}
+.sth-emblem.is-tide .sth-grad-mid {
+  stop-color: color-mix(in srgb, var(--octivate-blue) 38%, var(--abyss));
+}
+.sth-emblem.is-tide .sth-grad-lo {
+  stop-color: color-mix(in srgb, var(--octivate-blue) 22%, var(--ink));
+}
+.sth-emblem.is-tide .sth-ring-a {
+  stop-color: color-mix(in srgb, var(--octivate-blue) 70%, #fff);
+}
+.sth-emblem.is-tide .sth-ring-b {
+  stop-color: color-mix(in srgb, var(--octivate-purple) 45%, var(--octivate-blue));
+}
+
+.sth-emblem.is-coral .sth-grad-hi {
+  stop-color: color-mix(in srgb, var(--octivate-coral) 55%, #fff);
+}
+.sth-emblem.is-coral .sth-grad-mid {
+  stop-color: color-mix(in srgb, var(--octivate-coral) 38%, var(--abyss));
+}
+.sth-emblem.is-coral .sth-grad-lo {
+  stop-color: color-mix(in srgb, var(--octivate-coral) 22%, var(--ink));
+}
+.sth-emblem.is-coral .sth-ring-a {
+  stop-color: color-mix(in srgb, var(--octivate-coral) 70%, #fff);
+}
+.sth-emblem.is-coral .sth-ring-b {
+  stop-color: color-mix(in srgb, var(--octivate-purple) 40%, var(--octivate-coral));
+}
+
+.sth-emblem.is-foam .sth-grad-hi {
+  stop-color: color-mix(in srgb, var(--foam) 28%, #fff);
+}
+.sth-emblem.is-foam .sth-grad-mid {
+  stop-color: color-mix(in srgb, var(--mist) 35%, var(--abyss));
+}
+.sth-emblem.is-foam .sth-grad-lo {
+  stop-color: color-mix(in srgb, var(--ink) 70%, var(--abyss));
+}
+.sth-emblem.is-foam .sth-ring-a {
+  stop-color: color-mix(in srgb, var(--foam) 55%, transparent);
+}
+.sth-emblem.is-foam .sth-ring-b {
+  stop-color: color-mix(in srgb, var(--octivate-blue) 40%, var(--foam));
+}
+
+@keyframes sth-glint {
+  0%,
+  58% {
+    transform: rotate(18deg) translateX(-70px);
+    opacity: 0;
+  }
+  66% {
+    opacity: 0.9;
+  }
+  82% {
+    transform: rotate(18deg) translateX(90px);
+    opacity: 0.18;
+  }
+  100% {
+    transform: rotate(18deg) translateX(90px);
+    opacity: 0;
+  }
+}
+
+@keyframes sth-medal-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes sth-medal-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .sth-entry {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem;
+  }
+
+  .sth-emblem {
+    width: 5.5rem;
+  }
+
+  .sth-emblem-svg {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sth-entry,
+  .sth-medal,
+  .sth-medal-dash,
+  .sth-glint-track {
+    animation: none !important;
+  }
+
+  .sth-entry {
+    opacity: 1;
+    transform: none;
+  }
+}

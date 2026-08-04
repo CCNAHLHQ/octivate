@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/narrative_finding.schema.json",
+  "title": "Octivate Narrative Finding",
+  "allOf": [
+    {
+      "$ref": "common_finding.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "core_claim": {
+          "type": "string"
+        },
+        "problem_definition": {
+          "type": "string"
+        },
+        "causal_explanation": {
+          "type": "string"
+        },
+        "implied_action": {
+          "type": "string"
+        },
+        "producers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "carriers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "target_audiences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lifecycle": {
+          "type": "string",
+          "enum": [
+            "emerging",
+            "accelerating",
+            "peaking",
+            "mutating",
+            "declining",
+            "dormant",
+            "reactivating",
+            "unclear"
+          ]
+        },
+        "visibility_limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "behavioural_effect": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "counter_narratives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "core_claim",
+        "problem_definition",
+        "causal_explanation",
+        "implied_action",
+        "producers",
+        "carriers",
+        "target_audiences",
+        "lifecycle"
+      ]
+    }
+  ]
+}

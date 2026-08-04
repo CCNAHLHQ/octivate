@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/decision_intake.schema.json",
+  "title": "Octivate Decision Intake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_id",
+    "decision_question",
+    "decision_owner",
+    "timeframe",
+    "geographic_scope",
+    "options",
+    "consequence_of_error",
+    "principal_uncertainty"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string"
+    },
+    "decision_question": {
+      "type": "string",
+      "minLength": 15
+    },
+    "decision_owner": {
+      "type": "string"
+    },
+    "timeframe": {
+      "type": "string"
+    },
+    "geographic_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "consequence_of_error": {
+      "type": "string"
+    },
+    "principal_uncertainty": {
+      "type": "string"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "monitoring_required": {
+      "type": "boolean"
+    },
+    "provisional_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

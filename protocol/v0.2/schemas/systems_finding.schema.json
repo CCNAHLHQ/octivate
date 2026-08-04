@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/systems_finding.schema.json",
+  "title": "Octivate Systems Finding",
+  "allOf": [
+    {
+      "$ref": "common_finding.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "system": {
+          "type": "string"
+        },
+        "system_condition": {
+          "type": "string"
+        },
+        "operators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "chokepoints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "informal_pathways": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "failure_transmission": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fracture_indicators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "system",
+        "system_condition",
+        "dependencies"
+      ]
+    }
+  ]
+}

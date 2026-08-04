@@ -1,0 +1,152 @@
+/* Shared destructive / confirm prompt — same pattern as Haraka mail clear */
+
+.ui-confirm-root {
+  position: fixed;
+  inset: 0;
+  z-index: 270;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+}
+
+.ui-confirm-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: color-mix(in srgb, var(--ink) 72%, transparent);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.ui-confirm-backdrop:disabled {
+  cursor: wait;
+}
+
+.ui-confirm-panel {
+  position: relative;
+  z-index: 1;
+  width: min(24rem, 100%);
+  padding: 1.25rem 1.2rem 1.1rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--foam) 4%, var(--ink));
+  box-shadow: var(--shadow-pop);
+}
+
+.ui-confirm-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--foam) 4%, var(--ink));
+  color: var(--mist);
+  cursor: pointer;
+}
+
+.ui-confirm-close:hover:not(:disabled) {
+  color: var(--foam);
+  border-color: color-mix(in srgb, var(--tide) 35%, var(--line));
+}
+
+.ui-confirm-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--coral) 35%, var(--line));
+  background: color-mix(in srgb, var(--coral) 12%, var(--ink));
+  color: var(--coral);
+}
+
+.ui-confirm-icon.is-neutral {
+  border-color: color-mix(in srgb, var(--tide) 35%, var(--line));
+  background: color-mix(in srgb, var(--tide) 12%, var(--ink));
+  color: var(--tide);
+}
+
+.ui-confirm-panel h3 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--foam);
+  padding-right: 2rem;
+}
+
+.ui-confirm-panel p {
+  margin: 0.45rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--mist);
+  white-space: pre-wrap;
+}
+
+.ui-confirm-busy-hint {
+  margin: 0.65rem 0 0 !important;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--abyss-2) 70%, transparent);
+  font-size: 0.75rem !important;
+  line-height: 1.35 !important;
+  color: var(--foam) !important;
+  white-space: normal !important;
+}
+
+.ui-confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+}
+
+.ui-confirm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 2.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--foam) 5%, var(--ink));
+  color: var(--foam);
+  font-size: 0.82rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.ui-confirm-btn:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--tide) 35%, var(--line));
+}
+
+.ui-confirm-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ui-confirm-btn.is-danger {
+  border-color: color-mix(in srgb, var(--coral) 45%, var(--line));
+  color: #fff;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--coral) 78%, #fff),
+    color-mix(in srgb, #b91c1c 55%, var(--coral))
+  );
+}
+
+.ui-confirm-btn.is-danger:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--coral) 60%, var(--line));
+  background: color-mix(in srgb, var(--coral) 72%, var(--ink));
+  color: #fff;
+}

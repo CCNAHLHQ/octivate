@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/evidence_claim.schema.json",
+  "title": "Octivate Evidence Claim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "statement",
+    "source_ids",
+    "judgement_type",
+    "decision_relevance"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "judgement_type": {
+      "type": "string",
+      "enum": [
+        "fact",
+        "inference",
+        "assumption",
+        "forecast",
+        "unknown"
+      ]
+    },
+    "decision_relevance": {
+      "type": "string"
+    },
+    "review_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

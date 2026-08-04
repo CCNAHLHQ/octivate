@@ -1,0 +1,62 @@
+output_status:
+  - complete
+  - partial
+  - insufficient_evidence
+  - not_applicable
+  - invalid_input
+  - further_research_required
+
+judgement_types:
+  - fact
+  - inference
+  - assumption
+  - forecast
+  - unknown
+
+confidence_labels:
+  - high
+  - moderate
+  - low
+  - plausible_unverified
+  - insufficient_evidence
+
+power_types:
+  - authoritative
+  - institutional
+  - relational
+  - structural
+  - corporate
+  - infrastructural
+  - collective
+  - productive_narrative
+  - veto_latent
+  - coercive
+
+narrative_lifecycle:
+  - emerging
+  - accelerating
+  - peaking
+  - mutating
+  - declining
+  - dormant
+  - reactivating
+  - unclear
+
+review_flags:
+  - evidence_gap
+  - decision_scope_uncertain
+  - inference
+  - sensitive_attribution
+  - identity_sensitivity
+  - source_conflict
+  - reputational_risk
+  - low_confidence_forecast
+  - normative_tradeoff
+  - informality_risk
+  - context_transfer_risk
+  - single_source_dependency
+  - causal_uncertainty
+  - data_recency_risk
+  - human_review_required
+  - output_limit_exceeded
+  - materiality_uncertain

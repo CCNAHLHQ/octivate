@@ -1,0 +1,22 @@
+analysis_depths:
+  rapid:
+    max_findings_per_lens: 3
+    max_psn_interactions: 1
+    max_scenarios: 2
+    max_options: 3
+  standard:
+    max_findings_per_lens: 5
+    max_psn_interactions: 2
+    max_scenarios: 3
+    max_options: 4
+  deep_dive:
+    max_findings_per_lens: 10
+    max_psn_interactions: 3
+    max_scenarios: 5
+    max_options: 6
+
+exceeding_limits:
+  allowed: true
+  requires:
+    - materiality_justification
+    - output_limit_exceeded_flag

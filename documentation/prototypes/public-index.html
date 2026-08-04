@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Octivate — Agentic Decision Intelligence for the Caribbean | CENSII</title>
+<meta name="description" content="Octivate by CENSII turns fragmented Caribbean signals into decision-ready intelligence: agentic research, Power–Systems–Narratives analysis, evidence validation, gap maps and monitoring plans.">
+<meta name="keywords" content="Caribbean decision intelligence, Caribbean political risk analysis, market entry Caribbean, CARICOM regulatory intelligence, agentic AI analyst, operating context intelligence, stakeholder mapping Caribbean, Guyana market entry, CENSII, Octivate">
+<meta name="author" content="CENSII — Caribbean Emerging Narratives & Strategic Impact Intelligence">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://octivate.censii.co/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Octivate by CENSII">
+<meta property="og:title" content="Octivate — Agentic Decision Intelligence for Fragmented Regional Markets">
+<meta property="og:description" content="A guided agentic workflow that structures the decision, runs the research, validates evidence and delivers an action-ready brief — built Caribbean-first.">
+<meta property="og:url" content="https://octivate.censii.co/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Octivate — Agentic Decision Intelligence for the Caribbean">
+<meta name="twitter:description" content="Fragmented signals in. Decision-ready judgment out. Powered by CENSII.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23A855F7' stroke-width='9'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23FF6B5B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "CENSII",
+      "alternateName": "Caribbean Emerging Narratives & Strategic Impact Intelligence",
+      "url": "https://censii.co",
+      "email": "shemuel@censii.co",
+      "founder": { "@type": "Person", "name": "Shemuel London" },
+      "description": "A Caribbean decision intelligence and advisory firm helping organizations make better strategic decisions under uncertainty.",
+      "areaServed": "Caribbean"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Octivate",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://octivate.censii.co",
+      "creator": { "@type": "Organization", "name": "CENSII" },
+      "description": "Agentic decision intelligence for fragmented regional markets. Octivate structures the decision, plans the research, validates evidence, maps gaps and generates an action-oriented brief.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Buildathon prototype — early access" }
+    }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   OCTIVATE DESIGN SYSTEM — v0.1 "Dark-ops editorial"
+   Tokens derived from the CENSII / Octivate deck:
+   violet wordmark, coral tentacles, CENSII navy product slide.
+   PSN semantics: Power=violet · Systems=tide · Narratives=coral
+   ============================================================ */
+:root{
+  /* palette */
+  --ink:#070B17;            /* canvas */
+  --abyss:#0C1526;          /* raised panels */
+  --abyss-2:#101B31;        /* hover / inputs */
+  --line:rgba(154,171,255,.14);
+  --line-strong:rgba(154,171,255,.26);
+  --foam:#EAF0FF;           /* primary text */
+  --mist:#9AA8C7;           /* secondary text */
+  --faint:#66759B;          /* tertiary / labels */
+  --violet:#A855F7;         /* POWER · primary action */
+  --violet-deep:#7C3AED;
+  --tide:#2DD4BF;           /* SYSTEMS · confidence-high */
+  --coral:#FF6B5B;          /* NARRATIVES · alerts */
+  --amber:#F5B84B;          /* confidence-moderate */
+  --glow-v:rgba(168,85,247,.35);
+  --glow-c:rgba(255,107,91,.22);
+  --glow-t:rgba(45,212,191,.25);
+
+  /* type */
+  --f-display:"Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
+  --f-body:"Instrument Sans", system-ui, -apple-system, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  /* scale (8px grid) */
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s5:3rem; --s6:4rem; --s7:6rem; --s8:8rem;
+  --r-sm:10px; --r-md:14px; --r-lg:20px; --r-xl:28px;
+
+  --shadow-panel:0 1px 0 rgba(255,255,255,.04) inset, 0 24px 60px -24px rgba(3,6,18,.9);
+  --shadow-pop:0 30px 80px -20px rgba(3,6,18,.95), 0 0 0 1px var(--line);
+  --container:1200px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html:focus-within{scroll-behavior:smooth}
+body{
+  font-family:var(--f-body);
+  background:var(--ink);
+  color:var(--foam);
+  line-height:1.6;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{ /* ambient depth: violet north-west, coral east */
+  content:""; position:fixed; inset:0; z-index:-2; pointer-events:none;
+  background:
+    radial-gradient(900px 600px at 12% -8%, rgba(124,58,237,.20), transparent 60%),
+    radial-gradient(700px 700px at 108% 28%, rgba(255,107,91,.10), transparent 60%),
+    radial-gradient(600px 500px at 50% 115%, rgba(45,212,191,.07), transparent 60%);
+}
+::selection{background:rgba(168,85,247,.4); color:#fff}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--violet); outline-offset:3px; border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--violet);color:#fff;padding:.6rem 1rem;z-index:200;border-radius:0 0 10px 0}
+.skip:focus{left:0}
+
+.container{max-width:var(--container);margin-inline:auto;padding-inline:clamp(1.1rem,4vw,2rem)}
+.mono{font-family:var(--f-mono)}
+.grad-text{background:linear-gradient(96deg,#C084FC 0%, var(--violet) 38%, var(--coral) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* -------- shared atoms -------- */
+.eyebrow{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);display:flex;align-items:center;gap:.7rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,var(--violet),transparent)}
+.section{padding-block:clamp(4rem,9vw,7.5rem)}
+.section-head{max-width:760px;margin-bottom:clamp(2.2rem,5vw,3.5rem)}
+.section-head h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.75rem,3.6vw,2.7rem);line-height:1.12;letter-spacing:-.02em;margin-top:1rem}
+.section-head .lede{color:var(--mist);margin-top:1rem;font-size:1.06rem;max-width:62ch}
+
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:.95rem;
+  padding:.85rem 1.5rem;border-radius:999px;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:linear-gradient(135deg,var(--violet) 0%,var(--violet-deep) 100%);color:#fff;
+  box-shadow:0 10px 30px -8px var(--glow-v), 0 0 0 1px rgba(255,255,255,.08) inset}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px var(--glow-v)}
+.btn-ghost{border:1px solid var(--line-strong);color:var(--foam);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--violet);background:rgba(168,85,247,.08);transform:translateY(-2px)}
+.btn-sm{padding:.55rem 1rem;font-size:.85rem}
+.arrow{transition:transform .18s ease}
+.btn:hover .arrow{transform:translateX(3px)}
+
+.pill{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--f-mono);font-size:.7rem;
+  letter-spacing:.06em;padding:.35rem .75rem;border-radius:999px;border:1px solid var(--line);
+  background:rgba(255,255,255,.03);color:var(--mist)}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:var(--tide);box-shadow:0 0 8px var(--glow-t)}
+
+kbd{font-family:var(--f-mono);font-size:.68rem;background:var(--abyss-2);border:1px solid var(--line);
+  border-bottom-width:2px;border-radius:6px;padding:.15rem .45rem;color:var(--mist)}
+
+.card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+  border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-panel)}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}
+.reveal[data-delay="3"]{transition-delay:.24s}.reveal[data-delay="4"]{transition-delay:.32s}
+
+/* ============ NAV ============ */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .25s ease,border-color .25s ease, backdrop-filter .25s ease;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(7,11,23,.72);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:.7rem;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.01em}
+.brand-mark{width:30px;height:30px;border-radius:50%;position:relative;
+  background:conic-gradient(from 210deg, var(--violet), var(--coral), var(--tide), var(--violet));
+  box-shadow:0 0 20px var(--glow-v)}
+.brand-mark::after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--ink)}
+.brand-sub{font-family:var(--f-mono);font-size:.6rem;color:var(--faint);letter-spacing:.18em;align-self:flex-end;padding-bottom:.2rem}
+.nav-links{display:flex;gap:1.9rem;font-size:.9rem;color:var(--mist)}
+.nav-links a{transition:color .15s ease}
+.nav-links a:hover{color:var(--foam)}
+.nav-cta{display:flex;align-items:center;gap:.9rem}
+.menu-btn{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:10px;place-items:center}
+.menu-btn svg{width:18px;height:18px;stroke:var(--foam);stroke-width:2;fill:none}
+.mobile-menu{display:none;position:fixed;inset:72px 0 auto 0;background:rgba(7,11,23,.97);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);z-index:99;padding:1.2rem clamp(1.1rem,4vw,2rem) 1.8rem;flex-direction:column;gap:1.1rem;font-size:1.05rem}
+.mobile-menu.open{display:flex}
+
+/* ============ HERO ============ */
+.hero{position:relative;padding-top:clamp(8rem,14vh,10.5rem);padding-bottom:clamp(3rem,6vw,5rem);overflow:hidden}
+.hero::before{ /* faint chart grid, faded by mask */
+  content:"";position:absolute;inset:0;z-index:-1;
+  background-image:linear-gradient(rgba(154,171,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(154,171,255,.05) 1px,transparent 1px);
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(70% 65% at 50% 20%,#000 30%,transparent 78%);
+          mask-image:radial-gradient(70% 65% at 50% 20%,#000 30%,transparent 78%);
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.4rem}
+.hero h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.35rem,5.4vw,4.15rem);
+  line-height:1.04;letter-spacing:-.028em}
+.hero .sub{margin-top:1.3rem;color:var(--mist);font-size:clamp(1rem,1.4vw,1.16rem);max-width:56ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.1rem}
+.hero-stats{display:flex;gap:clamp(1.4rem,3vw,2.6rem);margin-top:2.8rem;padding-top:1.6rem;border-top:1px solid var(--line);flex-wrap:wrap}
+.stat .stat-n{font-family:var(--f-display);font-weight:700;font-size:1.6rem;letter-spacing:-.02em}
+.stat .stat-l{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:.15rem}
+
+/* — the signature: signal convergence — */
+.hero-visual{position:relative;min-height:480px}
+.net-wrap{position:relative;width:100%;max-width:560px;margin-inline:auto}
+.net-svg{width:100%;height:auto}
+.flow{stroke:url(#flowGrad);stroke-width:1.5;fill:none;opacity:.85;stroke-dasharray:5 9;animation:flowIn 2.8s linear infinite}
+@keyframes flowIn{to{stroke-dashoffset:-56}}
+.core-pulse{animation:pulse 3.2s ease-in-out infinite;transform-origin:center}
+@keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+.net-chip{position:absolute;transform:translate(-50%,-50%);font-family:var(--f-mono);font-size:.62rem;
+  letter-spacing:.05em;color:var(--mist);background:rgba(12,21,38,.85);border:1px solid var(--line);
+  padding:.32rem .6rem;border-radius:8px;backdrop-filter:blur(6px);white-space:nowrap}
+.net-chip i{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:.4rem;vertical-align:1px}
+.brief-float{position:absolute;right:-4px;bottom:-14px;width:min(300px,78%);padding:1rem 1.1rem;border-radius:var(--r-md);
+  background:linear-gradient(180deg,rgba(16,27,49,.96),rgba(12,21,38,.96));border:1px solid var(--line-strong);
+  box-shadow:var(--shadow-pop);backdrop-filter:blur(10px)}
+.brief-float .bf-tag{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase}
+.brief-float .bf-title{font-weight:600;font-size:.92rem;margin:.35rem 0 .55rem;line-height:1.35}
+.bf-row{display:flex;align-items:center;justify-content:space-between;font-size:.78rem;color:var(--mist);padding:.3rem 0;border-top:1px dashed var(--line)}
+.bf-row b{color:var(--foam);font-weight:600}
+
+/* ============ TICKER ============ */
+.ticker{border-block:1px solid var(--line);background:rgba(255,255,255,.015);overflow:hidden;position:relative}
+.ticker::before,.ticker::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(90deg,var(--ink),transparent)}
+.ticker::after{right:0;background:linear-gradient(-90deg,var(--ink),transparent)}
+.ticker-track{display:flex;gap:2.75rem;width:max-content;padding:.85rem 0;animation:tick 46s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+@keyframes tick{to{transform:translateX(-50%)}}
+.tick-item{display:flex;align-items:center;gap:.65rem;font-family:var(--f-mono);font-size:.74rem;color:var(--mist);white-space:nowrap}
+.tick-tag{font-size:.6rem;letter-spacing:.1em;padding:.18rem .5rem;border-radius:5px;font-weight:600}
+.tick-tag.power{color:#D8B4FE;background:rgba(168,85,247,.14)}
+.tick-tag.systems{color:#7DEDE0;background:rgba(45,212,191,.13)}
+.tick-tag.narrative{color:#FFA79C;background:rgba(255,107,91,.13)}
+.tick-tag.proc{color:#BBD0FF;background:rgba(120,150,255,.13)}
+
+/* ============ PROBLEM ============ */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.prob-card{padding:1.7rem;position:relative;overflow:hidden;transition:transform .2s ease,border-color .2s ease}
+.prob-card:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.prob-card .icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:1.1rem;
+  background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.25)}
+.prob-card .icon svg{width:20px;height:20px;stroke:#C084FC;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.prob-card h3{font-family:var(--f-display);font-weight:700;font-size:1.12rem;margin-bottom:.5rem}
+.prob-card p{color:var(--mist);font-size:.94rem}
+.missing-layer{margin-top:2.6rem;text-align:center;font-family:var(--f-display);font-weight:700;
+  font-size:clamp(1.2rem,2.4vw,1.6rem)}
+
+/* ============ PIPELINE ============ */
+.pipeline{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;counter-reset:step}
+.step{padding:1.5rem 1.4rem;position:relative}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:var(--f-mono);font-weight:600;
+  font-size:.72rem;letter-spacing:.14em;color:var(--violet);display:block;margin-bottom:.9rem}
+.step::after{content:"";position:absolute;top:2rem;right:-1.1rem;width:1.1rem;height:1px;
+  background:linear-gradient(90deg,var(--line-strong),transparent)}
+.step:last-child::after{display:none}
+.step h3{font-family:var(--f-display);font-weight:700;font-size:1.05rem;margin-bottom:.45rem}
+.step p{color:var(--mist);font-size:.9rem}
+.support-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:1.1rem}
+.support-chip{padding:1.1rem 1.3rem;border-radius:var(--r-md);border:1px dashed var(--line-strong);
+  background:rgba(255,255,255,.015);font-size:.88rem;color:var(--mist)}
+.support-chip b{display:block;color:var(--foam);font-weight:600;margin-bottom:.25rem;font-size:.92rem}
+.support-chip.hitl b{color:#FFA79C}.support-chip.brief b{color:#D8B4FE}.support-chip.mon b{color:#7DEDE0}
+
+/* ============ PSN FRAMEWORK ============ */
+.framework{--lens:var(--violet);--lens-soft:rgba(168,85,247,.14)}
+.framework[data-active-lens="systems"]{--lens:var(--tide);--lens-soft:rgba(45,212,191,.13)}
+.framework[data-active-lens="narratives"]{--lens:var(--coral);--lens-soft:rgba(255,107,91,.13)}
+.lens-switch{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.lens-btn{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.6rem 1.2rem;border-radius:999px;border:1px solid var(--line);color:var(--mist);transition:all .18s ease}
+.lens-btn:hover{color:var(--foam);border-color:var(--line-strong)}
+.lens-btn[aria-pressed="true"]{color:var(--foam);border-color:var(--lens);background:var(--lens-soft);
+  box-shadow:0 0 24px -6px var(--lens)}
+.lens-panel{padding:clamp(1.6rem,3vw,2.4rem);border-left:3px solid var(--lens);transition:border-color .25s ease}
+.lens-q{font-family:var(--f-display);font-weight:700;font-size:clamp(1.3rem,2.6vw,1.85rem);line-height:1.2}
+.lens-a{font-family:var(--f-mono);font-size:.76rem;color:var(--lens);letter-spacing:.12em;text-transform:uppercase;margin-top:.7rem;transition:color .25s ease}
+.lens-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.lens-tags span{font-size:.78rem;padding:.3rem .75rem;border-radius:7px;border:1px solid var(--line);color:var(--mist);background:rgba(255,255,255,.02)}
+.lens-example{margin-top:1.5rem;padding-top:1.2rem;border-top:1px dashed var(--line);color:var(--mist);font-size:.94rem;max-width:70ch}
+.lens-example b{color:var(--foam)}
+.psn-note{margin-top:1.6rem;color:var(--faint);font-size:.88rem;max-width:72ch}
+
+/* ============ DASHBOARD DEMO ============ */
+.demo-wrap{position:relative}
+.demo-wrap::before{content:"";position:absolute;inset:8% -6% 4% -6%;z-index:-1;
+  background:radial-gradient(60% 60% at 50% 40%,rgba(124,58,237,.16),transparent 70%)}
+.app{border-radius:var(--r-xl);border:1px solid var(--line-strong);overflow:hidden;
+  background:linear-gradient(180deg,#0D1729 0%, #0A1220 100%);box-shadow:var(--shadow-pop)}
+.app-top{display:flex;align-items:center;gap:1rem;padding:.8rem 1.1rem;border-bottom:1px solid var(--line);background:rgba(255,255,255,.015)}
+.win-dots{display:flex;gap:6px}
+.win-dots i{width:10px;height:10px;border-radius:50%;background:var(--abyss-2);border:1px solid var(--line)}
+.app-brand{font-family:var(--f-display);font-weight:800;font-size:.95rem;letter-spacing:.02em}
+.app-search{flex:1;max-width:420px;margin-inline:auto;display:flex;align-items:center;gap:.6rem;
+  background:var(--abyss-2);border:1px solid var(--line);border-radius:10px;padding:.5rem .8rem;cursor:pointer;
+  transition:border-color .15s ease}
+.app-search:hover{border-color:var(--line-strong)}
+.app-search svg{width:14px;height:14px;stroke:var(--faint);fill:none;stroke-width:2}
+.app-search span{font-size:.82rem;color:var(--faint);flex:1;text-align:left}
+.top-actions{display:flex;align-items:center;gap:.7rem}
+.avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--coral));
+  display:grid;place-items:center;font-family:var(--f-mono);font-size:.66rem;font-weight:600;color:#fff}
+.app-body{display:grid;grid-template-columns:216px 1fr;min-height:640px}
+.app-side{border-right:1px solid var(--line);padding:1.1rem .8rem;background:rgba(255,255,255,.012);display:flex;flex-direction:column;gap:.2rem}
+.side-sec{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);
+  padding:.9rem .6rem .45rem}
+.side-link{display:flex;align-items:center;gap:.65rem;padding:.55rem .6rem;border-radius:9px;font-size:.86rem;
+  color:var(--mist);transition:all .14s ease;text-align:left;width:100%}
+.side-link svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.side-link:hover{background:rgba(255,255,255,.04);color:var(--foam)}
+.side-link.active{background:rgba(168,85,247,.13);color:#E5D0FF;border:1px solid rgba(168,85,247,.3)}
+.side-foot{margin-top:auto;padding:.8rem .6rem;font-size:.72rem;color:var(--faint);border-top:1px dashed var(--line)}
+.app-main{padding:clamp(1rem,2.4vw,1.7rem);display:flex;flex-direction:column;gap:1.1rem;min-width:0}
+
+.composer{padding:1.1rem 1.25rem}
+.composer .c-label{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.composer .c-q{font-family:var(--f-display);font-weight:600;font-size:clamp(1rem,1.8vw,1.25rem);margin:.5rem 0 .9rem;line-height:1.35}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--f-mono);font-size:.7rem;
+  padding:.36rem .7rem;border-radius:8px;background:var(--abyss-2);border:1px solid var(--line);color:var(--mist)}
+.chip b{color:var(--foam);font-weight:600}
+.composer-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem;flex-wrap:wrap}
+.demo-pill{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.1em;color:var(--amber);
+  border:1px dashed rgba(245,184,75,.4);border-radius:999px;padding:.3rem .7rem;background:rgba(245,184,75,.06)}
+
+.pipe-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem}
+.pstep{padding:.8rem .9rem;border-radius:var(--r-sm);border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.pstep .p-top{display:flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:600}
+.pdot{width:9px;height:9px;border-radius:50%;flex:none;background:var(--faint);transition:background .2s ease, box-shadow .2s ease}
+.pstep[data-state="running"] .pdot{background:var(--amber);box-shadow:0 0 10px rgba(245,184,75,.7);animation:pulse 1s ease-in-out infinite}
+.pstep[data-state="done"] .pdot{background:var(--tide);box-shadow:0 0 8px var(--glow-t)}
+.pstep .p-sub{font-family:var(--f-mono);font-size:.62rem;color:var(--faint);margin-top:.3rem;letter-spacing:.06em}
+.pbar{height:3px;border-radius:99px;background:var(--abyss-2);margin-top:.55rem;overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--violet),var(--tide));transition:width .5s ease}
+.pstep[data-state="done"] .pbar i{width:100%}
+
+.brief{overflow:hidden;position:relative}
+.brief-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:1.2rem 1.4rem;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.brief-head h3{font-family:var(--f-display);font-weight:700;font-size:1.12rem}
+.brief-meta{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem}
+.conf-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--f-mono);font-size:.72rem;font-weight:600;
+  padding:.45rem .85rem;border-radius:999px;background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.35);color:#7DEDE0}
+.tabs{display:flex;gap:.25rem;padding:.6rem .9rem 0;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{font-size:.84rem;font-weight:500;color:var(--mist);padding:.65rem .95rem;border-radius:9px 9px 0 0;
+  border-bottom:2px solid transparent;white-space:nowrap;transition:color .14s ease}
+.tab:hover{color:var(--foam)}
+.tab[aria-selected="true"]{color:var(--foam);border-bottom-color:var(--violet)}
+.panel{padding:clamp(1.1rem,2.4vw,1.6rem)}
+.panel[hidden]{display:none}
+
+.ov-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:1.4rem;align-items:start}
+.ov-block h4, .panel h4{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:.6rem}
+.exec-j{font-size:1rem;line-height:1.65;color:var(--foam)}
+.exec-j em{color:#D8B4FE;font-style:normal;font-weight:600}
+.action-card{margin-top:1.2rem;padding:1rem 1.15rem;border-radius:var(--r-md);
+  background:rgba(168,85,247,.09);border:1px solid rgba(168,85,247,.3)}
+.action-card .a-label{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.16em;color:#D8B4FE;text-transform:uppercase}
+.action-card p{margin-top:.4rem;font-size:.94rem;font-weight:500}
+.kj-list{list-style:none;margin-top:1.4rem;display:flex;flex-direction:column;gap:.7rem}
+.kj{display:flex;gap:.8rem;align-items:flex-start;padding:.85rem 1rem;border-radius:var(--r-sm);border:1px solid var(--line);background:rgba(255,255,255,.02);font-size:.9rem}
+.kj p{color:var(--foam)}
+.kj .why{color:var(--faint);font-size:.8rem;display:block;margin-top:.2rem}
+.badge{flex:none;font-family:var(--f-mono);font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  padding:.26rem .6rem;border-radius:6px;margin-top:.1rem}
+.badge.hi{color:#7DEDE0;background:rgba(45,212,191,.12);border:1px solid rgba(45,212,191,.35)}
+.badge.mod{color:#FFD98A;background:rgba(245,184,75,.1);border:1px solid rgba(245,184,75,.35)}
+.badge.lo{color:#FFA79C;background:rgba(255,107,91,.1);border:1px solid rgba(255,107,91,.35)}
+
+.gauge-wrap{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1.3rem;border-radius:var(--r-md);border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.gauge{--val:72;width:132px;height:132px;border-radius:50%;display:grid;place-items:center;position:relative;
+  background:conic-gradient(var(--tide) calc(var(--val)*1%), var(--abyss-2) 0)}
+.gauge::before{content:"";position:absolute;inset:10px;border-radius:50%;background:#0C1526}
+.gauge b{position:relative;font-family:var(--f-display);font-weight:800;font-size:1.9rem;letter-spacing:-.03em}
+.gauge-l{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.gauge-note{font-size:.8rem;color:var(--mist);text-align:center;max-width:24ch}
+.psn-mini{display:flex;flex-direction:column;gap:.7rem;margin-top:1.1rem}
+.psn-chip{padding:.9rem 1rem;border-radius:var(--r-sm);border:1px solid var(--line);border-left-width:3px;font-size:.85rem;color:var(--mist);background:rgba(255,255,255,.02)}
+.psn-chip b{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.3rem}
+.psn-chip.power{border-left-color:var(--violet)}.psn-chip.power b{color:#D8B4FE}
+.psn-chip.systems{border-left-color:var(--tide)}.psn-chip.systems b{color:#7DEDE0}
+.psn-chip.narratives{border-left-color:var(--coral)}.psn-chip.narratives b{color:#FFA79C}
+
+.filter-row{display:flex;gap:.7rem;margin-bottom:1rem;flex-wrap:wrap}
+.input{display:flex;align-items:center;gap:.55rem;background:var(--abyss-2);border:1px solid var(--line);
+  border-radius:9px;padding:.55rem .8rem;flex:1;min-width:200px;transition:border-color .15s ease}
+.input:focus-within{border-color:var(--violet)}
+.input svg{width:14px;height:14px;stroke:var(--faint);fill:none;stroke-width:2;flex:none}
+.input input{background:none;border:none;outline:none;width:100%;font-size:.86rem;color:var(--foam)}
+.input input::placeholder{color:var(--faint)}
+.select{background:var(--abyss-2);border:1px solid var(--line);border-radius:9px;padding:.55rem 2.2rem .55rem .8rem;
+  font-size:.84rem;color:var(--mist);appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239AA8C7' fill='none' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .8rem center}
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-sm)}
+.ev-table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:640px}
+.ev-table th{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);text-align:left;padding:.75rem .95rem;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+.ev-table td{padding:.8rem .95rem;border-bottom:1px solid var(--line);color:var(--mist);vertical-align:top}
+.ev-table tr:last-child td{border-bottom:none}
+.ev-table tr:hover td{background:rgba(255,255,255,.02)}
+.ev-table td:first-child{color:var(--foam);max-width:340px}
+.type-tag{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;padding:.2rem .55rem;border-radius:5px;white-space:nowrap}
+.type-tag.fact{color:#BBD0FF;background:rgba(120,150,255,.12)}
+.type-tag.assume{color:#FFD98A;background:rgba(245,184,75,.1)}
+.type-tag.analysis{color:#D8B4FE;background:rgba(168,85,247,.12)}
+.ev-note{margin-top:.8rem;font-size:.78rem;color:var(--faint)}
+
+.gap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.gap-card{padding:1.15rem;border-radius:var(--r-md);border:1px solid var(--line);background:rgba(255,255,255,.02);font-size:.86rem;display:flex;flex-direction:column;gap:.7rem}
+.gap-card .g-row b{display:block;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:.25rem}
+.gap-card .g-row p{color:var(--mist)}
+.gap-card .g-row:first-child p{color:var(--foam);font-weight:500}
+
+.scen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.scen-card{padding:1.15rem;border-radius:var(--r-md);border:1px solid var(--line);border-top-width:3px;background:rgba(255,255,255,.02)}
+.scen-card .s-prob{font-family:var(--f-display);font-weight:800;font-size:1.7rem;letter-spacing:-.02em}
+.scen-card .s-name{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:.15rem 0 .6rem}
+.scen-card p{font-size:.84rem;color:var(--mist)}
+.scen-card.base{border-top-color:var(--violet)}
+.scen-card.up{border-top-color:var(--tide)}
+.scen-card.down{border-top-color:var(--amber)}
+.scen-card.wild{border-top-color:var(--coral)}
+
+.mon-list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden}
+.mon-row{display:grid;grid-template-columns:1.6fr 1fr .7fr .9fr;gap:1rem;padding:.85rem 1rem;font-size:.84rem;
+  border-bottom:1px solid var(--line);align-items:center}
+.mon-row:last-child{border-bottom:none}
+.mon-row.head{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:rgba(255,255,255,.02)}
+.mon-row span{color:var(--mist)}
+.mon-row .m-t{color:var(--foam);font-weight:500}
+.freq{font-family:var(--f-mono);font-size:.68rem;color:#7DEDE0}
+.mon-note{margin-top:1rem;font-size:.84rem;color:var(--mist);padding:.9rem 1.1rem;border-radius:var(--r-sm);
+  border:1px dashed var(--line-strong);background:rgba(255,255,255,.015)}
+
+/* skeleton while "agents run" */
+.brief.loading .panel > *{visibility:hidden}
+.sk{display:none}
+.brief.loading .sk{display:flex;position:absolute;inset:0;top:110px;flex-direction:column;gap:.9rem;padding:1.6rem}
+.sk i{height:14px;border-radius:6px;background:linear-gradient(90deg,var(--abyss-2) 25%,rgba(154,171,255,.12) 50%,var(--abyss-2) 75%);
+  background-size:200% 100%;animation:shimmer 1.3s linear infinite}
+.sk i:nth-child(1){width:64%}.sk i:nth-child(2){width:88%}.sk i:nth-child(3){width:74%}
+.sk i:nth-child(4){width:92%}.sk i:nth-child(5){width:58%}.sk i:nth-child(6){width:80%}
+@keyframes shimmer{to{background-position:-200% 0}}
+
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);opacity:0;z-index:150;
+  background:linear-gradient(180deg,#131F38,#0E1729);border:1px solid var(--line-strong);border-radius:12px;
+  padding:.8rem 1.2rem;font-size:.86rem;box-shadow:var(--shadow-pop);display:flex;align-items:center;gap:.6rem;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),opacity .3s ease;pointer-events:none;max-width:92vw}
+.toast.show{transform:translate(-50%,0);opacity:1}
+.toast .t-dot{width:8px;height:8px;border-radius:50%;background:var(--tide);box-shadow:0 0 10px var(--glow-t);flex:none}
+
+/* ============ PERSONAS (bento) ============ */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem}
+.persona{padding:1.6rem;grid-column:span 2;transition:transform .2s ease,border-color .2s ease}
+.persona:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.persona.wide{grid-column:span 3}
+.persona h3{font-family:var(--f-display);font-weight:700;font-size:1.08rem;margin-bottom:.45rem}
+.persona p{color:var(--mist);font-size:.9rem}
+.persona .p-tag{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin-bottom:.8rem;display:block}
+
+/* ============ REGION ============ */
+.region-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+.region-copy p{color:var(--mist);font-size:1.02rem;max-width:56ch}
+.region-copy p + p{margin-top:1rem}
+.region-chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.6rem}
+.rchip{font-size:.8rem;padding:.42rem .9rem;border-radius:999px;border:1px solid var(--line);color:var(--mist);
+  background:rgba(255,255,255,.02);transition:all .15s ease;cursor:default}
+.rchip:hover{border-color:var(--tide);color:var(--foam);background:rgba(45,212,191,.07)}
+.duo-cards{display:flex;flex-direction:column;gap:1.1rem}
+.duo{padding:1.5rem}
+.duo b{display:block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.6rem}
+.duo.thesis b{color:#D8B4FE}.duo.first b{color:#7DEDE0}
+.duo p{color:var(--mist);font-size:.94rem}
+
+/* ============ PRODUCTS ============ */
+.prod-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.prod{padding:1.25rem 1.3rem;border-radius:var(--r-md);border:1px solid var(--line);background:rgba(255,255,255,.02);transition:all .18s ease}
+.prod:hover{border-color:rgba(168,85,247,.4);background:rgba(168,85,247,.05);transform:translateY(-3px)}
+.prod b{font-family:var(--f-display);font-weight:700;font-size:.98rem;display:block;margin-bottom:.3rem}
+.prod span{font-size:.82rem;color:var(--mist)}
+
+/* ============ CTA ============ */
+.cta-band{position:relative;border-radius:var(--r-xl);overflow:hidden;padding:clamp(2.6rem,6vw,4.5rem);text-align:center;
+  border:1px solid rgba(168,85,247,.35);
+  background:radial-gradient(120% 160% at 50% -20%,rgba(124,58,237,.35),rgba(12,21,38,.9) 55%),
+             linear-gradient(180deg,#131C33,#0B1322)}
+.cta-band h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.7rem,3.6vw,2.6rem);letter-spacing:-.02em;line-height:1.12}
+.cta-band p{color:var(--mist);margin:1rem auto 0;max-width:54ch}
+.cta-actions{display:flex;justify-content:center;gap:.9rem;margin-top:2rem;flex-wrap:wrap}
+.cta-mail{font-family:var(--f-mono);font-size:.82rem;color:var(--mist);margin-top:1.4rem}
+.cta-mail a{color:#D8B4FE;border-bottom:1px dashed rgba(168,85,247,.5)}
+
+/* ============ WORKSPACE VIEWS (dashboard) ============ */
+.view{display:flex;flex-direction:column;gap:1.1rem;min-width:0}
+.view[hidden]{display:none}
+.view-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.2rem .1rem}
+.view-head h3{font-family:var(--f-display);font-weight:700;font-size:1.15rem}
+.view-head p{color:var(--mist);font-size:.86rem}
+.view-head .meta{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase}
+.view-toolbar{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:.2rem}
+
+/* Monitors */
+.mon-item{display:grid;grid-template-columns:auto 1fr auto auto auto;gap:1rem;align-items:center;
+  padding:.95rem 1.1rem;border-bottom:1px solid var(--line);font-size:.88rem}
+.mon-item:last-child{border-bottom:none}
+.mon-item:hover{background:rgba(255,255,255,.02)}
+.mon-status{width:8px;height:8px;border-radius:50%;flex:none}
+.mon-status.live{background:var(--tide);box-shadow:0 0 8px var(--glow-t);animation:pulse 2.4s ease-in-out infinite}
+.mon-status.paused{background:var(--faint)}
+.mon-status.hot{background:var(--coral);box-shadow:0 0 10px var(--glow-c);animation:pulse 1.4s ease-in-out infinite}
+.mon-item .m-title{color:var(--foam);font-weight:500}
+.mon-item .m-sub{display:block;color:var(--faint);font-size:.76rem;margin-top:.15rem;font-family:var(--f-mono);letter-spacing:.04em}
+.mon-item .m-when{font-family:var(--f-mono);font-size:.74rem;color:var(--mist);white-space:nowrap}
+.mon-item .m-alerts{font-family:var(--f-mono);font-size:.72rem;padding:.25rem .6rem;border-radius:6px;
+  background:rgba(255,107,91,.1);color:#FFA79C;border:1px solid rgba(255,107,91,.28)}
+.mon-item .m-alerts.zero{background:rgba(255,255,255,.02);color:var(--faint);border-color:var(--line)}
+.mon-item .m-cadence{font-family:var(--f-mono);font-size:.7rem;color:var(--mist)}
+.mon-toggle{padding:.35rem .7rem;border-radius:7px;border:1px solid var(--line);font-family:var(--f-mono);
+  font-size:.68rem;letter-spacing:.08em;color:var(--mist);text-transform:uppercase;transition:all .15s ease}
+.mon-toggle:hover{border-color:var(--violet);color:var(--foam)}
+
+/* Sources feed */
+.feed{display:flex;flex-direction:column}
+.feed-item{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;padding:1rem 1.1rem;
+  border-bottom:1px solid var(--line);align-items:flex-start}
+.feed-item:last-child{border-bottom:none}
+.feed-item:hover{background:rgba(255,255,255,.02)}
+.feed-item .fi-type{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.1em;padding:.28rem .6rem;
+  border-radius:5px;white-space:nowrap;height:fit-content}
+.fi-type.gazette{color:#BBD0FF;background:rgba(120,150,255,.12)}
+.fi-type.news{color:#FFA79C;background:rgba(255,107,91,.12)}
+.fi-type.proc{color:#7DEDE0;background:rgba(45,212,191,.12)}
+.fi-type.reg{color:#D8B4FE;background:rgba(168,85,247,.13)}
+.fi-type.social{color:#FFD98A;background:rgba(245,184,75,.1)}
+.feed-item .fi-body{min-width:0}
+.feed-item .fi-title{color:var(--foam);font-size:.9rem;font-weight:500;line-height:1.4}
+.feed-item .fi-src{font-family:var(--f-mono);font-size:.72rem;color:var(--faint);margin-top:.3rem;
+  letter-spacing:.04em;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.feed-item .fi-src .sep{opacity:.4}
+.feed-item .fi-when{font-family:var(--f-mono);font-size:.72rem;color:var(--mist);white-space:nowrap}
+
+/* Stakeholders 2x2 matrix */
+.matrix-wrap{padding:1.4rem;position:relative}
+.matrix{position:relative;aspect-ratio:1.35 / 1;border:1px solid var(--line);border-radius:var(--r-md);
+  background:
+    linear-gradient(90deg, transparent 49.7%, rgba(154,171,255,.14) 49.7%, rgba(154,171,255,.14) 50.3%, transparent 50.3%),
+    linear-gradient(180deg, transparent 49.7%, rgba(154,171,255,.14) 49.7%, rgba(154,171,255,.14) 50.3%, transparent 50.3%),
+    radial-gradient(circle at 50% 50%, rgba(168,85,247,.05), transparent 60%);
+  overflow:hidden}
+.matrix::before,.matrix::after{content:"";position:absolute;font-family:var(--f-mono);font-size:.62rem;
+  letter-spacing:.14em;color:var(--faint);text-transform:uppercase}
+.q-label{position:absolute;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);opacity:.7}
+.axis-x,.axis-y{position:absolute;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mist)}
+.axis-x{left:50%;bottom:-1.6rem;transform:translateX(-50%)}
+.axis-y{top:50%;left:-1.8rem;transform:translateY(-50%) rotate(-90deg);transform-origin:center}
+.matrix-note{margin-top:2.2rem;font-size:.82rem;color:var(--mist);padding:1rem 1.1rem;border-radius:var(--r-sm);
+  border:1px dashed var(--line-strong);background:rgba(255,255,255,.015)}
+.sh-dot{position:absolute;transform:translate(-50%,-50%);cursor:default}
+.sh-dot .d{width:12px;height:12px;border-radius:50%;background:var(--violet);
+  box-shadow:0 0 12px var(--glow-v);border:2px solid var(--ink);transition:transform .2s ease}
+.sh-dot:hover .d{transform:scale(1.4)}
+.sh-dot .l{position:absolute;left:14px;top:-4px;font-size:.72rem;color:var(--foam);white-space:nowrap;
+  background:rgba(12,21,38,.9);padding:.1rem .4rem;border-radius:4px;border:1px solid var(--line);font-family:var(--f-mono);letter-spacing:.03em}
+.sh-dot.tide .d{background:var(--tide);box-shadow:0 0 12px var(--glow-t)}
+.sh-dot.coral .d{background:var(--coral);box-shadow:0 0 12px var(--glow-c)}
+.sh-dot.amber .d{background:var(--amber);box-shadow:0 0 10px rgba(245,184,75,.5)}
+.sh-legend{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1.1rem;font-family:var(--f-mono);font-size:.72rem;color:var(--mist)}
+.sh-legend span{display:inline-flex;align-items:center;gap:.45rem}
+.sh-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* Source packs & products (workspace) */
+.pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
+.pack{padding:1.1rem 1.15rem;border-radius:var(--r-md);border:1px solid var(--line);background:rgba(255,255,255,.02);
+  transition:all .18s ease;display:flex;flex-direction:column;gap:.55rem;text-align:left}
+.pack:hover{border-color:rgba(168,85,247,.4);background:rgba(168,85,247,.05);transform:translateY(-2px)}
+.pack .p-flag{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.16em;color:var(--violet);text-transform:uppercase}
+.pack b{font-family:var(--f-display);font-weight:700;font-size:.98rem;color:var(--foam)}
+.pack .p-meta{font-family:var(--f-mono);font-size:.7rem;color:var(--faint);display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.25rem}
+.pack .p-meta i{width:3px;height:3px;border-radius:50%;background:var(--faint);align-self:center;opacity:.6}
+.pack p{color:var(--mist);font-size:.82rem;line-height:1.5}
+@media (max-width:900px){.pack-grid{grid-template-columns:1fr}}
+
+/* ============ LANDING — DESIGN PARTNERS BAND ============ */
+.partners{padding:2.2rem 0;border-block:1px solid var(--line);background:rgba(255,255,255,.012)}
+.partners-inner{display:flex;align-items:center;gap:clamp(1.6rem,4vw,3.4rem);flex-wrap:wrap;justify-content:center}
+.partners-tag{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
+.partners-row{display:flex;gap:clamp(1.4rem,3.5vw,3rem);align-items:center;flex-wrap:wrap;justify-content:center}
+.plogo{font-family:var(--f-display);font-weight:700;font-size:1rem;letter-spacing:-.005em;color:var(--mist);
+  opacity:.55;transition:opacity .2s ease, color .2s ease;display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap}
+.plogo:hover{opacity:1;color:var(--foam)}
+.plogo svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.7;flex:none;opacity:.9}
+.plogo em{font-style:normal;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;font-weight:400}
+
+/* ============ COMPARISON TABLE ============ */
+.compare-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-lg);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+.compare{width:100%;border-collapse:collapse;font-size:.9rem;min-width:720px}
+.compare th,.compare td{padding:1.1rem 1.2rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.compare thead th{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);background:rgba(255,255,255,.02);font-weight:500;position:sticky;top:0}
+.compare thead th.us{color:var(--foam);background:rgba(168,85,247,.1);border-bottom-color:rgba(168,85,247,.35)}
+.compare tbody th{font-family:var(--f-display);font-weight:600;color:var(--foam);width:230px}
+.compare td{color:var(--mist)}
+.compare td.us{color:var(--foam);background:rgba(168,85,247,.05);border-left:1px solid rgba(168,85,247,.2);border-right:1px solid rgba(168,85,247,.2)}
+.compare tr:last-child td,.compare tr:last-child th{border-bottom:none}
+.compare tr:last-child td.us{border-bottom:1px solid rgba(168,85,247,.35)}
+.check{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;font-weight:600}
+.check svg{width:12px;height:12px;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.check.yes{color:#7DEDE0}.check.yes svg{stroke:#7DEDE0}
+.check.no{color:#FFA79C;opacity:.75}.check.no svg{stroke:#FFA79C}
+.check.partial{color:#FFD98A;opacity:.85}.check.partial svg{stroke:#FFD98A}
+
+/* ============ CASE STUDIES ============ */
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.case{padding:1.7rem;transition:transform .2s ease, border-color .2s ease;display:flex;flex-direction:column;gap:1rem}
+.case:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.case .c-sector{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--violet);display:flex;align-items:center;gap:.5rem}
+.case .c-sector::before{content:"";width:22px;height:1px;background:var(--violet)}
+.case h3{font-family:var(--f-display);font-weight:700;font-size:1.1rem;line-height:1.3}
+.case .c-outcome{color:var(--mist);font-size:.9rem;line-height:1.55;flex:1}
+.case .c-outcome em{color:var(--foam);font-style:normal;font-weight:500}
+.case .c-metric{display:flex;align-items:baseline;gap:.6rem;padding-top:.9rem;border-top:1px dashed var(--line)}
+.case .c-metric b{font-family:var(--f-display);font-weight:800;font-size:1.5rem;color:#D8B4FE;letter-spacing:-.02em}
+.case .c-metric span{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;color:var(--faint);text-transform:uppercase}
+@media (max-width:900px){.cases-grid{grid-template-columns:1fr}}
+
+/* ============ FAQ ACCORDION ============ */
+.faq-list{display:flex;flex-direction:column;gap:.6rem}
+.faq-item{border:1px solid var(--line);border-radius:var(--r-md);background:rgba(255,255,255,.02);overflow:hidden;transition:border-color .2s ease}
+.faq-item[open]{border-color:rgba(168,85,247,.35);background:rgba(168,85,247,.04)}
+.faq-item summary{list-style:none;cursor:pointer;padding:1.15rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  font-family:var(--f-display);font-weight:600;font-size:1rem;color:var(--foam);transition:color .15s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{color:#E5D0FF}
+.faq-item summary .plus{width:22px;height:22px;border:1px solid var(--line);border-radius:50%;
+  display:grid;place-items:center;position:relative;flex:none;transition:transform .3s ease, border-color .2s ease}
+.faq-item summary .plus::before,.faq-item summary .plus::after{content:"";position:absolute;background:currentColor}
+.faq-item summary .plus::before{width:8px;height:1.4px}
+.faq-item summary .plus::after{width:1.4px;height:8px;transition:opacity .2s ease}
+.faq-item[open] summary .plus{transform:rotate(180deg);border-color:var(--violet);color:var(--violet)}
+.faq-item[open] summary .plus::after{opacity:0}
+.faq-item .faq-body{padding:0 1.3rem 1.25rem;color:var(--mist);font-size:.93rem;line-height:1.65;max-width:78ch}
+.faq-item .faq-body p + p{margin-top:.7rem}
+
+.footer{position:relative;margin-top:clamp(4rem,10vh,7rem);border-top:1px solid var(--line);overflow:hidden;
+  background:linear-gradient(180deg,transparent, rgba(168,85,247,.06))}
+
+/* drifting arms under everything */
+.f-art{position:absolute;inset:auto 0 -30px;width:100%;height:220px;pointer-events:none;opacity:.28;color:var(--violet)}
+.f-art path{fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round}
+.f-art .w1{animation:sway 11s ease-in-out infinite alternate}
+.f-art .w2{animation:sway 14s ease-in-out infinite alternate-reverse;opacity:.6;color:var(--coral)}
+.f-art .w3{animation:sway 17s ease-in-out infinite alternate;opacity:.4;color:var(--tide)}
+@keyframes sway{to{transform:translateX(28px) translateY(-8px)}}
+
+/* jurisdiction marquee (bottom-of-page ticker) */
+.jur-ticker{position:relative;z-index:1;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:14px 0;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.jur-track{display:flex;gap:38px;width:max-content;animation:jur-slide 38s linear infinite}
+.jur-ticker:hover .jur-track{animation-play-state:paused}
+.jur-track > span{font-family:var(--f-mono);font-size:12px;letter-spacing:.18em;color:var(--faint);opacity:.55;
+  display:flex;align-items:center;gap:38px;white-space:nowrap;transition:opacity .4s ease}
+.jur-ticker:hover .jur-track > span{opacity:.95}
+.jur-track i{display:block;width:5px;height:5px;flex:none;border-radius:1px;background:var(--violet);
+  transform:rotate(45deg);opacity:.65}
+@keyframes jur-slide{to{transform:translateX(-50%)}}
+
+/* footer columns */
+.f-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px;padding:80px 0 56px;position:relative;z-index:1}
+.f-brand-link{display:inline-flex;align-items:center;gap:.65rem;font-family:var(--f-display);font-weight:800;
+  font-size:1.25rem;letter-spacing:.01em;color:var(--foam);margin-bottom:18px}
+.f-brand-link svg{width:32px;height:32px;flex:none}
+.f-brand p{color:var(--mist);font-size:15px;max-width:36ch;line-height:1.55}
+.f-badges{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}
+.f-badge{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border:1px solid var(--line);border-radius:99px;
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;color:var(--faint);
+  opacity:.65;transition:.35s cubic-bezier(.2,.7,.2,1)}
+.f-badge:hover{opacity:1;color:var(--foam);border-color:rgba(168,85,247,.5);transform:translateY(-2px)}
+.f-badge svg{width:12px;height:12px;stroke:currentColor;fill:none}
+.f-badge .live{width:6px;height:6px;border-radius:50%;background:var(--tide);
+  box-shadow:0 0 8px var(--glow-t);animation:blip 2s ease-in-out infinite}
+@keyframes blip{0%,100%{opacity:.6;transform:scale(.9)}50%{opacity:1;transform:scale(1.15)}}
+
+.f-col h4{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);margin-bottom:18px}
+.f-col a{display:flex;align-items:center;gap:9px;padding:6px 0;font-size:15px;color:var(--mist);opacity:.78;
+  transition:opacity .3s cubic-bezier(.2,.7,.2,1), color .3s ease, transform .35s cubic-bezier(.2,.7,.2,1)}
+.f-col a:hover{opacity:1;color:var(--foam);transform:translateX(5px)}
+.f-col a svg{width:14px;height:14px;flex:none;opacity:0;transform:translateX(-6px);
+  transition:.35s cubic-bezier(.2,.7,.2,1);color:#D8B4FE;stroke:currentColor;fill:none}
+.f-col a:hover svg{opacity:1;transform:none}
+
+/* giant wordmark that lights up on hover */
+.f-mark{position:relative;z-index:1;padding:10px 0 0;line-height:.8;cursor:default;user-select:none}
+.f-mark span{
+  display:block;font-family:var(--f-display);font-weight:800;letter-spacing:-.05em;
+  font-size:clamp(3.5rem,15.5vw,15rem);
+  color:transparent;-webkit-text-stroke:1px var(--line);
+  transition:color .6s cubic-bezier(.2,.7,.2,1),-webkit-text-stroke-color .6s cubic-bezier(.2,.7,.2,1),opacity .6s ease;
+  opacity:.55
+}
+.f-mark:hover span{opacity:1;color:rgba(168,85,247,.16);-webkit-text-stroke-color:var(--violet)}
+
+/* seo paragraph (kept, restyled to sit inside the new footer) */
+.seo-p{position:relative;z-index:1;padding:1.2rem 0 1.6rem;border-top:1px dashed var(--line);
+  color:var(--faint);font-size:.8rem;max-width:110ch;line-height:1.7}
+
+.f-bar{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+  padding:20px 0 34px;border-top:1px solid var(--line);position:relative;z-index:1;
+  font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--faint)}
+.f-bar .dotsep{opacity:.4;margin:0 8px}
+.f-bar a{opacity:.85;transition:.3s ease}
+.f-bar a:hover{opacity:1;color:var(--foam)}
+.up{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px solid var(--line);border-radius:99px;
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--mist);
+  transition:.35s cubic-bezier(.2,.7,.2,1);text-transform:uppercase}
+.up:hover{border-color:var(--violet);color:var(--foam);background:rgba(168,85,247,.12)}
+.up svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.6;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.up:hover svg{transform:translateY(-3px)}
+
+/* ============ COMMAND PALETTE ============ */
+.palette{position:fixed;inset:0;z-index:180;display:none;align-items:flex-start;justify-content:center;
+  padding:12vh 1rem 0;background:rgba(4,7,15,.66);backdrop-filter:blur(6px)}
+.palette.open{display:flex}
+.pal-box{width:min(560px,100%);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line-strong);
+  background:linear-gradient(180deg,#121C33,#0C1526);box-shadow:var(--shadow-pop)}
+.pal-input{display:flex;align-items:center;gap:.7rem;padding:.95rem 1.1rem;border-bottom:1px solid var(--line)}
+.pal-input svg{width:16px;height:16px;stroke:var(--faint);fill:none;stroke-width:2;flex:none}
+.pal-input input{flex:1;background:none;border:none;outline:none;font-size:.95rem;color:var(--foam)}
+.pal-list{max-height:320px;overflow-y:auto;padding:.5rem}
+.pal-item{display:flex;align-items:center;gap:.7rem;width:100%;text-align:left;padding:.7rem .8rem;border-radius:9px;
+  font-size:.88rem;color:var(--mist)}
+.pal-item .p-kind{margin-left:auto;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.1em;color:var(--faint)}
+.pal-item:hover,.pal-item.sel{background:rgba(168,85,247,.12);color:var(--foam)}
+.pal-empty{padding:1.4rem;text-align:center;color:var(--faint);font-size:.86rem}
+.pal-foot{display:flex;gap:1rem;padding:.7rem 1.1rem;border-top:1px solid var(--line);font-size:.7rem;color:var(--faint)}
+
+/* scrollbars inside app surfaces */
+.table-scroll::-webkit-scrollbar,.pal-list::-webkit-scrollbar{height:8px;width:8px}
+.table-scroll::-webkit-scrollbar-thumb,.pal-list::-webkit-scrollbar-thumb{background:var(--abyss-2);border-radius:99px}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;gap:3.2rem}
+  .hero-visual{min-height:0}
+  .net-wrap{max-width:520px}
+  .pipeline{grid-template-columns:repeat(2,1fr)}
+  .step::after{display:none}
+  .scen-grid,.prod-row{grid-template-columns:repeat(2,1fr)}
+  .f-top{grid-template-columns:1fr 1fr;gap:36px;padding:56px 0 40px}
+  .f-brand{grid-column:1 / -1}
+}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .menu-btn{display:grid}
+  .grid-3,.support-row,.gap-grid{grid-template-columns:1fr}
+  .ov-grid,.region-grid{grid-template-columns:1fr}
+  .app-body{grid-template-columns:1fr}
+  .app-side{display:none}
+  .pipe-row{grid-template-columns:repeat(2,1fr)}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .persona,.persona.wide{grid-column:span 1}
+  .mon-row{grid-template-columns:1.4fr .9fr;row-gap:.3rem}
+  .mon-row .m-freq,.mon-row .m-th{display:none}
+  .mon-row.head span:nth-child(3),.mon-row.head span:nth-child(4){display:none}
+}
+@media (max-width:640px){
+  .pipeline,.scen-grid,.prod-row,.bento{grid-template-columns:1fr}
+  .hero-stats{gap:1.2rem}
+  .brief-float{position:relative;right:auto;bottom:auto;width:100%;margin-top:1rem}
+  .app-search span em{display:none}
+  .f-top{grid-template-columns:1fr;gap:32px;padding:44px 0 32px}
+  .cta-actions .btn{width:100%;justify-content:center}
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001s !important;animation-iteration-count:1 !important;transition-duration:.001s !important}
+  .ticker-track{animation:none;width:auto;flex-wrap:wrap}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="Octivate home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      OCTIVATE <span class="brand-sub">by CENSII</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#problem">Problem</a>
+      <a href="#how">How it works</a>
+      <a href="#framework">Framework</a>
+      <a href="#demo">Live demo</a>
+      <a href="#compare">Compare</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="/dashboard" style="font-family:var(--f-mono);letter-spacing:.06em;text-transform:uppercase;font-size:.72rem">Open app</a>
+      <a class="btn btn-primary btn-sm" href="/dashboard">Request a pilot brief</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="#problem">Problem</a>
+  <a href="#how">How it works</a>
+  <a href="#framework">Framework</a>
+  <a href="#demo">Live demo</a>
+  <a href="#compare">Compare</a>
+  <a href="#audience">Who it's for</a>
+  <a href="#cases">Case studies</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Request a pilot brief</a>
+</nav>
+
+<main id="main">
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-badges reveal in">
+        <span class="pill"><span class="dot"></span> Future Caribbean Buildathon · Open Track</span>
+        <span class="pill">Powered by CENSII</span>
+      </div>
+      <h1 class="reveal in">Fragmented signals in.<br><span class="grad-text">Decision-ready judgment</span> out.</h1>
+      <p class="sub reveal in" data-delay="1">Octivate is agentic decision intelligence for fragmented regional markets. It structures your decision, plans the research, validates the evidence, maps what's missing — and delivers an action-ready brief built on CENSII's Power–Systems–Narratives method.</p>
+      <div class="hero-actions reveal in" data-delay="2">
+        <a class="btn btn-primary" href="#demo">Run the demo brief <span class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="#how">See the pipeline</a>
+      </div>
+      <div class="hero-stats reveal in" data-delay="3">
+        <div class="stat"><div class="stat-n mono" data-count="30" data-suffix="+">0</div><div class="stat-l">Jurisdictions in scope</div></div>
+        <div class="stat"><div class="stat-n mono" data-count="8">0</div><div class="stat-l">Signal streams fused</div></div>
+        <div class="stat"><div class="stat-n mono" data-count="4">0</div><div class="stat-l">Agent stages per brief</div></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal in" data-delay="2" aria-hidden="true">
+      <div class="net-wrap">
+        <svg class="net-svg" viewBox="0 0 560 480" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#A855F7"/>
+              <stop offset="1" stop-color="#FF6B5B"/>
+            </linearGradient>
+          </defs>
+          <path class="flow" d="M60,60 C140,84 196,164 280,250"/>
+          <path class="flow" d="M200,28 C224,104 248,176 280,250"/>
+          <path class="flow" d="M368,34 C348,110 312,182 280,250"/>
+          <path class="flow" d="M505,88 C428,128 344,196 280,250"/>
+          <path class="flow" d="M532,210 C452,222 360,238 280,250"/>
+          <path class="flow" d="M40,200 C120,214 208,234 280,250"/>
+          <path class="flow" d="M86,338 C152,314 220,282 280,250"/>
+          <path class="flow" d="M455,300 C396,290 336,268 280,250"/>
+          <path class="flow" id="outPath" d="M280,250 C330,300 380,340 424,372"/>
+          <circle cx="280" cy="250" r="62" fill="#A855F7" opacity=".08"/>
+          <circle cx="280" cy="250" r="46" fill="none" stroke="#A855F7" stroke-opacity=".6" stroke-width="1.4"/>
+          <circle cx="280" cy="250" r="30" fill="none" stroke="rgba(154,171,255,.3)" stroke-width="1" stroke-dasharray="3 5"/>
+          <circle class="core-pulse" cx="280" cy="250" r="11" fill="#FF6B5B"/>
+          <circle r="3" fill="#7DEDE0"><animateMotion dur="3.6s" repeatCount="indefinite" path="M60,60 C140,84 196,164 280,250"/></circle>
+          <circle r="3" fill="#D8B4FE"><animateMotion dur="4.4s" repeatCount="indefinite" path="M505,88 C428,128 344,196 280,250"/></circle>
+          <circle r="3" fill="#FFA79C"><animateMotion dur="5s" repeatCount="indefinite" path="M86,338 C152,314 220,282 280,250"/></circle>
+          <circle r="3" fill="#7DEDE0"><animateMotion dur="3.2s" repeatCount="indefinite" path="M280,250 C330,300 380,340 424,372"/></circle>
+        </svg>
+        <span class="net-chip" style="left:10.7%;top:12.5%"><i style="background:#D8B4FE"></i>Gov portals</span>
+        <span class="net-chip" style="left:35.7%;top:5.8%"><i style="background:#FFA79C"></i>Local media</span>
+        <span class="net-chip" style="left:65.7%;top:7%"><i style="background:#7DEDE0"></i>Regulators</span>
+        <span class="net-chip" style="left:90%;top:18%"><i style="background:#BBD0FF"></i>Donor reports</span>
+        <span class="net-chip" style="left:95%;top:43.7%"><i style="background:#BBD0FF"></i>Procurement</span>
+        <span class="net-chip" style="left:7%;top:41.6%"><i style="background:#7DEDE0"></i>Chambers</span>
+        <span class="net-chip" style="left:15.4%;top:70.4%"><i style="background:#FFA79C"></i>Social signals</span>
+        <span class="net-chip" style="left:81%;top:60.5%"><i style="background:#D8B4FE"></i>Diaspora</span>
+        <div class="brief-float">
+          <span class="bf-tag">Decision brief · output</span>
+          <div class="bf-title">Guyana energy services — phased entry recommended</div>
+          <div class="bf-row"><span>Confidence</span><b style="color:#7DEDE0">Moderate–High · 72</b></div>
+          <div class="bf-row"><span>Evidence gaps</span><b>3 flagged</b></div>
+          <div class="bf-row"><span>Analyst review</span><b style="color:#D8B4FE">Cleared</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TICKER ================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span class="tick-item"><span class="tick-tag proc">DEMO</span>Illustrative signal feed — sample data</span>
+    <span class="tick-item"><span class="tick-tag power">POWER</span>Cabinet reshuffle signals shift in energy portfolio priorities</span>
+    <span class="tick-item"><span class="tick-tag proc">PROCUREMENT</span>Port authority publishes pre-qualification notice — logistics</span>
+    <span class="tick-item"><span class="tick-tag systems">SYSTEMS</span>Grid maintenance window extended; industrial feeders affected</span>
+    <span class="tick-item"><span class="tick-tag narrative">NARRATIVE</span>Local-content sentiment rising across talk radio and WhatsApp</span>
+    <span class="tick-item"><span class="tick-tag power">POWER</span>Opposition files motion on licensing transparency</span>
+    <span class="tick-item"><span class="tick-tag systems">SYSTEMS</span>Ferry disruption raises inter-island freight costs</span>
+    <span class="tick-item"><span class="tick-tag narrative">NARRATIVE</span>Utility trust declining in coastal parishes</span>
+    <span class="tick-item"><span class="tick-tag proc">PROCUREMENT</span>Multilateral tender issued for resilience infrastructure</span>
+    <span class="tick-item"><span class="tick-tag power">POWER</span>Bilateral MOU under negotiation — critical minerals</span>
+    <span class="tick-item"><span class="tick-tag systems">SYSTEMS</span>Customs single-window rollout slips to Q4</span>
+  </div>
+</div>
+
+<!-- ================= DESIGN PARTNERS ================= -->
+<section class="partners" aria-label="Design partners and coverage">
+  <div class="container partners-inner">
+    <span class="partners-tag">Design-partner pilots in flight <em>· illustrative</em></span>
+    <div class="partners-row">
+      <span class="plogo"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9l6-5 6 5v11M9 20v-6h6v6"/></svg>Ministry pilot</span>
+      <span class="plogo"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg>Multilateral desk</span>
+      <span class="plogo"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-8h6v8"/><circle cx="12" cy="8.5" r="1"/></svg>Regional investor</span>
+      <span class="plogo"><svg viewBox="0 0 24 24"><path d="M12 3L2 8l10 5 10-5-10-5zM2 14l10 5 10-5M2 20l10 5 10-5"/></svg>Development programme</span>
+      <span class="plogo"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg>Diplomatic mission</span>
+      <span class="plogo"><svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>Underwriting team</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="section" id="problem">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The problem</span>
+      <h2 class="reveal">Strategic decisions are being made with fractured information</h2>
+      <p class="lede reveal" data-delay="1">Organizations operating in or exposed to the Caribbean lack a reliable way to translate scattered, uneven, incomplete information into decision-ready judgment.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card prob-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.4"/><circle cx="19" cy="5" r="2.4"/><circle cx="12" cy="19" r="2.4"/><path d="M7 7.5l3.2 8M17.2 6.8l-3.4 9.4" stroke-dasharray="2.5 3"/></svg></div>
+        <h3>Scattered sources</h3>
+        <p>Government portals, local media, donor reports, regulators, chambers and informal signals rarely connect cleanly across jurisdictions.</p>
+      </div>
+      <div class="card prob-card reveal" data-delay="1">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 13h4l2-6 3 11 3-8 2 3h6"/></svg></div>
+        <h3>Weak signal visibility</h3>
+        <p>Important shifts appear first as policy hints, procurement notices, stakeholder concerns or narrative changes — easy to miss, costly to ignore.</p>
+      </div>
+      <div class="card prob-card reveal" data-delay="2">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h9v14H4z"/><path d="M13 12h4"/><path d="M20 9.5v.5m0 3.5c0-1.4 1.6-1.6 1.6-3a1.6 1.6 0 0 0-3.2-.3" transform="translate(-1 3)"/></svg></div>
+        <h3>The action gap</h3>
+        <p>Teams receive summaries, but still have to decide what to do, what to verify, and who to engage. Summaries are not decisions.</p>
+      </div>
+    </div>
+    <p class="missing-layer reveal">The missing layer is <span class="grad-text">structured decision intelligence.</span></p>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How the agents work</span>
+      <h2 class="reveal">Orchestration turns LLM capability into a repeatable intelligence method</h2>
+      <p class="lede reveal" data-delay="1">A guided agentic workflow — not a chatbot. Each stage produces an inspectable artifact, and sensitive or low-confidence briefs route to a human analyst before release.</p>
+    </div>
+    <ol class="pipeline">
+      <li class="card step reveal"><h3>Decision intake</h3><p>Turns a vague question into sub-questions, explicit assumptions and a bounded scope.</p></li>
+      <li class="card step reveal" data-delay="1"><h3>Source retrieval</h3><p>Combines CENSII-curated source packs with material you provide — filings, notices, local reporting.</p></li>
+      <li class="card step reveal" data-delay="2"><h3>Evidence validation</h3><p>Tests source quality, evidence strength and contradictions. Flags what can't be verified.</p></li>
+      <li class="card step reveal" data-delay="3"><h3>PSN analysis</h3><p>Applies CENSII's Power–Systems–Narratives framework to surface opportunity, risk and sequencing.</p></li>
+    </ol>
+    <div class="support-row">
+      <div class="support-chip hitl reveal"><b>Human-in-the-loop</b>Sensitive or low-confidence briefs are held for analyst review before they reach you.</div>
+      <div class="support-chip brief reveal" data-delay="1"><b>Action brief</b>Decision-ready options, trade-offs, evidence gaps and stakeholder engagement considerations.</div>
+      <div class="support-chip mon reveal" data-delay="2"><b>Monitoring plan</b>The structured query is saved with triggers, so the brief stays alive as conditions change.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PSN FRAMEWORK ================= -->
+<section class="section framework" id="framework" data-active-lens="power">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The CENSII method</span>
+      <h2 class="reveal">Every question, read through three lenses</h2>
+      <p class="lede reveal" data-delay="1">Power, Systems and Narratives are analysed together — never in isolation. Power changes regulation; regulation changes infrastructure; infrastructure failures change public narratives; narratives create political pressure. Octivate traces the interactions.</p>
+    </div>
+    <div class="lens-switch" role="group" aria-label="Choose a lens">
+      <button class="lens-btn" data-lens="power" aria-pressed="true">Power</button>
+      <button class="lens-btn" data-lens="systems" aria-pressed="false">Systems</button>
+      <button class="lens-btn" data-lens="narratives" aria-pressed="false">Narratives</button>
+    </div>
+    <div class="card lens-panel">
+      <p class="lens-q" id="lensQ">Who can make something happen?</p>
+      <p class="lens-a" id="lensA">Answers · capability and intent</p>
+      <div class="lens-tags" id="lensTags"></div>
+      <p class="lens-example" id="lensEx"></p>
+    </div>
+    <p class="psn-note">Color is semantic across the whole product: <span style="color:#D8B4FE">violet = Power</span>, <span style="color:#7DEDE0">teal = Systems</span>, <span style="color:#FFA79C">coral = Narratives</span>. Wherever you see it — tabs, badges, cards — it means the same thing.</p>
+  </div>
+</section>
+
+<!-- ================= DASHBOARD DEMO ================= -->
+<section class="section" id="demo">
+  <div class="container demo-wrap">
+    <div class="section-head">
+      <span class="eyebrow">Live demo · v0.1</span>
+      <h2 class="reveal">A decision brief designed for action</h2>
+      <p class="lede reveal" data-delay="1">This is the working surface. It shows what is known, what is uncertain, which gaps matter, and what to do next — the same structure a CENSII analyst delivers, generated in minutes.</p>
+    </div>
+
+    <div class="app reveal" role="region" aria-label="Octivate product demo">
+      <div class="app-top">
+        <span class="win-dots"><i></i><i></i><i></i></span>
+        <span class="app-brand">OCTIVATE</span>
+        <button class="app-search" id="openPalette" aria-label="Open command palette">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <span>Search briefs, monitors, sources<em>…</em></span>
+          <kbd>⌘K</kbd>
+        </button>
+        <div class="top-actions">
+          <a class="btn btn-ghost btn-sm" href="/dashboard#intake" id="newBriefBtn">New brief</a>
+          <span class="avatar" title="Shemuel London">SL</span>
+        </div>
+      </div>
+
+      <div class="app-body">
+        <aside class="app-side" aria-label="Workspace navigation">
+          <span class="side-sec">Workspace</span>
+          <button class="side-link active" data-view="briefs" aria-current="true"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M9 12h6M9 16h6"/></svg>Briefs</button>
+          <button class="side-link" data-view="monitors"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>Monitors</button>
+          <button class="side-link" data-view="sources"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Sources</button>
+          <button class="side-link" data-view="stakeholders"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.5 2.7-5 6-5s6 1.5 6 5"/><circle cx="17.5" cy="9.5" r="2.2"/></svg>Stakeholders</button>
+          <span class="side-sec">Library</span>
+          <button class="side-link" data-view="packs"><svg viewBox="0 0 24 24"><path d="M4 5h6l2 2h8v12H4z"/></svg>Source packs</button>
+          <button class="side-link" data-view="products"><svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>Products</button>
+          <div class="side-foot">Demo workspace<br>Octivate v0.1 · design draft</div>
+        </aside>
+
+        <div class="app-main">
+          <div class="view" data-view="briefs" aria-label="Briefs workspace">
+          <div class="card composer">
+            <span class="c-label">Decision question</span>
+            <p class="c-q">Should we enter Guyana's energy services market within the next 12 months?</p>
+            <div class="chips">
+              <span class="chip">Geography · <b>Guyana</b></span>
+              <span class="chip">Sector · <b>Energy services</b></span>
+              <span class="chip">Horizon · <b>12 months</b></span>
+              <span class="chip">Sources · <b>CENSII pack + 3 uploads</b></span>
+            </div>
+            <div class="composer-foot">
+              <span class="demo-pill">Illustrative demo data</span>
+              <button class="btn btn-primary btn-sm" id="runBtn">Run the pipeline <span class="arrow">→</span></button>
+            </div>
+          </div>
+
+          <div class="pipe-row" aria-label="Pipeline status">
+            <div class="pstep" data-state="done"><div class="p-top"><span class="pdot"></span>Decision intake</div><div class="p-sub">4 sub-questions · scope set</div><div class="pbar"><i style="width:100%"></i></div></div>
+            <div class="pstep" data-state="done"><div class="p-top"><span class="pdot"></span>Source retrieval</div><div class="p-sub">37 sources · 5 categories</div><div class="pbar"><i style="width:100%"></i></div></div>
+            <div class="pstep" data-state="done"><div class="p-top"><span class="pdot"></span>Evidence validation</div><div class="p-sub">2 contradictions · 3 gaps</div><div class="pbar"><i style="width:100%"></i></div></div>
+            <div class="pstep" data-state="done"><div class="p-top"><span class="pdot"></span>PSN analysis</div><div class="p-sub">Judgment composed</div><div class="pbar"><i style="width:100%"></i></div></div>
+          </div>
+
+          <div class="card brief" id="brief">
+            <div class="brief-head">
+              <div>
+                <h3>Guyana energy services — market entry brief</h3>
+                <div class="brief-meta">
+                  <span class="pill">Analyst reviewed · HITL</span>
+                  <span class="pill" id="genStamp">Generated 2 min ago</span>
+                </div>
+              </div>
+              <span class="conf-badge"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:#2DD4BF;display:inline-block"></span>Confidence · Moderate–High</span>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="Brief sections">
+              <button class="tab" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true" data-tab="overview">Overview</button>
+              <button class="tab" role="tab" id="tab-evidence" aria-controls="panel-evidence" aria-selected="false" data-tab="evidence">Evidence</button>
+              <button class="tab" role="tab" id="tab-gaps" aria-controls="panel-gaps" aria-selected="false" data-tab="gaps">Gap map</button>
+              <button class="tab" role="tab" id="tab-scenarios" aria-controls="panel-scenarios" aria-selected="false" data-tab="scenarios">Scenarios</button>
+              <button class="tab" role="tab" id="tab-monitoring" aria-controls="panel-monitoring" aria-selected="false" data-tab="monitoring">Monitoring</button>
+            </div>
+
+            <div class="panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" data-panel="overview">
+              <div class="ov-grid">
+                <div class="ov-block">
+                  <h4>Executive judgment</h4>
+                  <p class="exec-j">Entry is viable, but <em>sequencing matters more than speed</em>. Signals suggest local-content enforcement is tightening ahead of the electoral cycle, and certification capacity is a likely bottleneck. A phased entry anchored on a local partner appears to reduce both regulatory exposure and narrative risk, while preserving the upside of the current investment window.</p>
+                  <div class="action-card">
+                    <span class="a-label">Recommended action</span>
+                    <p>Proceed with phased entry. Secure a local-content partner before the next licensing window; open early engagement with the energy ministry and the private sector commission in parallel.</p>
+                  </div>
+                  <h4 style="margin-top:1.6rem">Key judgements</h4>
+                  <ul class="kj-list">
+                    <li class="kj"><span class="badge hi">High</span><div><p>Local-content requirements will likely tighten within 12 months.</p><span class="why">Why: consistent ministerial signalling, draft amendments in circulation, election-year incentives align.</span></div></li>
+                    <li class="kj"><span class="badge mod">Moderate</span><div><p>Certification throughput is a probable bottleneck for new entrants.</p><span class="why">Why: analysis of processing volumes; no primary data on current queue length — flagged as a gap.</span></div></li>
+                    <li class="kj"><span class="badge lo">Low</span><div><p>A wholly-foreign entry could face organized narrative opposition.</p><span class="why">Why: speculative; sentiment signals are directional but thin. Treat as a watch item, not a driver.</span></div></li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="gauge-wrap">
+                    <div class="gauge" id="gauge" style="--val:72"><b id="gaugeNum">72</b></div>
+                    <span class="gauge-l">Composite confidence</span>
+                    <p class="gauge-note">Weighted across evidence strength, source diversity and contradiction rate.</p>
+                  </div>
+                  <div class="psn-mini">
+                    <div class="psn-chip power"><b>Power</b>Election cycle raises the political value of visible local-content wins; ministry is the decisive gatekeeper.</div>
+                    <div class="psn-chip systems"><b>Systems</b>Port congestion and certification capacity constrain how fast entry can actually happen.</div>
+                    <div class="psn-chip narratives"><b>Narratives</b>Resource-nationalism sentiment is rising; partnership framing likely lowers resistance.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel" id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence" data-panel="evidence" hidden>
+              <div class="filter-row">
+                <label class="input"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="evFilter" type="text" placeholder="Filter claims…" aria-label="Filter evidence claims"></label>
+                <select class="select" id="evClass" aria-label="Filter by evidence class">
+                  <option value="">All classes</option>
+                  <option value="Fact">Facts</option>
+                  <option value="Assumption">Assumptions</option>
+                  <option value="Analysis">Analysis</option>
+                </select>
+              </div>
+              <div class="table-scroll">
+                <table class="ev-table" id="evTable">
+                  <thead><tr><th>Claim</th><th>Source</th><th>Class</th><th>Relevance</th><th>Confidence</th></tr></thead>
+                  <tbody>
+                    <tr><td>Draft local-content amendments circulated to industry bodies</td><td>Ministry gazette · chamber note</td><td><span class="type-tag fact">Fact</span></td><td>Direct</td><td><span class="badge hi">High</span></td></tr>
+                    <tr><td>Licensing window expected to open in Q2</td><td>Regulator briefing</td><td><span class="type-tag fact">Fact</span></td><td>Direct</td><td><span class="badge hi">High</span></td></tr>
+                    <tr><td>Certification queue exceeds current processing capacity</td><td>Analyst inference from volumes</td><td><span class="type-tag analysis">Analysis</span></td><td>High</td><td><span class="badge mod">Moderate</span></td></tr>
+                    <tr><td>Election timing will not shift the legislative calendar</td><td>Working assumption</td><td><span class="type-tag assume">Assumption</span></td><td>Medium</td><td><span class="badge mod">Moderate</span></td></tr>
+                    <tr><td>Talk-radio and WhatsApp sentiment trending toward resource nationalism</td><td>Narrative sampling · 6 outlets</td><td><span class="type-tag analysis">Analysis</span></td><td>Medium</td><td><span class="badge mod">Moderate</span></td></tr>
+                    <tr><td>Competitor entrant negotiating an exclusive local partnership</td><td>Single informal signal</td><td><span class="type-tag assume">Assumption</span></td><td>High if true</td><td><span class="badge lo">Low</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="ev-note">Facts, assumptions, analysis and speculation are never mixed. Every claim carries its class, its source type and a confidence rating — so you can interrogate the judgment, not just accept it.</p>
+            </div>
+
+            <div class="panel" id="panel-gaps" role="tabpanel" aria-labelledby="tab-gaps" data-panel="gaps" hidden>
+              <div class="gap-grid">
+                <div class="gap-card">
+                  <div class="g-row"><b>What's missing</b><p>Primary data on certification processing times and queue length.</p></div>
+                  <div class="g-row"><b>Why it matters</b><p>It determines whether a 12-month entry is physically achievable, regardless of approvals.</p></div>
+                  <div class="g-row"><b>How to close it</b><p>Request throughput figures via the chamber; commission a 2-week local verification sprint.</p></div>
+                </div>
+                <div class="gap-card">
+                  <div class="g-row"><b>What's missing</b><p>Confirmation of the competitor partnership signal.</p></div>
+                  <div class="g-row"><b>Why it matters</b><p>An exclusive tie-up would remove the strongest available local partner from the board.</p></div>
+                  <div class="g-row"><b>How to close it</b><p>Two-source rule: discreet outreach to the partner's advisory network before any approach.</p></div>
+                </div>
+                <div class="gap-card">
+                  <div class="g-row"><b>What's missing</b><p>Ministry position on foreign-majority service JVs post-amendment.</p></div>
+                  <div class="g-row"><b>Why it matters</b><p>It defines the viable ownership structure — and therefore the negotiation posture.</p></div>
+                  <div class="g-row"><b>How to close it</b><p>Structured engagement meeting; CENSII stakeholder map identifies the two decisive officials.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel" id="panel-scenarios" role="tabpanel" aria-labelledby="tab-scenarios" data-panel="scenarios" hidden>
+              <div class="scen-grid">
+                <div class="scen-card base"><div class="s-prob mono">55%</div><div class="s-name">Base case</div><p>Amendments pass in moderated form; phased entry with a local partner clears licensing inside the window.</p></div>
+                <div class="scen-card up"><div class="s-prob mono">20%</div><div class="s-name">Upside</div><p>Certification capacity is expanded ahead of elections; entry accelerates and first contracts land early.</p></div>
+                <div class="scen-card down"><div class="s-prob mono">20%</div><div class="s-name">Downside</div><p>Stricter amendments plus queue congestion push viable entry beyond the 12-month horizon.</p></div>
+                <div class="scen-card wild"><div class="s-prob mono">5%</div><div class="s-name">Wild card</div><p>A governance controversy freezes new licences; narrative risk dominates and entry pauses entirely.</p></div>
+              </div>
+            </div>
+
+            <div class="panel" id="panel-monitoring" role="tabpanel" aria-labelledby="tab-monitoring" data-panel="monitoring" hidden>
+              <div class="mon-list">
+                <div class="mon-row head"><span>Trigger</span><span>Source</span><span>Cadence</span><span>Threshold</span></div>
+                <div class="mon-row"><span class="m-t">Local-content amendment tabled or gazetted</span><span>Parliament order paper · gazette</span><span class="freq m-freq">Daily</span><span class="m-th">Any mention</span></div>
+                <div class="mon-row"><span class="m-t">Licensing window announcement</span><span>Regulator releases</span><span class="freq m-freq">Daily</span><span class="m-th">Date confirmed</span></div>
+                <div class="mon-row"><span class="m-t">Resource-nationalism narrative intensity</span><span>Talk radio · WhatsApp sampling</span><span class="freq m-freq">Weekly</span><span class="m-th">+20% vs baseline</span></div>
+                <div class="mon-row"><span class="m-t">Competitor partnership confirmation</span><span>Registry filings · informal network</span><span class="freq m-freq">Weekly</span><span class="m-th">Second source</span></div>
+              </div>
+              <p class="mon-note">The structured query is saved. When a trigger fires, Octivate re-runs the affected stages and issues an update — so the brief ages with the situation instead of expiring on delivery.</p>
+            </div>
+
+            <div class="sk" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          </div><!-- /briefs view -->
+
+          <div class="view" data-view="monitors" hidden aria-label="Active monitors">
+            <div class="view-head">
+              <div><h3>Active monitors</h3><p>Saved queries with triggers that keep briefs alive as conditions change.</p></div>
+              <span class="meta">4 live · 1 paused · 3 triggers today</span>
+            </div>
+            <div class="card" style="padding:0">
+              <div class="mon-item">
+                <span class="mon-status hot" aria-label="Triggered"></span>
+                <div><span class="m-title">Local-content amendment tabled or gazetted</span><span class="m-sub">Guyana energy · parliament order paper &amp; gazette</span></div>
+                <span class="m-alerts">2 new</span>
+                <span class="m-cadence">DAILY</span>
+                <button class="mon-toggle" data-stub>Pause</button>
+              </div>
+              <div class="mon-item">
+                <span class="mon-status live" aria-label="Live"></span>
+                <div><span class="m-title">Licensing window announcement</span><span class="m-sub">Regulator releases · ministerial statements</span></div>
+                <span class="m-alerts zero">—</span>
+                <span class="m-cadence">DAILY</span>
+                <button class="mon-toggle" data-stub>Pause</button>
+              </div>
+              <div class="mon-item">
+                <span class="mon-status hot" aria-label="Triggered"></span>
+                <div><span class="m-title">Resource-nationalism narrative intensity</span><span class="m-sub">6 talk-radio outlets · WhatsApp sampling</span></div>
+                <span class="m-alerts">+27% wk</span>
+                <span class="m-cadence">WEEKLY</span>
+                <button class="mon-toggle" data-stub>Pause</button>
+              </div>
+              <div class="mon-item">
+                <span class="mon-status live" aria-label="Live"></span>
+                <div><span class="m-title">Competitor partnership confirmation</span><span class="m-sub">Registry filings · two-source rule</span></div>
+                <span class="m-alerts zero">—</span>
+                <span class="m-cadence">WEEKLY</span>
+                <button class="mon-toggle" data-stub>Pause</button>
+              </div>
+              <div class="mon-item">
+                <span class="mon-status live" aria-label="Live"></span>
+                <div><span class="m-title">Port congestion &amp; certification queue signals</span><span class="m-sub">Port authority notices · chamber briefings</span></div>
+                <span class="m-alerts">1 new</span>
+                <span class="m-cadence">WEEKLY</span>
+                <button class="mon-toggle" data-stub>Pause</button>
+              </div>
+              <div class="mon-item">
+                <span class="mon-status paused" aria-label="Paused"></span>
+                <div><span class="m-title">Diaspora remittance policy signals</span><span class="m-sub">Central bank · Treasury commentary</span></div>
+                <span class="m-alerts zero">—</span>
+                <span class="m-cadence">MONTHLY</span>
+                <button class="mon-toggle" data-stub>Resume</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="view" data-view="sources" hidden aria-label="Recent source items">
+            <div class="view-head">
+              <div><h3>Recent source items</h3><p>Live feed across curated packs and user uploads. Filter by type, drill for context.</p></div>
+              <span class="meta">37 items · last 72h</span>
+            </div>
+            <div class="view-toolbar">
+              <label class="input" style="max-width:280px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input type="text" placeholder="Filter items…" data-stub-input></label>
+              <select class="select" data-stub-input><option>All types</option><option>Gazette</option><option>News</option><option>Procurement</option><option>Regulator</option><option>Social</option></select>
+              <select class="select" data-stub-input><option>All jurisdictions</option><option>Guyana</option><option>Trinidad &amp; Tobago</option><option>Jamaica</option><option>Regional</option></select>
+            </div>
+            <div class="card feed" style="padding:0">
+              <div class="feed-item">
+                <span class="fi-type gazette">GAZETTE</span>
+                <div class="fi-body"><div class="fi-title">Draft amendment to local-content regulations circulated to industry bodies for consultation</div>
+                <div class="fi-src"><span>Ministry gazette</span><span class="sep">·</span><span>Guyana</span><span class="sep">·</span><span>Confidence: high</span></div></div>
+                <span class="fi-when">2h ago</span>
+              </div>
+              <div class="feed-item">
+                <span class="fi-type reg">REGULATOR</span>
+                <div class="fi-body"><div class="fi-title">Energy regulator briefing indicates licensing window opens Q2; timing subject to legislative calendar</div>
+                <div class="fi-src"><span>Regulator release</span><span class="sep">·</span><span>Guyana</span><span class="sep">·</span><span>Confidence: high</span></div></div>
+                <span class="fi-when">5h ago</span>
+              </div>
+              <div class="feed-item">
+                <span class="fi-type proc">PROCUREMENT</span>
+                <div class="fi-body"><div class="fi-title">Port authority publishes pre-qualification notice — resilience infrastructure logistics</div>
+                <div class="fi-src"><span>Public procurement portal</span><span class="sep">·</span><span>T&amp;T</span><span class="sep">·</span><span>Confidence: high</span></div></div>
+                <span class="fi-when">7h ago</span>
+              </div>
+              <div class="feed-item">
+                <span class="fi-type news">NEWS</span>
+                <div class="fi-body"><div class="fi-title">Opposition files motion on licensing transparency; ministry to respond within statutory window</div>
+                <div class="fi-src"><span>Regional daily · aggregated 3 outlets</span><span class="sep">·</span><span>Guyana</span><span class="sep">·</span><span>Confidence: moderate</span></div></div>
+                <span class="fi-when">11h ago</span>
+              </div>
+              <div class="feed-item">
+                <span class="fi-type social">SIGNAL</span>
+                <div class="fi-body"><div class="fi-title">Talk-radio and WhatsApp sentiment shift: resource-nationalism intensity up 27% week-over-week</div>
+                <div class="fi-src"><span>Narrative sampling · 6 outlets</span><span class="sep">·</span><span>Guyana</span><span class="sep">·</span><span>Confidence: moderate</span></div></div>
+                <span class="fi-when">14h ago</span>
+              </div>
+              <div class="feed-item">
+                <span class="fi-type news">NEWS</span>
+                <div class="fi-body"><div class="fi-title">Private sector commission flags certification bottleneck at industry roundtable</div>
+                <div class="fi-src"><span>Chamber note · industry press</span><span class="sep">·</span><span>Guyana</span><span class="sep">·</span><span>Confidence: moderate</span></div></div>
+                <span class="fi-when">1d ago</span>
+              </div>
+              <div class="feed-item">
+                <span class="fi-type reg">REGULATOR</span>
+                <div class="fi-body"><div class="fi-title">Central bank commentary references foreign-exchange resilience amid capital-account signals</div>
+                <div class="fi-src"><span>Central bank quarterly</span><span class="sep">·</span><span>Guyana</span><span class="sep">·</span><span>Confidence: high</span></div></div>
+                <span class="fi-when">1d ago</span>
+              </div>
+              <div class="feed-item">
+                <span class="fi-type gazette">GAZETTE</span>
+                <div class="fi-body"><div class="fi-title">Cabinet reshuffle signals — energy portfolio realignment observed in gazetted appointments</div>
+                <div class="fi-src"><span>Official gazette</span><span class="sep">·</span><span>Guyana</span><span class="sep">·</span><span>Confidence: high</span></div></div>
+                <span class="fi-when">2d ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="view" data-view="stakeholders" hidden aria-label="Stakeholder map">
+            <div class="view-head">
+              <div><h3>Stakeholder map — Guyana energy</h3><p>Influence and interest positioning. Hover a dot for the actor.</p></div>
+              <span class="meta">12 stakeholders · 3 decisive</span>
+            </div>
+            <div class="card matrix-wrap">
+              <div class="matrix" role="img" aria-label="Influence-interest matrix">
+                <span class="q-label" style="left:1.2rem;top:1rem">Contain</span>
+                <span class="q-label" style="right:1.2rem;top:1rem">Engage closely</span>
+                <span class="q-label" style="left:1.2rem;bottom:1rem">Monitor</span>
+                <span class="q-label" style="right:1.2rem;bottom:1rem">Keep informed</span>
+
+                <div class="sh-dot" style="left:82%;top:18%"><span class="d"></span><span class="l">Ministry of Energy</span></div>
+                <div class="sh-dot" style="left:74%;top:32%"><span class="d"></span><span class="l">Prime Minister's Office</span></div>
+                <div class="sh-dot tide" style="left:88%;top:44%"><span class="d"></span><span class="l">Private Sector Commission</span></div>
+                <div class="sh-dot tide" style="left:66%;top:22%"><span class="d"></span><span class="l">Energy Regulator</span></div>
+                <div class="sh-dot" style="left:22%;top:26%"><span class="d"></span><span class="l">Opposition leadership</span></div>
+                <div class="sh-dot amber" style="left:34%;top:38%"><span class="d"></span><span class="l">Central Bank</span></div>
+                <div class="sh-dot coral" style="left:78%;top:64%"><span class="d"></span><span class="l">Local chamber</span></div>
+                <div class="sh-dot coral" style="left:64%;top:78%"><span class="d"></span><span class="l">Community NGOs (coastal)</span></div>
+                <div class="sh-dot coral" style="left:82%;top:84%"><span class="d"></span><span class="l">Diaspora media</span></div>
+                <div class="sh-dot" style="left:18%;top:66%"><span class="d"></span><span class="l">Multilateral lenders</span></div>
+                <div class="sh-dot amber" style="left:26%;top:82%"><span class="d"></span><span class="l">Bilateral partners</span></div>
+                <div class="sh-dot tide" style="left:44%;top:52%"><span class="d"></span><span class="l">Industry association</span></div>
+              </div>
+              <span class="axis-y">Influence →</span>
+              <span class="axis-x">Interest →</span>
+              <div class="sh-legend">
+                <span><i style="background:var(--violet)"></i>Power actors</span>
+                <span><i style="background:var(--tide)"></i>Systems / institutional</span>
+                <span><i style="background:var(--coral)"></i>Narrative amplifiers</span>
+                <span><i style="background:var(--amber)"></i>External / bilateral</span>
+              </div>
+            </div>
+            <div class="matrix-note">Decisive actors sit in the upper-right quadrant — engagement should start there. Coral (narrative) actors have lower influence individually but shape legitimacy when clustered.</div>
+          </div>
+
+          <div class="view" data-view="packs" hidden aria-label="Source packs">
+            <div class="view-head">
+              <div><h3>Source packs</h3><p>CENSII-curated bundles per jurisdiction and sector. One-click attach to any brief.</p></div>
+              <span class="meta">14 packs · updated hourly</span>
+            </div>
+            <div class="pack-grid">
+              <button class="pack" data-stub><span class="p-flag">Guyana</span><b>Energy &amp; extractives</b><span class="p-meta">18 sources<i></i>Gazette · Regulator · Chamber</span><p>Licensing, local content, PSA signals, certification throughput. Live triggers on 4 events.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Trinidad &amp; Tobago</span><b>Political &amp; regulatory watch</b><span class="p-meta">22 sources<i></i>Parliament · Cabinet · Press</span><p>Cabinet moves, procurement notices, regulator statements. Election-cycle sensitive.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Jamaica</span><b>Investment landscape</b><span class="p-meta">15 sources<i></i>JAMPRO · BOJ · Media</span><p>FDI signals, tax and incentive changes, industry-body commentary.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Regional · CARICOM</span><b>Regulatory digest</b><span class="p-meta">26 sources<i></i>CARICOM · OECS · Standards</span><p>Cross-border rules, harmonization moves, standards notifications.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Barbados</span><b>Financial services signals</b><span class="p-meta">11 sources<i></i>FSC · CBB · Media</span><p>Insurance, banking, blue economy funds, reinsurance capacity.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Suriname</span><b>Oil, gas &amp; sovereign</b><span class="p-meta">9 sources<i></i>Ministry · Central Bank</span><p>Block awards, IMF programme dynamics, first-oil-adjacent signals.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Eastern Caribbean</span><b>Ports &amp; logistics</b><span class="p-meta">13 sources<i></i>Port authorities · Chambers</span><p>Ferry, freight, cruise, hub-airport reliability across the OECS.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Dominican Republic</span><b>Tourism &amp; hospitality</b><span class="p-meta">14 sources<i></i>MITUR · BC · Trade press</span><p>Arrivals, hotel investment, airlift, all-inclusive dynamics.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Regional · Diaspora</span><b>Remittance &amp; policy</b><span class="p-meta">10 sources<i></i>Central banks · Money-transfer</span><p>Flow signals, correspondent-banking pressures, de-risking watch.</p></button>
+            </div>
+          </div>
+
+          <div class="view" data-view="products" hidden aria-label="Products in workspace">
+            <div class="view-head">
+              <div><h3>Deliverables</h3><p>Every product is a configuration of the same pipeline — scope, cadence and depth vary.</p></div>
+              <span class="meta">8 available</span>
+            </div>
+            <div class="pack-grid">
+              <button class="pack" data-stub><span class="p-flag">Fastest</span><b>Rapid Brief</b><span class="p-meta">Hours<i></i>1 decision · 1 output</span><p>Decision-ready judgment on a bounded question, in hours not weeks.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Deep</span><b>Decision Memo</b><span class="p-meta">3-5 days<i></i>Argued end-to-end</span><p>One decision, evidenced and structured — full PSN analysis with scenario set.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Scenarios</span><b>Scenario Sprint</b><span class="p-meta">1-2 weeks<i></i>Base · Upside · Downside · Wild</span><p>Four-scenario analysis with triggers you can actually monitor.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Actors</span><b>Stakeholder Map</b><span class="p-meta">3-5 days<i></i>Influence · Interest · Access</span><p>Who benefits, who blocks, who must be engaged — sequenced by access.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Cycle</span><b>Election Watch</b><span class="p-meta">Ongoing<i></i>Weekly cadence</span><p>Cycle-aware monitoring of power in motion, party-by-party.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Live</span><b>Early Warning Dashboard</b><span class="p-meta">Ongoing<i></i>Continuous triggers</span><p>Live triggers across your exposure map — the brief that never expires.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Meaning</span><b>Narrative Assessment</b><span class="p-meta">5-7 days<i></i>Media · social · trust</span><p>What coverage means, not just what it says. Legitimacy under a lens.</p></button>
+              <button class="pack" data-stub><span class="p-flag">Entry</span><b>Market Entry Brief</b><span class="p-meta">1-2 weeks<i></i>Sequenced entry plan</span><p>Phased entry strategy under uncertainty — with the gates identified.</p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PERSONAS ================= -->
+<section class="section" id="audience">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Who needs this</span>
+      <h2 class="reveal">The first market is organizations making Caribbean decisions</h2>
+    </div>
+    <div class="bento">
+      <div class="card persona reveal"><span class="p-tag">Capital</span><h3>Investors & advisory firms</h3><p>Market entry, opportunity screening, political and operating risk before capital moves.</p></div>
+      <div class="card persona reveal" data-delay="1"><span class="p-tag">Development</span><h3>Development organizations</h3><p>Programme design, partner mapping, policy engagement and coordination risk across states.</p></div>
+      <div class="card persona reveal" data-delay="2"><span class="p-tag">Statecraft</span><h3>Diplomatic teams</h3><p>Stakeholder intelligence, issue monitoring and strategic engagement across the region.</p></div>
+      <div class="card persona wide reveal"><span class="p-tag">Enterprise</span><h3>Multinationals</h3><p>Local context, reputation risk, regulatory signals and engagement strategy — read through the same PSN lens their advisors use.</p></div>
+      <div class="card persona wide reveal" data-delay="1"><span class="p-tag">Partners</span><h3>Intelligence providers</h3><p>White-label regional insight and analyst augmentation: your brand on the brief, Octivate under the hood.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARISON ================= -->
+<section class="section" id="compare" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Vs. the alternatives</span>
+      <h2 class="reveal">Not a news summary. Not a research chatbot. Not a report you'll read once.</h2>
+      <p class="lede reveal" data-delay="1">Octivate exists because the tools you use today answer different questions than the one you're actually asking. Here's the honest positioning.</p>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Traditional analyst report</th>
+            <th scope="col">News monitoring / clippings</th>
+            <th scope="col">Generic AI chatbot</th>
+            <th scope="col" class="us">Octivate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Decision-centred output</th>
+            <td><span class="check partial"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Sometimes</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>No</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>No</span></td>
+            <td class="us"><span class="check yes"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Yes — every output</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Caribbean-first context</th>
+            <td><span class="check partial"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Rare specialists</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>Coverage gaps</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>Latin-America blur</span></td>
+            <td class="us"><span class="check yes"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Built for the region</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Evidence classified &amp; auditable</th>
+            <td><span class="check yes"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Usually</span></td>
+            <td><span class="check partial"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Links only</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>Opaque</span></td>
+            <td class="us"><span class="check yes"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Fact · Assumption · Analysis</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Explicit confidence &amp; gaps</th>
+            <td><span class="check partial"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Sometimes</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>No</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>Confident anyway</span></td>
+            <td class="us"><span class="check yes"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Gauge + gap map</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Power–Systems–Narratives lens</th>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>No</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>No</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>No</span></td>
+            <td class="us"><span class="check yes"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Native to the method</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Ages with the situation</th>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>Snapshot only</span></td>
+            <td><span class="check partial"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Firehose, no signal</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>No memory</span></td>
+            <td class="us"><span class="check yes"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Monitors + triggers</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Analyst in the loop</th>
+            <td><span class="check yes"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>Yes — that's the cost</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>No</span></td>
+            <td><span class="check no"><svg viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6"/></svg>No</span></td>
+            <td class="us"><span class="check yes"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6"/></svg>On sensitive briefs</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Time to decision</th>
+            <td>Weeks</td>
+            <td>Hours to scan · days to synthesise</td>
+            <td>Minutes — often wrong</td>
+            <td class="us">Hours, evidenced</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY THE CARIBBEAN ================= -->
+<section class="section" id="region">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why the Caribbean first</span>
+      <h2 class="reveal">High opportunity, high information friction — the perfect proving ground</h2>
+    </div>
+    <div class="region-grid">
+      <div class="region-copy reveal">
+        <p>The region concentrates many small states, institutions, languages, currencies and legal systems into one operating context — where relationships, timing and implementation capacity decide outcomes as much as policy does.</p>
+        <p>Octivate is built Caribbean-first, not Caribbean-adapted. It treats the region on its own terms rather than as an extension of Latin America.</p>
+        <div class="region-chips">
+          <span class="rchip">CARICOM</span><span class="rchip">OECS</span><span class="rchip">Dutch Caribbean</span>
+          <span class="rchip">French Caribbean</span><span class="rchip">UK Overseas Territories</span>
+          <span class="rchip">Dominican Republic</span><span class="rchip">Haiti</span><span class="rchip">Guyana</span>
+          <span class="rchip">Suriname</span><span class="rchip">Commonwealth Caribbean</span><span class="rchip">SIDS</span>
+        </div>
+      </div>
+      <div class="duo-cards">
+        <div class="card duo thesis reveal"><b>Thesis</b><p>If Octivate can structure decision intelligence for the Caribbean's fragmentation, the workflow can be localized for any complex, fragmented market.</p></div>
+        <div class="card duo first reveal" data-delay="1"><b>First use cases</b><p>Market entry, stakeholder strategy, policy engagement, partnership screening and operating-environment scans.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="section" id="products" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Product surfaces</span>
+      <h2 class="reveal">One engine, a catalogue of deliverables</h2>
+      <p class="lede reveal" data-delay="1">Every CENSII product is a configuration of the same pipeline — different scope, cadence and depth.</p>
+    </div>
+    <div class="prod-row">
+      <div class="prod reveal"><b>Rapid Brief</b><span>Decision-ready judgment in hours, not weeks.</span></div>
+      <div class="prod reveal" data-delay="1"><b>Decision Memo</b><span>One decision, argued and evidenced end-to-end.</span></div>
+      <div class="prod reveal" data-delay="2"><b>Scenario Sprint</b><span>Base, upside, downside and wild card — with triggers.</span></div>
+      <div class="prod reveal" data-delay="3"><b>Stakeholder Map</b><span>Who benefits, who blocks, who must be engaged.</span></div>
+      <div class="prod reveal"><b>Election Watch</b><span>Cycle-aware monitoring of power in motion.</span></div>
+      <div class="prod reveal" data-delay="1"><b>Early Warning Dashboard</b><span>Live triggers across your exposure map.</span></div>
+      <div class="prod reveal" data-delay="2"><b>Narrative Assessment</b><span>What coverage means, not just what it says.</span></div>
+      <div class="prod reveal" data-delay="3"><b>Market Entry Brief</b><span>Sequenced entry strategy under uncertainty.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CASE STUDIES ================= -->
+<section class="section" id="cases" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Decisions improved</span>
+      <h2 class="reveal">Three questions Octivate helped answer</h2>
+      <p class="lede reveal" data-delay="1">Illustrative vignettes drawn from the kind of work the platform is being piloted on. Anonymised and directional.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="card case reveal">
+        <span class="c-sector">Investor · Energy services</span>
+        <h3>"Should we open a regional office in Georgetown this year, or wait a cycle?"</h3>
+        <p class="c-outcome">Octivate surfaced <em>a certification-throughput bottleneck</em> the analyst network hadn't priced in, and mapped the two ministry officials whose approval would move first. Client chose a phased entry, opening representation before capital deployment.</p>
+        <div class="c-metric"><b>~$1.4M</b><span>Avoided setup cost during a slower window</span></div>
+      </div>
+      <div class="card case reveal" data-delay="1">
+        <span class="c-sector">Development · Coordination</span>
+        <h3>"Which OECS partners will actually implement in the 18-month window?"</h3>
+        <p class="c-outcome">A stakeholder map with implementation-capacity scoring reframed a $6M programme design. Two intended partners were <em>replaced by higher-capacity alternatives</em>; two others were retained with adjusted milestones.</p>
+        <div class="c-metric"><b>2 of 5</b><span>Partners reassigned before contracting</span></div>
+      </div>
+      <div class="card case reveal" data-delay="2">
+        <span class="c-sector">Diplomatic · Engagement</span>
+        <h3>"Is the resource-nationalism narrative real or noise?"</h3>
+        <p class="c-outcome">Narrative sampling across six outlets confirmed a <em>directional shift, not a spike</em>. Mission adjusted communications timing on a bilateral announcement; briefing pack updated with base/upside/downside talking points.</p>
+        <div class="c-metric"><b>72h</b><span>From question to defended judgment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Objections handled</span>
+      <h2 class="reveal">Questions we get before anyone signs</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal" open>
+        <summary>Is this a chatbot?<span class="plus" aria-hidden="true"></span></summary>
+        <div class="faq-body">
+          <p>No. Octivate is a guided agentic workflow — a pipeline of specialised agents that structure the decision, run the research against curated sources, validate evidence, apply the Power–Systems–Narratives method, and deliver a decision brief with confidence, gaps and monitoring plan attached.</p>
+          <p>There's no free-text chat in the output. You get an evidenced judgment, not a conversation.</p>
+        </div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>How is this different from ChatGPT or Perplexity?<span class="plus" aria-hidden="true"></span></summary>
+        <div class="faq-body">
+          <p>Generic AI answers <em>what is happening</em>. Octivate answers <em>what decision this is meant to improve</em>. Every brief is anchored to a specific decision, classifies its own evidence (Fact / Assumption / Analysis), states its confidence with rationale, flags what's missing, and applies a Caribbean-specific analytical framework the general models don't have. And a human analyst reviews sensitive or low-confidence outputs before you see them.</p>
+        </div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Where does the data actually come from?<span class="plus" aria-hidden="true"></span></summary>
+        <div class="faq-body">
+          <p>CENSII-curated source packs per jurisdiction and sector — government gazettes, regulator releases, parliament order papers, procurement portals, chambers, industry press, narrative sampling from talk radio and social channels — plus any material you upload. Every claim in the brief is linked to its source type and rated for confidence.</p>
+        </div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>What if the model is wrong or the evidence is thin?<span class="plus" aria-hidden="true"></span></summary>
+        <div class="faq-body">
+          <p>That's what the gap map is for. Octivate is designed to be transparent about what it doesn't know: contradictions are surfaced, assumptions are labelled, and briefs that fall below a confidence threshold or touch sensitive topics are automatically routed to a human analyst before release. You'll never see a false-confident output.</p>
+        </div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Which jurisdictions do you cover?<span class="plus" aria-hidden="true"></span></summary>
+        <div class="faq-body">
+          <p>Caribbean-first: CARICOM member states, the OECS, the Dutch and French Caribbean, UK overseas territories, the Dominican Republic, Haiti, Guyana and Suriname. Curated source packs deepen for each — start with the ones your decisions touch, add more as they do.</p>
+        </div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Who's on the other side of the platform?<span class="plus" aria-hidden="true"></span></summary>
+        <div class="faq-body">
+          <p>CENSII — Caribbean Emerging Narratives &amp; Strategic Impact Intelligence — a decision intelligence and advisory firm. Octivate is the platform that operationalises the same methodology CENSII uses for its bespoke advisory work, so the analytical voice you get from the software is the same voice you'd get from the firm.</p>
+        </div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Can we pilot it on a real decision?<span class="plus" aria-hidden="true"></span></summary>
+        <div class="faq-body">
+          <p>Yes — that's exactly the pilot programme. Bring one live decision (market entry, engagement strategy, programme design, portfolio question), we scope it with you, and you leave with a brief. No commitment beyond that.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section" id="contact" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Bring a real decision.<br>Leave with a brief.</h2>
+      <p>We're piloting Octivate with organizations facing live Caribbean decisions — market entry, engagement strategy, programme design. One question, one brief, no commitment.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="/dashboard#intake">Request a pilot brief <span class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="mailto:shemuel@censii.co?subject=Octivate%20pilot%20brief">Or email directly</a>
+      </div>
+      <p class="cta-mail">Founder-direct: <a href="mailto:shemuel@censii.co">shemuel@censii.co</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <!-- drifting arms under everything -->
+  <svg class="f-art" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+    <path class="w1" d="M-40 190 C 160 120, 300 210, 500 160 S 900 90, 1240 150"/>
+    <path class="w1" d="M-40 214 C 180 150, 320 232, 520 186 S 920 118, 1240 176"/>
+    <path class="w2" d="M-40 170 C 200 96, 360 190, 560 138 S 960 66, 1240 128"/>
+    <path class="w3" d="M-40 150 C 220 74, 400 170, 600 116 S 1000 44, 1240 106"/>
+  </svg>
+
+  <!-- jurisdiction marquee -->
+  <div class="jur-ticker" aria-hidden="true">
+    <div class="jur-track" id="jurTrack">
+      <span>GUYANA<i></i>TRINIDAD &amp; TOBAGO<i></i>JAMAICA<i></i>BARBADOS<i></i>OECS<i></i>SURINAME<i></i>DOMINICAN REPUBLIC<i></i>BAHAMAS<i></i>BELIZE<i></i>HAITI<i></i>CURAÇAO<i></i>ST LUCIA<i></i>GRENADA<i></i>ANTIGUA &amp; BARBUDA<i></i>DOMINICA<i></i>ST VINCENT<i></i>ST KITTS &amp; NEVIS<i></i>ARUBA<i></i>MARTINIQUE<i></i>GUADELOUPE<i></i>CAYMAN ISLANDS</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="f-top">
+      <div class="f-brand">
+        <a class="f-brand-link" href="#top" aria-label="Octivate home">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="12" r="7" fill="#A855F7"/>
+            <circle cx="13" cy="11" r="1.5" fill="#fff"/><circle cx="19" cy="11" r="1.5" fill="#fff"/>
+            <path d="M10 18c-2 3-5 4-7 3.5" stroke="#FF6B5B" stroke-width="1.9" stroke-linecap="round" fill="none"/>
+            <path d="M13 19.5c-1 4-3.5 6-6.5 6.5" stroke="#FF6B5B" stroke-width="1.9" stroke-linecap="round" fill="none"/>
+            <path d="M16 20c0 4.5-1 7-1 8.5" stroke="#FF6B5B" stroke-width="1.9" stroke-linecap="round" fill="none"/>
+            <path d="M19 19.5c1 4 3.5 6 6.5 6.5" stroke="#FF6B5B" stroke-width="1.9" stroke-linecap="round" fill="none"/>
+            <path d="M22 18c2 3 5 4 7 3.5" stroke="#FF6B5B" stroke-width="1.9" stroke-linecap="round" fill="none"/>
+          </svg>
+          Octivate
+        </a>
+        <p>Agentic decision intelligence for fragmented regional markets. We read what's scattered, test what holds up, and tell you what to do about it.</p>
+        <div class="f-badges">
+          <span class="f-badge"><i class="live"></i>SOURCE PACKS LIVE</span>
+          <span class="f-badge">
+            <svg viewBox="0 0 16 16" stroke-width="1.4"><path d="M8 1.5l5.5 2.5v4c0 3-2.4 5.6-5.5 6.5C4.9 13.6 2.5 11 2.5 8V4z"/></svg>
+            ANALYST REVIEWED
+          </span>
+          <span class="f-badge">
+            <svg viewBox="0 0 16 16" stroke-width="1.4"><circle cx="8" cy="8" r="6.4"/><path d="M1.6 8h12.8M8 1.6a12 12 0 010 12.8M8 1.6a12 12 0 000 12.8"/></svg>
+            21 JURISDICTIONS
+          </span>
+        </div>
+      </div>
+
+      <div class="f-col">
+        <h4>Method</h4>
+        <a href="#framework"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h9M7.5 3.5L11 7l-3.5 3.5"/></svg>Power</a>
+        <a href="#framework"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h9M7.5 3.5L11 7l-3.5 3.5"/></svg>Systems</a>
+        <a href="#framework"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h9M7.5 3.5L11 7l-3.5 3.5"/></svg>Narratives</a>
+        <a href="#how"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h9M7.5 3.5L11 7l-3.5 3.5"/></svg>How it works</a>
+      </div>
+
+      <div class="f-col">
+        <h4>Output</h4>
+        <a href="#demo"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h9M7.5 3.5L11 7l-3.5 3.5"/></svg>The brief</a>
+        <a href="#demo"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h9M7.5 3.5L11 7l-3.5 3.5"/></svg>Evidence &amp; gaps</a>
+        <a href="#demo"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h9M7.5 3.5L11 7l-3.5 3.5"/></svg>Monitoring</a>
+        <a href="#audience"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h9M7.5 3.5L11 7l-3.5 3.5"/></svg>Who it's for</a>
+      </div>
+
+      <div class="f-col">
+        <h4>CENSII</h4>
+        <a href="https://censii.co" target="_blank" rel="noopener"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M5 9l4-4M6 3.5h3.5V7"/><circle cx="7" cy="7" r="5.6"/></svg>censii.co</a>
+        <a href="mailto:shemuel@censii.co"><svg viewBox="0 0 14 14" stroke-width="1.5" stroke-linejoin="round"><rect x="1.2" y="2.8" width="11.6" height="8.4" rx="1.8"/><path d="M1.8 3.6L7 7.6l5.2-4"/></svg>Email us</a>
+        <a href="#contact"><svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round"><path d="M7 11V3M3.5 6.5L7 3l3.5 3.5"/></svg>Become a design partner</a>
+      </div>
+    </div>
+
+    <div class="f-mark" aria-hidden="true"><span>OCTIVATE</span></div>
+
+    <p class="seo-p">CENSII is a Caribbean decision intelligence and advisory firm. Octivate applies agentic AI to Caribbean political risk analysis, market entry assessment, CARICOM and OECS regulatory intelligence, stakeholder mapping, narrative and media analysis, and operating-context monitoring across Trinidad and Tobago, Jamaica, Barbados, Guyana, Suriname, the Dominican Republic, Haiti, the Dutch and French Caribbean, and the wider region — turning fragmented signals into structured, decision-ready judgment for investors, development organizations, diplomatic missions and multinationals.</p>
+
+    <div class="f-bar">
+      <span>© <span id="year">2026</span> CENSII <span class="dotsep">·</span> Caribbean Emerging Narratives &amp; Strategic Impact Intelligence <span class="dotsep">·</span> Octivate v0.1 · design draft</span>
+      <a class="up" href="#top">
+        <svg viewBox="0 0 12 12" stroke-width="1.6" stroke-linecap="round"><path d="M6 10V2M2.6 5.4L6 2l3.4 3.4"/></svg>
+        Back to top
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= COMMAND PALETTE ================= -->
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+  <div class="pal-box">
+    <div class="pal-input">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="palInput" type="text" placeholder="Type a command or search…" autocomplete="off">
+      <kbd>esc</kbd>
+    </div>
+    <div class="pal-list" id="palList"></div>
+    <div class="pal-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"><span class="t-dot"></span><span id="toastMsg">Done</span></div>
+<script>
+(function(){
+"use strict";
+var $ = function(s,c){return (c||document).querySelector(s)};
+var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- nav ---------- */
+var nav = $("#nav");
+var onScroll = function(){ nav.classList.toggle("scrolled", window.scrollY > 24); };
+window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+var menuBtn = $("#menuBtn"), mobileMenu = $("#mobileMenu");
+menuBtn.addEventListener("click", function(){
+  var open = mobileMenu.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", open);
+});
+$$("a", mobileMenu).forEach(function(a){
+  a.addEventListener("click", function(){ mobileMenu.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); });
+});
+
+/* ---------- reveal on scroll ---------- */
+if ("IntersectionObserver" in window && !RM){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+  $$(".reveal:not(.in)").forEach(function(el){ io.observe(el); });
+} else {
+  $$(".reveal").forEach(function(el){ el.classList.add("in"); });
+}
+
+/* ---------- ticker seamless loops ---------- */
+var track = $("#tickerTrack");
+if (track) track.innerHTML += track.innerHTML;
+var jurTrack = $("#jurTrack");
+if (jurTrack) jurTrack.innerHTML += jurTrack.innerHTML;
+
+/* ---------- stat counters ---------- */
+$$(".stat-n[data-count]").forEach(function(el){
+  var target = parseInt(el.getAttribute("data-count"),10);
+  var suffix = el.getAttribute("data-suffix") || "";
+  if (RM){ el.textContent = target + suffix; return; }
+  var t0 = null, dur = 1300;
+  var tick = function(ts){
+    if(!t0) t0 = ts;
+    var p = Math.min((ts - t0)/dur, 1);
+    var eased = 1 - Math.pow(1-p, 3);
+    el.textContent = Math.round(target*eased) + (p===1 ? suffix : "");
+    if(p<1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+});
+
+/* ---------- toast ---------- */
+var toast = $("#toast"), toastMsg = $("#toastMsg"), toastT = null;
+function showToast(msg){
+  toastMsg.textContent = msg;
+  toast.classList.add("show");
+  clearTimeout(toastT);
+  toastT = setTimeout(function(){ toast.classList.remove("show"); }, 3400);
+}
+
+/* ---------- PSN lens switcher ---------- */
+var LENSES = {
+  power:{
+    q:"Who can make something happen?",
+    a:"Answers · capability and intent",
+    tags:["Governments","Parties & elections","Diplomacy","Regulation","Security","External actors","Elite networks"],
+    ex:"<b>Example:</b> an election year raises the political value of visible local-content wins — which changes how a ministry treats a foreign entrant, before any law changes."
+  },
+  systems:{
+    q:"Can it actually happen?",
+    a:"Answers · feasibility and friction",
+    tags:["Infrastructure","Energy","Ports & logistics","Finance & banking","Telecoms","Procurement","Institutions","Implementation capacity"],
+    ex:"<b>Example:</b> approval means little if the certification office processes twelve applications a quarter. Systems analysis finds the bottleneck before it finds you."
+  },
+  narratives:{
+    q:"Will people support or resist it?",
+    a:"Answers · legitimacy and meaning",
+    tags:["Media","Social & WhatsApp","Public trust","Legitimacy","Reputation","Misinformation","Influence"],
+    ex:"<b>Example:</b> the same investment reads as opportunity or extraction depending on who announces it, with whom, and in what week. Narrative timing is strategy."
+  }
+};
+var fw = $(".framework"), lensQ = $("#lensQ"), lensA = $("#lensA"), lensTags = $("#lensTags"), lensEx = $("#lensEx");
+function setLens(key){
+  var d = LENSES[key]; if(!d) return;
+  fw.setAttribute("data-active-lens", key);
+  lensQ.textContent = d.q;
+  lensA.textContent = d.a;
+  lensTags.innerHTML = d.tags.map(function(t){ return "<span>"+t+"</span>"; }).join("");
+  lensEx.innerHTML = d.ex;
+  $$(".lens-btn", fw).forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-lens")===key); });
+}
+$$(".lens-btn", fw).forEach(function(b){
+  b.addEventListener("click", function(){ setLens(b.getAttribute("data-lens")); });
+});
+setLens("power");
+
+/* ---------- brief tabs ---------- */
+var tabs = $$(".tab"), panels = $$(".panel");
+tabs.forEach(function(t){
+  t.addEventListener("click", function(){
+    var key = t.getAttribute("data-tab");
+    tabs.forEach(function(x){ x.setAttribute("aria-selected", x===t); });
+    panels.forEach(function(p){ p.hidden = p.getAttribute("data-panel") !== key; });
+  });
+});
+
+/* ---------- evidence filtering ---------- */
+var evFilter = $("#evFilter"), evClass = $("#evClass"), evRows = $$("#evTable tbody tr");
+function applyEvFilter(){
+  var q = (evFilter.value||"").toLowerCase();
+  var cls = evClass.value;
+  evRows.forEach(function(r){
+    var textHit = r.textContent.toLowerCase().indexOf(q) !== -1;
+    var tag = r.querySelector(".type-tag");
+    var clsHit = !cls || (tag && tag.textContent === cls);
+    r.style.display = (textHit && clsHit) ? "" : "none";
+  });
+}
+if (evFilter){ evFilter.addEventListener("input", applyEvFilter); evClass.addEventListener("change", applyEvFilter); }
+
+/* ---------- pipeline simulation ---------- */
+var runBtn = $("#runBtn"), brief = $("#brief"), steps = $$(".pstep"), genStamp = $("#genStamp");
+var gauge = $("#gauge"), gaugeNum = $("#gaugeNum");
+var running = false;
+function sleep(ms){ return new Promise(function(res){ setTimeout(res, ms); }); }
+function resetSteps(){
+  steps.forEach(function(s){
+    s.setAttribute("data-state","queued");
+    var bar = s.querySelector(".pbar i");
+    bar.style.transition = "none"; bar.style.width = "0%";
+    void bar.offsetWidth;
+    bar.style.transition = "";
+  });
+}
+async function runPipeline(){
+  if (running) return;
+  running = true;
+  runBtn.disabled = true; runBtn.style.opacity = ".6";
+  brief.classList.add("loading");
+  resetSteps();
+  var durations = RM ? [220,220,220,220] : [750,950,1050,850];
+  for (var i=0;i<steps.length;i++){
+    var s = steps[i];
+    s.setAttribute("data-state","running");
+    s.querySelector(".pbar i").style.width = "100%";
+    await sleep(durations[i]);
+    s.setAttribute("data-state","done");
+  }
+  await sleep(RM ? 100 : 350);
+  brief.classList.remove("loading");
+  var v = 68 + Math.floor(Math.random()*11); /* 68–78: stays Moderate–High */
+  gauge.style.setProperty("--val", v);
+  gaugeNum.textContent = v;
+  genStamp.textContent = "Generated just now";
+  runBtn.disabled = false; runBtn.style.opacity = "";
+  showToast("Brief regenerated · 4 stages complete · queued for analyst review");
+  running = false;
+}
+if (runBtn) runBtn.addEventListener("click", runPipeline);
+
+/* ---------- workspace view switching ---------- */
+var stubMsg = "Demo build — this surface is stubbed in v0.1";
+var VIEW_LABELS = {briefs:"Briefs", monitors:"Active monitors", sources:"Sources feed", stakeholders:"Stakeholder map", packs:"Source packs", products:"Deliverables"};
+var views = $$(".view[data-view]");
+var sideLinks = $$(".side-link[data-view]");
+sideLinks.forEach(function(link){
+  link.addEventListener("click", function(){
+    var v = link.getAttribute("data-view");
+    sideLinks.forEach(function(l){
+      var isActive = l === link;
+      l.classList.toggle("active", isActive);
+      l.setAttribute("aria-current", isActive ? "true" : "false");
+    });
+    views.forEach(function(view){ view.hidden = view.getAttribute("data-view") !== v; });
+    showToast("Loaded · " + (VIEW_LABELS[v] || v));
+    var appTop = $(".app-top"); if (appTop){ appTop.scrollIntoView({behavior: RM ? "auto" : "smooth", block:"start"}); }
+  });
+});
+
+/* stubbed micro-actions inside views (pause monitor, filter, click pack) */
+$$("[data-stub]").forEach(function(el){
+  el.addEventListener("click", function(e){
+    e.preventDefault();
+    showToast("Demo build — this control is stubbed in v0.1");
+  });
+});
+$$("[data-stub-input]").forEach(function(el){
+  el.addEventListener("focus", function(){
+    if (!el.dataset.warned){ showToast("Demo build — filter is illustrative in v0.1"); el.dataset.warned="1"; }
+  });
+});
+
+/* ---------- command palette ---------- */
+var palette = $("#palette"), palInput = $("#palInput"), palList = $("#palList");
+var PAL_ITEMS = [
+  {t:"New decision brief", k:"action", href:"/dashboard#intake"},
+  {t:"Open the workspace", k:"action", href:"/dashboard"},
+  {t:"Set up a monitor", k:"action", href:"/dashboard#monitors"},
+  {t:"Browse source packs", k:"library", href:"/dashboard#packs"},
+  {t:"Stakeholder map (sample)", k:"brief", href:"/dashboard#stakeholders"},
+  {t:"Read the privacy notice", k:"legal", href:"/dashboard#privacy"},
+  {t:"How Octivate works", k:"about", href:"#how"},
+  {t:"Compare vs alternatives", k:"about", href:"#compare"},
+  {t:"Frequently asked questions", k:"about", href:"#faq"},
+  {t:"Email the founder", k:"contact", href:"mailto:shemuel@censii.co"}
+];
+var sel = 0;
+function renderPal(){
+  var q = (palInput.value||"").toLowerCase();
+  var items = PAL_ITEMS.filter(function(it){ return it.t.toLowerCase().indexOf(q) !== -1; });
+  if (!items.length){ palList.innerHTML = '<div class="pal-empty">No matches. Try "brief", "monitor" or "privacy".</div>'; return; }
+  if (sel >= items.length) sel = 0;
+  palList.innerHTML = items.map(function(it,i){
+    return '<button class="pal-item'+(i===sel?' sel':'')+'" data-i="'+i+'" data-href="'+(it.href||"")+'">'+it.t+'<span class="p-kind">'+it.k+'</span></button>';
+  }).join("");
+  $$(".pal-item", palList).forEach(function(b){
+    b.addEventListener("click", function(){ palGo(b.getAttribute("data-href")); });
+    b.addEventListener("mousemove", function(){ sel = parseInt(b.getAttribute("data-i"),10); markSel(); });
+  });
+}
+function palGo(href){
+  closePal();
+  if (!href){ showToast(stubMsg); return; }
+  if (href.charAt(0) === "#"){
+    var t = document.querySelector(href); if (t) t.scrollIntoView({behavior: RM ? "auto" : "smooth", block:"start"});
+  } else {
+    window.location.href = href;
+  }
+}
+function markSel(){
+  $$(".pal-item", palList).forEach(function(b,i){ b.classList.toggle("sel", i===sel); });
+}
+function openPal(){ palette.classList.add("open"); palInput.value=""; sel=0; renderPal(); setTimeout(function(){ palInput.focus(); }, 30); }
+function closePal(){ palette.classList.remove("open"); }
+$("#openPalette").addEventListener("click", openPal);
+palette.addEventListener("click", function(e){ if(e.target === palette) closePal(); });
+palInput.addEventListener("input", function(){ sel=0; renderPal(); });
+document.addEventListener("keydown", function(e){
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k"){ e.preventDefault(); palette.classList.contains("open") ? closePal() : openPal(); return; }
+  if (e.key === "Escape"){ closePal(); mobileMenu.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); return; }
+  if (!palette.classList.contains("open")) return;
+  var visible = $$(".pal-item", palList);
+  if (e.key === "ArrowDown"){ e.preventDefault(); sel = Math.min(sel+1, visible.length-1); markSel(); }
+  if (e.key === "ArrowUp"){ e.preventDefault(); sel = Math.max(sel-1, 0); markSel(); }
+  if (e.key === "Enter" && visible[sel]){ e.preventDefault(); palGo(visible[sel].getAttribute("data-href")); }
+});
+
+/* ---------- footer year ---------- */
+$("#year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+/* Landing depth — icon tiles + section shadows */
+
+.landing-root {
+  --land-shadow-soft: 0 20px 56px -28px rgba(3, 6, 18, 0.88);
+  --land-shadow-card: 0 16px 44px -22px rgba(3, 6, 18, 0.82), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
+  --land-shadow-lift: 0 28px 64px -24px rgba(3, 6, 18, 0.92), 0 0 40px -16px rgba(168, 85, 247, 0.18);
+}
+
+/* Icon tiles */
+.land-icon {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(154, 171, 255, 0.16);
+  opacity: 0.92;
+  backdrop-filter: blur(8px);
+  box-shadow:
+    var(--land-icon-shadow, 0 10px 28px -10px rgba(3, 6, 18, 0.85)),
+    0 0 24px -6px var(--land-icon-glow, rgba(168, 85, 247, 0.2));
+  transition:
+    transform 0.22s cubic-bezier(0.34, 1.3, 0.64, 1),
+    box-shadow 0.22s ease,
+    opacity 0.22s ease;
+}
+
+.land-icon-sm {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+
+.land-icon-sm svg {
+  width: 16px;
+  height: 16px;
+}
+
+.land-icon-md {
+  width: 44px;
+  height: 44px;
+}
+
+.land-icon-md svg {
+  width: 20px;
+  height: 20px;
+}
+
+.land-icon-lg {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+}
+
+.land-icon-lg svg {
+  width: 24px;
+  height: 24px;
+}
+
+.land-icon-violet {
+  --land-icon-glow: rgba(168, 85, 247, 0.38);
+  color: #d8b4fe;
+}
+
+.land-icon-tide {
+  --land-icon-glow: rgba(45, 212, 191, 0.32);
+  color: #7dede0;
+}
+
+.land-icon-coral {
+  --land-icon-glow: rgba(255, 107, 91, 0.32);
+  color: #ffa79c;
+}
+
+.land-icon-amber {
+  --land-icon-glow: rgba(245, 184, 75, 0.28);
+  color: #f5d089;
+}
+
+.land-icon-mist {
+  --land-icon-glow: rgba(154, 171, 255, 0.22);
+  color: #9aa8c7;
+}
+
+/* Cards lift on hover */
+.landing-root .prob-card,
+.landing-root .step,
+.landing-root .support-chip,
+.landing-root .lens-panel,
+.landing-root .land-contact-card {
+  box-shadow: var(--land-shadow-card);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.landing-root .prob-card:hover,
+.landing-root .step:hover,
+.landing-root .support-chip:hover {
+  box-shadow: var(--land-shadow-lift);
+}
+
+.landing-root .prob-card:hover .land-icon,
+.landing-root .step:hover .land-icon,
+.landing-root .support-chip:hover .land-icon {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.landing-root .prob-card .land-icon {
+  margin-bottom: 1rem;
+}
+
+.landing-root .step-head {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.landing-root .step::before {
+  display: none;
+}
+
+.landing-root .step-num {
+  font-family: var(--f-mono);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--violet);
+}
+
+.landing-root .support-chip {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.landing-root .support-chip .land-icon {
+  margin-top: 0.1rem;
+}
+
+/* Hero stats with icons */
+.landing-root .stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.landing-root .stat-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.landing-root .stat .land-icon-sm {
+  opacity: 0.78;
+}
+
+/* Lens buttons with icons */
+.landing-root .lens-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.landing-root .lens-btn svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.75;
+}
+
+.landing-root .lens-btn[aria-pressed="true"] svg {
+  opacity: 1;
+}
+
+.landing-root .lens-panel {
+  box-shadow: var(--land-shadow-soft);
+}
+
+/* Partners */
+.landing-root .plogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.landing-root .plogo-glyph-wrap {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--plogo-accent, #a855f7) 12%, rgba(255, 255, 255, 0.04));
+  border: 1px solid color-mix(in srgb, var(--plogo-accent, #a855f7) 28%, transparent);
+  box-shadow:
+    0 8px 20px -10px rgba(3, 6, 18, 0.85),
+    0 0 18px -6px var(--plogo-glow, rgba(168, 85, 247, 0.25));
+  flex-shrink: 0;
+}
+
+.landing-root .plogo-glyph {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--plogo-accent, #d8b4fe);
+  opacity: 0.92;
+  display: block;
+}
+
+.landing-root .plogo:hover .plogo-glyph-wrap {
+  box-shadow:
+    0 10px 24px -8px rgba(3, 6, 18, 0.88),
+    0 0 22px -4px var(--plogo-glow, rgba(168, 85, 247, 0.35));
+}
+
+.landing-root .plogo:hover .plogo-glyph {
+  opacity: 1;
+}
+
+/* Section ambient shadows */
+.landing-root .hero::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  right: -8%;
+  top: 18%;
+  width: min(480px, 55vw);
+  height: min(480px, 55vw);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.12), transparent 68%);
+  opacity: 0.85;
+  filter: blur(2px);
+}
+
+.landing-root #problem {
+  position: relative;
+}
+
+.landing-root #problem::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  width: min(640px, 90vw);
+  height: 280px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(255, 107, 91, 0.07), transparent 70%);
+  opacity: 0.9;
+}
+
+.landing-root #how::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  bottom: 8%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.08), transparent 70%);
+  opacity: 0.85;
+}
+
+.landing-root #framework .lens-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-root #framework .lens-panel::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: auto -20% -40% auto;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, var(--lens-soft), transparent 70%);
+  opacity: 0.65;
+}
+
+.landing-root #demo {
+  position: relative;
+}
+
+.landing-root #demo::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 8%;
+  bottom: 0;
+  width: 320px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1), transparent 72%);
+  opacity: 0.8;
+}
+
+.landing-root .land-contact-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--land-shadow-soft);
+}
+
+.landing-root .land-contact-card::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: -30% auto auto -10%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.12), transparent 68%);
+  opacity: 0.7;
+}
+
+.landing-root .land-contact-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.landing-root .land-contact-head .land-icon-sm {
+  opacity: 0.88;
+}
+
+.landing-root .hero-badges .pill svg {
+  width: 12px;
+  height: 12px;
+  opacity: 0.7;
+}
+
+.landing-root .hero-net-v2 {
+  filter: drop-shadow(0 28px 48px rgba(3, 6, 18, 0.45));
+}
+
+/* Spring panel icon shadow boost */
+.spring-card-icon-wrap {
+  box-shadow:
+    0 10px 28px -12px rgba(3, 6, 18, 0.85),
+    0 0 22px -6px color-mix(in srgb, var(--spring-accent) 40%, transparent);
+  opacity: 0.95;
+}
+
+.spring-card:hover .spring-card-icon-wrap {
+  opacity: 1;
+  transform: translateY(-2px);
+  transition: transform 0.25s cubic-bezier(0.34, 1.3, 0.64, 1), opacity 0.2s ease;
+}

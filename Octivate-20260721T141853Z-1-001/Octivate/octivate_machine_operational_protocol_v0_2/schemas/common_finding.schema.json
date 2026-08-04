@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/common_finding.schema.json",
+  "title": "Octivate Material Finding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "finding_id",
+    "finding",
+    "decision_effect",
+    "evidence_ids",
+    "judgement_type",
+    "confidence",
+    "review_flags"
+  ],
+  "properties": {
+    "finding_id": {
+      "type": "string"
+    },
+    "finding": {
+      "type": "string",
+      "minLength": 5
+    },
+    "decision_effect": {
+      "type": "string",
+      "minLength": 5
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "judgement_type": {
+      "type": "string",
+      "enum": [
+        "fact",
+        "inference",
+        "assumption",
+        "forecast",
+        "unknown"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "moderate",
+        "low",
+        "plausible_unverified",
+        "insufficient_evidence"
+      ]
+    },
+    "competing_explanations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "disconfirming_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "monitoring_indicators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "materiality_justification": {
+      "type": "string"
+    }
+  }
+}

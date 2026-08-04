@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/human_review.schema.json",
+  "title": "Octivate Human Review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "review_id",
+    "reviewer_id",
+    "review_status",
+    "reviewer_actions",
+    "final_approval"
+  ],
+  "properties": {
+    "review_id": {
+      "type": "string"
+    },
+    "reviewer_id": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "changes_required",
+        "rejected",
+        "additional_research_required"
+      ]
+    },
+    "reviewer_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "target_id",
+          "action",
+          "reason"
+        ],
+        "properties": {
+          "target_id": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "approve",
+              "revise",
+              "qualify",
+              "remove",
+              "reject",
+              "request_additional_research",
+              "change_confidence",
+              "replace_judgement"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "remaining_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "final_approval": {
+      "type": "boolean"
+    }
+  }
+}

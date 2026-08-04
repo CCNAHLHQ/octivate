@@ -1,0 +1,43 @@
+checks:
+  - id: CHECK-CORE-01
+    description: Mandatory common output fields are present.
+    severity: error
+  - id: CHECK-STATUS-01
+    description: Output status is valid.
+    severity: error
+  - id: CHECK-MATERIALITY-01
+    description: Every included finding states a material decision effect.
+    severity: error
+  - id: CHECK-EVIDENCE-01
+    description: Every included finding has at least one evidence ID.
+    severity: error
+  - id: CHECK-JUDGEMENT-01
+    description: Every included finding has judgement type and confidence.
+    severity: error
+  - id: CHECK-CONDITIONAL-01
+    description: Conditional fields are present when their triggers apply.
+    severity: warning
+  - id: CHECK-POWER-01
+    description: Power findings identify source, mechanism, target and condition.
+    severity: error
+  - id: CHECK-SYSTEMS-01
+    description: Systems findings identify dependencies or implementation effects.
+    severity: error
+  - id: CHECK-NARRATIVE-01
+    description: Narrative findings include meaning and decision effect, not sentiment alone.
+    severity: error
+  - id: CHECK-PSN-01
+    description: At least one PSN interaction exists unless evidence is insufficient.
+    severity: error
+  - id: CHECK-LIMIT-01
+    description: Output limits are respected or justified.
+    severity: warning
+  - id: CHECK-SENSITIVE-01
+    description: Sensitive findings carry appropriate review flags.
+    severity: error
+  - id: CHECK-SEPARATION-01
+    description: Analysis and recommendation are separated.
+    severity: error
+  - id: CHECK-HUMAN-01
+    description: Final human approval exists before delivery.
+    severity: error

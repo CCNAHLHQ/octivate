@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/recommendation.schema.json",
+  "title": "Octivate Recommendation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "analytical_judgement",
+    "decision_implication",
+    "options",
+    "preferred_option",
+    "rationale",
+    "tradeoffs",
+    "reassessment_triggers"
+  ],
+  "properties": {
+    "analytical_judgement": {
+      "type": "string"
+    },
+    "decision_implication": {
+      "type": "string"
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "option",
+          "benefits",
+          "risks"
+        ],
+        "properties": {
+          "option": {
+            "type": "string"
+          },
+          "benefits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reversibility": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "scenario_robustness": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "preferred_option": {
+      "type": "string"
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "tradeoffs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "implementation_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "monitoring_indicators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reassessment_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "normative_tradeoffs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

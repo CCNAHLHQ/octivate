@@ -1,0 +1,146 @@
+/* Official Octivate logo — SVG mark, stacked, and lockup (theme-aware) */
+
+.octivate-logo-mark,
+.octivate-logo {
+  flex-shrink: 0;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+}
+
+.octivate-logo-circle {
+  opacity: 0.86;
+  mix-blend-mode: normal;
+}
+
+.octivate-logo-circle.is-purple {
+  fill: var(--octivate-purple, #8950ee);
+}
+
+.octivate-logo-circle.is-coral {
+  fill: var(--octivate-coral, #ed6d6c);
+}
+
+.octivate-logo-circle.is-blue {
+  fill: var(--octivate-blue, #4d9df7);
+}
+
+/* Star punches to page surface so light/dark both read cleanly */
+.octivate-logo-star {
+  fill: var(--ink);
+}
+
+.octivate-logo-wordmark-svg {
+  font-family: Inter, var(--f-body), system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  fill: var(--octivate-purple, #8950ee);
+}
+
+.octivate-logo--lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+}
+
+.octivate-logo-lockup-mark {
+  flex: none;
+}
+
+.octivate-logo-lockup-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.12rem;
+  min-width: 0;
+  line-height: 1;
+}
+
+.octivate-logo-lockup-name {
+  font-family: Inter, var(--f-body), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  color: var(--octivate-purple, #8950ee);
+  white-space: nowrap;
+}
+
+.octivate-logo-lockup-sub {
+  font-family: var(--f-mono);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+  white-space: nowrap;
+}
+
+.octivate-brand-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.octivate-brand-link:hover .octivate-logo-lockup-name {
+  color: var(--violet-deep);
+}
+
+.octivate-logo--stacked {
+  display: block;
+}
+
+.f-brand-link .octivate-logo--lockup {
+  margin-bottom: 0;
+}
+
+.f-brand-link .octivate-logo-lockup-name {
+  font-size: 1.2rem;
+}
+
+.site-brand .octivate-logo--lockup {
+  gap: 0.55rem;
+}
+
+.site-brand .octivate-logo-lockup-name {
+  font-size: 1.02rem;
+}
+
+.dash-aside-head .octivate-logo--lockup {
+  gap: 0.6rem;
+}
+
+.dash-aside-head .octivate-logo-lockup-name {
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+}
+
+/* Large footer watermark — sits fully above the dashed divider */
+.f-mark {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.75rem 0 2rem;
+  opacity: 0.22;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  overflow: visible;
+}
+
+.f-mark .octivate-logo--lockup {
+  transform: none;
+  transform-origin: center;
+}
+
+.f-mark .octivate-logo-lockup-name {
+  font-size: 1.35rem;
+}
+
+[data-theme="dark"] .f-mark {
+  opacity: 0.18;
+}

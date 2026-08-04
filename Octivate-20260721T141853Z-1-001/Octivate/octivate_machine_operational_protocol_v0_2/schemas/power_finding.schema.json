@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://censii.co/octivate/schemas/power_finding.schema.json",
+  "title": "Octivate Power Finding",
+  "allOf": [
+    {
+      "$ref": "common_finding.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "actor": {
+          "type": "string"
+        },
+        "power_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "authoritative",
+              "institutional",
+              "relational",
+              "structural",
+              "corporate",
+              "infrastructural",
+              "collective",
+              "productive_narrative",
+              "veto_latent",
+              "coercive"
+            ]
+          }
+        },
+        "source_of_power": {
+          "type": "string"
+        },
+        "mechanism": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "string"
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "actor",
+        "power_types",
+        "source_of_power",
+        "mechanism",
+        "target",
+        "condition"
+      ]
+    }
+  ]
+}
