@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "team": "Shemuel",
+    "track": "Open Track",
+    "product": "Octivate",
+    "org": "CENSII",
+    "publishTarget": "https://os.futurecaribbean.com/builder/logbook",
+    "evidenceRoot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots"
+  },
+  "weeks": [
+    {
+      "label": "Jul 13 – Jul 19",
+      "days": [
+        {
+          "key": "Mon 07/13",
+          "title": "Foundation day — deploy skeleton lands",
+          "body": "Kicked off the Octivate deploy tree for Future Caribbean Open Track (team Shemuel / CENSII). Unpacked the Next.js app shell, mapped routes for landing + auth + workspace, and confirmed the server could boot on this Windows host. Early friction: PowerShell vs bash habits and path quirks — solved by standardizing on PowerShell `;` chains and absolute paths. The machine (Cursor agent) and I agreed: ship a runnable deploy first, polish later. Outcome: project root alive, README orientation, first mental model of Power–Systems–Narratives (PSN).\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_07_13.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_07_13.png"
+        },
+        {
+          "key": "Tue 07/14",
+          "title": "Auth + brand geometry",
+          "body": "Stood up sign-in / sign-up surfaces and brand geometry (violet / coral / tide). Hit a classic trap: auth pages looking generic until we forced Octivate lockup + theme tokens. Cleverly fixed by wiring CSS variables from theme.css into chrome and auth shells so every screen felt like one product. Blocker: confusing env vs local JSON user store — documented .env.example and kept secrets out of git. Story beat: judges should feel Caribbean decision-intelligence, not a template SaaS clone.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_07_14.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_07_14.png"
+        },
+        {
+          "key": "Wed 07/15",
+          "title": "Landing narrative takes shape",
+          "body": "Built Why / How / Contact landing sections and mailing-list hooks. Issue: first viewport overcrowded with stats and cards. We ruthlessly simplified — brand first, one headline, one CTA, real visual anchor — matching our design rules. Agent suggested overbuilt layouts; I pushed back; we converged on a calmer Phase-1 landing. Also sketched public sample brief path so prospects can see product without dashboards.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_07_15.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_07_15.png"
+        },
+        {
+          "key": "Thu 07/16",
+          "title": "Workspace theatre begins",
+          "body": "Projects, questions, and the eight-agent pipeline scaffolding came online. Blocker: orchestrator limits and mock vs live OpenRouter modes fighting each other. Fix: explicit runtime mode + operator limits store so demos stay predictable. Fun moment: first time the PSN pipeline stages lit up in the UI — felt like the product exhaled. Logged gaps for evidence manager + human review assistant next.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_07_16.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_07_16.png"
+        },
+        {
+          "key": "Fri 07/17",
+          "title": "Sources registry + capture path",
+          "body": "Caribbean source packs and capture runner started to matter. CSV import was fussy (encodings, headers). We hardened parse + registry map and added artifact folders under data/local (gitignored). Halted briefly when a capture job stuck in `running` — later earned a Resume mode. Today we at least made import reproducible and operator-visible.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_07_17.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_07_17.png"
+        },
+        {
+          "key": "Sat 07/18",
+          "title": "Operator console sketch",
+          "body": "Weekend push on the operator console: users, mail stubs, logs, moderation placeholders. Lesson: operator UI sprawls fast. Introduced modular panels and kept mail/inbox as a dedicated rail. Pair programming with the agent meant rapid UI scaffolding, then I pruned anything that smelled like fake dashboard chrome.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_07_18.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_07_18.png"
+        },
+        {
+          "key": "Sun 07/19",
+          "title": "Stabilization + doctrine sync",
+          "body": "Synced protocol v0.2 agent charters/schemas into the repo and validated the developer doctrine brief was reachable. Quiet day of glue: TypeScript types, guard helpers, rate limits. No hero feature — on purpose. Reliability is an achievement when the week was scaffolding fireworks.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_07_19.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_07_19.png"
+        }
+      ]
+    },
+    {
+      "label": "Jul 20 – Jul 26",
+      "days": [
+        {
+          "key": "Mon 07/20",
+          "title": "Briefs + export ambition",
+          "body": "Brief detail pages and export template store took center stage. Ambition: HTML/PDF/DOCX/PPTX from one tokenized template. Immediate issue: huge HTML bodies and base64 assets choking uploads. Mitigated with sanitize options, seed templates, and asset directories. Customer-facing promise crystallizing: evidence-backed briefs you can actually hand to a minister or board.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_07_20.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_07_20.png"
+        },
+        {
+          "key": "Tue 07/21",
+          "title": "TLS edge + production serve",
+          "body": "Wired production edge (HTTP/HTTPS) and cert sync scripts. Windows cert paths were annoying; self-signed + sync scripts unblocked local `octivate.io` HTTPS. Halted when ports 80/443 collided with old node shells — learned the 4294967295 exit code is just Windows saying we killed a process. Clever fix: disciplined stop/start of start-app + serve:prod.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_07_21.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_07_21.png"
+        },
+        {
+          "key": "Wed 07/22",
+          "title": "Mail SMTP local stack",
+          "body": "Stood up local SMTP submission (25/587) for operator outbound and password reset. Spam-flood crashes (exit 134) taught us to babysit the mailer. Still, end-to-end mail path existed: compose → nodemailer → local submitter → mailbox JSON. Not glamorous — foundational.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_07_22.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_07_22.png"
+        },
+        {
+          "key": "Thu 07/23",
+          "title": "Pricing catalogue becomes real",
+          "body": "Free / Single brief ($15.99) / Team ($19.99/mo) catalogued in lib/billing with operator-editable store. Checkout modal shell + payment method icons. Debate: don’t promise cancel UX before accounts ship — we tempered Team copy. Pricing page now reads from the same source of truth the product will charge against.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_07_23.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_07_23.png"
+        },
+        {
+          "key": "Fri 07/24",
+          "title": "Onboarding tutorial tour",
+          "body": "Workspace intro tour (6 steps) with accent art, kickers, and Lucide icons. Design language for later email cards was born here: mono eyebrow, title + accent fragment, short bullets. Agent overbuilt first draft; we cut to clear steps operators can replay from Workspace Tutorial.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_07_24.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_07_24.png"
+        },
+        {
+          "key": "Sat 07/25",
+          "title": "Support threads + speech experiments",
+          "body": "Live support threads and speech dictation hooks. Tap-to-speak initially blocked on getUserMedia — fixed by starting SpeechRecognition without forcing mic preview first. Small UX win, big “this feels modern” energy for demos.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_07_25.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_07_25.png"
+        },
+        {
+          "key": "Sun 07/26",
+          "title": "Source editor UX polish",
+          "body": "Per-source delete, autosave (no Save button), IconSelect, section tabs. Operator source capture panel gained clearer pending/running states. Theme toggles on marketing navbar for signed-in return-to-workspace. Product started feeling curated, not provisional.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_07_26.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_07_26.png"
+        }
+      ]
+    },
+    {
+      "label": "Jul 27 – Aug 2",
+      "days": [
+        {
+          "key": "Mon 07/27",
+          "title": "HTML uploads + capture Resume",
+          "body": "Allowed .html/.htm in dropzone; TEXT_EXTS updated. Capture Resume mode recovers stuck `running` → `pending` with multi-wave drain — the clever fix for Friday’s ghost jobs. Operator panel shows Resume when pending > 0. Build/restart loop practiced until muscle memory.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_07_27.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_07_27.png"
+        },
+        {
+          "key": "Tue 07/28",
+          "title": "Navbar auth CTAs + AI sliders",
+          "body": "Signed-in marketing chrome: hide Sign in / Request Demo; show Return to workspace (+ Operator dashboard). AI module sliders drag from header handle only — stopped accidental layout chaos. Mobile sheet theme-aware. Feels like a real SaaS shell.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_07_28.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_07_28.png"
+        },
+        {
+          "key": "Wed 07/29",
+          "title": "Export pipeline hardening",
+          "body": "Deep work on export pipeline (prepare → render → pdf/docx/pptx). Seed Octivate brief template tokenized. Occasional Turbopack NFT warnings from data/local breadth — noted, didn’t block ship. Briefs became presentable artifacts, not just JSON.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_07_29.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_07_29.png"
+        },
+        {
+          "key": "Thu 07/30",
+          "title": "Supabase ops + cost tracking",
+          "body": "Ops migrations for costs/config; operator costs panel. When local JSON wasn’t enough for multi-operator truth, Supabase admin paths helped. Kept fallbacks so demos never hard-fail offline.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_07_30.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_07_30.png"
+        },
+        {
+          "key": "Fri 07/31",
+          "title": "Mail DNS / DKIM tooling",
+          "body": "Scripts for DKIM generation and Cloudflare mail DNS. External delivery still depends on MX/SPF alignment — we surface honest SMTP warnings instead of fake green checks. Integrity over theatre.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_07_31.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_07_31.png"
+        },
+        {
+          "key": "Sat 08/01",
+          "title": "Mail templates seed + invite copy",
+          "body": "Seeded mail-templates.json (announce/invite/newsletter/update). Invite copy aimed at demos: live brief, evidence trail, product itself. Prepared the narrative we’d later put into a cinematic HTML shell.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_08_01.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_08_01.png"
+        },
+        {
+          "key": "Sun 08/02",
+          "title": "Breathing room + QA",
+          "body": "Regression day: health checks, auth flows, pricing hrefs for guests (/signup not /dashboard). Cleared confusing footer deep-links. Sunday discipline: less new surface area, more trust.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_08_02.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_08_02.png"
+        }
+      ]
+    },
+    {
+      "label": "Aug 3 – Aug 9",
+      "days": [
+        {
+          "key": "Mon 08/03",
+          "title": "Email shell redesign begins",
+          "body": "Redesigned shared HTML email after a cinematic table reference — Octivate palette (violet→coral→tide), embedded lockup, landing-inspired nav/footer. Initial logo asset was white-boxed and portrait; we caught it. Forgot-password wired through the same generator with structured greeting/bullets/expiry.\n\nProduct surfaces exercised today (public): Landing hero, Pricing, Sample brief, Sign up, Sign in, Support — captured for the octivate.io archive so judges can see the marketing shell live.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_08_03.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_08_03.png"
+        },
+        {
+          "key": "Tue 08/04",
+          "title": "Invite-grade mail + GitHub private repo",
+          "body": "Transparent lockup, tutorial-style feature cards, live pricing cards from readBillingPlans ($0 / $15.99 / $19.99). Default send intent = platform invite. Also installed Git + gh, authenticated, pushed private repo https://github.com/CCNAHLHQ/octivate and took a 5.3GB full Desktop backup (data + .env, no node_modules). Plot twist: PAT pasted in chat — we rotated guidance. Human + machine shipping like a pit crew.\n\nWorkspace surfaces verified signed-in as Shemuel: Dashboard overview, Projects, Briefs, Sources, Packs, Monitors, Stakeholders, Usage, Account — proof the decision-intelligence rails load on octivate.io.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_08_04.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_08_04.png"
+        },
+        {
+          "key": "Wed 08/05",
+          "title": "Mail WIP gate + Logbook automation",
+          "body": "Added blurred Work-in-progress overlay on operator compose/send (flag in lib/mail/feature-flags.ts) so outbound mail can’t be half-launched mid-polish. Inbox/list still usable. Built Future Caribbean logbook automation from the Desktop octivate.io archive index.html (dynamic parse → paste → Save entry), plus a corrected date-synced resync after finding scrambled/empty days. Operator console + project detail captured. Date-synced resync completed after scrambled/empty days were detected.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_08_05.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_08_05.png"
+        },
+        {
+          "key": "Thu 08/06",
+          "title": "Operator Logbook publisher — one-button Future Caribbean sync",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_08_06.png",
+          "body": "Shipped a professional, operator-only Future Caribbean Logbook publisher on the Octivate Operator → Operations dashboard. One clear action button runs: (1) inventory check of what is already on os.futurecaribbean.com versus our planned day entries, (2) GitHub evidence upload of sequential screenshots under docs/future-caribbean-logbook/screenshots, (3) publish/fill any unaccounted days including today, with live step labels + progress bar naming the destination site. Past entries now carry direct GitHub screenshot URLs. Built for Shemuel / Open Track judges — certainty over theatre.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_08_06.png"
+        }
+      ]
+    }
+  ]
+}

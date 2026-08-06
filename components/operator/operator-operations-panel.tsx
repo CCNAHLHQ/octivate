@@ -10,6 +10,7 @@ import { ModerationPanel } from "@/components/dashboard/moderation-panel";
 import { CompactFeed } from "@/components/operator/compact-feed";
 import { OperatorEmptyState } from "@/components/operator/operator-empty-state";
 import { OperatorModularBoard } from "@/components/operator/operator-module";
+import { OperatorFcLogbookPanel } from "@/components/operator/operator-fc-logbook-panel";
 import { OPERATIONS_LAYOUT } from "@/components/operator/operator-layout-defaults";
 import { useOperatorLayout } from "@/lib/hooks/use-operator-layout";
 import type { AgentSession, CostEntry } from "@/lib/types";
@@ -267,7 +268,9 @@ export function OperatorOperationsPanel({
   );
 
   return (
-    <OperatorModularBoard
+    <div className="space-y-4">
+      <OperatorFcLogbookPanel />
+      <OperatorModularBoard
       {...layout}
       resetLayout={layout.resetLayout}
       renderModule={(id) => {
@@ -301,5 +304,6 @@ export function OperatorOperationsPanel({
         return null;
       }}
     />
+    </div>
   );
 }
