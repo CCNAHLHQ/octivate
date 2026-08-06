@@ -1,18 +1,21 @@
-# Future Caribbean Logbook — evidence pack
+# Future Caribbean Logbook — octivate.io evidence pack
 
 Team **Shemuel** · Open Track · product **Octivate** (CENSII).
 
-This folder stores sequential operator screenshots used when publishing daily progress to:
+Screenshots in `screenshots/` are **live captures from https://octivate.io** (marketing + signed-in workspace/operator surfaces). Each Future Caribbean logbook day links to its matching evidence file.
 
-**https://os.futurecaribbean.com/builder/logbook**
+| File | Source |
+|---|---|
+| `00-landing.png` | octivate.io marketing landing |
+| `00-dashboard.png` | Signed-in workspace overview |
+| `{Dow}_{MM}_{DD}.png` | Day-mapped octivate.io surface |
+| `99-final.png` | Operator → Operations (publisher card) |
 
-Screenshots are attached as direct GitHub URLs inside each logbook entry.
+Publishing destination: **https://os.futurecaribbean.com/builder/logbook**  
+Operator control: **Operator → Operations → Publish to Future Caribbean**
 
-| Sequence | File | Day |
-|---|---|---|
-| 00 | `screenshots/00-dashboard.png` | Portal after sign-in |
-| 01 | `screenshots/01-logbook.png` | Logbook shell |
-| 02+ | `screenshots/{Dow}_{MM}_{DD}.png` | Per-day Save entry proof |
-| 99 | `screenshots/99-logbook-final.png` | Closing state |
+Regenerate captures:
 
-Publishing is operator-only via **Operator → Operations → Future Caribbean Logbook**.
+```bash
+node scripts/capture-octivate-evidence.mjs
+```
