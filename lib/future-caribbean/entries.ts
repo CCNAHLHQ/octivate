@@ -1,5 +1,4 @@
-import fs from "fs/promises";
-import path from "path";
+import bundled from "@/lib/future-caribbean/entries.json";
 import type { FcDayEntry } from "@/lib/future-caribbean/types";
 import { FC_GITHUB_RAW_BASE } from "@/lib/future-caribbean/config";
 
@@ -19,21 +18,7 @@ export async function loadFcEntries(): Promise<{
   meta: Record<string, unknown>;
   days: FcDayEntry[];
 }> {
-  const candidates = [
-    path.join(process.cwd(), "data", "local", "fc-logbook-entries.json"),
-    path.join(process.cwd(), "lib", "future-caribbean", "entries.json"),
-  ];
-  let raw: RawEntries | null = null;
-  for (const p of candidates) {
-    try {
-      raw = JSON.parse(await fs.readFile(p, "utf8")) as RawEntries;
-      break;
-    } catch {
-      /* try next */
-    }
-  }
-  if (!raw) throw new Error("fc_entries_missing");
-
+  const raw = bundled as RawEntries;
   const days: FcDayEntry[] = [];
   for (const w of raw.weeks || []) {
     for (const d of w.days || []) {

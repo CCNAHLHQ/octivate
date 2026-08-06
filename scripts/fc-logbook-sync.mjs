@@ -26,7 +26,8 @@ const GH_BASE =
   "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots";
 
 function readJob() {
-  return JSON.parse(fs.readFileSync(JOB, "utf8"));
+  const raw = fs.readFileSync(JOB, "utf8").replace(/^\uFEFF/, "");
+  return JSON.parse(raw);
 }
 function writeJob(job) {
   fs.mkdirSync(path.dirname(JOB), { recursive: true });
@@ -89,7 +90,7 @@ function uploadGithub(job) {
   const add = spawnSync("git", ["add", "docs/future-caribbean-logbook"], {
     cwd: ROOT,
     encoding: "utf8",
-    shell: true,
+    shell: false,
   });
   if (add.status !== 0) {
     setStep(job, "github", "error", add.stderr || add.stdout || "git add failed");
@@ -98,17 +99,26 @@ function uploadGithub(job) {
   const st = spawnSync("git", ["status", "--porcelain", "docs/future-caribbean-logbook"], {
     cwd: ROOT,
     encoding: "utf8",
-    shell: true,
+    shell: false,
   });
   if ((st.stdout || "").trim()) {
     const commit = spawnSync(
       "git",
-      [
-        "commit",
-        "-m",
-        "Add Future Caribbean logbook evidence screenshots for Shemuel Open Track.",
-      ],
-      { cwd: ROOT, encoding: "utf8", shell: true }
+      ["commit", "-m", "Add Future Caribbean logbook evidence screenshots."],
+      {
+        cwd: ROOT,
+        encoding: "utf8",
+        shell: false,
+        env: {
+          ...process.env,
+          GIT_AUTHOR_NAME: process.env.GIT_AUTHOR_NAME || "CCNAHLHQ",
+          GIT_AUTHOR_EMAIL:
+            process.env.GIT_AUTHOR_EMAIL || "CCNAHLHQ@users.noreply.github.com",
+          GIT_COMMITTER_NAME: process.env.GIT_COMMITTER_NAME || "CCNAHLHQ",
+          GIT_COMMITTER_EMAIL:
+            process.env.GIT_COMMITTER_EMAIL || "CCNAHLHQ@users.noreply.github.com",
+        },
+      }
     );
     if (commit.status !== 0 && !/nothing to commit/i.test(commit.stdout + commit.stderr)) {
       // commit may fail if identity missing — still try push of existing
@@ -137,11 +147,22 @@ function uploadGithub(job) {
 }
 
 async function withBrowser(fn) {
-  const playwrightPath = path.join(TOOL, "node_modules", "playwright", "index.js");
-  if (!fs.existsSync(playwrightPath)) {
-    throw new Error(`playwright_missing_at_${TOOL}`);
+  const { createRequire } = await import("module");
+  const req = createRequire(path.join(TOOL, "package.json"));
+  let chromium;
+  try {
+    ({ chromium } = req("playwright"));
+  } catch {
+    const playwrightPath = path.join(TOOL, "node_modules", "playwright", "index.js");
+    if (!fs.existsSync(playwrightPath)) {
+      throw new Error(`playwright_missing_at_${TOOL}`);
+    }
+    const mod = await import(pathToFileURL(playwrightPath).href);
+    chromium = mod.chromium || mod.default?.chromium;
   }
-  const { chromium } = await import(pathToFileURL(playwrightPath).href);
+  if (!chromium?.launch) {
+    throw new Error("playwright_chromium_unavailable");
+  }
   const chrome = path.join(
     process.env.LOCALAPPDATA || "",
     "ms-playwright",

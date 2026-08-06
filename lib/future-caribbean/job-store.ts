@@ -7,7 +7,7 @@ import {
 } from "@/lib/future-caribbean/config";
 
 const JOB_PATH = () =>
-  path.join(process.cwd(), "data", "local", "fc-logbook-job.json");
+  path.join(/* turbopackIgnore: true */ process.cwd(), "data", "local", "fc-logbook-job.json");
 
 export function idleFcJob(): FcLogbookJob {
   return {

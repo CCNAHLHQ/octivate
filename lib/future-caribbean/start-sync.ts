@@ -47,7 +47,11 @@ export async function startFcLogbookSync(): Promise<{
   };
   await writeFcJob(job);
 
-  const script = path.join(process.cwd(), "scripts", "fc-logbook-sync.mjs");
+  const script = path.join(
+    /* turbopackIgnore: true */ process.cwd(),
+    "scripts",
+    "fc-logbook-sync.mjs"
+  );
   const child = spawn(process.execPath, [script], {
     cwd: process.cwd(),
     detached: true,
