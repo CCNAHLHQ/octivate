@@ -15,6 +15,7 @@ import {
 import { AuthLogoWatermarks } from "@/components/auth/auth-logo-watermarks";
 import { LoginTransition } from "@/components/auth/login-transition";
 import { OctivateLogo } from "@/components/brand";
+import { useT } from "@/components/i18n/locale-provider";
 import type { PublicUser } from "@/lib/auth/types";
 
 type Mode = "signin" | "signup";
@@ -25,46 +26,6 @@ type GeneratedCredentials = {
   username: string;
   password: string;
   email: string;
-};
-
-const COPY: Record<
-  Mode,
-  {
-    kicker: string;
-    title: string;
-    lede: string;
-    submit: string;
-    switchText: string;
-    switchHref: string;
-    switchLabel: string;
-    visualTitle: string;
-    visualBody: string;
-  }
-> = {
-  signin: {
-    kicker: "Workspace access",
-    title: "Sign in to Octivate",
-    lede: "Use your Octivate email or username and password to open the decision-intelligence workspace.",
-    submit: "Sign in",
-    switchText: "Don't have an account?",
-    switchHref: "/signup",
-    switchLabel: "Sign up",
-    visualTitle: "Clarity for Caribbean decisions",
-    visualBody:
-      "Connect scattered regional signals, test what can be trusted, and move with evidence-backed judgement.",
-  },
-  signup: {
-    kicker: "Free tier",
-    title: "Create your Octivate access",
-    lede: "Use the same email/username and password fields as sign-in, or generate secure credentials when enabled.",
-    submit: "Create account",
-    switchText: "Already have an account?",
-    switchHref: "/signin",
-    switchLabel: "Sign in",
-    visualTitle: "Decision intelligence, ready to run",
-    visualBody:
-      "Structure the question, assemble evidence across Power–Systems–Narratives, and leave with options you can act on.",
-  },
 };
 
 async function copyText(value: string) {
@@ -78,7 +39,31 @@ async function copyText(value: string) {
 
 function AuthShellInner({ mode }: { mode: Mode }) {
   const searchParams = useSearchParams();
-  const copy = COPY[mode];
+  const t = useT();
+  const copy =
+    mode === "signin"
+      ? {
+          kicker: t("auth.signin.kicker"),
+          title: t("auth.signin.title"),
+          lede: t("auth.signin.lede"),
+          submit: t("auth.signin.submit"),
+          switchText: t("auth.signin.switchText"),
+          switchHref: "/signup",
+          switchLabel: t("auth.signin.switchLabel"),
+          visualTitle: t("auth.signin.visualTitle"),
+          visualBody: t("auth.signin.visualBody"),
+        }
+      : {
+          kicker: t("auth.signup.kicker"),
+          title: t("auth.signup.title"),
+          lede: t("auth.signup.lede"),
+          submit: t("auth.signup.submit"),
+          switchText: t("auth.signup.switchText"),
+          switchHref: "/signin",
+          switchLabel: t("auth.signup.switchLabel"),
+          visualTitle: t("auth.signup.visualTitle"),
+          visualBody: t("auth.signup.visualBody"),
+        };
   const resetToken = searchParams.get("reset")?.trim() || "";
 
   const [signinView, setSigninView] = useState<SigninView>("signin");

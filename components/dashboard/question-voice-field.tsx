@@ -5,6 +5,7 @@ import { Mic, MicOff, ShieldAlert } from "lucide-react";
 import { useSpeechDictation } from "@/lib/hooks/use-speech-dictation";
 import { sanitizePlainText } from "@/lib/docs/sanitize-text";
 import { toast } from "@/components/ui/toast";
+import { useT } from "@/components/i18n/locale-provider";
 import { cn } from "@/lib/utils";
 
 export function QuestionVoiceField({
@@ -22,6 +23,7 @@ export function QuestionVoiceField({
   minLength?: number;
   required?: boolean;
 }) {
+  const t = useT();
   const secure =
     typeof window === "undefined"
       ? true
@@ -46,16 +48,14 @@ export function QuestionVoiceField({
     if (lastStatus.current === speech.status) return;
     lastStatus.current = speech.status;
     if (speech.status === "denied") {
-      toast.warning(
-        "Microphone access was blocked. Allow the mic for this site, then try again."
-      );
+      toast.warning(t("ws.voice.blockedToast"));
     } else if (speech.status === "unsupported") {
-      toast.info("Voice dictation isn’t available in this browser — type instead.");
+      toast.info(t("ws.voice.unavailable"));
     } else if (speech.status === "error" && speech.error) {
       const soft = /no-speech|aborted/i.test(speech.error);
       if (!soft) toast.error(speech.error);
     }
-  }, [speech.status, speech.error]);
+  }, [speech.status, speech.error, t]);
 
   const listening = speech.status === "listening";
   const hasSpoken = Boolean(speech.finalText || speech.interim);
@@ -70,17 +70,15 @@ export function QuestionVoiceField({
     e.stopPropagation();
     if (disabled) return;
     if (!secure) {
-      toast.error("Voice needs HTTPS (or localhost). Open the secure site URL.");
+      toast.error(t("ws.voice.needsHttps"));
       return;
     }
     if (denied) {
-      toast.warning(
-        "Mic is blocked in browser settings. Click the lock icon → Site settings → Microphone → Allow."
-      );
+      toast.warning(t("ws.voice.settingsBlocked"));
       return;
     }
     if (unavailable) {
-      toast.info("Voice dictation isn’t available in this browser — type instead.");
+      toast.info(t("ws.voice.unavailable"));
       return;
     }
     // Fire recognition in this click turn — do not await permission first.
@@ -102,12 +100,12 @@ export function QuestionVoiceField({
           aria-pressed={listening}
           aria-label={
             listening
-              ? "Stop listening"
+              ? t("ws.voice.stop")
               : denied
-                ? "Microphone blocked"
+                ? t("ws.voice.blocked")
                 : needsPermission
-                  ? "Allow microphone and speak"
-                  : "Tap to speak"
+                  ? t("ws.voice.allow")
+                  : t("ws.voice.tap")
           }
           onMouseDown={(e) => e.stopPropagation()}
           onPointerDown={(e) => e.stopPropagation()}
@@ -136,7 +134,7 @@ export function QuestionVoiceField({
           ) : (
             <>
               <Mic className="h-3.5 w-3.5" aria-hidden />
-              Tap to speak
+              {t("ws.voice.tap")}
             </>
           )}
         </button>
@@ -173,9 +171,7 @@ export function QuestionVoiceField({
             </span>
           ) : null}
           {!hasSpoken &&
-            (listening
-              ? "Start speaking — your words appear here live."
-              : "Tap the mic, then speak — words appear here live.")}
+            (listening ? t("ws.voice.startSpeaking") : t("ws.voice.tapThenSpeak"))}
         </p>
       </div>
 
@@ -185,10 +181,7 @@ export function QuestionVoiceField({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onMouseDown={(e) => e.stopPropagation()}
-        placeholder={
-          placeholder ||
-          "What strategic decision do you need evidence-backed judgment on?"
-        }
+        placeholder={placeholder || t("ws.voice.placeholder")}
         required={required}
         minLength={minLength}
         disabled={disabled}

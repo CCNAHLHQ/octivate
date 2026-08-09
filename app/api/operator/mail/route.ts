@@ -11,6 +11,7 @@ import {
   DEFAULT_MAIL_TEMPLATE_ID,
   DEFAULT_MAIL_TEMPLATE_NAME,
 } from "@/lib/mail/default-template";
+import { OPERATOR_MAIL_SEND_WIP } from "@/lib/mail/feature-flags";
 import { requireOperatorUser, resolveRequestUser } from "@/lib/auth/scope";
 import { assertAllowedOrigin } from "@/lib/security/origin";
 import { readCollection } from "@/lib/store/json-store";
@@ -57,6 +58,13 @@ export async function POST(req: NextRequest) {
   const user = await resolveRequestUser(req);
   const gate = requireOperatorUser(user);
   if (!gate.ok) return jsonError(gate.error, gate.status);
+
+  if (OPERATOR_MAIL_SEND_WIP) {
+    return jsonError(
+      "Email sending is temporarily work in progress. Try again once it is re-enabled.",
+      503
+    );
+  }
 
   let body: {
     action?: "send" | "bulk";

@@ -127,7 +127,7 @@ function uploadGithub(job) {
     const push = spawnSync("git", ["push", "origin", "HEAD"], {
       cwd: ROOT,
       encoding: "utf8",
-      shell: true,
+      shell: false,
     });
     if (push.status !== 0) {
       console.warn("[fc-sync] push:", push.stdout, push.stderr);

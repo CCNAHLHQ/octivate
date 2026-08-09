@@ -1,0 +1,21 @@
+/** Global chrome navigation + CTAs. */
+export const NAV_MESSAGES = {
+  "nav.why": "Why Octivate",
+  "nav.how": "How it works",
+  "nav.pricing": "Pricing",
+  "nav.team": "Team",
+  "nav.about": "About",
+  "nav.signIn": "Sign in",
+  "nav.requestDemo": "Get Started",
+  "nav.returnWorkspace": "Return to workspace",
+  "nav.operatorDashboard": "Operator dashboard",
+  "nav.askQuestion": "Ask question",
+  "nav.askQuestionLong": "Ask a question",
+  "nav.skip": "Skip to content",
+  "nav.explore": "Explore",
+  "nav.openMenu": "Open menu",
+  "nav.closeMenu": "Close menu",
+  "nav.translate": "Translate",
+  "nav.primary": "Primary",
+  "nav.mobile": "Mobile",
+} as const;

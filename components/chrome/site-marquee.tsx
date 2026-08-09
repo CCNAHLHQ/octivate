@@ -1,15 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { MarqueeTrack } from "@/components/chrome/marquee-track";
 import { apiFetch } from "@/lib/api-client";
 import { useWorkspaceRefresh } from "@/lib/hooks/use-workspace-refresh";
+import { useLocale } from "@/components/i18n/locale-provider";
 import type { MarqueeItem } from "@/lib/types";
 
 const MARQUEE_POLL_MS = 30_000;
 
 export function SiteMarquee() {
   const [items, setItems] = useState<MarqueeItem[]>([]);
+  const { messages, locale } = useLocale();
 
   const load = useCallback(async () => {
     try {
@@ -30,7 +32,16 @@ export function SiteMarquee() {
 
   useWorkspaceRefresh(load, ["marquee"]);
 
-  if (!items.length) return null;
+  const localized = useMemo(() => {
+    if (locale === "en") return items;
+    return items.map((item) => ({
+      ...item,
+      text: messages[`dyn.marquee.${item.id}.text`] || item.text,
+      badge: messages[`dyn.marquee.${item.id}.badge`] || item.badge,
+    }));
+  }, [items, messages, locale]);
 
-  return <MarqueeTrack variant="site" items={items} />;
+  if (!localized.length) return null;
+
+  return <MarqueeTrack variant="site" items={localized} />;
 }

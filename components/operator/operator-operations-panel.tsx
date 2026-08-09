@@ -11,6 +11,7 @@ import { CompactFeed } from "@/components/operator/compact-feed";
 import { OperatorEmptyState } from "@/components/operator/operator-empty-state";
 import { OperatorModularBoard } from "@/components/operator/operator-module";
 import { OperatorFcLogbookPanel } from "@/components/operator/operator-fc-logbook-panel";
+import { OperatorI18nPanel } from "@/components/operator/operator-i18n-panel";
 import { OPERATIONS_LAYOUT } from "@/components/operator/operator-layout-defaults";
 import { useOperatorLayout } from "@/lib/hooks/use-operator-layout";
 import type { AgentSession, CostEntry } from "@/lib/types";
@@ -270,6 +271,7 @@ export function OperatorOperationsPanel({
   return (
     <div className="space-y-4">
       <OperatorFcLogbookPanel />
+      <OperatorI18nPanel />
       <OperatorModularBoard
       {...layout}
       resetLayout={layout.resetLayout}

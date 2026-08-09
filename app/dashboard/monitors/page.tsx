@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { LoadingBlur } from "@/components/ui/loading-blur";
 import { toast } from "@/components/ui/toast";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import { useWorkspaceRefresh } from "@/lib/hooks/use-workspace-refresh";
 import { notifyWorkspaceRefresh } from "@/lib/workspace-events";
@@ -21,14 +22,8 @@ import type { Monitor, Project } from "@/lib/types";
 
 type MonitorFilter = "all" | "active" | "paused" | "alerting";
 
-const MONITOR_SORTS: { value: MonitorSort; label: string }[] = [
-  { value: "updated", label: "Sort: Last alert" },
-  { value: "alerts", label: "Sort: Alert count" },
-  { value: "name", label: "Sort: Name" },
-  { value: "country", label: "Sort: Country" },
-];
-
 export default function MonitorsPage() {
+  const t = useT();
   const [monitors, setMonitors] = useState<Monitor[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [initialLoading, setInitialLoading] = useState(true);
@@ -65,17 +60,48 @@ export default function MonitorsPage() {
 
   useWorkspaceRefresh(() => load(true), ["monitors", "projects"]);
 
+  const monitorSorts = useMemo(
+    () => [
+      { value: "updated" as MonitorSort, label: t("ws.monitors.sort.lastAlert") },
+      { value: "alerts" as MonitorSort, label: t("ws.monitors.sort.alertCount") },
+      { value: "name" as MonitorSort, label: t("ws.monitors.sort.name") },
+      { value: "country" as MonitorSort, label: t("ws.monitors.sort.country") },
+    ],
+    [t]
+  );
+
   const kpis = useMemo(() => {
     const active = monitors.filter((m) => m.status === "active").length;
     const paused = monitors.filter((m) => m.status === "paused").length;
     const alerts = monitors.reduce((s, m) => s + m.alertCount, 0);
     return [
-      { label: "Monitors", value: monitors.length, icon: Activity, tone: "violet" as const },
-      { label: "Active", value: active, hint: "Watching signals", icon: Activity, tone: "teal" as const },
-      { label: "Paused", value: paused, icon: Pause, tone: "default" as const },
-      { label: "Total alerts", value: alerts, icon: Bell, tone: "amber" as const },
+      {
+        label: t("ws.monitors.title"),
+        value: monitors.length,
+        icon: Activity,
+        tone: "violet" as const,
+      },
+      {
+        label: t("ws.projects.filter.active"),
+        value: active,
+        hint: t("ws.monitors.kpi.watching"),
+        icon: Activity,
+        tone: "teal" as const,
+      },
+      {
+        label: t("ws.monitors.pause"),
+        value: paused,
+        icon: Pause,
+        tone: "default" as const,
+      },
+      {
+        label: t("ws.monitors.kpi.totalAlerts"),
+        value: alerts,
+        icon: Bell,
+        tone: "amber" as const,
+      },
     ];
-  }, [monitors]);
+  }, [monitors, t]);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -101,12 +127,24 @@ export default function MonitorsPage() {
 
   const filters = useMemo(
     () => [
-      { id: "all", label: "All", count: monitors.length },
-      { id: "active", label: "Active", count: monitors.filter((m) => m.status === "active").length },
-      { id: "alerting", label: "With alerts", count: monitors.filter((m) => m.alertCount > 0).length },
-      { id: "paused", label: "Paused", count: monitors.filter((m) => m.status === "paused").length },
+      { id: "all", label: t("ws.projects.filter.all"), count: monitors.length },
+      {
+        id: "active",
+        label: t("ws.projects.filter.active"),
+        count: monitors.filter((m) => m.status === "active").length,
+      },
+      {
+        id: "alerting",
+        label: t("ws.monitors.kpi.withAlerts"),
+        count: monitors.filter((m) => m.alertCount > 0).length,
+      },
+      {
+        id: "paused",
+        label: t("ws.monitors.pause"),
+        count: monitors.filter((m) => m.status === "paused").length,
+      },
     ],
-    [monitors]
+    [monitors, t]
   );
 
   async function create(e: React.FormEvent) {
@@ -127,10 +165,10 @@ export default function MonitorsPage() {
       setName("");
       setProjectId("");
       setCreateOpen(false);
-      toast.success("Monitor created");
+      toast.success(t("ws.monitors.created"));
       await load(true);
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Could not create monitor");
+      toast.error(err instanceof Error ? err.message : t("ws.monitors.createFailed"));
     } finally {
       setSaving(false);
     }
@@ -140,9 +178,9 @@ export default function MonitorsPage() {
     <AppShell>
       <div className="mx-auto max-w-[1140px] space-y-5 p-4 sm:p-6">
         <WorkspacePageHeader
-          eyebrow="Workspace"
-          title="Monitors"
-          description="Continuous watch profiles for keywords and jurisdictions — alerts surface when signals match your brief scope."
+          eyebrow={t("ws.section.workspace")}
+          title={t("ws.monitors.title")}
+          description={t("ws.monitors.lede")}
         />
 
         <WorkspaceKpiStrip items={kpis} />
@@ -150,12 +188,12 @@ export default function MonitorsPage() {
         <WorkspaceToolbar
           search={search}
           onSearchChange={setSearch}
-          searchPlaceholder="Search monitors, keywords, countries…"
+          searchPlaceholder={t("ws.monitors.search")}
           filters={filters}
           activeFilter={filter}
           onFilterChange={(id) => setFilter(id as MonitorFilter)}
           sort={sort}
-          sortOptions={MONITOR_SORTS}
+          sortOptions={monitorSorts}
           onSortChange={(value) => setSort(value as MonitorSort)}
         />
 
@@ -167,7 +205,7 @@ export default function MonitorsPage() {
             aria-expanded={createOpen}
           >
             <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-faint">
-              New monitor
+              {t("ws.monitors.add")}
             </span>
             {createOpen ? (
               <ChevronDown className="h-4 w-4 text-mist" aria-hidden />
@@ -179,19 +217,19 @@ export default function MonitorsPage() {
             <div className="ws-create-panel-body">
               <form onSubmit={create} className="grid gap-3 sm:grid-cols-2">
                 <Input
-                  placeholder="Monitor name"
+                  placeholder={t("ws.monitors.name")}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
                 />
                 <Input
-                  placeholder="Keywords (comma-separated)"
+                  placeholder={t("ws.monitors.keywords")}
                   value={keywords}
                   onChange={(e) => setKeywords(e.target.value)}
                   required
                 />
                 <Input
-                  placeholder="Countries (comma-separated)"
+                  placeholder={t("ws.monitors.countries")}
                   value={countries}
                   onChange={(e) => setCountries(e.target.value)}
                   required
@@ -201,7 +239,7 @@ export default function MonitorsPage() {
                   value={projectId}
                   onChange={(e) => setProjectId(e.target.value)}
                 >
-                  <option value="">Link to project (optional)</option>
+                  <option value="">{t("ws.monitors.linkProject")}</option>
                   {projects.map((p) => (
                     <option key={p.id} value={p.id}>
                       {p.name}
@@ -210,7 +248,7 @@ export default function MonitorsPage() {
                 </Select>
                 <div className="sm:col-span-2">
                   <Button type="submit" size="sm" disabled={saving}>
-                    {saving ? "Adding…" : "Add monitor"}
+                    {saving ? t("ws.monitors.adding") : t("ws.monitors.add")}
                   </Button>
                 </div>
               </form>
@@ -227,16 +265,14 @@ export default function MonitorsPage() {
         ) : filtered.length === 0 ? (
           <WorkspaceEmptyState
             icon={Activity}
-            title={monitors.length === 0 ? "No monitors yet" : "No matches"}
+            title={monitors.length === 0 ? t("ws.monitors.empty") : t("ws.monitors.noMatches")}
             description={
-              monitors.length === 0
-                ? "Add a watch profile for keywords and countries you want tracked between brief cycles."
-                : "Adjust search or filters, or create a new monitor."
+              monitors.length === 0 ? t("ws.monitors.emptyHint") : t("ws.monitors.noMatchesHint")
             }
             action={
               <Button size="sm" onClick={() => setCreateOpen(true)}>
                 <Plus className="h-3.5 w-3.5" />
-                Add monitor
+                {t("ws.monitors.add")}
               </Button>
             }
           />

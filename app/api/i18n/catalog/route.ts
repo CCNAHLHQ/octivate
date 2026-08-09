@@ -15,15 +15,24 @@ export async function GET(req: NextRequest) {
 
   try {
     const result = await resolveCatalog(locale);
-    return NextResponse.json({
+    const res = NextResponse.json({
       locale: result.locale,
       messages: result.messages,
       meta: {
         cached: result.cached,
         translatedKeys: result.translatedKeys,
+        catalogVersion: result.catalogVersion,
+        coverage: result.coverage,
         generatedAt: new Date().toISOString(),
       },
     });
+    // Permanent catalogs — browsers/CDN can reuse until version changes.
+    res.headers.set(
+      "Cache-Control",
+      "public, max-age=60, stale-while-revalidate=600"
+    );
+    res.headers.set("ETag", `"i18n-${result.locale}-${result.catalogVersion}"`);
+    return res;
   } catch (err) {
     const message = err instanceof Error ? err.message : "Catalog failed";
     return NextResponse.json({ error: message }, { status: 500 });

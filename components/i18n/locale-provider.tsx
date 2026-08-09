@@ -6,6 +6,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -17,11 +18,13 @@ type LocaleContextValue = {
   messages: MessageDict;
   ready: boolean;
   loading: boolean;
+  catalogVersion: number;
   t: (key: MessageKey | string, fallback?: string) => string;
   setLocale: (locale: string) => Promise<void>;
 };
 
 const LocaleContext = createContext<LocaleContextValue | null>(null);
+const SESSION_PREFIX = "octivate_i18n_catalog_v";
 
 function readStoredLocale(): string {
   if (typeof window === "undefined") return PAGE_LANGUAGE;
@@ -53,21 +56,59 @@ function applyDocumentLocale(locale: string) {
   document.documentElement.dir = locale === "ar" ? "rtl" : "ltr";
 }
 
-async function fetchCatalog(locale: string): Promise<MessageDict> {
-  if (locale === PAGE_LANGUAGE) return { ...EN_MESSAGES };
+function readSessionCatalog(locale: string): { messages: MessageDict; version: number } | null {
+  try {
+    const raw = sessionStorage.getItem(`${SESSION_PREFIX}${locale}`);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as { messages?: MessageDict; version?: number };
+    if (!parsed?.messages) return null;
+    return { messages: parsed.messages, version: Number(parsed.version || 0) };
+  } catch {
+    return null;
+  }
+}
+
+function writeSessionCatalog(locale: string, messages: MessageDict, version: number) {
+  try {
+    sessionStorage.setItem(
+      `${SESSION_PREFIX}${locale}`,
+      JSON.stringify({ messages, version, at: Date.now() })
+    );
+  } catch {
+    /* ignore quota */
+  }
+}
+
+async function fetchCatalog(
+  locale: string,
+  signal?: AbortSignal
+): Promise<{ messages: MessageDict; version: number }> {
+  if (locale === PAGE_LANGUAGE) {
+    return { messages: { ...EN_MESSAGES }, version: 0 };
+  }
   const res = await fetch(`/api/i18n/catalog?locale=${encodeURIComponent(locale)}`, {
-    cache: "no-store",
+    cache: "default",
+    signal,
   });
   if (!res.ok) throw new Error("Failed to load catalog");
-  const data = (await res.json()) as { messages?: MessageDict };
-  return { ...EN_MESSAGES, ...(data.messages || {}) };
+  const data = (await res.json()) as {
+    messages?: MessageDict;
+    meta?: { catalogVersion?: number };
+  };
+  const messages = { ...EN_MESSAGES, ...(data.messages || {}) };
+  const version = Number(data.meta?.catalogVersion || 0);
+  writeSessionCatalog(locale, messages, version);
+  return { messages, version };
 }
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState(PAGE_LANGUAGE);
   const [messages, setMessages] = useState<MessageDict>({ ...EN_MESSAGES });
+  const [catalogVersion, setCatalogVersion] = useState(0);
   const [ready, setReady] = useState(false);
   const [loading, setLoading] = useState(false);
+  const abortRef = useRef<AbortController | null>(null);
+  const seqRef = useRef(0);
 
   useEffect(() => {
     const stored = readStoredLocale();
@@ -78,46 +119,88 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
       setReady(true);
       return;
     }
+    const cached = readSessionCatalog(stored);
+    if (cached) {
+      setMessages({ ...EN_MESSAGES, ...cached.messages });
+      setCatalogVersion(cached.version);
+      setReady(true);
+    }
     setLoading(true);
-    void fetchCatalog(stored)
+    const ac = new AbortController();
+    abortRef.current = ac;
+    const seq = ++seqRef.current;
+    void fetchCatalog(stored, ac.signal)
       .then((dict) => {
-        setMessages(dict);
+        if (seq !== seqRef.current) return;
+        setMessages(dict.messages);
+        setCatalogVersion(dict.version);
         persistLocale(stored);
       })
       .catch(() => {
-        setMessages({ ...EN_MESSAGES });
+        if (seq !== seqRef.current) return;
+        if (!cached) setMessages({ ...EN_MESSAGES });
       })
       .finally(() => {
+        if (seq !== seqRef.current) return;
         setLoading(false);
         setReady(true);
       });
+    return () => ac.abort();
   }, []);
 
   const setLocale = useCallback(async (next: string) => {
     const localeNext = next || PAGE_LANGUAGE;
+    abortRef.current?.abort();
+    const ac = new AbortController();
+    abortRef.current = ac;
+    const seq = ++seqRef.current;
     setLoading(true);
-    try {
-      const dict = await fetchCatalog(localeNext);
-      setMessages(dict);
+
+    const cached = localeNext === PAGE_LANGUAGE ? null : readSessionCatalog(localeNext);
+    if (cached) {
+      setMessages({ ...EN_MESSAGES, ...cached.messages });
+      setCatalogVersion(cached.version);
       setLocaleState(localeNext);
       persistLocale(localeNext);
       applyDocumentLocale(localeNext);
+    }
+
+    try {
+      const dict = await fetchCatalog(localeNext, ac.signal);
+      if (seq !== seqRef.current) return;
+      setMessages(dict.messages);
+      setCatalogVersion(dict.version);
+      setLocaleState(localeNext);
+      persistLocale(localeNext);
+      applyDocumentLocale(localeNext);
+    } catch {
+      if (seq !== seqRef.current) return;
+      if (!cached) {
+        setMessages({ ...EN_MESSAGES });
+        setLocaleState(localeNext);
+        persistLocale(localeNext);
+        applyDocumentLocale(localeNext);
+      }
     } finally {
-      setLoading(false);
-      setReady(true);
+      if (seq === seqRef.current) {
+        setLoading(false);
+        setReady(true);
+      }
     }
   }, []);
 
   const t = useCallback(
     (key: MessageKey | string, fallback?: string) => {
-      return messages[key] || fallback || EN_MESSAGES[key as MessageKey] || key;
+      const hit = messages[key];
+      if (hit !== undefined && hit !== null) return hit;
+      return fallback || EN_MESSAGES[key as MessageKey] || key;
     },
     [messages]
   );
 
   const value = useMemo(
-    () => ({ locale, messages, ready, loading, t, setLocale }),
-    [locale, messages, ready, loading, t, setLocale]
+    () => ({ locale, messages, ready, loading, catalogVersion, t, setLocale }),
+    [locale, messages, ready, loading, catalogVersion, t, setLocale]
   );
 
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>;
@@ -135,8 +218,12 @@ export function useLocale() {
 export function useT() {
   const ctx = useContext(LocaleContext);
   if (!ctx) {
-    return (key: MessageKey | string, fallback?: string) =>
-      fallback || EN_MESSAGES[key as MessageKey] || key;
+    return (key: MessageKey | string, fallback?: string) => {
+      const en = EN_MESSAGES[key as MessageKey];
+      if (fallback !== undefined) return fallback;
+      if (en !== undefined) return en;
+      return key;
+    };
   }
   return ctx.t;
 }

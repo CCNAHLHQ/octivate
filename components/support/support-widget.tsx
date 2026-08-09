@@ -23,6 +23,7 @@ import {
 } from "@/components/support/safe-image-preview";
 import { Tooltip } from "@/components/ui/tooltip";
 import { toast } from "@/components/ui/toast";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch, getClientApiKey } from "@/lib/api-client";
 import {
   readSupportImageAttachment,
@@ -37,28 +38,7 @@ import "@/app/support/support-widget.css";
 const THREAD_KEY = "octivate-support-thread-id";
 const SEEN_KEY = "octivate-support-seen-at";
 
-const TOPIC_PROMPTS = [
-  {
-    id: "access",
-    label: "Access",
-    text: "I need assistance with signing in or accessing my workspace.",
-  },
-  {
-    id: "briefs",
-    label: "Briefs",
-    text: "I need help reviewing or exporting a decision brief.",
-  },
-  {
-    id: "projects",
-    label: "Projects",
-    text: "I have a question about configuring a project or running the workflow.",
-  },
-  {
-    id: "plans",
-    label: "Plans",
-    text: "I would like guidance on plans and Team access for my organisation.",
-  },
-];
+const TOPIC_IDS = ["access", "briefs", "projects", "plans"] as const;
 
 function readSsePayloads(buf: string, onPayload: (data: unknown) => void): string {
   const chunks = buf.split("\n\n");
@@ -89,6 +69,7 @@ export function SupportWidget({
   staffMode?: boolean;
   user: PublicUser | null;
 }) {
+  const t = useT();
   const mounted = useMounted();
   const [open, setOpen] = useState(false);
   const [thread, setThread] = useState<SupportThread | null>(null);
@@ -132,7 +113,7 @@ export function SupportWidget({
               void import("@/lib/alerts/notify").then(({ octivateAlert }) =>
                 octivateAlert({
                   kind: "message",
-                  title: "New support reply",
+                  title: t("support.chat.newReply"),
                   body: latestOp.body.slice(0, 120),
                   href: "/dashboard",
                   desktop: true,
@@ -154,7 +135,17 @@ export function SupportWidget({
         /* ignore */
       }
     }
-  }, []);
+  }, [t]);
+
+  const topicPrompts = useMemo(
+    () =>
+      TOPIC_IDS.map((id) => ({
+        id,
+        label: t(`support.chat.topic.${id}`),
+        text: t(`support.chat.canned.${id}`),
+      })),
+    [t]
+  );
 
   // Drop legacy guest token keys from prior support UX.
   useEffect(() => {
@@ -347,16 +338,16 @@ export function SupportWidget({
       /* ignore */
     }
     applyThread(null);
-    toast.success("New conversation ready — send a message to begin");
+    toast.success(t("support.chat.ready"));
   }
 
   async function submitMessage(text?: string) {
     if (!user) {
-      toast.error("Sign in required to contact support");
+      toast.error(t("support.chat.signInRequired"));
       return;
     }
     if (thread?.status === "closed") {
-      toast.error("This conversation is resolved. Start a new conversation to continue.");
+      toast.error(t("support.chat.resolvedContinue"));
       return;
     }
     const body = (text ?? draft).trim();
@@ -368,7 +359,7 @@ export function SupportWidget({
         const res = await apiFetch<{ thread: SupportThread }>("/api/support/threads", {
           method: "POST",
           json: {
-            subject: "Account support",
+            subject: t("support.chat.accountSupport"),
             body: body || "(image attached)",
             attachments,
             ...clientHints(),
@@ -392,7 +383,7 @@ export function SupportWidget({
       setDraft("");
       setAttachments([]);
     } catch (err) {
-      const message = err instanceof Error ? err.message : "Could not send";
+      const message = err instanceof Error ? err.message : t("support.chat.sendFailed");
       toast.error(message);
       if (/resolved|new conversation/i.test(message)) {
         /* keep thread visible; CTA handles next step */
@@ -413,7 +404,7 @@ export function SupportWidget({
       }
       setAttachments((prev) => [...prev, ...next].slice(0, SUPPORT_MAX_ATTACHMENTS));
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Invalid image");
+      toast.error(err instanceof Error ? err.message : t("support.chat.invalidImage"));
     } finally {
       if (fileRef.current) fileRef.current.value = "";
     }
@@ -444,7 +435,7 @@ export function SupportWidget({
                   <OctivateLogoMark className="scw-logo-mark" decorative />
                 </span>
                 <div className="scw-head-copy">
-                  <p className="scw-head-title">Octivate Support</p>
+                  <p className="scw-head-title">{t("support.chat.title")}</p>
                   <p className="scw-head-status">
                     <span
                       className={cn(
@@ -454,29 +445,29 @@ export function SupportWidget({
                       aria-hidden
                     />
                     {isResolved
-                      ? "Resolved · messaging closed"
+                      ? t("support.chat.resolvedClosed")
                       : staffName
                         ? `Speaking with ${staffName}`
-                        : "Account support · typically replies within a business day"}
+                        : t("support.chat.accountSupportHint")}
                   </p>
                 </div>
               </div>
               <div className="scw-head-actions">
-                <Tooltip content="Minimize chat" side="bottom">
+                <Tooltip content={t("support.chat.minimize")} side="bottom">
                   <button
                     type="button"
                     className="scw-icon-btn"
-                    aria-label="Minimize"
+                    aria-label={t("support.chat.minimize")}
                     onClick={() => setOpen(false)}
                   >
                     <Minimize2 className="h-4 w-4" />
                   </button>
                 </Tooltip>
-                <Tooltip content="Close chat" side="bottom">
+                <Tooltip content={t("support.chat.close")} side="bottom">
                   <button
                     type="button"
                     className="scw-icon-btn"
-                    aria-label="Close"
+                    aria-label={t("support.chat.close")}
                     onClick={() => setOpen(false)}
                   >
                     <X className="h-4 w-4" />
@@ -499,7 +490,7 @@ export function SupportWidget({
                 <span className="scw-presence"> · {presenceLabel}</span>
               </span>
               {staffName ? (
-                <Tooltip content="Assigned Octivate staff member" side="top">
+                <Tooltip content={t("support.chat.assignedStaff")} side="top">
                   <span className="scw-staff-pill">
                     <Shield className="h-3 w-3" aria-hidden />
                     {staffName}
@@ -522,7 +513,7 @@ export function SupportWidget({
                 <div key={m.id} className={cn("scw-bubble", `is-${m.role}`)}>
                   <span className="scw-bubble-role">
                     {m.role === "operator"
-                      ? m.staffName || "Octivate Support"
+                      ? m.staffName || t("support.chat.title")
                       : m.role === "user"
                         ? "You"
                         : "Octivate"}
@@ -545,7 +536,7 @@ export function SupportWidget({
               {peerTyping ? (
                 <div className="scw-bubble is-operator scw-typing" aria-live="polite">
                   <span className="scw-bubble-role">
-                    {peerTyping.name || "Octivate Support"}
+                    {peerTyping.name || t("support.chat.title")}
                   </span>
                   <p className="scw-typing-dots">
                     <span />
@@ -561,7 +552,7 @@ export function SupportWidget({
                 <div className="scw-resolved-copy">
                   <CheckCircle2 className="h-4 w-4" aria-hidden />
                   <div>
-                    <p className="scw-resolved-title">Conversation resolved</p>
+                    <p className="scw-resolved-title">{t("support.chat.resolved")}</p>
                     <p className="scw-resolved-text">
                       Messaging is closed on this thread. Start a new conversation if you
                       still need help.
@@ -581,7 +572,7 @@ export function SupportWidget({
               <>
                 {!thread || messages.filter((m) => m.role === "user").length === 0 ? (
                   <div className="scw-quick">
-                    {TOPIC_PROMPTS.map((q) => (
+                    {topicPrompts.map((q) => (
                       <Tooltip key={q.id} content={q.text} side="top">
                         <button
                           type="button"
@@ -616,11 +607,11 @@ export function SupportWidget({
                       ))}
                     </div>
                   ) : null}
-                  <Tooltip content="Attach an image (PNG, JPEG, WebP, GIF · 1.5 MB)" side="top">
+                  <Tooltip content={t("support.chat.attachHint")} side="top">
                     <button
                       type="button"
                       className="scw-attach"
-                      aria-label="Attach image"
+                      aria-label={t("support.chat.attach")}
                       onClick={() => fileRef.current?.click()}
                       disabled={sending || attachments.length >= SUPPORT_MAX_ATTACHMENTS}
                     >
@@ -643,7 +634,7 @@ export function SupportWidget({
                       if (e.target.value.trim()) pulseTyping(true);
                       else pulseTyping(false);
                     }}
-                    placeholder="Write a formal message…"
+                    placeholder={t("support.chat.placeholder")}
                     rows={3}
                     disabled={sending}
                     onKeyDown={(e) => {
@@ -653,7 +644,7 @@ export function SupportWidget({
                       }
                     }}
                   />
-                  <Tooltip content="Send message" side="top">
+                  <Tooltip content={t("support.chat.send")} side="top">
                     <button
                       type="button"
                       className={cn(
@@ -664,7 +655,7 @@ export function SupportWidget({
                       onClick={() => void submitMessage()}
                     >
                       <Send className="h-4 w-4" />
-                      Send message
+                      {t("support.chat.send")}
                     </button>
                   </Tooltip>
                 </div>
@@ -674,11 +665,11 @@ export function SupportWidget({
         ) : null}
       </AnimatePresence>
 
-      <Tooltip content="Open account support chat" side="top">
+      <Tooltip content={t("support.chat.openAccount")} side="top">
         <button
           type="button"
           className={cn("scw-fab", open && "is-open")}
-          aria-label="Open support"
+          aria-label={t("support.chat.open")}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >

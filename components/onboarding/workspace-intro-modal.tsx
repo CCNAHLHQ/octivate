@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IntroStepArt } from "@/components/onboarding/intro-step-art";
 import { TourSpotlight } from "@/components/onboarding/tour-spotlight";
+import { useT } from "@/components/i18n/locale-provider";
 import {
   WORKSPACE_INTRO_EVENT,
   WORKSPACE_INTRO_PREFETCH_ROUTES,
@@ -46,6 +47,7 @@ function routeMatches(
 }
 
 export function WorkspaceIntroModal() {
+  const t = useT();
   const titleId = useId();
   const router = useRouter();
   const pathname = usePathname();
@@ -296,7 +298,7 @@ export function WorkspaceIntroModal() {
       <button
         type="button"
         className="intro-modal-backdrop is-dim"
-        aria-label="Close tour"
+        aria-label={t("onboard.ui.closeTour")}
         onClick={() => close(false)}
       />
 
@@ -313,15 +315,17 @@ export function WorkspaceIntroModal() {
         aria-labelledby={titleId}
       >
         <header className="intro-modal-head">
-          <p className="intro-modal-eyebrow">Workspace tour</p>
+          <p className="intro-modal-eyebrow">{t("onboard.ui.workspaceTour")}</p>
           <div className="intro-modal-head-meta">
             <p className="intro-modal-step-count">
-              Step {step + 1} <span className="intro-modal-step-of">of {total}</span>
+              {t("onboard.ui.stepOf")
+                .replace("{n}", String(step + 1))
+                .replace("{total}", String(total))}
             </p>
             <button
               type="button"
               className="intro-modal-close"
-              aria-label="Close"
+              aria-label={t("onboard.ui.closeTour")}
               onClick={() => close(false)}
             >
               <X className="h-4 w-4" />
@@ -384,24 +388,24 @@ export function WorkspaceIntroModal() {
 
         <div className="intro-modal-actions">
           <button type="button" className="intro-modal-skip" onClick={() => close(true)}>
-            Skip tour
+            {t("onboard.ui.skip")}
           </button>
           <div className="intro-modal-nav">
             {step > 0 && (
               <Button size="sm" variant="ghost" onClick={() => goStep(step - 1)}>
                 <ArrowLeft className="h-3.5 w-3.5" />
-                Back
+                {t("onboard.ui.back")}
               </Button>
             )}
             {!isLast ? (
               <Button size="sm" onClick={() => goStep(step + 1)}>
-                Next
+                {t("onboard.ui.next")}
                 <ArrowRight className="h-3.5 w-3.5" />
               </Button>
             ) : (
               <Button size="sm" onClick={() => close(true)}>
                 <Check className="h-3.5 w-3.5" />
-                Get started
+                {t("onboard.ui.getStarted")}
               </Button>
             )}
           </div>

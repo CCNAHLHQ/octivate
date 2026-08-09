@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { LoadingBlur } from "@/components/ui/loading-blur";
 import { toast } from "@/components/ui/toast";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import { useWorkspaceRefresh } from "@/lib/hooks/use-workspace-refresh";
 import { notifyWorkspaceRefresh } from "@/lib/workspace-events";
@@ -24,13 +25,8 @@ import type { Project } from "@/lib/types";
 
 type StatusFilter = "all" | "active" | "archived" | "needs-question";
 
-const PROJECT_SORTS: { value: ProjectSort; label: string }[] = [
-  { value: "updated", label: "Sort: Recently updated" },
-  { value: "name", label: "Sort: Name" },
-  { value: "country", label: "Sort: Country" },
-];
-
 export default function ProjectsPage() {
+  const t = useT();
   const [projects, setProjects] = useState<Project[]>([]);
   const [initialLoading, setInitialLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -61,23 +57,48 @@ export default function ProjectsPage() {
 
   useWorkspaceRefresh(() => load(true), ["projects"]);
 
+  const projectSorts = useMemo(
+    () => [
+      { value: "updated" as ProjectSort, label: t("ws.projects.sort.updated") },
+      { value: "name" as ProjectSort, label: t("ws.projects.sort.name") },
+      { value: "country" as ProjectSort, label: t("ws.projects.sort.country") },
+    ],
+    [t]
+  );
+
   const kpis = useMemo(() => {
     const active = projects.filter((p) => p.status === "active").length;
     const withQuestion = projects.filter((p) => p.question?.trim()).length;
     const countries = new Set(projects.map((p) => p.country)).size;
     return [
-      { label: "Projects", value: projects.length, icon: FolderKanban, tone: "violet" as const },
-      { label: "Active", value: active, hint: "In progress", icon: Sparkles, tone: "teal" as const },
       {
-        label: "With question",
+        label: t("ws.projects.kpi.projects"),
+        value: projects.length,
+        icon: FolderKanban,
+        tone: "violet" as const,
+      },
+      {
+        label: t("ws.projects.kpi.active"),
+        value: active,
+        hint: t("ws.projects.kpi.activeHint"),
+        icon: Sparkles,
+        tone: "teal" as const,
+      },
+      {
+        label: t("ws.projects.kpi.withQuestion"),
         value: withQuestion,
-        hint: "Ready for agents",
+        hint: t("ws.projects.kpi.withQuestionHint"),
         icon: Sparkles,
         tone: "default" as const,
       },
-      { label: "Countries", value: countries, icon: Globe, tone: "default" as const },
+      {
+        label: t("ws.projects.kpi.countries"),
+        value: countries,
+        icon: Globe,
+        tone: "default" as const,
+      },
     ];
-  }, [projects]);
+  }, [projects, t]);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -98,16 +119,24 @@ export default function ProjectsPage() {
 
   const filters = useMemo(
     () => [
-      { id: "all", label: "All", count: projects.length },
-      { id: "active", label: "Active", count: projects.filter((p) => p.status === "active").length },
+      { id: "all", label: t("ws.projects.filter.all"), count: projects.length },
+      {
+        id: "active",
+        label: t("ws.projects.filter.active"),
+        count: projects.filter((p) => p.status === "active").length,
+      },
       {
         id: "needs-question",
-        label: "Needs question",
+        label: t("ws.projects.filter.needsQuestion"),
         count: projects.filter((p) => !p.question?.trim()).length,
       },
-      { id: "archived", label: "Archived", count: projects.filter((p) => p.status === "archived").length },
+      {
+        id: "archived",
+        label: t("ws.projects.filter.archived"),
+        count: projects.filter((p) => p.status === "archived").length,
+      },
     ],
-    [projects]
+    [projects, t]
   );
 
   async function createProject(e: React.FormEvent) {
@@ -122,18 +151,18 @@ export default function ProjectsPage() {
       notifyWorkspaceRefresh(["projects", "overview"]);
       setName("");
       setCreateOpen(false);
-      toast.success("Project created");
+      toast.success(t("ws.projects.createdTitle"));
       void import("@/lib/alerts/notify").then(({ octivateAlert }) =>
         octivateAlert({
           kind: "success",
-          title: "Project created",
-          body: "Your new decision theatre is ready.",
+          title: t("ws.projects.createdTitle"),
+          body: t("ws.projects.createdBody"),
           href: "/dashboard/projects",
         })
       );
       await load(true);
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Could not create project");
+      toast.error(err instanceof Error ? err.message : t("ws.projects.createFailed"));
     } finally {
       setSaving(false);
     }
@@ -143,9 +172,9 @@ export default function ProjectsPage() {
     <AppShell>
       <div className="mx-auto max-w-[1140px] space-y-5 p-4 sm:p-6">
         <WorkspacePageHeader
-          eyebrow="Workspace"
-          title="Projects"
-          description="Scope a decision theatre by country and sector, then run the agent workflow to produce a brief."
+          eyebrow={t("ws.section.workspace")}
+          title={t("ws.projects.title")}
+          description={t("ws.projects.lede")}
         />
 
         <WorkspaceKpiStrip items={kpis} />
@@ -153,12 +182,12 @@ export default function ProjectsPage() {
         <WorkspaceToolbar
           search={search}
           onSearchChange={setSearch}
-          searchPlaceholder="Search projects, countries, sectors…"
+          searchPlaceholder={t("ws.projects.search")}
           filters={filters}
           activeFilter={filter}
           onFilterChange={(id) => setFilter(id as StatusFilter)}
           sort={sort}
-          sortOptions={PROJECT_SORTS}
+          sortOptions={projectSorts}
           onSortChange={(value) => setSort(value as ProjectSort)}
         />
 
@@ -171,7 +200,7 @@ export default function ProjectsPage() {
             aria-expanded={createOpen}
           >
             <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-faint">
-              New project
+              {t("ws.projects.new")}
             </span>
             {createOpen ? (
               <ChevronDown className="h-4 w-4 text-mist" aria-hidden />
@@ -183,7 +212,7 @@ export default function ProjectsPage() {
             <div className="ws-create-panel-body">
               <form onSubmit={createProject} className="grid gap-3 sm:grid-cols-4">
                 <Input
-                  placeholder="Project name"
+                  placeholder={t("ws.projects.name")}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
@@ -193,7 +222,7 @@ export default function ProjectsPage() {
                 <SectorSelect value={sector} onChange={setSector} required />
                 <div className="sm:col-span-4">
                   <Button type="submit" size="sm" disabled={saving || !name.trim() || !country || !sector}>
-                    {saving ? "Creating…" : "Create project"}
+                    {saving ? t("ws.projects.creating") : t("ws.projects.create")}
                   </Button>
                 </div>
               </form>
@@ -210,16 +239,14 @@ export default function ProjectsPage() {
         ) : filtered.length === 0 ? (
           <WorkspaceEmptyState
             icon={FolderKanban}
-            title={projects.length === 0 ? "No projects yet" : "No matches"}
+            title={projects.length === 0 ? t("ws.projects.empty") : t("ws.projects.noMatches")}
             description={
-              projects.length === 0
-                ? "Create a project to define country, sector, and the strategic question your team needs answered."
-                : "Try a different search or filter — or create a new project."
+              projects.length === 0 ? t("ws.projects.emptyHint") : t("ws.projects.noMatchesHint")
             }
             action={
               <Button size="sm" onClick={() => setCreateOpen(true)}>
                 <Sparkles className="h-3.5 w-3.5" />
-                Create project
+                {t("ws.projects.create")}
               </Button>
             }
           />

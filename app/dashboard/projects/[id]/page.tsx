@@ -34,6 +34,7 @@ import { StatusBadge } from "@/components/ui/status-badge";
 import { LoadingBlur } from "@/components/ui/loading-blur";
 import { ConfettiBurst } from "@/components/ui/confetti-burst";
 import { toast, TOAST_ERROR_DURATION_MS } from "@/components/ui/toast";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch, invalidateApiCache, getClientApiKey } from "@/lib/api-client";
 import { pipelineFailureHint, toastActionError } from "@/lib/ui/action-feedback";
 import { isStaleRunning } from "@/lib/agents/session-stale";
@@ -158,6 +159,7 @@ function sessionFailMessage(session: AgentSession | null): string | null {
 }
 
 export default function ProjectDetailPage() {
+  const t = useT();
   const params = useParams();
   const id = String(params.id);
 
@@ -244,12 +246,12 @@ export default function ProjectDetailPage() {
         if (completed.status === "completed" && completed.briefId) {
           setConfettiKey(completed.briefId);
           window.setTimeout(() => setConfettiKey(null), 1800);
-          toast.success("Decision brief ready");
+          toast.success(t("ws.project.briefReady"));
           void import("@/lib/alerts/notify").then(({ octivateAlert }) =>
             octivateAlert({
               kind: "success",
-              title: "Decision brief ready",
-              body: "Your workflow finished and a brief is available.",
+              title: t("ws.project.briefReady"),
+              body: t("ws.project.workflowDone"),
               href: `/dashboard/briefs/${completed.briefId}`,
             })
           );
@@ -259,7 +261,7 @@ export default function ProjectDetailPage() {
           const model = completed.modelUsed;
           const base =
             completed.error ||
-            "Workflow failed — adjust the question or sources, then rerun.";
+            t("ws.project.workflowFailed");
           const detail = [code && `code: ${code}`, model && `model: ${model}`]
             .filter(Boolean)
             .join(" · ");
@@ -281,7 +283,7 @@ export default function ProjectDetailPage() {
       try {
         await loadProject();
       } catch (err) {
-        if (alive) setError(err instanceof Error ? err.message : "Failed to load");
+        if (alive) setError(err instanceof Error ? err.message : t("ws.project.loadFailed"));
       } finally {
         if (alive) setLoading(false);
       }
@@ -374,7 +376,7 @@ export default function ProjectDetailPage() {
   async function startWorkflow(opts: { force?: boolean } = {}) {
     const force = opts.force === true || sessionStale;
     if (pipelineBusy && !force) {
-      toast.warning("A workflow is already running.");
+      toast.warning(t("ws.project.alreadyRunning"));
       return;
     }
     setSubmitting(true);
@@ -388,7 +390,7 @@ export default function ProjectDetailPage() {
       setProject((prev) => (prev ? { ...prev, question } : prev));
       notifyWorkspaceRefresh(["projects", "overview"]);
       if (opts.force) {
-        toast.info("Workflow started — agents are running.", { durationMs: 6000 });
+        toast.info(t("ws.project.workflowStarted"), { durationMs: 6000 });
       }
     } catch (err) {
       const c = toastActionError(err);
@@ -406,15 +408,15 @@ export default function ProjectDetailPage() {
   async function rerun() {
     if (isArchived) return;
     if (!question || question.trim().length < 10) {
-      toast.error("Add a strategic question (10+ characters) before rerunning.", {
+      toast.error(t("ws.project.needQuestion"), {
         durationMs: TOAST_ERROR_DURATION_MS,
       });
       return;
     }
     toast.info(
       sessionStale
-        ? "Previous run looked stuck — starting a fresh workflow…"
-        : "Rerunning the agent workflow…"
+        ? t("ws.project.stuckRerun")
+        : t("ws.project.rerunningToast")
     );
     await startWorkflow({ force: true });
   }
@@ -431,7 +433,7 @@ export default function ProjectDetailPage() {
       setProject(data.project);
       invalidateApiCache("/api/projects");
       notifyWorkspaceRefresh(["projects", "overview"]);
-      toast.success("Project updated");
+      toast.success(t("ws.project.updated"));
     } catch (err) {
       toastActionError(err);
     } finally {
@@ -450,7 +452,7 @@ export default function ProjectDetailPage() {
       setProject(data.project);
       invalidateApiCache("/api/projects");
       notifyWorkspaceRefresh(["projects", "overview"]);
-      toast.success("Project archived");
+      toast.success(t("ws.project.archived"));
     } catch (err) {
       toastActionError(err);
     } finally {
@@ -469,7 +471,7 @@ export default function ProjectDetailPage() {
       setProject(data.project);
       invalidateApiCache("/api/projects");
       notifyWorkspaceRefresh(["projects", "overview"]);
-      toast.success("Project restored");
+      toast.success(t("ws.project.restored"));
     } catch (err) {
       toastActionError(err);
     } finally {
@@ -490,7 +492,7 @@ export default function ProjectDetailPage() {
   if (!project) {
     return (
       <AppShell>
-        <div className="p-6 text-coral">{error || "Project not found"}</div>
+        <div className="p-6 text-coral">{error || t("ws.project.notFound")}</div>
       </AppShell>
     );
   }
@@ -505,7 +507,7 @@ export default function ProjectDetailPage() {
   const moduleBody: Record<string, ReactNode> = {
     question: (
       <div data-tour="project-question">
-        <h2 className="ws-section-title mb-3">Ask strategic question</h2>
+        <h2 className="ws-section-title mb-3">{t("ws.project.askStrategic")}</h2>
         <form onSubmit={ask} className="space-y-3">
           <QuestionVoiceField
             value={question}
@@ -523,16 +525,16 @@ export default function ProjectDetailPage() {
                 onChange={(e) => setAnalysisDepth(e.target.value as AnalysisDepth)}
                 disabled={isArchived || pipelineBusy}
               >
-                <option value="rapid">Rapid — verify before acting</option>
-                <option value="standard">Standard — balanced draft</option>
-                <option value="deep_dive">Deep dive — broader scenarios</option>
+                <option value="rapid">{t("ws.project.depth.rapid")}</option>
+                <option value="standard">{t("ws.project.depth.standard")}</option>
+                <option value="deep_dive">{t("ws.project.depth.deep")}</option>
               </Select>
               <p className="mt-1.5 text-xs text-mist">
                 {analysisDepth === "rapid"
-                  ? "Narrow findings for orientation; still needs human review."
+                  ? t("ws.project.depth.rapidHint")
                   : analysisDepth === "deep_dive"
-                    ? "Broader scenarios; never auto-final without review."
-                    : "Balanced PSN draft pending human review."}
+                    ? t("ws.project.depth.deepHint")
+                    : t("ws.project.depth.standardHint")}
               </p>
               <label className="mt-3 flex items-start gap-2 text-xs text-mist">
                 <input
@@ -549,10 +551,10 @@ export default function ProjectDetailPage() {
             </div>
           )}
           <Button type="submit" size="sm" disabled={pipelineBusy || isArchived} data-tour="run-workflow">
-            {pipelineBusy ? "Agents running…" : "Run agent workflow"}
+            {pipelineBusy ? t("ws.project.agentsRunning") : t("ws.project.run")}
           </Button>
           {isArchived && (
-            <p className="text-xs text-mist">Restore this project to run the agent workflow.</p>
+            <p className="text-xs text-mist">{t("ws.project.restoreForAgents")}</p>
           )}
           {error && <p className="text-xs text-coral">{error}</p>}
         </form>
@@ -560,7 +562,7 @@ export default function ProjectDetailPage() {
     ),
     documents: (
       <>
-        <h2 className="ws-section-title mb-3">Documents</h2>
+        <h2 className="ws-section-title mb-3">{t("ws.project.module.documents")}</h2>
         <DocumentLibrary
           projectId={id}
           projectName={project.name}
@@ -576,14 +578,14 @@ export default function ProjectDetailPage() {
           onUploaded={(p) => setProject(p)}
         />
         {isArchived && (
-          <p className="mt-2 text-xs text-mist">Restore this project to add documents.</p>
+          <p className="mt-2 text-xs text-mist">{t("ws.project.restoreForDocs")}</p>
         )}
       </>
     ),
     monitors:
       linkedMonitors.length > 0 ? (
         <>
-          <h2 className="ws-section-title mb-3">Linked monitors</h2>
+          <h2 className="ws-section-title mb-3">{t("ws.project.linkedMonitors")}</h2>
           <div className="ws-linked-list">
             {linkedMonitors.map((m) => (
               <Link key={m.id} href={`/dashboard/monitors/${m.id}`} className="ws-linked-item">
@@ -597,7 +599,7 @@ export default function ProjectDetailPage() {
           </div>
         </>
       ) : (
-        <p className="text-sm text-mist">No monitors linked yet.</p>
+        <p className="text-sm text-mist">{t("ws.project.noMonitors")}</p>
       ),
     pipeline: (
       <>
@@ -618,10 +620,10 @@ export default function ProjectDetailPage() {
               >
                 <RotateCw className="h-3.5 w-3.5" />
                 {submitting
-                  ? "Rerunning…"
+                  ? t("ws.project.rerunning")
                   : sessionStale
-                    ? "Force rerun (stuck)"
-                    : "Rerun workflow"}
+                    ? t("ws.project.forceRerun")
+                    : t("ws.project.rerun")}
               </Button>
             )}
             {sessionStale && (
@@ -651,11 +653,11 @@ export default function ProjectDetailPage() {
   };
 
   const titles: Record<string, string> = {
-    question: "Question",
-    documents: "Documents",
-    monitors: "Monitors",
-    pipeline: "Agent",
-    insights: "Pulse",
+    question: t("ws.project.module.question"),
+    documents: t("ws.project.module.documents"),
+    monitors: t("ws.project.module.monitors"),
+    pipeline: t("ws.project.module.agent"),
+    insights: t("ws.project.module.pulse"),
   };
 
   return (
@@ -676,8 +678,10 @@ export default function ProjectDetailPage() {
                 className="ws-icon-btn"
                 onClick={() => setSettingsOpen((o) => !o)}
                 aria-expanded={settingsOpen}
-                aria-label={settingsOpen ? "Close project settings" : "Edit project"}
-                title="Edit project"
+                aria-label={
+                  settingsOpen ? t("ws.project.closeSettings") : t("ws.project.edit")
+                }
+                title={t("ws.project.edit")}
               >
                 <Pencil className="h-3.5 w-3.5" aria-hidden />
               </button>
@@ -690,7 +694,7 @@ export default function ProjectDetailPage() {
                   {project.country} · {project.sector}
                 </span>
                 <StatusBadge tone={isInteractive ? "teal" : "amber"}>
-                  {isInteractive ? "Live" : "Live · awaiting key"}
+                  {isInteractive ? "Live" : t("ws.project.liveAwaiting")}
                 </StatusBadge>
                 {session?.status === "completed" && (
                   <StatusBadge tone="teal">Saved</StatusBadge>
@@ -707,7 +711,7 @@ export default function ProjectDetailPage() {
                       value={editName}
                       onChange={(e) => setEditName(e.target.value)}
                       required
-                      placeholder="Project name"
+                      placeholder={t("ws.project.name")}
                     />
                     <CountrySelect
                       value={editCountry}
@@ -727,7 +731,7 @@ export default function ProjectDetailPage() {
                         size="sm"
                         disabled={savingSettings || !editName.trim() || !editCountry || !editSector}
                       >
-                        {savingSettings ? "Saving…" : "Save changes"}
+                        {savingSettings ? t("ws.project.saving") : t("ws.project.save")}
                       </Button>
                       {isArchived ? (
                         <Button
@@ -764,7 +768,7 @@ export default function ProjectDetailPage() {
               className="ws-strip-chip"
               onClick={() => {
                 layout.resetLayout();
-                toast.info("Module layout reset");
+                toast.info(t("ws.project.module.reset"));
               }}
             >
               <LayoutGrid className="h-3 w-3" aria-hidden />
@@ -777,8 +781,8 @@ export default function ProjectDetailPage() {
 
           {linkedBriefId ? (
             <div className="ws-result-reveal" role="status">
-              <p className="ws-result-reveal-kicker">Decision brief ready</p>
-              <h2 className="ws-result-reveal-title">Your result document is available</h2>
+              <p className="ws-result-reveal-kicker">{t("ws.project.briefReady")}</p>
+              <h2 className="ws-result-reveal-title">{t("ws.project.briefReadyBody")}</h2>
               <p className="ws-result-reveal-copy">
                 Open the brief for this project only — executive summary, PSN lenses, citations, and
                 export.

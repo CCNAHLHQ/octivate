@@ -38,6 +38,7 @@ import { Skeleton } from "@/components/ui/progress";
 import { Tooltip } from "@/components/ui/tooltip";
 import { WorkspacePageHeader } from "@/components/workspace/workspace-page-header";
 import { toast } from "@/components/ui/toast";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch, getClientApiKey, invalidateApiCache } from "@/lib/api-client";
 import { moderateDelete } from "@/lib/moderation/client";
 import { useConfirmDialog } from "@/components/ui/confirm-dialog";
@@ -69,6 +70,7 @@ function mainTabFromHash(hash: string): OperatorTab {
 }
 
 export function OperatorConsole() {
+  const t = useT();
   const [limits, setLimits] = useState<OperatorLimits | null>(null);
   const [costs, setCosts] = useState<CostEntry[]>([]);
   const [summary, setSummary] = useState<CostSummary | null>(null);
@@ -161,7 +163,7 @@ export function OperatorConsole() {
   useEffect(() => {
     void load().catch(() => {
       setLoading(false);
-      toast.error("Failed to load operator console");
+      toast.error(t("op.pulse.loadFailed"));
     });
   }, [load]);
 
@@ -411,9 +413,9 @@ export function OperatorConsole() {
   async function refresh() {
     try {
       await load(true);
-      toast.success("Console refreshed");
+      toast.success(t("op.pulse.refreshed"));
     } catch {
-      toast.error("Refresh failed");
+      toast.error(t("op.pulse.refreshFailed"));
     }
   }
 
@@ -502,13 +504,13 @@ export function OperatorConsole() {
   }
 
   const keyConfigured = !!health?.openRouter?.keyConfigured;
-  const pipelineLabel = keyConfigured ? "Live" : "Live · awaiting key";
+  const pipelineLabel = keyConfigured ? "Live" : t("op.pulse.liveAwaiting");
 
   const kpis =
     summary && limits && usage
       ? [
           {
-            label: "Period cost",
+            label: t("op.pulse.periodCost"),
             value: `$${(summary.periodPlusLiveUsd ?? summary.periodCostUsd).toFixed(2)}`,
             hint:
               (summary.liveCostUsd || 0) > 0
@@ -519,10 +521,10 @@ export function OperatorConsole() {
             icon: Coins,
             tone: "amber" as const,
             href: "/dashboard/operator#operations",
-            tooltip: "Ledger-committed period spend + in-flight pipeline (live)",
+            tooltip: t("op.pulse.periodCostHint"),
           },
           {
-            label: "Token budget",
+            label: t("op.pulse.tokenBudget"),
             value: `${tokenPct}%`,
             hint:
               (summary.liveTokens || 0) > 0
@@ -531,25 +533,25 @@ export function OperatorConsole() {
             icon: Zap,
             tone: tokenPct > 85 ? ("amber" as const) : ("violet" as const),
             href: "/dashboard/operator#control",
-            tooltip: "Tokens from cost ledger (synced) · live adds in-flight sessions",
+            tooltip: t("op.pulse.tokenBudgetHint"),
           },
           {
-            label: "Sessions",
+            label: t("ws.overview.sessions"),
             value: sessions.length,
             hint: `${runningSessions} active`,
             icon: Bot,
             tone: "teal" as const,
             href: "/dashboard/operator#operations",
-            tooltip: "Open Operations · agent session queue",
+            tooltip: t("op.pulse.openOpsSessions"),
           },
           {
-            label: "Sources",
+            label: t("ws.sources.title"),
             value: sourceCount,
             hint: `${retrievalUrlCount} URLs`,
             icon: Database,
             tone: sourceCount > 0 ? ("teal" as const) : ("default" as const),
             href: "/dashboard/operator#catalog",
-            tooltip: "Open Catalog · source registry & ticker",
+            tooltip: t("op.pulse.openCatalog"),
           },
           {
             label: "Reviews",
@@ -558,7 +560,7 @@ export function OperatorConsole() {
             icon: AlertTriangle,
             tone: (pendingReviews?.count ?? 0) > 0 ? ("amber" as const) : ("default" as const),
             href: "/dashboard/operator#pulse",
-            tooltip: "Open Pulse · pending brief reviews",
+            tooltip: t("op.pulse.openPulseReviews"),
           },
           {
             label: "Stored",
@@ -567,7 +569,7 @@ export function OperatorConsole() {
             icon: ShieldCheck,
             tone: "violet" as const,
             href: "/dashboard/operator#moderation",
-            tooltip: "Open Operations · moderation inventory",
+            tooltip: t("op.pulse.openOpsModeration"),
           },
         ]
       : [];
@@ -648,15 +650,15 @@ export function OperatorConsole() {
         )}
       >
         <WorkspacePageHeader
-          eyebrow="Live console"
-          title="Operator command center"
-          description="Live pipeline metrics, operations, control plane, catalogue, and pricing — split-view modules, real API numbers."
+          eyebrow={t("op.pulse.liveConsole")}
+          title={t("op.title")}
+          description={t("op.subtitle")}
           actions={
             <div className="op-page-actions">
-              <Tooltip content="Reload all operator API panels">
+              <Tooltip content={t("op.pulse.reload")}>
                 <Button size="sm" variant="ghost" onClick={() => void refresh()} disabled={refreshing}>
                   <RefreshCw className={cn("h-3.5 w-3.5", refreshing && "animate-spin")} />
-                  Refresh
+                  {t("op.refresh")}
                 </Button>
               </Tooltip>
             </div>

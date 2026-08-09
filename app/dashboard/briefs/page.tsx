@@ -9,6 +9,7 @@ import { WorkspaceEmptyState } from "@/components/workspace/workspace-empty-stat
 import { WorkspaceKpiStrip } from "@/components/workspace/workspace-kpi-strip";
 import { WorkspacePageHeader } from "@/components/workspace/workspace-page-header";
 import { LoadingBlur } from "@/components/ui/loading-blur";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch } from "@/lib/api-client";
 import { useWorkspaceRefresh } from "@/lib/hooks/use-workspace-refresh";
 import type { Brief } from "@/lib/types";
@@ -18,6 +19,7 @@ import { cn } from "@/lib/utils";
 const PAGE_SIZE = 4;
 
 export default function BriefsPage() {
+  const t = useT();
   const [briefs, setBriefs] = useState<Brief[]>([]);
   const [initialLoading, setInitialLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -49,12 +51,32 @@ export default function BriefsPage() {
     ).length;
     const depths = new Set(briefs.map((b) => b.analysisDepth || "standard")).size;
     return [
-      { label: "Briefs", value: briefs.length, icon: FileText, tone: "violet" as const },
-      { label: "Pending review", value: pending, icon: Clock3, tone: "default" as const },
-      { label: "Approved", value: approved, icon: CheckCircle2, tone: "violet" as const },
-      { label: "Depth modes", value: depths, icon: Layers, tone: "default" as const },
+      {
+        label: t("ws.overview.briefs"),
+        value: briefs.length,
+        icon: FileText,
+        tone: "violet" as const,
+      },
+      {
+        label: t("ws.briefs.pendingReview"),
+        value: pending,
+        icon: Clock3,
+        tone: "default" as const,
+      },
+      {
+        label: t("ws.briefs.approved"),
+        value: approved,
+        icon: CheckCircle2,
+        tone: "violet" as const,
+      },
+      {
+        label: t("ws.briefs.depthModes"),
+        value: depths,
+        icon: Layers,
+        tone: "default" as const,
+      },
     ];
-  }, [briefs]);
+  }, [briefs, t]);
 
   const pageCount = Math.max(1, Math.ceil(briefs.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount - 1);
@@ -90,9 +112,9 @@ export default function BriefsPage() {
     <AppShell>
       <div className="mx-auto max-w-[1200px] space-y-5 p-4 sm:p-6">
         <WorkspacePageHeader
-          eyebrow="Intelligence"
-          title="Decision briefs"
-          description="Evidence-backed packs from your project runs — review judgement, PSN lenses, and exports."
+          eyebrow={t("ws.section.intelligence")}
+          title={t("ws.briefs.title")}
+          description={t("ws.briefs.lede")}
         />
 
         {!initialLoading ? <WorkspaceKpiStrip items={kpis} /> : null}
@@ -108,11 +130,11 @@ export default function BriefsPage() {
             {briefs.length === 0 ? (
               <WorkspaceEmptyState
                 icon={FileText}
-                title="No briefs yet"
-                description="Run a project pipeline to generate your first decision brief."
+                title={t("ws.briefs.empty")}
+                description={t("ws.briefs.emptyHint")}
                 action={
                   <Link href="/dashboard/projects" className="btn btn-primary btn-sm">
-                    Open projects
+                    {t("ws.briefs.openProjects")}
                   </Link>
                 }
               />
@@ -125,9 +147,16 @@ export default function BriefsPage() {
                 </div>
 
                 {showPager ? (
-                  <div className="ws-pager" role="navigation" aria-label="Briefs pagination">
+                  <div
+                    className="ws-pager"
+                    role="navigation"
+                    aria-label={t("ws.briefs.pagination")}
+                  >
                     <p className="ws-pager-meta">
-                      Showing {rangeStart}–{rangeEnd} of {briefs.length}
+                      {t("ws.briefs.showing")
+                        .replace("{from}", String(rangeStart))
+                        .replace("{to}", String(rangeEnd))
+                        .replace("{total}", String(briefs.length))}
                       {pageCount > 1 ? ` · Page ${safePage + 1} of ${pageCount}` : null}
                     </p>
                     <div className="ws-pager-controls">
@@ -136,7 +165,7 @@ export default function BriefsPage() {
                         className="ws-pager-btn"
                         disabled={safePage <= 0}
                         onClick={() => goToPage(safePage - 1)}
-                        aria-label="Previous briefs page"
+                        aria-label={t("ws.briefs.prevPage")}
                       >
                         Prev
                       </button>
@@ -163,7 +192,7 @@ export default function BriefsPage() {
                         className="ws-pager-btn"
                         disabled={safePage >= pageCount - 1}
                         onClick={() => goToPage(safePage + 1)}
-                        aria-label="Next briefs page"
+                        aria-label={t("ws.briefs.nextPage")}
                       >
                         Next
                       </button>

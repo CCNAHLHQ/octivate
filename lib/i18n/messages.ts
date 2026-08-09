@@ -1,53 +1,42 @@
 import { PAGE_LANGUAGE } from "@/lib/i18n/languages";
+import { NAV_MESSAGES } from "@/lib/i18n/registry/nav";
+import { MAILING_MESSAGES } from "@/lib/i18n/registry/mailing";
+import { LAND_MESSAGES } from "@/lib/i18n/registry/land";
+import { FOOTER_MESSAGES } from "@/lib/i18n/registry/footer";
+import { AUTH_MESSAGES } from "@/lib/i18n/registry/auth";
+import { WS_MESSAGES } from "@/lib/i18n/registry/ws";
+import { WS_UI_MESSAGES } from "@/lib/i18n/registry/ws-ui";
+import { OP_MESSAGES } from "@/lib/i18n/registry/op";
+import { OP_UI_MESSAGES } from "@/lib/i18n/registry/op-ui";
+import { SUPPORT_MESSAGES } from "@/lib/i18n/registry/support";
+import { ONBOARD_MESSAGES } from "@/lib/i18n/registry/onboard";
+import { COMMON_MESSAGES } from "@/lib/i18n/registry/common";
+import { PRICING_MESSAGES } from "@/lib/i18n/registry/pricing";
 
-/** Curated English source of truth for global UI chrome + mailing. */
+/** Curated English source of truth — static UI across marketing, auth, workspace, operator. */
 export const EN_MESSAGES = {
-  "nav.why": "Why Octivate",
-  "nav.how": "How it works",
-  "nav.pricing": "Pricing",
-  "nav.team": "Team",
-  "nav.about": "About",
-  "nav.signIn": "Sign in",
-  "nav.requestDemo": "Request a Demo",
-  "nav.returnWorkspace": "Return to workspace",
-  "nav.operatorDashboard": "Operator dashboard",
-  "nav.askQuestion": "Ask question",
-  "nav.askQuestionLong": "Ask a question",
-  "nav.skip": "Skip to content",
-  "nav.explore": "Explore",
-  "nav.openMenu": "Open menu",
-  "nav.closeMenu": "Close menu",
-  "nav.translate": "Translate",
-  "nav.primary": "Primary",
-  "nav.mobile": "Mobile",
-
-  "mailing.eyebrow": "Stay in the loop",
-  "mailing.title": "Join the Octivate mailing list",
-  "mailing.lede":
-    "Short notes on Caribbean decision intelligence, product releases, and design-partner openings — no spam, no sales sequences.",
-  "mailing.benefit.updates": "Early access to workspace updates",
-  "mailing.benefit.notes": "Occasional brief methodology notes from CENSII",
-  "mailing.benefit.unsubscribe": "Unsubscribe any time — one click, no questions",
-  "mailing.email": "Work email",
-  "mailing.name": "Name",
-  "mailing.nameOptional": "(optional)",
-  "mailing.emailPlaceholder": "you@organisation.org",
-  "mailing.namePlaceholder": "First name",
-  "mailing.consent":
-    "I agree to receive occasional Octivate emails. I can opt out freely at any time.",
-  "mailing.join": "Join the list",
-  "mailing.saving": "Saving…",
-  "mailing.optOut": "Opt out",
-  "mailing.fine": "Stored server-side for Octivate / CENSII only. We never sell your address.",
-  "mailing.consentRequired": "Please confirm you want product updates.",
-  "mailing.success": "You're on the list — occasional product notes only.",
-  "mailing.unsubscribed": "You're off the list. You can rejoin any time.",
-  "mailing.networkError": "Network error. Check your connection and try again.",
-  "mailing.genericError": "Something went wrong. Try again.",
+  ...NAV_MESSAGES,
+  ...MAILING_MESSAGES,
+  ...LAND_MESSAGES,
+  ...FOOTER_MESSAGES,
+  ...AUTH_MESSAGES,
+  ...WS_MESSAGES,
+  ...WS_UI_MESSAGES,
+  ...OP_MESSAGES,
+  ...OP_UI_MESSAGES,
+  ...SUPPORT_MESSAGES,
+  ...ONBOARD_MESSAGES,
+  ...COMMON_MESSAGES,
+  ...PRICING_MESSAGES,
 } as const;
 
 export type MessageKey = keyof typeof EN_MESSAGES;
 export type MessageDict = Record<string, string>;
+
+/** Flat English map for sync/catalog (includes only static keys). */
+export function getEnglishSource(): MessageDict {
+  return { ...EN_MESSAGES };
+}
 
 export function isSupportedLocale(locale: string): boolean {
   return locale === PAGE_LANGUAGE || Boolean(locale && locale.length >= 2);

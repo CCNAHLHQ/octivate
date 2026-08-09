@@ -2,16 +2,10 @@
 
 import { AlertCircle, Check, Loader2 } from "lucide-react";
 import { Tooltip } from "@/components/ui/tooltip";
+import { useT } from "@/components/i18n/locale-provider";
 import { cn } from "@/lib/utils";
 
 export type AutosaveStatus = "saved" | "saving" | "dirty" | "error";
-
-const COPY: Record<AutosaveStatus, { label: string; tooltip: string }> = {
-  saved: { label: "Saved", tooltip: "All changes saved" },
-  saving: { label: "Saving", tooltip: "Writing changes…" },
-  dirty: { label: "Saving soon", tooltip: "Edits pending — autosaves shortly" },
-  error: { label: "Save failed", tooltip: "Last save failed — click to retry" },
-};
 
 export const CONTROL_AUTOSAVE_MS = 650;
 
@@ -24,11 +18,18 @@ export function AutosaveStatusPill({
   onRetry?: () => void;
   className?: string;
 }) {
-  const copy = COPY[status];
+  const t = useT();
+  const copy: Record<AutosaveStatus, { label: string; tooltip: string }> = {
+    saved: { label: "Saved", tooltip: t("op.autosave.saved") },
+    saving: { label: "Saving", tooltip: t("op.autosave.writing") },
+    dirty: { label: t("op.autosave.soon"), tooltip: t("op.autosave.pending") },
+    error: { label: t("op.autosave.failed"), tooltip: t("op.autosave.retry") },
+  };
+  const current = copy[status];
   const clickable = status === "error" && !!onRetry;
 
   return (
-    <Tooltip content={copy.tooltip} side="bottom">
+    <Tooltip content={current.tooltip} side="bottom">
       <button
         type="button"
         className={cn(
@@ -46,19 +47,19 @@ export function AutosaveStatusPill({
       >
         {status === "saving" ? (
           <>
-            <Loader2 className="h-3 w-3 animate-spin" aria-hidden /> {copy.label}
+            <Loader2 className="h-3 w-3 animate-spin" aria-hidden /> {current.label}
           </>
         ) : status === "error" ? (
           <>
-            <AlertCircle className="h-3 w-3" aria-hidden /> {copy.label}
+            <AlertCircle className="h-3 w-3" aria-hidden /> {current.label}
           </>
         ) : status === "dirty" ? (
           <>
-            <span className="op-autosave-dot" aria-hidden /> {copy.label}
+            <span className="op-autosave-dot" aria-hidden /> {current.label}
           </>
         ) : (
           <>
-            <Check className="h-3 w-3" aria-hidden /> {copy.label}
+            <Check className="h-3 w-3" aria-hidden /> {current.label}
           </>
         )}
       </button>

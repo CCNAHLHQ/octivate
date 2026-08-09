@@ -2,6 +2,7 @@
 
 import { StatusBadge, severityTone } from "@/components/ui/status-badge";
 import { AgentRobot } from "@/components/dashboard/agent-robot";
+import { useT } from "@/components/i18n/locale-provider";
 import type { AgentSession } from "@/lib/types";
 
 export function AgentPipelineProgress({
@@ -13,6 +14,7 @@ export function AgentPipelineProgress({
   documentCount?: number;
   idleHint?: string;
 }) {
+  const t = useT();
   const isDoctrine = !session || session.pipelineMode === "doctrine";
 
   return (
@@ -20,10 +22,10 @@ export function AgentPipelineProgress({
       <div className="flex items-center justify-between gap-3">
         <div>
           <div className="font-mono text-[10px] uppercase tracking-widest text-faint">
-            {isDoctrine ? "Doctrine workflow v0.2" : "Agent workflow (demo)"}
+            {isDoctrine ? t("ws.pipeline.doctrine") : t("ws.pipeline.demo")}
           </div>
           <div className="mt-0.5 line-clamp-1 text-sm text-mist">
-            {session?.question || "Ready when you are"}
+            {session?.question || t("ws.pipeline.ready")}
           </div>
         </div>
         <div className="flex flex-col items-end gap-1">

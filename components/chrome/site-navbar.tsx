@@ -132,7 +132,7 @@ export function SiteNavbar() {
     ? "/dashboard/projects"
     : signedIn
       ? "/dashboard"
-      : "/#contact";
+      : "/signup";
   const primaryLabel = inApp
     ? t("nav.askQuestion")
     : signedIn

@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/lazy-charts";
 import { WorkspaceToolbar } from "@/components/workspace/workspace-toolbar";
 import { Skeleton } from "@/components/ui/progress";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch } from "@/lib/api-client";
 import { useWorkspaceRefresh } from "@/lib/hooks/use-workspace-refresh";
 import type { Brief, CountryPack, Monitor, Project, Trend, UsageSnapshot } from "@/lib/types";
@@ -50,6 +51,7 @@ function buildRiskItems(briefs: Brief[]) {
 }
 
 export function OverviewDashboard() {
+  const t = useT();
   const [initialLoading, setInitialLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [briefs, setBriefs] = useState<Brief[]>([]);
@@ -130,15 +132,19 @@ export function OverviewDashboard() {
         {
           key: "risk",
           node: (
-            <OverviewStatCard title="Risk mix" subtitle="Briefs by risk level">
-              <LazyDistBars items={riskItems} heightClass="h-[12.5rem]" valueLabel="briefs" />
+            <OverviewStatCard title={t("ws.overview.riskMix")} subtitle={t("ws.overview.riskMixSub")}>
+              <LazyDistBars
+                items={riskItems}
+                heightClass="h-[12.5rem]"
+                valueLabel={t("ws.overview.briefsLabel")}
+              />
             </OverviewStatCard>
           ),
         },
         {
           key: "trends",
           node: (
-            <OverviewStatCard title="Latest trends" bodyClassName="is-top">
+            <OverviewStatCard title={t("ws.overview.latestTrends")} bodyClassName="is-top">
               <ul className="overview-trends-list">
                 {trends.slice(0, 4).map((tr) => (
                   <li key={tr.id} className="overview-trends-item">
@@ -153,7 +159,7 @@ export function OverviewDashboard() {
         {
           key: "confidence",
           node: (
-            <OverviewStatCard title="Avg confidence">
+            <OverviewStatCard title={t("ws.overview.avgConfidence")}>
               <LazyConfidenceGauge value={avgConfidence} />
             </OverviewStatCard>
           ),
@@ -161,12 +167,21 @@ export function OverviewDashboard() {
         {
           key: "briefs",
           node: (
-            <OverviewStatCard title="Briefs" subtitle={`${briefs.length} total`}>
+            <OverviewStatCard
+              title={t("ws.overview.briefs")}
+              subtitle={`${briefs.length} ${t("ws.overview.total")}`}
+            >
               <LazyDonutChart
-                centerLabel="total"
+                centerLabel={t("ws.overview.total")}
                 segments={[
-                  { name: "Final", value: briefs.filter((b) => b.status === "final").length },
-                  { name: "Draft", value: briefs.filter((b) => b.status === "draft").length },
+                  {
+                    name: t("ws.overview.final"),
+                    value: briefs.filter((b) => b.status === "final").length,
+                  },
+                  {
+                    name: t("ws.overview.draft"),
+                    value: briefs.filter((b) => b.status === "draft").length,
+                  },
                 ]}
               />
             </OverviewStatCard>
@@ -176,11 +191,15 @@ export function OverviewDashboard() {
           key: "packs",
           node: (
             <OverviewStatCard
-              title="Country packs"
-              subtitle={`${packs.length} Caribbean markets`}
+              title={t("ws.overview.countryPacks")}
+              subtitle={t("ws.overview.caribbeanMarkets").replace("{n}", String(packs.length))}
               bodyClassName="is-top"
             >
-              <LazyDistBars items={packChartItems} heightClass="h-[11rem]" valueLabel="sources" />
+              <LazyDistBars
+                items={packChartItems}
+                heightClass="h-[11rem]"
+                valueLabel={t("ws.overview.sourcesLabel")}
+              />
               <div className="overview-pack-foot">
                 {packs.slice(0, 4).map((p) => (
                   <span key={p.id} className="overview-pack-chip">
@@ -194,23 +213,33 @@ export function OverviewDashboard() {
         {
           key: "usage",
           node: usage ? (
-            <OverviewStatCard title="AI usage" subtitle={usage.period} bodyClassName="is-top">
+            <OverviewStatCard
+              title={t("ws.overview.aiUsage")}
+              subtitle={usage.period}
+              bodyClassName="is-top"
+            >
               <div className="overview-usage-split">
                 <LazyDonutChart
-                  centerLabel="runs"
+                  centerLabel={t("ws.overview.runsLabel")}
                   segments={[
-                    { name: "Briefs", value: usage.briefsGenerated },
-                    { name: "Sessions", value: usage.sessionsRun },
+                    { name: t("ws.overview.briefs"), value: usage.briefsGenerated },
+                    { name: t("ws.overview.sessions"), value: usage.sessionsRun },
                   ]}
                 />
                 <div className="overview-usage-meter">
                   <ProgressBar value={usagePct} />
                   <p className="overview-usage-tokens">
                     {usage.tokensUsed.toLocaleString()}
-                    <span> / {usage.tokensLimit.toLocaleString()} tokens</span>
+                    <span>
+                      {" "}
+                      / {usage.tokensLimit.toLocaleString()} {t("ws.overview.tokens")}
+                    </span>
                   </p>
                   <p className="mt-1 font-mono text-[10px] text-teal">
-                    Est. cost ${usage.estimatedCostUsd.toFixed(2)}
+                    {t("ws.overview.estCost").replace(
+                      "{amount}",
+                      usage.estimatedCostUsd.toFixed(2)
+                    )}
                   </p>
                 </div>
               </div>
@@ -225,16 +254,14 @@ export function OverviewDashboard() {
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <h1 className="font-display text-2xl font-bold tracking-tight text-foam sm:text-3xl">
-              Overview
+              {t("ws.overview.title")}
             </h1>
-            <p className="mt-1 max-w-xl text-sm text-mist">
-              Caribbean intelligence workspace — trends, projects, briefs, packs, and usage.
-            </p>
+            <p className="mt-1 max-w-xl text-sm text-mist">{t("ws.overview.lede")}</p>
           </div>
           <Link href="/dashboard/projects">
             <Button size="sm">
               <Sparkles className="h-3.5 w-3.5" />
-              New analysis
+              {t("ws.overview.newAnalysis")}
             </Button>
           </Link>
         </div>
@@ -245,8 +272,12 @@ export function OverviewDashboard() {
             onSearchChange={() => {}}
             showSearch={false}
             filters={[
-              { id: "insights", label: "Insights" },
-              { id: "pipeline", label: "Pipeline", count: pipelineCount || undefined },
+              { id: "insights", label: t("ws.overview.tab.insights") },
+              {
+                id: "pipeline",
+                label: t("ws.overview.tab.pipeline"),
+                count: pipelineCount || undefined,
+              },
             ]}
             activeFilter={tab}
             onFilterChange={(id) => selectTab(id as OverviewTab)}
@@ -316,17 +347,16 @@ export function OverviewDashboard() {
                         <div className="overview-pipeline-banner-label">
                           <Sparkles className="h-4 w-4" />
                           <span className="font-mono text-[10px] uppercase tracking-widest">
-                            Agentic pipeline
+                            {t("ws.overview.agenticPipeline")}
                           </span>
                         </div>
                         <p className="mt-1 max-w-lg text-sm text-mist">
-                          Eight specialized agents structure intake → evidence → PSN analysis →
-                          decision brief.
+                          {t("ws.overview.agenticLede")}
                         </p>
                       </div>
                       <Link href="/dashboard/projects">
                         <Button size="sm">
-                          Start workflow
+                          {t("ws.overview.startWorkflow")}
                           <ArrowRight className="h-3.5 w-3.5" />
                         </Button>
                       </Link>
@@ -343,23 +373,23 @@ export function OverviewDashboard() {
                     <Card className="overview-briefs-card p-4 lg:col-span-2">
                       <div className="mb-3 flex items-center justify-between gap-2">
                         <h2 className="font-mono text-[10px] uppercase tracking-widest text-faint">
-                          Latest briefs
+                          {t("ws.overview.latestBriefs")}
                         </h2>
                         <Link
                           href="/dashboard/briefs"
                           className="shrink-0 text-xs text-violet hover:underline"
                         >
-                          View all
+                          {t("ws.overview.viewAll")}
                         </Link>
                       </div>
                       <div className="overview-briefs-table-wrap">
                         <table className="overview-briefs-table w-full table-fixed text-left text-sm">
                           <thead>
                             <tr>
-                              <th>Title</th>
-                              <th>Country</th>
-                              <th>Risk</th>
-                              <th>Confidence</th>
+                              <th>{t("ws.overview.col.title")}</th>
+                              <th>{t("ws.overview.col.country")}</th>
+                              <th>{t("ws.overview.col.risk")}</th>
+                              <th>{t("ws.overview.col.confidence")}</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -403,7 +433,7 @@ export function OverviewDashboard() {
                     <div className="space-y-4">
                       <Card className="overview-side-card p-4">
                         <h2 className="mb-3 font-mono text-[10px] uppercase tracking-widest text-faint">
-                          Active projects
+                          {t("ws.overview.activeProjects")}
                         </h2>
                         <ul className="space-y-2">
                           {projects.slice(0, 6).map((p) => (
@@ -423,7 +453,7 @@ export function OverviewDashboard() {
                       </Card>
                       <Card className="overview-side-card p-4">
                         <h2 className="mb-3 font-mono text-[10px] uppercase tracking-widest text-faint">
-                          Monitoring
+                          {t("ws.overview.monitoring")}
                         </h2>
                         <ul className="space-y-2 text-sm">
                           {monitors.slice(0, 5).map((m) => (

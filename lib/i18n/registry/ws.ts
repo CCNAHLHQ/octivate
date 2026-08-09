@@ -1,0 +1,20 @@
+/** Workspace / dashboard chrome. */
+export const WS_MESSAGES = {
+  "ws.section.workspace": "Workspace",
+  "ws.section.intelligence": "Intelligence",
+  "ws.section.analysis": "Analysis",
+  "ws.nav.overview": "Overview",
+  "ws.nav.projects": "Projects",
+  "ws.nav.monitors": "Monitors",
+  "ws.nav.sources": "Sources",
+  "ws.nav.briefs": "Briefs",
+  "ws.nav.stakeholders": "Stakeholders",
+  "ws.mode.workspace": "Workspace mode",
+  "ws.mode.operator": "Operator mode",
+  "ws.askStrategic": "Ask strategic question",
+  "ws.operatorDashboard": "Operator dashboard",
+  "ws.collapseSidebar": "Collapse sidebar",
+  "ws.expandSidebar": "Expand sidebar",
+  "ws.openMenu": "Open menu",
+  "ws.closeMenu": "Close menu",
+} as const;

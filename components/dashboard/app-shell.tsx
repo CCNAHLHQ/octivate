@@ -33,9 +33,11 @@ import { OperatorIntroModal } from "@/components/onboarding/operator-intro-modal
 import { SidebarAccountCard } from "@/components/dashboard/sidebar-account";
 import { SupportWidget } from "@/components/support/support-widget";
 import { SessionGuard } from "@/components/auth/session-guard";
+import { useT } from "@/components/i18n/locale-provider";
 import { WORKSPACE_TOUR_SIDEBAR_EVENT } from "@/lib/onboarding/content";
 import { setLocationHash } from "@/lib/navigation/hash";
 import type { PublicUser } from "@/lib/auth/types";
+import type { MessageKey } from "@/lib/i18n/messages";
 
 /** Account-based support chat for signed-in members (operators use the inbox). */
 function MemberSupportChat() {
@@ -67,38 +69,60 @@ const SIDEBAR_STORAGE_KEY = "octivate-sidebar-collapsed";
 
 const userNav = [
   {
-    section: "Workspace",
+    sectionKey: "ws.section.workspace" as MessageKey,
     items: [
-      { label: "Overview", href: "/dashboard", icon: LayoutDashboard },
-      { label: "Projects", href: "/dashboard/projects", icon: FolderKanban },
-      { label: "Monitors", href: "/dashboard/monitors", icon: Activity },
-      { label: "Sources", href: "/dashboard/sources", icon: Rss },
+      { labelKey: "ws.nav.overview" as MessageKey, href: "/dashboard", icon: LayoutDashboard },
+      { labelKey: "ws.nav.projects" as MessageKey, href: "/dashboard/projects", icon: FolderKanban },
+      { labelKey: "ws.nav.monitors" as MessageKey, href: "/dashboard/monitors", icon: Activity },
+      { labelKey: "ws.nav.sources" as MessageKey, href: "/dashboard/sources", icon: Rss },
     ],
   },
   {
-    section: "Intelligence",
-    items: [{ label: "Briefs", href: "/dashboard/briefs", icon: FileText }],
+    sectionKey: "ws.section.intelligence" as MessageKey,
+    items: [{ labelKey: "ws.nav.briefs" as MessageKey, href: "/dashboard/briefs", icon: FileText }],
   },
   {
-    section: "Analysis",
-    items: [{ label: "Stakeholders", href: "/dashboard/stakeholders", icon: Users }],
+    sectionKey: "ws.section.analysis" as MessageKey,
+    items: [
+      { labelKey: "ws.nav.stakeholders" as MessageKey, href: "/dashboard/stakeholders", icon: Users },
+    ],
   },
 ];
 
 const operatorNav = [
   {
-    section: "Production",
+    sectionKey: "op.section.production" as MessageKey,
     items: [
-      { label: "Pulse", href: "/dashboard/operator#pulse", icon: Shield },
-      { label: "Operations", href: "/dashboard/operator#operations", icon: Trash2 },
-      { label: "Control", href: "/dashboard/operator#control", icon: SlidersHorizontal },
-      { label: "Catalog", href: "/dashboard/operator#catalog", icon: Database },
-      { label: "Customer Support", href: "/dashboard/operator#support", icon: LifeBuoy },
-      { label: "Mail", href: "/dashboard/operator#mail", icon: Mail },
-      { label: "Users", href: "/dashboard/operator#users", icon: Users },
-      { label: "Pricing", href: "/dashboard/operator#pricing", icon: DollarSign },
-      { label: "Exports", href: "/dashboard/operator#exports", icon: FileOutput },
-      { label: "Debug", href: "/dashboard/operator#debug", icon: Bug },
+      { labelKey: "op.tab.pulse" as MessageKey, href: "/dashboard/operator#pulse", icon: Shield },
+      {
+        labelKey: "op.tab.operations" as MessageKey,
+        href: "/dashboard/operator#operations",
+        icon: Trash2,
+      },
+      {
+        labelKey: "op.tab.control" as MessageKey,
+        href: "/dashboard/operator#control",
+        icon: SlidersHorizontal,
+      },
+      { labelKey: "op.tab.catalog" as MessageKey, href: "/dashboard/operator#catalog", icon: Database },
+      {
+        labelKey: "op.tab.support" as MessageKey,
+        href: "/dashboard/operator#support",
+        icon: LifeBuoy,
+      },
+      { labelKey: "op.tab.mail" as MessageKey, href: "/dashboard/operator#mail", icon: Mail },
+      { labelKey: "op.tab.users" as MessageKey, href: "/dashboard/operator#users", icon: Users },
+      {
+        labelKey: "op.tab.pricing" as MessageKey,
+        href: "/dashboard/operator#pricing",
+        icon: DollarSign,
+      },
+      {
+        labelKey: "op.tab.exports" as MessageKey,
+        href: "/dashboard/operator#exports",
+        icon: FileOutput,
+      },
+      { labelKey: "op.tab.debug" as MessageKey, href: "/dashboard/operator#debug", icon: Bug },
     ],
   },
 ];
@@ -138,6 +162,7 @@ function pathActive(pathname: string, href: string, hash: string) {
 }
 
 export function AppShell({ children, variant = "user" }: AppShellProps) {
+  const t = useT();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [desktopCollapsed, setDesktopCollapsed] = useState(false);
   const [hash, setHash] = useState("");
@@ -266,7 +291,7 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
         type="button"
         className="dash-sidebar-toggle"
         onClick={toggleDesktopSidebar}
-        aria-label={desktopExpanded ? "Collapse sidebar" : "Expand sidebar"}
+        aria-label={desktopExpanded ? t("ws.collapseSidebar") : t("ws.expandSidebar")}
         aria-expanded={desktopExpanded}
       >
         {desktopExpanded ? (
@@ -305,7 +330,7 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
               >
                 <span className="btn btn-primary btn-sm">
                   <Sparkles className="h-3.5 w-3.5" aria-hidden />
-                  Ask strategic question
+                  {t("ws.askStrategic")}
                 </span>
               </Link>
               {isOperatorUser ? (
@@ -315,7 +340,7 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
                 >
                   <span className="btn btn-ghost btn-sm dash-op-dash-btn">
                     <Shield className="h-3.5 w-3.5" aria-hidden />
-                    Operator dashboard
+                    {t("ws.operatorDashboard")}
                   </span>
                 </Link>
               ) : null}
@@ -325,7 +350,7 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
               <Link href="/dashboard" onClick={() => setSidebarOpen(false)}>
                 <span className="btn btn-primary btn-sm">
                   <LayoutDashboard className="h-3.5 w-3.5" aria-hidden />
-                  Workspace mode
+                  {t("ws.mode.workspace")}
                 </span>
               </Link>
             </div>
@@ -333,8 +358,8 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
 
           <nav className="dash-aside-nav" aria-label="Primary">
             {nav.map((section) => (
-              <div key={section.section} className="dash-aside-section">
-                <div className="dash-aside-section-label">{section.section}</div>
+              <div key={section.sectionKey} className="dash-aside-section">
+                <div className="dash-aside-section-label">{t(section.sectionKey)}</div>
                 <div className="dash-aside-section-items">
                   {section.items.map((item) => {
                     const active =
@@ -367,7 +392,7 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
                         )}
                       >
                         <Icon aria-hidden />
-                        <span>{item.label}</span>
+                        <span>{t(item.labelKey)}</span>
                       </Link>
                     );
                   })}
@@ -382,13 +407,13 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
               <WorkspaceTutorialButton
                 variant="sidebar"
                 mode="operator"
-                label="Replay operator tour"
+                label={t("op.tour.replay")}
               />
             ) : (
               <WorkspaceTutorialButton
                 variant="sidebar"
                 mode="workspace"
-                label="Replay workspace tour"
+                label={t("onboard.ui.replayWorkspace")}
               />
             )}
           </div>
@@ -401,7 +426,7 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
             type="button"
             className="rounded-[10px] border border-[rgba(154,171,255,0.14)] p-2 text-mist"
             onClick={() => setSidebarOpen(true)}
-            aria-label="Open sidebar"
+            aria-label={t("ws.openMenu")}
             aria-expanded={sidebarOpen}
           >
             <Menu className="h-4 w-4" />
@@ -410,7 +435,12 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
             Workspace menu
           </span>
           {isOperatorRoute || variant === "operator" ? (
-            <WorkspaceTutorialButton variant="inline" mode="operator" className="ml-auto" label="Tour" />
+            <WorkspaceTutorialButton
+              variant="inline"
+              mode="operator"
+              className="ml-auto"
+              label={t("op.tour.label")}
+            />
           ) : (
             <WorkspaceTutorialButton variant="inline" mode="workspace" className="ml-auto" />
           )}

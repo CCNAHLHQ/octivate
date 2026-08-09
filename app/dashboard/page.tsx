@@ -8,7 +8,7 @@ const OverviewDashboard = dynamic(
     import("@/components/dashboard/overview").then((m) => m.OverviewDashboard),
   {
     ssr: false,
-    loading: () => <RouteLoading label="Preparing overview…" />,
+    loading: () => <RouteLoading labelKey="ws.loading.overview" />,
   }
 );
 

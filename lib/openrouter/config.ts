@@ -69,13 +69,16 @@ export function resolveMaxTokens(model: string, requested?: number): number {
   return Math.max(base, floor);
 }
 
-/** OpenRouter unified reasoning controls for chat completions. */
+/**
+ * OpenRouter unified reasoning controls for chat completions.
+ * Providers reject requests that set both `effort` and `max_tokens` —
+ * send effort only (portable across reasoning models).
+ */
 export function reasoningRequestParams(model: string): Record<string, unknown> | null {
   if (!isReasoningModel(model)) return null;
   const cfg = getCachedModelConfig();
   return {
     reasoning: {
-      max_tokens: cfg.reasoningBudget || 2048,
       effort: cfg.reasoningEffort || "low",
     },
   };

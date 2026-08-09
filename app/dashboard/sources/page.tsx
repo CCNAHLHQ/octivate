@@ -10,12 +10,14 @@ import { SourceCard } from "@/components/sources/source-card";
 import { SourceEditor } from "@/components/sources/source-editor";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/progress";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch } from "@/lib/api-client";
 import type { Source } from "@/lib/types";
 
 const PAGE_SIZE = 12;
 
 export default function SourcesPage() {
+  const t = useT();
   const [sources, setSources] = useState<Source[]>([]);
   const [loading, setLoading] = useState(true);
   const [q, setQ] = useState("");
@@ -72,11 +74,9 @@ export default function SourcesPage() {
       <div className="mx-auto max-w-[1200px] space-y-3 p-4 sm:p-5">
         <div className="ws-page-header">
           <div>
-            <p className="ws-eyebrow">Intelligence</p>
-            <h1 className="ws-page-title">Sources</h1>
-            <p className="ws-page-desc">
-              Curate registry passports — edits autosave; delete any source from its card.
-            </p>
+            <p className="ws-eyebrow">{t("ws.section.intelligence")}</p>
+            <h1 className="ws-page-title">{t("ws.sources.title")}</h1>
+            <p className="ws-page-desc">{t("ws.sources.lede")}</p>
           </div>
           <DeleteAllSourcesButton count={sources.length} onCleared={() => void load()} />
         </div>
@@ -100,7 +100,7 @@ export default function SourcesPage() {
                   id="ws-src-q"
                   value={q}
                   onChange={(e) => setQ(e.target.value)}
-                  placeholder="Name, country, tags…"
+                  placeholder={t("ws.sources.search")}
                 />
               </div>
               <div className="op-src-pulse">
@@ -122,8 +122,8 @@ export default function SourcesPage() {
             {filtered.length === 0 ? (
               <OperatorEmptyState
                 icon={Database}
-                title="No matching sources"
-                description="Try a different search or drop a CSV to import the registry."
+                title={t("ws.sources.empty")}
+                description={t("ws.sources.emptyHint")}
               />
             ) : (
               <>
@@ -140,9 +140,16 @@ export default function SourcesPage() {
                     />
                   ))}
                 </div>
-                <div className="ws-pager" role="navigation" aria-label="Sources pagination">
+                <div
+                  className="ws-pager"
+                  role="navigation"
+                  aria-label={t("ws.sources.pagination")}
+                >
                   <p className="ws-pager-meta">
-                    Showing {rangeStart}–{rangeEnd} of {filtered.length}
+                    {t("ws.briefs.showing")
+                      .replace("{from}", String(rangeStart))
+                      .replace("{to}", String(rangeEnd))
+                      .replace("{total}", String(filtered.length))}
                   </p>
                   <div className="ws-pager-controls">
                     <button

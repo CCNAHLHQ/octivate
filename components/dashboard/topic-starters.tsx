@@ -6,6 +6,7 @@ import { Flame, Play, RefreshCw, Sparkles, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { toast } from "@/components/ui/toast";
+import { useT } from "@/components/i18n/locale-provider";
 import { toastActionError } from "@/lib/ui/action-feedback";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import { notifyWorkspaceRefresh } from "@/lib/workspace-events";
@@ -43,6 +44,7 @@ export function TopicStarters({
   /** Expose scrape for command strip */
   onRefreshReady?: (refresh: () => void) => void;
 }) {
+  const tr = useT();
   const router = useRouter();
   const [data, setData] = useState<TopicsResponse | null>(null);
   const [busyId, setBusyId] = useState<string | null>(null);
@@ -85,41 +87,41 @@ export function TopicStarters({
     onRefreshReady?.(() => void scrape());
   }, [onRefreshReady, scrape]);
 
-  async function runTemplate(t: TopicTemplate, mode: "apply" | "launch") {
+  async function runTemplate(tpl: TopicTemplate, mode: "apply" | "launch") {
     if (mode === "apply" && onApplyQuestion && projectId) {
-      onApplyQuestion(t.question, t.suggestedDepth);
-      toast.success("Question loaded — click Run agent workflow");
+      onApplyQuestion(tpl.question, tpl.suggestedDepth);
+      toast.success(tr("ws.topics.questionLoaded"));
       return;
     }
 
     if (pipelineBusy) {
-      toast.warning("A workflow is already running.");
+      toast.warning(tr("ws.project.alreadyRunning"));
       return;
     }
 
-    setBusyId(t.id);
+    setBusyId(tpl.id);
     try {
       const res = await apiFetch<{
         project: Project;
         session: AgentSession | null;
         started: boolean;
         error?: string;
-      }>(`/api/topics/${t.id}/start`, {
+      }>(`/api/topics/${tpl.id}/start`, {
         method: "POST",
-        json: { run: true, analysisDepth: t.suggestedDepth },
+        json: { run: true, analysisDepth: tpl.suggestedDepth },
       });
       invalidateApiCache("/api/projects");
       notifyWorkspaceRefresh(["projects", "overview"]);
       if (res.error) toast.error(res.error);
       else {
-        toast.success(res.started ? "Pipeline started" : "Project ready");
+        toast.success(res.started ? tr("ws.topics.pipelineStarted") : tr("ws.topics.projectReady"));
         void import("@/lib/alerts/notify").then(({ octivateAlert }) =>
           octivateAlert({
             kind: "info",
-            title: res.started ? "Pipeline started" : "Project ready",
+            title: res.started ? tr("ws.topics.pipelineStarted") : tr("ws.topics.projectReady"),
             body: res.started
-              ? "The agent workflow is running."
-              : "Your project is ready to continue.",
+              ? tr("ws.topics.workflowRunning")
+              : tr("ws.topics.readyContinue"),
             href: `/dashboard/projects/${res.project.id}`,
           })
         );
@@ -140,7 +142,7 @@ export function TopicStarters({
   if (!data) {
     return (
       <div className={variant === "strip" ? "ws-topic-strip" : "ws-topic-board"}>
-        <p className="text-sm text-mist">Loading topic templates…</p>
+        <p className="text-sm text-mist">{tr("ws.topics.loading")}</p>
       </div>
     );
   }
@@ -156,29 +158,29 @@ export function TopicStarters({
             <Sparkles className="h-3 w-3 text-violet" aria-hidden />
             Starters
           </span>
-          <span className="ws-topic-strip-hint">Tap to load · play to run</span>
+          <span className="ws-topic-strip-hint">{tr("ws.topics.tapPlay")}</span>
         </div>
 
         <div className="ws-topic-chip-row" role="list">
-          {starters.map((t) => (
-            <div key={t.id} className="ws-topic-chip is-compact" role="listitem">
+          {starters.map((tpl) => (
+            <div key={tpl.id} className="ws-topic-chip is-compact" role="listitem">
               <button
                 type="button"
                 className="ws-topic-chip-main"
                 disabled={!!busyId || pipelineBusy || !onApplyQuestion}
-                title={t.summary || t.name}
-                onClick={() => void runTemplate(t, "apply")}
+                title={tpl.summary || tpl.name}
+                onClick={() => void runTemplate(tpl, "apply")}
               >
-                <span className={cn("ws-topic-heat", `is-${t.heat}`)} aria-hidden />
-                <span className="ws-topic-chip-name">{t.name}</span>
+                <span className={cn("ws-topic-heat", `is-${tpl.heat}`)} aria-hidden />
+                <span className="ws-topic-chip-name">{tpl.name}</span>
               </button>
               <button
                 type="button"
                 className="ws-topic-chip-run"
-                disabled={busyId === t.id || pipelineBusy}
-                title={`Run “${t.name}”`}
-                aria-label={`Run ${t.name}`}
-                onClick={() => void runTemplate(t, "launch")}
+                disabled={busyId === tpl.id || pipelineBusy}
+                title={`Run “${tpl.name}”`}
+                aria-label={`Run ${tpl.name}`}
+                onClick={() => void runTemplate(tpl, "launch")}
               >
                 <Play className="h-3 w-3" aria-hidden />
               </button>
@@ -195,7 +197,7 @@ export function TopicStarters({
         <div>
           <h2 className="ws-section-title">
             <Sparkles className="h-4 w-4 text-violet" aria-hidden />
-            Topic starters
+            {tr("ws.topics.title")}
           </h2>
           <p className="ws-section-sub">
             Curated Caribbean decision topics — one click loads a real question and can run the
@@ -204,16 +206,16 @@ export function TopicStarters({
         </div>
         <Button size="sm" variant="ghost" disabled={scraping} onClick={() => void scrape()}>
           <RefreshCw className={cn("h-3.5 w-3.5", scraping && "animate-spin")} />
-          {scraping ? "Scraping…" : "Refresh signals"}
+          {scraping ? tr("ws.topics.scraping") : tr("ws.topics.refresh")}
         </Button>
       </div>
 
       {data.hotTopics.length > 0 && (
-        <div className="ws-hot-strip" aria-label="Hottest Caribbean signals">
-          {data.hotTopics.slice(0, 5).map((t) => (
-            <span key={t.id} className="ws-hot-chip" title={t.summary}>
+        <div className="ws-hot-strip" aria-label={tr("ws.topics.title")}>
+          {data.hotTopics.slice(0, 5).map((tpl) => (
+            <span key={tpl.id} className="ws-hot-chip" title={tpl.summary}>
               <Flame className="h-3 w-3" aria-hidden />
-              <span className="truncate">{t.title}</span>
+              <span className="truncate">{tpl.title}</span>
             </span>
           ))}
         </div>
@@ -255,7 +257,7 @@ export function TopicStarters({
                 onClick={() => void runTemplate(t, "launch")}
               >
                 <Play className="h-3.5 w-3.5" />
-                {busyId === t.id ? "Starting…" : "Run now"}
+                {busyId === t.id ? tr("ws.topics.starting") : tr("ws.topics.runNow")}
               </Button>
             </div>
           </article>

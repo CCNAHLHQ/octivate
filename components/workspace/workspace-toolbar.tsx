@@ -3,6 +3,7 @@
 import { Search } from "lucide-react";
 import { Select } from "@/components/ui/select";
 import { Tooltip } from "@/components/ui/tooltip";
+import { useT } from "@/components/i18n/locale-provider";
 import { cn } from "@/lib/utils";
 
 export type WorkspaceFilter = {
@@ -23,7 +24,7 @@ export type WorkspaceSortOption = {
 export function WorkspaceToolbar({
   search,
   onSearchChange,
-  searchPlaceholder = "Search…",
+  searchPlaceholder,
   filters,
   activeFilter,
   onFilterChange,
@@ -45,6 +46,11 @@ export function WorkspaceToolbar({
   showSearch?: boolean;
   className?: string;
 }) {
+  const t = useT();
+  const placeholder = searchPlaceholder ?? t("ws.toolbar.search");
+  const sortBy = t("ws.toolbar.sortBy");
+  const filterLabel = t("ws.toolbar.filter");
+
   return (
     <div className={cn("ws-toolbar", className)}>
       {showSearch && (
@@ -54,15 +60,15 @@ export function WorkspaceToolbar({
             type="search"
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder={searchPlaceholder}
-            aria-label={searchPlaceholder}
+            placeholder={placeholder}
+            aria-label={placeholder}
           />
         </label>
       )}
       {sortOptions && sortOptions.length > 0 && onSortChange && (
         <label className="ws-sort">
-          <span className="sr-only">Sort by</span>
-          <Select compact value={sort} onChange={(e) => onSortChange(e.target.value)} aria-label="Sort by">
+          <span className="sr-only">{sortBy}</span>
+          <Select compact value={sort} onChange={(e) => onSortChange(e.target.value)} aria-label={sortBy}>
             {sortOptions.map((opt) => (
               <option key={opt.value} value={opt.value}>
                 {opt.label}
@@ -72,7 +78,7 @@ export function WorkspaceToolbar({
         </label>
       )}
       {filters && filters.length > 0 && onFilterChange && (
-        <div className="ws-filter-row" role="tablist" aria-label="Filter">
+        <div className="ws-filter-row" role="tablist" aria-label={filterLabel}>
           {filters.map((f) => {
             const chip = (
               <button

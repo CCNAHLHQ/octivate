@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { OctivateLogo } from "@/components/brand";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { JurisdictionTicker } from "@/components/chrome/jurisdiction-ticker";
+import { useT } from "@/components/i18n/locale-provider";
 
 function ArrowIcon() {
   return (
@@ -12,6 +15,8 @@ function ArrowIcon() {
 }
 
 export function SiteFooter() {
+  const t = useT();
+
   return (
     <footer className="footer">
       <svg className="f-art" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
@@ -29,70 +34,58 @@ export function SiteFooter() {
             <Link className="f-brand-link" href="/" aria-label="Octivate home">
               <OctivateLogo variant="lockup" height={40} />
             </Link>
-            <p>
-              Action-oriented decision intelligence for complex Caribbean operating environments.
-            </p>
-            <p className="f-about-blurb">
-              Octivate is the decision-intelligence platform developed by CENSII, a Caribbean
-              operating-context intelligence and advisory firm. It brings fragmented regional
-              evidence into one structured view, helping organisations make better decisions across
-              complex Caribbean environments.
-            </p>
+            <p>{t("footer.blurb")}</p>
           </div>
 
           <div className="f-col">
-            <h4>Explore</h4>
+            <h4>{t("footer.explore")}</h4>
             <Link href="/#why">
               <ArrowIcon />
-              Why Octivate
+              {t("footer.why")}
             </Link>
             <Link href="/#how">
               <ArrowIcon />
-              How it works
+              {t("footer.how")}
             </Link>
             <Link href="/#disciplines">
               <ArrowIcon />
-              Six Disciplines Integrated
+              {t("footer.disciplines")}
             </Link>
-            <Link href="/dashboard/briefs/brief_001">
+            <Link href="/sample/brief">
               <ArrowIcon />
-              Sample brief
+              {t("footer.sample")}
             </Link>
           </div>
 
           <div className="f-col">
-            <h4>Take action</h4>
-            <Link href="/#contact">
+            <h4>{t("footer.takeAction")}</h4>
+            <Link href="/signup">
               <ArrowIcon />
-              Request a Demo
+              {t("footer.getStarted")}
             </Link>
             <Link href="/signin">
               <ArrowIcon />
-              Sign in
+              {t("footer.signIn")}
             </Link>
             <Link href="/pricing">
               <ArrowIcon />
-              Pricing
+              {t("footer.pricing")}
             </Link>
-            <a href="mailto:info@censii.co">
+            <a href="mailto:info@octivate.co">
               <ArrowIcon />
-              Contact us
+              {t("footer.contact")}
             </a>
           </div>
 
           <div className="f-col">
-            <h4>About</h4>
-            <Link href="/#about">
-              <ArrowIcon />
-              About Octivate
-            </Link>
+            <h4>{t("footer.about")}</h4>
             <a href="https://censii.co" target="_blank" rel="noopener noreferrer">
               <ArrowIcon />
-              About CENSII
+              {t("footer.aboutCensii")}
             </a>
             <Link href="/support">
               <ArrowIcon />
-              Team
+              {t("footer.team")}
             </Link>
           </div>
         </div>
@@ -103,24 +96,17 @@ export function SiteFooter() {
 
         <div className="f-divider" aria-hidden="true" />
 
-        <p className="seo-p">
-          Octivate by CENSII delivers Caribbean decision intelligence: Power–Systems–Narratives
-          analysis, evidence validation, options assessment and monitoring for organisations
-          operating across Trinidad and Tobago, Jamaica, Barbados, Guyana, Suriname, the OECS and
-          the wider region.
-        </p>
+        <p className="seo-p">{t("footer.seo")}</p>
 
         <div className="f-bar">
-          <span>
-            © 2026 CENSII <span className="dotsep">·</span> Octivate · octivate.io
-          </span>
+          <span>{t("footer.copyright")}</span>
           <div className="f-bar-actions">
             <ThemeToggle variant="footer" />
             <a className="up" href="#top">
               <svg viewBox="0 0 12 12" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true">
                 <path d="M6 10V2M2.6 5.4L6 2l3.4 3.4" />
               </svg>
-              Back to top
+              {t("footer.backToTop")}
             </a>
           </div>
         </div>

@@ -24,6 +24,7 @@ import {
   WorkspaceKpiStrip,
   type WorkspaceKpi,
 } from "@/components/workspace/workspace-kpi-strip";
+import { useT } from "@/components/i18n/locale-provider";
 import { useOperatorLayout } from "@/lib/hooks/use-operator-layout";
 import type { OperatorLimits, UsageSnapshot } from "@/lib/types";
 import type { Health } from "@/components/operator/operator-types";
@@ -137,6 +138,7 @@ export function OperatorPulseBoard({
   onClearStaleReviews?: () => void;
   onClearAllReviews?: () => void;
 }) {
+  const t = useT();
   const layout = useOperatorLayout("pulse", PULSE_LAYOUT);
 
   return (
@@ -146,8 +148,8 @@ export function OperatorPulseBoard({
       renderModule={(id) => {
         if (id === "kpis") {
           return {
-            title: "Live KPIs",
-            hint: "Click a metric to open its console view",
+            title: t("op.modules.liveKpis"),
+            hint: t("op.modules.liveKpisHint"),
             node: <WorkspaceKpiStrip items={kpis} columns={3} />,
           };
         }
@@ -166,15 +168,15 @@ export function OperatorPulseBoard({
             if (existing) existing.items.push(row);
             else {
               grouped.set(key, {
-                label: row.ownerName || row.ownerEmail || "Unassigned / seed",
+                label: row.ownerName || row.ownerEmail || t("op.modules.unassigned"),
                 email: row.ownerEmail,
                 items: [row],
               });
             }
           }
           return {
-            title: "Revision queue",
-            hint: "Pending briefs paired by origin account",
+            title: t("op.modules.revisionQueue"),
+            hint: t("op.modules.revisionHint"),
             node: (
               <div className="op-review-inline">
                 <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
@@ -194,7 +196,7 @@ export function OperatorPulseBoard({
                         className="font-mono text-[10px] uppercase tracking-wider text-faint hover:text-mist"
                         onClick={onClearStaleReviews}
                       >
-                        Clear stale
+                        {t("op.pulse.clearStaleBtn")}
                       </button>
                     ) : null}
                     {onClearAllReviews ? (
@@ -203,7 +205,7 @@ export function OperatorPulseBoard({
                         className="font-mono text-[10px] uppercase tracking-wider text-coral hover:text-foam"
                         onClick={onClearAllReviews}
                       >
-                        Clear all
+                        {t("op.pulse.clearAllReviews")}
                       </button>
                     ) : null}
                   </div>
@@ -244,25 +246,37 @@ export function OperatorPulseBoard({
                     ))}
                   </div>
                 ) : (
-                  <p className="text-sm text-mist">No briefs awaiting revision.</p>
+                  <p className="text-sm text-mist">{t("op.modules.noRevision")}</p>
                 )}
               </div>
             ),
           };
         }
         if (id === "sessions") {
-          return { title: "Session mix", hint: "Agent workflow states", node: charts.sessions };
+          return {
+            title: t("op.modules.sessionMix"),
+            hint: t("op.modules.sessionHint"),
+            node: charts.sessions,
+          };
         }
         if (id === "cost") {
-          return { title: "Cost by model", hint: "Spend from cost ledger", node: charts.cost };
+          return {
+            title: t("op.modules.costByModel"),
+            hint: t("op.modules.costHint"),
+            node: charts.cost,
+          };
         }
         if (id === "capacity") {
-          return { title: "Capacity", hint: "Token budget & concurrency", node: charts.capacity };
+          return {
+            title: t("op.modules.tokensConcurrency"),
+            hint: t("op.modules.tokenBudget"),
+            node: charts.capacity,
+          };
         }
         if (id === "runtime") {
           return {
             title: "Runtime",
-            hint: "Live system status — drag to rearrange",
+            hint: t("op.modules.liveSystem"),
             bodyClassName: "p-0",
             node: <div className="op-module-embed">{charts.runtime}</div>,
           };
@@ -292,6 +306,7 @@ export function OperatorControlBoard({
   onRetry?: () => void;
   charts: ChartBundle;
 }) {
+  const t = useT();
   const layout = useOperatorLayout("control", CONTROL_LAYOUT);
 
   return (
@@ -301,8 +316,8 @@ export function OperatorControlBoard({
       renderModule={(id) => {
         if (id === "limits") {
           return {
-            title: "Control plane",
-            hint: "Usage limits for live runs — drag to rearrange",
+            title: t("op.modules.controlPlane"),
+            hint: t("op.modules.controlHint"),
             bodyClassName: "p-0",
             node: (
               <div className="op-module-embed">
@@ -322,7 +337,7 @@ export function OperatorControlBoard({
         }
         if (id === "models") {
           return {
-            title: "Model routing",
+            title: t("op.modules.modelRouting"),
             hint: "resolveModel · docs class · token budgets",
             bodyClassName: "p-0",
             node: (
@@ -334,7 +349,7 @@ export function OperatorControlBoard({
         }
         if (id === "evidence") {
           return {
-            title: "Evidence pipeline",
+            title: t("op.modules.evidencePipeline"),
             hint: "scoreBriefConfidence weights · autosave",
             bodyClassName: "p-0",
             node: (
@@ -345,12 +360,16 @@ export function OperatorControlBoard({
           };
         }
         if (id === "capacity") {
-          return { title: "Capacity", hint: "Live concurrency meters", node: charts.capacity };
+          return {
+            title: t("op.modules.tokensConcurrency"),
+            hint: t("op.modules.liveConcurrency"),
+            node: charts.capacity,
+          };
         }
         if (id === "runtime") {
           return {
             title: "Runtime",
-            hint: "Live system status — drag to rearrange",
+            hint: t("op.modules.liveSystem"),
             bodyClassName: "p-0",
             node: <div className="op-module-embed">{charts.runtime}</div>,
           };
@@ -362,6 +381,7 @@ export function OperatorControlBoard({
 }
 
 export function OperatorCatalogBoard() {
+  const t = useT();
   const layout = useOperatorLayout("catalog-v2", CATALOG_LAYOUT);
 
   return (
@@ -373,7 +393,7 @@ export function OperatorCatalogBoard() {
           if (id === "autocheck") {
             return {
               title: "Auto-check",
-              hint: "Availability probes & cadence — drag to rearrange",
+              hint: t("op.modules.probes"),
               bodyClassName: "p-0",
               node: (
                 <div className="op-module-embed">
@@ -384,8 +404,8 @@ export function OperatorCatalogBoard() {
           }
           if (id === "capture") {
             return {
-              title: "Source capture",
-              hint: "Artifact queue & path — drag to rearrange",
+              title: t("op.modules.sourceCapture"),
+              hint: t("op.modules.artifactQueue"),
               bodyClassName: "p-0",
               node: (
                 <div className="op-module-embed">
@@ -396,8 +416,8 @@ export function OperatorCatalogBoard() {
           }
           if (id === "sources") {
             return {
-              title: "Sources",
-              hint: "Live registry — drag to rearrange",
+              title: t("ws.sources.title"),
+              hint: t("op.modules.liveRegistry"),
               bodyClassName: "p-0",
               node: (
                 <div className="op-module-embed">
@@ -408,8 +428,8 @@ export function OperatorCatalogBoard() {
           }
           if (id === "ticker") {
             return {
-              title: "Signal ticker",
-              hint: "Live site marquee — compose, preview, queue",
+              title: t("op.modules.signalTicker"),
+              hint: t("op.modules.tickerHint"),
               bodyClassName: "p-0",
               node: (
                 <div className="op-module-embed is-ticker">

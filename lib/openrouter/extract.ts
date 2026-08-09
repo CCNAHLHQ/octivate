@@ -69,8 +69,11 @@ export function extractMessageText(message: OpenRouterMessage | undefined | null
 export function extractJsonCandidate(text: string): string | null {
   const trimmed = text.trim();
   if (!trimmed) return null;
-  const fence = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/i);
-  const body = fence ? fence[1].trim() : trimmed;
+  const closedFence = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  const openFence = !closedFence
+    ? trimmed.match(/```(?:json)?\s*([\s\S]+)$/i)
+    : null;
+  const body = (closedFence?.[1] || openFence?.[1] || trimmed).trim();
   const start = body.indexOf("{");
   const end = body.lastIndexOf("}");
   if (start < 0 || end <= start) return null;

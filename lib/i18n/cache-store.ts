@@ -1,36 +1,39 @@
-import { readObject, writeObject } from "@/lib/store/json-store";
-import { hashSource } from "@/lib/i18n/hash";
+/**
+ * Compatibility shim — permanent catalogs live in lib/i18n/store.ts.
+ * Kept so older imports continue to typecheck during migration.
+ */
+export {
+  entryFresh,
+  readLocaleFile as readI18nCacheFile,
+  type LocaleEntry as CachedEntry,
+} from "@/lib/i18n/store";
+import { readLocaleFile, writeLocaleFile, type LocaleFile } from "@/lib/i18n/store";
 
-export type CachedEntry = {
-  text: string;
-  sourceHash: string;
-  updatedAt: string;
-};
-
+/** @deprecated Use per-locale store helpers. */
 export type I18nCacheFile = {
   version: 1;
-  locales: Record<string, Record<string, CachedEntry>>;
+  locales: Record<string, LocaleFile["entries"]>;
 };
 
-const CACHE_NAME = "i18n-cache";
-const EMPTY: I18nCacheFile = { version: 1, locales: {} };
-
-let writeChain: Promise<void> = Promise.resolve();
-
 export async function readI18nCache(): Promise<I18nCacheFile> {
-  const data = await readObject<I18nCacheFile>(CACHE_NAME, EMPTY);
-  if (!data?.locales || typeof data.locales !== "object") return { ...EMPTY };
-  return { version: 1, locales: data.locales };
+  // Aggregate view for legacy callers.
+  const { TRANSLATE_LANGUAGES, PAGE_LANGUAGE } = await import("@/lib/i18n/languages");
+  const locales: I18nCacheFile["locales"] = {};
+  for (const lang of TRANSLATE_LANGUAGES) {
+    if (lang.value === PAGE_LANGUAGE) continue;
+    const file = await readLocaleFile(lang.value);
+    locales[lang.value] = file.entries;
+  }
+  return { version: 1, locales };
 }
 
 export async function writeI18nCache(next: I18nCacheFile): Promise<void> {
-  writeChain = writeChain.then(async () => {
-    await writeObject(CACHE_NAME, next);
-  });
-  await writeChain;
-}
-
-export function entryFresh(entry: CachedEntry | undefined, source: string): boolean {
-  if (!entry?.text) return false;
-  return entry.sourceHash === hashSource(source);
+  for (const [locale, entries] of Object.entries(next.locales || {})) {
+    await writeLocaleFile({
+      locale,
+      version: 1,
+      updatedAt: new Date().toISOString(),
+      entries,
+    });
+  }
 }

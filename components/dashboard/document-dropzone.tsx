@@ -13,6 +13,7 @@ import {
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import { notifyWorkspaceRefresh } from "@/lib/workspace-events";
 import { toast } from "@/components/ui/toast";
+import { useT } from "@/components/i18n/locale-provider";
 import type { Project } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -42,6 +43,7 @@ export function DocumentDropzone({
   disabled?: boolean;
   onUploaded: (project: Project) => void;
 }) {
+  const t = useT();
   const inputRef = useRef<HTMLInputElement>(null);
   /** Bounded parallel uploads (3) — faster than strict serial, safer than unbounded. */
   const activeUploads = useRef(0);
@@ -86,12 +88,12 @@ export function DocumentDropzone({
           onUploaded(data.project);
         });
       } catch (err) {
-        const message = err instanceof Error ? err.message : "Upload failed";
+        const message = err instanceof Error ? err.message : t("ws.docs.uploadFailed");
         patch(item.id, { status: "error", error: message });
         toast.error(`${item.file.name}: ${message}`);
       }
     },
-    [projectId, onUploaded, patch]
+    [projectId, onUploaded, patch, t]
   );
 
   const enqueue = useCallback(
@@ -154,7 +156,7 @@ export function DocumentDropzone({
           <UploadCloud className="h-5 w-5" aria-hidden />
         </span>
         <span className="ws-dz-title">
-          <b>Click to upload</b> or drag &amp; drop
+          <b>{t("ws.docs.clickUpload")}</b> {t("ws.docs.orDrag")}
         </span>
         <span className="ws-dz-hint">
           PDF, DOCX, TXT, MD, CSV, HTML{activeCount > 0 ? ` · ${activeCount} in queue` : ""}

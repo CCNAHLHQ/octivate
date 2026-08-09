@@ -10,6 +10,7 @@ import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import { notifyWorkspaceRefresh } from "@/lib/workspace-events";
 import { useConfirmDialog } from "@/components/ui/confirm-dialog";
 import { toast } from "@/components/ui/toast";
+import { useT } from "@/components/i18n/locale-provider";
 import { toastActionError } from "@/lib/ui/action-feedback";
 import { StatusBadge } from "@/components/ui/status-badge";
 import type { Project } from "@/lib/types";
@@ -51,6 +52,7 @@ export function DocumentLibrary({
   disabled?: boolean;
   onChanged: (project: Project) => void;
 }) {
+  const t = useT();
   const [busyId, setBusyId] = useState<string | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [modalMode, setModalMode] = useState<"compose" | "view">("compose");
@@ -87,7 +89,7 @@ export function DocumentLibrary({
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error((data as { error?: string }).error || "Download failed");
+        throw new Error((data as { error?: string }).error || t("ws.docs.downloadFailed"));
       }
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
@@ -108,9 +110,9 @@ export function DocumentLibrary({
 
   async function deleteDoc(doc: Project["documents"][number]) {
     const ok = await ask({
-      title: "Delete this document?",
+      title: t("ws.docs.deleteConfirm"),
       description: `“${doc.name}” will be permanently removed from this project. This cannot be undone.`,
-      confirmLabel: "Delete document",
+      confirmLabel: t("ws.docs.delete"),
     });
     if (!ok) return;
     setBusyId(doc.id);
@@ -123,7 +125,7 @@ export function DocumentLibrary({
       notifyWorkspaceRefresh(["projects"]);
       onChanged(data.project);
       if (activeId === doc.id) setActiveId(null);
-      toast.success("Document deleted");
+      toast.success(t("ws.docs.deleted"));
     } catch (err) {
       toastActionError(err);
     } finally {
@@ -157,7 +159,7 @@ export function DocumentLibrary({
       notifyWorkspaceRefresh(["projects"]);
       onChanged(data.project);
       setModalMode("view");
-      toast.success(focus ? "Reworked summary ready" : "Summary ready");
+      toast.success(focus ? t("ws.docs.reworkReady") : t("ws.docs.summaryReady"));
     } catch (err) {
       toastActionError(err);
     } finally {
@@ -167,7 +169,7 @@ export function DocumentLibrary({
   }
 
   if (!documents.length) {
-    return <p className="text-sm text-mist">No uploads yet.</p>;
+    return <p className="text-sm text-mist">{t("ws.docs.noUploads")}</p>;
   }
 
   return (
@@ -190,7 +192,7 @@ export function DocumentLibrary({
                   <button
                     type="button"
                     className="ws-doc-name"
-                    title={hasSummary ? "Open summary" : d.name}
+                    title={hasSummary ? t("ws.docs.openSummary") : d.name}
                     disabled={!hasSummary}
                     onClick={() => openView(d)}
                   >
@@ -213,8 +215,8 @@ export function DocumentLibrary({
                       type="button"
                       className="ws-doc-btn"
                       disabled={disabled || busy}
-                      title="Read summary"
-                      aria-label={`Read summary for ${d.name}`}
+                      title={t("ws.docs.readSummary")}
+                      aria-label={`${t("ws.docs.readSummary")} ${d.name}`}
                       onClick={() => openView(d)}
                     >
                       <Eye className="h-3.5 w-3.5" aria-hidden />
@@ -225,9 +227,11 @@ export function DocumentLibrary({
                       type="button"
                       className="ws-doc-btn"
                       disabled={disabled || busy}
-                      title={hasSummary ? "Rework summary" : "Summarize contents"}
+                      title={hasSummary ? t("ws.docs.rework") : t("ws.docs.summarize")}
                       aria-label={
-                        hasSummary ? `Rework summary for ${d.name}` : `Summarize ${d.name}`
+                        hasSummary
+                          ? `${t("ws.docs.rework")} ${d.name}`
+                          : `${t("ws.docs.summarize")} ${d.name}`
                       }
                       onClick={() => openCompose(d)}
                     >

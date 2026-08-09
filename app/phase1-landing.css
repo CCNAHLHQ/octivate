@@ -27,7 +27,14 @@
 
 .phase1-landing .hero h1 {
   color: var(--foam);
-  max-width: 18ch;
+  max-width: 22ch;
+}
+
+.phase1-lens-q {
+  display: block;
+  color: var(--foam);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
 }
 
 .phase1-landing .hero .sub {
@@ -178,7 +185,7 @@
   color: var(--mist);
   font-size: 0.92rem;
   line-height: 1.45;
-  max-width: 16ch;
+  max-width: none;
 }
 
 .phase1-steps {

@@ -5,11 +5,13 @@ import { AppShell } from "@/components/dashboard/app-shell";
 import { OctivateLogoMark } from "@/components/brand/octivate-logo-mark";
 import { StakeholdersGallery } from "@/components/stakeholders/stakeholders-gallery";
 import { Skeleton } from "@/components/ui/progress";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch } from "@/lib/api-client";
 import type { Stakeholder } from "@/lib/types";
 import "./stakeholders.css";
 
 export default function StakeholdersPage() {
+  const t = useT();
   const [rows, setRows] = useState<Stakeholder[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -32,12 +34,9 @@ export default function StakeholdersPage() {
         <div className="sth-page-inner">
           <header className="sth-hero">
             <OctivateLogoMark className="sth-hero-brand" style={{ width: 44, height: 38 }} />
-            <p className="sth-hero-eyebrow">The cause</p>
-            <h1 className="sth-hero-title">Stakeholders</h1>
-            <p className="sth-hero-lede">
-              Institutions that sponsor Octivate’s work — standing with Caribbean decision
-              intelligence so evidence, judgement, and public clarity can travel together.
-            </p>
+            <p className="sth-hero-eyebrow">{t("ws.stakeholders.cause")}</p>
+            <h1 className="sth-hero-title">{t("ws.stakeholders.title")}</h1>
+            <p className="sth-hero-lede">{t("ws.stakeholders.lede")}</p>
           </header>
 
           {loading ? (

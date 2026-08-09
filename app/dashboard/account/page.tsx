@@ -6,6 +6,7 @@ import { Camera, LogOut, Trash2 } from "lucide-react";
 import { AlertsSettingsPanel } from "@/components/alerts/alerts-settings-panel";
 import { AppShell } from "@/components/dashboard/app-shell";
 import { BbcodeEditor } from "@/components/ui/bbcode-editor";
+import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import { toast } from "@/components/ui/toast";
 import {
@@ -24,12 +25,12 @@ type ProfileLimits = {
   maxProfileBioChars: number;
 };
 
-const TABS: { id: AccountTab; label: string }[] = [
-  { id: "profile", label: "Profile" },
-  { id: "security", label: "Security" },
-  { id: "presence", label: "Presence" },
-  { id: "alerts", label: "Alerts" },
-  { id: "session", label: "Session" },
+const TAB_KEYS: { id: AccountTab; labelKey: string }[] = [
+  { id: "profile", labelKey: "ws.account.tab.profile" },
+  { id: "security", labelKey: "ws.account.tab.security" },
+  { id: "presence", labelKey: "ws.account.tab.presence" },
+  { id: "alerts", labelKey: "ws.account.tab.alerts" },
+  { id: "session", labelKey: "ws.account.tab.session" },
 ];
 
 const FALLBACK_LIMITS: ProfileLimits = {
@@ -60,6 +61,7 @@ async function fileToDataUrl(file: File): Promise<string> {
 }
 
 export default function AccountPage() {
+  const t = useT();
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const [tab, setTab] = useState<AccountTab>("profile");
@@ -108,9 +110,9 @@ export default function AccountPage() {
       setDescription(res.user.description || "");
       if (res.profileLimits) setLimits(res.profileLimits);
       invalidateApiCache("/api/auth/me");
-      toast.success("Profile saved");
+      toast.success(t("ws.account.profileSaved"));
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Save failed");
+      toast.error(err instanceof Error ? err.message : t("ws.account.saveFailed"));
     } finally {
       setBusy(false);
     }
@@ -126,9 +128,9 @@ export default function AccountPage() {
       });
       setCurrentPassword("");
       setNewPassword("");
-      toast.success("Password updated");
+      toast.success(t("ws.account.passwordUpdated"));
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Password update failed");
+      toast.error(err instanceof Error ? err.message : t("ws.account.passwordFailed"));
     } finally {
       setBusy(false);
     }
@@ -144,9 +146,9 @@ export default function AccountPage() {
       });
       setUser(res.user);
       invalidateApiCache("/api/auth/me");
-      toast.success(`Status · ${PRESENCE_OPTIONS.find((p) => p.id === next)?.label}`);
+      toast.success(`Status · ${t(`ws.account.presence.${next}`)}`);
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Could not update status");
+      toast.error(err instanceof Error ? err.message : t("ws.account.statusFailed"));
     } finally {
       setBusy(false);
     }
@@ -155,7 +157,7 @@ export default function AccountPage() {
   async function onPick(file: File | null) {
     if (!file || busy) return;
     if (!/^image\/(jpeg|png|webp)$/i.test(file.type)) {
-      toast.error("Use JPEG, PNG, or WebP");
+      toast.error(t("ws.account.imageType"));
       return;
     }
     if (file.size > limits.maxAvatarBytes) {
@@ -172,9 +174,9 @@ export default function AccountPage() {
       setUser(res.user);
       if (res.profileLimits) setLimits(res.profileLimits);
       invalidateApiCache("/api/auth/me");
-      toast.success("Avatar updated");
+      toast.success(t("ws.account.avatarUpdated"));
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Upload failed");
+      toast.error(err instanceof Error ? err.message : t("ws.account.uploadFailed"));
     } finally {
       setBusy(false);
       if (inputRef.current) inputRef.current.value = "";
@@ -190,9 +192,9 @@ export default function AccountPage() {
       });
       setUser(res.user);
       invalidateApiCache("/api/auth/me");
-      toast.success("Avatar removed");
+      toast.success(t("ws.account.avatarRemoved"));
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Remove failed");
+      toast.error(err instanceof Error ? err.message : t("ws.account.removeFailed"));
     } finally {
       setBusy(false);
     }
@@ -205,7 +207,7 @@ export default function AccountPage() {
       invalidateApiCache();
       window.location.replace("/signin?signed_out=1");
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Sign out failed");
+      toast.error(err instanceof Error ? err.message : t("ws.account.signOutFailed"));
       setBusy(false);
     }
   }
@@ -217,18 +219,16 @@ export default function AccountPage() {
       <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6">
         <header className="mb-6">
           <p className="font-mono text-[10px] uppercase tracking-widest text-faint">Account</p>
-          <h1 className="mt-1 text-2xl font-semibold text-foam">Settings</h1>
-          <p className="mt-1 text-sm text-mist">
-            Profile, security, presence, alerts, and session controls.
-          </p>
+          <h1 className="mt-1 text-2xl font-semibold text-foam">{t("ws.account.title")}</h1>
+          <p className="mt-1 text-sm text-mist">{t("ws.account.lede")}</p>
         </header>
 
         {!user ? (
-          <p className="text-sm text-faint">Loading account…</p>
+          <p className="text-sm text-faint">{t("ws.account.loading")}</p>
         ) : (
           <div className="account-module">
             <div className="account-module-tabs" role="tablist" aria-label="Account settings">
-              {TABS.map((item) => (
+              {TAB_KEYS.map((item) => (
                 <button
                   key={item.id}
                   type="button"
@@ -239,7 +239,7 @@ export default function AccountPage() {
                   className={cn("account-module-tab", tab === item.id && "is-active")}
                   onClick={() => setTab(item.id)}
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                 </button>
               ))}
             </div>
@@ -252,7 +252,9 @@ export default function AccountPage() {
                   id="account-panel-profile"
                   aria-labelledby="account-tab-profile"
                 >
-                  <h2 className="text-sm font-semibold text-foam">Profile</h2>
+                  <h2 className="text-sm font-semibold text-foam">
+                    {t("ws.account.tab.profile")}
+                  </h2>
                   <p className="mt-1 text-xs text-faint">
                     JPEG, PNG, or WebP · max {maxAvatarLabel} · magic-byte checked · private
                     storage
@@ -264,7 +266,7 @@ export default function AccountPage() {
                       className="dash-account-avatar dash-account-avatar-lg"
                       disabled={busy}
                       onClick={() => inputRef.current?.click()}
-                      aria-label="Upload profile photo"
+                      aria-label={t("ws.account.uploadPhoto")}
                     >
                       {user.avatarUrl ? (
                         // eslint-disable-next-line @next/next/no-img-element
@@ -290,7 +292,7 @@ export default function AccountPage() {
                         disabled={busy}
                         onClick={() => inputRef.current?.click()}
                       >
-                        Upload photo
+                        {t("ws.account.uploadPhoto")}
                       </button>
                       {user.avatarUrl ? (
                         <button
@@ -300,14 +302,14 @@ export default function AccountPage() {
                           onClick={() => void removeAvatar()}
                         >
                           <Trash2 className="h-3.5 w-3.5" />
-                          Remove
+                          {t("ws.account.remove")}
                         </button>
                       ) : null}
                     </div>
                   </div>
 
                   <label className="mt-5 block text-[11px] font-mono uppercase tracking-wider text-faint">
-                    Display name
+                    {t("ws.account.displayName")}
                     <input
                       className="mt-1 w-full rounded-[10px] border border-[var(--line)] bg-[var(--abyss)] px-3 py-2 text-sm text-foam"
                       value={displayName}
@@ -321,7 +323,7 @@ export default function AccountPage() {
 
                   <div className="mt-4">
                     <BbcodeEditor
-                      label="About / bio"
+                      label={t("ws.account.bio")}
                       value={description}
                       onChange={setDescription}
                       maxChars={limits.maxProfileBioChars}
@@ -334,7 +336,7 @@ export default function AccountPage() {
                     disabled={busy || displayName.trim().length < 2}
                     onClick={() => void saveProfile()}
                   >
-                    Save profile
+                    {t("ws.account.saveProfile")}
                   </button>
                 </section>
               ) : null}
@@ -346,12 +348,12 @@ export default function AccountPage() {
                   id="account-panel-security"
                   aria-labelledby="account-tab-security"
                 >
-                  <h2 className="text-sm font-semibold text-foam">Password</h2>
+                  <h2 className="text-sm font-semibold text-foam">{t("ws.account.password")}</h2>
                   <p className="mt-1 text-xs text-faint">
                     Confirm your current password before setting a new one (min 10 characters).
                   </p>
                   <label className="mt-3 block text-[11px] font-mono uppercase tracking-wider text-faint">
-                    Current password
+                    {t("ws.account.currentPassword")}
                     <input
                       type="password"
                       autoComplete="current-password"
@@ -361,7 +363,7 @@ export default function AccountPage() {
                     />
                   </label>
                   <label className="mt-3 block text-[11px] font-mono uppercase tracking-wider text-faint">
-                    New password
+                    {t("ws.account.newPassword")}
                     <input
                       type="password"
                       autoComplete="new-password"
@@ -376,7 +378,7 @@ export default function AccountPage() {
                     disabled={busy || !currentPassword || newPassword.length < 10}
                     onClick={() => void savePassword()}
                   >
-                    Update password
+                    {t("ws.account.updatePassword")}
                   </button>
                 </section>
               ) : null}
@@ -388,12 +390,16 @@ export default function AccountPage() {
                   id="account-panel-presence"
                   aria-labelledby="account-tab-presence"
                 >
-                  <h2 className="text-sm font-semibold text-foam">Presence</h2>
-                  <p className="mt-1 text-xs text-faint">
-                    Your status is visible to support staff and workspace collaborators.
-                  </p>
+                  <h2 className="text-sm font-semibold text-foam">
+                    {t("ws.account.tab.presence")}
+                  </h2>
+                  <p className="mt-1 text-xs text-faint">{t("ws.account.presence.lede")}</p>
 
-                  <ul className="account-module-presence-list mt-4" role="listbox" aria-label="Presence status">
+                  <ul
+                    className="account-module-presence-list mt-4"
+                    role="listbox"
+                    aria-label={t("ws.account.presence")}
+                  >
                     {PRESENCE_OPTIONS.map((opt) => (
                       <li key={opt.id}>
                         <button
@@ -412,8 +418,8 @@ export default function AccountPage() {
                             aria-hidden
                           />
                           <span className="dash-account-status-copy">
-                            <strong>{opt.label}</strong>
-                            <em>{opt.supportHint}</em>
+                            <strong>{t(`ws.account.presence.${opt.id}`)}</strong>
+                            <em>{t(`ws.account.presence.${opt.id}Hint`)}</em>
                           </span>
                         </button>
                       </li>
@@ -431,7 +437,9 @@ export default function AccountPage() {
                   id="account-panel-session"
                   aria-labelledby="account-tab-session"
                 >
-                  <h2 className="text-sm font-semibold text-foam">Session</h2>
+                  <h2 className="text-sm font-semibold text-foam">
+                    {t("ws.account.tab.session")}
+                  </h2>
                   <p className="mt-1 text-xs text-faint">
                     Sign out clears your session cookie on this device.
                   </p>
@@ -442,7 +450,7 @@ export default function AccountPage() {
                     onClick={() => void signOut()}
                   >
                     <LogOut className="h-3.5 w-3.5" />
-                    Sign out
+                    {t("ws.account.signOut")}
                   </button>
                 </section>
               ) : null}
