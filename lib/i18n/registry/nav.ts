@@ -1,5 +1,6 @@
 /** Global chrome navigation + CTAs. */
 export const NAV_MESSAGES = {
+  "nav.product": "Product",
   "nav.why": "Why Octivate",
   "nav.how": "How it works",
   "nav.pricing": "Pricing",
@@ -16,6 +17,7 @@ export const NAV_MESSAGES = {
   "nav.openMenu": "Open menu",
   "nav.closeMenu": "Close menu",
   "nav.translate": "Translate",
+  "nav.translateHint": "Cached on server · Octivate i18n",
   "nav.primary": "Primary",
   "nav.mobile": "Mobile",
 } as const;

@@ -13,6 +13,8 @@ export function idleFcJob(): FcLogbookJob {
   return {
     id: "idle",
     status: "idle",
+    mode: "missing",
+    auto: false,
     publishTarget: FC_PUBLISH_TARGET,
     publishTargetLabel: FC_PUBLISH_TARGET_LABEL,
     startedAt: null,
@@ -41,7 +43,7 @@ export function defaultSteps(): FcJobStep[] {
     },
     {
       id: "publish",
-      label: "Publish missing / today entries to Future Caribbean",
+      label: "Publish selected entries to Future Caribbean",
       status: "pending",
     },
   ];

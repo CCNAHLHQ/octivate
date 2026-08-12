@@ -24,6 +24,10 @@ const CapacityBars = dynamic(
   () => import("@/components/ui/charts").then((m) => m.CapacityBars),
   { ssr: false, loading: () => <Skeleton className="h-[15rem] w-full rounded-[var(--r-md)]" /> }
 );
+const ActivityBars = dynamic(
+  () => import("@/components/ui/charts").then((m) => m.ActivityBars),
+  { ssr: false, loading: () => <Skeleton className="h-[15rem] w-full rounded-[var(--r-md)]" /> }
+);
 
 export function LazyConfidenceGauge(props: { value: number }) {
   const mounted = useMounted();
@@ -65,4 +69,15 @@ export function LazyCapacityBars(props: {
   const mounted = useMounted();
   if (!mounted) return <Skeleton className="h-[15rem] w-full rounded-[var(--r-md)]" />;
   return <CapacityBars {...props} />;
+}
+
+export function LazyActivityBars(props: {
+  items: { label: string; value: number; color?: string; detail?: string }[];
+  heightClass?: string;
+  color?: string;
+  valueLabel?: string;
+}) {
+  const mounted = useMounted();
+  if (!mounted) return <Skeleton className="h-[15rem] w-full rounded-[var(--r-md)]" />;
+  return <ActivityBars {...props} />;
 }

@@ -20,6 +20,7 @@ type NavLink = {
 };
 
 const marketingLinkDefs: NavLink[] = [
+  { labelKey: "nav.product", href: "/#workspace" },
   { labelKey: "nav.why", href: "/#why" },
   { labelKey: "nav.how", href: "/#how" },
   { labelKey: "nav.pricing", href: "/pricing" },

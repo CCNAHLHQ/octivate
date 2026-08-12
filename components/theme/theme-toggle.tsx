@@ -29,6 +29,7 @@ export function ThemeToggle({
       title={label}
       aria-pressed={isDark}
       data-theme-state={mounted ? theme : DEFAULT_THEME}
+      data-tour="chrome-theme"
     >
       <Sun className="theme-toggle-icon is-sun" aria-hidden strokeWidth={2.1} />
       <Moon className="theme-toggle-icon is-moon" aria-hidden strokeWidth={2.1} />

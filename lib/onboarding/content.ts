@@ -4,8 +4,12 @@ import {
   FileText,
   FolderKanban,
   Headphones,
+  Languages,
   LayoutDashboard,
+  MapPinned,
+  Scale,
   Sparkles,
+  SunMoon,
 } from "lucide-react";
 
 export type IntroBullet = {
@@ -21,7 +25,11 @@ export type IntroArtKind =
   | "pipeline"
   | "briefs"
   | "monitors"
-  | "support";
+  | "support"
+  | "map"
+  | "translate"
+  | "theme"
+  | "legal";
 
 /** Shown once on first dashboard visit — browser-style tour. */
 export type IntroStep = {
@@ -44,7 +52,7 @@ export type IntroStep = {
   resolveProject?: boolean;
 };
 
-export const WORKSPACE_INTRO_VERSION = "v6";
+export const WORKSPACE_INTRO_VERSION = "v7";
 export const WORKSPACE_INTRO_STORAGE_KEY = `octivate-workspace-intro-${WORKSPACE_INTRO_VERSION}`;
 
 export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
@@ -53,9 +61,9 @@ export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
     kicker: "Step 1 · Overview",
     title: "Start from your",
     titleAccent: "workspace home",
-    tagline: "Briefs, projects, and usage in one place.",
+    tagline: "Briefs, projects, coverage, and usage in one place.",
     description:
-      "Overview is home base for Caribbean decision work. Use the sidebar to move between Projects, Briefs, Monitors, and live Support.",
+      "Overview is home base for Caribbean decision work. Use the sidebar to move between Projects, Briefs, Monitors, and live Support — plus the Theatre coverage map for geographic context.",
     bullets: [
       { lead: "Sidebar", text: "jumps Overview, Projects, Briefs, and Monitors" },
       { lead: "Ask question", text: "opens a project theatre in one click" },
@@ -70,8 +78,28 @@ export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
     requireSidebar: true,
   },
   {
+    id: "coverage",
+    kicker: "Step 2 · Theatre coverage",
+    title: "See the",
+    titleAccent: "Theatre coverage map",
+    tagline: "Live Caribbean project geography on Overview.",
+    description:
+      "The Theatre coverage map sits on Overview. Hotspots show where projects live; hover for counts, click a country to open the project list, and use Live / Updating when the workspace refreshes.",
+    bullets: [
+      { lead: "Hotspots", text: "size by project count across jurisdictions" },
+      { lead: "Click", text: "opens a modal of projects for that country" },
+      { lead: "Live", text: "pulses when coverage data refreshes" },
+    ],
+    icon: MapPinned,
+    art: "map",
+    accent: "teal",
+    route: "/dashboard",
+    target: "[data-tour='overview-map']",
+    demo: "pulse",
+  },
+  {
     id: "projects",
-    kicker: "Step 2 · Projects",
+    kicker: "Step 3 · Projects",
     title: "Create a",
     titleAccent: "decision theatre",
     tagline: "One project = one strategic thread.",
@@ -92,7 +120,7 @@ export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
   },
   {
     id: "pipeline",
-    kicker: "Step 3 · Run",
+    kicker: "Step 4 · Run",
     title: "Open a project,",
     titleAccent: "then run",
     tagline: "Start a theatre first — then ask and run.",
@@ -114,7 +142,7 @@ export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
   },
   {
     id: "briefs",
-    kicker: "Step 4 · Briefs",
+    kicker: "Step 5 · Briefs",
     title: "Open the",
     titleAccent: "decision brief",
     tagline: "Recommendations, evidence, and gaps.",
@@ -135,7 +163,7 @@ export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
   },
   {
     id: "monitors",
-    kicker: "Step 5 · Monitors",
+    kicker: "Step 6 · Monitors",
     title: "Watch signals",
     titleAccent: "between runs",
     tagline: "Keyword and jurisdiction watches.",
@@ -155,17 +183,55 @@ export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
     requireSidebar: true,
   },
   {
-    id: "ready",
-    kicker: "Step 6 · Support",
-    title: "Need a hand?",
-    titleAccent: "Ask anytime",
-    tagline: "Live Octivate Support from the chat button.",
+    id: "translate",
+    kicker: "Step 7 · Translation",
+    title: "Switch",
+    titleAccent: "language anytime",
+    tagline: "Realtime catalogs from the site language control.",
     description:
-      "The floating Help chat reaches the CENSII support team for access, briefs, demos, plans, and product questions. Replies stream live as the team responds.",
+      "Octivate uses permanent i18n catalogs — pick a locale from the public site language control and chrome updates immediately. No third-party page-translation widget.",
     bullets: [
-      { lead: "Help chat", text: "opens a live support thread with staff avatars" },
+      { lead: "Languages", text: "cover Caribbean and global demo locales" },
+      { lead: "Catalogs", text: "sync from OpenRouter and cache on the server" },
+      { lead: "Public chrome", text: "hosts the language picker on marketing pages" },
+    ],
+    icon: Languages,
+    art: "translate",
+    accent: "violet",
+    route: "/dashboard",
+    demo: "highlight",
+  },
+  {
+    id: "lighting",
+    kicker: "Step 8 · Lighting",
+    title: "Set your",
+    titleAccent: "lighting",
+    tagline: "Light or dark — same product language.",
+    description:
+      "Lighting toggles light and dark themes across Overview, projects, and chrome. Use the sun / moon control on the public site navbar or footer — whichever keeps maps and briefs comfortable.",
+    bullets: [
+      { lead: "Toggle", text: "switches sun / moon lighting instantly" },
+      { lead: "Maps", text: "follow the active theme for tile contrast" },
+      { lead: "Preference", text: "stays with your browser session" },
+    ],
+    icon: SunMoon,
+    art: "theme",
+    accent: "amber",
+    route: "/dashboard",
+    demo: "highlight",
+  },
+  {
+    id: "support",
+    kicker: "Step 9 · Support alerts",
+    title: "Need a hand?",
+    titleAccent: "Help + alerts",
+    tagline: "Live member Support with reply alerts.",
+    description:
+      "Workspace members use the floating Help chat — not the operator inbox. When staff reply, Octivate can surface support alerts so you do not miss the thread. Operators answer from Customer Support instead.",
+    bullets: [
+      { lead: "Help chat", text: "opens your account support thread" },
+      { lead: "Alerts", text: "notify you when the team responds" },
       { lead: "Quick topics", text: "cover briefs, projects, demos, and plans" },
-      { lead: "Replay tour", text: "anytime from Workspace Tutorial in the sidebar" },
     ],
     icon: Headphones,
     art: "support",
@@ -173,6 +239,27 @@ export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
     route: "/dashboard",
     target: "[data-tour='support-help']",
     demo: "pulse",
+  },
+  {
+    id: "legal",
+    kicker: "Step 10 · Legal",
+    title: "Privacy Policy",
+    titleAccent: "& Terms of Service",
+    tagline: "Open either page from the sidebar footer.",
+    description:
+      "Privacy Policy and Terms of Service live in the sidebar footer. Click either link anytime to open the full public page.",
+    bullets: [
+      { lead: "Privacy Policy", text: "covers data use and cookies context" },
+      { lead: "Terms of Service", text: "cover platform use and accounts" },
+      { lead: "Sidebar footer", text: "keeps both links one click away" },
+    ],
+    icon: Scale,
+    art: "legal",
+    accent: "teal",
+    route: "/dashboard",
+    target: "[data-tour='legal-notice']",
+    demo: "highlight",
+    requireSidebar: true,
   },
 ];
 

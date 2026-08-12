@@ -12,6 +12,8 @@ import { SUPPORT_MESSAGES } from "@/lib/i18n/registry/support";
 import { ONBOARD_MESSAGES } from "@/lib/i18n/registry/onboard";
 import { COMMON_MESSAGES } from "@/lib/i18n/registry/common";
 import { PRICING_MESSAGES } from "@/lib/i18n/registry/pricing";
+import { COOKIE_MESSAGES } from "@/lib/i18n/registry/cookie";
+import { LEGAL_MESSAGES } from "@/lib/i18n/registry/legal";
 
 /** Curated English source of truth — static UI across marketing, auth, workspace, operator. */
 export const EN_MESSAGES = {
@@ -28,6 +30,8 @@ export const EN_MESSAGES = {
   ...ONBOARD_MESSAGES,
   ...COMMON_MESSAGES,
   ...PRICING_MESSAGES,
+  ...COOKIE_MESSAGES,
+  ...LEGAL_MESSAGES,
 } as const;
 
 export type MessageKey = keyof typeof EN_MESSAGES;

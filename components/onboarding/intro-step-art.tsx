@@ -264,6 +264,91 @@ function SupportArt() {
   );
 }
 
+function MapArt() {
+  return (
+    <svg className="intro-art-svg" viewBox="0 0 320 140" fill="none" aria-hidden>
+      <defs>
+        <filter id="intro-map" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="#030612" floodOpacity="0.45" />
+        </filter>
+      </defs>
+      <rect x="28" y="18" width="264" height="104" rx="18" className="intro-art-panel" filter="url(#intro-map)" />
+      <path
+        d="M56 92 C78 70 96 58 118 62 C142 66 154 88 178 84 C204 80 218 52 244 54 C258 55 268 66 278 74"
+        className="intro-art-stroke-tide"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <circle cx="118" cy="62" r="7" className="intro-art-fill-tide" opacity="0.95" />
+      <circle cx="178" cy="84" r="9" className="intro-art-fill-violet" opacity="0.9" />
+      <circle cx="244" cy="54" r="6" className="intro-art-fill-amber" opacity="0.95" />
+      <rect x="44" y="30" width="72" height="6" rx="3" className="intro-art-line" />
+      <rect x="44" y="42" width="44" height="5" rx="2.5" className="intro-art-line" />
+    </svg>
+  );
+}
+
+function TranslateArt() {
+  return (
+    <svg className="intro-art-svg" viewBox="0 0 320 140" fill="none" aria-hidden>
+      <defs>
+        <filter id="intro-tr" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="#030612" floodOpacity="0.45" />
+        </filter>
+      </defs>
+      <rect x="36" y="24" width="120" height="92" rx="16" className="intro-art-panel" filter="url(#intro-tr)" />
+      <rect x="52" y="42" width="54" height="8" rx="4" className="intro-art-fill-foam" />
+      <rect x="52" y="58" width="72" height="6" rx="3" className="intro-art-line" />
+      <rect x="52" y="72" width="48" height="6" rx="3" className="intro-art-line" />
+      <rect x="176" y="24" width="112" height="92" rx="16" className="intro-art-panel" filter="url(#intro-tr)" />
+      <rect x="192" y="42" width="64" height="8" rx="4" className="intro-art-fill-tide" />
+      <rect x="192" y="58" width="76" height="6" rx="3" className="intro-art-line" />
+      <rect x="192" y="72" width="52" height="6" rx="3" className="intro-art-line" />
+      <path d="M156 70h12" className="intro-art-stroke-tide" strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ThemeArt() {
+  return (
+    <svg className="intro-art-svg" viewBox="0 0 320 140" fill="none" aria-hidden>
+      <defs>
+        <filter id="intro-th" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="#030612" floodOpacity="0.45" />
+        </filter>
+      </defs>
+      <rect x="40" y="28" width="110" height="84" rx="18" className="intro-art-panel" filter="url(#intro-th)" />
+      <circle cx="95" cy="70" r="22" className="intro-art-fill-amber" opacity="0.9" />
+      <rect x="170" y="28" width="110" height="84" rx="18" className="intro-art-panel" filter="url(#intro-th)" />
+      <path
+        d="M232 52a22 22 0 1 0 0 36 16 16 0 0 1 0-36z"
+        className="intro-art-fill-violet"
+        opacity="0.95"
+      />
+    </svg>
+  );
+}
+
+function LegalArt() {
+  return (
+    <svg className="intro-art-svg" viewBox="0 0 320 140" fill="none" aria-hidden>
+      <defs>
+        <filter id="intro-leg" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="#030612" floodOpacity="0.45" />
+        </filter>
+      </defs>
+      <rect x="58" y="20" width="204" height="100" rx="16" className="intro-art-panel" filter="url(#intro-leg)" />
+      <rect x="78" y="40" width="96" height="7" rx="3.5" className="intro-art-fill-foam" />
+      <rect x="78" y="56" width="164" height="5" rx="2.5" className="intro-art-line" />
+      <rect x="78" y="68" width="148" height="5" rx="2.5" className="intro-art-line" />
+      <rect x="78" y="80" width="132" height="5" rx="2.5" className="intro-art-line" />
+      <rect x="78" y="96" width="70" height="10" rx="5" className="intro-art-fill-tide" opacity="0.85" />
+      <rect x="156" y="96" width="70" height="10" rx="5" className="intro-art-fill-violet" opacity="0.85" />
+    </svg>
+  );
+}
+
 const ART: Record<IntroArtKind, () => ReactElement> = {
   overview: OverviewArt,
   projects: ProjectsArt,
@@ -271,6 +356,10 @@ const ART: Record<IntroArtKind, () => ReactElement> = {
   briefs: BriefsArt,
   monitors: MonitorsArt,
   support: SupportArt,
+  map: MapArt,
+  translate: TranslateArt,
+  theme: ThemeArt,
+  legal: LegalArt,
 };
 
 const ACCENT_RGBA: Record<"violet" | "teal" | "amber", string> = {

@@ -2,6 +2,7 @@ export const FOOTER_MESSAGES = {
   "footer.blurb":
     "Action-oriented decision intelligence for complex Caribbean operating environments. Developed by CENSII, Octivate brings fragmented Caribbean evidence into one structured view for clearer decisions.",
   "footer.explore": "Explore",
+  "footer.product": "Product",
   "footer.why": "Why Octivate",
   "footer.how": "How it works",
   "footer.disciplines": "Six disciplines",
@@ -14,6 +15,11 @@ export const FOOTER_MESSAGES = {
   "footer.about": "About",
   "footer.aboutCensii": "About CENSII",
   "footer.team": "Team",
+  "footer.legal": "Legal",
+  "footer.privacy": "Privacy Policy",
+  "footer.terms": "Terms of Service",
+  "footer.cookies": "Cookie Statement",
+  "footer.cookieSettings": "Cookie settings",
   "footer.seo":
     "Octivate by CENSII delivers Caribbean decision intelligence: Power–Systems–Narratives analysis, evidence validation, options assessment and monitoring for organisations operating across Trinidad and Tobago, Jamaica, Barbados, Guyana, Suriname, the OECS and the wider region.",
   "footer.backToTop": "Back to top",

@@ -764,7 +764,7 @@ function AuthShellInner({ mode }: { mode: Mode }) {
               />
               <span>
                 I agree to the{" "}
-                <a className="auth-link" href="mailto:info@censii.co?subject=Terms">
+                <a className="auth-link" href="/terms" target="_blank" rel="noopener noreferrer">
                   Terms &amp; Conditions
                 </a>
               </span>
@@ -778,7 +778,7 @@ function AuthShellInner({ mode }: { mode: Mode }) {
               />
               <span>
                 I agree to the{" "}
-                <a className="auth-link" href="mailto:info@censii.co?subject=Privacy">
+                <a className="auth-link" href="/privacy" target="_blank" rel="noopener noreferrer">
                   Privacy Policy
                 </a>
               </span>

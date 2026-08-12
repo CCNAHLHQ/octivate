@@ -175,6 +175,41 @@
           "title": "Operator Logbook publisher — one-button Future Caribbean sync",
           "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_08_06.png",
           "body": "Shipped a professional, operator-only Future Caribbean Logbook publisher on the Octivate Operator → Operations dashboard. One clear action button runs: (1) inventory check of what is already on os.futurecaribbean.com versus our planned day entries, (2) GitHub evidence upload of sequential screenshots under docs/future-caribbean-logbook/screenshots, (3) publish/fill any unaccounted days including today, with live step labels + progress bar naming the destination site. Past entries now carry direct GitHub screenshot URLs. Built for Shemuel / Open Track judges — certainty over theatre.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_08_06.png"
+        },
+        {
+          "key": "Fri 08/07",
+          "title": "i18n registry foundation — leave Google Translate behind",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_08_07.png",
+          "body": "Started ripping runtime Google Translate out of the product path and replacing it with a first-party message registry. Mapped landing, auth, and workspace chrome onto stable MessageKeys so locale switching can be permanent catalogs instead of fragile DOM mutation. Friction: mixed hardcoded strings still hiding in cards. Fix: inventory + registry modules under lib/i18n so OpenRouter can sync real translations later. Outcome: a clean English source of truth the rest of the weekend could finish.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_08_07.png"
+        },
+        {
+          "key": "Sat 08/08",
+          "title": "Operator i18n panel + useT across chrome",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_08_08.png",
+          "body": "Wired useT through marketing chrome, workspace cards, and operator surfaces. Added an Operator → Operations i18n panel so catalog sync status is visible next to the Future Caribbean publisher. Clever bit: permanent locale JSON under data/local (gitignored) with /api/i18n/catalog for realtime switching — no more third-party widget. Weekend craft: fewer magic strings, more judge-ready multilingual demos.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_08_08.png"
+        },
+        {
+          "key": "Sun 08/09",
+          "title": "Ship permanent OpenRouter i18n catalogs",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_08_09.png",
+          "body": "Committed and pushed permanent OpenRouter i18n catalogs across workspace and operator UI (main @ 965e112). Replaced runtime Google Translate with registry-backed catalogs, kept operator sync tooling for full locale coverage, and verified 9 locales stay in lockstep with English keys. Sunday discipline: ship the translation spine so later product surfaces inherit realtime locale switching for free.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_08_09.png"
+        }
+      ]
+    },
+    {
+      "label": "Aug 10 – Aug 16",
+      "days": [
+        {
+          "key": "Mon 08/10",
+          "title": "Theatre coverage map + operator pulse bars",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_08_10.png",
+          "body": "Shipped the Overview Theatre coverage map: Leaflet + CARTO tiles, project-count hotspots, hover counts, click-through modal into /dashboard/projects/[id], live refresh on the workspace bus. Fixed CSP img-src for basemaps.cartocdn.com and scoped CSS so global img { max-width:100% } could not crush tiles. Operator Pulse swapped dense donuts for teal/amber/violet vertical activity bars. Story beat: Caribbean geography becomes a first-class decision theatre, not a flag emoji afterthought.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Mon_08_10.png"
+        },
+        {
+          "key": "Tue 08/11",
+          "title": "SaaS landing polish — tech trust, cookies, legal, workspace showcase",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_08_11.png",
+          "body": "Landed a public SaaS stack on octivate.io: Technologies trust strip (OpenRouter / Claude / ChatGPT / PayPal / Bitcoin) with demo video modal (Plyr), cookie CMP + settings modal, real /privacy /terms /cookies pages, and a seed-driven Workspace showcase (#workspace) so prospects explore Insights/Coverage without signing in. Wired every new string through the i18n registry, synced all 9 locales to 100% coverage (catalog v15), rebuilt edge + Next, and confirmed live catalogs serve legal/cookie/workspace keys in realtime. Human + machine closing the Open Track narrative loop.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_08_11.png"
         }
       ]
     }

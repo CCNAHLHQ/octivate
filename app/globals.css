@@ -220,6 +220,34 @@
   background: linear-gradient(180deg, transparent, var(--sidebar-gradient-bottom) 18%);
 }
 
+.dash-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.45rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--line) 85%, transparent);
+  background: color-mix(in srgb, var(--ink) 55%, transparent);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.dash-legal-link {
+  color: var(--mist);
+  text-decoration: none;
+  font-weight: 550;
+}
+
+.dash-legal-link:hover {
+  color: var(--tide);
+  text-decoration: underline;
+}
+
+.dash-legal-sep {
+  color: var(--faint);
+}
+
 .dash-account {
   display: flex;
   flex-direction: column;

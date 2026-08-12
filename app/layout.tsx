@@ -38,15 +38,15 @@ export const metadata: Metadata = {
     "Caribbean decision intelligence",
     "Caribbean political risk analysis",
     "market entry Caribbean",
-    "agentic AI analyst",
+    "evidence-backed briefs",
     "CENSII",
     "Octivate",
   ],
   authors: [{ name: "CENSII" }],
   openGraph: {
-    title: "Octivate — Agentic Decision Intelligence for Fragmented Regional Markets",
+    title: "Octivate — Decision intelligence for the Caribbean",
     description:
-      "A guided agentic workflow that structures the decision, runs the research, validates evidence and delivers an action-ready brief — built Caribbean-first.",
+      "Connect scattered regional information, test what can be trusted, and turn it into evidence-backed judgement for the decisions that cannot wait.",
     url: "https://octivate.io",
     siteName: "Octivate by CENSII",
     type: "website",

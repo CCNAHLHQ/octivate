@@ -24,6 +24,23 @@ const PUBLISH_TARGET = LOGBOOK;
 const PUBLISH_LABEL = "Future Caribbean Builder · Logbook";
 const GH_BASE =
   "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots";
+const SYNC_MODE = ["recent", "all", "missing"].includes(process.env.FC_SYNC_MODE || "")
+  ? process.env.FC_SYNC_MODE
+  : "missing";
+const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+function fcKeyFromDate(date = new Date()) {
+  const dow = DOW[date.getDay()];
+  const mm = String(date.getMonth() + 1).padStart(2, "0");
+  const dd = String(date.getDate()).padStart(2, "0");
+  return `${dow} ${mm}/${dd}`;
+}
+
+function recentKeys(date = new Date()) {
+  const y = new Date(date);
+  y.setDate(y.getDate() - 1);
+  return [fcKeyFromDate(date), fcKeyFromDate(y)];
+}
 
 function readJob() {
   const raw = fs.readFileSync(JOB, "utf8").replace(/^\uFEFF/, "");
@@ -345,9 +362,18 @@ async function main() {
   writeJob(job);
 
   try {
+    job.mode = SYNC_MODE;
+    writeJob(job);
     setStep(job, "prepare", "running");
     const days = loadDays();
-    setStep(job, "prepare", "done", `${days.length} planned days loaded`);
+    const focusKeys = recentKeys();
+    setStep(
+      job,
+      "prepare",
+      "done",
+      `${days.length} planned · mode=${SYNC_MODE}` +
+        (SYNC_MODE === "recent" ? ` · focus ${focusKeys.join(" · ")}` : "")
+    );
     job = readJob();
 
     uploadGithub(job);
@@ -362,7 +388,13 @@ async function main() {
       job = readJob();
       setStep(job, "check", "running", "Reading remote day inventory…");
       writeJob(job);
-      const daysStatus = await inventory(page, days);
+
+      // Recent mode only inventories the focus days for speed; full modes scan all.
+      const inventoryDays =
+        SYNC_MODE === "recent"
+          ? days.filter((d) => focusKeys.includes(d.key))
+          : days;
+      const daysStatus = await inventory(page, inventoryDays.length ? inventoryDays : days);
       const present = daysStatus.filter((d) => d.present).length;
       const missing = daysStatus.filter((d) => d.needsPublish).length;
       const disabled = daysStatus.filter((d) => d.disabled).length;
@@ -378,14 +410,22 @@ async function main() {
         job,
         "check",
         "done",
-        `${present} present · ${missing} need publish · ${disabled} locked`
+        `${present} present · ${missing} need publish · ${disabled} locked` +
+          (SYNC_MODE === "recent" ? " (recent window)" : "")
       );
       writeJob(job);
 
-      const toPublish = days.filter((d) => {
+      let toPublish = days.filter((d) => {
         const st = daysStatus.find((x) => x.key === d.key);
+        if (SYNC_MODE === "all") return st ? !st.disabled : true;
         return st?.needsPublish;
       });
+      if (SYNC_MODE === "recent") {
+        // focusKeys = [today, yesterday] — publish yesterday first.
+        toPublish = toPublish
+          .filter((d) => focusKeys.includes(d.key))
+          .sort((a, b) => focusKeys.indexOf(b.key) - focusKeys.indexOf(a.key));
+      }
 
       job = readJob();
       setStep(
@@ -393,13 +433,14 @@ async function main() {
         "publish",
         "running",
         toPublish.length
-          ? `Publishing ${toPublish.length} day(s) to ${PUBLISH_LABEL}`
-          : "Nothing missing — verifying today"
+          ? `Publishing ${toPublish.length} day(s) [${SYNC_MODE}] to ${PUBLISH_LABEL}`
+          : SYNC_MODE === "recent"
+            ? "Yesterday & today already present"
+            : "Nothing missing — verifying today"
       );
       writeJob(job);
 
-      // Always ensure today is attempted if in plan
-      const publishList = toPublish.length ? toPublish : [];
+      const publishList = toPublish;
       let i = 0;
       for (const day of publishList) {
         i += 1;
@@ -410,9 +451,15 @@ async function main() {
         results.push(res);
       }
 
-      // If today exists and wasn't in list but we want a fresh screenshot, skip if present
       if (!publishList.length) {
-        setStep(job, "publish", "done", "All planned enabled days already present");
+        setStep(
+          job,
+          "publish",
+          "done",
+          SYNC_MODE === "recent"
+            ? "Yesterday & today already on Future Caribbean"
+            : "All planned enabled days already present"
+        );
       } else {
         const ok = results.filter((r) => r.ok).length;
         const skipped = results.filter((r) => r.skipped).length;

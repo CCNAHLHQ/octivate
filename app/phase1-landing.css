@@ -567,3 +567,810 @@
     bottom: 1.5rem;
   }
 }
+
+/* Supported technologies + 1-minute demo strip */
+.land-tech {
+  padding-block: clamp(2.25rem, 5vw, 3.5rem) !important;
+}
+
+.land-tech-inner {
+  display: grid;
+  gap: clamp(1.35rem, 3vw, 1.85rem);
+  justify-items: center;
+}
+
+.land-tech-heading {
+  margin: 0;
+  text-align: center;
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.land-tech-lede {
+  margin: -0.35rem 0 0;
+  max-width: 34rem;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--mist);
+}
+
+.land-tech-logos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 56rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.land-tech-logo {
+  --tech-accent: var(--violet);
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.land-tech-logo[data-tech="openrouter"] { --tech-accent: #6566f1; }
+.land-tech-logo[data-tech="claude"] { --tech-accent: #d97757; }
+.land-tech-logo[data-tech="chatgpt"] { --tech-accent: #10a37f; }
+.land-tech-logo[data-tech="paypal"] { --tech-accent: #003087; }
+.land-tech-logo[data-tech="bitcoin"] { --tech-accent: #f7931a; }
+
+.land-tech-logo-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.5rem;
+  padding: 0.35rem 0.55rem;
+  max-width: 100%;
+  border-radius: 0.65rem;
+  color: color-mix(in srgb, var(--foam) 58%, var(--mist));
+  opacity: 0.9;
+  transform: translateY(0);
+  transition:
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.22s ease,
+    opacity 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+  will-change: transform;
+}
+
+.land-tech-logo:hover .land-tech-logo-inner,
+.land-tech-logo:focus-within .land-tech-logo-inner {
+  transform: translateY(-5px);
+  color: var(--tech-accent);
+  opacity: 1;
+  background: color-mix(in srgb, var(--tech-accent) 9%, transparent);
+  box-shadow:
+    0 10px 22px -14px color-mix(in srgb, var(--tech-accent) 55%, transparent),
+    0 1px 0 color-mix(in srgb, var(--tech-accent) 18%, transparent);
+}
+
+.land-tech-mark {
+  width: 1.45rem;
+  height: 1.45rem;
+  flex: 0 0 1.45rem;
+  display: block;
+  max-width: none;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.land-tech-logo:hover .land-tech-mark,
+.land-tech-logo:focus-within .land-tech-mark {
+  transform: scale(1.06);
+}
+
+.land-tech-logo-label {
+  font-family: var(--f-display);
+  font-size: clamp(0.78rem, 1.5vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .land-tech-logo-inner,
+  .land-tech-mark {
+    transition: none;
+  }
+
+  .land-tech-logo:hover .land-tech-logo-inner,
+  .land-tech-logo:focus-within .land-tech-logo-inner {
+    transform: none;
+  }
+}
+
+.land-tech-demo {
+  width: min(100%, 48rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem 0.85rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--line-strong) 70%, transparent);
+  background: var(--abyss);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 10px 28px -18px rgba(15, 23, 42, 0.16);
+  color: var(--foam);
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 0.18s ease,
+    transform 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.land-tech-demo:hover {
+  border-color: color-mix(in srgb, var(--violet) 36%, var(--line));
+  background: color-mix(in srgb, var(--abyss-2) 55%, var(--abyss));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 14px 32px -18px rgba(15, 23, 42, 0.18);
+  transform: translateY(-1px);
+}
+
+.land-tech-demo-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+}
+
+.land-tech-demo-play {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--mist) 10%, transparent);
+  color: var(--foam);
+  flex: 0 0 auto;
+}
+
+.land-tech-demo-label {
+  font-family: var(--f-display);
+  font-size: 0.98rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.land-tech-demo-art {
+  position: relative;
+  width: 8.5rem;
+  height: 3.4rem;
+  flex: 0 0 auto;
+}
+
+.land-tech-demo-chart {
+  position: absolute;
+  border-radius: 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--line-strong) 80%, transparent);
+  background: var(--abyss-2);
+  overflow: hidden;
+}
+
+.land-tech-demo-chart.is-bars {
+  left: 0;
+  top: 0.35rem;
+  width: 3.4rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.18rem;
+  padding: 0.35rem 0.4rem;
+}
+
+.land-tech-demo-chart.is-bars span {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(180deg, #2dd4bf, #148f84);
+}
+
+.land-tech-demo-chart.is-bars span:nth-child(1) { height: 42%; }
+.land-tech-demo-chart.is-bars span:nth-child(2) { height: 68%; }
+.land-tech-demo-chart.is-bars span:nth-child(3) { height: 52%; }
+.land-tech-demo-chart.is-bars span:nth-child(4) { height: 88%; }
+.land-tech-demo-chart.is-bars span:nth-child(5) { height: 60%; }
+
+.land-tech-demo-chart.is-area {
+  left: 2.4rem;
+  top: 0;
+  width: 4.1rem;
+  height: 2.45rem;
+  color: color-mix(in srgb, var(--violet) 55%, transparent);
+  padding: 0.3rem;
+}
+
+.land-tech-demo-chart.is-area svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.land-tech-demo-avatar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 2.55rem;
+  height: 2.55rem;
+  border-radius: 999px;
+  border: 2px solid var(--abyss);
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.16);
+  background: color-mix(in srgb, var(--abyss-2) 70%, #c7d0e0);
+}
+
+.land-tech-demo-avatar svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.land-tech-demo-avatar .land-tech-avatar-bg {
+  fill: color-mix(in srgb, var(--abyss-2) 55%, #c5cedf);
+}
+
+.land-tech-demo-avatar .land-tech-avatar-fg {
+  fill: color-mix(in srgb, var(--mist) 55%, #8b9bb8);
+}
+
+.land-tech-modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.land-tech-modal-root.is-open {
+  opacity: 1;
+}
+
+.land-tech-modal-root.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.land-tech-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: color-mix(in srgb, var(--chrome-overlay) 92%, #05070f);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.land-tech-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(40rem, calc(100vw - 2rem));
+  max-height: min(34rem, calc(100vh - 2rem));
+  overflow: auto;
+  border-radius: 1.1rem;
+  border: 1px solid var(--line-strong);
+  background: var(--drawer-bg);
+  box-shadow: var(--shadow-pop);
+  padding: 1.15rem 1.2rem 1.25rem;
+  color: var(--foam);
+  transform: translateY(10px) scale(0.985);
+  opacity: 0;
+  transition:
+    transform 0.24s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.22s ease;
+}
+
+.land-tech-modal-root.is-open .land-tech-modal-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.land-tech-modal-root.is-leaving .land-tech-modal-panel {
+  transform: translateY(8px) scale(0.99);
+  opacity: 0;
+}
+
+.land-tech-modal-panel.is-video {
+  width: min(56rem, calc(100vw - 2rem));
+  max-height: min(90vh, 44rem);
+  padding: 1rem 1.05rem 1.1rem;
+}
+
+.land-tech-modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.land-tech-modal-kicker {
+  margin: 0 0 0.2rem;
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.land-tech-modal-head h2 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--foam);
+}
+
+.land-tech-modal-body {
+  margin-top: 0.15rem;
+}
+
+.land-tech-modal-close {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--mist);
+  cursor: pointer;
+}
+
+[data-theme="dark"] .land-tech-demo {
+  background: color-mix(in srgb, var(--drawer-bg) 88%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .land-tech-demo:hover {
+  background: color-mix(in srgb, var(--accent-soft-bg) 70%, rgba(8, 12, 28, 0.8));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .land-tech-demo-play {
+  background: color-mix(in srgb, var(--foam) 10%, transparent);
+}
+
+[data-theme="dark"] .land-tech-demo-chart {
+  border-color: rgba(154, 171, 255, 0.14);
+  background: rgba(12, 18, 32, 0.92);
+}
+
+[data-theme="dark"] .land-tech-demo-avatar {
+  border-color: rgba(240, 244, 255, 0.18);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  background: #1a2234;
+}
+
+[data-theme="dark"] .land-tech-demo-avatar .land-tech-avatar-bg {
+  fill: #1a2234;
+}
+
+[data-theme="dark"] .land-tech-demo-avatar .land-tech-avatar-fg {
+  fill: #8b9bb8;
+}
+
+/* Plyr — Octivate-skinned HTML5 player */
+.land-tech-plyr {
+  --plyr-color-main: var(--octivate-purple, #8950ee);
+  --plyr-video-background: #070b14;
+  --plyr-menu-background: var(--drawer-bg);
+  --plyr-menu-color: var(--foam);
+  --plyr-audio-controls-background: color-mix(in srgb, var(--drawer-bg) 92%, #000);
+  --plyr-audio-control-color: var(--foam);
+  --plyr-badge-background: var(--octivate-purple, #8950ee);
+  --plyr-badge-text-color: #fff;
+  --plyr-border-radius: 0.75rem;
+  --plyr-control-spacing: 12px;
+  --plyr-control-radius: 8px;
+  --plyr-font-family: var(--f-body, inherit);
+  --plyr-font-size-base: 13px;
+  --plyr-font-size-small: 12px;
+  --plyr-range-fill-background: var(--octivate-purple, #8950ee);
+  --plyr-video-control-background-hover: color-mix(in srgb, var(--octivate-purple, #8950ee) 28%, transparent);
+  --plyr-video-control-color: #f4f6ff;
+  position: relative;
+  width: 100%;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  background: #070b14;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+.land-tech-plyr .plyr {
+  border-radius: inherit;
+  --plyr-control-icon-size: 18px;
+}
+
+.land-tech-plyr .plyr__video-wrapper,
+.land-tech-plyr .plyr__poster {
+  background: #070b14;
+}
+
+.land-tech-plyr .plyr--video .plyr__controls {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(5, 8, 16, 0.55) 35%,
+    rgba(5, 8, 16, 0.92) 100%
+  );
+  padding: 1.1rem 0.85rem 0.7rem;
+}
+
+.land-tech-plyr .plyr__control--overlaid {
+  background: color-mix(in srgb, var(--octivate-purple, #8950ee) 92%, #fff);
+  border: 0;
+  box-shadow: 0 12px 28px -10px rgba(137, 80, 238, 0.65);
+}
+
+.land-tech-plyr .plyr__control--overlaid:hover,
+.land-tech-plyr .plyr__control--overlaid:focus {
+  background: color-mix(in srgb, var(--octivate-purple, #8950ee) 78%, #fff);
+}
+
+.land-tech-plyr-video {
+  width: 100%;
+  display: block;
+  max-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .land-tech-modal-root,
+  .land-tech-modal-panel {
+    transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .land-tech-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem 0.75rem;
+  }
+
+  .land-tech-logos .land-tech-logo:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .land-tech-demo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .land-tech-demo-art {
+    align-self: flex-end;
+  }
+}
+
+/* —— Workspace showcase (interactive demo) —— */
+.land-ws {
+  padding-block: clamp(2.75rem, 6vw, 4.5rem) !important;
+  position: relative;
+}
+
+.land-ws::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(80% 60% at 50% 0%, color-mix(in srgb, var(--violet) 10%, transparent), transparent 70%),
+    radial-gradient(50% 40% at 90% 30%, color-mix(in srgb, var(--tide) 8%, transparent), transparent 65%);
+}
+
+.land-ws-head {
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.land-ws-frame {
+  border: 1px solid var(--line-strong);
+  border-radius: calc(var(--r-lg) + 4px);
+  background: var(--abyss);
+  box-shadow: var(--shadow-panel);
+  overflow: hidden;
+}
+
+.land-ws-chrome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--abyss-2) 70%, var(--abyss));
+}
+
+.land-ws-dots {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.land-ws-dots span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--mist) 35%, transparent);
+}
+
+.land-ws-chrome-label {
+  margin: 0;
+  flex: 1;
+  min-width: 8rem;
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.land-ws-tabs {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--mist) 6%, transparent);
+}
+
+.land-ws-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  color: var(--mist);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.land-ws-tab.is-active {
+  background: var(--abyss);
+  color: var(--foam);
+  box-shadow: 0 1px 0 color-mix(in srgb, #fff 50%, transparent) inset;
+}
+
+.land-ws-body {
+  padding: 0.9rem;
+}
+
+.land-ws-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.land-ws-card {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: color-mix(in srgb, var(--abyss-2) 55%, var(--abyss));
+  padding: 0.85rem 0.9rem 0.95rem;
+  min-width: 0;
+}
+
+.land-ws-card-title {
+  margin: 0 0 0.55rem;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.land-ws-split {
+  margin-top: 0.75rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 0.75rem;
+}
+
+.land-ws-trends {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.land-ws-trends li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.land-ws-trends li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.land-ws-trend-copy {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.land-ws-trend-copy strong {
+  font-size: 0.86rem;
+  color: var(--foam);
+  line-height: 1.3;
+}
+
+.land-ws-trend-copy span {
+  font-size: 0.72rem;
+  color: var(--faint);
+}
+
+.land-ws-table-wrap {
+  overflow-x: auto;
+}
+
+.land-ws-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 28rem;
+}
+
+.land-ws-table th {
+  text-align: left;
+  font-family: var(--f-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding: 0.35rem 0.5rem 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.land-ws-table td {
+  padding: 0.65rem 0.5rem 0.65rem 0;
+  font-size: 0.82rem;
+  color: var(--mist);
+  vertical-align: middle;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+.land-ws-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.land-ws-conf {
+  font-family: var(--f-mono);
+  font-weight: 700;
+  color: var(--tide);
+}
+
+.land-ws-coverage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(12rem, 0.85fr);
+  gap: 0.75rem;
+  min-height: 20rem;
+}
+
+.land-ws-map-panel,
+.land-ws-map-skeleton {
+  height: 22rem;
+  border-radius: calc(var(--r-lg) - 2px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--abyss-2);
+}
+
+.land-ws-map-panel .overview-leaflet-map,
+.land-ws-map-panel .leaflet-container {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.land-ws-side {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: color-mix(in srgb, var(--abyss-2) 55%, var(--abyss));
+  padding: 0.85rem 0.9rem;
+}
+
+.land-ws-side-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.86rem;
+  color: var(--mist);
+  line-height: 1.45;
+}
+
+.land-ws-selected {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.land-ws-selected strong {
+  font-size: 1rem;
+  color: var(--foam);
+}
+
+.land-ws-selected > span {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  color: var(--tide);
+}
+
+.land-ws-selected ul {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.land-ws-selected li {
+  display: grid;
+  gap: 0.1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.land-ws-selected em {
+  font-style: normal;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--foam);
+}
+
+.land-ws-selected li span {
+  font-size: 0.72rem;
+  color: var(--faint);
+}
+
+.land-ws-cta {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.land-ws-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 650;
+  color: var(--accent-soft-text);
+  text-decoration: none;
+}
+
+.land-ws-cta-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+  .land-ws-stat-grid,
+  .land-ws-split,
+  .land-ws-coverage {
+    grid-template-columns: 1fr;
+  }
+
+  .land-ws-map-panel,
+  .land-ws-map-skeleton {
+    height: 18rem;
+  }
+}

@@ -296,6 +296,72 @@ export function DistBars({
   );
 }
 
+/** Dense vertical activity bars (operator / overview pulse style). */
+export function ActivityBars({
+  items,
+  heightClass = TALL_CHART_HEIGHT,
+  color = "#2DD4BF",
+  valueLabel = "count",
+}: {
+  items: { label: string; value: number; color?: string; detail?: string }[];
+  heightClass?: string;
+  color?: string;
+  valueLabel?: string;
+}) {
+  const data = items.map((i, idx) => ({
+    ...i,
+    value: Math.max(0, i.value),
+    color: i.color || color || CHART.palette[idx % CHART.palette.length],
+    detail: i.detail || `${Math.max(0, i.value).toLocaleString()} ${valueLabel}`,
+  }));
+  const max = Math.max(1, ...data.map((d) => d.value));
+
+  return (
+    <ChartShell className={heightClass}>
+      <div className={`chart-panel w-full ${heightClass}`}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart
+            data={data}
+            margin={{ left: 4, right: 8, top: 10, bottom: 4 }}
+            barCategoryGap="18%"
+          >
+            <XAxis
+              dataKey="label"
+              tick={CHART.tick}
+              axisLine={false}
+              tickLine={false}
+              interval={0}
+              height={36}
+            />
+            <YAxis type="number" hide domain={[0, max * 1.15]} />
+            <Tooltip
+              cursor={{ fill: CHART.cursor }}
+              content={
+                <ChartTooltipContent
+                  formatter={(_v, _name, item) =>
+                    String(item.payload?.detail ?? `${item.value ?? 0} ${valueLabel}`)
+                  }
+                />
+              }
+            />
+            <Bar
+              dataKey="value"
+              name={valueLabel}
+              radius={[4, 4, 0, 0]}
+              maxBarSize={28}
+              activeBar={{ opacity: 0.9 }}
+            >
+              {data.map((entry, i) => (
+                <Cell key={i} fill={entry.color} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </ChartShell>
+  );
+}
+
 export function CapacityBars({
   items,
   heightClass = TALL_CHART_HEIGHT,

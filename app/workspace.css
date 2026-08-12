@@ -597,45 +597,13 @@
   color: var(--mist);
 }
 
-/* Soft refresh - brief blur instead of full skeleton swap */
+/* Soft refresh — no blur/overlay; children show status in place */
 .ws-loading-blur {
   position: relative;
 }
 
-.ws-loading-blur.is-active > :not(.ws-loading-blur-veil) {
-  filter: blur(2px);
-  opacity: 0.78;
-  pointer-events: none;
-  user-select: none;
-  transition:
-    filter 0.22s ease,
-    opacity 0.22s ease;
-}
-
-.ws-loading-blur-veil {
-  position: absolute;
-  inset: 0;
-  z-index: 6;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 2.5rem;
-  background: rgba(7, 11, 23, 0.08);
-  pointer-events: none;
-}
-
-.ws-loading-blur-pill {
-  border-radius: 999px;
-  border: 1px solid rgba(168, 85, 247, 0.32);
-  background: rgba(12, 21, 38, 0.92);
-  padding: 0.35rem 0.75rem;
-  font-family: var(--f-mono);
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #e5d0ff;
-  box-shadow: 0 12px 32px -16px rgba(3, 6, 18, 0.95);
+.ws-loading-blur.is-active {
+  /* Intentionally transparent: keep map/list readable while updating */
 }
 
 .ws-brief-grid {

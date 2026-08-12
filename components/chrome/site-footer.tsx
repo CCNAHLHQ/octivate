@@ -5,6 +5,7 @@ import { OctivateLogo } from "@/components/brand";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { JurisdictionTicker } from "@/components/chrome/jurisdiction-ticker";
 import { useT } from "@/components/i18n/locale-provider";
+import { openCookieSettings } from "@/lib/cookies/consent";
 
 function ArrowIcon() {
   return (
@@ -39,6 +40,10 @@ export function SiteFooter() {
 
           <div className="f-col">
             <h4>{t("footer.explore")}</h4>
+            <Link href="/#workspace">
+              <ArrowIcon />
+              {t("footer.product")}
+            </Link>
             <Link href="/#why">
               <ArrowIcon />
               {t("footer.why")}
@@ -87,6 +92,26 @@ export function SiteFooter() {
               <ArrowIcon />
               {t("footer.team")}
             </Link>
+          </div>
+
+          <div className="f-col">
+            <h4>{t("footer.legal")}</h4>
+            <Link href="/privacy">
+              <ArrowIcon />
+              {t("footer.privacy")}
+            </Link>
+            <Link href="/terms">
+              <ArrowIcon />
+              {t("footer.terms")}
+            </Link>
+            <Link href="/cookies">
+              <ArrowIcon />
+              {t("footer.cookies")}
+            </Link>
+            <button type="button" className="f-link-btn" onClick={() => openCookieSettings()}>
+              <ArrowIcon />
+              {t("footer.cookieSettings")}
+            </button>
           </div>
         </div>
 

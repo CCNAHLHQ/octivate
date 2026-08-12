@@ -33,6 +33,7 @@ import { OperatorIntroModal } from "@/components/onboarding/operator-intro-modal
 import { SidebarAccountCard } from "@/components/dashboard/sidebar-account";
 import { SupportWidget } from "@/components/support/support-widget";
 import { SessionGuard } from "@/components/auth/session-guard";
+import { OperatorSupportAlerts } from "@/components/operator/operator-support-alerts";
 import { useT } from "@/components/i18n/locale-provider";
 import { WORKSPACE_TOUR_SIDEBAR_EVENT } from "@/lib/onboarding/content";
 import { setLocationHash } from "@/lib/navigation/hash";
@@ -403,6 +404,27 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
 
           <div className="dash-aside-foot">
             <SidebarAccountCard onNavigate={() => setSidebarOpen(false)} />
+            {/* Headless: keep operator support SSE armed without sidebar chrome icons. */}
+            {isOperatorUser ? <OperatorSupportAlerts /> : null}
+            <nav className="dash-legal-links" data-tour="legal-notice" aria-label="Legal">
+              <Link
+                href="/privacy"
+                className="dash-legal-link"
+                onClick={() => setSidebarOpen(false)}
+              >
+                {t("footer.privacy")}
+              </Link>
+              <span className="dash-legal-sep" aria-hidden>
+                ·
+              </span>
+              <Link
+                href="/terms"
+                className="dash-legal-link"
+                onClick={() => setSidebarOpen(false)}
+              >
+                {t("footer.terms")}
+              </Link>
+            </nav>
             {isOperatorRoute || variant === "operator" ? (
               <WorkspaceTutorialButton
                 variant="sidebar"

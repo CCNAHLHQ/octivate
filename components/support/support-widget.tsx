@@ -671,6 +671,7 @@ export function SupportWidget({
           className={cn("scw-fab", open && "is-open")}
           aria-label={t("support.chat.open")}
           aria-expanded={open}
+          data-tour="support-help"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? (

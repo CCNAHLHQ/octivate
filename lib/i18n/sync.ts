@@ -1,5 +1,5 @@
 import { getOpenRouterClient } from "@/lib/openrouter/client";
-import { resolveModel } from "@/lib/openrouter/config";
+import { resolveDocsModel, resolveModel } from "@/lib/openrouter/config";
 import { completeJson, getThrownCompletionSpend } from "@/lib/openrouter/json";
 import { recordUsage } from "@/lib/usage/usage-store";
 import { hashSource } from "@/lib/i18n/hash";
@@ -30,8 +30,8 @@ const LOCALE_LABELS: Record<string, string> = {
   hi: "Hindi",
 };
 
-/** Smaller batches improve JSON reliability for dense UI catalogs. */
-const CHUNK = 20;
+/** Smaller batches improve JSON reliability for dense UI + legal catalogs. */
+const CHUNK = 8;
 
 function chunkEntries(entries: MessageDict, size = CHUNK): MessageDict[] {
   const keys = Object.keys(entries);
@@ -53,7 +53,8 @@ export async function translateBatch(
 
   const client = getOpenRouterClient();
   const localeName = LOCALE_LABELS[locale] || locale;
-  const model = resolveModel(false);
+  // Prefer docs-class model for reliable JSON localization of long legal/UI strings.
+  const model = resolveDocsModel() || resolveModel(false);
   const merged: MessageDict = {};
 
   for (const batch of chunkEntries(entries)) {
@@ -63,15 +64,16 @@ export async function translateBatch(
         client,
         {
           model,
-          maxTokens: 4500,
+          maxTokens: 6000,
           messages: [
             {
               role: "system",
               content: [
-                `You localize UI and short editorial copy for Octivate, a Caribbean decision-intelligence SaaS by CENSII.`,
+                `You localize UI, marketing, cookie consent, and legal copy for Octivate, a Caribbean decision-intelligence SaaS by CENSII.`,
                 `Translate each JSON value into ${localeName} (locale code: ${locale}).`,
-                `Keep brand names unchanged: Octivate, CENSII, PSN, OpenRouter.`,
-                `Preserve punctuation, em dashes, placeholders, and URLs.`,
+                `Keep brand names unchanged: Octivate, CENSII, PSN, OpenRouter, Stripe, PayPal, ChatGPT, Claude, Bitcoin.`,
+                `Preserve punctuation, em dashes, placeholders like {n}, emails, and URLs.`,
+                `For legal text, keep meaning precise; do not invent new obligations.`,
                 `Return ONLY a JSON object with the same keys and translated string values.`,
               ].join(" "),
             },

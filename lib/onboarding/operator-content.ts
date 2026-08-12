@@ -1,19 +1,24 @@
 import type { LucideIcon } from "lucide-react";
 import {
+  BellRing,
   Bug,
   Database,
   DollarSign,
   FileOutput,
+  Languages,
   LifeBuoy,
   Mail,
+  MapPinned,
+  Scale,
   Shield,
   SlidersHorizontal,
+  SunMoon,
   Trash2,
   Users,
 } from "lucide-react";
 import type { IntroStep } from "@/lib/onboarding/content";
 
-export const OPERATOR_INTRO_VERSION = "v2";
+export const OPERATOR_INTRO_VERSION = "v3";
 export const OPERATOR_INTRO_STORAGE_KEY = `octivate-operator-intro-${OPERATOR_INTRO_VERSION}`;
 export const OPERATOR_INTRO_EVENT = "octivate:open-operator-intro";
 
@@ -40,13 +45,34 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
     requireSidebar: true,
   },
   {
+    id: "coverage",
+    kicker: "Step 2 · Theatre coverage",
+    title: "Workspace ships a",
+    titleAccent: "Theatre coverage map",
+    tagline: "Indicate only — stays on the operator console.",
+    description:
+      "Members see a live Theatre coverage map on Workspace Overview (Leaflet hotspots by country). Operators keep working here; open Workspace mode when you want to inspect the map itself. This step only indicates the addition.",
+    bullets: [
+      { lead: "Overview map", text: "lives on /dashboard for members" },
+      { lead: "Hotspots", text: "reflect project geography and counts" },
+      { lead: "No redirect", text: "this tour stays on the operator console" },
+    ],
+    icon: MapPinned,
+    art: "map",
+    accent: "teal",
+    route: "/dashboard/operator#pulse",
+    target: "[data-tour='op-tab-pulse']",
+    demo: "highlight",
+    requireSidebar: true,
+  },
+  {
     id: "operations",
-    kicker: "Step 2 · Operations",
+    kicker: "Step 3 · Operations",
     title: "Clear and",
     titleAccent: "moderate",
-    tagline: "Session cleanup and compliance actions.",
+    tagline: "Session cleanup, i18n sync, and logbook publish.",
     description:
-      "Operations covers destructive maintenance — pruning stuck sessions and handling moderation queues when something goes wrong.",
+      "Operations covers maintenance — pruning stuck sessions, moderation queues, i18n catalog sync, and the Future Caribbean Logbook publisher.",
     bullets: [
       { lead: "Use sparingly", text: "actions here affect live production state" },
       { lead: "Audit", text: "events land in Debug for forensics" },
@@ -61,7 +87,7 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
   },
   {
     id: "control",
-    kicker: "Step 3 · Control",
+    kicker: "Step 4 · Control",
     title: "Tune platform",
     titleAccent: "limits",
     tagline: "Tokens, uploads, avatars, and review policy.",
@@ -81,7 +107,7 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
   },
   {
     id: "catalog",
-    kicker: "Step 4 · Catalog",
+    kicker: "Step 5 · Catalog",
     title: "Sources and",
     titleAccent: "signals",
     tagline: "Import and curate evidence inputs.",
@@ -101,12 +127,12 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
   },
   {
     id: "support",
-    kicker: "Step 5 · Customer Support",
+    kicker: "Step 6 · Customer Support",
     title: "Staff",
     titleAccent: "Customer Support",
     tagline: "Live customer threads with safe previews.",
     description:
-      "Customer Support is the founder inbox. Reply in-thread, preview attachments in-browser, and never download untrusted files locally.",
+      "Customer Support is the founder inbox. Reply in-thread, preview attachments in-browser, and never download untrusted files locally. Members use Help chat; you answer here.",
     bullets: [
       { lead: "Live stream", text: "keeps threads current under load" },
       { lead: "Avatars", text: "identify Shemuel, Nirvana, and Jaden" },
@@ -120,8 +146,67 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
     requireSidebar: true,
   },
   {
+    id: "support-alerts",
+    kicker: "Step 7 · Support alerts",
+    title: "Never miss a",
+    titleAccent: "member reply",
+    tagline: "Background alerts stay armed across console tabs.",
+    description:
+      "Operator support alerts listen in the background. New member messages push toasts and deep-link into the Customer Support thread — even when you are on Pulse or Mail.",
+    bullets: [
+      { lead: "Toasts", text: "surface new member messages immediately" },
+      { lead: "Open thread", text: "jumps into Customer Support for that account" },
+      { lead: "Always on", text: "SSE stays armed while you are signed in as operator" },
+    ],
+    icon: BellRing,
+    art: "support",
+    accent: "amber",
+    route: "/dashboard/operator#support",
+    target: "[data-tour='op-tab-support']",
+    demo: "pulse",
+    requireSidebar: true,
+  },
+  {
+    id: "translate",
+    kicker: "Step 8 · Translation",
+    title: "Operator",
+    titleAccent: "language control",
+    tagline: "Same realtime catalogs as the public site.",
+    description:
+      "Locale catalogs power member chrome and legal copy. Preview languages from the public site language control; sync full catalogs from Operations.",
+    bullets: [
+      { lead: "Public chrome", text: "hosts the language picker on marketing pages" },
+      { lead: "Catalogs", text: "match what members and landing visitors see" },
+      { lead: "Operations", text: "hosts full catalog sync tooling" },
+    ],
+    icon: Languages,
+    art: "translate",
+    accent: "violet",
+    route: "/dashboard/operator#pulse",
+    demo: "highlight",
+  },
+  {
+    id: "lighting",
+    kicker: "Step 9 · Lighting",
+    title: "Set console",
+    titleAccent: "lighting",
+    tagline: "Light or dark for long operator sessions.",
+    description:
+      "Lighting switches light and dark themes for the operator console and workspace. Use the sun / moon control on the public site navbar or footer.",
+    bullets: [
+      { lead: "Toggle", text: "lives on marketing chrome, not the operator sidebar" },
+      { lead: "Shared", text: "theme preference follows you into Workspace mode" },
+      { lead: "Accessibility", text: "use whichever lighting reduces eye strain" },
+    ],
+    icon: SunMoon,
+    art: "theme",
+    accent: "amber",
+    route: "/dashboard/operator#pulse",
+    demo: "highlight",
+  },
+  {
     id: "mail",
-    kicker: "Step 6 · Mail",
+    kicker: "Step 10 · Mail",
     title: "Send from your",
     titleAccent: "account",
     tagline: "Mailing list + Haraka outbound.",
@@ -141,7 +226,7 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
   },
   {
     id: "users",
-    kicker: "Step 7 · Users",
+    kicker: "Step 11 · Users",
     title: "See members",
     titleAccent: "and bios",
     tagline: "Counts, disable, and password resets.",
@@ -161,7 +246,7 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
   },
   {
     id: "pricing",
-    kicker: "Step 8 · Pricing",
+    kicker: "Step 12 · Pricing",
     title: "Edit plan",
     titleAccent: "copy",
     tagline: "Public pricing cards and notes.",
@@ -181,7 +266,7 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
   },
   {
     id: "exports",
-    kicker: "Step 9 · Exports",
+    kicker: "Step 13 · Exports",
     title: "Shape brief",
     titleAccent: "templates",
     tagline: "HTML export layouts for stakeholders.",
@@ -200,8 +285,29 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
     requireSidebar: true,
   },
   {
+    id: "legal",
+    kicker: "Step 14 · Legal",
+    title: "Privacy Policy",
+    titleAccent: "& Terms of Service",
+    tagline: "Open either page from the sidebar footer.",
+    description:
+      "Members accept Privacy Policy and Terms of Service at signup. Operators can open either public page from the sidebar footer links anytime.",
+    bullets: [
+      { lead: "Privacy Policy", text: "is published for public trust" },
+      { lead: "Terms of Service", text: "govern accounts and platform use" },
+      { lead: "Sidebar footer", text: "links navigate to the full legal pages" },
+    ],
+    icon: Scale,
+    art: "legal",
+    accent: "teal",
+    route: "/dashboard/operator#pulse",
+    target: "[data-tour='legal-notice']",
+    demo: "highlight",
+    requireSidebar: true,
+  },
+  {
     id: "debug",
-    kicker: "Step 10 · Debug",
+    kicker: "Step 15 · Debug",
     title: "Watch the",
     titleAccent: "live console",
     tagline: "OpenRouter, pipeline, mail, and security events.",

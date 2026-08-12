@@ -675,12 +675,12 @@ kbd{font-family:var(--f-mono);font-size:.68rem;background:var(--abyss-2);border:
 @keyframes blip{0%,100%{opacity:.6;transform:scale(.9)}50%{opacity:1;transform:scale(1.15)}}
 
 .f-col h4{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);margin-bottom:18px}
-.f-col a{display:flex;align-items:center;gap:9px;padding:6px 0;font-size:15px;color:var(--mist);opacity:.78;
+.f-col a,.f-col .f-link-btn{display:flex;align-items:center;gap:9px;padding:6px 0;font-size:15px;color:var(--mist);opacity:.78;background:none;border:0;cursor:pointer;font:inherit;text-align:left;width:100%;
   transition:opacity .3s cubic-bezier(.2,.7,.2,1), color .3s ease, transform .35s cubic-bezier(.2,.7,.2,1)}
-.f-col a:hover{opacity:1;color:var(--foam);transform:translateX(5px)}
-.f-col a svg{width:14px;height:14px;flex:none;opacity:0;transform:translateX(-6px);
+.f-col a:hover,.f-col .f-link-btn:hover{opacity:1;color:var(--foam);transform:translateX(5px)}
+.f-col a svg,.f-col .f-link-btn svg{width:14px;height:14px;flex:none;opacity:0;transform:translateX(-6px);
   transition:.35s cubic-bezier(.2,.7,.2,1);color:#D8B4FE;stroke:currentColor;fill:none}
-.f-col a:hover svg{opacity:1;transform:none}
+.f-col a:hover svg,.f-col .f-link-btn:hover svg{opacity:1;transform:none}
 
 /* Footer watermark — fully above the dashed divider */
 .f-mark{position:relative;z-index:1;display:flex;justify-content:center;align-items:center;padding:28px 0 32px;opacity:.22;pointer-events:none;user-select:none;line-height:1;overflow:visible}

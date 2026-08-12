@@ -1,0 +1,278 @@
+/* Cookie CMP — Metabase-style floating pill + Octivate settings modal */
+
+.ck-pill {
+  position: fixed;
+  left: 50%;
+  bottom: max(1.1rem, env(safe-area-inset-bottom, 0px) + 0.75rem);
+  z-index: 70;
+  transform: translateX(-50%) translateY(12px);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--line-strong) 80%, transparent);
+  background: color-mix(in srgb, #101828 92%, #000);
+  color: #e8eefc;
+  box-shadow: 0 16px 40px -18px rgba(3, 6, 18, 0.72);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.22s ease,
+    transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ck-pill.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.ck-pill-label {
+  font-family: var(--f-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.ck-pill-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ck-pill-btn {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.16s ease, transform 0.16s ease;
+}
+
+.ck-pill-btn.is-gear {
+  background: color-mix(in srgb, #fff 10%, transparent);
+  color: #c5cee0;
+}
+
+.ck-pill-btn.is-gear:hover {
+  background: color-mix(in srgb, #fff 16%, transparent);
+  color: #fff;
+}
+
+.ck-pill-btn.is-accept {
+  background: var(--octivate-purple, #8950ee);
+  color: #fff;
+}
+
+.ck-pill-btn.is-accept:hover {
+  background: color-mix(in srgb, var(--octivate-purple, #8950ee) 82%, #fff);
+  transform: scale(1.04);
+}
+
+.ck-modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.ck-modal-root.is-open {
+  opacity: 1;
+}
+
+.ck-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: color-mix(in srgb, var(--chrome-overlay) 88%, #05070f);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+
+.ck-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(26rem, calc(100vw - 2rem));
+  border-radius: 1rem;
+  border: 1px solid var(--line-strong);
+  background: var(--drawer-bg);
+  color: var(--foam);
+  box-shadow: var(--shadow-pop);
+  padding: 1.15rem 1.2rem 1.2rem;
+  transform: translateY(8px) scale(0.985);
+  opacity: 0;
+  transition:
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.2s ease;
+}
+
+.ck-modal-root.is-open .ck-modal-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.ck-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.ck-modal-head h2 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ck-modal-close {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--mist);
+  cursor: pointer;
+}
+
+.ck-modal-close:hover {
+  color: var(--foam);
+  background: var(--ghost-hover-bg);
+}
+
+.ck-modal-rows {
+  margin: 0.65rem 0 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.ck-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ck-row-copy {
+  min-width: 0;
+}
+
+.ck-row-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--foam);
+}
+
+.ck-row-hint {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  color: var(--faint);
+  line-height: 1.35;
+}
+
+.ck-always {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-soft-text);
+}
+
+.ck-toggle {
+  position: relative;
+  width: 2.55rem;
+  height: 1.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: color-mix(in srgb, var(--mist) 16%, transparent);
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: background 0.16s ease, border-color 0.16s ease;
+}
+
+.ck-toggle.is-on {
+  background: color-mix(in srgb, var(--octivate-purple, #8950ee) 78%, #fff);
+  border-color: color-mix(in srgb, var(--octivate-purple, #8950ee) 55%, var(--line));
+}
+
+.ck-toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.25);
+  transition: transform 0.16s ease;
+}
+
+.ck-toggle.is-on .ck-toggle-knob {
+  transform: translateX(1.05rem);
+}
+
+.ck-modal-foot {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.ck-statement {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-soft-text);
+  text-decoration: none;
+}
+
+.ck-statement:hover {
+  text-decoration: underline;
+}
+
+.ck-save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.65rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--octivate-purple, #8950ee);
+  color: #fff;
+  font-weight: 650;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.16s ease, transform 0.16s ease;
+}
+
+.ck-save:hover {
+  background: color-mix(in srgb, var(--octivate-purple, #8950ee) 86%, #fff);
+}
+
+[data-theme="light"] .ck-pill {
+  background: color-mix(in srgb, #1a2234 94%, #000);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ck-pill,
+  .ck-modal-root,
+  .ck-modal-panel,
+  .ck-toggle-knob {
+    transition: none;
+  }
+}

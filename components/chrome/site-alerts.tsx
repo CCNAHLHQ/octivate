@@ -83,7 +83,11 @@ export function SiteAlerts({ className }: { className?: string }) {
   }
 
   return (
-    <div ref={rootRef} className={cn("site-alerts", className)}>
+    <div
+      ref={rootRef}
+      className={cn("site-alerts", className)}
+      data-tour="support-alerts"
+    >
       <OperatorSupportAlerts />
       <Tooltip
         content={
@@ -106,6 +110,7 @@ export function SiteAlerts({ className }: { className?: string }) {
           aria-expanded={open}
           aria-haspopup="dialog"
           title="Support alerts"
+          data-tour="support-alerts-btn"
           onClick={() => setOpen((v) => !v)}
         >
           <Bell className="site-alerts-ico" aria-hidden strokeWidth={2.1} />

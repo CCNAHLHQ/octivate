@@ -40,6 +40,7 @@ export function SiteTranslate({ className }: { className?: string }) {
       ref={rootRef}
       className={cn("site-translate notranslate", className)}
       translate="no"
+      data-tour="chrome-translate"
     >
       <button
         type="button"
@@ -99,7 +100,7 @@ export function SiteTranslate({ className }: { className?: string }) {
             );
           })}
           {locale !== PAGE_LANGUAGE ? (
-            <p className="site-translate-hint">Cached on server · Octivate i18n</p>
+            <p className="site-translate-hint">{t("nav.translateHint")}</p>
           ) : null}
         </div>
       ) : null}

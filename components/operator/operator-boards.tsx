@@ -19,7 +19,7 @@ import { OperatorRuntimePanel } from "@/components/operator/operator-runtime-pan
 import { OperatorModelConfigPanel } from "@/components/operator/operator-model-config-panel";
 import { OperatorEvidencePipelinePanel } from "@/components/operator/operator-evidence-pipeline-panel";
 import { ProgressBar } from "@/components/ui/progress";
-import { LazyDonutChart } from "@/components/ui/lazy-charts";
+import { LazyActivityBars, LazyCapacityBars } from "@/components/ui/lazy-charts";
 import {
   WorkspaceKpiStrip,
   type WorkspaceKpi,
@@ -35,6 +35,9 @@ type ChartBundle = {
   cost: ReactNode;
   runtime: ReactNode;
 };
+
+const SESSION_COLORS = ["#2DD4BF", "#A855F7", "#F5B84B", "#FF6B5B", "#78A0FF"];
+const COST_COLORS = ["#F97316", "#F5B84B", "#FF6B5B", "#A855F7", "#2DD4BF"];
 
 export function buildOperatorCharts({
   sessionsTotal,
@@ -67,21 +70,55 @@ export function buildOperatorCharts({
   keyConfigured: boolean;
   allowPremiumModels: boolean;
 }): ChartBundle {
+  const sessionBars = sessionSegments.map((s, i) => ({
+    label: s.name,
+    value: s.value,
+    color: SESSION_COLORS[i % SESSION_COLORS.length],
+    detail: `${s.value.toLocaleString()} sessions`,
+  }));
+  const costBars = costSegments.map((s, i) => ({
+    label: s.name.length > 14 ? `${s.name.slice(0, 12)}…` : s.name,
+    value: s.value,
+    color: COST_COLORS[i % COST_COLORS.length],
+    detail: `$${s.value.toFixed(2)} · ${s.name}`,
+  }));
+
   return {
     sessions: (
       <div className="op-module-chart">
         <p className="op-module-sub">{sessionsTotal} total</p>
-        <LazyDonutChart centerLabel="sessions" segments={sessionSegments} />
+        <LazyActivityBars
+          items={sessionBars.length ? sessionBars : [{ label: "Idle", value: 0, color: "#2DD4BF" }]}
+          heightClass="h-[13.5rem]"
+          color="#2DD4BF"
+          valueLabel="sessions"
+        />
       </div>
     ),
     capacity: (
       <div className="op-module-chart overview-usage-split">
         <p className="op-module-sub">Tokens & concurrency</p>
-        <LazyDonutChart
-          centerLabel="agents"
-          segments={[
-            { name: "Active", value: runningSessions },
-            { name: "Available", value: agentAvailable },
+        <LazyCapacityBars
+          heightClass="h-[9.5rem]"
+          items={[
+            {
+              label: "Agents",
+              used: runningSessions,
+              limit: Math.max(1, concurrentAgents),
+              color: "#A855F7",
+            },
+            {
+              label: "Tokens",
+              used: tokensUsed,
+              limit: Math.max(1, tokensPerDay),
+              color: "#2DD4BF",
+            },
+            {
+              label: "Slots free",
+              used: agentAvailable,
+              limit: Math.max(1, concurrentAgents),
+              color: "#78A0FF",
+            },
           ]}
         />
         <div className="overview-usage-meter">
@@ -99,7 +136,16 @@ export function buildOperatorCharts({
     cost: (
       <div className="op-module-chart">
         <p className="op-module-sub">${periodCostUsd.toFixed(2)} period spend</p>
-        <LazyDonutChart centerLabel="USD" segments={costSegments} />
+        <LazyActivityBars
+          items={
+            costBars.length
+              ? costBars
+              : [{ label: "None", value: 0, color: "#F97316", detail: "$0.00" }]
+          }
+          heightClass="h-[13.5rem]"
+          color="#F97316"
+          valueLabel="USD"
+        />
         <p className="op-module-sub" style={{ marginTop: "0.45rem" }}>
           By model this period
         </p>

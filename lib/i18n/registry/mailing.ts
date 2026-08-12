@@ -18,7 +18,7 @@ export const MAILING_MESSAGES = {
   "mailing.saving": "Saving…",
   "mailing.optOut": "Opt out",
   "mailing.fine":
-    "Email address shared with Mailchimp. Your details are used only for this mailing list and are not shared with third parties.",
+    "Your details are stored for this Octivate mailing list only and are not sold. See our Privacy Policy for how we process email.",
   "mailing.consentRequired": "Please confirm you want product updates.",
   "mailing.success": "You're on the list — occasional product notes only.",
   "mailing.unsubscribed": "You're off the list. You can rejoin any time.",

@@ -5,6 +5,8 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { AppShell } from "@/components/dashboard/app-shell";
+import { CountryActivityMap } from "@/components/dashboard/country-activity-map";
+import { CountryProjectsModal } from "@/components/dashboard/country-projects-modal";
 import { OverviewStatCard } from "@/components/dashboard/overview-stat-card";
 import { TopicStarters } from "@/components/dashboard/topic-starters";
 import { Card } from "@/components/ui/card";
@@ -21,6 +23,10 @@ import { WorkspaceToolbar } from "@/components/workspace/workspace-toolbar";
 import { Skeleton } from "@/components/ui/progress";
 import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch } from "@/lib/api-client";
+import {
+  aggregateProjectsByCountry,
+  type CountryProjectBucket,
+} from "@/lib/geo/aggregate-projects";
 import { useWorkspaceRefresh } from "@/lib/hooks/use-workspace-refresh";
 import type { Brief, CountryPack, Monitor, Project, Trend, UsageSnapshot } from "@/lib/types";
 import { setLocationHash } from "@/lib/navigation/hash";
@@ -61,6 +67,7 @@ export function OverviewDashboard() {
   const [packs, setPacks] = useState<CountryPack[]>([]);
   const [usage, setUsage] = useState<UsageSnapshot | null>(null);
   const [tab, setTab] = useState<OverviewTab>("insights");
+  const [mapCountry, setMapCountry] = useState<CountryProjectBucket | null>(null);
 
   const load = useCallback(async (soft = false) => {
     if (soft) setRefreshing(true);
@@ -125,6 +132,8 @@ export function OverviewDashboard() {
   const usagePct = usage ? Math.min(100, (usage.tokensUsed / usage.tokensLimit) * 100) : 0;
 
   const pipelineCount = projects.length + monitors.length + briefs.length;
+
+  const countryBuckets = useMemo(() => aggregateProjectsByCountry(projects), [projects]);
 
   const statCards = initialLoading
     ? null
@@ -286,10 +295,13 @@ export function OverviewDashboard() {
         </div>
 
         {initialLoading ? (
-          <div className="overview-stat-grid is-primary">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <Skeleton key={i} className="h-[18.5rem] rounded-[var(--r-lg)]" />
-            ))}
+          <div className="space-y-5">
+            <Skeleton className="h-[16rem] rounded-[var(--r-lg)] sm:h-[22rem]" />
+            <div className="overview-stat-grid is-primary">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <Skeleton key={i} className="h-[18.5rem] rounded-[var(--r-lg)]" />
+              ))}
+            </div>
           </div>
         ) : (
           <LoadingBlur active={refreshing}>
@@ -303,6 +315,13 @@ export function OverviewDashboard() {
                   exit={{ opacity: 0, y: -6 }}
                   transition={{ duration: 0.22 }}
                 >
+                  <CountryActivityMap
+                    buckets={countryBuckets}
+                    refreshing={refreshing}
+                    onSelect={setMapCountry}
+                    onLiveRefresh={() => load(true)}
+                  />
+
                   <div className="overview-stat-grid is-primary">
                     {statCards?.slice(0, 4).map(({ key, node }, i) => (
                       <motion.div
@@ -476,6 +495,12 @@ export function OverviewDashboard() {
             </AnimatePresence>
           </LoadingBlur>
         )}
+
+        <CountryProjectsModal
+          open={Boolean(mapCountry)}
+          bucket={mapCountry}
+          onClose={() => setMapCountry(null)}
+        />
       </div>
     </AppShell>
   );

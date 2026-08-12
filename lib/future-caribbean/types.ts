@@ -26,9 +26,13 @@ export type FcJobStep = {
   detail?: string;
 };
 
+export type FcSyncMode = "missing" | "recent" | "all";
+
 export type FcLogbookJob = {
   id: string;
   status: "idle" | "running" | "done" | "error";
+  mode?: FcSyncMode;
+  auto?: boolean;
   publishTarget: string;
   publishTargetLabel: string;
   startedAt: string | null;

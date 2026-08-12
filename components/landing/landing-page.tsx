@@ -12,6 +12,8 @@ import {
   MailingListSection,
   openMailingListModal,
 } from "@/components/landing/mailing-list";
+import { TechTrustSection } from "@/components/landing/tech-trust-section";
+import { WorkspaceShowcase } from "@/components/landing/workspace-showcase";
 import { useT } from "@/components/i18n/locale-provider";
 
 const SAMPLE_BRIEF = "/sample/brief";
@@ -103,6 +105,10 @@ export function LandingPage() {
             </div>
           </div>
         </section>
+
+        <TechTrustSection />
+
+        <WorkspaceShowcase />
 
         <section className="section phase1-why" id="why">
           <div className="container phase1-split">

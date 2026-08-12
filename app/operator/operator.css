@@ -5840,21 +5840,66 @@
 
 /* Future Caribbean Logbook publisher (Operations) */
 .op-fc-panel { display: grid; gap: 0.85rem; }
+.op-fc-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; justify-content: flex-end; }
+.op-fc-top {
+  display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: center; justify-content: space-between;
+}
 .op-fc-target {
-  display: flex; gap: 0.65rem; align-items: flex-start;
-  padding: 0.75rem 0.85rem; border-radius: 12px;
+  display: flex; gap: 0.65rem; align-items: flex-start; flex: 1 1 16rem;
+  padding: 0.65rem 0.8rem; border-radius: 12px;
   border: 1px solid color-mix(in srgb, var(--tide) 28%, var(--line-strong));
   background: linear-gradient(135deg, color-mix(in srgb, var(--tide) 10%, transparent), transparent 55%), color-mix(in srgb, var(--ink) 88%, #041016);
 }
 .op-fc-target-label { margin: 0; font-family: var(--f-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tide); }
-.op-fc-target-link { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.15rem; color: var(--foam); font-weight: 650; font-size: 0.92rem; text-decoration: none; }
+.op-fc-target-link { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.15rem; color: var(--foam); font-weight: 650; font-size: 0.9rem; text-decoration: none; }
 .op-fc-target-link:hover { color: var(--tide); }
 .op-fc-target-url { margin: 0.2rem 0 0; font-size: 0.72rem; color: var(--mist); word-break: break-all; }
+.op-fc-auto {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.74rem; color: var(--mist); user-select: none; cursor: pointer;
+}
+.op-fc-auto input { accent-color: var(--tide); }
 .op-fc-stats { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .op-src-pulse-chip.is-coral { color: #FFA79C; border-color: color-mix(in srgb, var(--coral) 35%, var(--line)); background: color-mix(in srgb, var(--coral) 12%, transparent); }
+.op-fc-recent {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem;
+}
+@media (max-width: 720px) {
+  .op-fc-recent { grid-template-columns: 1fr; }
+}
+.op-fc-recent-card {
+  display: grid; gap: 0.3rem; padding: 0.7rem 0.8rem; border-radius: 12px;
+  border: 1px solid var(--line); background: color-mix(in srgb, var(--ink) 93%, #0a0e18);
+}
+.op-fc-recent-card.is-today {
+  border-color: color-mix(in srgb, var(--tide) 45%, var(--line));
+  background: linear-gradient(145deg, color-mix(in srgb, var(--tide) 10%, transparent), color-mix(in srgb, var(--ink) 94%, #0a0e18));
+}
+.op-fc-recent-card.is-needs {
+  border-color: color-mix(in srgb, var(--amber, #f0b429) 40%, var(--line));
+}
+.op-fc-recent-card header { display: flex; justify-content: space-between; gap: 0.5rem; align-items: center; }
+.op-fc-recent-kind {
+  font-family: var(--f-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tide);
+}
+.op-fc-recent-key { margin: 0; font-size: 0.95rem; font-weight: 700; color: var(--foam); }
+.op-fc-recent-title { margin: 0; font-size: 0.78rem; color: var(--mist); line-height: 1.35; }
+.op-fc-recent-card a {
+  display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 0.2rem;
+  font-size: 0.72rem; color: var(--tide); text-decoration: none;
+}
+.op-fc-recent-card a:hover { text-decoration: underline; }
 .op-fc-progress { display: grid; gap: 0.4rem; }
 .op-fc-progress-meta { display: flex; justify-content: space-between; gap: 0.75rem; font-size: 0.78rem; color: var(--mist); }
-.op-fc-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; }
+.op-fc-steps-wrap {
+  border: 1px solid var(--line); border-radius: 10px; padding: 0.55rem 0.75rem;
+  background: color-mix(in srgb, var(--ink) 94%, #0a0e18);
+}
+.op-fc-steps-wrap > summary {
+  cursor: pointer; font-size: 0.78rem; color: var(--mist); list-style: none;
+}
+.op-fc-steps-wrap > summary::-webkit-details-marker { display: none; }
+.op-fc-steps { list-style: none; margin: 0.55rem 0 0; padding: 0; display: grid; gap: 0.45rem; }
 .op-fc-step { display: grid; grid-template-columns: auto 1fr; gap: 0.65rem; padding: 0.55rem 0.65rem; border-radius: 10px; border: 1px solid var(--line); background: color-mix(in srgb, var(--ink) 92%, #0a0e18); }
 .op-fc-step-idx { width: 1.35rem; height: 1.35rem; border-radius: 999px; display: grid; place-items: center; font-family: var(--f-mono); font-size: 0.65rem; color: var(--foam); background: color-mix(in srgb, var(--violet) 22%, transparent); border: 1px solid color-mix(in srgb, var(--violet) 35%, var(--line)); }
 .op-fc-step.is-done .op-fc-step-idx { background: color-mix(in srgb, var(--tide) 22%, transparent); border-color: color-mix(in srgb, var(--tide) 40%, var(--line)); }
@@ -5864,6 +5909,40 @@
 .op-fc-step-top p { margin: 0; font-size: 0.84rem; color: var(--foam); }
 .op-fc-step-detail { margin: 0.25rem 0 0; font-size: 0.74rem; color: var(--mist); }
 .op-fc-error { margin: 0; color: #FFA79C; font-size: 0.8rem; }
+.op-fc-browse {
+  display: grid; gap: 0.55rem; border: 1px solid var(--line); border-radius: 12px;
+  padding: 0.7rem 0.8rem; background: color-mix(in srgb, var(--ink) 94%, #0a0e18);
+}
+.op-fc-browse-head {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.55rem;
+}
+.op-fc-week-label {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.74rem; color: var(--mist);
+}
+.op-fc-browse-head .ui-select { min-width: 12rem; max-width: 100%; }
+.op-fc-week-days { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.op-fc-week-day {
+  display: flex; justify-content: space-between; gap: 0.75rem; align-items: flex-start;
+  padding: 0.5rem 0.55rem; border-radius: 10px; border: 1px solid transparent;
+}
+.op-fc-week-day.is-today,
+.op-fc-week-day.is-yesterday {
+  border-color: color-mix(in srgb, var(--tide) 30%, var(--line));
+  background: color-mix(in srgb, var(--tide) 7%, transparent);
+}
+.op-fc-week-day-key {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;
+  font-size: 0.78rem; color: var(--foam);
+}
+.op-fc-week-day-key em {
+  font-style: normal; font-family: var(--f-mono); font-size: 0.6rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--tide);
+}
+.op-fc-week-day-title { display: block; margin-top: 0.15rem; font-size: 0.74rem; color: var(--mist); }
+.op-fc-week-day-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+.op-fc-week-day-meta a { color: var(--tide); text-decoration: none; font-size: 0.72rem; }
+.op-fc-week-day-meta a:hover { text-decoration: underline; }
 .op-fc-days { border: 1px solid var(--line); border-radius: 10px; padding: 0.55rem 0.75rem; background: color-mix(in srgb, var(--ink) 94%, #0a0e18); }
 .op-fc-days summary { cursor: pointer; font-size: 0.78rem; color: var(--mist); }
 .op-fc-days ul { margin: 0.55rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.35rem; }

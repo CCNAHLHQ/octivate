@@ -1,0 +1,110 @@
+/* Legal document pages — SaaS prose column */
+
+.legal-page {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3.5rem, 8vw, 5.5rem);
+  overflow: clip;
+}
+
+.legal-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 420px at 12% -10%, color-mix(in srgb, var(--violet) 12%, transparent), transparent 62%),
+    radial-gradient(700px 380px at 92% 8%, color-mix(in srgb, var(--tide) 10%, transparent), transparent 60%);
+}
+
+.legal-art {
+  display: block;
+  width: min(100%, 42rem);
+  height: auto;
+  margin: 0 auto 1.75rem;
+  color: color-mix(in srgb, var(--violet) 45%, var(--mist));
+  opacity: 0.55;
+}
+
+.legal-inner {
+  width: min(44rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.legal-kicker {
+  margin: 0 0 0.65rem;
+  text-align: center;
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.legal-title {
+  margin: 0;
+  text-align: center;
+  font-family: var(--f-display);
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--foam);
+}
+
+.legal-updated {
+  margin: 0.85rem 0 0;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--mist);
+}
+
+.legal-prose {
+  margin-top: 2.25rem;
+  display: grid;
+  gap: 1.65rem;
+}
+
+.legal-prose section h2 {
+  margin: 0 0 0.55rem;
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--foam);
+}
+
+.legal-prose section p,
+.legal-prose section li {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--mist);
+}
+
+.legal-prose section p + p {
+  margin-top: 0.75rem;
+}
+
+.legal-prose ul {
+  margin: 0.55rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.legal-prose a {
+  color: var(--accent-soft-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-foot {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: center;
+}
