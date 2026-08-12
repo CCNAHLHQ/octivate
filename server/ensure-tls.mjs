@@ -2,6 +2,7 @@
  * Ensure repo-relative PEMs exist. Used by serve:prod so HTTPS is ready immediately.
  */
 import fs from "fs";
+import net from "net";
 import path from "path";
 import { X509Certificate } from "crypto";
 import selfsigned from "selfsigned";
@@ -49,6 +50,19 @@ export async function ensureTls({ force = false, quiet = false } = {}) {
   const notAfterDate = new Date(notBeforeDate);
   notAfterDate.setDate(notAfterDate.getDate() + days);
 
+  const publicIp = String(
+    process.env.SERVER_PUBLIC_IP || process.env.SSL_PUBLIC_IP || ""
+  ).trim();
+  const altNames = [
+    { type: 2, value: domain },
+    { type: 2, value: `www.${domain}` },
+    { type: 2, value: "localhost" },
+    { type: 7, ip: "127.0.0.1" },
+  ];
+  if (publicIp && net.isIP(publicIp)) {
+    altNames.push({ type: 7, ip: publicIp });
+  }
+
   const pems = await selfsigned.generate([{ name: "commonName", value: domain }], {
     keySize: 2048,
     algorithm: "sha256",
@@ -65,11 +79,7 @@ export async function ensureTls({ force = false, quiet = false } = {}) {
       { name: "extKeyUsage", serverAuth: true },
       {
         name: "subjectAltName",
-        altNames: [
-          { type: 2, value: domain },
-          { type: 2, value: `www.${domain}` },
-          { type: 2, value: "localhost" },
-        ],
+        altNames,
       },
     ],
   });
@@ -86,6 +96,7 @@ export async function ensureTls({ force = false, quiet = false } = {}) {
         generatedAt: new Date().toISOString(),
         validTo: notAfterDate.toISOString(),
         days,
+        publicIp: publicIp || null,
         relative: `certs/${domain}/`,
         auto: true,
       },

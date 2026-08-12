@@ -5,7 +5,7 @@
 | Item | Value |
 |------|-------|
 | Domain | https://octivate.io |
-| Origin IP | 77.83.196.183 |
+| Origin IP | 184.174.96.119 |
 | Edge | Cloudflare |
 | App | Next.js 14 standalone / `next start` |
 | TLS | Certbot (WSL2) → Node HTTPS terminator |

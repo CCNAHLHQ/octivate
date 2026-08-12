@@ -45,7 +45,8 @@ If PEMs are missing, `serve:prod` exits with a clear error.
 ## Prerequisites
 
 - Domain **octivate.io** DNS in Cloudflare
-- A record → `77.83.196.183` (proxied after origin HTTPS works; can be DNS-only during first bring-up)
+- A record → `184.174.96.119` (proxied after origin HTTPS works; can be DNS-only during first bring-up)
+  - Update via `npm run dns:origin` when `CLOUDFLARE_API_TOKEN` + `SERVER_PUBLIC_IP` are set in `.env`
 - Cloudflare API token with **Zone → DNS → Edit** for `octivate.io` only
 - WSL2 + Ubuntu on Windows Server 2019
 - Ports 80/443 free for the Node TLS terminator (`npm run serve:prod`)
