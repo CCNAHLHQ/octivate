@@ -10,6 +10,35 @@
 | App | Next.js 14 standalone / `next start` |
 | TLS | Certbot (WSL2) → Node HTTPS terminator |
 
+## Live deploy pipeline (this origin host)
+
+On the Windows origin, ship UI/code changes with one command:
+
+```powershell
+npm run deploy:live
+# alias: npm run ship
+```
+
+What it does:
+
+1. `npm run build`
+2. Restarts Next (`127.0.0.1:$NEXT_PORT`) + `server/prod.mjs` edge (80/443)
+3. Health-checks local Next and `https://octivate.io/api/health`
+4. Commits **safe** workspace changes (never `.env`, PEMs, `data/local/`, etc.)
+5. `git push` to `origin` (uses `OCTIVATE_GIT_TOKEN` / `GITHUB_TOKEN` / `GH_TOKEN` when set)
+
+Useful flags:
+
+```powershell
+npm run deploy:live -- --message "Ship checkout polish"
+npm run deploy:live -- --skip-git          # build + restart only
+npm run deploy:live -- --skip-restart      # build + commit/push only
+npm run deploy:live -- --skip-build        # restart + git only
+npm run deploy:live -- --dry-run
+```
+
+Agents / operators: prefer `npm run deploy:live` instead of hand-rolling build → kill ports → restart → commit → push.
+
 ## Zip → upload → build (recommended)
 
 On your workstation:
@@ -77,4 +106,4 @@ Use NSSM, WinSW, or Task Scheduler to keep both processes alive and restart afte
 
 Keep previous `.next` build folder; stop TLS proxy; restore prior standalone; re-sync certs if needed.
 
-See also: [SSL_CERTBOT.md](./SSL_CERTBOT.md), [SECURITY.md](./SECURITY.md)
+See also: [SSL_CERTBOT.md](./SSL_CERTBOT.md), [SECURITY.md](./SECURITY.md), [PAYMENTS.md](./PAYMENTS.md)

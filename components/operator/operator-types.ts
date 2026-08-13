@@ -47,6 +47,7 @@ export type OperatorTab =
   | "control"
   | "catalog"
   | "pricing"
+  | "automation"
   | "exports"
   | "debug"
   | "support"

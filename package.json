@@ -20,8 +20,11 @@
     "certs:sync": "powershell -ExecutionPolicy Bypass -File scripts/sync-certs.ps1",
     "certs:check": "node scripts/check-certs.mjs",
     "pack:deploy": "powershell -ExecutionPolicy Bypass -File scripts/pack-deploy.ps1",
+    "deploy:live": "node --env-file=.env scripts/deploy-live.mjs",
+    "ship": "node --env-file=.env scripts/deploy-live.mjs",
     "sources:import": "node scripts/import-source-registry.mjs",
-    "export:tokenize": "node scripts/tokenize-export-template.mjs"
+    "export:tokenize": "node scripts/tokenize-export-template.mjs",
+    "parl:worker": "node --env-file=.env --experimental-strip-types --import ./server/parl-ts-register.mjs server/parl-media-worker.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.111.0",

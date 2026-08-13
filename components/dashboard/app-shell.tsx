@@ -24,6 +24,7 @@ import {
   DollarSign,
   Database,
   Mail,
+  Bot,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { OctivateLogo } from "@/components/brand";
@@ -117,6 +118,11 @@ const operatorNav = [
         labelKey: "op.tab.pricing" as MessageKey,
         href: "/dashboard/operator#pricing",
         icon: DollarSign,
+      },
+      {
+        labelKey: "op.tab.automation" as MessageKey,
+        href: "/dashboard/operator#automation",
+        icon: Bot,
       },
       {
         labelKey: "op.tab.exports" as MessageKey,
