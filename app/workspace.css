@@ -448,10 +448,10 @@
   color: var(--faint);
 }
 
-/* Portaled panel — escapes overflow:hidden ancestors (create panel, cards) */
+/* Portaled panel — escapes overflow:hidden ancestors (create panel, cards, modals) */
 .ws-search-select-panel.is-portal {
   position: fixed;
-  z-index: 80;
+  z-index: 280;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--line-strong);
@@ -845,18 +845,34 @@
   color: var(--foam);
 }
 
-.ws-project-edit-backdrop {
+/* Portaled to body — covers chrome + locks page scroll via JS on open */
+.ws-project-edit-root {
   position: fixed;
   inset: 0;
-  z-index: 80;
+  z-index: 250;
   display: grid;
   place-items: center;
   padding: 1.25rem;
-  background: rgba(3, 6, 18, 0.62);
+}
+
+.ws-project-edit-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: color-mix(in srgb, var(--ink) 72%, transparent);
   backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+
+.ws-project-edit-backdrop:disabled {
+  cursor: wait;
 }
 
 .ws-project-edit-modal {
+  position: relative;
+  z-index: 1;
   width: min(420px, 100%);
   border-radius: var(--r-lg);
   border: 1px solid var(--line);

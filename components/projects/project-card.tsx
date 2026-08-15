@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type FormEvent, type MouseEvent } from "react";
+import { useEffect, useId, useState, type FormEvent, type MouseEvent } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -23,6 +24,7 @@ import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import { countryFlagUrl, resolveCountryOption } from "@/lib/geo/countries";
 import { notifyWorkspaceRefresh } from "@/lib/workspace-events";
+import { useMounted } from "@/lib/use-mounted";
 import type { Project } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -44,6 +46,8 @@ type Props = {
 
 export function ProjectCard({ project, onUpdated, onDeleted }: Props) {
   const t = useT();
+  const mounted = useMounted();
+  const editTitleId = useId();
   const hasQuestion = Boolean(project.question?.trim());
   const isActive = project.status === "active";
   const country = resolveCountryOption(project.country);
@@ -55,6 +59,20 @@ export function ProjectCard({ project, onUpdated, onDeleted }: Props) {
   const [editName, setEditName] = useState(project.name);
   const [editCountry, setEditCountry] = useState(project.country);
   const [editSector, setEditSector] = useState(project.sector);
+
+  useEffect(() => {
+    if (!editOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && !busy) setEditOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [editOpen, busy]);
 
   function openEdit(e: MouseEvent) {
     e.preventDefault();
@@ -69,6 +87,10 @@ export function ProjectCard({ project, onUpdated, onDeleted }: Props) {
     e.preventDefault();
     e.stopPropagation();
     setDeleteOpen(true);
+  }
+
+  function closeEdit() {
+    if (!busy) setEditOpen(false);
   }
 
   async function saveEdit(e: FormEvent) {
@@ -115,6 +137,79 @@ export function ProjectCard({ project, onUpdated, onDeleted }: Props) {
       setBusy(false);
     }
   }
+
+  const editModal =
+    mounted && editOpen
+      ? createPortal(
+          <div className="ws-project-edit-root" role="presentation">
+            <button
+              type="button"
+              className="ws-project-edit-backdrop"
+              aria-label="Close"
+              disabled={busy}
+              onClick={closeEdit}
+            />
+            <div
+              className="ws-project-edit-modal"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby={editTitleId}
+            >
+              <h3 id={editTitleId} className="ws-project-edit-title">
+                {t("ws.projects.edit")}
+              </h3>
+              <form onSubmit={saveEdit} className="ws-project-edit-form">
+                <Input
+                  value={editName}
+                  onChange={(e) => setEditName(e.target.value)}
+                  required
+                  placeholder={t("ws.projects.name")}
+                  disabled={busy}
+                  autoFocus
+                />
+                <CountrySelect
+                  value={editCountry}
+                  onChange={setEditCountry}
+                  required
+                  disabled={busy}
+                />
+                <SectorSelect
+                  value={editSector}
+                  onChange={setEditSector}
+                  required
+                  disabled={busy}
+                />
+                <div className="ws-project-edit-actions">
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="ghost"
+                    disabled={busy}
+                    onClick={closeEdit}
+                  >
+                    Cancel
+                  </Button>
+                  <Button
+                    type="submit"
+                    size="sm"
+                    disabled={busy || !editName.trim() || !editCountry || !editSector}
+                  >
+                    {busy ? (
+                      <>
+                        <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden />
+                        Saving…
+                      </>
+                    ) : (
+                      "Save"
+                    )}
+                  </Button>
+                </div>
+              </form>
+            </div>
+          </div>,
+          document.body
+        )
+      : null;
 
   return (
     <>
@@ -218,71 +313,7 @@ export function ProjectCard({ project, onUpdated, onDeleted }: Props) {
         </div>
       </article>
 
-      {editOpen ? (
-        <div
-          className="ws-project-edit-backdrop"
-          role="presentation"
-          onClick={() => {
-            if (!busy) setEditOpen(false);
-          }}
-        >
-          <div
-            className="ws-project-edit-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-label={`Edit ${project.name}`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 className="ws-project-edit-title">{t("ws.projects.edit")}</h3>
-            <form onSubmit={saveEdit} className="ws-project-edit-form">
-              <Input
-                value={editName}
-                onChange={(e) => setEditName(e.target.value)}
-                required
-                placeholder={t("ws.projects.name")}
-                disabled={busy}
-              />
-              <CountrySelect
-                value={editCountry}
-                onChange={setEditCountry}
-                required
-                disabled={busy}
-              />
-              <SectorSelect
-                value={editSector}
-                onChange={setEditSector}
-                required
-                disabled={busy}
-              />
-              <div className="ws-project-edit-actions">
-                <Button
-                  type="button"
-                  size="sm"
-                  variant="ghost"
-                  disabled={busy}
-                  onClick={() => setEditOpen(false)}
-                >
-                  Cancel
-                </Button>
-                <Button
-                  type="submit"
-                  size="sm"
-                  disabled={busy || !editName.trim() || !editCountry || !editSector}
-                >
-                  {busy ? (
-                    <>
-                      <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden />
-                      Saving…
-                    </>
-                  ) : (
-                    "Save"
-                  )}
-                </Button>
-              </div>
-            </form>
-          </div>
-        </div>
-      ) : null}
+      {editModal}
 
       <ConfirmDialog
         open={deleteOpen}
