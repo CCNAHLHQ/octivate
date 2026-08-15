@@ -122,6 +122,35 @@ function PsnTabs({ brief }: { brief: Brief }) {
   );
 }
 
+function coverageBannerNote(brief: Brief): string | null {
+  const cov = brief.evidenceCoverage;
+  if (!cov) return null;
+  const skipped = cov.skippedDocIds?.length ?? 0;
+  if (skipped <= 0 && !cov.truncated) return null;
+  if (cov.note?.trim()) return cov.note.trim();
+  const parts = [
+    `Included ${cov.includedDocs} of ${cov.totalDocs} documents (${cov.charCount.toLocaleString()} / ${cov.charBudget.toLocaleString()} chars).`,
+  ];
+  if (skipped > 0) {
+    parts.push(`${skipped} document(s) excluded from the packed evidence window.`);
+  }
+  if (cov.truncated) {
+    parts.push("Evidence packing was truncated to the character budget.");
+  }
+  return parts.join(" ");
+}
+
+function CoverageBanner({ brief }: { brief: Brief }) {
+  const note = coverageBannerNote(brief);
+  if (!note) return null;
+  return (
+    <div className="brief-coverage-banner" role="status">
+      <p className="brief-coverage-banner-kicker">Evidence coverage</p>
+      <p className="brief-coverage-banner-note">{note}</p>
+    </div>
+  );
+}
+
 function ScoreBreakdown({ brief }: { brief: Brief }) {
   const b = brief.scoreBreakdown;
   if (!b) return null;
@@ -135,15 +164,30 @@ function ScoreBreakdown({ brief }: { brief: Brief }) {
   return (
     <CardShell label="Score breakdown">
       <p className="brief-score-total">{b.total}% weighted confidence</p>
-      <ul className="brief-score-rows">
-        {rows.map((r) => (
-          <li key={r.label}>
-            <span>
-              {r.label} <em>(w {r.w})</em>
-            </span>
-            <strong>{r.value}</strong>
-          </li>
-        ))}
+      <ul className="brief-score-meters">
+        {rows.map((r) => {
+          const pct = Math.max(0, Math.min(100, Number(r.value) || 0));
+          return (
+            <li key={r.label} className="brief-score-meter">
+              <div className="brief-score-meter-head">
+                <span className="brief-score-meter-label">
+                  {r.label} <em>(w {r.w})</em>
+                </span>
+                <strong className="brief-score-meter-value">{r.value}</strong>
+              </div>
+              <div
+                className="brief-score-meter-track"
+                role="meter"
+                aria-label={r.label}
+                aria-valuenow={pct}
+                aria-valuemin={0}
+                aria-valuemax={100}
+              >
+                <div className="brief-score-meter-fill" style={{ width: `${pct}%` }} />
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </CardShell>
   );
@@ -233,6 +277,7 @@ function CitedSources({ sources }: { sources: BriefCitedSource[] }) {
 function ConfidenceTab({ brief }: { brief: Brief }) {
   return (
     <div className="brief-tab-panel brief-tab-confidence">
+      <CoverageBanner brief={brief} />
       <div className="brief-conf-hero">
         <div className="brief-conf-gauge">
           <ConfidenceGauge value={brief.confidence} />
@@ -272,18 +317,18 @@ function JudgementTab({ brief, sources }: { brief: Brief; sources: BriefCitedSou
   const gaps = coerceTextList(brief.evidenceGaps ?? brief.gaps);
   return (
     <div className="brief-tab-panel brief-tab-judgement">
-      <CardShell label="Executive summary">
-        <p className="brief-summary brief-prose">
-          <PassageHighlighter text={brief.executiveSummary} sources={sources} />
-        </p>
-      </CardShell>
+      <CoverageBanner brief={brief} />
       {brief.analyticalJudgement ? (
         <CardShell label="Analytical judgement">
           <p className="brief-judgement brief-prose">
             <PassageHighlighter text={brief.analyticalJudgement} sources={sources} />
           </p>
         </CardShell>
-      ) : null}
+      ) : (
+        <CardShell label="Analytical judgement">
+          <p className="brief-empty">No analytical judgement recorded.</p>
+        </CardShell>
+      )}
       <CardShell label="Recommendations / variants">
         <BulletList items={brief.recommendations} sources={sources} />
         {brief.tradeoffs && brief.tradeoffs.length > 0 ? (

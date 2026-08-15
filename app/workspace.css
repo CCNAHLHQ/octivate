@@ -4280,7 +4280,37 @@
       color-mix(in srgb, var(--tide) 6%, transparent) 60%,
       transparent
     ),
-    color-mix(in srgb, var(--panel) 92%, transparent);
+    var(--panel, #ffffff);
+}
+
+.brief-coverage-banner {
+  padding: 0.95rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--tide) 40%, var(--line));
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--tide) 10%, transparent),
+      color-mix(in srgb, var(--violet) 6%, transparent)
+    ),
+    var(--panel, #ffffff);
+}
+
+.brief-coverage-banner-kicker {
+  margin: 0 0 0.35rem;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tide);
+}
+
+.brief-coverage-banner-note {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--foam);
 }
 
 @media (min-width: 720px) {
@@ -4755,17 +4785,17 @@
 
 .brief-card-label,
 .brief-card-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   width: 100%;
   margin: 0;
-  padding: 0.8rem 1.1rem;
+  padding: 0.95rem 1.15rem 0.7rem;
   border: 0;
-  background: color-mix(in srgb, var(--panel-2, var(--panel)) 70%, transparent);
+  border-bottom: 2px solid color-mix(in srgb, var(--violet) 42%, var(--tide));
+  background: transparent;
   font-family: var(--f-mono);
   font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--mist);
   text-align: left;
@@ -4773,6 +4803,9 @@
 }
 
 .brief-card-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   cursor: pointer;
 }
 
@@ -4787,7 +4820,7 @@
 }
 
 .brief-card-body {
-  padding: 1.05rem 1.15rem 1.2rem;
+  padding: 1.2rem 1.15rem 1.35rem;
 }
 
 .brief-card-label.is-power,
@@ -4796,10 +4829,18 @@
   color: var(--violet);
 }
 
+.brief-card-label.is-power {
+  border-bottom-color: var(--violet);
+}
+
 .brief-card-label.is-systems,
 .brief-card-toggle.is-systems,
 .brief-psn-tab.is-systems.is-active {
   color: var(--tide);
+}
+
+.brief-card-label.is-systems {
+  border-bottom-color: var(--tide);
 }
 
 .brief-card-label.is-narratives,
@@ -4808,16 +4849,22 @@
   color: var(--coral);
 }
 
+.brief-card-label.is-narratives {
+  border-bottom-color: var(--coral);
+}
+
+/* Accordion heading pattern retired — kept inert for any leftover markup */
 .brief-accordion {
   margin-top: 0.45rem;
 }
 
 .brief-accordion > summary {
-  cursor: pointer;
+  cursor: default;
   font-family: var(--f-mono);
   font-size: 0.68rem;
   color: var(--tide);
   list-style: none;
+  pointer-events: none;
 }
 
 .brief-accordion > summary::-webkit-details-marker {
@@ -4855,12 +4902,70 @@
 }
 
 .brief-score-total {
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
   font-size: 1rem;
   font-weight: 650;
   color: var(--foam);
 }
 
+.brief-score-meters {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.brief-score-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.brief-score-meter-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.86rem;
+  color: var(--mist);
+}
+
+.brief-score-meter-label em {
+  font-style: normal;
+  color: var(--faint);
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+}
+
+.brief-score-meter-value {
+  font-variant-numeric: tabular-nums;
+  color: var(--foam);
+  font-weight: 700;
+}
+
+.brief-score-meter-track {
+  height: 0.55rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--line) 85%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line) 100%, transparent);
+}
+
+.brief-score-meter-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--violet) 88%, var(--tide)),
+    color-mix(in srgb, var(--tide) 75%, var(--violet))
+  );
+  min-width: 0;
+  transition: width 0.25s ease;
+}
+
+/* Legacy text-only score rows (unused) */
 .brief-score-rows {
   list-style: none;
   margin: 0;

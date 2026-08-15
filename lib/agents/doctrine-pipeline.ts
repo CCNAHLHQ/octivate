@@ -40,6 +40,7 @@ import { scoreBriefConfidence } from "@/lib/evidence/score-brief";
 import type { EvidenceDocument } from "@/lib/evidence/types";
 import {
   buildDocumentEvidenceBundle,
+  coverageNote,
   formatDocumentBundleForAgent,
   type DocumentEvidenceBundle,
 } from "@/lib/docs/bundle";
@@ -393,12 +394,15 @@ async function runAgent<T extends CommonAgentOutput>(
 
   let data: T;
   let result: Awaited<ReturnType<typeof completeJson<T>>>["result"];
+  const baseTokens = resolveDoctrineMaxTokens(depth);
+  const docBoost = Math.min(1.4, 1 + 0.03 * (docBundle?.documents.length || 0));
+  const maxTokens = Math.min(16_000, Math.round(baseTokens * docBoost));
   try {
     ({ data, result } = await completeJson<T>(
       client,
       {
         model,
-        maxTokens: resolveDoctrineMaxTokens(depth),
+        maxTokens,
         messages: [
           { role: "system", content: system },
           {
@@ -410,7 +414,15 @@ async function runAgent<T extends CommonAgentOutput>(
               wrapUntrustedBlock("decision_question", question),
               wrapUntrustedBlock("documents", docContext),
               wrapUntrustedBlock("context", userContext),
-            ].join("\n\n"),
+              docBundle && (docBundle.skippedDocIds.length > 0 || docBundle.truncated)
+                ? wrapUntrustedBlock(
+                    "evidence_coverage",
+                    `${coverageNote(docBundle)} Acknowledge coverage limits in evidence_gaps when material; do not invent completeness.`
+                  )
+                : "",
+            ]
+              .filter(Boolean)
+              .join("\n\n"),
           },
         ],
       },
@@ -595,10 +607,19 @@ function assembleBrief(
   localOnlySources = false,
   docBundle?: DocumentEvidenceBundle | null
 ): Brief {
-  const powerFindings = flattenFindings(outputs, "power_analyst");
-  const systemsFindings = flattenFindings(outputs, "systems_analyst");
-  const narrativeFindings = flattenFindings(outputs, "narrative_analyst");
   const caps = getDepthCaps(depth);
+  const powerFindings = flattenFindings(outputs, "power_analyst").slice(
+    0,
+    caps.max_findings_per_lens
+  );
+  const systemsFindings = flattenFindings(outputs, "systems_analyst").slice(
+    0,
+    caps.max_findings_per_lens
+  );
+  const narrativeFindings = flattenFindings(outputs, "narrative_analyst").slice(
+    0,
+    caps.max_findings_per_lens
+  );
 
   const confidences = outputs.map((o) => o.overall_confidence).filter(Boolean);
   const avgConf =
@@ -744,6 +765,18 @@ function assembleBrief(
     depthDisclaimer: depthDisclaimer(depth),
     scoreBreakdown,
     localOnlySources: localOnlySources || undefined,
+    evidenceCoverage: docBundle
+      ? {
+          totalDocs: docBundle.totalDocs,
+          includedDocs: docBundle.documents.length,
+          skippedDocIds: docBundle.skippedDocIds,
+          includedDocIds: docBundle.includedDocIds,
+          truncated: docBundle.truncated,
+          charBudget: docBundle.charBudget,
+          charCount: docBundle.charCount,
+          note: coverageNote(docBundle),
+        }
+      : undefined,
   };
 }
 
@@ -875,7 +908,7 @@ export async function runDoctrinePipeline(
     await appendAudit({
       action: "document_bundle_built",
       sessionId: session.id,
-      detail: `${docBundle.documents.length} doc(s) · ${docBundle.charCount} chars · method=${docBundle.method}`,
+      detail: `${docBundle.documents.length}/${docBundle.totalDocs} doc(s) · ${docBundle.charCount} chars · skipped=${docBundle.skippedDocIds.length} · truncated=${docBundle.truncated} · ${coverageNote(docBundle)}`,
     });
 
     const intake = await runAgent<CommonAgentOutput>(
@@ -945,14 +978,7 @@ export async function runDoctrinePipeline(
       });
     }
 
-    const evidenceCtxWithDocs = [
-      evidenceCtx,
-      docBundle.documents.length
-        ? `\n\nDocument evidence bundle (question-conditioned):\n${formatDocumentBundleForAgent(docBundle, 14_000)}`
-        : "",
-    ]
-      .filter(Boolean)
-      .join("");
+    const evidenceCtxWithDocs = evidenceCtx;
 
     await runAgent(
       session,

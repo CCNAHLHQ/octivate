@@ -16,8 +16,9 @@ import {
 } from "recharts";
 import { useMounted } from "@/lib/use-mounted";
 import { Skeleton } from "@/components/ui/progress";
-import { CHART, DEFAULT_CHART_HEIGHT, TALL_CHART_HEIGHT } from "@/components/ui/chart-theme";
+import { CHART, DEFAULT_CHART_HEIGHT, TALL_CHART_HEIGHT, chartCss } from "@/components/ui/chart-theme";
 import { ChartTooltipContent } from "@/components/ui/chart-tooltip";
+import { useId } from "react";
 
 function ChartShell({
   children,
@@ -53,7 +54,10 @@ function ChartLegend({
 
 export function ConfidenceGauge({ value }: { value: number }) {
   const clamped = Math.min(100, Math.max(0, value));
-  const data = [{ name: "confidence", value: clamped, fill: "url(#gaugeGradient)" }];
+  const gradId = useId().replace(/:/g, "");
+  const fillUrl = `url(#gaugeGradient-${gradId})`;
+  const data = [{ name: "confidence", value: clamped, fill: fillUrl }];
+  const theme = chartCss();
 
   return (
     <ChartShell className={DEFAULT_CHART_HEIGHT}>
@@ -70,7 +74,7 @@ export function ConfidenceGauge({ value }: { value: number }) {
             barSize={14}
           >
             <defs>
-              <linearGradient id="gaugeGradient" x1="0" y1="0" x2="1" y2="0">
+              <linearGradient id={`gaugeGradient-${gradId}`} x1="0" y1="0" x2="1" y2="0">
                 <stop offset="0%" stopColor="#7C3AED" />
                 <stop offset="100%" stopColor="#A855F7" />
               </linearGradient>
@@ -78,7 +82,7 @@ export function ConfidenceGauge({ value }: { value: number }) {
             <RadialBar
               dataKey="value"
               cornerRadius={8}
-              background={{ fill: CHART.track }}
+              background={{ fill: theme.track }}
             />
           </RadialBarChart>
         </ResponsiveContainer>
@@ -158,6 +162,7 @@ export function HorizontalRiskBars({
 }: {
   items: { label: string; value: number; color?: string }[];
 }) {
+  const theme = chartCss();
   const data = items.map((i, idx) => ({
     ...i,
     color: i.color || CHART.palette[idx % CHART.palette.length],
@@ -193,7 +198,7 @@ export function HorizontalRiskBars({
               dataKey="value"
               radius={[0, 6, 6, 0]}
               barSize={18}
-              background={{ fill: CHART.track, radius: 6 }}
+              background={{ fill: theme.track, radius: 6 }}
               activeBar={{ opacity: 0.85 }}
             >
               {data.map((entry, i) => (
@@ -202,7 +207,7 @@ export function HorizontalRiskBars({
               <LabelList
                 dataKey="value"
                 position="right"
-                fill={CHART.foam}
+                fill={theme.label}
                 fontSize={12}
                 fontWeight={700}
                 fontFamily="var(--font-mono)"
@@ -226,7 +231,8 @@ export function DistBars({
   /** Noun used in tooltips, e.g. "briefs" or "sources". */
   valueLabel?: string;
 }) {
-  const total = items.reduce((sum, i) => sum + Math.max(0, i.value), 0);
+  const theme = chartCss();
+const total = items.reduce((sum, i) => sum + Math.max(0, i.value), 0);
   const data = items.map((i, idx) => {
     const value = Math.max(0, i.value);
     const share = total > 0 ? Math.round((value / total) * 1000) / 10 : 0;
@@ -274,7 +280,7 @@ export function DistBars({
               name={valueLabel}
               radius={[0, 5, 5, 0]}
               barSize={16}
-              background={{ fill: CHART.track, radius: 5 }}
+              background={{ fill: theme.track, radius: 5 }}
               activeBar={{ opacity: 0.88 }}
             >
               {data.map((entry, i) => (
@@ -283,7 +289,7 @@ export function DistBars({
               <LabelList
                 dataKey="value"
                 position="right"
-                fill={CHART.foam}
+                fill={theme.label}
                 fontSize={12}
                 fontWeight={700}
                 fontFamily="var(--font-mono)"
@@ -369,6 +375,7 @@ export function CapacityBars({
   items: { label: string; used: number; limit: number; color?: string }[];
   heightClass?: string;
 }) {
+  const theme = chartCss();
   const data = items.map((i, idx) => {
     const limit = Math.max(1, i.limit);
     const pct = Math.min(100, Math.round((i.used / limit) * 100));
@@ -414,7 +421,7 @@ export function CapacityBars({
               dataKey="value"
               radius={[0, 6, 6, 0]}
               barSize={20}
-              background={{ fill: CHART.trackStrong, radius: 6 }}
+              background={{ fill: theme.trackStrong, radius: 6 }}
               activeBar={{ opacity: 0.88 }}
             >
               {data.map((entry, i) => (

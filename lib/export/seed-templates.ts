@@ -142,7 +142,7 @@ const FALLBACK_OCTIVATE_BRIEF_HTML = `<!DOCTYPE html>
       color: var(--violet);
       margin-bottom: 14px;
       padding-bottom: 8px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 2px solid rgba(137, 80, 238, 0.55);
     }
     .confidence-panel {
       display: grid;
@@ -233,6 +233,15 @@ const FALLBACK_OCTIVATE_BRIEF_HTML = `<!DOCTYPE html>
       border-radius: 14px;
       background: rgba(255,255,255,0.82);
       border: 1px solid var(--line);
+    }
+    .coverage-note {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--mist);
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(77, 157, 247, 0.08);
+      border: 1px solid rgba(77, 157, 247, 0.28);
     }
     .list-stack { list-style: none; display: grid; gap: 12px; }
     .list-stack li {
@@ -587,10 +596,19 @@ const FALLBACK_OCTIVATE_BRIEF_HTML = `<!DOCTYPE html>
       </section>
       {{/showRiskSection}}
 
+      {{#brief.analyticalJudgement}}
       <section>
-        <h2>Executive summary</h2>
-        <div class="summary">{{brief.executiveSummary}}</div>
+        <h2>Analytical judgement</h2>
+        <div class="summary">{{brief.analyticalJudgement}}</div>
       </section>
+      {{/brief.analyticalJudgement}}
+
+      {{#hasEvidenceCoverage}}
+      <section>
+        <h2>Evidence coverage</h2>
+        <div class="coverage-note">{{coverageNote}}</div>
+      </section>
+      {{/hasEvidenceCoverage}}
 
       {{#hasRecommendations}}
       <section>

@@ -226,6 +226,8 @@ export interface Project {
   }[];
   /** Draft multi-tenant ownership — filtered when auth session present. */
   ownerId?: string;
+  /** Last analysis depth selected for this theatre (persisted on ask/rerun). */
+  analysisDepth?: AnalysisDepth;
   createdAt: string;
   updatedAt: string;
   status: "active" | "archived";
@@ -286,6 +288,17 @@ export interface Brief {
   };
   /** Run used local-only sources (capture / parl / uploads). */
   localOnlySources?: boolean;
+  /** Document packing coverage for operator honesty in UI/export. */
+  evidenceCoverage?: {
+    totalDocs: number;
+    includedDocs: number;
+    skippedDocIds: string[];
+    includedDocIds: string[];
+    truncated: boolean;
+    charBudget: number;
+    charCount: number;
+    note?: string;
+  };
 }
 
 export interface BriefCitedPassage {

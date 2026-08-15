@@ -137,6 +137,9 @@ export type ExportDocumentContext = {
   hasInteractionCards: boolean;
   hasScoreBreakdown: boolean;
   hasCitedSources: boolean;
+  hasEvidenceCoverage: boolean;
+  evidenceCoverage: Brief["evidenceCoverage"] | null;
+  coverageNote: string;
   citedSources: {
     label: string;
     title: string;
@@ -669,6 +672,31 @@ function buildScoreParts(brief: Brief): ExportScorePart[] {
 }
 
 /** Prefer full grounded passages; keep a generous snippet for print fidelity. */
+function buildCoverageNote(brief: Brief): { hasEvidenceCoverage: boolean; coverageNote: string; evidenceCoverage: Brief["evidenceCoverage"] | null } {
+  const cov = brief.evidenceCoverage;
+  if (!cov) {
+    return { hasEvidenceCoverage: false, coverageNote: "", evidenceCoverage: null };
+  }
+  const skipped = cov.skippedDocIds?.length ?? 0;
+  const hasEvidenceCoverage = skipped > 0 || Boolean(cov.truncated);
+  if (!hasEvidenceCoverage) {
+    return { hasEvidenceCoverage: false, coverageNote: "", evidenceCoverage: cov };
+  }
+  if (cov.note?.trim()) {
+    return { hasEvidenceCoverage: true, coverageNote: cov.note.trim(), evidenceCoverage: cov };
+  }
+  const parts = [
+    `Included ${cov.includedDocs} of ${cov.totalDocs} documents (${cov.charCount.toLocaleString()} / ${cov.charBudget.toLocaleString()} chars).`,
+  ];
+  if (skipped > 0) {
+    parts.push(`${skipped} document(s) excluded from the packed evidence window.`);
+  }
+  if (cov.truncated) {
+    parts.push("Evidence packing was truncated to the character budget.");
+  }
+  return { hasEvidenceCoverage: true, coverageNote: parts.join(" "), evidenceCoverage: cov };
+}
+
 function buildCitedSources(brief: Brief) {
   return (brief.citedSources || []).map((s) => {
     const passages = (s.passages || [])
@@ -772,6 +800,7 @@ export function buildExportContext(opts: {
   const projectName = project?.name?.trim() || brief.title;
 
   const cited = buildCitedSources(brief);
+  const coverage = buildCoverageNote(brief);
 
   return {
     meta: {
@@ -840,6 +869,9 @@ export function buildExportContext(opts: {
     hasInteractionCards: interactionCards.length > 0,
     hasScoreBreakdown: scoreParts.length > 0,
     hasCitedSources: cited.length > 0,
+    hasEvidenceCoverage: coverage.hasEvidenceCoverage,
+    evidenceCoverage: coverage.evidenceCoverage,
+    coverageNote: coverage.coverageNote,
     citedSources: cited,
     recommendationsTruncated: recs.truncated,
     gapsTruncated: gaps.truncated,

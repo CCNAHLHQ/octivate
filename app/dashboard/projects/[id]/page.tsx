@@ -210,13 +210,30 @@ export default function ProjectDetailPage() {
         setEditCountry(proj.project.country);
         setEditSector(proj.project.sector);
         if (proj.project.question) setQuestion(proj.project.question);
-        setProjectBriefId(briefsRes.latestBriefId);
-        setProjectBriefIds((briefsRes.briefs || []).map((b) => b.id));
 
+        const depthKey = `octivate:analysisDepth:${id}`;
+        let cachedDepth: AnalysisDepth | null = null;
+        try {
+          const raw = window.localStorage.getItem(depthKey);
+          if (raw === "rapid" || raw === "standard" || raw === "deep_dive") cachedDepth = raw;
+        } catch {
+          /* ignore */
+        }
         const prior = sessionsRes.sessions;
         const runningFresh = prior.find((s) => s.status === "running" && !isStaleRunning(s));
         const completedWithBrief = prior.find((s) => s.status === "completed" && s.briefId);
         const latest = prior[0] ?? null;
+        const hydrateSession = runningFresh ?? completedWithBrief ?? latest ?? null;
+        const nextDepth =
+          proj.project.analysisDepth ||
+          hydrateSession?.analysisDepth ||
+          cachedDepth ||
+          "standard";
+        setAnalysisDepth(nextDepth);
+
+        setProjectBriefId(briefsRes.latestBriefId);
+        setProjectBriefIds((briefsRes.briefs || []).map((b) => b.id));
+
         setSession((cur) => {
           // Keep a live in-flight session, but never cling to a stale/abandoned one.
           if (cur?.status === "running" && !isStaleRunning(cur)) return cur;
@@ -381,7 +398,14 @@ export default function ProjectDetailPage() {
         json: { question, analysisDepth, force },
       });
       setSession(data.session);
-      setProject((prev) => (prev ? { ...prev, question } : prev));
+      setProject((prev) =>
+        prev ? { ...prev, question, analysisDepth } : prev
+      );
+      try {
+        window.localStorage.setItem(`octivate:analysisDepth:${id}`, analysisDepth);
+      } catch {
+        /* ignore */
+      }
       notifyWorkspaceRefresh(["projects", "overview"]);
       if (opts.force) {
         toast.info(t("ws.project.workflowStarted"), { durationMs: 6000 });
@@ -510,7 +534,14 @@ export default function ProjectDetailPage() {
           />
           <AnalysisDepthControls
             value={analysisDepth}
-            onChange={setAnalysisDepth}
+            onChange={(next) => {
+              setAnalysisDepth(next);
+              try {
+                window.localStorage.setItem(`octivate:analysisDepth:${id}`, next);
+              } catch {
+                /* ignore */
+              }
+            }}
             onSubmitBusy={pipelineBusy}
             submitLabel={t("ws.project.run")}
             busyLabel={t("ws.project.agentsRunning")}

@@ -36,6 +36,13 @@
   --glow-c: rgba(237, 109, 108, 0.16);
   --glow-t: rgba(77, 157, 247, 0.18);
 
+  /* Brief / card panels */
+  --panel: #ffffff;
+  --panel-2: #eef2fa;
+  --chart-track: rgba(71, 85, 120, 0.14);
+  --chart-track-strong: rgba(71, 85, 120, 0.22);
+  --chart-label: #101a2e;
+
   /* —— Semantic UI —— */
   --accent-soft: #6b3ad4;
   --accent-soft-bg: rgba(137, 80, 238, 0.1);
@@ -162,6 +169,13 @@
   --glow-v: rgba(155, 106, 245, 0.35);
   --glow-c: rgba(255, 133, 132, 0.22);
   --glow-t: rgba(107, 176, 255, 0.25);
+
+  /* Brief / card panels */
+  --panel: #0c1526;
+  --panel-2: #101b31;
+  --chart-track: rgba(255, 255, 255, 0.12);
+  --chart-track-strong: rgba(255, 255, 255, 0.18);
+  --chart-label: #eaf0ff;
 
   --accent-soft: #d8b4fe;
   --accent-soft-bg: rgba(155, 106, 245, 0.13);

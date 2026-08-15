@@ -140,8 +140,15 @@ export async function completeJson<T>(
   };
 
   for (let attempt = 0; attempt < 3; attempt++) {
+    const baseMax = req.maxTokens || 0;
+    const bumpedMax =
+      attempt > 0 && lastKind === "json_truncated" && baseMax > 0
+        ? Math.min(16_000, Math.round(baseMax * (1 + 0.35 * attempt)))
+        : req.maxTokens;
+
     const result = await client.complete({
       ...req,
+      maxTokens: bumpedMax,
       jsonMode: true,
       messages: [
         ...req.messages,

@@ -40,6 +40,7 @@ export function buildAgentSystemPrompt(
     "Geographic and sector scope in the project block is binding for this run.",
     "Stay inside the named country/theatre and sector. If uploaded documents or sources do not relate to that scope, do not force a narrative — return output_status insufficient_evidence, leave material_findings empty, and name the mismatch in evidence_gaps.",
     "When evidence is thin but partially relevant, produce only what is supported and state limits clearly for the operator.",
+    "If an evidence_coverage block reports omitted or truncated uploads, name that limit in evidence_gaps and do not claim the full corpus was reviewed.",
     "Respond with valid JSON only — no markdown fences, no prose outside JSON.",
     `Output must conform to: ${schemaHint}`,
     "If evidence is insufficient, return output_status insufficient_evidence with empty material_findings.",

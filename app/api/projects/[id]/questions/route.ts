@@ -30,10 +30,11 @@ export async function POST(
   if (idx < 0) return jsonError("Project not found", 404);
 
   try {
+    const depth = parsed.data.analysisDepth || "standard";
     const session = await startAgentPipeline(
       id,
       parsed.data.question,
-      parsed.data.analysisDepth || "standard",
+      depth,
       {
         force: parsed.data.force === true,
         usePaidModel: parsed.data.usePaidModel === true,
@@ -45,6 +46,7 @@ export async function POST(
     projects[idx] = {
       ...projects[idx],
       question: parsed.data.question,
+      analysisDepth: depth,
       updatedAt: now,
     };
     await writeCollection("projects", projects);
