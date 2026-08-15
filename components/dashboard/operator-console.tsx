@@ -26,6 +26,7 @@ import { OperatorMainTabs } from "@/components/operator/operator-main-tabs";
 import { OperatorOperationsPanel } from "@/components/operator/operator-operations-panel";
 import { OperatorExportTemplatesPanel } from "@/components/operator/operator-export-templates-panel";
 import { OperatorPricingPanel } from "@/components/operator/operator-pricing-panel";
+import { OperatorMerchantsPanel } from "@/components/operator/operator-merchants-panel";
 import { OperatorAutomationPanel } from "@/components/operator/operator-automation-panel";
 import { OperatorDebugPanel } from "@/components/operator/operator-debug-panel";
 import { OperatorSupportInbox } from "@/components/operator/operator-support-inbox";
@@ -52,6 +53,7 @@ function mainTabFromHash(hash: string): OperatorTab {
   const h = hash.replace("#", "");
   if (h === "exports") return "exports";
   if (h === "pricing") return "pricing";
+  if (h === "merchants" || h === "billing" || h === "checkout") return "merchants";
   if (
     h === "automation" ||
     h === "parliament" ||
@@ -719,6 +721,19 @@ export function OperatorConsole() {
               transition={{ duration: 0.18 }}
             >
               <OperatorAutomationPanel />
+            </motion.div>
+          )}
+
+          {mainTab === "merchants" && (
+            <motion.div
+              key="merchants"
+              className="op-tab-panel"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.25 }}
+            >
+              <OperatorMerchantsPanel />
             </motion.div>
           )}
 

@@ -13,6 +13,7 @@ const MAIN_TABS: { id: OperatorTab; labelKey: string; hintKey: string }[] = [
   { id: "mail", labelKey: "op.tab.mail", hintKey: "op.tab.mail.hint" },
   { id: "users", labelKey: "op.tab.users", hintKey: "op.tab.users.hint" },
   { id: "pricing", labelKey: "op.tab.pricing", hintKey: "op.tab.pricing.hint" },
+  { id: "merchants", labelKey: "op.tab.merchants", hintKey: "op.tab.merchants.hint" },
   { id: "automation", labelKey: "op.tab.automation", hintKey: "op.tab.automation.hint" },
   { id: "exports", labelKey: "op.tab.exports", hintKey: "op.tab.exports.hint" },
   { id: "debug", labelKey: "op.tab.debug", hintKey: "op.tab.debug.hint" },

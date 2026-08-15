@@ -13,6 +13,7 @@ export type QueueSnapshot = {
   message: string;
   counts: {
     found: number;
+    held: number;
     queued: number;
     downloading: number;
     downloaded: number;
@@ -81,6 +82,7 @@ export function buildQueueSnapshot(opts: {
     message: opts.message,
     counts: {
       found: opts.found,
+      held: count("held"),
       queued: count("queued"),
       downloading: count("downloading"),
       downloaded: count("downloaded"),

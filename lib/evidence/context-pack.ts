@@ -14,7 +14,7 @@ export function buildEvidenceContextPack(opts: {
     return [
       opts.baseContext,
       "",
-      "Local capture evidence: none available for selected sources yet. Prefer registry URLs; do not invent page text.",
+      "Local evidence: none available for selected sources yet. Prefer registry URLs; do not invent page text.",
     ].join("\n");
   }
 
@@ -24,8 +24,14 @@ export function buildEvidenceContextPack(opts: {
       .map((l) => `${l.kind}:${l.value}(${l.weight.toFixed(2)})`)
       .join(", ");
     const routes = (doc.routes || []).slice(0, 10).join(", ");
+    const kind =
+      doc.routes?.includes("parliamentary-video")
+        ? "parliamentary transcript"
+        : doc.routes?.includes("project-upload")
+          ? "project upload"
+          : "capture";
     return [
-      `### Capture evidence ${i + 1} [${doc.sourceId || doc.id}] ${doc.title}`,
+      `### Local evidence ${i + 1} (${kind}) [${doc.sourceId || doc.id}] ${doc.title}`,
       doc.url ? `URL: ${doc.url}` : null,
       doc.captureFolder ? `Artifact folder: ${doc.captureFolder}` : null,
       labels ? `Labels: ${labels}` : null,
@@ -40,7 +46,7 @@ export function buildEvidenceContextPack(opts: {
   return [
     opts.baseContext,
     "",
-    `Local capture + label pack for theatre ${opts.project.country} / ${opts.project.sector}.`,
+    `Local evidence pack (capture + parl transcripts + uploads) for theatre ${opts.project.country} / ${opts.project.sector}.`,
     `Decision question (for relevance only): ${opts.question.slice(0, 400)}`,
     "Use this text as primary page evidence when citing these source IDs. Do not invent quotes.",
     "",
@@ -66,6 +72,20 @@ export function enrichRecordRelevance(
     .join(" — ");
 }
 
+export function sourcesWithLocalText(
+  sources: Source[],
+  localIds?: Set<string>
+): Source[] {
+  return sources.filter(
+    (s) =>
+      Boolean(s.lastCaptureAt || s.lastCaptureFolder) ||
+      Boolean(localIds?.has(s.id)) ||
+      s.id.startsWith("parl_") ||
+      s.id.startsWith("upload_")
+  );
+}
+
+/** @deprecated use sourcesWithLocalText */
 export function sourcesWithCapture(sources: Source[]): Source[] {
-  return sources.filter((s) => Boolean(s.lastCaptureAt || s.lastCaptureFolder));
+  return sourcesWithLocalText(sources);
 }

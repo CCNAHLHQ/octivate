@@ -107,11 +107,19 @@ function git(argsList, opts = {}) {
   return (res.stdout || "").trim();
 }
 
+function gitPathArg(rel) {
+  const norm = String(rel || "").replace(/\\/g, "/");
+  // Avoid Windows hosts dropping a leading "." on argv pathspecs (e.g. .env.example → env.example).
+  if (norm.startsWith(".")) return `./${norm}`;
+  return norm;
+}
+
 function isSecretPath(rel) {
   const norm = rel.replace(/\\/g, "/");
   const base = path.basename(norm);
   if (SECRET_BASENAMES.has(base)) return true;
-  if (base === ".env.example") return false;
+  // Windows spawn can mangle ".env.example" → "env.example"; exclude from auto-stage.
+  if (base === ".env.example" || base === "env.example") return true;
   return SECRET_GLOBS.some((re) => re.test(norm));
 }
 
@@ -392,7 +400,7 @@ async function main() {
     log("git", `staging ${safe.length} path(s)`);
     if (!dryRun) {
       for (const f of safe) {
-        git(["add", "--", f], { step: "git", env: commitEnv });
+        git(["add", "--", gitPathArg(f)], { step: "git", env: commitEnv });
       }
       const staged = git(["diff", "--cached", "--name-only"], {
         capture: true,

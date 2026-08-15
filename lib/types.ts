@@ -113,6 +113,8 @@ export interface EvidenceClaim {
   judgement_type: JudgementType;
   decision_relevance: string;
   confidence?: ConfidenceLabel;
+  /** Local evidence document ids that ground this claim. */
+  evidence_ids?: string[];
 }
 
 export interface PsnInteraction {
@@ -272,6 +274,8 @@ export interface Brief {
       freshnessW: number;
     };
   };
+  /** Run used local-only sources (capture / parl / uploads). */
+  localOnlySources?: boolean;
 }
 
 export interface BriefCitedPassage {
@@ -299,6 +303,11 @@ export interface BriefCitedSource {
   labels?: string[];
   /** Exact local passages supporting this citation. */
   passages?: BriefCitedPassage[];
+  /** True when no accepted local passage could be grounded. */
+  ungrounded?: boolean;
+  /** Matched relevance keywords for operator / chip display. */
+  matchedKeywords?: string[];
+  relevanceScore?: number;
 }
 
 export interface Monitor {
@@ -512,6 +521,8 @@ export interface AgentSession {
   usedPremium?: boolean;
   /** Project requested paid model (honored only when allowPremiumModels). */
   preferPremium?: boolean;
+  /** Restrict brief cites to sources with local evidence text. */
+  localOnlySources?: boolean;
   /** How session spend was priced across completions. */
   costSource?: "openrouter" | "estimate" | "mixed";
 }

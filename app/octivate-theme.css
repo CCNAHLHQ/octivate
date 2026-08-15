@@ -9,8 +9,8 @@
   /* Color tokens live in theme.css — light default, dark via [data-theme="dark"] */
 
   /* type — prefer Next font variables when present */
-  --f-display: var(--font-display), "Noto Serif Display", Georgia, "Times New Roman", serif;
-  --f-body: var(--font-body), Inter, system-ui, -apple-system, sans-serif;
+  --f-display: var(--font-display), Syne, "Segoe UI", sans-serif;
+  --f-body: var(--font-body), Manrope, "Segoe UI", sans-serif;
   --f-mono: var(--font-mono), "JetBrains Mono", ui-monospace, "SF Mono", monospace;
 
   /* scale (8px grid) */

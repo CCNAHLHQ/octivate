@@ -1,11 +1,13 @@
 /**
- * Billing catalogue — single source of truth for pricing UI + checkout modals.
- * Add plans, intervals, methods, or `meta` fields here without rewriting the modal shell.
+ * Billing catalogue — single source of truth for pricing UI + checkout.
+ * Bump CATALOGUE_VERSION when seed plans change so live stores refresh.
  */
+
+export const CATALOGUE_VERSION = 2;
 
 export type PlanId = "free" | "single" | "team";
 export type BillingInterval = "one_time" | "monthly" | "annual";
-export type PaymentMethodId = "stripe" | "paypal" | "card" | "crypto";
+export type PaymentMethodId = "stripe" | "paypal" | "card" | "crypto" | "oxapay";
 
 export type PlanMeta = Record<string, string | number | boolean | null | undefined>;
 
@@ -13,9 +15,7 @@ export interface PlanPrice {
   amount: number;
   currency: "USD";
   interval: BillingInterval;
-  /** Display helper, e.g. "one-time" | "per month" */
   unitLabel: string;
-  /** Optional strike / savings copy */
   note?: string;
 }
 
@@ -26,16 +26,13 @@ export interface PlanDefinition {
   description: string;
   features: string[];
   accessNote?: { tone: "tide" | "warm"; body: string };
-  /** Free tier skips checkout */
   requiresPayment: boolean;
   ctaLabel: string;
   href?: string;
   featured?: boolean;
-  /** Allowed billing intervals for this plan */
   intervals: BillingInterval[];
   defaultInterval: BillingInterval;
   prices: Partial<Record<BillingInterval, PlanPrice>>;
-  /** Reserved for future product flags / entitlements / experiments */
   meta?: PlanMeta;
 }
 
@@ -50,23 +47,22 @@ export interface PaymentMethodDefinition {
   logoH: number;
   logoTone: "brand" | "light";
   enabled: boolean;
-  /** Future: provider keys, webhook routes, KYC flags, etc. */
   meta?: PlanMeta;
 }
 
 export const PLANS: PlanDefinition[] = [
   {
     id: "free",
-    name: "Free",
-    description: "Explore the workspace with no card.",
+    name: "Explore",
+    description: "Open the workspace and taste the doctrine pipeline — no card.",
     features: [
-      "Open the intelligence workspace and sample briefs",
-      "Limited live agent runs — see the eight-stage pipeline",
+      "Intelligence workspace + sample decision briefs",
+      "Limited live agent runs across the eight-stage pipeline",
       "Browse curated Caribbean source packs",
-      "No card required",
+      "Community support",
     ],
     requiresPayment: false,
-    ctaLabel: "Start free",
+    ctaLabel: "Start exploring",
     href: "/signup",
     intervals: ["one_time"],
     defaultInterval: "one_time",
@@ -78,20 +74,21 @@ export const PLANS: PlanDefinition[] = [
         unitLabel: "",
       },
     },
-    meta: { tier: 0, seats: 1 },
+    meta: { tier: 0, seats: 1, catalogueVersion: CATALOGUE_VERSION },
   },
   {
     id: "single",
-    name: "Single brief",
-    description: "One scoped decision brief, yours permanently.",
+    name: "Decision brief",
+    badge: "ONE SCOPE",
+    description: "One permanent, scoped decision brief with evidence and options.",
     features: [
-      "One scoped decision brief — PSN, evidence, gaps, options",
-      "Monitoring plan attached so the question stays alive",
+      "One scoped brief — PSN, evidence, gaps, and options",
+      "Monitoring plan so the question stays alive",
       "Optional human analyst review before release",
       "Buy additional briefs as separate one-time scopes",
     ],
     requiresPayment: true,
-    ctaLabel: "Get a brief",
+    ctaLabel: "Purchase brief",
     intervals: ["one_time"],
     defaultInterval: "one_time",
     featured: true,
@@ -103,28 +100,28 @@ export const PLANS: PlanDefinition[] = [
         unitLabel: "one-time",
       },
     },
-    meta: { tier: 1, briefs: 1 },
+    meta: { tier: 1, briefs: 1, catalogueVersion: CATALOGUE_VERSION },
   },
   {
     id: "team",
-    name: "Team access",
-    badge: "MOST COMPLETE",
-    description: "Full workspace for ongoing intelligence work.",
+    name: "Team workspace",
+    badge: "FULL ACCESS",
+    description: "Ongoing agentic intelligence for teams who need the full stack.",
     features: [
-      "Full workspace — projects, briefs, monitors, stakeholders, packs",
+      "Projects, briefs, monitors, stakeholders, and packs",
       "Eight-agent pipeline within operator usage limits",
-      "Live monitoring plans as conditions change",
+      "Live monitoring as conditions change",
       "Priority analyst review for sensitive briefs",
-      "Cancel yourself any time from your account (when accounts ship)",
+      "Cancel any time from your account when billing is live",
     ],
     accessNote: {
       tone: "warm",
-      body: "Access ends when you cancel. Team access is a subscription, not a purchase. It renews until you cancel. After cancellation, new agent runs pause; briefs already delivered stay in your workspace.",
+      body: "Subscription renews until you cancel. Delivered briefs remain in your workspace after cancellation; new agent runs pause.",
     },
     requiresPayment: true,
     ctaLabel: "Start team access",
     featured: true,
-    intervals: ["monthly"],
+    intervals: ["monthly", "annual"],
     defaultInterval: "monthly",
     prices: {
       monthly: {
@@ -133,24 +130,31 @@ export const PLANS: PlanDefinition[] = [
         interval: "monthly",
         unitLabel: "per month",
       },
+      annual: {
+        amount: 199,
+        currency: "USD",
+        interval: "annual",
+        unitLabel: "per year",
+        note: "Save ~17% vs monthly",
+      },
     },
-    meta: { tier: 2, seats: "team" },
+    meta: { tier: 2, seats: "team", catalogueVersion: CATALOGUE_VERSION },
   },
 ];
 
 export const PAYMENT_METHODS: PaymentMethodDefinition[] = [
   {
-    id: "stripe",
-    label: "Stripe",
-    shortLabel: "Stripe",
-    description: "Pay securely via Stripe Checkout.",
-    logoSrc: "/payments/stripe-white.svg",
-    logoAlt: "Stripe",
-    logoW: 52,
-    logoH: 22,
-    logoTone: "brand",
+    id: "card",
+    label: "Credit card",
+    shortLabel: "Credit card",
+    description: "Visa and Mastercard.",
+    logoSrc: "/payments/visa.svg",
+    logoAlt: "Visa and Mastercard",
+    logoW: 72,
+    logoH: 24,
+    logoTone: "light",
     enabled: true,
-    meta: { provider: "stripe", mode: "checkout" },
+    meta: { provider: "card", brands: "visa,mastercard" },
   },
   {
     id: "paypal",
@@ -159,47 +163,58 @@ export const PAYMENT_METHODS: PaymentMethodDefinition[] = [
     description: "Pay with your PayPal balance or linked account.",
     logoSrc: "/payments/paypal-color.svg",
     logoAlt: "PayPal",
-    logoW: 22,
-    logoH: 22,
+    logoW: 60,
+    logoH: 24,
     logoTone: "light",
     enabled: true,
     meta: { provider: "paypal" },
   },
   {
-    id: "card",
-    label: "Credit / debit card",
-    shortLabel: "Card",
-    description: "Visa, Mastercard, and other major cards.",
-    logoSrc: "/payments/visa.svg",
-    logoAlt: "Visa",
-    logoW: 48,
-    logoH: 16,
+    id: "oxapay",
+    label: "Cryptocurrency",
+    shortLabel: "Cryptocurrency",
+    description: "Pay with BTC, ETH, USDT and more (OxaPay settlement).",
+    logoSrc: "/payments/bitcoin.svg",
+    logoAlt: "Cryptocurrency",
+    logoW: 60,
+    logoH: 24,
     logoTone: "light",
     enabled: true,
-    meta: { provider: "card", brands: "visa,mastercard" },
+    meta: { provider: "oxapay", docs: "https://oxapay.com/" },
+  },
+  {
+    id: "stripe",
+    label: "Stripe",
+    shortLabel: "Stripe",
+    description: "Removed from public checkout.",
+    logoSrc: "/payments/stripe.svg",
+    logoAlt: "Stripe",
+    logoW: 60,
+    logoH: 24,
+    logoTone: "brand",
+    enabled: false,
+    meta: { provider: "stripe", mode: "checkout" },
   },
   {
     id: "crypto",
     label: "Cryptocurrency",
-    shortLabel: "Crypto",
-    description: "Pay with Bitcoin, Ethereum, and supported assets.",
+    shortLabel: "Cryptocurrency",
+    description: "Alias — routes through OxaPay merchant checkout.",
     logoSrc: "/payments/bitcoin.svg",
     logoAlt: "Bitcoin",
-    logoW: 22,
-    logoH: 22,
+    logoW: 60,
+    logoH: 24,
     logoTone: "light",
-    enabled: true,
-    meta: { provider: "crypto", assets: "btc,eth" },
+    enabled: false,
+    meta: { provider: "oxapay", alias: true, assets: "btc,eth,usdt" },
   },
 ];
 
-/** Icons row under pricing (display only). */
 export const PAYMENT_DISPLAY_ICONS = [
-  { src: "/payments/stripe-white.svg", alt: "Stripe", label: "Stripe", w: 52, h: 22, tone: "brand" as const },
   { src: "/payments/paypal-color.svg", alt: "PayPal", label: "PayPal", w: 22, h: 22, tone: "light" as const },
   { src: "/payments/visa.svg", alt: "Visa", label: "Visa", w: 48, h: 16, tone: "light" as const },
   { src: "/payments/mastercard.svg", alt: "Mastercard", label: "Mastercard", w: 36, h: 22, tone: "light" as const },
-  { src: "/payments/bitcoin.svg", alt: "Bitcoin", label: "Bitcoin", w: 22, h: 22, tone: "light" as const },
+  { src: "/payments/bitcoin.svg", alt: "Cryptocurrency", label: "Cryptocurrency", w: 22, h: 22, tone: "light" as const },
   { src: "/payments/ethereum.svg", alt: "Ethereum", label: "Ethereum", w: 18, h: 22, tone: "light" as const },
 ];
 
@@ -231,6 +246,5 @@ export type CheckoutContext = {
   planId: PlanId;
   interval: BillingInterval;
   methodId?: PaymentMethodId;
-  /** Arbitrary future context (promo codes, seats, referral, etc.) */
   extras?: PlanMeta;
 };

@@ -57,13 +57,32 @@ export function labelTextFromSource(
   }
 
   for (const rel of source.userRelevance || []) {
+    const hits = countHits(text, rel) + countHits(question, rel);
     labels.push({
       kind: "relevance",
       value: rel,
-      weight: 0.35,
+      weight: Math.min(1, 0.35 + hits * 0.12),
       method: "rule",
-      hitCount: countHits(text, rel),
+      hitCount: hits,
     });
+  }
+
+  // Expand retrieval from project question tokens present in text
+  const qTokens = norm(question)
+    .split(/\s+/)
+    .filter((t) => t.length >= 5)
+    .slice(0, 8);
+  for (const tok of qTokens) {
+    const hits = countHits(text, tok);
+    if (hits > 0) {
+      labels.push({
+        kind: "relevance",
+        value: tok,
+        weight: Math.min(1, 0.4 + hits * 0.1),
+        method: "rule",
+        hitCount: hits,
+      });
+    }
   }
 
   return labels;

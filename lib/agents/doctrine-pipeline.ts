@@ -33,8 +33,9 @@ import {
   selectTrendRecords,
 } from "@/lib/sources/select";
 import { loadCaptureEvidenceForSources } from "@/lib/evidence/capture-load";
-import { attachCitationPassages } from "@/lib/evidence/citations";
+import { attachCitationPassages, findSupportingPassages } from "@/lib/evidence/citations";
 import { buildEvidenceContextPack, enrichRecordRelevance } from "@/lib/evidence/context-pack";
+import { loadLocalEvidenceBundle } from "@/lib/evidence/index";
 import { readScoringPolicy } from "@/lib/evidence/scoring-policy";
 import { scoreBriefConfidence } from "@/lib/evidence/score-brief";
 import type { EvidenceDocument } from "@/lib/evidence/types";
@@ -135,27 +136,110 @@ function riskFromConfidence(n: number): Brief["riskLevel"] {
 
 async function loadSourceBundle(
   project: Project,
-  question: string
+  question: string,
+  opts?: { localOnlySources?: boolean }
 ): Promise<{
   selected: Source[];
   records: SourceRecord[];
   context: string;
   evidence: EvidenceDocument[];
+  sourcesWithLocalText: Set<string>;
+  localOnlySources: boolean;
 }> {
+  const localOnly = opts?.localOnlySources === true;
   const list = await readCollection<Source>("sources", SEED_SOURCES);
-  const selected = selectCatalogSources(list, project, 8);
-  const fromCatalog = catalogToRecords(selected, project);
 
-  const trends = await readCollection<Trend>("trends", SEED_TRENDS);
-  const fromTrends = selectTrendRecords(trends, project, 4);
-
-  const evidence = await loadCaptureEvidenceForSources(selected, {
-    projectId: project.id,
-    question,
-    projectSector: project.sector,
+  // Prefetch local evidence across catalog + parl + uploads for filter + merge
+  const previewSelected = selectCatalogSources(list, project, localOnly ? 24 : 12);
+  const {
+    evidence: allEvidence,
+    sourcesWithLocalText,
+  } = await loadLocalEvidenceBundle(previewSelected, project, question, {
+    includeParl: true,
+    includeUploads: true,
   });
 
-  const records = [...fromCatalog, ...fromTrends].slice(0, 12).map((r) => ({
+  let selected = selectCatalogSources(list, project, 8);
+
+  // Prefer sources that already have local text; when local-only, require it
+  if (localOnly) {
+    const withText = list.filter((s) => sourcesWithLocalText.has(s.id));
+    selected = selectCatalogSources(withText.length ? withText : [], project, 8);
+    // Also include parl/upload synthetic ids present in evidence but not yet in filter set
+    const extra = allEvidence
+      .filter((e) => e.sourceId && !selected.some((s) => s.id === e.sourceId))
+      .map((e) => {
+        const fromList = list.find((s) => s.id === e.sourceId);
+        if (fromList) return fromList;
+        // Upload / ephemeral — build a stub Source for catalog records
+        return {
+          id: e.sourceId!,
+          title: e.title,
+          tier: 3,
+          country: project.country,
+          type: e.routes?.includes("project-upload")
+            ? "Project upload"
+            : "Local evidence",
+          health: "healthy" as const,
+          lastChecked: new Date().toISOString(),
+          sectorTags: [project.sector],
+          psnLayers: ["Power", "Systems", "Narratives"] as string[],
+          url: e.url,
+          lastCaptureFolder: e.captureFolder,
+          lastCaptureAt: e.capturedAt || e.createdAt,
+        } satisfies Source;
+      });
+    const seen = new Set(selected.map((s) => s.id));
+    for (const s of extra) {
+      if (seen.has(s.id)) continue;
+      selected.push(s);
+      seen.add(s.id);
+      if (selected.length >= 10) break;
+    }
+  } else {
+    // Soft boost: put local-text sources first within the ranked set
+    selected = [
+      ...selected.filter((s) => sourcesWithLocalText.has(s.id)),
+      ...selected.filter((s) => !sourcesWithLocalText.has(s.id)),
+    ].slice(0, 8);
+  }
+
+  const fromCatalog = catalogToRecords(selected, project);
+
+  const trends = localOnly
+    ? []
+    : await readCollection<Trend>("trends", SEED_TRENDS).then((t) =>
+        selectTrendRecords(t, project, 4)
+      );
+
+  // Evidence scoped to selected + any upload/parl docs tied to this run
+  const selectedIds = new Set(selected.map((s) => s.id));
+  let evidence = allEvidence.filter(
+    (e) =>
+      !e.sourceId ||
+      selectedIds.has(e.sourceId) ||
+      e.sourceId.startsWith(`upload_${project.id}_`)
+  );
+
+  // Ensure capture-only fallback if index missed a selected source
+  if (!localOnly) {
+    const missing = selected.filter(
+      (s) => !evidence.some((e) => e.sourceId === s.id)
+    );
+    if (missing.length) {
+      const extra = await loadCaptureEvidenceForSources(missing, {
+        projectId: project.id,
+        question,
+        projectSector: project.sector,
+      });
+      evidence.push(...extra);
+      for (const e of extra) {
+        if (e.sourceId) sourcesWithLocalText.add(e.sourceId);
+      }
+    }
+  }
+
+  const records = [...fromCatalog, ...trends].slice(0, 12).map((r) => ({
     ...r,
     decision_relevance:
       enrichRecordRelevance(r.source_id, evidence, r.decision_relevance) ||
@@ -171,7 +255,59 @@ async function loadSourceBundle(
     question,
   });
 
-  return { selected, records, context, evidence };
+  return {
+    selected,
+    records,
+    context,
+    evidence,
+    sourcesWithLocalText,
+    localOnlySources: localOnly,
+  };
+}
+
+/** Build claims grounded in local passage windows when evidence text exists. */
+function buildGroundedClaims(
+  sourceRecords: SourceRecord[],
+  evidence: EvidenceDocument[],
+  project: Project,
+  question: string
+): EvidenceClaim[] {
+  const claims: EvidenceClaim[] = [];
+  for (const s of sourceRecords.slice(0, 8)) {
+    const ev = evidence.find((e) => e.sourceId === s.source_id);
+    if (ev?.text?.trim()) {
+      const passages = findSupportingPassages(ev.text, question, {
+        max: 1,
+        windowChars: 280,
+        title: s.title,
+      });
+      const anchor = passages[0]?.text || ev.text.replace(/\s+/g, " ").trim().slice(0, 220);
+      claims.push({
+        claim_id: uid("claim"),
+        statement: anchor,
+        source_ids: [s.source_id],
+        judgement_type: "fact",
+        decision_relevance: s.decision_relevance || `${project.sector} · ${project.country}`,
+        confidence: passages.length
+          ? s.reliability === "high"
+            ? "high"
+            : "moderate"
+          : "low",
+        evidence_ids: [ev.id],
+      });
+    } else {
+      // Registry-only stub — low confidence, no evidence_ids (citation engine may drop in local-only)
+      claims.push({
+        claim_id: uid("claim"),
+        statement: `${s.title}: ${s.decision_relevance || `Relevant to ${project.sector} decisions in ${project.country}`}`,
+        source_ids: [s.source_id],
+        judgement_type: "inference",
+        decision_relevance: s.decision_relevance || `${project.sector} · ${project.country}`,
+        confidence: "plausible_unverified",
+      });
+    }
+  }
+  return claims;
 }
 
 async function runAgent<T extends CommonAgentOutput>(
@@ -362,19 +498,23 @@ function buildPsnInteractions(
 
 function buildCitedSources(
   records: SourceRecord[],
-  claims: EvidenceClaim[],
+  _claims: EvidenceClaim[],
   evidence: EvidenceDocument[] = [],
-  queries: string[] = []
+  queries: string[] = [],
+  opts?: { localOnlySources?: boolean }
 ): BriefCitedSource[] {
-  const claimCounts = new Map<string, number>();
-  for (const c of claims) {
-    for (const sid of c.source_ids || []) {
-      claimCounts.set(sid, (claimCounts.get(sid) || 0) + 1);
-    }
-  }
   const bySource = new Map(evidence.map((e) => [e.sourceId || "", e]));
   const base: BriefCitedSource[] = records.slice(0, 8).map((s, i) => {
     const ev = bySource.get(s.source_id);
+    const matchedKeywords = (ev?.labels || [])
+      .filter((l) => (l.hitCount || 0) > 0 || l.kind === "relevance")
+      .slice(0, 6)
+      .map((l) => l.value);
+    const relevanceScore = ev?.labels?.length
+      ? Math.round(
+          (ev.labels.reduce((a, l) => a + l.weight, 0) / ev.labels.length) * 100
+        )
+      : undefined;
     return {
       id: s.source_id,
       label: `Source ${i + 1}`,
@@ -382,14 +522,19 @@ function buildCitedSources(
       url: s.url || ev?.url,
       publishedAt: s.publication_date || undefined,
       snippet: s.decision_relevance || s.known_biases_or_incentives?.[0] || undefined,
-      passageCount: claimCounts.get(s.source_id) || 1,
+      passageCount: 0,
       pageCoveragePct: ev?.text ? Math.min(100, Math.round((ev.text.length / 14_000) * 100)) : undefined,
       captureFolder: ev?.captureFolder,
       routes: ev?.routes?.slice(0, 8),
       labels: ev?.labels?.slice(0, 8).map((l) => `${l.kind}:${l.value}`),
+      matchedKeywords,
+      relevanceScore,
     };
   });
-  return attachCitationPassages(base, evidence, queries);
+  return attachCitationPassages(base, evidence, queries, {
+    localOnly: opts?.localOnlySources === true,
+    requirePassages: opts?.localOnlySources === true,
+  });
 }
 
 function assembleBrief(
@@ -403,7 +548,8 @@ function assembleBrief(
   sourceRecords: SourceRecord[],
   claims: EvidenceClaim[],
   evidence: EvidenceDocument[] = [],
-  scoreBreakdown?: Brief["scoreBreakdown"]
+  scoreBreakdown?: Brief["scoreBreakdown"],
+  localOnlySources = false
 ): Brief {
   const powerFindings = flattenFindings(outputs, "power_analyst");
   const systemsFindings = flattenFindings(outputs, "systems_analyst");
@@ -450,14 +596,14 @@ function assembleBrief(
   const citeQueries = [
     question,
     judgement || "",
+    ...claims.map((c) => c.statement).slice(0, 4),
     ...powerFindings.map((f) => findingText(f)).slice(0, 3),
     ...systemsFindings.map((f) => findingText(f)).slice(0, 2),
     ...narrativeFindings.map((f) => findingText(f)).slice(0, 2),
-    ...(recommendation?.options || [])
-      .slice(0, 2)
-      .map((o) => (typeof o === "string" ? o : String((o as { option?: string }).option || ""))),
   ];
-  const citedSources = buildCitedSources(sourceRecords, claims, evidence, citeQueries);
+  const citedSources = buildCitedSources(sourceRecords, claims, evidence, citeQueries, {
+    localOnlySources,
+  });
 
   const defaultGaps = thinEvidence
     ? [
@@ -505,6 +651,7 @@ function assembleBrief(
     citedSources,
     depthDisclaimer: depthDisclaimer(depth),
     scoreBreakdown,
+    localOnlySources: localOnlySources || undefined,
   };
 }
 
@@ -666,7 +813,11 @@ export async function runDoctrinePipeline(
       records: sourceRecords,
       context: evidenceCtx,
       evidence,
-    } = await loadSourceBundle(project, question);
+      sourcesWithLocalText,
+      localOnlySources,
+    } = await loadSourceBundle(project, question, {
+      localOnlySources: session.localOnlySources === true,
+    });
     await writeCollection("source-records", [
       ...(await readCollection<SourceRecord>("source-records", [])),
       ...sourceRecords,
@@ -675,7 +826,7 @@ export async function runDoctrinePipeline(
     await appendAudit({
       action: "context_pack_built",
       sessionId: session.id,
-      detail: `${evidence.length} capture evidence doc(s) · ${selected.length} catalog sources`,
+      detail: `${evidence.length} local evidence doc(s) · ${selected.length} catalog sources · localText=${sourcesWithLocalText.size}${localOnlySources ? " · localOnly" : ""}`,
     });
     if (evidence.length) {
       await appendAudit({
@@ -691,43 +842,41 @@ export async function runDoctrinePipeline(
     await runAgent(session, project, question, "evidence_manager", depth, model, evidenceCtx);
 
     const evidenceClaims = await readCollection<EvidenceClaim>("evidence-claims", []);
-    const newClaims: EvidenceClaim[] = sourceRecords.slice(0, 6).map((s) => ({
-      claim_id: uid("claim"),
-      statement: `${s.title}: ${s.decision_relevance || `Relevant to ${project.sector} decisions in ${project.country}`}`,
-      source_ids: [s.source_id],
-      judgement_type: "inference" as const,
-      decision_relevance: s.decision_relevance || `${project.sector} · ${project.country}`,
-      confidence: s.reliability === "high" ? ("high" as const) : ("moderate" as const),
-    }));
+    const newClaims = buildGroundedClaims(sourceRecords, evidence, project, question);
     await writeCollection("evidence-claims", [...newClaims, ...evidenceClaims].slice(0, 200));
 
     const lensCtx = [
       "Cite only these evidence claim IDs and source IDs; do not invent others.",
-      "When capture evidence is present, prefer grounded quotes from that text for the matching source ID.",
-      `Claims:\n${newClaims.map((c) => `- ${c.claim_id}: ${c.statement} (sources: ${c.source_ids.join(", ")})`).join("\n")}`,
+      "When local evidence text is present, ground findings in those passages for the matching source ID.",
+      localOnlySources
+        ? "Local-sources-only mode: do not cite registry URL-only rows without local text."
+        : "Prefer local capture / transcript / upload text when available.",
+      `Claims:\n${newClaims.map((c) => `- ${c.claim_id}: ${c.statement.slice(0, 280)} (sources: ${c.source_ids.join(", ")}${c.evidence_ids?.length ? `; evidence: ${c.evidence_ids.join(",")}` : ""})`).join("\n")}`,
       `Sources:\n${sourceRecords
         .slice(0, 8)
         .map((s, i) => {
           const ev = evidence.find((e) => e.sourceId === s.source_id);
           const labelBits = ev?.labels
-            ?.filter((l) => l.kind === "psn" || l.kind === "sector")
+            ?.filter((l) => l.kind === "psn" || l.kind === "sector" || l.kind === "relevance")
             .slice(0, 4)
             .map((l) => l.value)
             .join(", ");
           return `- Source ${i + 1} [${s.source_id}] ${s.title}${s.url ? ` · ${s.url}` : ""}${
             labelBits ? ` · labels: ${labelBits}` : ""
-          }${ev?.captureFolder ? ` · local capture: ${ev.captureFolder}` : ""}`;
+          }${ev?.captureFolder ? ` · local: ${ev.captureFolder}` : ""}${
+            sourcesWithLocalText.has(s.source_id) ? " · hasLocalText" : ""
+          }`;
         })
         .join("\n")}`,
       evidence.length
-        ? `Capture snippets:\n${evidence
-            .slice(0, 4)
+        ? `Local evidence snippets:\n${evidence
+            .slice(0, 6)
             .map(
               (e) =>
                 `- [${e.sourceId}] ${e.text.replace(/\s+/g, " ").trim().slice(0, 500)}`
             )
             .join("\n")}`
-        : "Capture snippets: (none)",
+        : "Local evidence snippets: (none)",
     ].join("\n\n");
     // Parallel PSN lenses — largest wall-clock win; OpenRouter semaphore caps concurrency.
     const [power, systems, narrative] = await Promise.all([
@@ -902,7 +1051,8 @@ export async function runDoctrinePipeline(
       sourceRecords,
       newClaims,
       evidence,
-      scoreBreakdown
+      scoreBreakdown,
+      localOnlySources
     );
 
     const briefs = await readCollection<Brief>("briefs", SEED_BRIEFS);

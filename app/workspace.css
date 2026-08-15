@@ -3296,6 +3296,11 @@
   font-weight: 700;
 }
 
+.op-src-status-item.is-local {
+  color: var(--teal);
+  font-weight: 600;
+}
+
 .op-src-status-review {
   display: inline-flex;
   align-items: center;

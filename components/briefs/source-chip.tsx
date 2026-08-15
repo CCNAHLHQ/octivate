@@ -182,7 +182,15 @@ export function SourceChip({
             {source.pageCoveragePct != null ? (
               <span>~{source.pageCoveragePct}% of page</span>
             ) : null}
+            {source.relevanceScore != null ? (
+              <span>relevance {source.relevanceScore}</span>
+            ) : null}
           </span>
+          {source.matchedKeywords?.length ? (
+            <span className="brief-source-popover-meta">
+              Keywords · {source.matchedKeywords.slice(0, 5).join(", ")}
+            </span>
+          ) : null}
           {source.url ? (
             <a
               href={source.url}

@@ -55,6 +55,15 @@ export function SourceCard({
   const showDelete = canDelete ?? Boolean(onDeleted);
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [busy, setBusy] = useState(false);
+  const hasParl =
+    s.id.startsWith("parl_") ||
+    Boolean(s.lastCaptureRoutes?.includes("parliamentary-video"));
+  const hasCapture =
+    Boolean(s.lastCaptureAt || s.lastCaptureFolder) && !hasParl;
+  const localBadges = [
+    hasCapture ? "capture" : null,
+    hasParl ? "parl transcript" : null,
+  ].filter(Boolean) as string[];
 
   async function runDelete() {
     if (busy) return;
@@ -223,6 +232,11 @@ export function SourceCard({
         {s.totalSourceScore != null ? (
           <span className="op-src-status-item">Σ {s.totalSourceScore}</span>
         ) : null}
+        {localBadges.map((b) => (
+          <span key={b} className="op-src-status-item is-local" title="Local evidence available">
+            {b}
+          </span>
+        ))}
         {s.humanReviewRequired ? (
           <span className="op-src-status-review">
             <ShieldAlert className="h-3 w-3" aria-hidden />

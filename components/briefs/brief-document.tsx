@@ -262,6 +262,9 @@ export function BriefDocument({
             <span className="brief-meta-pill">Review · {brief.reviewStatus.replace(/_/g, " ")}</span>
           ) : null}
           {brief.status ? <span className="brief-meta-pill">Status · {brief.status}</span> : null}
+          {brief.localOnlySources ? (
+            <span className="brief-meta-pill">Local sources only</span>
+          ) : null}
           {brief.depthDisclaimer ? (
             <span className="brief-meta-note">{brief.depthDisclaimer}</span>
           ) : null}

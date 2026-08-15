@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Mail, FileText } from "lucide-react";
 import { OctivateLogo } from "@/components/brand";
 import { HeroDottedGlobe } from "@/components/landing/hero-dotted-globe";
-import { DitherBackground } from "@/components/landing/dither-background";
+import { HeroVideoBackdrop } from "@/components/landing/hero-video-backdrop";
 import { LandingParallax } from "@/components/landing/landing-parallax";
 import {
   MailingListModal,
@@ -85,8 +85,8 @@ export function LandingPage() {
       <div className="landing-root phase1-landing">
         <LandingParallax />
 
-        <section className="hero" id="landing-hero">
-          <DitherBackground className="hero-dither" />
+        <section className="hero is-video-hero" id="landing-hero">
+          <HeroVideoBackdrop />
           <div className="container hero-grid">
             <div className="hero-copy">
               <h1 className="reveal in">{t("land.hero.title")}</h1>

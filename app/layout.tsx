@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Serif_Display, JetBrains_Mono } from "next/font/google";
+import { Manrope, Syne, JetBrains_Mono } from "next/font/google";
 import { SiteChrome } from "@/components/chrome/site-chrome";
 import { ClientRecovery } from "@/components/system/client-recovery";
 import { ThemeProvider } from "@/components/theme/theme-provider";
@@ -11,13 +11,15 @@ import "./chrome.css";
 import "./i18n/site-translate.css";
 import "./chrome/site-alerts.css";
 
-const body = Inter({
+/** SaaS-grade body: geometric, exclusive, not Inter/system. */
+const body = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
 });
 
-const display = Noto_Serif_Display({
+/** Display: expressive Syne for premium product chrome. */
+const display = Syne({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",

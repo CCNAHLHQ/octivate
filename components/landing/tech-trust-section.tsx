@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useId, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { Play, X } from "lucide-react";
 import { useT } from "@/components/i18n/locale-provider";
 import { cn } from "@/lib/utils";
@@ -75,13 +76,58 @@ function BitcoinMark() {
   );
 }
 
+/** OxaPay infinity mark — currentColor so hover lighting matches peers. */
+function OxaPayMark() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden className="land-tech-mark" fill="none">
+      <path
+        stroke="currentColor"
+        strokeWidth="2.15"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 12c0-2.35 1.9-4.25 4.25-4.25 1.55 0 2.85.8 3.55 2 .7-1.2 2-2 3.55-2 2.35 0 4.25 1.9 4.25 4.25s-1.9 4.25-4.25 4.25c-1.55 0-2.85-.8-3.55-2-.7 1.2-2 2-3.55 2-2.35 0-4.25-1.9-4.25-4.25z"
+      />
+    </svg>
+  );
+}
+
+function BrandImgMark({ src, alt }: { src: string; alt: string }) {
+  return (
+    <span className="land-tech-mark is-bitmap" aria-hidden>
+      <Image src={src} alt={alt} width={28} height={28} unoptimized />
+    </span>
+  );
+}
+
 const TECH: TechItem[] = [
   { id: "openrouter", label: "OpenRouter", mark: <OpenRouterMark /> },
   { id: "claude", label: "Claude", mark: <ClaudeMark /> },
   { id: "chatgpt", label: "ChatGPT", mark: <ChatGptMark /> },
+  {
+    id: "cursor",
+    label: "Cursor",
+    mark: <BrandImgMark src="/brands/cursor.svg" alt="Cursor" />,
+  },
+  {
+    id: "higgsfield",
+    label: "Higgsfield",
+    mark: <BrandImgMark src="/brands/higgsfield.png" alt="Higgsfield" />,
+  },
   { id: "paypal", label: "PayPal", mark: <PaypalMark /> },
+  { id: "oxapay", label: "OxaPay", mark: <OxaPayMark /> },
   { id: "bitcoin", label: "Bitcoin", mark: <BitcoinMark /> },
 ];
+
+function TechLogoItem({ item, inert }: { item: TechItem; inert?: boolean }) {
+  return (
+    <li className="land-tech-logo" data-tech={item.id} aria-hidden={inert || undefined}>
+      <span className="land-tech-logo-inner" title={item.label}>
+        {item.mark}
+        <span className="land-tech-logo-label">{item.label}</span>
+      </span>
+    </li>
+  );
+}
 
 function DemoPreviewArt() {
   return (
@@ -220,16 +266,19 @@ export function TechTrustSection() {
         </p>
         <p className="land-tech-lede reveal">{t("land.tech.lede")}</p>
 
-        <ul className="land-tech-logos reveal" aria-label={t("land.tech.heading")}>
-          {TECH.map((item) => (
-            <li key={item.id} className="land-tech-logo" data-tech={item.id}>
-              <span className="land-tech-logo-inner">
-                {item.mark}
-                <span className="land-tech-logo-label">{item.label}</span>
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div className="land-tech-marquee reveal" aria-label={t("land.tech.heading")}>
+          <div className="land-tech-marquee-fade" aria-hidden />
+          <div className="land-tech-marquee-viewport">
+            <ul className="land-tech-marquee-track">
+              {TECH.map((item) => (
+                <TechLogoItem key={`a-${item.id}`} item={item} />
+              ))}
+              {TECH.map((item) => (
+                <TechLogoItem key={`b-${item.id}`} item={item} inert />
+              ))}
+            </ul>
+          </div>
+        </div>
 
         <button
           type="button"

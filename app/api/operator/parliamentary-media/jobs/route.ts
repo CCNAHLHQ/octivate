@@ -1,3 +1,4 @@
+import path from "path";
 import { NextRequest } from "next/server";
 import { guardApi, jsonError, jsonOk } from "@/lib/security/guard";
 import { requireOperatorUser, resolveRequestUser } from "@/lib/auth/scope";
@@ -44,10 +45,26 @@ export async function GET(req: NextRequest) {
       platform: j.platform,
       stage: j.stage,
       progressPct: j.progressPct,
+      progressPhase: j.progressPhase,
+      progressLabel: j.progressLabel,
+      bytesDownloaded: j.bytesDownloaded,
+      bytesTotal: j.bytesTotal,
+      bytesPerSec: j.bytesPerSec,
+      retryCount: j.retryCount,
+      asrProvider: j.asrProvider,
+      model: j.model || null,
+      transcriptStatus: j.transcriptStatus || null,
+      hasTranscript:
+        j.stage === "done" || j.transcriptStatus === "octivate_machine_transcript",
       updatedAt: j.updatedAt,
       error: legacyDump ? summary?.headline : j.error || summary?.headline,
       errorDetail: j.errorDetail || (legacyDump ? j.error : undefined),
-      folder: j.folder,
+      folder: j.folder || null,
+      folderAbs: j.folder
+        ? path.isAbsolute(j.folder)
+          ? j.folder
+          : path.resolve(process.cwd(), j.folder)
+        : null,
       mediaUrl: j.mediaUrl,
       pageUrl: j.pageUrl,
       vimeoId: vimeoId || null,

@@ -7,8 +7,17 @@ export type MediaJobStage =
   | "transcribing"
   | "done"
   | "failed"
-  | "cancelled";
+  | "cancelled"
+  | "held";
 export type PipelineControlState = "idle" | "running" | "paused" | "cancelling";
+export type AsrProvider = "auto" | "openrouter" | "local";
+export type ProgressPhase =
+  | "idle"
+  | "download"
+  | "extract"
+  | "asr"
+  | "finalize"
+  | "retry";
 
 export type CrawlSeed = {
   id: string;
@@ -48,8 +57,17 @@ export type MediaJob = {
   vimeoId?: string;
   stage: MediaJobStage;
   progressPct: number;
+  progressPhase?: ProgressPhase;
+  progressLabel?: string;
+  bytesDownloaded?: number;
+  bytesTotal?: number;
+  /** Instantaneous download throughput (bytes/sec) while transferring. */
+  bytesPerSec?: number;
+  retryCount?: number;
+  asrProvider?: "openrouter" | "local";
   folder?: string;
   videoPath?: string;
+  audioPath?: string;
   /** Short operator-facing headline (never a stack dump). */
   error?: string;
   /** Full diagnostic text for expand/copy (truncated at write time). */
@@ -67,6 +85,14 @@ export type MediaJob = {
   warnings: string[];
 };
 
+export type AutomationSettings = {
+  /** How many catalogued items become queued jobs this run (slider). */
+  batchSize: number;
+  maxRetries: number;
+  asrProvider: AsrProvider;
+  updatedAt: string;
+};
+
 export type PipelineState = {
   control: PipelineControlState;
   discoverDone: boolean;
@@ -78,6 +104,7 @@ export type PipelineState = {
 export type PipelineSummary = {
   control: PipelineControlState;
   found: number;
+  held: number;
   queued: number;
   downloading: number;
   downloaded: number;
@@ -90,6 +117,7 @@ export type PipelineSummary = {
   seedsEnabled: number;
   seedsTotal: number;
   estimateAsrSec: number;
+  batchSize: number;
   discoverDone: boolean;
   lastError?: string;
   updatedAt: string;
@@ -111,8 +139,9 @@ export type MediaMetaFile = {
   transcribedAt?: string;
   transcriptStatus: "not_applicable" | "octivate_machine_transcript";
   model?: string;
+  asrProvider?: string;
   connectorVersion: string;
   warnings: string[];
 };
 
-export const CONNECTOR_VERSION = "parl-media-v2";
+export const CONNECTOR_VERSION = "parl-media-v4";

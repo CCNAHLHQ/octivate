@@ -1,4 +1,9 @@
-export type JobKind = "probe" | "capture";
+export type JobKind =
+  | "probe"
+  | "capture"
+  | "parl_discover"
+  | "parl_download"
+  | "parl_transcribe";
 
 export type JobProgressSnapshot = {
   kind: JobKind;
@@ -30,6 +35,9 @@ function empty(kind: JobKind): JobProgressSnapshot {
 const jobs: Record<JobKind, JobProgressSnapshot> = {
   probe: empty("probe"),
   capture: empty("capture"),
+  parl_discover: empty("parl_discover"),
+  parl_download: empty("parl_download"),
+  parl_transcribe: empty("parl_transcribe"),
 };
 
 function touch(kind: JobKind, patch: Partial<JobProgressSnapshot>) {
@@ -114,12 +122,12 @@ export function getJobProgress(kind: JobKind): JobProgressSnapshot {
   return { ...jobs[kind] };
 }
 
-export function getAllJobProgress(): {
-  probe: JobProgressSnapshot;
-  capture: JobProgressSnapshot;
-} {
+export function getAllJobProgress(): Record<JobKind, JobProgressSnapshot> {
   return {
     probe: getJobProgress("probe"),
     capture: getJobProgress("capture"),
+    parl_discover: getJobProgress("parl_discover"),
+    parl_download: getJobProgress("parl_download"),
+    parl_transcribe: getJobProgress("parl_transcribe"),
   };
 }

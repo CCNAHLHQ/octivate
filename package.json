@@ -22,6 +22,7 @@
     "pack:deploy": "powershell -ExecutionPolicy Bypass -File scripts/pack-deploy.ps1",
     "deploy:live": "node --env-file=.env scripts/deploy-live.mjs",
     "ship": "node --env-file=.env scripts/deploy-live.mjs",
+    "test:local-evidence": "node --experimental-strip-types --import ./server/parl-ts-register.mjs scripts/test-local-evidence.mjs",
     "sources:import": "node scripts/import-source-registry.mjs",
     "export:tokenize": "node scripts/tokenize-export-template.mjs",
     "parl:worker": "node --env-file=.env --experimental-strip-types --import ./server/parl-ts-register.mjs server/parl-media-worker.mjs"
@@ -31,9 +32,11 @@
     "@syntropy-labs/react-web-speech": "^0.1.2",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
+    "card-validator": "^10.0.4",
     "clsx": "^2.1.1",
     "docx": "^9.7.1",
     "framer-motion": "^11.15.0",
+    "hls.js": "^1.7.0",
     "html-to-docx": "^1.8.0",
     "html2canvas": "^1.4.1",
     "http-proxy": "^1.18.1",
@@ -61,6 +64,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/card-validator": "^4.1.0",
     "@types/http-proxy": "^1.17.15",
     "@types/leaflet": "^1.9.22",
     "@types/mustache": "^4.2.6",

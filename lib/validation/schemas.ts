@@ -13,6 +13,8 @@ export const askQuestionSchema = z.object({
   force: z.boolean().optional(),
   /** Prefer paid/premium model when OperatorLimits.allowPremiumModels is true. */
   usePaidModel: z.boolean().optional(),
+  /** Restrict cites to capture / parl transcripts / project uploads with local text. */
+  localOnlySources: z.boolean().optional(),
 });
 
 export const scoringPolicySchema = z.object({
@@ -21,6 +23,7 @@ export const scoringPolicySchema = z.object({
   agentConfW: z.number().min(0).max(100),
   triangulationW: z.number().min(0).max(100),
   freshnessW: z.number().min(0).max(100),
+  localOnlySourcesDefault: z.boolean().optional(),
 });
 
 export const updateProjectSchema = z.object({

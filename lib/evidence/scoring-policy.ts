@@ -14,9 +14,20 @@ function normalize(raw?: Partial<ScoringPolicy> | null): ScoringPolicy {
     merged.agentConfW +
     merged.triangulationW +
     merged.freshnessW;
-  if (sum <= 0) return { ...DEFAULT_SCORING_POLICY };
-  // Keep relative weights; scoreBrief renormalizes.
-  return merged;
+  if (sum <= 0) {
+    return {
+      ...DEFAULT_SCORING_POLICY,
+      localOnlySourcesDefault: Boolean(merged.localOnlySourcesDefault),
+    };
+  }
+  return {
+    sourceScoreW: merged.sourceScoreW,
+    labelMatchW: merged.labelMatchW,
+    agentConfW: merged.agentConfW,
+    triangulationW: merged.triangulationW,
+    freshnessW: merged.freshnessW,
+    localOnlySourcesDefault: Boolean(merged.localOnlySourcesDefault),
+  };
 }
 
 export async function readScoringPolicy(): Promise<ScoringPolicy> {
@@ -24,8 +35,11 @@ export async function readScoringPolicy(): Promise<ScoringPolicy> {
   return normalize(stored);
 }
 
-export async function writeScoringPolicy(policy: ScoringPolicy): Promise<ScoringPolicy> {
-  const next = normalize(policy);
+export async function writeScoringPolicy(
+  policy: Partial<ScoringPolicy>
+): Promise<ScoringPolicy> {
+  const current = await readScoringPolicy();
+  const next = normalize({ ...current, ...policy });
   await writeObject(KEY, next);
   return next;
 }

@@ -24,6 +24,7 @@ import {
   DollarSign,
   Database,
   Mail,
+  Store,
   Bot,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -118,6 +119,11 @@ const operatorNav = [
         labelKey: "op.tab.pricing" as MessageKey,
         href: "/dashboard/operator#pricing",
         icon: DollarSign,
+      },
+      {
+        labelKey: "op.tab.merchants" as MessageKey,
+        href: "/dashboard/operator#merchants",
+        icon: Store,
       },
       {
         labelKey: "op.tab.automation" as MessageKey,

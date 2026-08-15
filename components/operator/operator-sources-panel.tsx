@@ -128,11 +128,11 @@ export function OperatorSourcesPanel({ embedded = false }: { embedded?: boolean 
       if (country !== "all" && s.country !== country) return false;
       if (watch !== "all" && (s.watchPriority || "") !== watch) return false;
       if (retrieval !== "all" && (s.retrievalPriority || "") !== retrieval) return false;
-      if (health === "healthy" && (s.health !== "healthy" || !s.healthCheckedAt)) return false;
+      if (health === "healthy" && s.health !== "healthy") return false;
       if (health === "issues" && !(s.health === "degraded" || s.health === "down")) {
         return false;
       }
-      if (health === "never" && s.healthCheckedAt) return false;
+      if (health === "never" && (s.healthCheckedAt || s.lastChecked)) return false;
       if (!needle) return true;
       const hay = [
         s.title,
@@ -161,8 +161,34 @@ export function OperatorSourcesPanel({ embedded = false }: { embedded?: boolean 
   const stats = useMemo(() => {
     const core = sources.filter((s) => s.watchPriority === "Core").length;
     const withUrl = sources.filter((s) => !!(s.primaryRetrievalUrl || s.url)).length;
-    return { total: sources.length, core, withUrl };
+    const withLocal = sources.filter(
+      (s) =>
+        Boolean(s.lastCaptureAt || s.lastCaptureFolder) ||
+        s.id.startsWith("parl_") ||
+        s.lastCaptureRoutes?.includes("parliamentary-video")
+    ).length;
+    return { total: sources.length, core, withUrl, withLocal };
   }, [sources]);
+
+  const filtersActive =
+    country !== "all" ||
+    watch !== "all" ||
+    retrieval !== "all" ||
+    health !== "all" ||
+    q.trim().length > 0;
+
+  async function rehydrateSeeds() {
+    setRefreshing(true);
+    try {
+      await apiFetch("/api/sources/rehydrate", { method: "POST", skipCache: true });
+      toast.success("Restored seed sources");
+      await load(true);
+    } catch {
+      toast.error("Could not restore seed sources");
+    } finally {
+      setRefreshing(false);
+    }
+  }
 
   if (loading) {
     return (
@@ -215,6 +241,10 @@ export function OperatorSourcesPanel({ embedded = false }: { embedded?: boolean 
           <span className="op-src-pulse-chip is-violet">
             <Link2 className="h-3 w-3" aria-hidden />
             {stats.withUrl} linked
+          </span>
+          <span className="op-src-pulse-chip is-teal">
+            <Radio className="h-3 w-3" aria-hidden />
+            {stats.withLocal} local evidence
           </span>
         </div>
         <CsvSourceDropzone
@@ -286,17 +316,32 @@ export function OperatorSourcesPanel({ embedded = false }: { embedded?: boolean 
               onChange={setHealth}
             />
           </div>
-          <p className="op-src-count">
+          <p className="op-src-count" title="Matching filters / registry total">
             {filtered.length}
-            <span> / {sources.length}</span>
+            <span> matching / {sources.length} total</span>
           </p>
         </div>
 
-        {filtered.length === 0 ? (
+        {sources.length === 0 ? (
+          <OperatorEmptyState
+            icon={Database}
+            title="Source registry is empty"
+            description="The live registry was cleared. Restore seed sources or drop a CSV to rebuild."
+            action={
+              <Button size="sm" onClick={() => void rehydrateSeeds()} disabled={refreshing}>
+                Restore seed sources
+              </Button>
+            }
+          />
+        ) : filtered.length === 0 ? (
           <OperatorEmptyState
             icon={Database}
             title="No matching sources"
-            description="Adjust filters or drop a CSV above to merge sources into the registry."
+            description={
+              filtersActive
+                ? `${sources.length} source${sources.length === 1 ? "" : "s"} hidden by filters — clear search or widen country / watch / health.`
+                : "Adjust filters or drop a CSV above to merge sources into the registry."
+            }
           />
         ) : (
           <>

@@ -84,7 +84,7 @@
   /* —— Hero network viz (dark output panel — light type in every theme) —— */
   --hero-viz-card-shadow: 0 28px 64px -24px rgba(15, 23, 42, 0.28), 0 0 0 1px rgba(154, 171, 255, 0.18);
 
-  /* —— Mailing panel (theme-aware glass) —— */
+  /* —— Mailing panel (theme-aware; opaque enough to block page bleed) —— */
   --mailing-title: var(--foam);
   --mailing-body: var(--mist);
   --mailing-label: var(--faint);
@@ -92,21 +92,21 @@
   --mailing-benefit: color-mix(in srgb, var(--foam) 92%, transparent);
   --mailing-input-text: var(--foam);
   --mailing-input-placeholder: color-mix(in srgb, var(--mist) 72%, transparent);
-  --mailing-form-bg: color-mix(in srgb, var(--abyss) 78%, transparent);
+  --mailing-form-bg: color-mix(in srgb, var(--abyss-2) 96%, #fff);
   --mailing-form-border: var(--line);
   --mailing-copy-shadow: none;
   --mailing-panel-border: color-mix(in srgb, var(--violet) 28%, var(--line));
   --mailing-panel-bg:
     linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--violet) 12%, transparent) 0%,
-      var(--glass-top) 42%,
-      color-mix(in srgb, var(--tide) 8%, var(--glass-bottom)) 100%
+      145deg,
+      color-mix(in srgb, var(--violet) 8%, #ffffff) 0%,
+      #ffffff 38%,
+      color-mix(in srgb, var(--tide) 6%, #f6f8fc) 100%
     );
   --mailing-panel-shadow: var(--shadow-panel);
   --mailing-glow: var(--glow-v);
-  --mailing-backdrop: var(--chrome-overlay);
-  --mailing-input-bg: color-mix(in srgb, var(--mist) 8%, transparent);
+  --mailing-backdrop: rgba(15, 23, 42, 0.62);
+  --mailing-input-bg: #ffffff;
   --mailing-input-focus-bg: var(--accent-soft-bg);
   --mailing-ghost-bg: var(--ghost-bg);
   --mailing-ghost-hover-bg: var(--ghost-hover-bg);
@@ -203,34 +203,34 @@
 
   --hero-viz-card-shadow: 0 30px 80px -20px rgba(3, 6, 18, 0.95), 0 0 0 1px rgba(154, 171, 255, 0.14);
 
-  /* —— Mailing panel (dark glass island) —— */
+  /* —— Mailing panel (dark opaque island — no page text bleed) —— */
   --mailing-title: #eaf0ff;
   --mailing-body: #c5cde0;
   --mailing-label: #9aa8c7;
   --mailing-faint: #7a88a8;
-  --mailing-benefit: rgba(234, 240, 255, 0.88);
+  --mailing-benefit: rgba(234, 240, 255, 0.92);
   --mailing-input-text: #eaf0ff;
   --mailing-input-placeholder: rgba(154, 171, 255, 0.55);
-  --mailing-form-bg: rgba(4, 7, 15, 0.62);
-  --mailing-form-border: rgba(255, 255, 255, 0.08);
-  --mailing-copy-shadow: 0 1px 2px rgba(4, 7, 15, 0.72), 0 0 18px rgba(4, 7, 15, 0.35);
-  --mailing-panel-border: rgba(168, 85, 247, 0.35);
+  --mailing-form-bg: rgba(10, 16, 30, 0.98);
+  --mailing-form-border: rgba(255, 255, 255, 0.1);
+  --mailing-copy-shadow: none;
+  --mailing-panel-border: rgba(168, 85, 247, 0.38);
   --mailing-panel-bg: linear-gradient(
-    135deg,
-    rgba(168, 85, 247, 0.14) 0%,
-    rgba(7, 11, 23, 0.94) 42%,
-    rgba(45, 212, 191, 0.08) 100%
+    145deg,
+    rgba(28, 18, 48, 0.99) 0%,
+    rgba(8, 12, 24, 0.995) 45%,
+    rgba(10, 22, 36, 0.99) 100%
   );
   --mailing-panel-shadow: var(--land-shadow-card, 0 16px 44px -22px rgba(3, 6, 18, 0.82));
   --mailing-glow: rgba(168, 85, 247, 0.28);
-  --mailing-backdrop: rgba(4, 7, 15, 0.72);
-  --mailing-input-bg: rgba(255, 255, 255, 0.04);
-  --mailing-input-focus-bg: rgba(168, 85, 247, 0.06);
-  --mailing-ghost-bg: rgba(255, 255, 255, 0.03);
-  --mailing-ghost-hover-bg: rgba(168, 85, 247, 0.12);
+  --mailing-backdrop: rgba(4, 7, 15, 0.82);
+  --mailing-input-bg: rgba(255, 255, 255, 0.05);
+  --mailing-input-focus-bg: rgba(168, 85, 247, 0.08);
+  --mailing-ghost-bg: rgba(255, 255, 255, 0.04);
+  --mailing-ghost-hover-bg: rgba(168, 85, 247, 0.14);
   --mailing-status-ok: #7dede0;
   --mailing-status-err: #ffa79c;
-  --mailing-close-bg: rgba(255, 255, 255, 0.04);
+  --mailing-close-bg: rgba(255, 255, 255, 0.06);
 }
 
 /* Theme toggle control — icon only */

@@ -30,7 +30,7 @@
 }
 
 .octivate-logo-wordmark-svg {
-  font-family: Inter, var(--f-body), system-ui, sans-serif;
+  font-family: var(--f-body);
   font-size: 22px;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -59,7 +59,7 @@
 }
 
 .octivate-logo-lockup-name {
-  font-family: Inter, var(--f-body), system-ui, sans-serif;
+  font-family: var(--f-body);
   font-weight: 800;
   font-size: 1.05rem;
   letter-spacing: 0.08em;

@@ -13,7 +13,7 @@ import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import type { ScoringPolicy } from "@/lib/evidence/types";
 import { DEFAULT_SCORING_POLICY } from "@/lib/evidence/types";
 
-type WeightKey = keyof ScoringPolicy;
+type WeightKey = Exclude<keyof ScoringPolicy, "localOnlySourcesDefault">;
 
 const WEIGHTS: {
   key: WeightKey;
@@ -220,6 +220,27 @@ export function OperatorEvidencePipelinePanel() {
           </Button>
         </Tooltip>
       </div>
+
+      <label className="mt-3 flex items-start gap-2 text-xs text-mist">
+        <input
+          type="checkbox"
+          className="mt-0.5"
+          checked={policy.localOnlySourcesDefault === true}
+          onChange={(e) => {
+            setPolicy((prev) => {
+              const next = { ...prev, localOnlySourcesDefault: e.target.checked };
+              policyRef.current = next;
+              return next;
+            });
+            scheduleSave();
+          }}
+          onBlur={flushSave}
+        />
+        <span>
+          Default project runs to <strong>local sources only</strong> (capture, parl
+          transcripts, uploads with text).
+        </span>
+      </label>
     </div>
   );
 }

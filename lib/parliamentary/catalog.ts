@@ -22,7 +22,6 @@ import {
 } from "@/lib/parliamentary/heartbeat";
 import { parlLog } from "@/lib/parliamentary/log";
 import {
-  ensureJobForCandidate,
   listEnabledSeeds,
   readJobs,
   readPipeline,
@@ -291,7 +290,6 @@ export async function runCatalog(opts?: {
         added += 1;
         try {
           await upsertCandidate(c);
-          if (!dryRun) await ensureJobForCandidate(c);
         } catch (persistErr) {
           parlLog("warn", "persist candidate retry", {
             mediaUrl: c.mediaUrl,
@@ -299,9 +297,8 @@ export async function runCatalog(opts?: {
           });
           await new Promise((r) => setTimeout(r, 80));
           await upsertCandidate(c);
-          if (!dryRun) await ensureJobForCandidate(c);
         }
-        parlLog("info", "media queued", {
+        parlLog("info", "media found", {
           title: c.title,
           mediaUrl: c.mediaUrl,
           country: c.country,

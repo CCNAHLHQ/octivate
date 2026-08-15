@@ -25,6 +25,165 @@
   padding-block: clamp(2.5rem, 6vw, 4.25rem) clamp(2.75rem, 7vw, 4.75rem);
 }
 
+/* Local MP4 hero — cover-fit canvas, dark-plate type, animated blur veil */
+.phase1-landing .hero.is-video-hero {
+  isolation: isolate;
+  min-height: min(88vh, 860px);
+  display: flex;
+  align-items: center;
+  background: #05070f;
+}
+
+.phase1-landing .hero.is-video-hero .hero-grid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.phase1-landing .hero.is-video-hero .hero-dither {
+  display: none !important;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #05070f;
+}
+
+.hero-video-el {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  filter: none;
+  transform: none;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  background: #05070f;
+}
+
+.hero-video[data-ready="1"] .hero-video-el {
+  opacity: 1;
+}
+
+/* Slight animated blur over the live video (breathes — not static) */
+.hero-video-blur {
+  position: absolute;
+  inset: -2%;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(5, 7, 15, 0.12);
+  backdrop-filter: blur(2.5px) saturate(1.05);
+  -webkit-backdrop-filter: blur(2.5px) saturate(1.05);
+  animation: hero-blur-breathe 9s ease-in-out infinite;
+  will-change: backdrop-filter, opacity;
+}
+
+@keyframes hero-blur-breathe {
+  0%,
+  100% {
+    backdrop-filter: blur(2px) saturate(1.02);
+    -webkit-backdrop-filter: blur(2px) saturate(1.02);
+    opacity: 0.85;
+  }
+  45% {
+    backdrop-filter: blur(5px) saturate(1.08);
+    -webkit-backdrop-filter: blur(5px) saturate(1.08);
+    opacity: 1;
+  }
+  70% {
+    backdrop-filter: blur(3px) saturate(1.04);
+    -webkit-backdrop-filter: blur(3px) saturate(1.04);
+    opacity: 0.92;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-blur {
+    animation: none;
+    backdrop-filter: blur(3px) saturate(1.04);
+    -webkit-backdrop-filter: blur(3px) saturate(1.04);
+  }
+}
+
+.hero-video-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    rgba(5, 7, 15, 0.7) 0%,
+    rgba(5, 7, 15, 0.28) 36%,
+    rgba(5, 7, 15, 0.08) 58%,
+    transparent 78%
+  );
+}
+
+.phase1-landing .hero.is-video-hero .hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 40rem;
+}
+
+.phase1-landing .hero.is-video-hero h1 {
+  color: #f7f9ff !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.55);
+}
+
+.phase1-landing .hero.is-video-hero .sub {
+  color: rgba(234, 240, 255, 0.92) !important;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+}
+
+.phase1-landing .hero.is-video-hero .btn-primary {
+  color: #fff;
+  box-shadow: 0 12px 36px -10px rgba(137, 80, 238, 0.55);
+}
+
+.phase1-landing .hero.is-video-hero .btn-ghost {
+  color: #eaf0ff !important;
+  border-color: rgba(234, 240, 255, 0.38) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.phase1-landing .hero.is-video-hero .btn-ghost:hover {
+  color: #fff !important;
+  border-color: rgba(168, 85, 247, 0.7) !important;
+  background: rgba(137, 80, 238, 0.22) !important;
+}
+
+.phase1-landing .hero.is-video-hero .hero-visual {
+  filter: none;
+  opacity: 0.92;
+}
+
+@media (max-width: 720px) {
+  .phase1-landing .hero.is-video-hero {
+    min-height: auto;
+  }
+
+  .hero-video-el {
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  .hero-video-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 7, 15, 0.55) 0%,
+      rgba(5, 7, 15, 0.22) 50%,
+      rgba(5, 7, 15, 0.55) 100%
+    );
+  }
+}
+
 .phase1-landing .hero h1 {
   color: var(--foam);
   max-width: 22ch;
@@ -158,7 +317,7 @@
 
 .phase1-imagery-card span {
   display: block;
-  font-family: Inter, var(--f-body), system-ui, sans-serif;
+  font-family: var(--f-body);
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -599,30 +758,92 @@
   color: var(--mist);
 }
 
-.land-tech-logos {
+/* Single-track tech marquee — soft edge mask, fixed lane width */
+.land-tech-marquee {
+  position: relative;
+  width: min(100%, 42rem);
+  max-width: 42rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.land-tech-marquee-viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 12%,
+    #000 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 12%,
+    #000 88%,
+    transparent 100%
+  );
+}
+.land-tech-marquee-track {
   list-style: none;
   margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 56rem;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 0.35rem 0;
+  display: flex;
   align-items: center;
-  gap: 0.75rem 1rem;
+  gap: 0.35rem 1.35rem;
+  width: max-content;
+  animation: land-tech-marquee 48s linear infinite;
+  will-change: transform;
+}
+.land-tech-marquee:hover .land-tech-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes land-tech-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .land-tech-logo {
   --tech-accent: var(--violet);
   display: flex;
   justify-content: center;
+  flex: none;
   min-width: 0;
 }
 
 .land-tech-logo[data-tech="openrouter"] { --tech-accent: #6566f1; }
 .land-tech-logo[data-tech="claude"] { --tech-accent: #d97757; }
 .land-tech-logo[data-tech="chatgpt"] { --tech-accent: #10a37f; }
+.land-tech-logo[data-tech="cursor"] { --tech-accent: #14120b; }
+.land-tech-logo[data-tech="higgsfield"] { --tech-accent: #c8f000; }
 .land-tech-logo[data-tech="paypal"] { --tech-accent: #003087; }
+.land-tech-logo[data-tech="oxapay"] { --tech-accent: #1e40af; }
 .land-tech-logo[data-tech="bitcoin"] { --tech-accent: #f7931a; }
+
+[data-theme="dark"] .land-tech-logo[data-tech="cursor"] { --tech-accent: #f7f7f4; }
+[data-theme="dark"] .land-tech-logo[data-tech="higgsfield"] { --tech-accent: #d1ff00; }
+
+.land-tech-mark.is-bitmap {
+  width: 1.55rem;
+  height: 1.55rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 0.45rem;
+  overflow: hidden;
+  color: inherit;
+}
+.land-tech-mark.is-bitmap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.land-tech-logo[data-tech="cursor"] .land-tech-mark.is-bitmap,
+.land-tech-logo[data-tech="higgsfield"] .land-tech-mark.is-bitmap {
+  /* Preserve trademark colors — do not force currentColor fills */
+  filter: none;
+}
 
 .land-tech-logo-inner {
   display: inline-flex;
@@ -689,6 +910,18 @@
   .land-tech-logo:hover .land-tech-logo-inner,
   .land-tech-logo:focus-within .land-tech-logo-inner {
     transform: none;
+  }
+
+  .land-tech-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .land-tech-marquee-viewport {
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 }
 
@@ -1037,13 +1270,13 @@
 }
 
 @media (max-width: 720px) {
-  .land-tech-logos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.85rem 0.75rem;
+  .land-tech-marquee {
+    width: min(100%, 22rem);
+    max-width: 22rem;
   }
-
-  .land-tech-logos .land-tech-logo:last-child {
-    grid-column: 1 / -1;
+  .land-tech-marquee-track {
+    gap: 0.25rem 1rem;
+    animation-duration: 40s;
   }
 
   .land-tech-demo {

@@ -6,6 +6,7 @@ import { clearAutomationWorkspace } from "@/lib/parliamentary/clear";
 import { parlEnabled } from "@/lib/parliamentary/config";
 import { readPipeline, setPipelineControl } from "@/lib/parliamentary/store";
 import { parlLog } from "@/lib/parliamentary/log";
+import { getWorkerLiveness } from "@/lib/parliamentary/status";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -61,16 +62,36 @@ export async function POST(req: NextRequest) {
   }
 
   if (action === "start") {
+    const worker = await getWorkerLiveness();
+    if (!worker.live) {
+      // Do not leave control=running with a dead worker — UI would lie again.
+      await setPipelineControl("idle", {
+        discoverDone: cur.discoverDone,
+        lastError: "worker_offline",
+      });
+      return jsonError(
+        "Media worker is offline. Restart the parl-media worker, then press Start.",
+        503
+      );
+    }
+    const { readJobs } = await import("@/lib/parliamentary/store");
+    const jobs = await readJobs();
+    const unfinished = jobs.some((j) =>
+      ["queued", "downloading", "downloaded", "transcribing"].includes(j.stage)
+    );
     const next = await setPipelineControl("running", {
-      discoverDone: false,
+      // Resume existing queue without forcing a fresh catalog wipe.
+      discoverDone: unfinished ? true : false,
       lastError: undefined,
     });
-    parlLog("info", "operator start", { by: who });
+    parlLog("info", "operator start", { by: who, resume: unfinished, workerPid: worker.pid });
     await appendAudit({
       action: "automation_pipeline_start",
-      detail: `Automation pipeline started by ${who}`,
+      detail: unfinished
+        ? `Automation pipeline resumed by ${who}`
+        : `Automation pipeline started by ${who}`,
     });
-    return jsonOk({ pipeline: next, action });
+    return jsonOk({ pipeline: next, action, resume: unfinished });
   }
   if (action === "pause") {
     if (cur.control !== "running" && cur.control !== "paused") {
@@ -83,6 +104,21 @@ export async function POST(req: NextRequest) {
       detail: `Automation pipeline paused by ${who}`,
     });
     return jsonOk({ pipeline: next, action });
+  }
+
+  // Cancel with a dead worker must force idle — nothing will process "cancelling".
+  const worker = await getWorkerLiveness();
+  if (!worker.live) {
+    const next = await setPipelineControl("idle", {
+      discoverDone: cur.discoverDone,
+      lastError: undefined,
+    });
+    parlLog("info", "operator cancel (worker offline → idle)", { by: who });
+    await appendAudit({
+      action: "automation_pipeline_cancel",
+      detail: `Automation pipeline forced idle by ${who} (worker offline)`,
+    });
+    return jsonOk({ pipeline: next, action, forcedIdle: true });
   }
 
   const next = await setPipelineControl("cancelling");

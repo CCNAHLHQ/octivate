@@ -2,6 +2,7 @@ import { uid, readCollection } from "@/lib/store/json-store";
 import { SEED_PROJECTS } from "@/lib/mock/seed";
 import type { AgentSession, AnalysisDepth, Project } from "@/lib/types";
 import { readOperatorLimits, readUsage } from "@/lib/usage/usage-store";
+import { readScoringPolicy } from "@/lib/evidence/scoring-policy";
 import { AGENT_DEFS } from "./agent-defs";
 import { runDoctrinePipeline, freshDoctrineStages } from "./doctrine-pipeline";
 import {
@@ -31,6 +32,8 @@ export type StartAgentPipelineOptions = {
   force?: boolean;
   /** Prefer paid model when operator allows premium. */
   usePaidModel?: boolean;
+  /** Restrict cites to sources with local evidence text. */
+  localOnlySources?: boolean;
 };
 
 export async function startAgentPipeline(
@@ -41,6 +44,13 @@ export async function startAgentPipeline(
 ): Promise<AgentSession> {
   const force = opts.force === true;
   const preferPremium = opts.usePaidModel === true;
+  let localOnlySources = opts.localOnlySources;
+  if (localOnlySources === undefined) {
+    const policy = await readScoringPolicy();
+    localOnlySources = policy.localOnlySourcesDefault === true;
+  } else {
+    localOnlySources = localOnlySources === true;
+  }
 
   // Unlock slots + UI left behind by crashed / abandoned workers.
   await recoverStaleSessions();
@@ -88,6 +98,7 @@ export async function startAgentPipeline(
     pipelineMode: "doctrine",
     analysisDepth,
     preferPremium,
+    localOnlySources,
   };
 
   await persistSession(session);

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   Check,
   FileText,
@@ -23,16 +24,17 @@ import {
   formatMoney,
   resolvePrice,
 } from "@/lib/billing/plans";
-import { PaymentModal } from "@/components/pricing/payment-modal";
+import { BillingCheckout } from "@/components/pricing/billing-checkout";
 import { apiFetch } from "@/lib/api-client";
+import { touchCheckoutNavigationTrail } from "@/lib/billing/client-context";
 
 const ICON_TO_METHOD: Record<string, PaymentMethodId> = {
-  Stripe: "stripe",
   PayPal: "paypal",
   Visa: "card",
   Mastercard: "card",
-  Bitcoin: "crypto",
-  Ethereum: "crypto",
+  Cryptocurrency: "oxapay",
+  Bitcoin: "oxapay",
+  Ethereum: "oxapay",
 };
 
 const PLAN_ICONS: Record<PlanId, typeof Sparkles> = {
@@ -40,8 +42,10 @@ const PLAN_ICONS: Record<PlanId, typeof Sparkles> = {
   single: FileText,
   team: Users,
 };
+
 function useReveal(deps: unknown[]) {
   useEffect(() => {
+    touchCheckoutNavigationTrail();
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) {
       document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
@@ -78,7 +82,7 @@ function PaymentIcons({
           className="pay-item"
           onClick={() => onPick?.(m.label)}
         >
-          <span className={`pay-logo ${m.tone === "brand" ? "is-brand" : ""}`}>
+          <span className="pay-logo">
             <Image src={m.src} alt={m.alt} width={m.w} height={m.h} unoptimized />
           </span>
           <span>{m.label}</span>
@@ -135,81 +139,94 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
         <div className="container">
           <div className="section-head" style={{ marginBottom: "2.5rem" }}>
             <span className="eyebrow">Pricing</span>
-            <h1 className="reveal in">Find the plan that fits the decision</h1>
+            <h1 className="reveal in">Plans built around the decision</h1>
             <p className="lede reveal in" data-delay="1">
-              Explore free. Unlock a single decision brief for {singlePrice}, or Team access for{" "}
-              {teamPrice}/mo with full agentic workspace capacity.
+              Explore free. Unlock a scoped decision brief for {singlePrice}, or Team
+              workspace for {teamPrice}/mo with the full agentic stack.
             </p>
           </div>
 
           <div className="pricing-grid">
-            {plans.map((plan, i) => {
-              const interval = plan.defaultInterval;
-              const price = resolvePrice(plan, interval);
-              const priceLabel = formatMoney(price.amount);
-              const Icon = PLAN_ICONS[plan.id] || Sparkles;
+            <AnimatePresence mode="popLayout">
+              {plans.map((plan, i) => {
+                const interval = plan.defaultInterval;
+                const price = resolvePrice(plan, interval);
+                const priceLabel = formatMoney(price.amount);
+                const Icon = PLAN_ICONS[plan.id] || Sparkles;
 
-              return (
-                <article
-                  key={plan.id}
-                  className={`price-card reveal in${plan.featured ? " is-featured" : ""}`}
-                  data-delay={i + 1}
-                >
-                  <header className="price-head">
-                    <div className="price-title-row">
-                      <span className="price-plan-icon" aria-hidden>
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      <h2>{plan.name}</h2>
-                      {plan.badge ? <span className="price-badge">{plan.badge}</span> : null}
-                    </div>
+                return (
+                  <motion.article
+                    key={plan.id}
+                    layout
+                    className={`price-card reveal in${plan.featured ? " is-featured" : ""}`}
+                    data-delay={i + 1}
+                    data-plan={plan.id}
+                    initial={{ opacity: 0, y: 18 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.45,
+                      delay: i * 0.08,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    whileHover={{ y: -6 }}
+                  >
+                    <div className="price-card-sheen" aria-hidden />
+                    <header className="price-head">
+                      <div className="price-title-row">
+                        <span className="price-plan-icon" aria-hidden>
+                          <Icon className="h-4 w-4" />
+                        </span>
+                        <h2>{plan.name}</h2>
+                        {plan.badge ? <span className="price-badge">{plan.badge}</span> : null}
+                      </div>
 
-                    <div className="price-amount">
-                      <span className="price-num">{priceLabel}</span>
-                      {price.unitLabel ? (
-                        <span className="price-unit">{price.unitLabel}</span>
-                      ) : null}
-                    </div>
-                    <p className="price-desc">{plan.description}</p>
-                    {price.note ? <p className="price-save">{price.note}</p> : null}
-                  </header>
+                      <div className="price-amount">
+                        <span className="price-num">{priceLabel}</span>
+                        {price.unitLabel ? (
+                          <span className="price-unit">{price.unitLabel}</span>
+                        ) : null}
+                      </div>
+                      <p className="price-desc">{plan.description}</p>
+                      {price.note ? <p className="price-save">{price.note}</p> : null}
+                    </header>
 
-                  <ul className="price-features">
-                    {plan.features.map((t) => (
-                      <li key={t}>
-                        <Check className="feat-check" aria-hidden />
-                        <span>{t}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="price-features">
+                      {plan.features.map((t) => (
+                        <li key={t}>
+                          <Check className="feat-check" aria-hidden />
+                          <span>{t}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                  {plan.accessNote ? (
-                    <div className={`price-note is-${plan.accessNote.tone}`}>
-                      {plan.accessNote.body}
-                    </div>
-                  ) : null}
+                    {plan.accessNote ? (
+                      <div className={`price-note is-${plan.accessNote.tone}`}>
+                        {plan.accessNote.body}
+                      </div>
+                    ) : null}
 
-                  {plan.requiresPayment ? (
-                    <button
-                      type="button"
-                      className={`btn ${plan.featured ? "btn-primary" : "btn-ghost"} price-cta glimmer-btn`}
-                      onClick={() => openCheckout(plan.id, interval)}
-                    >
-                      {plan.id === "team"
-                        ? `${plan.ctaLabel} — ${priceLabel}/mo`
-                        : `${plan.ctaLabel} — ${priceLabel}`}
-                    </button>
-                  ) : (
-                    <Link
-                      href={plan.href || "/signup"}
-                      className="btn btn-ghost price-cta glimmer-btn"
-                    >
-                      {plan.ctaLabel}
-                    </Link>
-                  )}
-                </article>
-              );
-            })}
+                    {plan.requiresPayment ? (
+                      <button
+                        type="button"
+                        className={`btn ${plan.featured ? "btn-primary" : "btn-ghost"} price-cta glimmer-btn`}
+                        onClick={() => openCheckout(plan.id, interval)}
+                      >
+                        {plan.id === "team"
+                          ? `${plan.ctaLabel} — ${priceLabel}/mo`
+                          : `${plan.ctaLabel} — ${priceLabel}`}
+                      </button>
+                    ) : (
+                      <Link
+                        href={plan.href || "/signup"}
+                        className="btn btn-ghost price-cta glimmer-btn"
+                      >
+                        {plan.ctaLabel}
+                      </Link>
+                    )}
+                  </motion.article>
+                );
+              })}
+            </AnimatePresence>
           </div>
 
           <div className="pricing-trust reveal" data-delay="2">
@@ -240,11 +257,18 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
                 })
               }
             />
+            <p className="pay-footnote">
+              Crypto via{" "}
+              <a href="https://oxapay.com/" target="_blank" rel="noreferrer">
+                OxaPay
+              </a>
+              . Card, PayPal, and crypto share one merchant billing profile.
+            </p>
           </div>
         </div>
       </section>
 
-      <PaymentModal
+      <BillingCheckout
         open={!!checkout}
         context={checkout}
         plans={plans}

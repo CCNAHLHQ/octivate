@@ -2,15 +2,13 @@ import { createHash } from "crypto";
 import { createWriteStream, promises as fs } from "fs";
 import path from "path";
 import { spawn } from "child_process";
-import { pipeline } from "stream/promises";
-import { Readable } from "stream";
-import { getChromiumBrowser } from "@/lib/browser/chromium";
 import { assertSafePublicUrl } from "@/lib/security/ssrf";
 import { ffmpegPath } from "@/lib/parliamentary/config";
 import { parlLog } from "@/lib/parliamentary/log";
 import { buildArtifactFolder, relativeToCwd } from "@/lib/parliamentary/paths";
 import { CONNECTOR_VERSION, type MediaJob, type MediaMetaFile } from "@/lib/parliamentary/types";
 import { parseVimeoVideoId } from "@/lib/parliamentary/detect";
+import { downloadVimeoToFile } from "@/lib/parliamentary/vimeo-download";
 
 /** Reject tiny/corrupt captures before ASR. */
 const MIN_VIDEO_BYTES = 256 * 1024;
@@ -108,10 +106,17 @@ export async function assertVideoReady(
   return { bytes: st.size, contentHash, durationSec };
 }
 
+export type DownloadProgress = {
+  bytesDownloaded: number;
+  bytesTotal?: number;
+  pct: number;
+};
+
 async function httpDownload(
   url: string,
   dest: string,
-  referer?: string
+  referer?: string,
+  onProgress?: (p: DownloadProgress) => void
 ): Promise<{ bytes: number; expectBytes?: number }> {
   const safe = await assertSafePublicUrl(url);
   if (!safe.ok) throw new Error(`ssrf:${safe.detail || safe.code}`);
@@ -131,8 +136,37 @@ async function httpDownload(
 
   const cl = Number(res.headers.get("content-length") || 0);
   const expectBytes = Number.isFinite(cl) && cl > 0 ? cl : undefined;
+  const reader = res.body.getReader();
+  const ws = createWriteStream(partial);
+  let downloaded = 0;
+  let lastEmit = 0;
+  try {
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (!value) continue;
+      downloaded += value.byteLength;
+      await new Promise<void>((resolve, reject) => {
+        ws.write(Buffer.from(value), (err) => (err ? reject(err) : resolve()));
+      });
+      const now = Date.now();
+      if (now - lastEmit > 400 || (expectBytes && downloaded >= expectBytes)) {
+        lastEmit = now;
+        const pct = expectBytes
+          ? Math.min(99, Math.round((downloaded / expectBytes) * 100))
+          : Math.min(95, Math.round(downloaded / (1024 * 1024)));
+        onProgress?.({ bytesDownloaded: downloaded, bytesTotal: expectBytes, pct });
+      }
+    }
+    await new Promise<void>((resolve, reject) =>
+      ws.end((err: Error | null | undefined) => (err ? reject(err) : resolve()))
+    );
+  } catch (e) {
+    ws.destroy();
+    await fs.unlink(partial).catch(() => undefined);
+    throw e;
+  }
 
-  await pipeline(Readable.fromWeb(res.body as never), createWriteStream(partial));
   const st = await fs.stat(partial);
   if (st.size < MIN_VIDEO_BYTES) {
     await fs.unlink(partial).catch(() => undefined);
@@ -146,6 +180,7 @@ async function httpDownload(
   }
 
   await fs.rename(partial, dest);
+  onProgress?.({ bytesDownloaded: st.size, bytesTotal: expectBytes ?? st.size, pct: 100 });
   parlLog("info", "http download verified", {
     bytes: st.size,
     expectBytes: expectBytes ?? null,
@@ -153,74 +188,11 @@ async function httpDownload(
   return { bytes: st.size, expectBytes };
 }
 
-/**
- * Download Vimeo by opening the public watch page in Chromium and capturing a
- * progressive mp4 CDN URL (yt-dlp OAuth is unreliable on this host).
- */
-async function downloadVimeoViaChromium(
-  vimeoId: string,
-  dest: string
-): Promise<{ bytes: number; expectBytes?: number }> {
-  const watch = `https://vimeo.com/${vimeoId}`;
-  const browser = await getChromiumBrowser();
-  const page = await browser.newPage();
-  const captured: { url?: string } = {};
 
-  const onResponse = (res: {
-    url: () => string;
-    headers: () => Record<string, string>;
-    status: () => number;
-  }) => {
-    if (captured.url) return;
-    const u = res.url();
-    const ct = (res.headers()["content-type"] || "").toLowerCase();
-    if (
-      res.status() >= 200 &&
-      res.status() < 300 &&
-      (ct.includes("video/mp4") || /\.mp4(\?|$)/i.test(u))
-    ) {
-      if (/vimeocdn\.com|vod-adaptive/i.test(u)) captured.url = u;
-    }
-  };
-
-  try {
-    await page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-    );
-    page.on("response", onResponse as never);
-    parlLog("debug", "vimeo chromium warm", { vimeoId });
-    await page
-      .goto("https://vimeo.com/barbadosparliament/videos", {
-        waitUntil: "domcontentloaded",
-        timeout: 45_000,
-      })
-      .catch((e) => {
-        parlLog("warn", "vimeo warm failed", {
-          vimeoId,
-          error: e instanceof Error ? e.message : String(e),
-        });
-      });
-    parlLog("debug", "vimeo chromium open watch", { vimeoId, watch });
-    await page.goto(watch, { waitUntil: "networkidle2", timeout: 60_000 });
-    await new Promise((r) => setTimeout(r, 2000));
-    await page.mouse.click(420, 280).catch(() => undefined);
-    for (let i = 0; i < 20 && !captured.url; i++) {
-      if (i === 0 || i === 9 || i === 19) {
-        parlLog("debug", "vimeo waiting cdn", { vimeoId, tick: i });
-      }
-      await new Promise((r) => setTimeout(r, 500));
-    }
-    if (!captured.url) throw new Error("vimeo_cdn_not_found");
-    parlLog("info", "vimeo cdn captured", { vimeoId, cdn: captured.url.slice(0, 120) });
-    parlLog("info", "vimeo http download", { vimeoId, dest: path.basename(dest) });
-    return await httpDownload(captured.url, dest, watch);
-  } finally {
-    page.off("response", onResponse as never);
-    await page.close().catch(() => undefined);
-  }
-}
-
-export async function downloadMediaJob(job: MediaJob) {
+export async function downloadMediaJob(
+  job: MediaJob,
+  opts?: { onProgress?: (p: DownloadProgress) => void }
+) {
   const folderAbs = buildArtifactFolder(job.country, job.title);
   await fs.mkdir(folderAbs, { recursive: true });
   const folder = relativeToCwd(folderAbs);
@@ -228,13 +200,22 @@ export async function downloadMediaJob(job: MediaJob) {
 
   parlLog("info", "download start", { id: job.id, mediaUrl: job.mediaUrl, folder });
 
-  let transfer: { bytes: number; expectBytes?: number };
+  let transfer: { bytes: number; expectBytes?: number; durationSec?: number };
   if (job.platform === "vimeo") {
     const id = job.vimeoId || parseVimeoVideoId(job.mediaUrl);
     if (!id) throw new Error("missing_vimeo_id");
-    transfer = await downloadVimeoViaChromium(id, videoAbs);
+    const vimeo = await downloadVimeoToFile(id, videoAbs, {
+      onProgress: opts?.onProgress,
+      httpDownload,
+    });
+    parlLog("info", "vimeo download method", {
+      id: job.id,
+      method: vimeo.method,
+      bytes: vimeo.bytes,
+    });
+    transfer = vimeo;
   } else {
-    transfer = await httpDownload(job.mediaUrl, videoAbs, job.pageUrl);
+    transfer = await httpDownload(job.mediaUrl, videoAbs, job.pageUrl, opts?.onProgress);
   }
 
   // Final gate — ASR must never see an unfinished file.

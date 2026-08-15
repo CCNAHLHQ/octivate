@@ -14,6 +14,29 @@ export function maxDiscover() {
   const n = Number(process.env.PARL_MEDIA_MAX_DISCOVER || 40);
   return Number.isFinite(n) ? Math.max(1, Math.min(200, Math.floor(n))) : 40;
 }
+export function batchDefault() {
+  const n = Number(process.env.PARL_BATCH_DEFAULT || 5);
+  return Number.isFinite(n) ? Math.max(1, Math.min(batchHardCap(), Math.floor(n))) : 5;
+}
+export function batchHardCap() {
+  const n = Number(process.env.PARL_BATCH_HARD_CAP || 50);
+  return Number.isFinite(n) ? Math.max(1, Math.min(200, Math.floor(n))) : 50;
+}
+export function maxRetriesDefault() {
+  const n = Number(process.env.PARL_ASR_MAX_RETRIES || 3);
+  return Number.isFinite(n) ? Math.max(0, Math.min(8, Math.floor(n))) : 3;
+}
+export function asrProviderDefault(): "auto" | "openrouter" | "local" {
+  const v = String(process.env.PARL_ASR_PROVIDER || "auto").trim().toLowerCase();
+  if (v === "openrouter" || v === "local" || v === "auto") return v;
+  return "auto";
+}
+export function openRouterSttModel() {
+  return (
+    process.env.PARL_OPENROUTER_STT_MODEL?.trim() ||
+    "openai/whisper-1"
+  );
+}
 export function asrConcurrency() {
   const cores = Math.max(1, os.cpus()?.length || 2);
   const def = Math.max(1, cores - 1);

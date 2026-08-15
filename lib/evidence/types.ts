@@ -51,6 +51,8 @@ export type ScoringPolicy = {
   agentConfW: number;
   triangulationW: number;
   freshnessW: number;
+  /** Operator default for project-run “local sources only” toggle. */
+  localOnlySourcesDefault?: boolean;
 };
 
 export const DEFAULT_SCORING_POLICY: ScoringPolicy = {
@@ -59,6 +61,7 @@ export const DEFAULT_SCORING_POLICY: ScoringPolicy = {
   agentConfW: 30,
   triangulationW: 15,
   freshnessW: 10,
+  localOnlySourcesDefault: false,
 };
 
 export type BriefScoreBreakdown = {

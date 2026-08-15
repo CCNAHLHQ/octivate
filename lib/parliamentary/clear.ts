@@ -176,6 +176,7 @@ export async function clearAutomationWorkspace(): Promise<ClearResult> {
   await fs.unlink(path.join(index, "heartbeat.json")).catch(() => undefined);
   await setPipelineControl("idle", { discoverDone: false, lastError: undefined });
   await resetVerifiedSources();
+  // Keep settings.json (batch size / ASR provider) across clears.
   wiped.push(path.join(index, "jobs.json"));
   wiped.push(path.join(index, "candidates.json"));
 

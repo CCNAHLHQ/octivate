@@ -20,7 +20,13 @@ const DURATION_MS = 1600;
  * Lightweight one-shot confetti on a fixed canvas.
  * Skips when the user prefers reduced motion.
  */
-export function ConfettiBurst({ fireKey }: { fireKey: string | number | null }) {
+export function ConfettiBurst({
+  fireKey,
+  className,
+}: {
+  fireKey: string | number | null;
+  className?: string;
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -97,7 +103,7 @@ export function ConfettiBurst({ fireKey }: { fireKey: string | number | null }) 
   return (
     <canvas
       ref={canvasRef}
-      className="brief-confetti-canvas"
+      className={["brief-confetti-canvas", className].filter(Boolean).join(" ")}
       aria-hidden
     />
   );

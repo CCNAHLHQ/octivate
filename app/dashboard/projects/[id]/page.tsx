@@ -168,6 +168,7 @@ export default function ProjectDetailPage() {
   const [question, setQuestion] = useState("");
   const [analysisDepth, setAnalysisDepth] = useState<AnalysisDepth>("standard");
   const [usePaidModel, setUsePaidModel] = useState(false);
+  const [localOnlySources, setLocalOnlySources] = useState(false);
   const [session, setSession] = useState<AgentSession | null>(null);
   /** Known brief ids for this project — keeps View result wired only to real briefs. */
   const [projectBriefIds, setProjectBriefIds] = useState<string[]>([]);
@@ -194,6 +195,19 @@ export default function ProjectDetailPage() {
     (session.status === "completed" ||
       session.status === "failed" ||
       sessionStale);
+
+  useEffect(() => {
+    void apiFetch<{ policy: { localOnlySourcesDefault?: boolean } }>(
+      "/api/operator/scoring-policy",
+      { skipCache: true }
+    )
+      .then((res) => {
+        if (res.policy?.localOnlySourcesDefault === true) {
+          setLocalOnlySources(true);
+        }
+      })
+      .catch(() => undefined);
+  }, []);
 
   const loadProject = useCallback(
     async (soft = false) => {
@@ -384,7 +398,7 @@ export default function ProjectDetailPage() {
     try {
       const data = await apiFetch<{ session: AgentSession }>(`/api/projects/${id}/questions`, {
         method: "POST",
-        json: { question, analysisDepth, force, usePaidModel },
+        json: { question, analysisDepth, force, usePaidModel, localOnlySources },
       });
       setSession(data.session);
       setProject((prev) => (prev ? { ...prev, question } : prev));
@@ -546,6 +560,19 @@ export default function ProjectDetailPage() {
                 />
                 <span>
                   Use paid model when operator allows premium (default remains free Nemotron).
+                </span>
+              </label>
+              <label className="mt-3 flex items-start gap-2 text-xs text-mist">
+                <input
+                  type="checkbox"
+                  className="mt-0.5"
+                  checked={localOnlySources}
+                  disabled={isArchived || pipelineBusy}
+                  onChange={(e) => setLocalOnlySources(e.target.checked)}
+                />
+                <span>
+                  Local sources only — cite capture artifacts, parliamentary transcripts, and
+                  project uploads with stored text (drop registry URL-only rows).
                 </span>
               </label>
             </div>

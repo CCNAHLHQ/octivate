@@ -281,10 +281,22 @@ export async function patchJob(id: string, patch: Partial<MediaJob>) {
   await writeJobs(jobs);
   return jobs[idx];
 }
-export async function ensureJobForCandidate(c: MediaCandidate) {
+export async function ensureJobForCandidate(
+  c: MediaCandidate,
+  stage: MediaJob["stage"] = "queued"
+) {
   const jobs = await readJobs();
   const existing = jobs.find((j) => j.mediaUrl === c.mediaUrl || j.candidateId === c.id);
-  if (existing) return existing;
+  if (existing) {
+    if (
+      (existing.stage === "held" || existing.stage === "queued") &&
+      existing.stage !== stage &&
+      (stage === "held" || stage === "queued")
+    ) {
+      return (await patchJob(existing.id, { stage, progressPct: 0 })) || existing;
+    }
+    return existing;
+  }
   const now = new Date().toISOString();
   const estimateAsrSec = estimateAsrSeconds(c.durationSec);
   const job: MediaJob = {
@@ -296,8 +308,10 @@ export async function ensureJobForCandidate(c: MediaCandidate) {
     mediaUrl: c.mediaUrl,
     platform: c.platform,
     vimeoId: c.vimeoId,
-    stage: "queued",
+    stage,
     progressPct: 0,
+    progressPhase: "idle",
+    retryCount: 0,
     createdAt: now,
     updatedAt: now,
     durationSec: c.durationSec,
@@ -308,6 +322,23 @@ export async function ensureJobForCandidate(c: MediaCandidate) {
   jobs.push(job);
   await writeJobs(jobs);
   return job;
+}
+
+/** Promote first `batchSize` candidates to queued; remainder stay held (hard cap). */
+export async function applyBatchQueue(batchSize: number) {
+  const candidates = await readCandidates();
+  const sorted = [...candidates].sort(
+    (a, b) => Date.parse(b.discoveredAt) - Date.parse(a.discoveredAt)
+  );
+  let queued = 0;
+  let held = 0;
+  for (let i = 0; i < sorted.length; i++) {
+    const stage = i < batchSize ? "queued" : "held";
+    await ensureJobForCandidate(sorted[i], stage);
+    if (stage === "queued") queued += 1;
+    else held += 1;
+  }
+  return { queued, held, total: sorted.length, batchSize };
 }
 
 export type ParlProgressSnapshot = {
@@ -339,11 +370,13 @@ export async function writeProgress(
 }
 
 export async function getSummary(): Promise<PipelineSummary> {
-  const [pipeline, candidates, jobs, seeds] = await Promise.all([
+  const { readSettings } = await import("@/lib/parliamentary/settings");
+  const [pipeline, candidates, jobs, seeds, settings] = await Promise.all([
     readPipeline(),
     readCandidates(),
     readJobs(),
     readSeeds(),
+    readSettings(),
   ]);
   const count = (stage: MediaJob["stage"]) => jobs.filter((j) => j.stage === stage).length;
   const downloading = count("downloading");
@@ -357,6 +390,7 @@ export async function getSummary(): Promise<PipelineSummary> {
   return {
     control: pipeline.control,
     found: candidates.length,
+    held: count("held"),
     queued: count("queued"),
     downloading,
     downloaded,
@@ -369,6 +403,7 @@ export async function getSummary(): Promise<PipelineSummary> {
     seedsEnabled: seeds.filter((s) => s.enabled).length,
     seedsTotal: seeds.length,
     estimateAsrSec,
+    batchSize: settings.batchSize,
     discoverDone: pipeline.discoverDone,
     lastError: pipeline.lastError,
     updatedAt: new Date().toISOString(),

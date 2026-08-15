@@ -36,6 +36,7 @@ export async function POST(
       {
         force: parsed.data.force === true,
         usePaidModel: parsed.data.usePaidModel === true,
+        localOnlySources: parsed.data.localOnlySources,
       }
     );
 

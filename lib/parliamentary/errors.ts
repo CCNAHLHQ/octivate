@@ -44,8 +44,12 @@ export function summarizeParlError(raw: string | undefined | null): ParlErrorSum
   let headline = signal.replace(/^asr_failed:/i, "").trim();
   if (code === "asr_failed" && !/asr/i.test(headline)) {
     headline = `ASR · ${headline}`;
-  } else if (code === "vimeo_cdn_not_found") {
-    headline = "Vimeo CDN URL not captured";
+  } else if (code === "vimeo_cdn_not_found" || code === "vimeo_config_not_found") {
+    headline = "Vimeo player config not captured";
+  } else if (code === "vimeo_stream_not_found") {
+    headline = "Vimeo stream URL missing from player config";
+  } else if (code === "ffmpeg_hls_failed") {
+    headline = "Vimeo HLS remux failed";
   } else if (code === "cancelled_by_operator") {
     headline = "Cancelled by operator";
   }

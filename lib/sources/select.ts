@@ -45,7 +45,12 @@ function watchRank(p?: string): number {
   return p === "Core" ? 2 : 1;
 }
 
-export function selectCatalogSources(sources: Source[], project: Project, limit = 8): Source[] {
+export function selectCatalogSources(
+  sources: Source[],
+  project: Project,
+  limit = 8,
+  opts?: { preferLocalIds?: Set<string> }
+): Source[] {
   const eligible = sources.filter((s) => {
     const geoOk = countryExact(s, project.country) || isRegional(s);
     if (!geoOk) return false;
@@ -57,14 +62,18 @@ export function selectCatalogSources(sources: Source[], project: Project, limit 
     .map((s) => {
       const exact = countryExact(s, project.country) ? 2 : isRegional(s) ? 1 : 0;
       const sector = sectorOverlap(s, project.sector) ? 1 : 0;
+      const localBoost = opts?.preferLocalIds?.has(s.id) ? 50_000 : 0;
+      const relevanceBoost = (s.userRelevance?.length || 0) * 5;
       return {
         s,
         score:
           exact * 1_000_000 +
           retrievalRank(s.retrievalPriority) * 100_000 +
+          localBoost +
           (s.totalSourceScore ?? 0) * 1_000 +
           watchRank(s.watchPriority) * 100 +
           sector * 10 +
+          relevanceBoost +
           (5 - (s.tier || 4)),
       };
     })

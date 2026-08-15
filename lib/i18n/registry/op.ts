@@ -22,6 +22,8 @@ export const OP_MESSAGES = {
   "op.tab.users.hint": "Member accounts and access",
   "op.tab.pricing": "Pricing",
   "op.tab.pricing.hint": "Plan and pricing configuration",
+  "op.tab.merchants": "Merchants",
+  "op.tab.merchants.hint": "Checkout billing profiles and purchase submissions",
   "op.tab.automation": "Automation",
   "op.tab.automation.hint": "Media crawl, download, and local transcription",
   "op.tab.parliament": "Automation",
