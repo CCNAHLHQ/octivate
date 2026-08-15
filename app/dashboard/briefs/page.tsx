@@ -120,7 +120,7 @@ export default function BriefsPage() {
         {!initialLoading ? <WorkspaceKpiStrip items={kpis} /> : null}
 
         {initialLoading ? (
-          <div className="ws-brief-grid">
+          <div className="grid gap-3 sm:grid-cols-2">
             {Array.from({ length: PAGE_SIZE }).map((_, i) => (
               <BriefCardSkeleton key={i} />
             ))}
@@ -140,7 +140,7 @@ export default function BriefsPage() {
               />
             ) : (
               <>
-                <div ref={gridRef} className="ws-brief-grid">
+                <div ref={gridRef} className="grid gap-3 sm:grid-cols-2">
                   {pageRows.map((b) => (
                     <BriefCard key={b.id} brief={b} />
                   ))}

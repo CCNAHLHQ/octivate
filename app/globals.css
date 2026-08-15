@@ -724,6 +724,64 @@
   flex: 1 1 auto;
   min-width: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.dash-main-body {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 100%;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.dash-main-body.has-brand-backdrop > .ws-brand-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.dash-main-body.is-operator-body.has-brand-backdrop > .ws-brand-backdrop {
+  opacity: 0.15;
+}
+
+[data-theme="light"] .dash-main-body.has-brand-backdrop > .ws-brand-backdrop {
+  opacity: 0.1;
+}
+
+.dash-main-body.has-brand-backdrop .ws-brand-backdrop-mark {
+  right: clamp(-4%, -1vw, 2%);
+  top: clamp(4%, 6vh, 10%);
+  width: min(38vw, 360px);
+  max-width: 42%;
+  max-height: min(52vh, 420px);
+  object-fit: contain;
+}
+
+.dash-main-body.has-brand-backdrop .ws-brand-backdrop-word {
+  left: clamp(3%, 4vw, 6%);
+  bottom: clamp(8%, 10vh, 14%);
+  font-size: clamp(2rem, 7vw, 4.25rem);
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.dash-main-body.has-brand-backdrop .ws-project-psn-marquee {
+  inset: auto 0 clamp(6%, 8vh, 12%) 0;
+  opacity: 0.2;
+}
+
+.dash-main-content {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
 }
 
 .dash-link-active {

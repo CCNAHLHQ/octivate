@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { HeroDottedGlobe } from "@/components/landing/hero-dotted-globe";
 import { HERO_VIDEO_SRC } from "@/components/landing/hero-video-backdrop";
+import { useT } from "@/components/i18n/locale-provider";
 import type { AgentSession } from "@/lib/types";
 import "@/app/phase1-landing.css";
 import "@/app/hero-globe.css";
@@ -129,6 +130,7 @@ export function AgentRobot({
   documentCount?: number;
   idleHint?: string;
 }) {
+  const t = useT();
   const stages = session?.stages ?? [];
   const total = stages.length || 8;
   const doneCount = stages.filter((s) => s.status === "completed").length;
@@ -152,7 +154,7 @@ export function AgentRobot({
   const overall =
     state === "done"
       ? 100
-      : state === "idle"
+      : state === "idle" && !session
         ? 0
         : Math.round(((doneCount + runningFraction) / total) * 100);
 
@@ -167,13 +169,16 @@ export function AgentRobot({
   const current = stages[currentIdx];
 
   const status = (() => {
-    if (state === "idle") {
+    if (state === "idle" && !session) {
       return (
         idleHint ||
         (documentCount > 0
           ? `Standing by with ${documentCount} document${documentCount > 1 ? "s" : ""} ready — submit a question or run a topic template.`
           : "Standing by — pick a topic starter or ask a strategic question to begin analysis.")
       );
+    }
+    if (state === "idle" && session) {
+      return idleHint || "Workflow standing by — submit a question or rerun when ready.";
     }
     if (state === "done") return "Analysis complete — your decision brief is ready to view.";
     if (state === "failed")
@@ -182,6 +187,37 @@ export function AgentRobot({
     const lastDone = [...stages].reverse().find((s) => s.status === "completed" && s.message)?.message;
     return running || lastDone || "Spinning up the agent workflow…";
   })();
+
+  const pulse = [
+    {
+      key: "stages",
+      label: t("ws.pulse.metric.stages"),
+      value: session ? `${doneCount}/${total}` : "—",
+      hint: session ? t("ws.pulse.completedAgents") : t("ws.pulse.awaitingRun"),
+    },
+    {
+      key: "progress",
+      label: t("ws.pulse.metric.progress"),
+      value: `${overall}%`,
+      hint: session?.status ?? "idle",
+    },
+    {
+      key: "docs",
+      label: t("ws.project.module.documents"),
+      value: String(documentCount),
+      hint: t("ws.pulse.onProject"),
+    },
+    {
+      key: "tokens",
+      label: t("ws.pulse.metric.tokens"),
+      value: session ? session.tokensUsed.toLocaleString() : "0",
+      hint: session
+        ? `$${session.estimatedCostUsd.toFixed(4)}`
+        : t("ws.pulse.noSpend"),
+    },
+  ];
+
+  const modelShort = session?.modelUsed?.split("/").pop();
 
   return (
     <div
@@ -198,10 +234,14 @@ export function AgentRobot({
 
         <div className="ws-pipe-copy">
           <div className="ws-pipe-kicker">
-            {state === "idle" ? "Agent ready" : `Step ${Math.min(currentIdx + 1, total)} of ${total}`}
+            {state === "idle" && !session
+              ? "Agent ready"
+              : `Step ${Math.min(currentIdx + 1, total)} of ${total}`}
           </div>
           <div className="ws-pipe-title">
-            {state === "idle" ? "Doctrine agent" : current?.label ?? "Workflow"}
+            {state === "idle" && !session
+              ? "Doctrine agent"
+              : current?.label ?? "Workflow"}
           </div>
 
           <motion.p
@@ -214,13 +254,27 @@ export function AgentRobot({
             {status}
           </motion.p>
 
-          {documentCount > 0 && (working || state === "idle") && (
-            <div className="ws-pipe-docs">
-              {documentCount} document{documentCount > 1 ? "s" : ""} on deck
-            </div>
-          )}
-
           <ChromaticSpinner overall={overall} working={working} label={c.label} />
+
+          <div className="ws-pipe-pulse" aria-label={t("ws.pulse.title")}>
+            <div className="ws-pipe-pulse-head">
+              <span className="ws-pipe-pulse-title">{t("ws.pulse.title")}</span>
+              {modelShort ? (
+                <span className="ws-pipe-pulse-model" title={session?.modelUsed}>
+                  {modelShort}
+                </span>
+              ) : null}
+            </div>
+            <div className="ws-pipe-pulse-grid">
+              {pulse.map((tile) => (
+                <div key={tile.key} className="ws-pipe-pulse-tile">
+                  <span className="ws-pipe-pulse-label">{tile.label}</span>
+                  <span className="ws-pipe-pulse-value">{tile.value}</span>
+                  <span className="ws-pipe-pulse-hint">{tile.hint}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

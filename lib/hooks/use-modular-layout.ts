@@ -22,14 +22,13 @@ type LegacyModule = {
   row?: number;
 };
 
-/** Topics + Actions + Monitors moved off modular board. */
-const REMOVED_MODULE_IDS = new Set(["topics", "actions", "monitors"]);
+/** Topics + Actions + Monitors + Pulse (pulse folded into Agent card). */
+const REMOVED_MODULE_IDS = new Set(["topics", "actions", "monitors", "insights"]);
 
 const DEFAULT_MODULES: LayoutModule[] = [
   { id: "question", col: 0, row: 0 },
   { id: "pipeline", col: 1, row: 0 },
   { id: "documents", col: 0, row: 1 },
-  { id: "insights", col: 1, row: 1 },
 ];
 
 const EXTRA_EMPTY_ROWS = 2;

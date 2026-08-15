@@ -1,19 +1,15 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ChevronDown, ChevronRight, FolderKanban, Globe, Sparkles } from "lucide-react";
+import { FolderKanban, Globe, Sparkles } from "lucide-react";
 import { AppShell } from "@/components/dashboard/app-shell";
 import { ProjectCard, ProjectCardSkeleton } from "@/components/projects/project-card";
-import {
-  CountrySelect,
-  SectorSelect,
-} from "@/components/projects/country-sector-fields";
+import { NewProjectComposer } from "@/components/projects/new-project-composer";
 import { WorkspaceEmptyState } from "@/components/workspace/workspace-empty-state";
 import { WorkspaceKpiStrip } from "@/components/workspace/workspace-kpi-strip";
 import { WorkspacePageHeader } from "@/components/workspace/workspace-page-header";
 import { WorkspaceToolbar } from "@/components/workspace/workspace-toolbar";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { LoadingBlur } from "@/components/ui/loading-blur";
 import { toast } from "@/components/ui/toast";
 import { useT } from "@/components/i18n/locale-provider";
@@ -168,6 +164,8 @@ export default function ProjectsPage() {
     }
   }
 
+  const invite = !initialLoading && projects.length === 0;
+
   return (
     <AppShell>
       <div className="mx-auto max-w-[1140px] space-y-5 p-4 sm:p-6">
@@ -175,6 +173,21 @@ export default function ProjectsPage() {
           eyebrow={t("ws.section.workspace")}
           title={t("ws.projects.title")}
           description={t("ws.projects.lede")}
+          actions={
+            <NewProjectComposer
+              open={createOpen}
+              onOpenChange={setCreateOpen}
+              name={name}
+              onNameChange={setName}
+              country={country}
+              onCountryChange={setCountry}
+              sector={sector}
+              onSectorChange={setSector}
+              saving={saving}
+              onSubmit={(e) => void createProject(e)}
+              invite={invite}
+            />
+          }
         />
 
         <WorkspaceKpiStrip items={kpis} />
@@ -190,45 +203,6 @@ export default function ProjectsPage() {
           sortOptions={projectSorts}
           onSortChange={(value) => setSort(value as ProjectSort)}
         />
-
-        <div className="ws-create-panel">
-          <button
-            type="button"
-            className="ws-create-panel-head"
-            data-tour="projects-new"
-            onClick={() => setCreateOpen((o) => !o)}
-            aria-expanded={createOpen}
-          >
-            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-faint">
-              {t("ws.projects.new")}
-            </span>
-            {createOpen ? (
-              <ChevronDown className="h-4 w-4 text-mist" aria-hidden />
-            ) : (
-              <ChevronRight className="h-4 w-4 text-mist" aria-hidden />
-            )}
-          </button>
-          {createOpen && (
-            <div className="ws-create-panel-body">
-              <form onSubmit={createProject} className="grid gap-3 sm:grid-cols-4">
-                <Input
-                  placeholder={t("ws.projects.name")}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                  className="sm:col-span-2"
-                />
-                <CountrySelect value={country} onChange={setCountry} required />
-                <SectorSelect value={sector} onChange={setSector} required />
-                <div className="sm:col-span-4">
-                  <Button type="submit" size="sm" disabled={saving || !name.trim() || !country || !sector}>
-                    {saving ? t("ws.projects.creating") : t("ws.projects.create")}
-                  </Button>
-                </div>
-              </form>
-            </div>
-          )}
-        </div>
 
         {initialLoading ? (
           <div className="grid gap-3 sm:grid-cols-2">

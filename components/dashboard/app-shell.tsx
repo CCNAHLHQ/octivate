@@ -6,7 +6,6 @@ import { useEffect, useState, type MouseEvent } from "react";
 import {
   LayoutDashboard,
   FileText,
-  Rss,
   Users,
   FolderKanban,
   Menu,
@@ -34,6 +33,7 @@ import { OperatorIntroModal } from "@/components/onboarding/operator-intro-modal
 import { SidebarAccountCard } from "@/components/dashboard/sidebar-account";
 import { SessionGuard } from "@/components/auth/session-guard";
 import { OperatorSupportAlerts } from "@/components/operator/operator-support-alerts";
+import { BrandBackdrop } from "@/components/brand/brand-backdrop";
 import { useT } from "@/components/i18n/locale-provider";
 import { WORKSPACE_TOUR_SIDEBAR_EVENT } from "@/lib/onboarding/content";
 import { setLocationHash } from "@/lib/navigation/hash";
@@ -53,7 +53,6 @@ const userNav = [
     items: [
       { labelKey: "ws.nav.overview" as MessageKey, href: "/dashboard", icon: LayoutDashboard },
       { labelKey: "ws.nav.projects" as MessageKey, href: "/dashboard/projects", icon: FolderKanban },
-      { labelKey: "ws.nav.sources" as MessageKey, href: "/dashboard/sources", icon: Rss },
     ],
   },
   {
@@ -159,6 +158,9 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
   const pathname = usePathname();
   const nav = variant === "operator" ? operatorNav : userNav;
   const isOperatorRoute = pathname.startsWith("/dashboard/operator");
+  /** Project theatre pages keep a clean surface — backdrop lives on list/overview shells. */
+  const isProjectWorkspace = /^\/dashboard\/projects\/[^/]+\/?$/.test(pathname);
+  const showBrandBackdrop = !isProjectWorkspace;
   const desktopExpanded = !desktopCollapsed;
   const isOperatorUser = sessionUser?.role === "operator";
 
@@ -454,7 +456,16 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
           )}
         </div>
 
-        {children}
+        <div
+          className={cn(
+            "dash-main-body",
+            showBrandBackdrop && "has-brand-backdrop",
+            (isOperatorRoute || variant === "operator") && "is-operator-body"
+          )}
+        >
+          {showBrandBackdrop ? <BrandBackdrop marquee /> : null}
+          <div className="dash-main-content">{children}</div>
+        </div>
 
         {isOperatorRoute || variant === "operator" ? (
           <WorkspaceTutorialButton variant="fab" mode="operator" />

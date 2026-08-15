@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowUpRight, FileText, Globe } from "lucide-react";
 import type { Brief } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -27,86 +27,121 @@ export function briefBadgeTone(
   return "mist";
 }
 
-function BriefPill({
-  children,
-  tone,
-}: {
-  children: React.ReactNode;
-  tone: "violet" | "mist" | "amber";
-}) {
-  return <span className={cn("ws-brief-pill", `is-${tone}`)}>{children}</span>;
+function formatRelative(iso: string) {
+  const d = new Date(iso);
+  const diff = Date.now() - d.getTime();
+  const days = Math.floor(diff / 86400000);
+  if (days < 1) return "Today";
+  if (days === 1) return "Yesterday";
+  if (days < 14) return `${days}d ago`;
+  return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
 }
 
-function formatWhen(iso: string) {
-  try {
-    return new Date(iso).toLocaleDateString(undefined, {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  } catch {
-    return "";
+function reviewChip(brief: Brief): { label: string; tone: "active" | "archived" | "amber" } {
+  if (brief.reviewStatus === "approved" || brief.status === "final") {
+    return { label: "Approved", tone: "active" };
   }
+  if (brief.reviewStatus === "pending_review") {
+    return { label: "pending review", tone: "amber" };
+  }
+  if (brief.reviewStatus === "rejected") {
+    return { label: "Rejected", tone: "archived" };
+  }
+  return { label: "Draft", tone: "archived" };
+}
+
+function depthLabel(brief: Brief) {
+  if (brief.analysisDepth === "deep_dive") return "Deep dive";
+  if (brief.analysisDepth === "rapid") return "Rapid";
+  if (brief.analysisDepth === "standard") return "Standard";
+  return null;
 }
 
 export function BriefCard({ brief }: { brief: Brief }) {
-  const review = brief.reviewStatus?.replace(/_/g, " ");
-  const depth =
-    brief.analysisDepth === "deep_dive"
-      ? "Deep dive"
-      : brief.analysisDepth
-        ? brief.analysisDepth.charAt(0).toUpperCase() + brief.analysisDepth.slice(1)
-        : null;
+  const chip = reviewChip(brief);
+  const depth = depthLabel(brief);
+  const summary =
+    brief.executiveSummary?.trim() ||
+    "Decision brief ready — open for executive summary, PSN lenses, and export.";
 
   return (
-    <Link href={`/dashboard/briefs/${brief.id}`} className="ws-brief-card">
-      <article className="ws-brief-card-inner">
-        <div className="ws-brief-card-top">
-          <div className="ws-brief-card-icon" aria-hidden>
-            <FileText className="h-4 w-4" />
-          </div>
-          <div className="ws-brief-card-pills">
-            <BriefPill tone={briefBadgeTone("risk", brief.riskLevel)}>{brief.riskLevel}</BriefPill>
-            {review ? (
-              <BriefPill tone={briefBadgeTone("review", brief.reviewStatus || "")}>
-                {review}
-              </BriefPill>
-            ) : (
-              <BriefPill tone={briefBadgeTone("status", brief.status)}>{brief.status}</BriefPill>
-            )}
-            {depth ? <BriefPill tone="mist">{depth}</BriefPill> : null}
+    <article className="ws-project-card">
+      <div className="ws-project-card-inner">
+        <div className="ws-project-card-top">
+          <Link
+            href={`/dashboard/briefs/${brief.id}`}
+            className="ws-project-card-title-link"
+          >
+            <h3 className="ws-project-card-title">{brief.title}</h3>
+          </Link>
+          <div className="ws-project-card-top-right">
+            <span
+              className={cn(
+                "ws-status-chip",
+                chip.tone === "active" && "is-active",
+                chip.tone === "archived" && "is-archived",
+                chip.tone === "amber" && "is-amber"
+              )}
+            >
+              {chip.label}
+            </span>
           </div>
         </div>
 
-        <h2 className="ws-brief-card-title">{brief.title}</h2>
-        <p className="ws-brief-card-meta">
-          {brief.country} · {brief.sector}
-        </p>
-        <p className="ws-brief-card-summary">{brief.executiveSummary}</p>
+        <Link
+          href={`/dashboard/briefs/${brief.id}`}
+          className="ws-project-card-body-link"
+        >
+          <p className="ws-card-meta">
+            <Globe className="ws-card-meta-ico" aria-hidden />
+            {brief.country}
+            <span className="ws-card-meta-sep" aria-hidden>
+              ·
+            </span>
+            {brief.sector}
+          </p>
+          <p className="ws-card-body line-clamp-2">{summary}</p>
+        </Link>
 
-        <footer className="ws-brief-card-foot">
-          <div className="ws-brief-card-stats">
-            <span>{brief.confidence}% confidence</span>
-            <span>{formatWhen(brief.createdAt)}</span>
+        <div className="ws-project-card-foot">
+          <div className="ws-project-card-stats">
+            <span>
+              <FileText className="h-3.5 w-3.5" aria-hidden />
+              {brief.confidence}% confidence
+            </span>
+            <span>{formatRelative(brief.createdAt)}</span>
           </div>
-          <span className="ws-brief-card-open">
-            Open
-            <ArrowRight className="h-3.5 w-3.5" aria-hidden />
-          </span>
-        </footer>
-      </article>
-    </Link>
+          <div className="ws-project-card-actions">
+            {depth ? <span className="ws-chip ws-chip-mist">{depth}</span> : null}
+            <span
+              className={cn(
+                "ws-chip",
+                brief.riskLevel === "critical" || brief.riskLevel === "high"
+                  ? "ws-chip-violet"
+                  : brief.riskLevel === "medium"
+                    ? "ws-chip-amber"
+                    : "ws-chip-mist"
+              )}
+            >
+              {brief.riskLevel}
+            </span>
+            <Link href={`/dashboard/briefs/${brief.id}`} className="ws-card-cta">
+              Open
+              <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </article>
   );
 }
 
 export function BriefCardSkeleton() {
   return (
-    <div className="ws-brief-card-inner animate-pulse">
-      <div className="h-8 w-24 rounded-md bg-white/10" />
-      <div className="mt-3 h-5 w-4/5 rounded bg-white/10" />
+    <div className="ws-project-card-inner animate-pulse">
+      <div className="h-5 w-2/3 rounded bg-white/10" />
       <div className="mt-2 h-3 w-1/2 rounded bg-white/5" />
-      <div className="mt-4 h-16 w-full rounded bg-white/5" />
-      <div className="mt-4 h-3 w-1/3 rounded bg-white/5" />
+      <div className="mt-4 h-10 w-full rounded bg-white/5" />
     </div>
   );
 }

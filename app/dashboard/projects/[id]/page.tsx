@@ -18,16 +18,15 @@ import { DocumentDropzone } from "@/components/dashboard/document-dropzone";
 import { DocumentLibrary } from "@/components/dashboard/document-library";
 import { QuickExportButtons } from "@/components/dashboard/quick-export-buttons";
 import { ProjectInsights } from "@/components/dashboard/project-insights";
+import { AnalysisDepthControls } from "@/components/dashboard/analysis-depth-controls";
 import { QuestionVoiceField } from "@/components/dashboard/question-voice-field";
 import {
   CountrySelect,
   SectorSelect,
 } from "@/components/projects/country-sector-fields";
-import { BrandBackdrop } from "@/components/brand/brand-backdrop";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/progress";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { LoadingBlur } from "@/components/ui/loading-blur";
@@ -503,43 +502,25 @@ export default function ProjectDetailPage() {
     question: (
       <div data-tour="project-question">
         <h2 className="ws-section-title mb-3">{t("ws.project.askStrategic")}</h2>
-        <form onSubmit={ask} className="space-y-3">
+        <form onSubmit={ask} className="ws-ask-form space-y-4">
           <QuestionVoiceField
             value={question}
             onChange={setQuestion}
             disabled={isArchived}
           />
-          {isLive && (
-            <div>
-              <label className="mb-1 block font-mono text-[11px] uppercase tracking-wider text-mist">
-                Analysis depth
-              </label>
-              <Select
-                className="is-teal"
-                value={analysisDepth}
-                onChange={(e) => setAnalysisDepth(e.target.value as AnalysisDepth)}
-                disabled={isArchived || pipelineBusy}
-              >
-                <option value="rapid">{t("ws.project.depth.rapid")}</option>
-                <option value="standard">{t("ws.project.depth.standard")}</option>
-                <option value="deep_dive">{t("ws.project.depth.deep")}</option>
-              </Select>
-              <p className="mt-1.5 text-xs text-mist">
-                {analysisDepth === "rapid"
-                  ? t("ws.project.depth.rapidHint")
-                  : analysisDepth === "deep_dive"
-                    ? t("ws.project.depth.deepHint")
-                    : t("ws.project.depth.standardHint")}
-              </p>
-            </div>
-          )}
-          <Button type="submit" size="sm" disabled={pipelineBusy || isArchived} data-tour="run-workflow">
-            {pipelineBusy ? t("ws.project.agentsRunning") : t("ws.project.run")}
-          </Button>
+          <AnalysisDepthControls
+            value={analysisDepth}
+            onChange={setAnalysisDepth}
+            onSubmitBusy={pipelineBusy}
+            submitLabel={t("ws.project.run")}
+            busyLabel={t("ws.project.agentsRunning")}
+            disabled={isArchived || pipelineBusy}
+            showDepth={isLive}
+          />
           {isArchived && (
-            <p className="text-xs text-mist">{t("ws.project.restoreForAgents")}</p>
+            <p className="text-center text-xs text-mist">{t("ws.project.restoreForAgents")}</p>
           )}
-          {error && <p className="text-xs text-coral">{error}</p>}
+          {error && <p className="text-center text-xs text-coral">{error}</p>}
         </form>
       </div>
     ),
@@ -607,12 +588,7 @@ export default function ProjectDetailPage() {
         ) : null}
       </>
     ),
-    insights: (
-      <ProjectInsights
-        session={session}
-        documentCount={project.documents.length}
-      />
-    ),
+    insights: <ProjectInsights />,
   };
 
   const titles: Record<string, string> = {
@@ -627,8 +603,6 @@ export default function ProjectDetailPage() {
       <ConfettiBurst fireKey={confettiKey} />
       <LoadingBlur active={refreshing} className="mx-auto max-w-[1280px]">
         <div className="ws-project-surface relative space-y-4 p-4 sm:p-6">
-          <BrandBackdrop marquee />
-
           <div className="ws-project-hero is-compact relative z-[1]">
             <div className="ws-project-hero-top">
               <Link href="/dashboard/projects" className="ws-breadcrumb">
