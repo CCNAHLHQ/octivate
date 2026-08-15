@@ -49,6 +49,7 @@ export function buildEvidenceContextPack(opts: {
     `Local evidence pack (capture + parl transcripts + uploads) for theatre ${opts.project.country} / ${opts.project.sector}.`,
     `Decision question (for relevance only): ${opts.question.slice(0, 400)}`,
     "Use this text as primary page evidence when citing these source IDs. Do not invent quotes.",
+    "Upload channels may include structured summaryPayload hybrid text — prefer decision_relevance and key points for recommendations and PSN, and grounding extract for citations.",
     "",
     ...blocks,
   ].join("\n");

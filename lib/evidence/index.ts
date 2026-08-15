@@ -158,14 +158,7 @@ export async function loadLocalEvidenceBundle(
   if (opts?.includeUploads !== false) {
     const docs = project.documents || [];
     for (const d of docs) {
-      const extracted = await extractDocumentText(project.id, d, maxChars);
-      if (extracted.mode === "binary_meta" || !extracted.text.trim()) continue;
-      // Skip meta-only stubs
-      if (/content not stored|No full-text extract|not supported/i.test(extracted.text)) {
-        continue;
-      }
       const sid = `upload_${project.id}_${d.id}`;
-      const sha = createHash("sha256").update(extracted.text).digest("hex");
       const fakeSource: Source = {
         id: sid,
         title: d.name,
@@ -178,26 +171,66 @@ export async function loadLocalEvidenceBundle(
         psnLayers: ["Power", "Systems", "Narratives"],
         userRelevance: [],
       };
-      const labels = labelTextFromSource(
-        extracted.text,
-        fakeSource,
-        question,
-        project.sector
-      );
+
+      // Prefer question-conditioned summary payload + extract hybrid so briefs
+      // retain structured decision context without dropping quotable text.
+      const extracted = await extractDocumentText(project.id, d, maxChars);
+      const payload = d.summaryPayload;
+      const summaryReady = d.summaryStatus === "ready" && (d.summary || payload);
+      const structured = summaryReady
+        ? [
+            d.summary || "",
+            payload?.decision_relevance
+              ? `Decision relevance: ${payload.decision_relevance}`
+              : "",
+            (payload?.key_points || []).length
+              ? `Key points:\n${(payload?.key_points || []).map((k) => `- ${k}`).join("\n")}`
+              : "",
+            (payload?.recommendation_hints || []).length
+              ? `Recommendation hints:\n${(payload?.recommendation_hints || [])
+                  .map((k) => `- ${k}`)
+                  .join("\n")}`
+              : "",
+            (payload?.gaps || []).length
+              ? `Gaps: ${(payload?.gaps || []).join("; ")}`
+              : "",
+          ]
+            .filter(Boolean)
+            .join("\n\n")
+        : "";
+
+      let body = "";
+      if (structured && extracted.text?.trim() && extracted.mode !== "binary_meta") {
+        body = `${structured}\n\n--- Grounding extract ---\n${extracted.text}`.slice(0, maxChars);
+      } else if (structured) {
+        body = structured.slice(0, maxChars);
+      } else if (extracted.mode !== "binary_meta" && extracted.text.trim()) {
+        if (/content not stored|No full-text extract|not supported/i.test(extracted.text)) {
+          continue;
+        }
+        body = extracted.text.slice(0, maxChars);
+      } else {
+        continue;
+      }
+
+      const sha = createHash("sha256").update(body).digest("hex");
+      const labels = labelTextFromSource(body, fakeSource, question, project.sector);
       const ev: EvidenceDocument = {
         id: uid("evd"),
         sourceId: sid,
         projectId: project.id,
         title: d.name,
-        text: extracted.text.slice(0, maxChars),
+        text: body,
         sha256: sha,
         channels: [
           {
             kind: "upload",
-            text: extracted.text.slice(0, maxChars),
-            confidence: 0.7,
+            text: body,
+            confidence: summaryReady ? 0.82 : 0.7,
             extractedAt: new Date().toISOString(),
-            notes: "project_upload_extract",
+            notes: summaryReady
+              ? `project_upload_summary_hybrid:${payload?.method || "summary"}`
+              : "project_upload_extract",
           },
         ],
         labels,

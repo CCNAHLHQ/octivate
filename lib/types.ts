@@ -187,6 +187,14 @@ export interface Project {
       gaps?: string[];
       risk_flags?: string[];
       review_flags?: string[];
+      recommendation_hints?: string[];
+      psn_hints?: {
+        power?: string[];
+        systems?: string[];
+        narratives?: string[];
+      };
+      method?: "stuff" | "map_reduce" | "import_shortcut";
+      chunk_count?: number;
     };
     /** SHA-256 of uploaded bytes — dedupe / re-upload detection. */
     contentHash?: string;
