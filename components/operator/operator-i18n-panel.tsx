@@ -11,14 +11,11 @@ type LocaleStatus = {
   label: string;
   total: number;
   translated: number;
-  stale: number;
   missing: number;
   coverage: number;
-  updatedAt: string;
 };
 
 type StatusPayload = {
-  catalogVersion: number;
   lastSyncAt: string | null;
   sourceKeys: number;
   locales: LocaleStatus[];
@@ -59,24 +56,21 @@ export function OperatorI18nPanel() {
   }
 
   return (
-    <section className="op-card op-fc-panel" aria-label={t("op.i18n.title")}>
-      <div className="op-card-head">
-        <div>
-          <p className="op-kicker">
-            <Languages className="h-3.5 w-3.5" aria-hidden />
-            {t("op.i18n.title")}
-          </p>
-          <p className="op-card-lede">{t("op.i18n.lede")}</p>
-        </div>
-        <div className="op-card-actions">
+    <section className="op-card op-basic-panel" aria-label={t("op.i18n.title")}>
+      <div className="op-basic-head">
+        <h3 className="op-basic-title">
+          <Languages className="h-4 w-4" aria-hidden />
+          {t("op.i18n.title")}
+        </h3>
+        <div className="op-basic-actions">
           <button
             type="button"
             className="btn btn-ghost btn-sm"
             onClick={() => void load()}
             disabled={busy}
+            aria-label={t("op.i18n.refresh")}
           >
             <RefreshCw className="h-3.5 w-3.5" aria-hidden />
-            {t("op.i18n.refresh")}
           </button>
           <button
             type="button"
@@ -89,36 +83,23 @@ export function OperatorI18nPanel() {
         </div>
       </div>
 
-      <div className="op-fc-stats">
-        <span className="op-src-pulse-chip">
-          {status?.sourceKeys ?? "—"} source keys
-        </span>
-        <span className="op-src-pulse-chip">
-          v{status?.catalogVersion ?? "—"}
-        </span>
-        <span className="op-src-pulse-chip">
-          {status?.lastSyncAt
-            ? `Last sync ${new Date(status.lastSyncAt).toLocaleString()}`
-            : "Never synced"}
-        </span>
-      </div>
+      <p className="op-basic-meta">
+        {status?.sourceKeys ?? "—"} keys
+        {status?.lastSyncAt
+          ? ` · synced ${new Date(status.lastSyncAt).toLocaleString()}`
+          : " · never synced"}
+      </p>
 
-      <ul className="op-fc-steps">
+      <ul className="op-basic-list">
         {(status?.locales || []).map((loc) => (
-          <li key={loc.locale} className="op-fc-step">
-            <span className="op-fc-step-idx">{loc.coverage}%</span>
-            <div>
-              <div className="op-fc-step-top">
-                <p>
-                  {loc.label} <code>{loc.locale}</code>
-                </p>
-                <span>
-                  {loc.translated}/{loc.total}
-                  {loc.missing ? ` · ${loc.missing} missing` : ""}
-                  {loc.stale ? ` · ${loc.stale} stale` : ""}
-                </span>
-              </div>
-            </div>
+          <li key={loc.locale}>
+            <span>
+              {loc.label} <code>{loc.locale}</code>
+            </span>
+            <span>
+              {loc.coverage}%
+              {loc.missing ? ` · ${loc.missing} missing` : ""}
+            </span>
           </li>
         ))}
       </ul>
