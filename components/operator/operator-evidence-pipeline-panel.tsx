@@ -1,17 +1,19 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { RotateCcw } from "lucide-react";
+import { Database, RotateCcw } from "lucide-react";
 import {
   AutosaveStatusPill,
   CONTROL_AUTOSAVE_MS,
   type AutosaveStatus,
 } from "@/components/operator/autosave-status";
 import { Button } from "@/components/ui/button";
+import { StatusBadge } from "@/components/ui/status-badge";
 import { Tooltip } from "@/components/ui/tooltip";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import type { ScoringPolicy } from "@/lib/evidence/types";
 import { DEFAULT_SCORING_POLICY } from "@/lib/evidence/types";
+import { cn } from "@/lib/utils";
 
 type WeightKey = Exclude<keyof ScoringPolicy, "localOnlySourcesDefault">;
 
@@ -139,15 +141,26 @@ export function OperatorEvidencePipelinePanel() {
     scheduleSave();
   }
 
+  function setLocalOnlyDefault(on: boolean) {
+    setPolicy((prev) => {
+      const next = { ...prev, localOnlySourcesDefault: on };
+      policyRef.current = next;
+      return next;
+    });
+    scheduleSave();
+    flushSave();
+  }
+
   async function resetDefaults() {
     clearSaveTimer();
-    setPolicy(DEFAULT_SCORING_POLICY);
-    policyRef.current = DEFAULT_SCORING_POLICY;
+    const next = { ...DEFAULT_SCORING_POLICY };
+    setPolicy(next);
+    policyRef.current = next;
     setSaveStatus("saving");
     try {
       const res = await apiFetch<{ policy: ScoringPolicy }>("/api/operator/scoring-policy", {
         method: "PATCH",
-        json: DEFAULT_SCORING_POLICY,
+        json: next,
       });
       policyRef.current = res.policy;
       savedSnapRef.current = snap(res.policy);
@@ -163,8 +176,44 @@ export function OperatorEvidencePipelinePanel() {
     return <p className="op-slider-panel-loading">Loading weights…</p>;
   }
 
+  const localOnly = policy.localOnlySourcesDefault === true;
+
   return (
     <div className="op-slider-panel">
+      <button
+        type="button"
+        role="switch"
+        aria-checked={localOnly}
+        className={cn("op-policy-card", localOnly && "is-on", "is-teal", "op-evidence-policy")}
+        onClick={() => setLocalOnlyDefault(!localOnly)}
+      >
+        <div className="op-policy-card-main">
+          <span className={cn("op-limit-ico", "is-teal")}>
+            <Database className="h-4 w-4" aria-hidden />
+          </span>
+          <div className="min-w-0 text-left">
+            <div className="op-policy-card-top">
+              <Tooltip
+                content="When on, project runs cite only capture artifacts, parliamentary transcripts, and project uploads with stored text — registry URL-only rows are dropped."
+                side="top"
+              >
+                <h4 className="op-limit-title">Local sources only</h4>
+              </Tooltip>
+              <StatusBadge tone={localOnly ? "teal" : "mist"}>
+                {localOnly ? "Default on" : "Off"}
+              </StatusBadge>
+            </div>
+            <p className="op-limit-desc">
+              Cite capture artifacts, parliamentary transcripts, and project uploads with stored
+              text (drop registry URL-only rows).
+            </p>
+          </div>
+        </div>
+        <span className="op-toggle-track" data-on={localOnly ? "true" : "false"} aria-hidden>
+          <span className="op-toggle-thumb" />
+        </span>
+      </button>
+
       <ul className="op-slider-list">
         {WEIGHTS.map((w) => (
           <li key={w.key} className="op-slider-row">
@@ -192,7 +241,12 @@ export function OperatorEvidencePipelinePanel() {
               onMouseUp={flushSave}
               onTouchEnd={flushSave}
               onKeyUp={(e) => {
-                if (e.key === "ArrowLeft" || e.key === "ArrowRight" || e.key === "Home" || e.key === "End") {
+                if (
+                  e.key === "ArrowLeft" ||
+                  e.key === "ArrowRight" ||
+                  e.key === "Home" ||
+                  e.key === "End"
+                ) {
                   flushSave();
                 }
               }}
@@ -220,27 +274,6 @@ export function OperatorEvidencePipelinePanel() {
           </Button>
         </Tooltip>
       </div>
-
-      <label className="mt-3 flex items-start gap-2 text-xs text-mist">
-        <input
-          type="checkbox"
-          className="mt-0.5"
-          checked={policy.localOnlySourcesDefault === true}
-          onChange={(e) => {
-            setPolicy((prev) => {
-              const next = { ...prev, localOnlySourcesDefault: e.target.checked };
-              policyRef.current = next;
-              return next;
-            });
-            scheduleSave();
-          }}
-          onBlur={flushSave}
-        />
-        <span>
-          Default project runs to <strong>local sources only</strong> (capture, parl
-          transcripts, uploads with text).
-        </span>
-      </label>
     </div>
   );
 }

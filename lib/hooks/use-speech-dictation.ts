@@ -15,8 +15,8 @@ export type MicPermissionState = "prompt" | "granted" | "denied" | "unsupported"
 
 /**
  * Voice dictation via @syntropy-labs/react-web-speech.
- * Critical: do not await getUserMedia before SpeechRecognition.start() —
- * that drops the user-gesture token and makes "Tap to speak" appear dead.
+ * Critical: recognition.start() must run in the same user-gesture turn as the click.
+ * Do not await getUserMedia / requestPermission before start.
  */
 export function useSpeechDictation(opts?: {
   lang?: string;
@@ -28,7 +28,6 @@ export function useSpeechDictation(opts?: {
   const rafRef = useRef<number | null>(null);
   /** True after a successful grant or successful recognition start this session. */
   const grantedLatch = useRef(false);
-  const toggleInflight = useRef(false);
 
   const onResult = useCallback((text: string, isFinal: boolean) => {
     if (!isFinal) return;
@@ -41,7 +40,6 @@ export function useSpeechDictation(opts?: {
     continuous: true,
     interimResults: true,
     silenceTimeout: 8_000,
-    // Avoid restart loops that can re-surface permission / InvalidState races.
     autoRestart: false,
     onResult,
   });
@@ -49,11 +47,9 @@ export function useSpeechDictation(opts?: {
   const startRef = useRef(speech.start);
   const stopRef = useRef(speech.stop);
   const clearRef = useRef(speech.clear);
-  const requestPermissionRef = useRef(speech.requestPermission);
   startRef.current = speech.start;
   stopRef.current = speech.stop;
   clearRef.current = speech.clear;
-  requestPermissionRef.current = speech.requestPermission;
 
   useEffect(() => {
     if (speech.permissionState === "granted") grantedLatch.current = true;
@@ -115,56 +111,33 @@ export function useSpeechDictation(opts?: {
     };
   }, [speech.isListening]);
 
-  const start = useCallback(async () => {
+  /** Start recognition in the current click turn (no pre-await). */
+  const start = useCallback(() => {
     if (!speech.isSupported) return;
     if (speech.permissionState === "denied") return;
     if (speech.isListening) return;
-
-    try {
-      // Must stay in the click gesture — no await before recognition.start().
-      await startRef.current();
+    // Fire-and-forget: library start() is async but runs recognition.start() sync before any await.
+    void startRef.current().then(() => {
       grantedLatch.current = true;
-    } catch {
-      /* InvalidStateError / abort — ignore */
-    }
+    }).catch(() => undefined);
   }, [speech.isSupported, speech.permissionState, speech.isListening]);
 
   const stop = useCallback(() => {
     stopRef.current();
   }, []);
 
-  const toggle = useCallback(async () => {
-    if (toggleInflight.current) return;
-    toggleInflight.current = true;
-    try {
-      if (speech.isListening) {
-        stopRef.current();
-        return;
-      }
-      await start();
-    } finally {
-      toggleInflight.current = false;
+  /** Sync toggle for mic button — must not gate on an inflight lock that can stick. */
+  const toggle = useCallback(() => {
+    if (speech.isListening) {
+      stopRef.current();
+      return;
     }
+    start();
   }, [speech.isListening, start]);
 
   const clearSpoken = useCallback(() => {
     clearRef.current();
   }, []);
-
-  const requestPermission = useCallback(async (): Promise<MicPermissionState> => {
-    if (!speech.isSupported) return "unsupported";
-    if (speech.permissionState === "denied") return "denied";
-    if (grantedLatch.current || speech.permissionState === "granted") {
-      return "granted";
-    }
-    try {
-      const next = (await requestPermissionRef.current()) as MicPermissionState;
-      if (next === "granted") grantedLatch.current = true;
-      return next;
-    } catch {
-      return "denied";
-    }
-  }, [speech.isSupported, speech.permissionState]);
 
   const errorMessage = speech.error
     ? String(speech.error.message || speech.error.type || "Speech recognition error")
@@ -191,6 +164,5 @@ export function useSpeechDictation(opts?: {
     stop,
     toggle,
     clearSpoken,
-    requestPermission,
   };
 }

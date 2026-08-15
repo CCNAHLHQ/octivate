@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, type MouseEvent } from "react";
+import { useEffect, useRef, type MouseEvent, type PointerEvent } from "react";
 import { Mic, MicOff, ShieldAlert } from "lucide-react";
 import { useSpeechDictation } from "@/lib/hooks/use-speech-dictation";
 import { sanitizePlainText } from "@/lib/docs/sanitize-text";
@@ -65,8 +65,9 @@ export function QuestionVoiceField({
   const denied = speech.status === "denied" || speech.permissionState === "denied";
   const unavailable = !speech.supported || !secure;
 
-  function handleMicClick(e: MouseEvent<HTMLButtonElement>) {
+  function armMic(e: MouseEvent<HTMLButtonElement> | PointerEvent<HTMLButtonElement>) {
     // Keep modular-board / parent handlers from treating this as a drag start.
+    e.preventDefault();
     e.stopPropagation();
     if (disabled) return;
     if (!secure) {
@@ -81,8 +82,8 @@ export function QuestionVoiceField({
       toast.info(t("ws.voice.unavailable"));
       return;
     }
-    // Fire recognition in this click turn — do not await permission first.
-    void speech.toggle();
+    // Start/stop in this gesture turn — no await before recognition.start().
+    speech.toggle();
   }
 
   return (
@@ -107,29 +108,32 @@ export function QuestionVoiceField({
                   ? t("ws.voice.allow")
                   : t("ws.voice.tap")
           }
+          onPointerDown={(e) => {
+            // Stop board drag; do not start speech here (would double-fire with click).
+            e.stopPropagation();
+          }}
           onMouseDown={(e) => e.stopPropagation()}
-          onPointerDown={(e) => e.stopPropagation()}
-          onClick={handleMicClick}
+          onClick={armMic}
         >
           {listening ? (
             <>
               <Mic className="h-3.5 w-3.5" aria-hidden />
-              Listening…
+              {t("ws.voice.listening")}
             </>
           ) : denied ? (
             <>
               <ShieldAlert className="h-3.5 w-3.5" aria-hidden />
-              Mic blocked
+              {t("ws.voice.micBlockedShort")}
             </>
           ) : unavailable ? (
             <>
               <MicOff className="h-3.5 w-3.5" aria-hidden />
-              Voice unavailable
+              {t("ws.voice.unavailableShort")}
             </>
           ) : needsPermission ? (
             <>
               <Mic className="h-3.5 w-3.5" aria-hidden />
-              Allow mic
+              {t("ws.voice.allowMicShort")}
             </>
           ) : (
             <>
@@ -149,10 +153,7 @@ export function QuestionVoiceField({
       </div>
 
       {denied && (
-        <p className="ws-voice-hint">
-          Allow the microphone for this site (browser lock icon → Microphone → Allow), then
-          press the mic button again.
-        </p>
+        <p className="ws-voice-hint">{t("ws.voice.deniedHint")}</p>
       )}
 
       {/* Always mounted so listening doesn’t reflow the modular card under the cursor */}
@@ -161,7 +162,7 @@ export function QuestionVoiceField({
         aria-live="polite"
         aria-hidden={!(listening || hasSpoken)}
       >
-        <span className="ws-voice-live-label">Spoken</span>
+        <span className="ws-voice-live-label">{t("ws.voice.spoken")}</span>
         <p className={cn(!hasSpoken && "is-empty")}>
           {speech.finalText}
           {speech.interim ? (
@@ -181,6 +182,7 @@ export function QuestionVoiceField({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onMouseDown={(e) => e.stopPropagation()}
+        onPointerDown={(e) => e.stopPropagation()}
         placeholder={placeholder || t("ws.voice.placeholder")}
         required={required}
         minLength={minLength}

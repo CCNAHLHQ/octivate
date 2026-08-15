@@ -254,7 +254,18 @@ export default function ProjectsPage() {
           <LoadingBlur active={refreshing}>
             <div className="grid gap-3 sm:grid-cols-2">
               {filtered.map((p) => (
-                <ProjectCard key={p.id} project={p} />
+                <ProjectCard
+                  key={p.id}
+                  project={p}
+                  onUpdated={(next) => {
+                    setProjects((prev) =>
+                      prev.map((x) => (x.id === next.id ? next : x))
+                    );
+                  }}
+                  onDeleted={(id) => {
+                    setProjects((prev) => prev.filter((x) => x.id !== id));
+                  }}
+                />
               ))}
             </div>
           </LoadingBlur>

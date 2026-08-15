@@ -24,6 +24,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ProgressBar } from "@/components/ui/progress";
 import { StatusBadge } from "@/components/ui/status-badge";
+import { Tooltip } from "@/components/ui/tooltip";
 import { WorkspaceKpiStrip } from "@/components/workspace/workspace-kpi-strip";
 import type { OperatorLimits, UsageSnapshot } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -144,6 +145,7 @@ function PolicyCard({
   icon: Icon,
   title,
   description,
+  tip,
   on,
   onToggle,
   badge,
@@ -152,6 +154,8 @@ function PolicyCard({
   icon: LucideIcon;
   title: string;
   description: string;
+  /** Shown on title hover — same pattern as other operator settings. */
+  tip?: string;
   on: boolean;
   onToggle: () => void;
   badge: { label: string; tone: "teal" | "amber" | "mist" | "violet" };
@@ -171,7 +175,13 @@ function PolicyCard({
         </span>
         <div className="min-w-0 text-left">
           <div className="op-policy-card-top">
-            <h4 className="op-limit-title">{title}</h4>
+            {tip ? (
+              <Tooltip content={tip} side="top">
+                <h4 className="op-limit-title">{title}</h4>
+              </Tooltip>
+            ) : (
+              <h4 className="op-limit-title">{title}</h4>
+            )}
             <StatusBadge tone={badge.tone}>{badge.label}</StatusBadge>
           </div>
           <p className="op-limit-desc">{description}</p>
@@ -439,14 +449,15 @@ export function OperatorLimitsPanel({
               <div className="op-policy-grid">
                 <PolicyCard
                   icon={Crown}
-                  title="Premium models"
-                  description="Allow OpenRouter premium model routing when configured on the server."
+                  title="Paid / premium models"
+                  tip="When enabled, project runs may use the configured premium OpenRouter model. When off, every run stays on the free default (Nemotron)."
+                  description="Use paid model when operator allows premium (default remains free Nemotron)."
                   on={limits.allowPremiumModels}
                   onToggle={() =>
                     onChange({ ...limits, allowPremiumModels: !limits.allowPremiumModels })
                   }
                   badge={{
-                    label: limits.allowPremiumModels ? "Enabled" : "Standard only",
+                    label: limits.allowPremiumModels ? "Enabled" : "Free default",
                     tone: limits.allowPremiumModels ? "teal" : "mist",
                   }}
                   tone="violet"
@@ -454,6 +465,7 @@ export function OperatorLimitsPanel({
                 <PolicyCard
                   icon={ShieldCheck}
                   title="Require human review"
+                  tip="When required, live briefs stay pending until an operator approves publication."
                   description="Live briefs stay in review until an operator approves publication."
                   on={limits.requireHumanReview !== false}
                   onToggle={() =>

@@ -43,7 +43,12 @@ export async function startAgentPipeline(
   opts: StartAgentPipelineOptions = {}
 ): Promise<AgentSession> {
   const force = opts.force === true;
-  const preferPremium = opts.usePaidModel === true;
+  // Operator limits gate: when premium is allowed, runs use the paid route by default.
+  // Explicit usePaidModel:false keeps a run on free even if premium is enabled.
+  const limitsEarly = await readOperatorLimits();
+  const preferPremium =
+    opts.usePaidModel === true ||
+    (opts.usePaidModel !== false && limitsEarly.allowPremiumModels === true);
   let localOnlySources = opts.localOnlySources;
   if (localOnlySources === undefined) {
     const policy = await readScoringPolicy();
@@ -55,7 +60,7 @@ export async function startAgentPipeline(
   // Unlock slots + UI left behind by crashed / abandoned workers.
   await recoverStaleSessions();
 
-  const limits = await readOperatorLimits();
+  const limits = limitsEarly;
 
   const projects = await readCollection<Project>("projects", SEED_PROJECTS);
   const project = projects.find((p) => p.id === projectId);

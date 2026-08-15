@@ -804,6 +804,37 @@
   gap: 0.75rem;
 }
 
+.ws-project-card-title-link {
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ws-project-card-title-link:hover .ws-project-card-title {
+  color: color-mix(in srgb, var(--violet) 55%, var(--foam));
+}
+
+.ws-project-card-top-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: none;
+}
+
+.ws-project-card-icon-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.ws-project-card-body-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
 .ws-project-card-title {
   margin: 0;
   font-family: var(--f-body);
@@ -812,6 +843,46 @@
   letter-spacing: -0.015em;
   line-height: 1.3;
   color: var(--foam);
+}
+
+.ws-project-edit-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(3, 6, 18, 0.62);
+  backdrop-filter: blur(6px);
+}
+
+.ws-project-edit-modal {
+  width: min(420px, 100%);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--ink) 92%, #0b1224);
+  padding: 1.1rem 1.15rem 1rem;
+  box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.7);
+}
+
+.ws-project-edit-title {
+  margin: 0 0 0.85rem;
+  font-family: var(--f-body);
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--foam);
+}
+
+.ws-project-edit-form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.ws-project-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
 }
 
 .ws-status-chip {
@@ -2566,6 +2637,8 @@
 }
 
 .ws-question-field-chrome {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -2573,7 +2646,7 @@
 
 .ws-voice-toggle {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2594,6 +2667,7 @@
   -webkit-user-drag: none;
   user-select: none;
   touch-action: manipulation;
+  pointer-events: auto;
 }
 
 .ws-voice-toggle.is-on {
@@ -2627,6 +2701,7 @@
   height: 28px;
   flex: 1;
   min-width: 0;
+  pointer-events: none;
 }
 
 .ws-voice-wave > span {

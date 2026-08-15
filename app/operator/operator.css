@@ -2877,6 +2877,10 @@
   min-width: 0;
 }
 
+.op-slider-panel .op-evidence-policy {
+  margin-bottom: 0.15rem;
+}
+
 .op-slider-panel-loading {
   margin: 0;
   padding: 1rem;

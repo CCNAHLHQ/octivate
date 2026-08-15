@@ -86,6 +86,13 @@ export const WS_UI_MESSAGES = {
   "ws.projects.createdTitle": "Project created",
   "ws.projects.createdBody": "Your new decision theatre is ready.",
   "ws.projects.createFailed": "Could not create project",
+  "ws.projects.edit": "Edit project",
+  "ws.projects.delete": "Delete project",
+  "ws.projects.deleted": "Project deleted",
+  "ws.projects.updated": "Project updated",
+  "ws.projects.deleteConfirmTitle": "Delete this project?",
+  "ws.projects.deleteConfirmBody":
+    "Briefs, workflow sessions, and uploaded documents for this project will also be deleted. This cannot be undone.",
 
   // Project theatre
   "ws.project.askStrategic": "Ask strategic question",
