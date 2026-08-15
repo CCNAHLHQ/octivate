@@ -48,6 +48,12 @@ export type AutomationDashboard = {
   seeds: Awaited<ReturnType<typeof readSeeds>>;
   settings: Awaited<ReturnType<typeof readSettings>>;
   hardCap: number;
+  /** Aggregate download bandwidth across all jobs (not just the current page). */
+  bandwidth: {
+    liveBps: number;
+    movedBytes: number;
+    downloading: number;
+  };
   events: ReturnType<typeof listParlLog>;
   server: {
     dryRun: boolean;
@@ -241,6 +247,17 @@ export async function loadAutomationDashboard(opts?: {
     jobs: total,
   };
 
+  let liveBps = 0;
+  let movedBytes = 0;
+  let downloadingBw = 0;
+  for (const j of jobs) {
+    if (j.bytesDownloaded) movedBytes += j.bytesDownloaded;
+    if (j.stage === "downloading") {
+      downloadingBw += 1;
+      if (j.bytesPerSec) liveBps += j.bytesPerSec;
+    }
+  }
+
   return {
     summary: mergedSummary,
     heartbeat,
@@ -255,6 +272,11 @@ export async function loadAutomationDashboard(opts?: {
     seeds,
     settings,
     hardCap: batchHardCap(),
+    bandwidth: {
+      liveBps: Math.round(liveBps),
+      movedBytes,
+      downloading: downloadingBw,
+    },
     events: listParlLog(eventLimit),
     server: {
       dryRun: parlDryRun(),

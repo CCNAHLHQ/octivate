@@ -8,6 +8,7 @@ import { AutomationControl } from "./automation-control";
 import { AutomationQueue } from "./automation-queue";
 import { AutomationSources } from "./automation-sources";
 import { AutomationConsole } from "./automation-console";
+import { AutomationMetrics } from "./automation-metrics";
 import {
   JOBS_PAGE_SIZE,
   type AutoEvent,
@@ -30,6 +31,7 @@ type DashPayload = {
     seeds: AutoSeed[];
     settings: AutoSettings;
     hardCap: number;
+    bandwidth?: { liveBps: number; movedBytes: number; downloading: number };
     events: AutoEvent[];
     server: { dryRun: boolean };
   } | null;
@@ -51,6 +53,9 @@ export function OperatorAutomationPanel() {
   const [seedCountry, setSeedCountry] = useState("BB");
   const [showDebug, setShowDebug] = useState(false);
   const [dryRun, setDryRun] = useState(false);
+  const [liveBps, setLiveBps] = useState(0);
+  const [peakBps, setPeakBps] = useState(0);
+  const [movedBytes, setMovedBytes] = useState(0);
   const [transcript, setTranscript] = useState<{
     title: string;
     text: string;
@@ -60,6 +65,7 @@ export function OperatorAutomationPanel() {
   const settingsTimer = useRef<number | null>(null);
   const batchRef = useRef(batchDraft);
   const asrRef = useRef<AutoSettings["asrProvider"]>("auto");
+  const peakRef = useRef(0);
 
   useEffect(() => {
     batchRef.current = batchDraft;
@@ -104,6 +110,15 @@ export function OperatorAutomationPanel() {
           const bs = Math.min(cap, Math.max(1, dash.settings.batchSize || 5));
           setBatchDraft(bs);
           batchRef.current = bs;
+        }
+
+        const live = dash.bandwidth?.liveBps ?? 0;
+        const moved = dash.bandwidth?.movedBytes ?? 0;
+        setLiveBps(live);
+        setMovedBytes(moved);
+        if (live > peakRef.current) {
+          peakRef.current = live;
+          setPeakBps(live);
         }
       } catch (err) {
         if (!soft) toast.error(err instanceof Error ? err.message : "Load failed");
@@ -157,6 +172,7 @@ export function OperatorAutomationPanel() {
       invalidateApiCache("/api/operator/parliamentary-media");
       await load(true, action === "start" || action === "cancel" ? 1 : jobsPage);
       if (action === "start" || action === "cancel") setJobsPage(1);
+      if (action === "start") toast.success("Pipeline running — remaining work will continue");
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Control failed");
     } finally {
@@ -183,6 +199,10 @@ export function OperatorAutomationPanel() {
       setJobsTotal(0);
       setJobsPage(1);
       setEvents([]);
+      peakRef.current = 0;
+      setLiveBps(0);
+      setPeakBps(0);
+      setMovedBytes(0);
       toast.success("Automation cleared");
       await load(true, 1);
     } catch (err) {
@@ -265,13 +285,6 @@ export function OperatorAutomationPanel() {
     }
   }
 
-  const s = summary;
-  const active =
-    (s?.queued || 0) +
-    (s?.downloading || 0) +
-    (s?.downloaded || 0) +
-    (s?.transcribing || 0);
-
   return (
     <div className="op-auto2">
       <AutomationControl
@@ -295,14 +308,23 @@ export function OperatorAutomationPanel() {
         onRefresh={() => void load(true)}
       />
 
-      <p className="op-auto2-metrics">
-        <span>{s?.held ?? 0} held</span>
-        <span>{active} active</span>
-        <span>{s?.done ?? 0} done</span>
-        <span>{s?.failed ?? 0} failed</span>
-        {dryRun ? <span className="is-warn">dry-run</span> : null}
-        {s?.lastError ? <span className="is-err" title={s.lastError}>error</span> : null}
-      </p>
+      {dryRun || summary?.lastError ? (
+        <p className="op-auto2-flags">
+          {dryRun ? <span className="is-warn">dry-run</span> : null}
+          {summary?.lastError ? (
+            <span className="is-err" title={summary.lastError}>
+              {summary.lastError}
+            </span>
+          ) : null}
+        </p>
+      ) : null}
+
+      <AutomationMetrics
+        summary={summary}
+        liveBps={liveBps}
+        peakBps={peakBps}
+        movedBytes={movedBytes}
+      />
 
       <AutomationQueue
         jobs={jobs}
@@ -315,7 +337,7 @@ export function OperatorAutomationPanel() {
         onDownload={(id) => void downloadTranscript(id)}
       />
 
-      <details className="op-auto2-more">
+      <details className="op-auto2-more" open>
         <summary>Sources & console</summary>
         <div className="op-auto2-more-grid">
           <AutomationSources

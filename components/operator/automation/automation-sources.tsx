@@ -37,13 +37,26 @@ export function AutomationSources({
           placeholder="https://vimeo.com/…"
           disabled={busy}
         />
-        <select value={country} onChange={(e) => onCountry(e.target.value)} disabled={busy}>
-          <option value="BB">BB</option>
-          <option value="GY">GY</option>
-          <option value="TT">TT</option>
-          <option value="JM">JM</option>
-        </select>
-        <button type="button" className="op-auto2-btn is-primary" onClick={onAdd} disabled={busy || !url.trim()}>
+        <label className="op-auto2-select-wrap is-compact">
+          <span className="sr-only">Country</span>
+          <select
+            className="op-auto2-select"
+            value={country}
+            onChange={(e) => onCountry(e.target.value)}
+            disabled={busy}
+          >
+            <option value="BB">BB</option>
+            <option value="GY">GY</option>
+            <option value="TT">TT</option>
+            <option value="JM">JM</option>
+          </select>
+        </label>
+        <button
+          type="button"
+          className="op-auto2-btn is-primary"
+          onClick={onAdd}
+          disabled={busy || !url.trim()}
+        >
           <Plus className="h-3.5 w-3.5" />
           Add
         </button>
@@ -51,7 +64,7 @@ export function AutomationSources({
       <ul className="op-auto2-seed-list">
         {seeds.map((s) => (
           <li key={s.id}>
-            <span>{s.label}</span>
+            <span title={s.url}>{s.label}</span>
             <code>{s.country}</code>
           </li>
         ))}

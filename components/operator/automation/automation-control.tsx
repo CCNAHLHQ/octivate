@@ -28,6 +28,11 @@ export function AutomationControl({
 }) {
   const state = summary?.effectiveControl || summary?.control || "idle";
   const running = state === "running" || state === "cancelling";
+  const paused = state === "paused";
+  const held = summary?.held ?? 0;
+  const found = summary?.found ?? 0;
+  const processN = Math.min(batchDraft, Math.max(0, found || batchDraft));
+  const restHeld = Math.max(0, (found || held) - processN);
 
   return (
     <header className="op-auto2-control">
@@ -38,44 +43,77 @@ export function AutomationControl({
         </span>
       </div>
 
-      <div className="op-auto2-settings">
-        <label>
-          Batch
-          <input
-            type="number"
-            min={1}
-            max={hardCap}
-            value={batchDraft}
-            disabled={!!busy}
-            onChange={(e) => onBatchChange(Number(e.target.value) || 1)}
-          />
-        </label>
-        <label>
-          ASR
-          <select
-            value={settings?.asrProvider || "auto"}
-            disabled={!!busy}
-            onChange={(e) =>
-              onAsrChange(e.target.value as AutoSettings["asrProvider"])
-            }
-          >
-            <option value="auto">auto</option>
-            <option value="openrouter">openrouter</option>
-            <option value="local">local</option>
-          </select>
-        </label>
+      <div className="op-auto2-batch">
+        <div className="op-auto2-batch-top">
+          <label htmlFor="auto2-batch">
+            Batch size <strong>{batchDraft}</strong>
+          </label>
+          <span className="op-auto2-batch-hint">
+            Process {processN}
+            {found ? ` / ${found}` : ""}
+            {restHeld > 0 ? ` · rest held (${restHeld})` : ""}
+          </span>
+        </div>
+        <input
+          id="auto2-batch"
+          type="range"
+          min={1}
+          max={hardCap}
+          value={batchDraft}
+          disabled={!!busy}
+          onChange={(e) => onBatchChange(Number(e.target.value) || 1)}
+          className="op-auto2-range"
+        />
+        <div className="op-auto2-settings">
+          <label className="op-auto2-select-wrap">
+            ASR
+            <select
+              className="op-auto2-select"
+              value={settings?.asrProvider || "auto"}
+              disabled={!!busy}
+              onChange={(e) =>
+                onAsrChange(e.target.value as AutoSettings["asrProvider"])
+              }
+            >
+              <option value="auto">auto</option>
+              <option value="openrouter">openrouter</option>
+              <option value="local">local</option>
+            </select>
+          </label>
+        </div>
       </div>
 
       <div className="op-auto2-actions">
-        <button
-          type="button"
-          className="op-auto2-btn is-primary"
-          disabled={!!busy || running}
-          onClick={() => onControl("start")}
-        >
-          {busy === "start" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Play className="h-3.5 w-3.5" />}
-          Start
-        </button>
+        {paused ? (
+          <button
+            type="button"
+            className="op-auto2-btn is-primary"
+            disabled={!!busy}
+            onClick={() => onControl("start")}
+            title="Resume remaining queued / held work"
+          >
+            {busy === "start" ? (
+              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+            ) : (
+              <Play className="h-3.5 w-3.5" />
+            )}
+            Resume
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="op-auto2-btn is-primary"
+            disabled={!!busy || running}
+            onClick={() => onControl("start")}
+          >
+            {busy === "start" ? (
+              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+            ) : (
+              <Play className="h-3.5 w-3.5" />
+            )}
+            Start
+          </button>
+        )}
         <button
           type="button"
           className="op-auto2-btn"
@@ -88,7 +126,7 @@ export function AutomationControl({
         <button
           type="button"
           className="op-auto2-btn is-warn"
-          disabled={!!busy || state === "idle"}
+          disabled={!!busy || state === "idle" || state === "offline"}
           onClick={() => onControl("cancel")}
         >
           <Square className="h-3.5 w-3.5" />

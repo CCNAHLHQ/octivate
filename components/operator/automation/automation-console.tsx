@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import type { AutoEvent } from "./types";
 
 export function AutomationConsole({
@@ -11,9 +12,12 @@ export function AutomationConsole({
   showDebug: boolean;
   onToggleDebug: () => void;
 }) {
-  const lines = showDebug
-    ? events
-    : events.filter((e) => e.level !== "debug");
+  const [verboseId, setVerboseId] = useState<string | null>(null);
+
+  const lines = useMemo(
+    () => (showDebug ? events : events.filter((e) => e.level !== "debug")),
+    [events, showDebug]
+  );
 
   return (
     <div className="op-auto2-secondary-block">
@@ -24,12 +28,40 @@ export function AutomationConsole({
         </button>
       </div>
       <ul className="op-auto2-console">
-        {lines.slice(0, 40).map((e) => (
-          <li key={e.id} data-level={e.level}>
-            <time>{new Date(e.at).toLocaleTimeString()}</time>
-            <span>{e.message}</span>
-          </li>
-        ))}
+        {lines.slice(0, 50).map((e) => {
+          const open = verboseId === e.id;
+          const hasMeta = e.meta != null;
+          return (
+            <li key={e.id} data-level={e.level}>
+              <button
+                type="button"
+                className="op-auto2-console-line"
+                onClick={() => setVerboseId(open ? null : e.id)}
+                disabled={!hasMeta && !e.message}
+              >
+                <time>{new Date(e.at).toLocaleTimeString()}</time>
+                <span>{e.message}</span>
+                {hasMeta ? <em>{open ? "−" : "+"}</em> : null}
+              </button>
+              {open ? (
+                <pre className="op-auto2-console-json">
+                  {JSON.stringify(
+                    {
+                      id: e.id,
+                      at: e.at,
+                      level: e.level,
+                      message: e.message,
+                      pid: e.pid ?? null,
+                      meta: e.meta ?? null,
+                    },
+                    null,
+                    2
+                  )}
+                </pre>
+              ) : null}
+            </li>
+          );
+        })}
         {!lines.length ? <li className="op-auto2-empty">No events</li> : null}
       </ul>
     </div>

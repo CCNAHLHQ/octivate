@@ -5,9 +5,11 @@ import {
   ChevronLeft,
   ChevronRight,
   Download,
+  ExternalLink,
   Eye,
   Loader2,
 } from "lucide-react";
+import { shortUrl } from "@/lib/parliamentary/errors";
 import type { AutoJob } from "./types";
 
 export function AutomationQueue({
@@ -95,6 +97,7 @@ function QueueRow({
   const [open, setOpen] = useState(false);
   const done = job.stage === "done";
   const failed = job.stage === "failed";
+  const href = job.mediaUrl?.trim();
 
   return (
     <li className="op-auto2-row" data-stage={job.stage}>
@@ -103,10 +106,23 @@ function QueueRow({
           <strong title={job.title}>{job.title}</strong>
           <span>
             {job.country}
+            {job.progressLabel ? ` · ${job.progressLabel}` : ""}
             {job.asrProvider || job.model
               ? ` · ${job.asrProvider || ""}${job.model ? ` ${job.model}` : ""}`
               : ""}
           </span>
+          {href ? (
+            <a
+              className="op-auto2-vid-link"
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              title={href}
+            >
+              {shortUrl(href, 48)}
+              <ExternalLink className="h-3 w-3" aria-hidden />
+            </a>
+          ) : null}
         </div>
         <span className="op-auto2-stage" data-stage={job.stage}>
           {job.stage}
