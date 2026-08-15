@@ -5849,11 +5849,41 @@
   gap: 0.65rem;
 }
 
-.op-basic-head {
+.op-basic-drop {
+  padding: 0;
+  overflow: hidden;
+}
+
+.op-basic-drop-summary {
+  list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.op-basic-drop-summary::-webkit-details-marker {
+  display: none;
+}
+
+.op-basic-drop-chevron {
+  flex-shrink: 0;
+  color: var(--faint);
+  transition: transform 0.15s ease;
+}
+
+.op-basic-drop[open] .op-basic-drop-chevron {
+  transform: rotate(180deg);
+  color: var(--mist);
+}
+
+.op-basic-drop-body {
+  padding: 0 1rem 1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.85rem;
 }
 
 .op-basic-title {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { Languages, RefreshCw } from "lucide-react";
+import { ChevronDown, Languages, RefreshCw } from "lucide-react";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import { useT } from "@/components/i18n/locale-provider";
 import { toast } from "@/components/ui/toast";
@@ -25,6 +25,7 @@ export function OperatorI18nPanel() {
   const t = useT();
   const [status, setStatus] = useState<StatusPayload | null>(null);
   const [busy, setBusy] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const load = useCallback(async () => {
     try {
@@ -38,8 +39,9 @@ export function OperatorI18nPanel() {
   }, []);
 
   useEffect(() => {
+    if (!open) return;
     void load();
-  }, [load]);
+  }, [open, load]);
 
   async function syncAll() {
     setBusy(true);
@@ -56,12 +58,20 @@ export function OperatorI18nPanel() {
   }
 
   return (
-    <section className="op-card op-basic-panel" aria-label={t("op.i18n.title")}>
-      <div className="op-basic-head">
-        <h3 className="op-basic-title">
+    <details
+      className="op-card op-basic-drop"
+      open={open}
+      onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)}
+    >
+      <summary className="op-basic-drop-summary">
+        <span className="op-basic-title">
           <Languages className="h-4 w-4" aria-hidden />
           {t("op.i18n.title")}
-        </h3>
+        </span>
+        <ChevronDown className="op-basic-drop-chevron h-4 w-4" aria-hidden />
+      </summary>
+
+      <div className="op-basic-drop-body op-basic-panel">
         <div className="op-basic-actions">
           <button
             type="button"
@@ -81,28 +91,28 @@ export function OperatorI18nPanel() {
             {busy ? t("op.i18n.syncing") : t("op.i18n.sync")}
           </button>
         </div>
+
+        <p className="op-basic-meta">
+          {status?.sourceKeys ?? "—"} keys
+          {status?.lastSyncAt
+            ? ` · synced ${new Date(status.lastSyncAt).toLocaleString()}`
+            : " · never synced"}
+        </p>
+
+        <ul className="op-basic-list">
+          {(status?.locales || []).map((loc) => (
+            <li key={loc.locale}>
+              <span>
+                {loc.label} <code>{loc.locale}</code>
+              </span>
+              <span>
+                {loc.coverage}%
+                {loc.missing ? ` · ${loc.missing} missing` : ""}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
-
-      <p className="op-basic-meta">
-        {status?.sourceKeys ?? "—"} keys
-        {status?.lastSyncAt
-          ? ` · synced ${new Date(status.lastSyncAt).toLocaleString()}`
-          : " · never synced"}
-      </p>
-
-      <ul className="op-basic-list">
-        {(status?.locales || []).map((loc) => (
-          <li key={loc.locale}>
-            <span>
-              {loc.label} <code>{loc.locale}</code>
-            </span>
-            <span>
-              {loc.coverage}%
-              {loc.missing ? ` · ${loc.missing} missing` : ""}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </section>
+    </details>
   );
 }

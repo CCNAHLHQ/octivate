@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { BookOpenCheck, Loader2, RefreshCw, Upload } from "lucide-react";
+import { BookOpenCheck, ChevronDown, Loader2, RefreshCw, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProgressBar } from "@/components/ui/progress";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
@@ -26,10 +26,11 @@ const AUTO_FLAG = "octivate.fc.autoRecent.v1";
 
 export function OperatorFcLogbookPanel() {
   const [data, setData] = useState<FcStatusResponse | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [starting, setStarting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [autoUpload, setAutoUpload] = useState(true);
+  const [open, setOpen] = useState(false);
   const autoTried = useRef(false);
 
   const load = useCallback(async (soft = false) => {
@@ -48,16 +49,17 @@ export function OperatorFcLogbookPanel() {
   }, []);
 
   useEffect(() => {
+    if (!open) return;
     void load();
-  }, [load]);
+  }, [open, load]);
 
   useEffect(() => {
-    if (data?.job.status !== "running") return;
+    if (!open || data?.job.status !== "running") return;
     const t = window.setInterval(() => {
       void load(true);
     }, 1600);
     return () => window.clearInterval(t);
-  }, [data?.job.status, load]);
+  }, [open, data?.job.status, load]);
 
   const publish = useCallback(
     async (mode: FcSyncMode, auto = false) => {
@@ -79,8 +81,9 @@ export function OperatorFcLogbookPanel() {
     [load]
   );
 
+  // Auto-upload only after the operator opens the dropdown.
   useEffect(() => {
-    if (!data || autoTried.current || !autoUpload) return;
+    if (!open || !data || autoTried.current || !autoUpload) return;
     if (!data.credentialsConfigured) return;
     if (data.job.status === "running" || starting) return;
     if (!data.recentDays.length) return;
@@ -99,7 +102,7 @@ export function OperatorFcLogbookPanel() {
       /* ignore */
     }
     void publish("recent", true);
-  }, [data, autoUpload, starting, publish]);
+  }, [open, data, autoUpload, starting, publish]);
 
   const job = data?.job;
   const running = job?.status === "running" || starting;
@@ -110,12 +113,20 @@ export function OperatorFcLogbookPanel() {
   const today = data?.recentDays.find((d) => d.key === data.todayKey);
 
   return (
-    <section className="op-card op-basic-panel" aria-label="Logbook">
-      <div className="op-basic-head">
-        <h3 className="op-basic-title">
+    <details
+      className="op-card op-basic-drop"
+      open={open}
+      onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)}
+    >
+      <summary className="op-basic-drop-summary">
+        <span className="op-basic-title">
           <BookOpenCheck className="h-4 w-4" aria-hidden />
           Logbook
-        </h3>
+        </span>
+        <ChevronDown className="op-basic-drop-chevron h-4 w-4" aria-hidden />
+      </summary>
+
+      <div className="op-basic-drop-body op-basic-panel">
         <div className="op-basic-actions">
           <Button
             size="sm"
@@ -139,59 +150,61 @@ export function OperatorFcLogbookPanel() {
             {running ? "Uploading…" : "Upload"}
           </Button>
         </div>
-      </div>
 
-      <p className="op-basic-meta">
-        {!data?.credentialsConfigured
-          ? "Credentials missing (FC_LOGBOOK_EMAIL / PASSWORD)"
-          : check
-            ? `${check.present} present · ${check.missing} missing`
-            : "Ready"}
-        {yesterday ? ` · yday ${yesterday.key}` : ""}
-        {today ? ` · today ${today.key}` : ""}
-      </p>
+        <p className="op-basic-meta">
+          {!data?.credentialsConfigured
+            ? "Credentials missing (FC_LOGBOOK_EMAIL / PASSWORD)"
+            : check
+              ? `${check.present} present · ${check.missing} missing`
+              : loading
+                ? "Loading…"
+                : "Ready"}
+          {yesterday ? ` · yday ${yesterday.key}` : ""}
+          {today ? ` · today ${today.key}` : ""}
+        </p>
 
-      <label className="op-basic-check">
-        <input
-          type="checkbox"
-          checked={autoUpload}
-          onChange={(e) => {
-            const on = e.target.checked;
-            setAutoUpload(on);
-            if (!on) {
-              try {
-                sessionStorage.setItem(AUTO_FLAG, "1");
-              } catch {
-                /* ignore */
+        <label className="op-basic-check">
+          <input
+            type="checkbox"
+            checked={autoUpload}
+            onChange={(e) => {
+              const on = e.target.checked;
+              setAutoUpload(on);
+              if (!on) {
+                try {
+                  sessionStorage.setItem(AUTO_FLAG, "1");
+                } catch {
+                  /* ignore */
+                }
+              } else {
+                try {
+                  sessionStorage.removeItem(AUTO_FLAG);
+                } catch {
+                  /* ignore */
+                }
+                autoTried.current = false;
               }
-            } else {
-              try {
-                sessionStorage.removeItem(AUTO_FLAG);
-              } catch {
-                /* ignore */
-              }
-              autoTried.current = false;
-            }
-          }}
-          disabled={running}
-        />
-        Auto-upload on open
-      </label>
+            }}
+            disabled={running}
+          />
+          Auto-upload on open
+        </label>
 
-      {(running || (job?.progress.total ?? 0) > 0) && (
-        <div className="op-basic-progress">
-          <div className="op-basic-progress-meta">
-            <span>{job?.progress.label || "Idle"}</span>
-            <span>
-              {job?.progress.done ?? 0}/{job?.progress.total ?? 0}
-            </span>
+        {(running || (job?.progress.total ?? 0) > 0) && (
+          <div className="op-basic-progress">
+            <div className="op-basic-progress-meta">
+              <span>{job?.progress.label || "Idle"}</span>
+              <span>
+                {job?.progress.done ?? 0}/{job?.progress.total ?? 0}
+              </span>
+            </div>
+            <ProgressBar value={pct} pulse={running} />
           </div>
-          <ProgressBar value={pct} pulse={running} />
-        </div>
-      )}
+        )}
 
-      {error ? <p className="op-basic-error">{error}</p> : null}
-      {job?.error ? <p className="op-basic-error">{job.error}</p> : null}
-    </section>
+        {error ? <p className="op-basic-error">{error}</p> : null}
+        {job?.error ? <p className="op-basic-error">{job.error}</p> : null}
+      </div>
+    </details>
   );
 }
