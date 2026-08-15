@@ -1,3 +1,4 @@
+import { pathToFileURL } from "node:url";
 import mammoth from "mammoth";
 import { sanitizePlainText } from "@/lib/docs/sanitize-text";
 
@@ -9,12 +10,16 @@ export type ExtractResult = {
 /** Align with map-reduce summarizer ceiling so evidence + summarize share one extract. */
 export const DEFAULT_EXTRACT_MAX_CHARS = 80_000;
 
-type PdfParseModule = {
-  PDFParse: new (opts: { data: Uint8Array }) => {
-    getText: () => Promise<{ text?: string }>;
-    destroy: () => Promise<void>;
-  };
+type PdfParseCtor = new (opts: { data: Uint8Array }) => {
+  getText: () => Promise<{ text?: string }>;
+  destroy: () => Promise<void>;
 };
+
+type PdfParseModule = {
+  PDFParse: PdfParseCtor & { setWorker: (src?: string) => string };
+};
+
+let pdfWorkerConfigured = false;
 
 async function loadPdfParse(): Promise<PdfParseModule> {
   const mod = (await import("pdf-parse")) as PdfParseModule & {
@@ -27,10 +32,36 @@ async function loadPdfParse(): Promise<PdfParseModule> {
   );
 }
 
+/**
+ * Next.js / Windows often fail to resolve pdfjs worker automatically.
+ * Prefer an inlined data: worker; fall back to file:// URL from getPath().
+ */
+async function ensurePdfWorker(PDFParse: PdfParseModule["PDFParse"]): Promise<void> {
+  if (pdfWorkerConfigured) return;
+  try {
+    const worker = (await import("pdf-parse/worker")) as {
+      getData?: () => string;
+      getPath?: () => string;
+    };
+    let src: string | undefined;
+    if (typeof worker.getData === "function") {
+      src = worker.getData();
+    } else if (typeof worker.getPath === "function") {
+      src = pathToFileURL(worker.getPath()).href;
+    }
+    if (src) PDFParse.setWorker(src);
+    pdfWorkerConfigured = true;
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    throw new Error(`PDF worker module missing or failed to load: ${message.slice(0, 160)}`);
+  }
+}
+
 async function extractPdf(bytes: Buffer, maxChars: number): Promise<ExtractResult> {
   // pdf-parse@2 exports { PDFParse } — not a callable default (v1 API).
   const { PDFParse } = await loadPdfParse();
-  const data = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes);
+  await ensurePdfWorker(PDFParse);
+  const data = new Uint8Array(bytes);
   const parser = new PDFParse({ data });
   try {
     const result = await parser.getText();
@@ -64,6 +95,9 @@ async function extractDocx(bytes: Buffer, maxChars: number): Promise<ExtractResu
 function operatorFacingExtractError(err: unknown): string {
   const raw = err instanceof Error ? err.message : String(err);
   const lower = raw.toLowerCase();
+  if (lower.includes("worker") || lower.includes("setting up fake worker")) {
+    return "PDF text extraction failed (PDF worker unavailable in this runtime). Operator: ensure pdf-parse/worker is configured and pdf-parse is server-external.";
+  }
   // Legacy v1-style call against v2 surfaces minified "X is not a function".
   if (lower.includes("is not a function")) {
     return "PDF text extraction failed (incompatible pdf-parse API). Operator: redeploy with pdf-parse v2 PDFParse.getText() path.";

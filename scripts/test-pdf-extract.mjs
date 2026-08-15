@@ -41,6 +41,10 @@ async function main() {
     result.text.includes(marker),
     `extracted text missing marker. got: ${result.text.slice(0, 200)}`
   );
+  assert.ok(
+    !/worker/i.test(result.text),
+    `worker error leaked into extract: ${result.text.slice(0, 200)}`
+  );
 
   const emptyish = await extractBinaryDocument(Buffer.from("%PDF-1.4\n%%EOF\n"), ".pdf");
   assert.ok(emptyish);
