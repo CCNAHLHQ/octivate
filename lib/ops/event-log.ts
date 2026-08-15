@@ -49,9 +49,36 @@ function redactMeta(meta?: Record<string, unknown>): Record<string, unknown> | u
       next[k] = "[redacted]";
       continue;
     }
-    next[k] = v;
+    next[k] = deepRedact(v);
   }
   return next;
+}
+
+function deepRedact(value: unknown): unknown {
+  if (typeof value === "string") {
+    if (/sk-[a-zA-Z0-9]|Bearer\s+\S+/i.test(value)) return "[redacted]";
+    return value;
+  }
+  if (!value || typeof value !== "object") return value;
+  if (Array.isArray(value)) return value.map(deepRedact);
+  const obj = value as Record<string, unknown>;
+  const out: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(obj)) {
+    const key = k.toLowerCase();
+    if (
+      key.includes("authorization") ||
+      key.includes("api_key") ||
+      key.includes("apikey") ||
+      key.includes("bearer") ||
+      key.includes("password") ||
+      key.includes("secret")
+    ) {
+      out[k] = "[redacted]";
+    } else {
+      out[k] = deepRedact(v);
+    }
+  }
+  return out;
 }
 
 async function hydrate() {
@@ -88,14 +115,17 @@ export async function emitOpsEvent(input: {
   source: OpsEventSource;
   message: string;
   meta?: Record<string, unknown>;
+  /** Preserve long pipeline / model dumps for operator debug (still redacts secrets). */
+  fullContent?: boolean;
 }): Promise<OpsEvent> {
   await hydrate();
+  const msgCap = input.fullContent ? 16_000 : 2_000;
   const evt: OpsEvent = {
     id: uid("ops"),
     at: new Date().toISOString(),
     level: input.level || "info",
     source: input.source,
-    message: String(input.message).slice(0, 2000),
+    message: String(input.message).slice(0, msgCap),
     meta: redactMeta(input.meta),
   };
   memory.unshift(evt);

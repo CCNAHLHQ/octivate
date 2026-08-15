@@ -17,6 +17,7 @@ import { extractDocumentText, patchDocumentMeta, type ProjectDocument } from "@/
 import { sanitizeModelStrings, sanitizePlainText } from "@/lib/docs/sanitize-text";
 import { readCollection } from "@/lib/store/json-store";
 import { recordUsage } from "@/lib/usage/usage-store";
+import { recordWorkspaceFailure } from "@/lib/protocol/pipeline-failure";
 import { SEED_PROJECTS } from "@/lib/mock/seed";
 import type { Project } from "@/lib/types";
 
@@ -469,6 +470,20 @@ export async function summarizeProjectDocument(opts: {
       summaryStatus: "failed",
       summaryError: friendly.slice(0, 600),
     }).catch(() => null);
+    await recordWorkspaceFailure({
+      action: "document_summarize_failed",
+      message: friendly,
+      projectId: opts.projectId,
+      docId: opts.docId,
+      docName: doc.name,
+      err,
+      extra: {
+        focus: opts.focus || null,
+        tokensUsed: spend.tokensUsed,
+        costUsd: spend.costUsd,
+        model: spend.usedModel,
+      },
+    }).catch(() => undefined);
     const out = err instanceof Error ? err : new Error(friendly);
     out.message = friendly;
     throw out;

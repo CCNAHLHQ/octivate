@@ -267,8 +267,43 @@ export function OperatorDebugPanel() {
                   <span className="op-debug-row-level">{evt.level}</span>
                   <span className="op-debug-row-source">{evt.source}</span>
                   <span className="op-debug-row-msg">{evt.message}</span>
-                  {open && evt.meta ? (
-                    <pre className="op-debug-meta">{JSON.stringify(evt.meta, null, 2)}</pre>
+                  {open ? (
+                    <>
+                      <div className="op-debug-meta-tools">
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            const blob = JSON.stringify(
+                              { at: evt.at, level: evt.level, source: evt.source, message: evt.message, meta: evt.meta },
+                              null,
+                              2
+                            );
+                            void navigator.clipboard.writeText(blob).then(
+                              () => toast.success("Copied full event"),
+                              () => toast.error("Copy failed")
+                            );
+                          }}
+                        >
+                          Copy full
+                        </Button>
+                      </div>
+                      <pre className="op-debug-meta">
+                        {JSON.stringify(
+                          {
+                            at: evt.at,
+                            level: evt.level,
+                            source: evt.source,
+                            message: evt.message,
+                            meta: evt.meta ?? null,
+                          },
+                          null,
+                          2
+                        )}
+                      </pre>
+                    </>
                   ) : null}
                 </button>
               );

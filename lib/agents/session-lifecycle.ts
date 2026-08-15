@@ -2,6 +2,7 @@ import type { AgentSession } from "@/lib/types";
 import { flushSessionUsage } from "@/lib/usage/usage-store";
 import { emitSession, getSession, listSessions, persistSession } from "./session-store";
 import { isStaleRunning } from "./session-stale";
+import { recordWorkspaceFailure } from "@/lib/protocol/pipeline-failure";
 
 export { isStaleRunning, STALE_INACTIVITY_MS, sessionLastActivityMs } from "./session-stale";
 
@@ -48,6 +49,23 @@ async function markTerminal(
   }
   await persistSession(live);
   emitSession(live);
+
+  const action =
+    opts.code === SUPERSEDED_CODE
+      ? "pipeline_superseded"
+      : opts.code === STALE_TIMEOUT_CODE
+        ? "pipeline_stale_timeout"
+        : "pipeline_failed";
+
+  await recordWorkspaceFailure({
+    action,
+    message: opts.message,
+    session: live,
+    stage: live.errorDetail?.stage,
+    level: opts.code === SUPERSEDED_CODE ? "info" : "error",
+    extra: { code: opts.code },
+  }).catch(() => undefined);
+
   return live;
 }
 

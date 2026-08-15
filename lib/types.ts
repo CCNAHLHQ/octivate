@@ -524,6 +524,9 @@ export interface AgentSession {
     stage?: string;
     finishReason?: string;
     at?: string;
+    /** Extended operator diagnostics (optional). */
+    kind?: string;
+    rawContentLen?: number;
   };
   /** Set after tokens/cost are flushed to the cost ledger (prevents double-count). */
   usageRecorded?: boolean;

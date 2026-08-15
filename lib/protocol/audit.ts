@@ -12,15 +12,30 @@ export async function appendAudit(entry: Omit<AuditLogEntry, "id" | "at">): Prom
   log.unshift(row);
   await writeCollection("audit-log", log.slice(0, 500));
 
+  const isFailure = /fail|error|reject|timeout|stale/i.test(entry.action);
+  const detail = entry.detail ? String(entry.detail) : "";
+  // Prefer structured full payload in meta when detail is JSON; keep message scannable.
+  let metaDetail: unknown = detail || undefined;
+  if (detail && (detail.startsWith("{") || detail.startsWith("["))) {
+    try {
+      metaDetail = JSON.parse(detail) as unknown;
+    } catch {
+      metaDetail = detail;
+    }
+  }
+
   void emitOpsEvent({
-    level: /fail|error|reject/i.test(entry.action) ? "warn" : "info",
+    level: isFailure ? "warn" : "info",
     source: "audit",
-    message: entry.action + (entry.detail ? ` — ${String(entry.detail).slice(0, 240)}` : ""),
+    message: entry.action + (detail && !isFailure ? ` — ${detail.slice(0, 240)}` : detail ? ` — ${detail.slice(0, 480)}` : ""),
     meta: {
       sessionId: entry.sessionId,
       briefId: entry.briefId,
       action: entry.action,
+      detail: metaDetail,
+      outputHash: entry.outputHash,
     },
+    fullContent: isFailure,
   });
 }
 

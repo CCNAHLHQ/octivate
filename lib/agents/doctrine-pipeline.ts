@@ -25,7 +25,6 @@ import {
   publishAccountingTick,
   readOperatorLimits,
 } from "@/lib/usage/usage-store";
-import { emitOpsEvent } from "@/lib/ops/event-log";
 import {
   buildEvidenceSourceContext,
   catalogToRecords,
@@ -64,6 +63,7 @@ import type {
 } from "@/lib/types";
 import { emitSession, persistSession } from "./session-store";
 import { isSuperseded, SUPERSEDED_CODE } from "./session-lifecycle";
+import { recordWorkspaceFailure } from "@/lib/protocol/pipeline-failure";
 
 class PipelineSupersededError extends Error {
   constructor() {
@@ -1243,6 +1243,11 @@ export async function runDoctrinePipeline(
         err && typeof err === "object" && "finishReason" in err
           ? String((err as { finishReason?: unknown }).finishReason || "") || undefined
           : undefined,
+      kind: err instanceof Error && "kind" in err ? String((err as { kind?: unknown }).kind || "") || undefined : undefined,
+      rawContentLen:
+        err && typeof err === "object" && "rawContent" in err && typeof (err as { rawContent?: unknown }).rawContent === "string"
+          ? (err as { rawContent: string }).rawContent.length
+          : undefined,
       at: new Date().toISOString(),
     };
     session.completedAt = new Date().toISOString();
@@ -1250,16 +1255,16 @@ export async function runDoctrinePipeline(
     await flushSessionUsage(session, "Doctrine agent pipeline (failed)");
     await persistSession(session);
     emitSession(session);
-    await appendAudit({
+    await recordWorkspaceFailure({
       action: "pipeline_failed",
-      sessionId: session.id,
-      detail: JSON.stringify(session.errorDetail),
-    });
-    void emitOpsEvent({
-      level: "error",
-      source: "pipeline",
-      message: `pipeline_failed · ${message}`,
-      meta: { sessionId: session.id, ...(session.errorDetail || {}) },
+      message,
+      session,
+      stage: failedStage?.name,
+      err,
+      extra: {
+        agentOutputsCount: session.agentOutputs?.length || 0,
+        lastAgent: session.agentOutputs?.[session.agentOutputs.length - 1]?.agent,
+      },
     });
     // eslint-disable-next-line no-console
     console.warn(

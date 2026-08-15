@@ -30,11 +30,19 @@ export class JsonCompleteError extends Error {
   kind: JsonFailureKind;
   /** Operator-facing copy (safe for toasts / stage messages). */
   userMessage: string;
+  /** Last raw model text (for audit / debug console). */
+  rawContent?: string;
+  finishReason?: string | null;
 
   constructor(
     message: string,
     spend: CompletionSpend,
-    opts?: { kind?: JsonFailureKind; userMessage?: string }
+    opts?: {
+      kind?: JsonFailureKind;
+      userMessage?: string;
+      rawContent?: string;
+      finishReason?: string | null;
+    }
   ) {
     super(message);
     this.name = "JsonCompleteError";
@@ -43,6 +51,8 @@ export class JsonCompleteError extends Error {
     this.userMessage =
       opts?.userMessage ||
       "The model returned an unreadable response. Try again, or shorten the question / documents.";
+    this.rawContent = opts?.rawContent;
+    this.finishReason = opts?.finishReason ?? null;
   }
 }
 
@@ -118,6 +128,8 @@ export async function completeJson<T>(
   let lastKind: JsonFailureKind = "json_invalid";
   let lastUserMessage =
     "The model returned an unreadable response. Try again, or shorten the question / documents.";
+  let lastRawContent = "";
+  let lastFinishReason: string | null = null;
   let spend: CompletionSpend = {
     totalTokens: 0,
     costUsd: 0,
@@ -158,6 +170,9 @@ export async function completeJson<T>(
       costSource: nextSource === "mixed" ? "mixed" : nextSource,
       generationId: result.generationId || spend.generationId,
     };
+
+    lastRawContent = result.content || "";
+    lastFinishReason = result.finishReason ?? null;
 
     try {
       const { json, meta } = coerceJsonText(result.content);
@@ -218,6 +233,8 @@ export async function completeJson<T>(
   throw new JsonCompleteError(lastError?.message || "Failed to parse JSON from model", spend, {
     kind: lastKind,
     userMessage: lastUserMessage,
+    rawContent: lastRawContent,
+    finishReason: lastFinishReason,
   });
 }
 
@@ -243,7 +260,7 @@ export function parseModelJsonObject(raw: string): Record<string, unknown> {
       promptTokens: 0,
       completionTokens: 0,
       costSource: "estimate",
-    }, classified);
+    }, { ...classified, rawContent: raw });
   }
 }
 

@@ -119,6 +119,7 @@ export async function listModerationInventory(): Promise<
       title: a.action,
       meta: [a.sessionId, a.briefId].filter(Boolean).join(" · ") || "system",
       createdAt: a.at,
+      detail: a.detail,
     })),
     "support-threads": support.map((t) => ({
       id: t.id,

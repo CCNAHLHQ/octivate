@@ -489,7 +489,9 @@ export function ModerationPanel({ onChanged, refreshKey = 0, embedded = false }:
           </div>
           <p className="op-mod-drawer-meta">{detail.meta}</p>
           <p className="op-mod-drawer-id">ID · {detail.id}</p>
-          {detail.detail ? <p className="op-mod-drawer-body">{detail.detail}</p> : null}
+          {detail.detail ? (
+            <pre className="op-mod-drawer-body op-mod-drawer-pre">{detail.detail}</pre>
+          ) : null}
           {detail.href ? (
             <Link href={detail.href} className="text-sm text-teal hover:underline">
               Open in workspace

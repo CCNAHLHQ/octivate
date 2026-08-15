@@ -5,6 +5,7 @@ import { startAgentPipeline } from "@/lib/agents/orchestrator";
 import { readCollection, writeCollection } from "@/lib/store/json-store";
 import { SEED_PROJECTS } from "@/lib/mock/seed";
 import type { Project } from "@/lib/types";
+import { recordWorkspaceFailure } from "@/lib/protocol/pipeline-failure";
 
 export async function POST(
   req: NextRequest,
@@ -51,6 +52,17 @@ export async function POST(
     return jsonOk({ session }, { status: 201 });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Failed to start pipeline";
+    await recordWorkspaceFailure({
+      action: "pipeline_start_failed",
+      message,
+      projectId: id,
+      err,
+      extra: {
+        question: parsed.data.question,
+        analysisDepth: parsed.data.analysisDepth || "standard",
+        force: parsed.data.force === true,
+      },
+    }).catch(() => undefined);
     const status = message.includes("limit") ? 429 : message.includes("not found") ? 404 : 500;
     return jsonError(message, status);
   }

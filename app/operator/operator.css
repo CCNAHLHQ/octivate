@@ -2734,9 +2734,17 @@
   font-size: 0.68rem;
   line-height: 1.45;
   overflow: auto;
-  max-height: 12rem;
+  max-height: min(70vh, 36rem);
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+.op-debug-meta-tools {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
 }
 
 /* -- Model config panel -- */
@@ -3659,6 +3667,20 @@
   font-size: 0.8rem;
   color: var(--mist);
   overflow-wrap: anywhere;
+}
+
+.op-mod-drawer-pre {
+  max-height: min(60vh, 28rem);
+  overflow: auto;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--abyss);
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .op-icon-btn.is-warn {
