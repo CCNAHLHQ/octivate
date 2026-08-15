@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { atomicWriteJson } from "@/lib/parliamentary/atomic-json";
 import { mediaIndexDir } from "@/lib/parliamentary/paths";
 import { formatEta } from "@/lib/parliamentary/estimate";
 import type { MediaJob, PipelineState } from "@/lib/parliamentary/types";
@@ -37,17 +38,7 @@ export type QueueSnapshot = {
 
 export async function writeHeartbeat(snap: QueueSnapshot) {
   const dir = mediaIndexDir();
-  await fs.mkdir(dir, { recursive: true });
-  const file = path.join(dir, "heartbeat.json");
-  const tmp = `${file}.${process.pid}.tmp`;
-  const body = JSON.stringify(snap, null, 2);
-  await fs.writeFile(tmp, body, "utf8");
-  try {
-    await fs.rename(tmp, file);
-  } catch {
-    await fs.writeFile(file, body, "utf8");
-    await fs.unlink(tmp).catch(() => undefined);
-  }
+  await atomicWriteJson(path.join(dir, "heartbeat.json"), snap);
 }
 
 export async function readHeartbeat(): Promise<QueueSnapshot | null> {

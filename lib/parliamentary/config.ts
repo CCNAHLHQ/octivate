@@ -43,6 +43,11 @@ export function asrConcurrency() {
   const n = Number(process.env.PARL_ASR_CONCURRENCY || def);
   return Number.isFinite(n) ? Math.max(1, Math.min(cores, Math.floor(n))) : def;
 }
+/** Download slots (defaults to ASR concurrency). */
+export function dlConcurrency() {
+  const n = Number(process.env.PARL_DL_CONCURRENCY || asrConcurrency());
+  return Number.isFinite(n) ? Math.max(1, Math.min(16, Math.floor(n))) : asrConcurrency();
+}
 export function whisperModel() {
   return process.env.PARL_WHISPER_MODEL?.trim() || "base";
 }

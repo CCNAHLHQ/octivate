@@ -9,6 +9,7 @@
 import { spawn } from "child_process";
 import { promises as fs } from "fs";
 import { getChromiumBrowser } from "@/lib/browser/chromium";
+import { atomicRename } from "@/lib/parliamentary/atomic-json";
 import { ffmpegPath } from "@/lib/parliamentary/config";
 import { parlLog } from "@/lib/parliamentary/log";
 
@@ -210,7 +211,7 @@ async function ffmpegStreamDownload(opts: {
     });
   });
 
-  await fs.rename(partial, opts.dest);
+  await atomicRename(partial, opts.dest);
   const st = await fs.stat(opts.dest);
   opts.onProgress?.({
     bytesDownloaded: st.size,

@@ -4,6 +4,7 @@ import {
   batchHardCap,
   maxRetriesDefault,
 } from "@/lib/parliamentary/config";
+import { atomicWriteJson } from "@/lib/parliamentary/atomic-json";
 import { mediaIndexDir } from "@/lib/parliamentary/paths";
 import type { AutomationSettings, AsrProvider } from "@/lib/parliamentary/types";
 import { promises as fs } from "fs";
@@ -24,17 +25,7 @@ export function defaultSettings(): AutomationSettings {
 }
 
 async function persist(settings: AutomationSettings) {
-  await fs.mkdir(mediaIndexDir(), { recursive: true });
-  const file = path.join(mediaIndexDir(), "settings.json");
-  const tmp = `${file}.${process.pid}.tmp`;
-  const body = JSON.stringify(settings, null, 2);
-  await fs.writeFile(tmp, body, "utf8");
-  try {
-    await fs.rename(tmp, file);
-  } catch {
-    await fs.writeFile(file, body, "utf8");
-    await fs.unlink(tmp).catch(() => undefined);
-  }
+  await atomicWriteJson(path.join(mediaIndexDir(), "settings.json"), settings);
 }
 
 export async function readSettings(): Promise<AutomationSettings> {

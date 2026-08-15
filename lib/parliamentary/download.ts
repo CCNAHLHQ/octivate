@@ -1,3 +1,4 @@
+import { atomicRename } from "@/lib/parliamentary/atomic-json";
 import { createHash } from "crypto";
 import { createWriteStream, promises as fs } from "fs";
 import path from "path";
@@ -106,6 +107,30 @@ export async function assertVideoReady(
   return { bytes: st.size, contentHash, durationSec };
 }
 
+/**
+ * True only when download.ok exists and assertVideoReady passes.
+ * Used by recovery — never trust folder/videoPath alone.
+ */
+export async function isDownloadArtifactReady(
+  folderRel?: string,
+  videoRel?: string
+): Promise<boolean> {
+  if (!folderRel || !videoRel) return false;
+  const folderAbs = path.isAbsolute(folderRel)
+    ? folderRel
+    : path.join(process.cwd(), folderRel);
+  const videoAbs = path.isAbsolute(videoRel)
+    ? videoRel
+    : path.join(process.cwd(), videoRel);
+  try {
+    await fs.access(path.join(folderAbs, "download.ok"));
+    await assertVideoReady(videoAbs);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export type DownloadProgress = {
   bytesDownloaded: number;
   bytesTotal?: number;
@@ -179,7 +204,7 @@ async function httpDownload(
     );
   }
 
-  await fs.rename(partial, dest);
+  await atomicRename(partial, dest);
   onProgress?.({ bytesDownloaded: st.size, bytesTotal: expectBytes ?? st.size, pct: 100 });
   parlLog("info", "http download verified", {
     bytes: st.size,
