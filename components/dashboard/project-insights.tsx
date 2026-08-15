@@ -11,11 +11,9 @@ import type { AgentSession } from "@/lib/types";
 export function ProjectInsights({
   session,
   documentCount,
-  monitorCount,
 }: {
   session?: AgentSession | null;
   documentCount: number;
-  monitorCount: number;
 }) {
   const t = useT();
   const stages = session?.stages ?? [];
@@ -58,13 +56,7 @@ export function ProjectInsights({
     <div className="ws-insights">
       <div className="ws-insights-head">
         <h2 className="ws-section-title">{t("ws.pulse.title")}</h2>
-        <p className="ws-section-sub">
-          Live stats from this project
-          {monitorCount
-            ? ` · ${monitorCount} linked monitor${monitorCount > 1 ? "s" : ""}`
-            : ""}
-          .
-        </p>
+        <p className="ws-section-sub">Live stats from this project.</p>
       </div>
       <div className="ws-insights-grid">
         {tiles.map((tile) => {

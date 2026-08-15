@@ -22,15 +22,14 @@ type LegacyModule = {
   row?: number;
 };
 
-/** Topics + Actions moved to fixed strips — not modular cards. */
-const REMOVED_MODULE_IDS = new Set(["topics", "actions"]);
+/** Topics + Actions + Monitors moved off modular board. */
+const REMOVED_MODULE_IDS = new Set(["topics", "actions", "monitors"]);
 
 const DEFAULT_MODULES: LayoutModule[] = [
   { id: "question", col: 0, row: 0 },
   { id: "pipeline", col: 1, row: 0 },
   { id: "documents", col: 0, row: 1 },
   { id: "insights", col: 1, row: 1 },
-  { id: "monitors", col: 0, row: 2 },
 ];
 
 const EXTRA_EMPTY_ROWS = 2;

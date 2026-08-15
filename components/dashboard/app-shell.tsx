@@ -6,7 +6,6 @@ import { useEffect, useState, type MouseEvent } from "react";
 import {
   LayoutDashboard,
   FileText,
-  Activity,
   Rss,
   Users,
   FolderKanban,
@@ -33,7 +32,6 @@ import { WorkspaceTutorialButton } from "@/components/onboarding/workspace-tutor
 import { WorkspaceIntroModal } from "@/components/onboarding/workspace-intro-modal";
 import { OperatorIntroModal } from "@/components/onboarding/operator-intro-modal";
 import { SidebarAccountCard } from "@/components/dashboard/sidebar-account";
-import { SupportWidget } from "@/components/support/support-widget";
 import { SessionGuard } from "@/components/auth/session-guard";
 import { OperatorSupportAlerts } from "@/components/operator/operator-support-alerts";
 import { useT } from "@/components/i18n/locale-provider";
@@ -41,27 +39,6 @@ import { WORKSPACE_TOUR_SIDEBAR_EVENT } from "@/lib/onboarding/content";
 import { setLocationHash } from "@/lib/navigation/hash";
 import type { PublicUser } from "@/lib/auth/types";
 import type { MessageKey } from "@/lib/i18n/messages";
-
-/** Account-based support chat for signed-in members (operators use the inbox). */
-function MemberSupportChat() {
-  const [user, setUser] = useState<PublicUser | null>(null);
-  useEffect(() => {
-    let cancelled = false;
-    void fetch("/api/auth/me", { credentials: "include" })
-      .then((r) => r.json())
-      .then((data: { user?: PublicUser | null }) => {
-        if (!cancelled) setUser(data.user || null);
-      })
-      .catch(() => {
-        if (!cancelled) setUser(null);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-  if (!user || user.role === "operator") return null;
-  return <SupportWidget user={user} />;
-}
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -76,7 +53,6 @@ const userNav = [
     items: [
       { labelKey: "ws.nav.overview" as MessageKey, href: "/dashboard", icon: LayoutDashboard },
       { labelKey: "ws.nav.projects" as MessageKey, href: "/dashboard/projects", icon: FolderKanban },
-      { labelKey: "ws.nav.monitors" as MessageKey, href: "/dashboard/monitors", icon: Activity },
       { labelKey: "ws.nav.sources" as MessageKey, href: "/dashboard/sources", icon: Rss },
     ],
   },
@@ -388,13 +364,11 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
                         data-tour={
                           item.href === "/dashboard"
                             ? "nav-overview"
-                            : item.href === "/dashboard/monitors"
-                              ? "nav-monitors"
-                              : item.href === "/dashboard/projects"
-                                ? "nav-projects"
-                                : item.href === "/dashboard/briefs"
-                                  ? "nav-briefs"
-                                  : undefined
+                            : item.href === "/dashboard/projects"
+                              ? "nav-projects"
+                              : item.href === "/dashboard/briefs"
+                                ? "nav-briefs"
+                                : undefined
                         }
                         onClick={(e) => onNavClick(e, item.href)}
                         className={cn(
@@ -487,7 +461,6 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
         ) : (
           <WorkspaceTutorialButton variant="fab" mode="workspace" />
         )}
-        {!isOperatorRoute ? <MemberSupportChat /> : null}
         <SessionGuard />
       </div>
 

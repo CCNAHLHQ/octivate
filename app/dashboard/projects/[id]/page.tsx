@@ -10,7 +10,6 @@ import {
   GripVertical,
   LayoutGrid,
   Pencil,
-  Radio,
   RotateCw,
 } from "lucide-react";
 import { AppShell } from "@/components/dashboard/app-shell";
@@ -42,7 +41,7 @@ import { usePipelineMode } from "@/lib/hooks/use-pipeline-mode";
 import { useWorkspaceRefresh } from "@/lib/hooks/use-workspace-refresh";
 import { useModularLayout, type LayoutCol } from "@/lib/hooks/use-modular-layout";
 import { notifyWorkspaceRefresh } from "@/lib/workspace-events";
-import type { AgentSession, AnalysisDepth, Monitor, Project } from "@/lib/types";
+import type { AgentSession, AnalysisDepth, Project } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 function ModuleShell({
@@ -164,7 +163,6 @@ export default function ProjectDetailPage() {
   const id = String(params.id);
 
   const [project, setProject] = useState<Project | null>(null);
-  const [linkedMonitors, setLinkedMonitors] = useState<Monitor[]>([]);
   const [question, setQuestion] = useState("");
   const [analysisDepth, setAnalysisDepth] = useState<AnalysisDepth>("standard");
   const [session, setSession] = useState<AgentSession | null>(null);
@@ -198,9 +196,8 @@ export default function ProjectDetailPage() {
     async (soft = false) => {
       if (soft) setRefreshing(true);
       try {
-        const [proj, monitors, sessionsRes, briefsRes] = await Promise.all([
+        const [proj, sessionsRes, briefsRes] = await Promise.all([
           apiFetch<{ project: Project }>(`/api/projects/${id}`, { skipCache: true }),
-          apiFetch<{ monitors: Monitor[] }>("/api/monitors", { skipCache: true }),
           apiFetch<{ sessions: AgentSession[] }>(`/api/agents/sessions?projectId=${id}`, {
             skipCache: true,
           }).catch(() => ({ sessions: [] as AgentSession[] })),
@@ -214,7 +211,6 @@ export default function ProjectDetailPage() {
         setEditCountry(proj.project.country);
         setEditSector(proj.project.sector);
         if (proj.project.question) setQuestion(proj.project.question);
-        setLinkedMonitors(monitors.monitors.filter((m) => m.projectId === id));
         setProjectBriefId(briefsRes.latestBriefId);
         setProjectBriefIds((briefsRes.briefs || []).map((b) => b.id));
 
@@ -292,7 +288,7 @@ export default function ProjectDetailPage() {
     };
   }, [loadProject]);
 
-  useWorkspaceRefresh(() => loadProject(true), ["projects", "monitors"]);
+  useWorkspaceRefresh(() => loadProject(true), ["projects"]);
 
   const pollSession = useCallback(async (sessionId: string) => {
     const data = await apiFetch<{ session: AgentSession }>(`/api/agents/sessions/${sessionId}`);
@@ -569,25 +565,6 @@ export default function ProjectDetailPage() {
         )}
       </>
     ),
-    monitors:
-      linkedMonitors.length > 0 ? (
-        <>
-          <h2 className="ws-section-title mb-3">{t("ws.project.linkedMonitors")}</h2>
-          <div className="ws-linked-list">
-            {linkedMonitors.map((m) => (
-              <Link key={m.id} href={`/dashboard/monitors/${m.id}`} className="ws-linked-item">
-                <span className="inline-flex items-center gap-2">
-                  <Radio className="h-3.5 w-3.5 text-teal" aria-hidden />
-                  {m.name}
-                </span>
-                <StatusBadge tone={m.status === "active" ? "teal" : "amber"}>{m.status}</StatusBadge>
-              </Link>
-            ))}
-          </div>
-        </>
-      ) : (
-        <p className="text-sm text-mist">{t("ws.project.noMonitors")}</p>
-      ),
     pipeline: (
       <>
         <AgentPipelineProgress
@@ -634,7 +611,6 @@ export default function ProjectDetailPage() {
       <ProjectInsights
         session={session}
         documentCount={project.documents.length}
-        monitorCount={linkedMonitors.length}
       />
     ),
   };
@@ -642,7 +618,6 @@ export default function ProjectDetailPage() {
   const titles: Record<string, string> = {
     question: t("ws.project.module.question"),
     documents: t("ws.project.module.documents"),
-    monitors: t("ws.project.module.monitors"),
     pipeline: t("ws.project.module.agent"),
     insights: t("ws.project.module.pulse"),
   };
@@ -812,19 +787,6 @@ export default function ProjectDetailPage() {
               const m = cell.module;
               const body = moduleBody[m.id];
               if (body == null) return null;
-              if (m.id === "monitors" && linkedMonitors.length === 0) {
-                return (
-                  <EmptyGridCell
-                    key={`e-${m.col}-${m.row}`}
-                    col={m.col}
-                    row={m.row}
-                    dragId={layout.dragId}
-                    overCell={layout.overCell}
-                    onDragOverCell={layout.onDragOverCell}
-                    onDropCell={layout.onDropCell}
-                  />
-                );
-              }
               return (
                 <ModuleShell
                   key={m.id}

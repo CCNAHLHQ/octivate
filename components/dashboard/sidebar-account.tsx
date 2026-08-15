@@ -1,10 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Camera, ChevronDown, LogOut, Settings } from "lucide-react";
+import {
+  setOptionalAuthUser,
+  useOptionalAuth,
+} from "@/components/auth/use-optional-auth";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
 import { toast } from "@/components/ui/toast";
 import {
@@ -55,12 +59,11 @@ export function SidebarAccountCard({
   onNavigate?: () => void;
   className?: string;
 }) {
-  const router = useRouter();
   const pathname = usePathname();
+  const { user, ready } = useOptionalAuth();
   const inputRef = useRef<HTMLInputElement>(null);
   const statusBtnRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLUListElement>(null);
-  const [user, setUser] = useState<PublicUser | null>(null);
   const [limits, setLimits] = useState<ProfileLimits>(FALLBACK_LIMITS);
   const [busy, setBusy] = useState(false);
   const [statusOpen, setStatusOpen] = useState(false);
@@ -71,24 +74,17 @@ export function SidebarAccountCard({
 
   useEffect(() => setMounted(true), []);
 
-  const load = useCallback(async () => {
-    try {
-      const res = await apiFetch<{
-        user: PublicUser | null;
-        profileLimits?: ProfileLimits;
-      }>("/api/auth/me", {
-        skipCache: true,
-      });
-      setUser(res.user || null);
-      if (res.profileLimits) setLimits(res.profileLimits);
-    } catch {
-      setUser(null);
-    }
-  }, []);
-
   useEffect(() => {
-    void load();
-  }, [load, pathname]);
+    let cancelled = false;
+    void apiFetch<{ profileLimits?: ProfileLimits }>("/api/auth/me", { skipCache: true })
+      .then((res) => {
+        if (!cancelled && res.profileLimits) setLimits(res.profileLimits);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [pathname]);
 
   const placeMenu = useCallback(() => {
     const btn = statusBtnRef.current;
@@ -101,7 +97,10 @@ export function SidebarAccountCard({
     const spaceBelow = window.innerHeight - r.bottom;
     const preferAbove = spaceAbove >= menuH + gap || spaceAbove > spaceBelow;
     let top = preferAbove ? r.top - menuH - gap : r.bottom + gap;
-    top = Math.min(Math.max(8, top), window.innerHeight - Math.min(menuH, window.innerHeight - 16) - 8);
+    top = Math.min(
+      Math.max(8, top),
+      window.innerHeight - Math.min(menuH, window.innerHeight - 16) - 8
+    );
     let left = r.left;
     if (left + width > window.innerWidth - 8) left = window.innerWidth - width - 8;
     if (left < 8) left = 8;
@@ -146,7 +145,7 @@ export function SidebarAccountCard({
     try {
       await apiFetch("/api/auth/logout", { method: "POST", json: {} });
       invalidateApiCache();
-      // Hard navigation + signed_out flag forces middleware to clear sticky cookies.
+      setOptionalAuthUser(null);
       window.location.replace("/signin?signed_out=1");
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Sign out failed");
@@ -163,7 +162,7 @@ export function SidebarAccountCard({
         method: "PATCH",
         json: { presenceStatus: next },
       });
-      setUser(res.user);
+      setOptionalAuthUser(res.user);
       invalidateApiCache("/api/auth/me");
       toast.success(`Status · ${PRESENCE_OPTIONS.find((p) => p.id === next)?.label}`);
     } catch (err) {
@@ -191,7 +190,7 @@ export function SidebarAccountCard({
         method: "POST",
         json: { dataUrl },
       });
-      setUser(res.user);
+      setOptionalAuthUser(res.user);
       invalidateApiCache("/api/auth/me");
       toast.success("Avatar updated");
     } catch (err) {
@@ -200,6 +199,15 @@ export function SidebarAccountCard({
       setBusy(false);
       if (inputRef.current) inputRef.current.value = "";
     }
+  }
+
+  if (!ready) {
+    return (
+      <div className={cn("dash-account", className)} aria-busy="true">
+        <div className="dash-account-label">Account</div>
+        <div className="dash-account-skeleton" />
+      </div>
+    );
   }
 
   if (!user) {

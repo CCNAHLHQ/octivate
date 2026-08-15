@@ -164,45 +164,51 @@ export function DocumentDropzone({
       </button>
 
       {queue.length > 0 && (
-        <div className="ws-dz-queue">
-          {queue.map((item) => (
-            <div key={item.id} className="ws-dz-item">
-              <span
-                className={cn(
-                  item.status === "done" && "ws-dz-status-done",
-                  item.status === "error" && "ws-dz-status-error",
-                  item.status === "uploading" && "ws-dz-status-uploading"
-                )}
-              >
-                {item.status === "uploading" ? (
-                  <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
-                ) : item.status === "done" ? (
-                  <CheckCircle2 className="h-4 w-4" aria-hidden />
-                ) : item.status === "error" ? (
-                  <AlertCircle className="h-4 w-4" aria-hidden />
-                ) : (
-                  <FileIcon className="h-4 w-4 text-faint" aria-hidden />
-                )}
-              </span>
-              <span className="ws-dz-name" title={item.error || item.name}>
-                {item.name}
-              </span>
-              <span className="ws-dz-size">
-                {item.status === "error" ? "Failed" : formatSize(item.size)}
-              </span>
-              {(item.status === "done" || item.status === "error") && (
-                <button
-                  type="button"
-                  className="ws-dz-remove"
-                  aria-label={`Remove ${item.name}`}
-                  onClick={() => setQueue((q) => q.filter((x) => x.id !== item.id))}
+        <details className="ws-dz-scroll" open={queue.length <= 5 ? true : undefined}>
+          <summary className="ws-dz-scroll-summary">
+            Upload queue · {queue.length}
+            {activeCount > 0 ? ` · ${activeCount} active` : ""}
+          </summary>
+          <div className="ws-dz-queue">
+            {queue.map((item) => (
+              <div key={item.id} className="ws-dz-item">
+                <span
+                  className={cn(
+                    item.status === "done" && "ws-dz-status-done",
+                    item.status === "error" && "ws-dz-status-error",
+                    item.status === "uploading" && "ws-dz-status-uploading"
+                  )}
                 >
-                  <X className="h-3.5 w-3.5" aria-hidden />
-                </button>
-              )}
-            </div>
-          ))}
-        </div>
+                  {item.status === "uploading" ? (
+                    <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                  ) : item.status === "done" ? (
+                    <CheckCircle2 className="h-4 w-4" aria-hidden />
+                  ) : item.status === "error" ? (
+                    <AlertCircle className="h-4 w-4" aria-hidden />
+                  ) : (
+                    <FileIcon className="h-4 w-4 text-faint" aria-hidden />
+                  )}
+                </span>
+                <span className="ws-dz-name" title={item.error || item.name}>
+                  {item.name}
+                </span>
+                <span className="ws-dz-size">
+                  {item.status === "error" ? "Failed" : formatSize(item.size)}
+                </span>
+                {(item.status === "done" || item.status === "error") && (
+                  <button
+                    type="button"
+                    className="ws-dz-remove"
+                    aria-label={`Remove ${item.name}`}
+                    onClick={() => setQueue((q) => q.filter((x) => x.id !== item.id))}
+                  >
+                    <X className="h-3.5 w-3.5" aria-hidden />
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+        </details>
       )}
 
       <p className="ws-dz-retention">

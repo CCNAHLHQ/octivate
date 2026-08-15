@@ -172,98 +172,107 @@ export function DocumentLibrary({
     return <p className="text-sm text-mist">{t("ws.docs.noUploads")}</p>;
   }
 
+  const COLLAPSE_AT = 4;
+  const long = documents.length > COLLAPSE_AT;
+
   return (
     <>
-      <ul className="ws-doc-list mb-3">
-        {documents.map((d) => {
-          const busy = busyId === d.id || (summarizing && activeId === d.id);
-          const hasSummary = Boolean(d.summary);
-          return (
-            <li key={d.id} className="ws-doc-item">
-              <div className="ws-doc-row">
-                <span className="ws-doc-icon" aria-hidden>
-                  {busy ? (
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                  ) : (
-                    <FileText className="h-4 w-4" />
-                  )}
-                </span>
-                <div className="ws-doc-meta">
-                  <button
-                    type="button"
-                    className="ws-doc-name"
-                    title={hasSummary ? t("ws.docs.openSummary") : d.name}
-                    disabled={!hasSummary}
-                    onClick={() => openView(d)}
-                  >
-                    {d.name}
-                  </button>
-                  <span className="ws-doc-sub">
-                    {formatSize(d.size)}
-                    {d.expiresAt
-                      ? ` · expires ${new Date(d.expiresAt).toLocaleDateString()}`
-                      : ""}
-                    {d.summaryStatus === "ready" ? " · summarized" : ""}
-                    {d.summaryStatus === "failed" ? " · summary failed" : ""}
-                    {d.summaryStatus === "running" || busy ? " · summarizing…" : ""}
+      <details className="ws-doc-scroll" open={!long ? true : undefined}>
+        <summary className="ws-doc-scroll-summary">
+          {documents.length} document{documents.length === 1 ? "" : "s"}
+          {long ? " · show list" : ""}
+        </summary>
+        <ul className="ws-doc-list mb-3">
+          {documents.map((d) => {
+            const busy = busyId === d.id || (summarizing && activeId === d.id);
+            const hasSummary = Boolean(d.summary);
+            return (
+              <li key={d.id} className="ws-doc-item">
+                <div className="ws-doc-row">
+                  <span className="ws-doc-icon" aria-hidden>
+                    {busy ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <FileText className="h-4 w-4" />
+                    )}
                   </span>
-                </div>
-                <StatusBadge>{d.type}</StatusBadge>
-                <div className="ws-doc-actions">
-                  {hasSummary ? (
+                  <div className="ws-doc-meta">
                     <button
                       type="button"
-                      className="ws-doc-btn"
-                      disabled={disabled || busy}
-                      title={t("ws.docs.readSummary")}
-                      aria-label={`${t("ws.docs.readSummary")} ${d.name}`}
+                      className="ws-doc-name"
+                      title={hasSummary ? t("ws.docs.openSummary") : d.name}
+                      disabled={!hasSummary}
                       onClick={() => openView(d)}
                     >
-                      <Eye className="h-3.5 w-3.5" aria-hidden />
+                      {d.name}
                     </button>
-                  ) : null}
-                  {caps.enabled && (!hasSummary || caps.allowRework) ? (
+                    <span className="ws-doc-sub">
+                      {formatSize(d.size)}
+                      {d.expiresAt
+                        ? ` · expires ${new Date(d.expiresAt).toLocaleDateString()}`
+                        : ""}
+                      {d.summaryStatus === "ready" ? " · summarized" : ""}
+                      {d.summaryStatus === "failed" ? " · summary failed" : ""}
+                      {d.summaryStatus === "running" || busy ? " · summarizing…" : ""}
+                    </span>
+                  </div>
+                  <StatusBadge>{d.type}</StatusBadge>
+                  <div className="ws-doc-actions">
+                    {hasSummary ? (
+                      <button
+                        type="button"
+                        className="ws-doc-btn"
+                        disabled={disabled || busy}
+                        title={t("ws.docs.readSummary")}
+                        aria-label={`${t("ws.docs.readSummary")} ${d.name}`}
+                        onClick={() => openView(d)}
+                      >
+                        <Eye className="h-3.5 w-3.5" aria-hidden />
+                      </button>
+                    ) : null}
+                    {caps.enabled && (!hasSummary || caps.allowRework) ? (
+                      <button
+                        type="button"
+                        className="ws-doc-btn"
+                        disabled={disabled || busy}
+                        title={hasSummary ? t("ws.docs.rework") : t("ws.docs.summarize")}
+                        aria-label={
+                          hasSummary
+                            ? `${t("ws.docs.rework")} ${d.name}`
+                            : `${t("ws.docs.summarize")} ${d.name}`
+                        }
+                        onClick={() => openCompose(d)}
+                      >
+                        <Sparkles className="h-3.5 w-3.5" aria-hidden />
+                      </button>
+                    ) : null}
                     <button
                       type="button"
                       className="ws-doc-btn"
                       disabled={disabled || busy}
-                      title={hasSummary ? t("ws.docs.rework") : t("ws.docs.summarize")}
-                      aria-label={
-                        hasSummary
-                          ? `${t("ws.docs.rework")} ${d.name}`
-                          : `${t("ws.docs.summarize")} ${d.name}`
-                      }
-                      onClick={() => openCompose(d)}
+                      title="Download"
+                      aria-label={`Download ${d.name}`}
+                      onClick={() => downloadDoc(d)}
                     >
-                      <Sparkles className="h-3.5 w-3.5" aria-hidden />
+                      <Download className="h-3.5 w-3.5" aria-hidden />
                     </button>
-                  ) : null}
-                  <button
-                    type="button"
-                    className="ws-doc-btn"
-                    disabled={disabled || busy}
-                    title="Download"
-                    aria-label={`Download ${d.name}`}
-                    onClick={() => downloadDoc(d)}
-                  >
-                    <Download className="h-3.5 w-3.5" aria-hidden />
-                  </button>
-                  <button
-                    type="button"
-                    className={cn("ws-doc-btn", "is-danger")}
-                    disabled={disabled || busy}
-                    title="Delete"
-                    aria-label={`Delete ${d.name}`}
-                    onClick={() => deleteDoc(d)}
-                  >
-                    <Trash2 className="h-3.5 w-3.5" aria-hidden />
-                  </button>
+                    <button
+                      type="button"
+                      className={cn("ws-doc-btn", "is-danger")}
+                      disabled={disabled || busy}
+                      title="Delete"
+                      aria-label={`Delete ${d.name}`}
+                      onClick={() => deleteDoc(d)}
+                    >
+                      <Trash2 className="h-3.5 w-3.5" aria-hidden />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+              </li>
+            );
+          })}
+        </ul>
+      </details>
 
       <DocumentSummaryModal
         open={Boolean(activeDoc)}

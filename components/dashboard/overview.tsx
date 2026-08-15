@@ -28,7 +28,7 @@ import {
   type CountryProjectBucket,
 } from "@/lib/geo/aggregate-projects";
 import { useWorkspaceRefresh } from "@/lib/hooks/use-workspace-refresh";
-import type { Brief, CountryPack, Monitor, Project, Trend, UsageSnapshot } from "@/lib/types";
+import type { Brief, CountryPack, Project, Trend, UsageSnapshot } from "@/lib/types";
 import { setLocationHash } from "@/lib/navigation/hash";
 import { cn } from "@/lib/utils";
 
@@ -63,7 +63,6 @@ export function OverviewDashboard() {
   const [briefs, setBriefs] = useState<Brief[]>([]);
   const [trends, setTrends] = useState<Trend[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
-  const [monitors, setMonitors] = useState<Monitor[]>([]);
   const [packs, setPacks] = useState<CountryPack[]>([]);
   const [usage, setUsage] = useState<UsageSnapshot | null>(null);
   const [tab, setTab] = useState<OverviewTab>("insights");
@@ -73,18 +72,16 @@ export function OverviewDashboard() {
     if (soft) setRefreshing(true);
     else setInitialLoading(true);
     try {
-      const [b, t, p, m, pk, u] = await Promise.all([
+      const [b, t, p, pk, u] = await Promise.all([
         apiFetch<{ briefs: Brief[] }>("/api/briefs", { skipCache: true }),
         apiFetch<{ trends: Trend[] }>("/api/trends", { skipCache: true }),
         apiFetch<{ projects: Project[] }>("/api/projects", { skipCache: true }),
-        apiFetch<{ monitors: Monitor[] }>("/api/monitors", { skipCache: true }),
         apiFetch<{ packs: CountryPack[] }>("/api/packs", { skipCache: true }),
         apiFetch<{ usage: UsageSnapshot }>("/api/usage", { skipCache: true }),
       ]);
       setBriefs(b.briefs);
       setTrends(t.trends);
       setProjects(p.projects);
-      setMonitors(m.monitors);
       setPacks(pk.packs);
       setUsage(u.usage);
     } finally {
@@ -104,7 +101,7 @@ export function OverviewDashboard() {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  useWorkspaceRefresh(() => load(true), ["overview", "projects", "monitors", "briefs"]);
+  useWorkspaceRefresh(() => load(true), ["overview", "projects", "briefs"]);
 
   function selectTab(next: OverviewTab) {
     setTab(next);
@@ -131,7 +128,7 @@ export function OverviewDashboard() {
 
   const usagePct = usage ? Math.min(100, (usage.tokensUsed / usage.tokensLimit) * 100) : 0;
 
-  const pipelineCount = projects.length + monitors.length + briefs.length;
+  const pipelineCount = projects.length + briefs.length;
 
   const countryBuckets = useMemo(() => aggregateProjectsByCountry(projects), [projects]);
 
@@ -466,24 +463,6 @@ export function OverviewDashboard() {
                                   {p.country}
                                 </span>
                               </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </Card>
-                      <Card className="overview-side-card p-4">
-                        <h2 className="mb-3 font-mono text-[10px] uppercase tracking-widest text-faint">
-                          {t("ws.overview.monitoring")}
-                        </h2>
-                        <ul className="space-y-2 text-sm">
-                          {monitors.slice(0, 5).map((m) => (
-                            <li key={m.id} className="flex items-center justify-between gap-2">
-                              <Link
-                                href={`/dashboard/monitors/${m.id}`}
-                                className="text-foam line-clamp-1 hover:text-teal"
-                              >
-                                {m.name}
-                              </Link>
-                              <StatusBadge tone={severityTone(m.status)}>{m.status}</StatusBadge>
                             </li>
                           ))}
                         </ul>

@@ -284,12 +284,27 @@
   transition: color 0.15s ease, background-color 0.15s ease;
   border-radius: 9px;
   white-space: nowrap;
+  align-items: center;
+  gap: 0.35rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+button.site-nav-signout {
+  display: inline-flex;
 }
 
 .site-nav-signin:hover,
-.site-nav-operator:hover {
+.site-nav-operator:hover,
+.site-nav-signout:hover {
   color: var(--octivate-purple, var(--violet));
   background: var(--ghost-hover-bg);
+}
+
+.site-nav-signout:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .site-nav-cta-slot {
@@ -364,7 +379,8 @@
   }
   .site-nav-open,
   .site-nav-signin,
-  .site-nav-operator {
+  .site-nav-operator,
+  .site-nav-signout {
     display: inline-flex;
     align-items: center;
   }

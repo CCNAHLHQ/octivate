@@ -3,15 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { LayoutDashboard, Menu, Shield, Sparkles, X } from "lucide-react";
+import { LayoutDashboard, LogOut, Menu, Shield, Sparkles, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useOptionalAuth } from "@/components/auth/use-optional-auth";
+import {
+  setOptionalAuthUser,
+  useOptionalAuth,
+} from "@/components/auth/use-optional-auth";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { SiteAlerts } from "@/components/chrome/site-alerts";
 import { SiteTranslate } from "@/components/i18n/site-translate";
 import { useT } from "@/components/i18n/locale-provider";
 import { OctivateLogo } from "@/components/brand";
 import { useMounted } from "@/lib/use-mounted";
+import { apiFetch, invalidateApiCache } from "@/lib/api-client";
+import { toast } from "@/components/ui/toast";
 import type { MessageKey } from "@/lib/i18n/messages";
 
 type NavLink = {
@@ -81,9 +86,24 @@ export function SiteNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hash, setHash] = useState("");
+  const [signingOut, setSigningOut] = useState(false);
   const inApp = pathname.startsWith("/dashboard") || pathname.startsWith("/operator");
   const signedIn = ready && Boolean(user);
   const isOperator = user?.role === "operator";
+
+  async function signOut() {
+    if (signingOut) return;
+    setSigningOut(true);
+    try {
+      await apiFetch("/api/auth/logout", { method: "POST", json: {} });
+      invalidateApiCache();
+      setOptionalAuthUser(null);
+      window.location.replace("/signin?signed_out=1");
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Sign out failed");
+      setSigningOut(false);
+    }
+  }
 
   const marketingLinks = useMemo(
     () =>
@@ -188,6 +208,17 @@ export function SiteNavbar() {
                 {t("nav.signIn")}
               </Link>
             ) : null}
+            {ready && signedIn ? (
+              <button
+                type="button"
+                className="site-nav-signin site-nav-signout"
+                disabled={signingOut}
+                onClick={() => void signOut()}
+              >
+                <LogOut className="site-nav-ico" aria-hidden strokeWidth={2.25} />
+                <span>Sign out</span>
+              </button>
+            ) : null}
             {ready || inApp ? (
               <Link className="btn btn-primary btn-sm site-nav-pilot" href={primaryHref}>
                 <PrimaryIcon className="site-nav-ico" aria-hidden strokeWidth={2.25} />
@@ -264,6 +295,20 @@ export function SiteNavbar() {
               >
                 <span className="site-nav-label">{t("nav.signIn")}</span>
               </Link>
+            ) : null}
+            {ready && signedIn ? (
+              <button
+                type="button"
+                className="site-nav-link is-mobile"
+                disabled={signingOut}
+                onClick={() => {
+                  setMobileOpen(false);
+                  void signOut();
+                }}
+              >
+                <LogOut className="site-nav-ico" aria-hidden strokeWidth={2.25} />
+                <span className="site-nav-label">Sign out</span>
+              </button>
             ) : null}
             {ready || inApp ? (
               <Link

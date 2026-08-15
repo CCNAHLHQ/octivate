@@ -45,10 +45,30 @@ export function OperatorSourcesPanel({ embedded = false }: { embedded?: boolean 
   const load = useCallback(async (soft = false) => {
     if (soft) setRefreshing(true);
     try {
-      const data = await apiFetch<{ sources: Source[]; count?: number }>("/api/sources", {
-        skipCache: soft,
+      const data = await apiFetch<{
+        sources: Source[];
+        count?: number;
+        droppedInvalid?: number;
+      }>("/api/sources", {
+        skipCache: true,
       });
-      setSources(data.sources || []);
+      let rows = data.sources || [];
+      if (!rows.length) {
+        try {
+          await apiFetch("/api/sources/rehydrate", { method: "POST", skipCache: true });
+          const again = await apiFetch<{ sources: Source[] }>("/api/sources", {
+            skipCache: true,
+          });
+          rows = again.sources || [];
+          if (rows.length) toast.success("Restored seed sources (registry was empty)");
+        } catch {
+          /* keep empty — Restore button still available */
+        }
+      }
+      setSources(rows);
+      if (data.droppedInvalid) {
+        toast.info(`Dropped ${data.droppedInvalid} invalid source row(s)`);
+      }
     } catch {
       toast("Could not load source registry", "error");
     } finally {
