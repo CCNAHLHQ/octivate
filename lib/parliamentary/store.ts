@@ -263,6 +263,48 @@ export async function patchJob(id: string, patch: Partial<MediaJob>) {
   });
 }
 
+/**
+ * Promote held → queued until active in-flight work reaches batchSize.
+ * Without this, the first wave finishes and remaining held rows stay forever.
+ */
+export async function admitHeldJobs(batchSize: number) {
+  return withJobsLock(async () => {
+    const jobs = await readJson<MediaJob[]>("jobs.json", []);
+    const active = jobs.filter((j) =>
+      ["queued", "downloading", "downloaded", "transcribing"].includes(j.stage)
+    ).length;
+    const slots = Math.max(0, Math.floor(batchSize) - active);
+    if (slots <= 0) return { admitted: 0, active, held: jobs.filter((j) => j.stage === "held").length };
+
+    const held = jobs
+      .map((j, idx) => ({ j, idx }))
+      .filter((x) => x.j.stage === "held")
+      .sort((a, b) => Date.parse(a.j.updatedAt) - Date.parse(b.j.updatedAt));
+
+    const now = new Date().toISOString();
+    let admitted = 0;
+    for (const { j, idx } of held.slice(0, slots)) {
+      jobs[idx] = {
+        ...j,
+        stage: "queued",
+        progressPct: 0,
+        progressPhase: "idle",
+        progressLabel: "Admitted from held",
+        error: undefined,
+        errorDetail: undefined,
+        updatedAt: now,
+      };
+      admitted += 1;
+    }
+    if (admitted) await writeJson("jobs.json", jobs);
+    return {
+      admitted,
+      active: active + admitted,
+      held: jobs.filter((j) => j.stage === "held").length,
+    };
+  });
+}
+
 /** Promote first `batchSize` open held/new candidates to queued; remainder stay held. */
 export async function applyBatchQueue(batchSize: number) {
   return withJobsLock(async () => {

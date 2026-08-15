@@ -17,8 +17,13 @@ import {
   writeHeartbeat,
 } from "@/lib/parliamentary/heartbeat";
 import { parlLog } from "@/lib/parliamentary/log";
+import {
+  recoverInterruptedJobs,
+  requeueJobAfterInterrupt,
+} from "@/lib/parliamentary/reconcile";
 import { readSettings } from "@/lib/parliamentary/settings";
 import {
+  admitHeldJobs,
   applyBatchQueue,
   patchJob,
   readCandidates,
@@ -30,11 +35,14 @@ import {
 import type { MediaJob } from "@/lib/parliamentary/types";
 import { appendAudit } from "@/lib/protocol/audit";
 
+export { recoverInterruptedJobs } from "@/lib/parliamentary/reconcile";
+
 const ACTIVE_STAGES = new Set([
   "queued",
   "downloading",
   "downloaded",
   "transcribing",
+  "held",
 ]);
 
 /** In-flight workers keyed by job id — prevents double-claim. */
@@ -79,49 +87,68 @@ function hasUnfinishedWork(jobs: MediaJob[]) {
 
 let lastPulseKey = "";
 let lastPulseLogAt = 0;
+let pulseChain: Promise<void> = Promise.resolve();
 
 async function pulse(phase: string, message: string, current?: string) {
-  const [pipeline, jobs, candidates] = await Promise.all([
-    readPipeline(),
-    readJobs(),
-    readCandidates(),
-  ]);
-  const snap = buildQueueSnapshot({
-    pipeline,
-    jobs,
-    found: candidates.length,
-    phase,
-    current,
-    message,
-    dryRun: parlDryRun(),
+  // Serialize + never throw — progress write races must not kill the worker.
+  const run = pulseChain.then(async () => {
+    try {
+      const [pipeline, jobs, candidates] = await Promise.all([
+        readPipeline(),
+        readJobs(),
+        readCandidates(),
+      ]);
+      const snap = buildQueueSnapshot({
+        pipeline,
+        jobs,
+        found: candidates.length,
+        phase,
+        current,
+        message,
+        dryRun: parlDryRun(),
+      });
+      await writeHeartbeat(snap).catch(() => undefined);
+      await writeProgress({
+        stage: phase,
+        current,
+        message,
+        total:
+          snap.counts.queued +
+          snap.counts.downloading +
+          snap.counts.downloaded +
+          snap.counts.transcribing +
+          snap.counts.done,
+        done: snap.counts.done,
+        failed: snap.counts.failed,
+      }).catch((err) => {
+        parlLog("warn", "progress write skipped", {
+          error: err instanceof Error ? err.message : String(err),
+        });
+      });
+      const key = `${phase}|${pipeline.control}|${message}|${current || ""}|${JSON.stringify(snap.counts)}`;
+      const now = Date.now();
+      if (key !== lastPulseKey || now - lastPulseLogAt > 30_000) {
+        lastPulseKey = key;
+        lastPulseLogAt = now;
+        parlLog("debug", "heartbeat", {
+          phase,
+          control: snap.control,
+          counts: snap.counts,
+          current: current ?? null,
+          queueHead: snap.queueHead.map((q) => `${q.stage}:${q.title.slice(0, 40)}`),
+        });
+      }
+    } catch (err) {
+      parlLog("warn", "pulse failed", {
+        error: err instanceof Error ? err.message : String(err),
+      });
+    }
   });
-  await writeHeartbeat(snap);
-  await writeProgress({
-    stage: phase,
-    current,
-    message,
-    total:
-      snap.counts.queued +
-      snap.counts.downloading +
-      snap.counts.downloaded +
-      snap.counts.transcribing +
-      snap.counts.done,
-    done: snap.counts.done,
-    failed: snap.counts.failed,
-  });
-  const key = `${phase}|${pipeline.control}|${message}|${current || ""}|${JSON.stringify(snap.counts)}`;
-  const now = Date.now();
-  if (key !== lastPulseKey || now - lastPulseLogAt > 30_000) {
-    lastPulseKey = key;
-    lastPulseLogAt = now;
-    parlLog("debug", "heartbeat", {
-      phase,
-      control: snap.control,
-      counts: snap.counts,
-      current: current ?? null,
-      queueHead: snap.queueHead.map((q) => `${q.stage}:${q.title.slice(0, 40)}`),
-    });
-  }
+  pulseChain = run.then(
+    () => undefined,
+    () => undefined
+  );
+  await run;
 }
 
 async function waitResume(): Promise<"continue" | "stop" | "abort"> {
@@ -141,24 +168,17 @@ async function stageAfterInterrupt(job: MediaJob): Promise<"downloaded" | "queue
 }
 
 async function requeueInterrupted(job: MediaJob, reason: string) {
-  const stage = await stageAfterInterrupt(job);
-  parlLog("warn", "job requeued after interrupt", { id: job.id, stage, reason });
   await flushProgress(job.id);
-  await patchJob(job.id, {
-    stage,
-    progressPct: stage === "downloaded" ? 50 : 0,
-    progressPhase: "idle",
-    progressLabel:
-      stage === "downloaded" ? "Ready for ASR (resumed)" : "Queued (resumed)",
-    error: undefined,
-    errorDetail: undefined,
-  });
+  await requeueJobAfterInterrupt(job, reason);
 }
 
 async function cancelOpen() {
   parlLog("info", "cancel open jobs");
   for (const j of await readJobs()) {
-    if (ACTIVE_STAGES.has(j.stage) || inflight.has(j.id)) {
+    if (
+      (ACTIVE_STAGES.has(j.stage) && j.stage !== "held") ||
+      inflight.has(j.id)
+    ) {
       await flushProgress(j.id);
       await cleanupPartial(j.folder);
       await patchJob(j.id, {
@@ -173,48 +193,6 @@ async function cancelOpen() {
   }
 }
 
-/** Recover mid-flight rows — never promote to downloaded without artifact gate. */
-export async function recoverInterruptedJobs() {
-  let recovered = 0;
-  for (const j of await readJobs()) {
-    if (j.stage === "downloading") {
-      await patchJob(j.id, {
-        stage: "queued",
-        progressPct: 0,
-        progressPhase: "idle",
-        progressLabel: "Queued after worker resume",
-        bytesPerSec: 0,
-      });
-      recovered += 1;
-    } else if (j.stage === "transcribing") {
-      const stage = await stageAfterInterrupt(j);
-      await patchJob(j.id, {
-        stage,
-        progressPct: stage === "downloaded" ? 50 : 0,
-        progressPhase: "idle",
-        progressLabel:
-          stage === "downloaded"
-            ? "Ready for ASR (resumed)"
-            : "Queued after worker resume",
-      });
-      recovered += 1;
-    } else if (j.stage === "downloaded") {
-      // Demote optimistic downloaded rows that fail the gate.
-      if (!(await isDownloadArtifactReady(j.folder, j.videoPath))) {
-        await patchJob(j.id, {
-          stage: "queued",
-          progressPct: 0,
-          progressPhase: "idle",
-          progressLabel: "Re-queued — download incomplete",
-        });
-        recovered += 1;
-      }
-    }
-  }
-  if (recovered) parlLog("info", "recovered interrupted jobs", { recovered });
-  return recovered;
-}
-
 async function failOrRetry(job: MediaJob, err: unknown) {
   await flushProgress(job.id);
   const msg = err instanceof Error ? err.message : String(err);
@@ -223,7 +201,7 @@ async function failOrRetry(job: MediaJob, err: unknown) {
   const retries = job.retryCount || 0;
   const retryable =
     isRetryableAsrError(msg) ||
-    /download_incomplete|http_|ffmpeg_|vimeo_config_not_found|vimeo_stream_not_found|ECONN/i.test(
+    /download_incomplete|http_|ffmpeg_|vimeo_config_not_found|vimeo_stream_not_found|ECONN|ENOENT|EPERM|rename|progress\.json/i.test(
       msg
     );
 
@@ -307,6 +285,7 @@ async function downloadOne(job: MediaJob) {
       let lastAt = Date.now();
       let peakBps = 0;
       const keepAlive = setInterval(() => {
+        // Await via chain inside pulse — do not stack overlapping writes.
         void pulse("download", `Downloading · ${job.title}`, job.mediaUrl);
       }, 15_000);
       try {
@@ -469,6 +448,7 @@ async function transcribeOne(job: MediaJob) {
  */
 async function pumpWork() {
   const settings = await readSettings();
+  await admitHeldJobs(settings.batchSize);
   const jobs = await readJobs();
   const dlSlots = dlConcurrency();
   const asrSlots = asrConcurrency();
@@ -656,7 +636,11 @@ export async function runPipelineLoop(opts?: { pollMs?: number }) {
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
       parlLog("error", "pipeline loop iteration failed", { error: msg });
-      await pulse("error", `Loop error · ${msg.slice(0, 160)}`);
+      try {
+        await pulse("error", `Loop error · ${msg.slice(0, 160)}`);
+      } catch {
+        /* pulse already swallows — belt and braces */
+      }
       await new Promise((r) => setTimeout(r, pollMs));
     }
   }

@@ -165,14 +165,30 @@ export function OperatorAutomationPanel() {
   async function onControl(action: "start" | "pause" | "cancel") {
     setBusy(action);
     try {
-      await apiFetch("/api/operator/parliamentary-media/control", {
+      const res = await apiFetch<{
+        resume?: boolean;
+        workerRestarted?: boolean;
+        reconcile?: { admitted?: number; recovered?: number };
+      }>("/api/operator/parliamentary-media/control", {
         method: "POST",
         json: { action },
       });
       invalidateApiCache("/api/operator/parliamentary-media");
       await load(true, action === "start" || action === "cancel" ? 1 : jobsPage);
       if (action === "start" || action === "cancel") setJobsPage(1);
-      if (action === "start") toast.success("Pipeline running — remaining work will continue");
+      if (action === "start") {
+        const bits = [
+          res.resume ? "resuming remaining work" : "starting",
+          res.workerRestarted ? "worker restarted" : null,
+          res.reconcile?.admitted
+            ? `admitted ${res.reconcile.admitted}`
+            : null,
+          res.reconcile?.recovered
+            ? `recovered ${res.reconcile.recovered}`
+            : null,
+        ].filter(Boolean);
+        toast.success(bits.join(" · ") || "Pipeline running");
+      }
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Control failed");
     } finally {

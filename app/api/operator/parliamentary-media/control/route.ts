@@ -2,10 +2,11 @@ import { NextRequest } from "next/server";
 import { guardApi, jsonError, jsonOk } from "@/lib/security/guard";
 import { requireOperatorUser, resolveRequestUser } from "@/lib/auth/scope";
 import { appendAudit } from "@/lib/protocol/audit";
-import { clearAutomationWorkspace } from "@/lib/parliamentary/clear";
+import { clearAutomationWorkspace, ensureParlWorker } from "@/lib/parliamentary/clear";
 import { parlEnabled } from "@/lib/parliamentary/config";
 import { readPipeline, setPipelineControl } from "@/lib/parliamentary/store";
 import { parlLog } from "@/lib/parliamentary/log";
+import { reconcileAutomationQueue } from "@/lib/parliamentary/reconcile";
 import { getWorkerLiveness } from "@/lib/parliamentary/status";
 
 export const runtime = "nodejs";
@@ -62,36 +63,57 @@ export async function POST(req: NextRequest) {
   }
 
   if (action === "start") {
-    const worker = await getWorkerLiveness();
+    // Hygiene before resume: prune stale temps, requeue missing folders / FS failures,
+    // admit held slots, and restart the worker if it crashed mid-download.
+    const reconcile = await reconcileAutomationQueue();
+    let worker = await getWorkerLiveness();
+    let workerBoot: Awaited<ReturnType<typeof ensureParlWorker>> | null = null;
     if (!worker.live) {
-      // Do not leave control=running with a dead worker — UI would lie again.
+      workerBoot = await ensureParlWorker({ waitMs: 10_000 });
+      worker = await getWorkerLiveness();
+    }
+    if (!worker.live) {
       await setPipelineControl("idle", {
         discoverDone: cur.discoverDone,
         lastError: "worker_offline",
       });
       return jsonError(
-        "Media worker is offline. Restart the parl-media worker, then press Start.",
+        "Media worker is offline and could not be restarted. Check parl-media logs, then press Start again.",
         503
       );
     }
+
     const { readJobs } = await import("@/lib/parliamentary/store");
     const jobs = await readJobs();
     const unfinished = jobs.some((j) =>
-      ["queued", "downloading", "downloaded", "transcribing"].includes(j.stage)
+      ["held", "queued", "downloading", "downloaded", "transcribing"].includes(j.stage)
     );
     const next = await setPipelineControl("running", {
       // Resume existing queue without forcing a fresh catalog wipe.
       discoverDone: unfinished ? true : false,
       lastError: undefined,
     });
-    parlLog("info", "operator start", { by: who, resume: unfinished, workerPid: worker.pid });
+    parlLog("info", "operator start", {
+      by: who,
+      resume: unfinished,
+      workerPid: worker.pid,
+      workerRestarted: Boolean(workerBoot?.started),
+      reconcile,
+    });
     await appendAudit({
       action: "automation_pipeline_start",
       detail: unfinished
         ? `Automation pipeline resumed by ${who}`
         : `Automation pipeline started by ${who}`,
     });
-    return jsonOk({ pipeline: next, action, resume: unfinished });
+    return jsonOk({
+      pipeline: next,
+      action,
+      resume: unfinished,
+      reconcile,
+      workerRestarted: Boolean(workerBoot?.started),
+      workerPid: worker.pid,
+    });
   }
   if (action === "pause") {
     if (cur.control !== "running" && cur.control !== "paused") {

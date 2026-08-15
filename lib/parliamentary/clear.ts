@@ -61,7 +61,7 @@ function killPidTree(pid: number) {
   }
 }
 
-async function stopParlWorker(): Promise<number | null> {
+export async function stopParlWorker(): Promise<number | null> {
   let pid: number | null = null;
   try {
     pid = Number((await fs.readFile(PID_FILE, "utf8")).trim());
@@ -100,7 +100,7 @@ function envFileValue(key: string): string | undefined {
   return undefined;
 }
 
-function startParlWorker(): number | null {
+export function startParlWorker(): number | null {
   const enabled =
     String(envFileValue("PARL_MEDIA_ENABLED") ?? process.env.PARL_MEDIA_ENABLED ?? "true").toLowerCase() !==
     "false";
@@ -205,4 +205,31 @@ export async function clearAutomationWorkspace(): Promise<ClearResult> {
     workerPid,
     dryRun: parlDryRun(),
   };
+}
+
+/**
+ * If the parl-media worker is offline, spawn a fresh one and wait briefly for heartbeat.
+ * Used by Start so operators can resume without a full deploy restart.
+ */
+export async function ensureParlWorker(opts?: {
+  waitMs?: number;
+}): Promise<{ live: boolean; started: boolean; pid: number | null }> {
+  const { getWorkerLiveness } = await import("@/lib/parliamentary/status");
+  const before = await getWorkerLiveness();
+  if (before.live) {
+    return { live: true, started: false, pid: before.pid };
+  }
+
+  // Stale pid file / zombie — clear then spawn.
+  await stopParlWorker().catch(() => null);
+  const pid = startParlWorker();
+  const waitMs = opts?.waitMs ?? 8_000;
+  const deadline = Date.now() + waitMs;
+  while (Date.now() < deadline) {
+    await new Promise((r) => setTimeout(r, 500));
+    const live = await getWorkerLiveness();
+    if (live.live) return { live: true, started: true, pid: live.pid ?? pid };
+  }
+  const after = await getWorkerLiveness();
+  return { live: after.live, started: true, pid: after.pid ?? pid };
 }

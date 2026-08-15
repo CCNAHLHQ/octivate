@@ -152,9 +152,27 @@ async function testPatchJobSerial() {
   console.log("patch-serial: ok");
 }
 
+async function testAtomicWriteConcurrent() {
+  await withTempDir(async (dir) => {
+    const { atomicWriteJson } = await import("../lib/parliamentary/atomic-json.ts");
+    const file = path.join(dir, "progress.json");
+    await Promise.all(
+      Array.from({ length: 24 }, (_, i) =>
+        atomicWriteJson(file, { n: i, at: Date.now() })
+      )
+    );
+    const raw = JSON.parse(await fs.readFile(file, "utf8"));
+    assert.equal(typeof raw.n, "number");
+    const leftovers = (await fs.readdir(dir)).filter((n) => n.endsWith(".tmp"));
+    assert.equal(leftovers.length, 0, `tmp leftovers: ${leftovers.join(",")}`);
+  });
+  console.log("atomic-write-concurrent: ok");
+}
+
 async function main() {
   await testGateRejects();
   await testAtomicRename();
+  await testAtomicWriteConcurrent();
   await testMutexSerializes();
   await testRecoveryDemotesIncompleteDownloaded();
   await testPatchJobSerial();

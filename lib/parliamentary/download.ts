@@ -14,11 +14,38 @@ import { downloadVimeoToFile } from "@/lib/parliamentary/vimeo-download";
 /** Reject tiny/corrupt captures before ASR. */
 const MIN_VIDEO_BYTES = 256 * 1024;
 
-async function hashFile(filePath: string) {
+/** Full SHA for small files; sampled ends+size for large media so post-download gate cannot stall for minutes. */
+async function hashFile(filePath: string, sizeHint?: number) {
+  const st = sizeHint != null ? { size: sizeHint } : await fs.stat(filePath);
+  const size = st.size;
   const hash = createHash("sha256");
+  hash.update(`size:${size}|`);
+
+  // Below ~64MB keep a full digest; larger files sample head/mid/tail.
+  if (size <= 64 * 1024 * 1024) {
+    const fh = await fs.open(filePath, "r");
+    try {
+      for await (const chunk of fh.createReadStream()) hash.update(chunk as Buffer);
+    } finally {
+      await fh.close();
+    }
+    return hash.digest("hex");
+  }
+
+  const sample = 1024 * 1024;
   const fh = await fs.open(filePath, "r");
   try {
-    for await (const chunk of fh.createReadStream()) hash.update(chunk as Buffer);
+    const head = Buffer.alloc(Math.min(sample, size));
+    await fh.read(head, 0, head.length, 0);
+    hash.update(head);
+    const midPos = Math.max(0, Math.floor(size / 2) - Math.floor(sample / 2));
+    const mid = Buffer.alloc(Math.min(sample, size));
+    await fh.read(mid, 0, mid.length, midPos);
+    hash.update(mid);
+    const tailLen = Math.min(sample, size);
+    const tail = Buffer.alloc(tailLen);
+    await fh.read(tail, 0, tailLen, Math.max(0, size - tailLen));
+    hash.update(tail);
   } finally {
     await fh.close();
   }
@@ -93,7 +120,7 @@ export async function assertVideoReady(
     }
   }
 
-  const contentHash = await hashFile(videoAbs);
+  const contentHash = await hashFile(videoAbs, st.size);
   const durationSec = (await probeDurationSec(videoAbs)) ?? undefined;
   if (durationSec != null && durationSec < 5) {
     throw new Error(`download_incomplete:duration_too_short:${durationSec}`);
