@@ -228,6 +228,58 @@ export async function summarizeProjectDocument(opts: {
 
   try {
     const { text, mode } = await extractDocumentText(opts.projectId, doc, EXTRACT_CHAR_LIMIT);
+
+    // Do not burn LLM tokens on empty / metadata-only extracts.
+    if (mode === "binary_meta") {
+      const summary: DocumentSummaryResult = {
+        status: "insufficient_evidence",
+        method: "stuff",
+        chunk_count: 0,
+        summary: sanitizePlainText(
+          `No usable document text for “${doc.name}”. ${text} Re-upload the file (multipart) so content is stored on disk, then run Summarize again.`,
+          2_000
+        ),
+        key_points: [
+          "Extract returned metadata only — no corpus text was available.",
+          "Summarize was short-circuited; no model call was made.",
+        ],
+        decision_relevance:
+          "None — decisions cannot be grounded until the document body is stored and re-extracted.",
+        gaps: [
+          `Full text of ${doc.name}`,
+          "Confirm upload wrote bytes under data/local/uploads/<project>/<docId>",
+        ],
+        risk_flags: [
+          "Fabrication risk if operators invent findings from filename alone.",
+        ],
+        review_flags: ["extract_binary_meta", "llm_skipped"],
+        recommendation_hints: [
+          "Re-upload the source file via the project Documents dropzone.",
+          "If this is a seed demo doc, retry Summarize after the next deploy (fixture blobs hydrate on read).",
+        ],
+        psn_hints: { power: [], systems: [], narratives: [] },
+      };
+      const { project: nextProject, document } = await patchDocumentMeta(opts.projectId, opts.docId, {
+        summary: summary.summary,
+        summaryStatus: "ready",
+        summaryAt: new Date().toISOString(),
+        summaryFocus: focus || undefined,
+        summaryPayload: {
+          status: summary.status,
+          key_points: summary.key_points,
+          decision_relevance: summary.decision_relevance,
+          gaps: summary.gaps,
+          risk_flags: summary.risk_flags,
+          review_flags: summary.review_flags,
+          recommendation_hints: summary.recommendation_hints,
+          psn_hints: summary.psn_hints,
+          method: summary.method,
+          chunk_count: summary.chunk_count,
+        },
+      });
+      return { project: nextProject, document: document as ProjectDocument, summary };
+    }
+
     const client = getOpenRouterClient();
     const decisionQuestion = project.question || "";
     const decisionCtx = sanitizePlainText(

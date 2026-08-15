@@ -24,7 +24,7 @@ const API_KEY =
     : "octivate-dev-key";
 
 function formatSize(bytes?: number): string {
-  if (!bytes) return "—";
+  if (bytes == null || bytes <= 0) return "not on disk";
   const units = ["B", "KB", "MB", "GB"];
   let n = bytes;
   let i = 0;

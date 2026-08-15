@@ -54,10 +54,11 @@ export async function saveProjectDocument(opts: {
 
   const now = new Date().toISOString();
   const docId = uid("doc");
-  if (opts.bytes.length > 0) {
-    await ensureUploadDir(opts.projectId);
-    await fs.writeFile(documentBlobPath(opts.projectId, docId), opts.bytes);
+  if (opts.bytes.length === 0) {
+    throw new Error("Empty file — upload requires stored content");
   }
+  await ensureUploadDir(opts.projectId);
+  await fs.writeFile(documentBlobPath(opts.projectId, docId), opts.bytes);
 
   const ext = path.extname(opts.fileName).toLowerCase().replace(".", "").toUpperCase() || "FILE";
   const hash = opts.bytes.length ? contentSha256(opts.bytes) : undefined;
@@ -157,6 +158,16 @@ export async function readDocumentBytes(projectId: string, docId: string): Promi
   try {
     return await fs.readFile(documentBlobPath(projectId, docId));
   } catch {
+    // Seed / demo docs historically had metadata only — hydrate fixture bytes once.
+    try {
+      const { ensureSeedDocumentBlob } = await import("@/lib/docs/seed-blobs");
+      const seeded = await ensureSeedDocumentBlob(projectId, docId);
+      if (seeded.ok) {
+        return await fs.readFile(documentBlobPath(projectId, docId));
+      }
+    } catch {
+      /* fall through */
+    }
     return null;
   }
 }
@@ -174,6 +185,13 @@ export async function extractDocumentText(
       text: sanitizePlainText(`Document "${doc.name}" (${doc.type}) — content not stored on disk.`),
       mode: "binary_meta",
     };
+  }
+  // Backfill size/mime for seed docs hydrated on first read.
+  if ((!doc.size || doc.size <= 0) && bytes.length > 0) {
+    void patchDocumentMeta(projectId, doc.id, {
+      size: bytes.length,
+      mime: doc.mime || (TEXT_EXTS.has(ext) ? "text/markdown" : doc.mime),
+    }).catch(() => undefined);
   }
   if (TEXT_EXTS.has(ext)) {
     const raw = bytes.toString("utf8");

@@ -54,32 +54,10 @@ export async function POST(
       return jsonOk({ project: next, document }, { status: 201 });
     }
 
-    // Legacy JSON metadata-only upload (no bytes) — discouraged but kept for compatibility.
-    let body: unknown;
-    try {
-      body = await req.json();
-    } catch {
-      return jsonError("Expected multipart/form-data with a file");
-    }
-    const name =
-      body && typeof body === "object" && "name" in body
-        ? String((body as { name: unknown }).name || "")
-        : "";
-    if (!name) return jsonError("Missing file name");
-    const empty = Buffer.alloc(0);
-    const { project: next, document } = await saveProjectDocument({
-      projectId: id,
-      fileName: name,
-      mime: "application/octet-stream",
-      bytes: empty,
-    });
-    return jsonOk(
-      {
-        project: next,
-        document,
-        warning: "Metadata-only upload; send multipart file for downloadable bytes.",
-      },
-      { status: 201 }
+    // Metadata-only uploads create "content not stored on disk" summarize failures.
+    return jsonError(
+      "Expected multipart/form-data with a file. Metadata-only uploads are not supported.",
+      400
     );
   } catch (err) {
     const message = err instanceof Error ? err.message : "Upload failed";
