@@ -1,11 +1,13 @@
 import http from "http";
 import https from "https";
 import { appendAudit } from "@/lib/protocol/audit";
-import { SEED_SOURCES } from "@/lib/mock/seed";
 import { assertSafePublicUrl } from "@/lib/security/ssrf";
 import { advanceJob, beginJob, endJob, setJobCurrent } from "@/lib/sources/job-progress";
+import {
+  readSourcesCollection,
+  writeSourcesCollection,
+} from "@/lib/sources/live-registry";
 import { readProbeConfig } from "@/lib/sources/probe-config";
-import { readCollection, writeCollection } from "@/lib/store/json-store";
 import type { Source, SourceHealthErrorCode, SourceProbeConfig } from "@/lib/types";
 
 /**
@@ -513,7 +515,7 @@ export async function runSourceProbeBatch(opts: {
       return { checked: 0, healthy: 0, degraded: 0, down: 0, skipped: 1 };
     }
 
-    let sources = await readCollection<Source>("sources", SEED_SOURCES);
+    let sources = await readSourcesCollection();
     let targets: Source[] = [];
 
     if (opts.mode === "one") {
@@ -566,7 +568,7 @@ export async function runSourceProbeBatch(opts: {
         return { ...s, ...r };
       });
 
-      await writeCollection("sources", sources);
+      await writeSourcesCollection(sources);
 
       await appendAudit({
         action: "source_health_batch",

@@ -192,6 +192,7 @@ export class LiveOpenRouterClient implements OpenRouterClient {
           messages: req.messages,
           max_tokens: maxTokens,
           temperature,
+          ...(req.jsonMode ? { response_format: { type: "json_object" } } : {}),
           ...(reasoning || {}),
         }),
         signal: controller.signal,
@@ -232,6 +233,16 @@ export class LiveOpenRouterClient implements OpenRouterClient {
           requestId,
         });
         return this.completeOnce({ ...req, model }, { skipReasoning: true });
+      }
+      // Some models reject response_format — retry once without JSON mode.
+      if (res.status === 400 && req.jsonMode && /response_format|json_object|json mode/i.test(message)) {
+        logOpenRouter({
+          event: "retry_without_json_mode",
+          model,
+          detail: message,
+          requestId,
+        });
+        return this.completeOnce({ ...req, model, jsonMode: false }, opts);
       }
       if (res.status === 429 || res.status === 503) {
         throw new RetryAfterError(message, res.status, retryAfterMs);
@@ -335,6 +346,7 @@ export class LiveOpenRouterClient implements OpenRouterClient {
       costUsd: priced.costUsd,
       costSource: priced.costSource,
       generationId,
+      finishReason: meta.finishReason,
     };
   }
 }

@@ -1,15 +1,14 @@
 import { appendAudit } from "@/lib/protocol/audit";
 import { writeCollection } from "@/lib/store/json-store";
+import { readSourcesCollection } from "@/lib/sources/live-registry";
 import type { Source } from "@/lib/types";
 
-/** Wipe the live source registry. Writes [] so SEED_SOURCES does not rehydrate. */
+/** Wipe the live source registry. Persists [] — no seed rehydrate. */
 export async function clearAllSources(opts?: {
   sessionId?: string;
   detail?: string;
 }): Promise<{ deleted: number }> {
-  const { readCollection } = await import("@/lib/store/json-store");
-  const { SEED_SOURCES } = await import("@/lib/mock/seed");
-  const existing = await readCollection<Source>("sources", SEED_SOURCES);
+  const existing = await readSourcesCollection();
   const deleted = existing.length;
   await writeCollection<Source>("sources", []);
   await appendAudit({

@@ -53,18 +53,6 @@ export function OperatorSourcesPanel({ embedded = false }: { embedded?: boolean 
         skipCache: true,
       });
       let rows = data.sources || [];
-      if (!rows.length) {
-        try {
-          await apiFetch("/api/sources/rehydrate", { method: "POST", skipCache: true });
-          const again = await apiFetch<{ sources: Source[] }>("/api/sources", {
-            skipCache: true,
-          });
-          rows = again.sources || [];
-          if (rows.length) toast.success("Restored seed sources (registry was empty)");
-        } catch {
-          /* keep empty — Restore button still available */
-        }
-      }
       setSources(rows);
       if (data.droppedInvalid) {
         toast.info(`Dropped ${data.droppedInvalid} invalid source row(s)`);
@@ -196,19 +184,6 @@ export function OperatorSourcesPanel({ embedded = false }: { embedded?: boolean 
     retrieval !== "all" ||
     health !== "all" ||
     q.trim().length > 0;
-
-  async function rehydrateSeeds() {
-    setRefreshing(true);
-    try {
-      await apiFetch("/api/sources/rehydrate", { method: "POST", skipCache: true });
-      toast.success("Restored seed sources");
-      await load(true);
-    } catch {
-      toast.error("Could not restore seed sources");
-    } finally {
-      setRefreshing(false);
-    }
-  }
 
   if (loading) {
     return (
@@ -346,12 +321,7 @@ export function OperatorSourcesPanel({ embedded = false }: { embedded?: boolean 
           <OperatorEmptyState
             icon={Database}
             title="Source registry is empty"
-            description="The live registry was cleared. Restore seed sources or drop a CSV to rebuild."
-            action={
-              <Button size="sm" onClick={() => void rehydrateSeeds()} disabled={refreshing}>
-                Restore seed sources
-              </Button>
-            }
+            description="Upload a CSV or add sources manually — the registry only contains user-provided sources."
           />
         ) : filtered.length === 0 ? (
           <OperatorEmptyState

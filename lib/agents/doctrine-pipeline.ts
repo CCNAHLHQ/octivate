@@ -1,5 +1,5 @@
 import { getOpenRouterClient } from "@/lib/openrouter/client";
-import { completeJson, getThrownCompletionSpend } from "@/lib/openrouter/json";
+import { completeJson, getThrownCompletionSpend, userFacingJsonError } from "@/lib/openrouter/json";
 import { resolveModel, resolveDoctrineMaxTokens } from "@/lib/openrouter/config";
 import { mergeCostSource } from "@/lib/openrouter/pricing";
 import { appendAudit, hashOutput } from "@/lib/protocol/audit";
@@ -17,9 +17,9 @@ import { uid, readCollection, writeCollection } from "@/lib/store/json-store";
 import { coerceTextList } from "@/lib/briefs/normalize";
 import {
   SEED_BRIEFS,
-  SEED_SOURCES,
   SEED_TRENDS,
 } from "@/lib/mock/seed";
+import { readSourcesCollection } from "@/lib/sources/live-registry";
 import {
   flushSessionUsage,
   publishAccountingTick,
@@ -152,7 +152,7 @@ async function loadSourceBundle(
   localOnlySources: boolean;
 }> {
   const localOnly = opts?.localOnlySources === true;
-  const list = await readCollection<Source>("sources", SEED_SOURCES);
+  const list = await readSourcesCollection();
 
   // Prefetch local evidence across catalog + parl + uploads for filter + merge
   const previewSelected = selectCatalogSources(list, project, localOnly ? 24 : 12);
@@ -1217,7 +1217,9 @@ export async function runDoctrinePipeline(
     // Sync failures between stages leave no "running" stage — mark the next pending one.
     const pending = session.stages.find((s) => s.status === "pending");
     const failedStage = running || pending;
-    const message = err instanceof Error ? err.message : "Doctrine pipeline failed";
+    const message =
+      userFacingJsonError(err) ||
+      (err instanceof Error ? err.message : "Doctrine pipeline failed");
     if (failedStage) {
       failedStage.status = "failed";
       failedStage.message = message;
@@ -1228,11 +1230,13 @@ export async function runDoctrinePipeline(
       code:
         err instanceof Error && err.name === "EmptyResponseError"
           ? "empty_response"
-          : /rate limit|429/i.test(message)
-            ? "rate_limit"
-            : /timed out/i.test(message)
-              ? "timeout"
-              : "pipeline_error",
+          : err instanceof Error && err.name === "JsonCompleteError"
+            ? "json_parse"
+            : /rate limit|429/i.test(message)
+              ? "rate_limit"
+              : /timed out/i.test(message)
+                ? "timeout"
+                : "pipeline_error",
       model: session.modelUsed || model,
       stage: failedStage?.name,
       finishReason:

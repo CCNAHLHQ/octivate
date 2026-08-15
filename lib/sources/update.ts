@@ -1,7 +1,6 @@
 import { appendAudit } from "@/lib/protocol/audit";
-import { SEED_SOURCES } from "@/lib/mock/seed";
+import { readSourcesCollection, writeSourcesCollection } from "@/lib/sources/live-registry";
 import { deriveTier } from "@/lib/sources/registry-map";
-import { readCollection, writeCollection } from "@/lib/store/json-store";
 import type {
   Source,
   SourceBriefUse,
@@ -45,7 +44,7 @@ export async function patchSource(
   id: string,
   patch: SourcePatch
 ): Promise<Source> {
-  const sources = await readCollection<Source>("sources", SEED_SOURCES);
+  const sources = await readSourcesCollection();
   const idx = sources.findIndex((s) => s.id === id);
   if (idx < 0) throw new Error("Source not found");
 
@@ -113,7 +112,7 @@ export async function patchSource(
       (b.totalSourceScore ?? 0) - (a.totalSourceScore ?? 0) ||
       a.title.localeCompare(b.title)
   );
-  await writeCollection("sources", sources);
+  await writeSourcesCollection(sources);
 
   await appendAudit({
     action: "source_updated",
@@ -125,12 +124,12 @@ export async function patchSource(
 
 /** Remove a single source from the live registry (CSV-imported or curated). */
 export async function deleteSource(id: string): Promise<{ deleted: Source }> {
-  const sources = await readCollection<Source>("sources", SEED_SOURCES);
+  const sources = await readSourcesCollection();
   const idx = sources.findIndex((s) => s.id === id);
   if (idx < 0) throw new Error("Source not found");
 
   const [deleted] = sources.splice(idx, 1);
-  await writeCollection("sources", sources);
+  await writeSourcesCollection(sources);
 
   await appendAudit({
     action: "source_deleted",

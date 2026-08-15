@@ -165,80 +165,8 @@ export const SEED_MONITORS: Monitor[] = [
   },
 ];
 
-export const SEED_SOURCES: Source[] = [
-  {
-    id: "src_1",
-    title: "Guyana Official Gazette",
-    tier: 1,
-    country: "Guyana",
-    type: "Government",
-    health: "healthy",
-    lastChecked: "2026-07-20T10:00:00Z",
-  },
-  {
-    id: "src_2",
-    title: "IMF Article IV — Guyana",
-    tier: 2,
-    country: "Guyana",
-    type: "IO",
-    health: "healthy",
-    lastChecked: "2026-07-20T09:00:00Z",
-  },
-  {
-    id: "src_3",
-    title: "Stabroek News",
-    tier: 3,
-    country: "Guyana",
-    type: "Media",
-    health: "degraded",
-    lastChecked: "2026-07-20T08:30:00Z",
-  },
-  {
-    id: "src_4",
-    title: "Central Bank of Trinidad & Tobago",
-    tier: 1,
-    country: "Trinidad & Tobago",
-    type: "Regulator",
-    health: "healthy",
-    lastChecked: "2026-07-20T10:00:00Z",
-  },
-  {
-    id: "src_5",
-    title: "Ministry of Public Administration and Artificial Intelligence (MPAAI)",
-    tier: 1,
-    country: "Trinidad & Tobago",
-    type: "Government",
-    health: "healthy",
-    lastChecked: "2026-07-24T10:00:00Z",
-  },
-  {
-    id: "src_6",
-    title: "UNESCO Caribbean — AI Readiness",
-    tier: 2,
-    country: "Trinidad & Tobago",
-    type: "IO",
-    health: "healthy",
-    lastChecked: "2026-07-24T09:00:00Z",
-  },
-  {
-    id: "src_7",
-    title: "Trinidad Express Business",
-    tier: 3,
-    country: "Trinidad & Tobago",
-    type: "Media",
-    health: "healthy",
-    lastChecked: "2026-07-24T08:00:00Z",
-  },
-  {
-    id: "src_8",
-    title: "UWI St. Augustine — AI Innovation Centre",
-    tier: 2,
-    country: "Trinidad & Tobago",
-    type: "Academic",
-    health: "healthy",
-    lastChecked: "2026-07-23T16:00:00Z",
-  },
-];
+/** Live source registry is upload/CSV only — never auto-seeded. */
+export const SEED_SOURCES: Source[] = [];
 
 export const SEED_STAKEHOLDERS: Stakeholder[] = [
   {

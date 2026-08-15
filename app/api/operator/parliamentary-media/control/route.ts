@@ -4,7 +4,7 @@ import { requireOperatorUser, resolveRequestUser } from "@/lib/auth/scope";
 import { appendAudit } from "@/lib/protocol/audit";
 import { clearAutomationWorkspace, ensureParlWorker } from "@/lib/parliamentary/clear";
 import { parlEnabled } from "@/lib/parliamentary/config";
-import { readPipeline, setPipelineControl } from "@/lib/parliamentary/store";
+import { readPipeline, setPipelineControl, holdActiveTransferJobs } from "@/lib/parliamentary/store";
 import { parlLog } from "@/lib/parliamentary/log";
 import { reconcileAutomationQueue } from "@/lib/parliamentary/reconcile";
 import { getWorkerLiveness } from "@/lib/parliamentary/status";
@@ -116,16 +116,14 @@ export async function POST(req: NextRequest) {
     });
   }
   if (action === "pause") {
-    if (cur.control !== "running" && cur.control !== "paused") {
-      return jsonError("Pipeline is not running", 409);
-    }
     const next = await setPipelineControl("paused");
-    parlLog("info", "operator pause", { by: who });
+    const held = await holdActiveTransferJobs("paused_by_operator");
+    parlLog("info", "operator pause", { by: who, held });
     await appendAudit({
       action: "automation_pipeline_pause",
-      detail: `Automation pipeline paused by ${who}`,
+      detail: `Automation pipeline paused by ${who} (held ${held} transfer job(s))`,
     });
-    return jsonOk({ pipeline: next, action });
+    return jsonOk({ pipeline: next, action, held });
   }
 
   // Cancel with a dead worker must force idle — nothing will process "cancelling".

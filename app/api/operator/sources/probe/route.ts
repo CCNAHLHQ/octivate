@@ -8,9 +8,7 @@ import {
   writeProbeConfig,
 } from "@/lib/sources/probe-config";
 import { runSourceProbeBatch, sourceHealthStats } from "@/lib/sources/probe";
-import { SEED_SOURCES } from "@/lib/mock/seed";
-import { readCollection } from "@/lib/store/json-store";
-import type { Source } from "@/lib/types";
+import { readSourcesCollection } from "@/lib/sources/live-registry";
 
 /** Coerce + clamp so autosave never 400s on transient UI values. */
 const clampedInt = (min: number, max: number) =>
@@ -41,7 +39,7 @@ export async function GET(req: NextRequest) {
   const denied = guardApi(req, { operator: true });
   if (denied) return denied;
   const config = await readProbeConfig();
-  const sources = await readCollection<Source>("sources", SEED_SOURCES);
+  const sources = await readSourcesCollection();
   return jsonOk({ config, stats: sourceHealthStats(sources) });
 }
 
@@ -90,7 +88,7 @@ export async function POST(req: NextRequest) {
       sourceId: parsed.data.sourceId,
       force: true,
     });
-    const sources = await readCollection<Source>("sources", SEED_SOURCES);
+    const sources = await readSourcesCollection();
     return jsonOk({ report, stats: sourceHealthStats(sources) });
   } catch (err) {
     return jsonError(err instanceof Error ? err.message : "Probe failed", 400);

@@ -1,14 +1,13 @@
 import { canLaunchChromium, getChromiumBrowser } from "@/lib/browser/chromium";
-import { SEED_SOURCES } from "@/lib/mock/seed";
 import { writeCaptureBundle } from "@/lib/sources/artifacts";
 import {
   buildCapturePassport,
   buildCapturePipelineHints,
   buildCaptureRegistry,
 } from "@/lib/sources/capture-descriptors";
+import { readSourcesCollection } from "@/lib/sources/live-registry";
 import { readProbeConfig } from "@/lib/sources/probe-config";
 import { assertSafePublicUrl } from "@/lib/security/ssrf";
-import { readCollection } from "@/lib/store/json-store";
 import type { Source, SourceCaptureQueueItem } from "@/lib/types";
 
 /** Single-page HTML+JSON capture via puppeteer-core (shared Chromium launcher). */
@@ -74,7 +73,7 @@ async function extractPage(
 }
 
 async function loadSource(sourceId: string): Promise<Source | null> {
-  const sources = await readCollection<Source>("sources", SEED_SOURCES);
+  const sources = await readSourcesCollection();
   return sources.find((s) => s.id === sourceId) || null;
 }
 

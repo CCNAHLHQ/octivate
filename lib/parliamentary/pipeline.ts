@@ -78,7 +78,15 @@ async function flushProgress(id: string) {
 
 async function allowsWork() {
   const p = await readPipeline();
+  cachedControl = p.control;
   return p.control === "running";
+}
+
+/** Sync snapshot for mid-transfer abort (updated by allowsWork / waitResume / loop). */
+let cachedControl: Awaited<ReturnType<typeof readPipeline>>["control"] = "idle";
+
+function allowsWorkSync() {
+  return cachedControl === "running";
 }
 
 function hasUnfinishedWork(jobs: MediaJob[]) {
@@ -154,6 +162,7 @@ async function pulse(phase: string, message: string, current?: string) {
 async function waitResume(): Promise<"continue" | "stop" | "abort"> {
   for (;;) {
     const p = await readPipeline();
+    cachedControl = p.control;
     if (p.control === "cancelling") return "stop";
     if (p.control === "idle") return "abort";
     if (p.control === "running") return "continue";
@@ -196,6 +205,10 @@ async function cancelOpen() {
 async function failOrRetry(job: MediaJob, err: unknown) {
   await flushProgress(job.id);
   const msg = err instanceof Error ? err.message : String(err);
+  if (/paused_by_operator/i.test(msg)) {
+    await requeueInterrupted(job, "paused_by_operator");
+    return;
+  }
   const summary = summarizeParlError(msg);
   const settings = await readSettings();
   const retries = job.retryCount || 0;
@@ -291,6 +304,9 @@ async function downloadOne(job: MediaJob) {
       try {
         const dl = await downloadMediaJob(job, {
           onProgress: (p) => {
+            if (!allowsWorkSync()) {
+              throw new Error("paused_by_operator");
+            }
             const now = Date.now();
             const dt = Math.max(0.2, (now - lastAt) / 1000);
             const delta = Math.max(0, p.bytesDownloaded - lastBytes);
@@ -389,6 +405,9 @@ async function transcribeOne(job: MediaJob) {
       await pulse("transcribe", `Transcribing · ${job.title}`, job.title);
       const asr = await transcribeMediaJob(job, {
         onProgress: (pct, label, phase) => {
+          if (!allowsWorkSync()) {
+            throw new Error("paused_by_operator");
+          }
           scheduleProgress(job.id, {
             progressPct: Math.max(52, Math.min(99, 52 + Math.round(pct * 0.47))),
             progressPhase: phase || "asr",
@@ -515,6 +534,7 @@ export async function runPipelineLoop(opts?: { pollMs?: number }) {
   for (;;) {
     try {
       const pipeline = await readPipeline();
+      cachedControl = pipeline.control;
 
       if (pipeline.control === "cancelling") {
         await cancelOpen();

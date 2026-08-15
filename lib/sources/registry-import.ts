@@ -1,12 +1,14 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { readCollection, writeCollection } from "@/lib/store/json-store";
-import { SEED_SOURCES } from "@/lib/mock/seed";
 import { csvToObjects } from "@/lib/sources/parse-csv";
 import {
   normalizeSourceUrl,
   registryRowToSource,
 } from "@/lib/sources/registry-map";
+import {
+  readSourcesCollection,
+  writeSourcesCollection,
+} from "@/lib/sources/live-registry";
 import type { Source } from "@/lib/types";
 
 export const DEFAULT_REGISTRY_CSV = path.join(
@@ -54,18 +56,7 @@ export async function importRegistryCsv(
   const importedAt = new Date().toISOString();
   const incoming = sourcesFromRegistryCsv(csvText, importedAt);
 
-  let existing = opts.replaceAll
-    ? []
-    : await readCollection<Source>("sources", SEED_SOURCES);
-
-  // Drop thin seed stubs once registry data arrives (keep any non-registry extras without urls only if not replaceAll)
-  if (!opts.replaceAll && incoming.length > 0) {
-    const seedIds = new Set(SEED_SOURCES.map((s) => s.id));
-    const hasRegistry = existing.some((s) => s.registryImportedAt || s.totalSourceScore != null);
-    if (!hasRegistry) {
-      existing = existing.filter((s) => !seedIds.has(s.id));
-    }
-  }
+  let existing = opts.replaceAll ? [] : await readSourcesCollection();
 
   const byUrl = indexByUrl(existing);
   const byId = new Map(existing.map((s, i) => [s.id, i]));
@@ -100,7 +91,7 @@ export async function importRegistryCsv(
   existing.sort((a, b) => (b.totalSourceScore ?? 0) - (a.totalSourceScore ?? 0));
 
   if (persist) {
-    await writeCollection("sources", existing);
+    await writeSourcesCollection(existing);
   }
 
   return {
@@ -198,7 +189,7 @@ export async function importRegistryCsvBatch(
 
   // If every file failed with empty/parse but some had 0 rows without error, still ok
   if (!sources.length && opts.persist !== false) {
-    sources = await readCollection<Source>("sources", SEED_SOURCES);
+    sources = await readSourcesCollection();
   }
 
   return {

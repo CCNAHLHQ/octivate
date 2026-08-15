@@ -10,6 +10,8 @@ export interface CompletionRequest {
   model?: string;
   messages: ChatMessage[];
   maxTokens?: number;
+  /** Prefer provider JSON object mode when supported. */
+  jsonMode?: boolean;
 }
 
 export interface CompletionResult {
@@ -24,6 +26,8 @@ export interface CompletionResult {
   costSource: "openrouter" | "estimate" | "mixed";
   /** OpenRouter generation id for audit / generation lookup. */
   generationId?: string;
+  /** Provider finish reason (e.g. stop | length). */
+  finishReason?: string | null;
 }
 
 /** Approximate pricing per 1M tokens (input/output blended). */

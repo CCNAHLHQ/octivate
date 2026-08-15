@@ -9,7 +9,10 @@ import type { EvidenceDocument } from "@/lib/evidence/types";
 import { readJobs } from "@/lib/parliamentary/store";
 import { mediaRoot } from "@/lib/parliamentary/paths";
 import { readCollection, uid, writeCollection, writeObject, readObject } from "@/lib/store/json-store";
-import { SEED_SOURCES } from "@/lib/mock/seed";
+import {
+  readSourcesCollection,
+  writeSourcesCollection,
+} from "@/lib/sources/live-registry";
 import type { Project, Source } from "@/lib/types";
 
 const INDEX_KEY = "evidence-index-manifest";
@@ -290,7 +293,7 @@ export async function upsertParlTranscriptSource(job: {
     return null;
   }
 
-  const sources = await readCollection<Source>("sources", SEED_SOURCES);
+  const sources = await readSourcesCollection();
   const idx = sources.findIndex((s) => s.id === id);
   const base: Source = {
     id,
@@ -337,7 +340,7 @@ export async function upsertParlTranscriptSource(job: {
     sources.push(base);
   }
 
-  await writeCollection("sources", sources);
+  await writeSourcesCollection(sources);
   return idx >= 0 ? sources[idx] : base;
 }
 

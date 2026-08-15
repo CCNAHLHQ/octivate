@@ -212,7 +212,10 @@ export function DocumentSummaryModal({
               {doc.summaryStatus === "failed" && !running ? (
                 <div className="ws-sum-failed" role="alert">
                   <AlertTriangle className="h-4 w-4" aria-hidden />
-                  <p>Last run failed. Try again.</p>
+                  <p>
+                    {doc.summaryError?.trim() ||
+                      "Last run failed — the model response was unreadable or cut off. Try again; for large files, split the upload."}
+                  </p>
                 </div>
               ) : null}
             </div>

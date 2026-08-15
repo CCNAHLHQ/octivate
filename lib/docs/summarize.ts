@@ -4,6 +4,7 @@ import {
   resolveDocsMaxTokens,
   resolveDocsModel,
 } from "@/lib/openrouter/config";
+import { parseModelJsonObject, userFacingJsonError } from "@/lib/openrouter/json";
 import { readModelConfig } from "@/lib/openrouter/model-config-store";
 import { chunkDocumentText, selectChunksForMap } from "@/lib/docs/chunk";
 import {
@@ -46,13 +47,7 @@ const EXTRACT_CHAR_LIMIT = 80_000;
 const MAX_MAP_CHUNKS = 10;
 
 function parseJsonObject(raw: string): Record<string, unknown> {
-  const trimmed = raw.trim();
-  const fence = trimmed.match(/^```(?:json)?\s*([\s\S]*?)```$/i);
-  const body = fence ? fence[1].trim() : trimmed;
-  const start = body.indexOf("{");
-  const end = body.lastIndexOf("}");
-  if (start < 0 || end <= start) throw new Error("Model did not return JSON");
-  return JSON.parse(body.slice(start, end + 1)) as Record<string, unknown>;
+  return parseModelJsonObject(raw);
 }
 
 function asStringArray(v: unknown, max = 24): string[] {
@@ -163,6 +158,7 @@ export async function summarizeProjectDocument(opts: {
   await patchDocumentMeta(opts.projectId, opts.docId, {
     summaryStatus: "running",
     summaryFocus: focus || undefined,
+    summaryError: undefined,
   });
 
   // Cost shortcut: re-uploaded Octivate briefs already carry structured extract.
@@ -202,6 +198,7 @@ export async function summarizeProjectDocument(opts: {
       summaryStatus: "ready",
       summaryAt: new Date().toISOString(),
       summaryFocus: focus || undefined,
+      summaryError: undefined,
       summaryPayload: {
         status: summary.status,
         key_points: summary.key_points,
@@ -218,7 +215,7 @@ export async function summarizeProjectDocument(opts: {
   }
 
   const model = resolveDocsModel();
-  const docsMaxTokens = resolveDocsMaxTokens();
+  const docsMaxTokens = Math.max(resolveDocsMaxTokens(), 2800);
   const spend: Spend = {
     tokensUsed: 0,
     costUsd: 0,
@@ -300,6 +297,7 @@ export async function summarizeProjectDocument(opts: {
     if (mode === "text" && text.length > 80 && text.length <= STUFF_CHAR_LIMIT) {
       const ex = await client.complete({
         model,
+        jsonMode: true,
         messages: [
           { role: "system", content: DOCUMENT_EXTRACTOR_SYSTEM },
           {
@@ -307,7 +305,7 @@ export async function summarizeProjectDocument(opts: {
             content: `${decisionCtx}\n\nDocument name: ${doc.name}\n\n--- DOCUMENT START ---\n${text.slice(0, 10_000)}\n--- DOCUMENT END ---`,
           },
         ],
-        maxTokens: Math.min(docsMaxTokens + 200, 2200),
+        maxTokens: Math.min(docsMaxTokens + 200, 3200),
       });
       accumulateSpend(spend, ex);
       try {
@@ -330,6 +328,7 @@ export async function summarizeProjectDocument(opts: {
       // Classic "stuff" pattern — single call when volume fits.
       const sum = await client.complete({
         model,
+        jsonMode: true,
         messages: [
           { role: "system", content: DOCUMENT_SUMMARIZER_SYSTEM },
           {
@@ -360,6 +359,7 @@ export async function summarizeProjectDocument(opts: {
       for (const chunk of mapChunks) {
         const mapRes = await client.complete({
           model,
+          jsonMode: true,
           messages: [
             { role: "system", content: DOCUMENT_SUMMARIZER_MAP_SYSTEM },
             {
@@ -367,7 +367,7 @@ export async function summarizeProjectDocument(opts: {
               content: `${decisionCtx}\n${focusBlock}\nDocument: ${doc.name}\nChunk ${chunk.index + 1}/${allChunks.length} (chars ${chunk.start}-${chunk.end}, questionScore=${chunk.questionScore.toFixed(2)})\n\n--- CHUNK START ---\n${chunk.text}\n--- CHUNK END ---`,
             },
           ],
-          maxTokens: Math.min(docsMaxTokens, 1200),
+          maxTokens: Math.min(docsMaxTokens, 1600),
         });
         accumulateSpend(spend, mapRes);
         try {
@@ -391,6 +391,7 @@ export async function summarizeProjectDocument(opts: {
       const reducePayload = sanitizePlainText(JSON.stringify(mapOutputs), 24_000);
       const reduce = await client.complete({
         model,
+        jsonMode: true,
         messages: [
           { role: "system", content: DOCUMENT_SUMMARIZER_REDUCE_SYSTEM },
           {
@@ -398,7 +399,7 @@ export async function summarizeProjectDocument(opts: {
             content: `${decisionCtx}\n${focusBlock}\nDocument name: ${doc.name} (${doc.type})\nSummarize method: map_reduce\nMap outputs (${mapOutputs.length} chunks of ${allChunks.length}):\n${reducePayload}`,
           },
         ],
-        maxTokens: Math.min(docsMaxTokens + 400, 2800),
+        maxTokens: Math.min(docsMaxTokens + 600, 3600),
       });
       accumulateSpend(spend, reduce);
       const parsed = sanitizeModelStrings(parseJsonObject(reduce.content));
@@ -432,6 +433,7 @@ export async function summarizeProjectDocument(opts: {
       summaryStatus: "ready",
       summaryAt: new Date().toISOString(),
       summaryFocus: focus || undefined,
+      summaryError: undefined,
       summaryPayload: {
         status: summary.status,
         key_points: summary.key_points,
@@ -460,7 +462,15 @@ export async function summarizeProjectDocument(opts: {
         costSource: spend.costSource,
       }).catch(() => null);
     }
-    await patchDocumentMeta(opts.projectId, opts.docId, { summaryStatus: "failed" }).catch(() => null);
-    throw err instanceof Error ? err : new Error("Summarize failed");
+    const friendly =
+      userFacingJsonError(err) ||
+      (err instanceof Error ? err.message : "Summarize failed");
+    await patchDocumentMeta(opts.projectId, opts.docId, {
+      summaryStatus: "failed",
+      summaryError: friendly.slice(0, 600),
+    }).catch(() => null);
+    const out = err instanceof Error ? err : new Error(friendly);
+    out.message = friendly;
+    throw out;
   }
 }

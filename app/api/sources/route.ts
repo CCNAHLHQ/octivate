@@ -1,16 +1,15 @@
 import { NextRequest } from "next/server";
 import { guardApi, jsonError, jsonOk } from "@/lib/security/guard";
-import { clearAllSources } from "@/lib/sources/clear-registry";
 import { readLiveSources } from "@/lib/sources/live-registry";
+import { clearAllSources } from "@/lib/sources/clear-registry";
 
 export async function GET(req: NextRequest) {
   const denied = guardApi(req);
   if (denied) return denied;
-  const result = await readLiveSources({ autoRehydrateEmpty: false });
+  const result = await readLiveSources();
   return jsonOk({
     sources: result.sources,
     count: result.sources.length,
-    rehydrated: result.rehydrated,
     droppedInvalid: result.droppedInvalid,
   });
 }

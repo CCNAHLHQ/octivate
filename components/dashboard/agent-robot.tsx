@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { HeroDottedGlobe } from "@/components/landing/hero-dotted-globe";
 import { HERO_VIDEO_SRC } from "@/components/landing/hero-video-backdrop";
-import { ProgressBar } from "@/components/ui/progress";
 import type { AgentSession } from "@/lib/types";
 import "@/app/phase1-landing.css";
 import "@/app/hero-globe.css";
@@ -89,6 +88,38 @@ function PipelineVideoPlate() {
   );
 }
 
+function ChromaticSpinner({
+  overall,
+  working,
+  label,
+}: {
+  overall: number;
+  working: boolean;
+  label: string;
+}) {
+  const deg = Math.max(0, Math.min(100, overall)) * 3.6;
+  return (
+    <div
+      className="ws-pipe-spin"
+      data-working={working ? "1" : "0"}
+      role="progressbar"
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={overall}
+      aria-label={`${label} ${overall}%`}
+    >
+      <div className="ws-pipe-spin-ring" style={{ ["--pct" as string]: `${deg}deg` }}>
+        <div className="ws-pipe-spin-chroma" aria-hidden />
+        <div className="ws-pipe-spin-orbit" aria-hidden />
+        <div className="ws-pipe-spin-core">
+          <span className="ws-pipe-spin-pct">{overall}%</span>
+          <span className="ws-pipe-spin-label">{label}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function AgentRobot({
   session,
   documentCount = 0,
@@ -159,40 +190,37 @@ export function AgentRobot({
       data-state={state}
     >
       <PipelineVideoPlate />
-      <div className="ws-pipe-globe" aria-hidden>
-        <HeroDottedGlobe />
-      </div>
 
-      <div className="ws-pipe-copy">
-        <div className="font-mono text-[10px] uppercase tracking-widest text-faint">
-          {state === "idle" ? "Agent ready" : `Step ${Math.min(currentIdx + 1, total)} of ${total}`}
-        </div>
-        <div className="mt-0.5 text-sm font-semibold text-foam">
-          {state === "idle" ? "Doctrine agent" : current?.label ?? "Workflow"}
+      <div className="ws-pipe-body">
+        <div className="ws-pipe-globe" aria-hidden>
+          <HeroDottedGlobe />
         </div>
 
-        <motion.p
-          key={status}
-          initial={{ opacity: 0, y: 4 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="ws-pipe-status"
-        >
-          {status}
-        </motion.p>
-
-        {documentCount > 0 && (working || state === "idle") && (
-          <div className="font-mono text-[10px] uppercase tracking-wider text-faint">
-            {documentCount} document{documentCount > 1 ? "s" : ""} on deck
+        <div className="ws-pipe-copy">
+          <div className="ws-pipe-kicker">
+            {state === "idle" ? "Agent ready" : `Step ${Math.min(currentIdx + 1, total)} of ${total}`}
           </div>
-        )}
-
-        <div className="mt-2 w-full">
-          <div className="mb-1 flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-faint">
-            <span>{c.label}</span>
-            <span>{overall}%</span>
+          <div className="ws-pipe-title">
+            {state === "idle" ? "Doctrine agent" : current?.label ?? "Workflow"}
           </div>
-          <ProgressBar value={overall} pulse={working} />
+
+          <motion.p
+            key={status}
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="ws-pipe-status"
+          >
+            {status}
+          </motion.p>
+
+          {documentCount > 0 && (working || state === "idle") && (
+            <div className="ws-pipe-docs">
+              {documentCount} document{documentCount > 1 ? "s" : ""} on deck
+            </div>
+          )}
+
+          <ChromaticSpinner overall={overall} working={working} label={c.label} />
         </div>
       </div>
     </div>

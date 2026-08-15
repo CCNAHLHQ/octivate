@@ -21,6 +21,17 @@ export type ChoiceMeta = {
   hasJsonCandidate: boolean;
 };
 
+export type JsonExtractResult = {
+  /** Best-effort JSON object text (fences stripped). */
+  text: string | null;
+  /** Fence / prose wrappers were removed. */
+  strippedFence: boolean;
+  /** Slice looks truncated (unbalanced braces / open string). */
+  truncated: boolean;
+  /** JSON.parse succeeded on the candidate. */
+  parseable: boolean;
+};
+
 function fromContentParts(content: unknown): string {
   if (typeof content === "string") return content;
   if (!Array.isArray(content)) return "";
@@ -65,25 +76,175 @@ export function extractMessageText(message: OpenRouterMessage | undefined | null
   return { text: "", source: "none" };
 }
 
-/** Pull a JSON object string out of free-form model text (incl. reasoning dump). */
-export function extractJsonCandidate(text: string): string | null {
+/** Strip markdown code fences (complete or truncated). */
+export function stripMarkdownFences(text: string): { body: string; stripped: boolean } {
   const trimmed = text.trim();
-  if (!trimmed) return null;
-  const closedFence = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/i);
-  const openFence = !closedFence
-    ? trimmed.match(/```(?:json)?\s*([\s\S]+)$/i)
-    : null;
-  const body = (closedFence?.[1] || openFence?.[1] || trimmed).trim();
-  const start = body.indexOf("{");
-  const end = body.lastIndexOf("}");
-  if (start < 0 || end <= start) return null;
-  const slice = body.slice(start, end + 1);
+  if (!trimmed) return { body: "", stripped: false };
+
+  const closed = trimmed.match(/^```(?:json|JSON)?\s*\r?\n?([\s\S]*?)\r?\n?```\s*$/);
+  if (closed) return { body: closed[1].trim(), stripped: true };
+
+  const open = trimmed.match(/^```(?:json|JSON)?\s*\r?\n?([\s\S]+)$/);
+  if (open) return { body: open[1].replace(/\n?```\s*$/, "").trim(), stripped: true };
+
+  const embedded = trimmed.match(/```(?:json|JSON)?\s*([\s\S]*?)```/i);
+  if (embedded) return { body: embedded[1].trim(), stripped: true };
+
+  return { body: trimmed, stripped: false };
+}
+
+function looksTruncatedJson(slice: string): boolean {
+  let depth = 0;
+  let inString = false;
+  let escape = false;
+  for (let i = 0; i < slice.length; i++) {
+    const ch = slice[i];
+    if (inString) {
+      if (escape) {
+        escape = false;
+        continue;
+      }
+      if (ch === "\\") {
+        escape = true;
+        continue;
+      }
+      if (ch === '"') inString = false;
+      continue;
+    }
+    if (ch === '"') {
+      inString = true;
+      continue;
+    }
+    if (ch === "{") depth++;
+    else if (ch === "}") depth--;
+  }
+  return inString || depth > 0;
+}
+
+/**
+ * Best-effort repair for truncated JSON objects: close open strings and braces.
+ * Only used as a last resort before giving up — never invents keys/values.
+ */
+export function repairTruncatedJsonObject(slice: string): string | null {
+  if (!slice.trim().startsWith("{")) return null;
+  let s = slice.trim();
+  // Drop trailing incomplete escape
+  if (s.endsWith("\\")) s = s.slice(0, -1);
+
+  let inString = false;
+  let escape = false;
+  let depth = 0;
+  for (let i = 0; i < s.length; i++) {
+    const ch = s[i];
+    if (inString) {
+      if (escape) {
+        escape = false;
+        continue;
+      }
+      if (ch === "\\") {
+        escape = true;
+        continue;
+      }
+      if (ch === '"') inString = false;
+      continue;
+    }
+    if (ch === '"') {
+      inString = true;
+      continue;
+    }
+    if (ch === "{") depth++;
+    else if (ch === "}") depth = Math.max(0, depth - 1);
+  }
+
+  if (inString) s += '"';
+  // Trim dangling comma / colon before closing
+  s = s.replace(/,\s*$/, "").replace(/:\s*$/, ':""');
+  while (depth-- > 0) s += "}";
+
   try {
-    JSON.parse(slice);
-    return slice;
+    JSON.parse(s);
+    return s;
   } catch {
     return null;
   }
+}
+
+/** Pull a JSON object string out of free-form model text (incl. reasoning dump). */
+export function inspectJsonCandidate(text: string): JsonExtractResult {
+  const empty: JsonExtractResult = {
+    text: null,
+    strippedFence: false,
+    truncated: false,
+    parseable: false,
+  };
+  if (!text?.trim()) return empty;
+
+  const { body, stripped } = stripMarkdownFences(text);
+  const start = body.indexOf("{");
+  if (start < 0) {
+    return { ...empty, strippedFence: stripped };
+  }
+
+  const end = body.lastIndexOf("}");
+  const slice =
+    end > start ? body.slice(start, end + 1) : body.slice(start);
+  const truncated = looksTruncatedJson(slice) || end <= start;
+
+  try {
+    JSON.parse(slice);
+    return {
+      text: slice,
+      strippedFence: stripped,
+      truncated: false,
+      parseable: true,
+    };
+  } catch {
+    if (truncated) {
+      const repaired = repairTruncatedJsonObject(slice);
+      if (repaired) {
+        return {
+          text: repaired,
+          strippedFence: stripped,
+          truncated: true,
+          parseable: true,
+        };
+      }
+    }
+    return {
+      text: slice,
+      strippedFence: stripped,
+      truncated,
+      parseable: false,
+    };
+  }
+}
+
+/** Pull a JSON object string out of free-form model text (incl. reasoning dump). */
+export function extractJsonCandidate(text: string): string | null {
+  const inspected = inspectJsonCandidate(text);
+  return inspected.parseable ? inspected.text : null;
+}
+
+/**
+ * Normalize model output into parseable JSON text.
+ * Always strips markdown fences — never returns raw ```json wrappers.
+ */
+export function coerceJsonText(text: string): {
+  json: string;
+  meta: JsonExtractResult;
+} {
+  const meta = inspectJsonCandidate(text);
+  if (meta.text) return { json: meta.text, meta };
+  const { body, stripped } = stripMarkdownFences(text);
+  return {
+    json: body,
+    meta: {
+      text: null,
+      strippedFence: stripped,
+      truncated: false,
+      parseable: false,
+    },
+  };
 }
 
 export function describeChoice(

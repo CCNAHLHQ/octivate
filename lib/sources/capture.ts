@@ -1,6 +1,9 @@
 import { appendAudit } from "@/lib/protocol/audit";
-import { SEED_SOURCES } from "@/lib/mock/seed";
 import { assertSafePublicUrl } from "@/lib/security/ssrf";
+import {
+  readSourcesCollection,
+  writeSourcesCollection,
+} from "@/lib/sources/live-registry";
 import { closeChromiumBrowser } from "@/lib/browser/chromium";
 import { clearAllArtifactBundles } from "@/lib/sources/artifacts";
 import { isCaptureRunnerAvailable } from "@/lib/sources/capture-runner";
@@ -97,7 +100,7 @@ async function enqueueTargets(
   mode: "stale" | "all" | "one",
   sourceId?: string
 ): Promise<{ queued: number; pendingTotal: number }> {
-  const sources = await readCollection<Source>("sources", SEED_SOURCES);
+  const sources = await readSourcesCollection();
   let targets: Source[] = [];
   if (mode === "one") {
     const one = sources.find((s) => s.id === sourceId);
@@ -322,7 +325,7 @@ export async function processCaptureQueue(opts?: {
       });
     }
 
-    const sources = await readCollection<Source>("sources", SEED_SOURCES);
+    const sources = await readSourcesCollection();
     const domainLastAt = new Map<string, number>();
 
     try {
@@ -397,7 +400,7 @@ export async function processCaptureQueue(opts?: {
       }
 
       await writeQueue(queue);
-      await writeCollection("sources", sources);
+      await writeSourcesCollection(sources);
       pendingLeft = countOpen(queue);
 
       if (pendingLeft > 0) {
@@ -449,7 +452,7 @@ export async function clearAllCaptures(): Promise<{
   const { removed: artifactsRemoved, failed: artifactsFailed } =
     await clearAllArtifactBundles();
 
-  const sources = await readCollection<Source>("sources", SEED_SOURCES);
+  const sources = await readSourcesCollection();
   let sourcesReset = 0;
   const next = sources.map((s) => {
     if (
@@ -469,7 +472,7 @@ export async function clearAllCaptures(): Promise<{
       lastCaptureRoutes: undefined,
     };
   });
-  await writeCollection("sources", next);
+  await writeSourcesCollection(next);
 
   const reason =
     artifactsFailed > 0

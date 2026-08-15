@@ -177,6 +177,8 @@ export interface Project {
     summary?: string;
     summaryStatus?: "idle" | "running" | "ready" | "failed";
     summaryAt?: string;
+    /** Operator-facing reason when summaryStatus is failed. */
+    summaryError?: string;
     /** Optional operator focus used on the last summarize/rework run. */
     summaryFocus?: string;
     /** Structured fields from the document_summarizer pipeline. */

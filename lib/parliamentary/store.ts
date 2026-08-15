@@ -149,6 +149,34 @@ export async function setPipelineControl(
   return next;
 }
 
+/** Hold download/ASR mid-flight rows so Pause stops new work and parks active jobs. */
+export async function holdActiveTransferJobs(reason = "paused_by_operator"): Promise<number> {
+  return withJobsLock(async () => {
+    const jobs = await readJson<MediaJob[]>("jobs.json", []);
+    let n = 0;
+    const next = jobs.map((j) => {
+      if (j.stage !== "downloading" && j.stage !== "transcribing") return j;
+      n++;
+      const stage =
+        j.stage === "transcribing" && (j.folder || j.videoPath) ? "downloaded" : "queued";
+      return {
+        ...j,
+        stage,
+        progressPct: stage === "downloaded" ? 50 : 0,
+        progressPhase: "idle" as const,
+        progressLabel:
+          j.stage === "downloading"
+            ? "Paused — download held"
+            : "Paused — transcription held",
+        error: undefined,
+        errorDetail: undefined,
+      };
+    });
+    if (n) await writeJson("jobs.json", next);
+    return n;
+  });
+}
+
 export async function readSeeds(): Promise<CrawlSeed[]> {
   return syncVerifiedSources();
 }

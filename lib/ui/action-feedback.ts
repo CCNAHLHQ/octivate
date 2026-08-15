@@ -75,6 +75,26 @@ export function classifyActionError(err: unknown): ClassifiedActionError {
       tone: "error",
     };
   }
+  if (/json_truncated|unterminated string|cut off before it finished|finish_reason=length/i.test(raw)) {
+    return {
+      kind: "openrouter",
+      message:
+        "The model response was cut off — common with large documents. Split the file or rerun; we already retry with a shorter answer automatically.",
+      tone: "error",
+    };
+  }
+  if (
+    /json_fence|markdown fences|unreadable response|invalid structured output|failed to parse json/i.test(
+      raw
+    )
+  ) {
+    return {
+      kind: "openrouter",
+      message:
+        "Structured output failed after retries. Rerun the step; if it continues, shorten the document or question.",
+      tone: "error",
+    };
+  }
   if (/openrouter|timed out|empty response/i.test(raw)) {
     const hint = /empty response/i.test(raw)
       ? " The model spent its token budget on thinking — we retry and fall back automatically; rerun if it persists."
