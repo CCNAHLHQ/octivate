@@ -33,7 +33,7 @@ import { OperatorIntroModal } from "@/components/onboarding/operator-intro-modal
 import { SidebarAccountCard } from "@/components/dashboard/sidebar-account";
 import { SessionGuard } from "@/components/auth/session-guard";
 import { OperatorSupportAlerts } from "@/components/operator/operator-support-alerts";
-import { BrandBackdrop } from "@/components/brand/brand-backdrop";
+import { WorkspaceVideoBackdrop } from "@/components/dashboard/workspace-video-backdrop";
 import { useT } from "@/components/i18n/locale-provider";
 import { WORKSPACE_TOUR_SIDEBAR_EVENT } from "@/lib/onboarding/content";
 import { setLocationHash } from "@/lib/navigation/hash";
@@ -158,9 +158,9 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
   const pathname = usePathname();
   const nav = variant === "operator" ? operatorNav : userNav;
   const isOperatorRoute = pathname.startsWith("/dashboard/operator");
-  /** Project theatre pages keep a clean surface — backdrop lives on list/overview shells. */
+  /** Project theatre pages keep a clean surface — video plate lives on list/overview shells. */
   const isProjectWorkspace = /^\/dashboard\/projects\/[^/]+\/?$/.test(pathname);
-  const showBrandBackdrop = !isProjectWorkspace;
+  const showVideoBackdrop = !isProjectWorkspace;
   const desktopExpanded = !desktopCollapsed;
   const isOperatorUser = sessionUser?.role === "operator";
 
@@ -459,11 +459,11 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
         <div
           className={cn(
             "dash-main-body",
-            showBrandBackdrop && "has-brand-backdrop",
+            showVideoBackdrop && "has-video-backdrop",
             (isOperatorRoute || variant === "operator") && "is-operator-body"
           )}
         >
-          {showBrandBackdrop ? <BrandBackdrop marquee /> : null}
+          {showVideoBackdrop ? <WorkspaceVideoBackdrop /> : null}
           <div className="dash-main-content">{children}</div>
         </div>
 

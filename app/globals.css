@@ -735,47 +735,131 @@
   min-width: 0;
   min-height: 100%;
   isolation: isolate;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-.dash-main-body.has-brand-backdrop > .ws-brand-backdrop {
+/* Fitted hero video plate (landing / agent plate) behind shell content */
+.dash-main-body.has-video-backdrop > .ws-shell-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--ink, #05070f);
+}
+
+.ws-shell-video-el {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.18;
-  z-index: 0;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.7s ease;
 }
 
-.dash-main-body.is-operator-body.has-brand-backdrop > .ws-brand-backdrop {
-  opacity: 0.15;
+.ws-shell-video[data-ready="1"] .ws-shell-video-el {
+  opacity: 1;
 }
 
-[data-theme="light"] .dash-main-body.has-brand-backdrop > .ws-brand-backdrop {
-  opacity: 0.1;
+.ws-shell-video-blur {
+  position: absolute;
+  inset: -2%;
+  z-index: 1;
+  pointer-events: none;
+  background: color-mix(in srgb, var(--ink, #05070f) 14%, transparent);
+  backdrop-filter: blur(2.5px) saturate(1.05);
+  -webkit-backdrop-filter: blur(2.5px) saturate(1.05);
+  animation: ws-shell-blur-breathe 9s ease-in-out infinite;
 }
 
-.dash-main-body.has-brand-backdrop .ws-brand-backdrop-mark {
-  right: clamp(-4%, -1vw, 2%);
-  top: clamp(4%, 6vh, 10%);
-  width: min(38vw, 360px);
-  max-width: 42%;
-  max-height: min(52vh, 420px);
-  object-fit: contain;
+@keyframes ws-shell-blur-breathe {
+  0%,
+  100% {
+    backdrop-filter: blur(2px) saturate(1.02);
+    -webkit-backdrop-filter: blur(2px) saturate(1.02);
+    opacity: 0.85;
+  }
+  45% {
+    backdrop-filter: blur(4.5px) saturate(1.08);
+    -webkit-backdrop-filter: blur(4.5px) saturate(1.08);
+    opacity: 1;
+  }
+  70% {
+    backdrop-filter: blur(3px) saturate(1.04);
+    -webkit-backdrop-filter: blur(3px) saturate(1.04);
+    opacity: 0.92;
+  }
 }
 
-.dash-main-body.has-brand-backdrop .ws-brand-backdrop-word {
-  left: clamp(3%, 4vw, 6%);
-  bottom: clamp(8%, 10vh, 14%);
-  font-size: clamp(2rem, 7vw, 4.25rem);
-  max-width: 70%;
-  overflow: hidden;
-  text-overflow: clip;
+@media (prefers-reduced-motion: reduce) {
+  .ws-shell-video-blur {
+    animation: none;
+    backdrop-filter: blur(3px) saturate(1.04);
+    -webkit-backdrop-filter: blur(3px) saturate(1.04);
+  }
 }
 
-.dash-main-body.has-brand-backdrop .ws-project-psn-marquee {
-  inset: auto 0 clamp(6%, 8vh, 12%) 0;
-  opacity: 0.2;
+.ws-shell-video-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  /* Keep UI readable over the dark Caribbean plate */
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ink, #05070f) 42%, transparent) 0%,
+      color-mix(in srgb, var(--ink, #05070f) 58%, transparent) 42%,
+      color-mix(in srgb, var(--ink, #05070f) 78%, transparent) 100%
+    ),
+    radial-gradient(
+      ellipse at 72% 18%,
+      color-mix(in srgb, var(--violet, #8950ee) 12%, transparent),
+      transparent 55%
+    );
+}
+
+.dash-main-body.is-operator-body.has-video-backdrop .ws-shell-video-scrim {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ink, #05070f) 48%, transparent) 0%,
+      color-mix(in srgb, var(--ink, #05070f) 64%, transparent) 45%,
+      color-mix(in srgb, var(--ink, #05070f) 82%, transparent) 100%
+    ),
+    radial-gradient(
+      ellipse at 70% 16%,
+      color-mix(in srgb, var(--violet, #8950ee) 10%, transparent),
+      transparent 52%
+    );
+}
+
+[data-theme="light"] .dash-main-body.has-video-backdrop .ws-shell-video-scrim {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, #f4f6fb 72%, transparent) 0%,
+      color-mix(in srgb, #f4f6fb 78%, transparent) 45%,
+      color-mix(in srgb, #f4f6fb 88%, transparent) 100%
+    ),
+    radial-gradient(
+      ellipse at 70% 18%,
+      color-mix(in srgb, var(--violet, #8950ee) 8%, transparent),
+      transparent 55%
+    );
+}
+
+[data-theme="light"] .dash-main-body.has-video-backdrop .ws-shell-video-el {
+  opacity: 0;
+  filter: saturate(0.85) brightness(1.08);
+}
+
+[data-theme="light"] .dash-main-body.has-video-backdrop .ws-shell-video[data-ready="1"] .ws-shell-video-el {
+  opacity: 0.55;
 }
 
 .dash-main-content {
