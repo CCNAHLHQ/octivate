@@ -165,7 +165,7 @@ export async function readDocumentBytes(projectId: string, docId: string): Promi
 export async function extractDocumentText(
   projectId: string,
   doc: ProjectDocument,
-  maxChars = 12_000
+  maxChars = 80_000
 ): Promise<{ text: string; mode: "text" | "binary_meta" }> {
   const bytes = await readDocumentBytes(projectId, doc.id);
   const ext = path.extname(doc.name).toLowerCase();

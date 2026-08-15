@@ -23,6 +23,7 @@
     "deploy:live": "node --env-file=.env scripts/deploy-live.mjs",
     "ship": "node --env-file=.env scripts/deploy-live.mjs",
     "test:local-evidence": "node --experimental-strip-types --import ./server/parl-ts-register.mjs scripts/test-local-evidence.mjs",
+    "test:pdf-extract": "node --experimental-strip-types --import ./server/parl-ts-register.mjs scripts/test-pdf-extract.mjs",
     "sources:import": "node scripts/import-source-registry.mjs",
     "export:tokenize": "node scripts/tokenize-export-template.mjs",
     "parl:worker": "node --env-file=.env --experimental-strip-types --import ./server/parl-ts-register.mjs server/parl-media-worker.mjs"
