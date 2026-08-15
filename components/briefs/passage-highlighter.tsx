@@ -39,9 +39,12 @@ export function PassageHighlighter({
 export function PassageQuoteList({
   sources,
   className,
+  limit,
 }: {
   sources: BriefCitedSource[];
   className?: string;
+  /** Cap quotes shown; omit for full fidelity. */
+  limit?: number;
 }) {
   const rows = sources.flatMap((s) =>
     (s.passages || []).map((p, i) => ({
@@ -53,9 +56,10 @@ export function PassageQuoteList({
     }))
   );
   if (!rows.length) return null;
+  const shown = limit != null ? rows.slice(0, limit) : rows;
   return (
     <ul className={cn("brief-passage-list", className)}>
-      {rows.slice(0, 8).map((r) => (
+      {shown.map((r) => (
         <li key={r.key}>
           <div className="brief-passage-meta">
             <span>{r.label}</span>

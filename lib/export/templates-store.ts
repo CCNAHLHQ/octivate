@@ -11,7 +11,27 @@ export function sortTemplates(items: ExportTemplate[]) {
 }
 
 export async function listExportTemplates() {
-  return sortTemplates(await readCollection<ExportTemplate>("export-templates", SEED_EXPORT_TEMPLATES));
+  const items = await readCollection<ExportTemplate>("export-templates", SEED_EXPORT_TEMPLATES);
+  // Keep non-imported seed shells in sync with code so brief redesigns land without a manual reset.
+  let dirty = false;
+  const merged = items.map((item) => {
+    const seed = SEED_EXPORT_TEMPLATES.find((s) => s.id === item.id);
+    if (!seed || item.imported) return item;
+    if (item.htmlBody === seed.htmlBody) return item;
+    dirty = true;
+    return {
+      ...item,
+      htmlBody: seed.htmlBody,
+      description: seed.description,
+      subjectPreset: seed.subjectPreset,
+      campaignSubject: seed.campaignSubject,
+      previewText: seed.previewText,
+      supportsFormats: seed.supportsFormats,
+      updatedAt: seed.updatedAt,
+    };
+  });
+  if (dirty) await writeCollection("export-templates", merged);
+  return sortTemplates(merged);
 }
 
 export async function findExportTemplate(id: string) {

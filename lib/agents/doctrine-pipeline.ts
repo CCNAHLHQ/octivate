@@ -162,6 +162,7 @@ async function loadSourceBundle(
   } = await loadLocalEvidenceBundle(previewSelected, project, question, {
     includeParl: true,
     includeUploads: true,
+    maxChars: 40_000,
   });
 
   let selected = selectCatalogSources(list, project, 8);
@@ -170,21 +171,31 @@ async function loadSourceBundle(
   if (localOnly) {
     const withText = list.filter((s) => sourcesWithLocalText.has(s.id));
     selected = selectCatalogSources(withText.length ? withText : [], project, 8);
-    // Also include parl/upload synthetic ids present in evidence but not yet in filter set
+  } else {
+    // Soft boost: put local-text sources first within the ranked set
+    selected = [
+      ...selected.filter((s) => sourcesWithLocalText.has(s.id)),
+      ...selected.filter((s) => !sourcesWithLocalText.has(s.id)),
+    ].slice(0, 8);
+  }
+
+  // Always fold project uploads / local evidence stubs into the working set so
+  // cited sources and claims track real documents — not only seed catalog rows.
+  {
     const extra = allEvidence
       .filter((e) => e.sourceId && !selected.some((s) => s.id === e.sourceId))
       .map((e) => {
         const fromList = list.find((s) => s.id === e.sourceId);
         if (fromList) return fromList;
-        // Upload / ephemeral — build a stub Source for catalog records
+        const isUpload =
+          e.routes?.includes("project-upload") ||
+          e.sourceId!.startsWith(`upload_${project.id}_`);
         return {
           id: e.sourceId!,
           title: e.title,
-          tier: 3,
+          tier: isUpload ? 1 : 3,
           country: project.country,
-          type: e.routes?.includes("project-upload")
-            ? "Project upload"
-            : "Local evidence",
+          type: isUpload ? "Project upload" : "Local evidence",
           health: "healthy" as const,
           lastChecked: new Date().toISOString(),
           sectorTags: [project.sector],
@@ -195,18 +206,16 @@ async function loadSourceBundle(
         } satisfies Source;
       });
     const seen = new Set(selected.map((s) => s.id));
-    for (const s of extra) {
+    const uploadsFirst = [
+      ...extra.filter((s) => s.type === "Project upload"),
+      ...extra.filter((s) => s.type !== "Project upload"),
+    ];
+    for (const s of uploadsFirst) {
       if (seen.has(s.id)) continue;
-      selected.push(s);
+      selected.unshift(s);
       seen.add(s.id);
-      if (selected.length >= 10) break;
+      if (selected.length >= 14) break;
     }
-  } else {
-    // Soft boost: put local-text sources first within the ranked set
-    selected = [
-      ...selected.filter((s) => sourcesWithLocalText.has(s.id)),
-      ...selected.filter((s) => !sourcesWithLocalText.has(s.id)),
-    ].slice(0, 8);
   }
 
   const fromCatalog = catalogToRecords(selected, project);
@@ -223,7 +232,8 @@ async function loadSourceBundle(
     (e) =>
       !e.sourceId ||
       selectedIds.has(e.sourceId) ||
-      e.sourceId.startsWith(`upload_${project.id}_`)
+      e.sourceId.startsWith(`upload_${project.id}_`) ||
+      e.routes?.includes("project-upload")
   );
 
   // Ensure capture-only fallback if index missed a selected source
@@ -236,6 +246,7 @@ async function loadSourceBundle(
         projectId: project.id,
         question,
         projectSector: project.sector,
+        maxChars: 40_000,
       });
       evidence.push(...extra);
       for (const e of extra) {
@@ -244,7 +255,17 @@ async function loadSourceBundle(
     }
   }
 
-  const records = [...fromCatalog, ...trends].slice(0, 12).map((r) => ({
+  // Prefer upload / local-text records ahead of seed catalog + trends
+  const rankedRecords = [...fromCatalog].sort((a, b) => {
+    const aUp = a.source_id.startsWith(`upload_${project.id}_`) ? 0 : 1;
+    const bUp = b.source_id.startsWith(`upload_${project.id}_`) ? 0 : 1;
+    if (aUp !== bUp) return aUp - bUp;
+    const aLocal = sourcesWithLocalText.has(a.source_id) ? 0 : 1;
+    const bLocal = sourcesWithLocalText.has(b.source_id) ? 0 : 1;
+    return aLocal - bLocal;
+  });
+
+  const records = [...rankedRecords, ...(localOnly ? [] : trends)].slice(0, 16).map((r) => ({
     ...r,
     decision_relevance:
       enrichRecordRelevance(r.source_id, evidence, r.decision_relevance) ||
@@ -343,7 +364,7 @@ async function runAgent<T extends CommonAgentOutput>(
   const system = buildAgentSystemPrompt(agent, depth, "common_agent_output.schema.json");
 
   const docContext = docBundle
-    ? formatDocumentBundleForAgent(docBundle, 7_000)
+    ? formatDocumentBundleForAgent(docBundle, 18_000)
     : docs.length
       ? `Uploaded documents provided by the operator (use as primary evidence when cited):\n${docs
           .map((d) => {
@@ -526,7 +547,7 @@ function buildCitedSources(
   opts?: { localOnlySources?: boolean }
 ): BriefCitedSource[] {
   const bySource = new Map(evidence.map((e) => [e.sourceId || "", e]));
-  const base: BriefCitedSource[] = records.slice(0, 8).map((s, i) => {
+  const base: BriefCitedSource[] = records.slice(0, 16).map((s, i) => {
     const ev = bySource.get(s.source_id);
     const matchedKeywords = (ev?.labels || [])
       .filter((l) => (l.hitCount || 0) > 0 || l.kind === "relevance")
@@ -588,35 +609,35 @@ function assembleBrief(
         )
       : 50);
 
-  const evidenceGaps = coerceTextList([
-    ...outputs.flatMap((o) => o.evidence_gaps || []),
-    ...(docBundle?.gaps || []),
-  ]);
-  const reviewFlags = coerceTextList(outputs.flatMap((o) => o.review_flags || []));
-  if (!psnInteractions.length) {
-    reviewFlags.push("psn_interactions_unavailable");
-    if (!evidenceGaps.some((g) => /psn|interaction/i.test(g))) {
-      evidenceGaps.push("No consequential PSN interaction could be evidenced from lens outputs");
-    }
-  }
-
   const topInteraction = psnInteractions[0];
   const judgement = recommendation?.analytical_judgement?.trim();
   const findingCount =
     powerFindings.length + systemsFindings.length + narrativeFindings.length;
-  const thinEvidence = findingCount === 0;
+  const hintCount =
+    (docBundle?.psnHints.power.length || 0) +
+    (docBundle?.psnHints.systems.length || 0) +
+    (docBundle?.psnHints.narratives.length || 0);
+  const uploadCount = docBundle?.documents.length || project.documents?.length || 0;
+  const hasGroundedContent =
+    findingCount > 0 ||
+    hintCount > 0 ||
+    psnInteractions.length > 0 ||
+    Boolean(judgement) ||
+    uploadCount > 0;
+  /** True empty theatre — no lenses, no uploads, no hints. */
+  const thinEvidence = !hasGroundedContent;
   const executiveSummary =
     judgement ||
     [
       `Decision: ${question}`,
       `Theatre: ${project.name} · ${project.country} · ${project.sector} · depth ${depth}.`,
       thinEvidence
-        ? "Octivate (octivate.io): uploaded material and available sources did not yield decision-grade findings for this theatre. We are not inventing coverage — refine the question, add on-scope documents, or broaden monitoring, and we will reassess respectfully."
+        ? "Octivate could not assemble decision-grade findings from the available corpus for this theatre. Refine scope or evidence and rerun — we will not invent coverage."
         : topInteraction
           ? `Key interaction: ${topInteraction.causal_interaction}`
-          : `${findingCount} material finding(s) across PSN lenses; interaction synthesis incomplete.`,
-      docBundle?.documents.length
-        ? `Document bundle: ${docBundle.documents.length} upload(s) conditioned on the decision question.`
+          : `${Math.max(findingCount, hintCount)} material signal(s) across PSN lenses.`,
+      uploadCount
+        ? `Document bundle: ${uploadCount} upload(s) conditioned on the decision question.`
         : "",
       depthDisclaimer(depth),
     ]
@@ -637,22 +658,48 @@ function assembleBrief(
     localOnlySources,
   });
 
+  const STOCK_GAP_RE =
+    /add documents that speak directly|Keep the decision question specific to the theatre|Off-scope or unrelated uploads are not treated/i;
+
+  const evidenceGaps = coerceTextList([
+    ...outputs.flatMap((o) => o.evidence_gaps || []),
+    ...(docBundle?.gaps || []),
+  ]).filter((g) => !STOCK_GAP_RE.test(g));
+  const reviewFlags = coerceTextList(outputs.flatMap((o) => o.review_flags || []));
+  if (!psnInteractions.length) {
+    reviewFlags.push("psn_interactions_unavailable");
+    if (!evidenceGaps.some((g) => /psn|interaction/i.test(g))) {
+      evidenceGaps.push("No consequential PSN interaction could be evidenced from lens outputs");
+    }
+  }
+
   const defaultGaps = thinEvidence
     ? [
-        `Octivate (octivate.io): evidence does not yet support a full ${project.country} / ${project.sector} read for “${project.name}”. Off-scope or unrelated uploads are not treated as theatre evidence.`,
+        `Evidence does not yet support a full ${project.country} / ${project.sector} read for "${project.name}".`,
       ]
     : ["See evidence gaps in structured findings"];
 
+  const fromInteractions = psnInteractions
+    .map((p) => p.decision_effect?.trim())
+    .filter((t): t is string => Boolean(t))
+    .slice(0, caps.max_options);
+
+  const fromHints = (docBundle?.recommendationHints || [])
+    .map((h) => h.trim())
+    .filter((h) => h && !STOCK_GAP_RE.test(h) && !/Octivate recommendation:/i.test(h))
+    .slice(0, caps.max_options);
+
   const recommendations = options.length
     ? options.map((o) => `${o.label}: ${o.description}`)
-    : thinEvidence
-      ? [
-          "Octivate recommendation: add documents that speak directly to this country and sector, then rerun the doctrine pipeline.",
-          "Keep the decision question specific to the theatre so lenses can ground findings in evidence.",
-        ]
-      : docBundle?.recommendationHints?.length
-        ? docBundle.recommendationHints.slice(0, caps.max_options)
-        : ["Review structured findings and evidence gaps before commitment"];
+    : fromInteractions.length
+      ? fromInteractions.map((t, i) => `Option ${i + 1}: ${t}`)
+      : fromHints.length
+        ? fromHints
+        : thinEvidence
+          ? [
+              "No decision options could be grounded yet — once on-scope evidence is available, rerun to produce option-distinct recommendations.",
+            ]
+          : ["Review structured findings, PSN interactions, and evidence gaps before commitment"];
 
   return {
     id: uid("brief"),
@@ -901,7 +948,7 @@ export async function runDoctrinePipeline(
     const evidenceCtxWithDocs = [
       evidenceCtx,
       docBundle.documents.length
-        ? `\n\nDocument evidence bundle (question-conditioned):\n${formatDocumentBundleForAgent(docBundle, 5_000)}`
+        ? `\n\nDocument evidence bundle (question-conditioned):\n${formatDocumentBundleForAgent(docBundle, 14_000)}`
         : "",
     ]
       .filter(Boolean)
@@ -1047,8 +1094,9 @@ export async function runDoctrinePipeline(
         "Draft analytical judgement, options, tradeoffs, and reassessment triggers for the named theatre.",
         "Keep recommendations distinct from analysis. Do not over-claim certainty.",
         "Recommendations must be informational: clear options, tradeoffs, and what evidence supports each — so the operator can decide.",
-        "If lenses returned insufficient_evidence or empty findings, say so clearly on behalf of Octivate (octivate.io): be useful, respectful, and do not invent options that the evidence cannot support.",
-        `Depth disclaimer for the user: ${depthDisclaimer(depth)}`,
+        "When uploads or lens findings exist, ground every option in that evidence. Do NOT emit stock advice like “add documents that speak to this country/sector” or “keep the decision question specific to the theatre” — those are system UX messages, not decision recommendations.",
+        "If lenses returned insufficient_evidence AND there is truly no usable upload/source corpus, say coverage is insufficient once in the judgement — still avoid boilerplate recommendation lines.",
+        `Depth disclaimer for the user: ${depthDisclaimer(depth)}.`,
         `Respect max options: ${depthCaps.max_options}.`,
         docBundle.recommendationHints.length
           ? `Hints from uploaded document bundle (ground options in these when supported):\n${docBundle.recommendationHints

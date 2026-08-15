@@ -89,7 +89,7 @@ export async function loadLocalEvidenceBundle(
   sourcesWithLocalText: Set<string>;
   manifest: EvidenceIndexManifest;
 }> {
-  const maxChars = opts?.maxChars ?? 14_000;
+  const maxChars = opts?.maxChars ?? 40_000;
   const evidence: EvidenceDocument[] = [];
   const sourcesWithLocalText = new Set<string>();
   const entries: EvidenceIndexEntry[] = [];

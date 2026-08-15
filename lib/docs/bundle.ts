@@ -159,7 +159,7 @@ export async function buildDocumentEvidenceBundle(
         s.decision_relevance ? `Decision relevance: ${s.decision_relevance}` : null,
         s.key_points.length ? `Key points:\n${s.key_points.map((k) => `- ${k}`).join("\n")}` : null,
         s.passages.length
-          ? `Grounding passages:\n${s.passages.map((p) => `- ${p.slice(0, 500)}`).join("\n")}`
+          ? `Grounding passages:\n${s.passages.map((p) => `- ${p.slice(0, 2_400)}`).join("\n")}`
           : null,
         s.gaps.length ? `Gaps: ${s.gaps.join("; ")}` : null,
         s.risk_flags.length ? `Risk flags: ${s.risk_flags.join("; ")}` : null,
@@ -176,14 +176,14 @@ export async function buildDocumentEvidenceBundle(
     projectId: project.id,
     method: "structured_merge",
     documents: slices,
-    theatreBrief: sanitizePlainText(theatreBrief, 28_000),
-    recommendationHints: recommendationHints.slice(0, 20).map((x) => sanitizePlainText(x, 800)),
-    gaps: gaps.slice(0, 20),
-    riskFlags: riskFlags.slice(0, 16),
+    theatreBrief: sanitizePlainText(theatreBrief, 72_000),
+    recommendationHints: recommendationHints.slice(0, 20).map((x) => sanitizePlainText(x, 1_600)),
+    gaps: gaps.slice(0, 24),
+    riskFlags: riskFlags.slice(0, 20),
     psnHints: {
-      power: psnHints.power.slice(0, 6),
-      systems: psnHints.systems.slice(0, 6),
-      narratives: psnHints.narratives.slice(0, 6),
+      power: psnHints.power.slice(0, 8),
+      systems: psnHints.systems.slice(0, 8),
+      narratives: psnHints.narratives.slice(0, 8),
     },
     charCount: theatreBrief.length,
   };
@@ -192,7 +192,7 @@ export async function buildDocumentEvidenceBundle(
 /** Compact block for runAgent document context. */
 export function formatDocumentBundleForAgent(
   bundle: DocumentEvidenceBundle,
-  maxChars = 6_000
+  maxChars = 18_000
 ): string {
   return bundle.theatreBrief.slice(0, maxChars);
 }

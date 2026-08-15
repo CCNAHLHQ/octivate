@@ -48,6 +48,27 @@ export type ExportRiskFactor = {
 
 export type ExportIndexedText = { index: number; text: string };
 
+/** Full-text PSN interaction for card-stack export layouts (not cramped tables). */
+export type ExportInteractionCard = {
+  index: number;
+  causal: string;
+  effect: string;
+  power: string;
+  systems: string;
+  narrative: string;
+  confidence: string;
+  confidenceClass: string;
+};
+
+/** Weighted confidence score breakdown bars. */
+export type ExportScorePart = {
+  key: string;
+  label: string;
+  value: string;
+  percent: number;
+  barSvg: string;
+};
+
 export type ExportDocumentContext = {
   meta: {
     title: string;
@@ -88,7 +109,11 @@ export type ExportDocumentContext = {
   systemsCount: number;
   narrativesCount: number;
   psnRows: { power: string; systems: string; narratives: string }[];
+  /** Full-text interaction cards — prefer over 5-column tables. */
+  interactionCards: ExportInteractionCard[];
   riskFactors: ExportRiskFactor[];
+  /** Score breakdown parts from ScoringPolicy (when present). */
+  scoreParts: ExportScorePart[];
   psnCoverage: ExportChartSegment[];
   charts: ExportChart[];
   tables: ExportTable[];
@@ -109,6 +134,8 @@ export type ExportDocumentContext = {
   hasMonitoring: boolean;
   hasTradeoffs: boolean;
   hasConfidenceRows: boolean;
+  hasInteractionCards: boolean;
+  hasScoreBreakdown: boolean;
   hasCitedSources: boolean;
   citedSources: {
     label: string;
@@ -116,6 +143,7 @@ export type ExportDocumentContext = {
     url: string;
     snippet: string;
     passageCount: number;
+    hasPassages: boolean;
     passages: { text: string }[];
   }[];
   recommendationsTruncated: number;
@@ -124,8 +152,18 @@ export type ExportDocumentContext = {
   monitoringTruncated: number;
 };
 
-const MAX_RECS = 8;
-const MAX_GAPS = 8;
+/** Brand palette — matches landing / workspace tokens. */
+const BRAND = {
+  violet: "#8950ee",
+  blue: "#4d9df7",
+  coral: "#ed6d6c",
+  ink: "#070b17",
+  track: "#EEF1F7",
+  trackStroke: "#D8DEE9",
+} as const;
+
+const MAX_RECS = 12;
+const MAX_GAPS = 16;
 const MAX_RISK = 10;
 const MAX_MONITOR = 10;
 
@@ -238,10 +276,10 @@ function findingScore(f: MaterialFinding | Record<string, unknown>): number {
 }
 
 const TONE_FILL: Record<"hot" | "warn" | "ok" | "", string> = {
-  hot: "#F05658",
+  hot: BRAND.coral,
   warn: "#F08A3C",
   ok: "#16a34a",
-  "": "#3B2BD6",
+  "": BRAND.violet,
 };
 
 /** Explicit-geometry bar so html-to-docx / PPTX keep scored widths. */
@@ -250,7 +288,7 @@ function renderBarSvg(percent: number, color: string): string {
   const fillW = Math.max(pct <= 0 ? 0 : 2, Math.round((pct / 100) * 220));
   return [
     `<svg class="bar-svg" width="220" height="18" viewBox="0 0 220 18" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${pct}%">`,
-    `<rect x="0" y="0" width="220" height="18" rx="9" fill="#EEF1F7" stroke="#D8DEE9"/>`,
+    `<rect x="0" y="0" width="220" height="18" rx="9" fill="${BRAND.track}" stroke="${BRAND.trackStroke}"/>`,
     pct > 0
       ? `<rect x="0" y="0" width="${fillW}" height="18" rx="9" fill="${color}"/>`
       : "",
@@ -266,13 +304,15 @@ function renderGaugeSvg(confidence: number, needleDeg: number): string {
   // Needle angle: -90 (left / 0%) → +90 (right / 100%), matching CSS needleDeg.
   const tipX = 105 + 78 * Math.sin((needleDeg * Math.PI) / 180);
   const tipY = 105 - 78 * Math.cos((needleDeg * Math.PI) / 180);
+  const arcColor =
+    pct >= 70 ? "#16a34a" : pct >= 45 ? BRAND.blue : BRAND.coral;
   return [
     `<svg class="gauge-svg" width="210" height="120" viewBox="0 0 210 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Confidence ${pct}%">`,
-    `<path d="M15 105 A90 90 0 0 1 195 105" fill="none" stroke="#E2E8F0" stroke-width="18" stroke-linecap="round"/>`,
-    `<path d="M15 105 A90 90 0 0 1 195 105" fill="none" stroke="#16a34a" stroke-width="18" stroke-linecap="round" stroke-dasharray="${filled} ${arcLen.toFixed(1)}"/>`,
-    `<line x1="105" y1="105" x2="${tipX.toFixed(1)}" y2="${tipY.toFixed(1)}" stroke="#16103D" stroke-width="3" stroke-linecap="round"/>`,
-    `<circle cx="105" cy="105" r="6" fill="#16103D"/>`,
-    `<text x="105" y="98" text-anchor="middle" font-size="22" font-weight="800" fill="#16103D">${pct}%</text>`,
+    `<path d="M15 105 A90 90 0 0 1 195 105" fill="none" stroke="${BRAND.track}" stroke-width="18" stroke-linecap="round"/>`,
+    `<path d="M15 105 A90 90 0 0 1 195 105" fill="none" stroke="${arcColor}" stroke-width="18" stroke-linecap="round" stroke-dasharray="${filled} ${arcLen.toFixed(1)}"/>`,
+    `<line x1="105" y1="105" x2="${tipX.toFixed(1)}" y2="${tipY.toFixed(1)}" stroke="${BRAND.ink}" stroke-width="3" stroke-linecap="round"/>`,
+    `<circle cx="105" cy="105" r="6" fill="${BRAND.ink}"/>`,
+    `<text x="105" y="98" text-anchor="middle" font-size="22" font-weight="800" fill="${BRAND.ink}">${pct}%</text>`,
     `</svg>`,
   ].join("");
 }
@@ -373,7 +413,7 @@ function buildRiskFactors(brief: Brief): { items: ExportRiskFactor[]; truncated:
       score >= 7 ? "hot" : score >= 4.5 ? "warn" : "ok";
     const fillColor = TONE_FILL[tone];
     factors.push({
-      label: f.label.slice(0, 64),
+      label: f.label.slice(0, 120),
       score: score.toFixed(1),
       percent,
       tone,
@@ -481,12 +521,12 @@ function buildCharts(brief: Brief): ExportChart[] {
       title: "Confidence & risk profile",
       centerLabel: "Assessment mix",
       segments: [
-        { label: "Confidence", value: confidence, percent: confidence, color: "#0EA5A4" },
+        { label: "Confidence", value: confidence, percent: confidence, color: BRAND.violet },
         {
           label: "Risk index",
           value: riskMap[brief.riskLevel],
           percent: riskMap[brief.riskLevel],
-          color: "#E85545",
+          color: BRAND.coral,
         },
         ...(brief.recommendations.length
           ? [
@@ -494,7 +534,7 @@ function buildCharts(brief: Brief): ExportChart[] {
                 label: "Recommendations",
                 value: brief.recommendations.length,
                 percent: Math.min(brief.recommendations.length * 20, 100),
-                color: "#5B35D6",
+                color: BRAND.blue,
               },
             ]
           : []),
@@ -508,21 +548,21 @@ function buildCharts(brief: Brief): ExportChart[] {
         label: "Power",
         value: powerN,
         percent: coveragePercent(powerN, scaleMax),
-        color: "#5B35D6",
+        color: BRAND.violet,
         isZero: powerN === 0,
       },
       {
         label: "Systems",
         value: systemsN,
         percent: coveragePercent(systemsN, scaleMax),
-        color: "#1A7FD4",
+        color: BRAND.blue,
         isZero: systemsN === 0,
       },
       {
         label: "Narratives",
         value: narrativesN,
         percent: coveragePercent(narrativesN, scaleMax),
-        color: "#D6454A",
+        color: BRAND.coral,
         isZero: narrativesN === 0,
       },
     ] as ExportChartSegment[]
@@ -530,7 +570,7 @@ function buildCharts(brief: Brief): ExportChart[] {
     .filter((seg) => !seg.isZero && seg.value > 0)
     .map((seg) => ({
       ...seg,
-      barSvg: renderBarSvg(seg.percent, seg.color || "#5B35D6"),
+      barSvg: renderBarSvg(seg.percent, seg.color || BRAND.violet),
     }));
 
   if (psnSegs.length) {
@@ -551,7 +591,7 @@ function buildConfidenceRows(brief: Brief) {
     ...(brief.structuredFindings?.power || []),
     ...(brief.structuredFindings?.systems || []),
     ...(brief.structuredFindings?.narratives || []),
-  ].slice(0, 6);
+  ].slice(0, 8);
 
   if (findings.length) {
     return findings.map((f) => {
@@ -571,14 +611,83 @@ function buildConfidenceRows(brief: Brief) {
     });
   }
 
+  const judgment =
+    brief.analyticalJudgement?.trim() ||
+    brief.executiveSummary?.trim() ||
+    "Judgement pending operator review.";
+
   return [
     {
-      judgment: brief.analyticalJudgement || brief.executiveSummary.slice(0, 160),
+      judgment,
       basis: `${brief.country} · ${brief.sector}`,
       confidence: brief.confidence >= 75 ? "high" : brief.confidence >= 55 ? "moderate" : "low",
       pillClass: brief.confidence >= 75 ? "h" : brief.confidence >= 55 ? "m" : "l",
     },
   ];
+}
+
+function buildInteractionCards(brief: Brief): ExportInteractionCard[] {
+  const rows = brief.psnInteractions || [];
+  return rows.map((row, i) => {
+    const conf = String(row.confidence || "moderate");
+    return {
+      index: i + 1,
+      causal: String(row.causal_interaction || "").trim(),
+      effect: String(row.decision_effect || "").trim(),
+      power: String(row.power_component || "").trim(),
+      systems: String(row.systems_component || "").trim(),
+      narrative: String(row.narrative_component || "").trim(),
+      confidence: conf.replace(/_/g, " "),
+      confidenceClass: confidenceToPill(conf),
+    };
+  });
+}
+
+function buildScoreParts(brief: Brief): ExportScorePart[] {
+  const breakdown = brief.scoreBreakdown;
+  if (!breakdown?.parts) return [];
+
+  const labels: { key: keyof typeof breakdown.parts; label: string; color: string }[] = [
+    { key: "sourceScore", label: "Source quality", color: BRAND.violet },
+    { key: "labelMatch", label: "Label match", color: BRAND.blue },
+    { key: "agentConf", label: "Agent confidence", color: BRAND.violet },
+    { key: "triangulation", label: "Triangulation", color: BRAND.blue },
+    { key: "freshness", label: "Freshness", color: BRAND.coral },
+  ];
+
+  return labels.map(({ key, label, color }) => {
+    const raw = Math.max(0, Math.round(Number(breakdown.parts[key] ?? 0)));
+    const percent = Math.max(0, Math.min(100, raw));
+    return {
+      key,
+      label,
+      value: String(raw),
+      percent,
+      barSvg: renderBarSvg(percent, color),
+    };
+  });
+}
+
+/** Prefer full grounded passages; keep a generous snippet for print fidelity. */
+function buildCitedSources(brief: Brief) {
+  return (brief.citedSources || []).map((s) => {
+    const passages = (s.passages || [])
+      .map((p) => ({ text: String(p.text || "").trim() }))
+      .filter((p) => p.text)
+      .slice(0, 8);
+    const snippet = String(
+      s.snippet || passages[0]?.text || ""
+    ).trim();
+    return {
+      label: s.label,
+      title: s.title,
+      url: s.url || "",
+      snippet,
+      passageCount: s.passageCount ?? passages.length,
+      hasPassages: passages.length > 0,
+      passages,
+    };
+  });
 }
 
 function buildFindingsTable(brief: Brief): ExportTable | null {
@@ -631,24 +740,8 @@ export function buildExportContext(opts: {
   const subject = resolveSubject(template, brief);
 
   const findingsTable = buildFindingsTable(brief);
+  // Prefer interactionCards for PSN interactions — keep only the simpler findings table here.
   const tables: ExportTable[] = findingsTable ? [findingsTable] : [];
-
-  if (brief.psnInteractions?.length) {
-    tables.push({
-      id: "psn-interactions",
-      title: "PSN interactions",
-      headers: ["Power", "Systems", "Narrative", "Interaction", "Effect"],
-      rows: brief.psnInteractions.map((row) => ({
-        cells: [
-          row.power_component,
-          row.systems_component,
-          row.narrative_component,
-          row.causal_interaction,
-          row.decision_effect,
-        ],
-      })),
-    });
-  }
 
   const recs = buildRecommendations(brief);
   const gaps = buildGaps(brief);
@@ -656,6 +749,8 @@ export function buildExportContext(opts: {
   const risk = buildRiskFactors(brief);
   const charts = buildCharts(brief);
   const psnRows = buildPsnRows(brief);
+  const interactionCards = buildInteractionCards(brief);
+  const scoreParts = buildScoreParts(brief);
   const tradeoffs = indexed(brief.tradeoffs || []);
   const confidenceRows = buildConfidenceRows(brief);
   const confidence = Math.max(0, Math.min(100, brief.confidence || 0));
@@ -666,7 +761,8 @@ export function buildExportContext(opts: {
   const showRiskBars = risk.items.length > 0;
   const showPsnCoverage = psnCoverage.length > 0;
   const showGauge = confidence > 0;
-  const showRiskSection = showRiskBars || showPsnCoverage || showGauge;
+  const showRiskSection =
+    showRiskBars || showPsnCoverage || showGauge || scoreParts.length > 0 || confidenceRows.length > 0;
 
   const decisionQuestion =
     session?.question?.trim() ||
@@ -675,14 +771,7 @@ export function buildExportContext(opts: {
 
   const projectName = project?.name?.trim() || brief.title;
 
-  const cited = (brief.citedSources || []).map((s) => ({
-    label: s.label,
-    title: s.title,
-    url: s.url || "",
-    snippet: s.snippet || s.passages?.[0]?.text || "",
-    passageCount: s.passageCount ?? s.passages?.length ?? 0,
-    passages: (s.passages || []).slice(0, 3).map((p) => ({ text: p.text })),
-  }));
+  const cited = buildCitedSources(brief);
 
   return {
     meta: {
@@ -729,7 +818,9 @@ export function buildExportContext(opts: {
     systemsCount: brief.systems.length,
     narrativesCount: brief.narratives.length,
     psnRows,
+    interactionCards,
     riskFactors: risk.items,
+    scoreParts,
     psnCoverage,
     charts,
     tables,
@@ -746,6 +837,8 @@ export function buildExportContext(opts: {
     hasMonitoring: monitoring.items.length > 0,
     hasTradeoffs: tradeoffs.length > 0,
     hasConfidenceRows: confidenceRows.length > 0,
+    hasInteractionCards: interactionCards.length > 0,
+    hasScoreBreakdown: scoreParts.length > 0,
     hasCitedSources: cited.length > 0,
     citedSources: cited,
     recommendationsTruncated: recs.truncated,

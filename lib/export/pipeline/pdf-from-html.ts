@@ -5,13 +5,12 @@ export async function pdfFromHtml(documentHtml: string): Promise<Buffer> {
   const page = await browser.newPage();
   try {
     await page.setContent(documentHtml, { waitUntil: "load", timeout: 45_000 });
-    // Premade brief CSS already pads .page/.content — keep Puppeteer margins tight
-    // so violet/coral fills and spacing are not doubled on PDF pages.
+    // Brief CSS pads the plate; leave a little Chromium margin for print breathing room.
     const pdf = await page.pdf({
       format: "A4",
       printBackground: true,
       preferCSSPageSize: false,
-      margin: { top: "8mm", right: "8mm", bottom: "8mm", left: "8mm" },
+      margin: { top: "12mm", right: "11mm", bottom: "12mm", left: "11mm" },
     });
     return Buffer.from(pdf);
   } finally {

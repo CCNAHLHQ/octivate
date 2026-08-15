@@ -47,7 +47,7 @@ export async function evidenceFromCapture(
   const bundle = await readLatestCaptureBundle(source.id);
   if (!bundle?.document?.text?.trim()) return null;
 
-  const maxChars = opts?.maxChars ?? 14_000;
+  const maxChars = opts?.maxChars ?? 40_000;
   const text = bundle.document.text.slice(0, maxChars);
   const passport = bundle.document.passport;
   const registry = bundle.meta?.registry;
@@ -90,7 +90,7 @@ export async function evidenceFromCapture(
 /** Load evidence docs for a set of curated sources (best-effort). */
 export async function loadCaptureEvidenceForSources(
   sources: Source[],
-  opts?: { projectId?: string; question?: string; projectSector?: string }
+  opts?: { projectId?: string; question?: string; projectSector?: string; maxChars?: number }
 ): Promise<EvidenceDocument[]> {
   const out: EvidenceDocument[] = [];
   for (const source of sources) {

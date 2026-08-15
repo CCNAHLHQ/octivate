@@ -10,7 +10,6 @@ import { BriefExportBar } from "@/components/briefs/brief-export-bar";
 import { briefBadgeTone } from "@/components/briefs/brief-card";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ConfidenceGauge } from "@/components/ui/charts";
 import { Skeleton } from "@/components/ui/progress";
 import { apiFetch, ApiError, invalidateApiCache } from "@/lib/api-client";
 import { notifyWorkspaceRefresh } from "@/lib/workspace-events";
@@ -128,15 +127,16 @@ export default function BriefDetailPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <div className="flex flex-wrap items-start justify-between gap-4">
+            <header className="brief-page-header">
               <div>
                 <h1 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
                   {brief.title}
                 </h1>
                 <p className="mt-1 font-mono text-xs text-faint">
                   {brief.country} · {brief.sector} · {new Date(brief.createdAt).toLocaleString()}
+                  {brief.confidence != null ? ` · ${Math.round(brief.confidence)}% confidence` : ""}
                 </p>
-                <div className="mt-2.5 flex flex-wrap gap-1.5">
+                <div className="mt-2 flex flex-wrap gap-1.5">
                   <span className={cn("ws-brief-pill", `is-${briefBadgeTone("risk", brief.riskLevel)}`)}>
                     {brief.riskLevel}
                   </span>
@@ -156,11 +156,6 @@ export default function BriefDetailPage() {
                       {brief.status}
                     </span>
                   )}
-                  {brief.analysisDepth ? (
-                    <span className="ws-brief-pill is-mist">
-                      {brief.analysisDepth === "deep_dive" ? "Deep dive" : brief.analysisDepth}
-                    </span>
-                  ) : null}
                 </div>
                 {brief.projectId ? (
                   <Link
@@ -171,13 +166,7 @@ export default function BriefDetailPage() {
                   </Link>
                 ) : null}
               </div>
-              <Card className="w-56 shrink-0 p-3">
-                <p className="mb-1 text-center font-mono text-[10px] font-bold uppercase tracking-widest text-faint">
-                  Confidence
-                </p>
-                <ConfidenceGauge value={brief.confidence} />
-              </Card>
-            </div>
+            </header>
 
             <BriefExportBar briefId={brief.id} />
 
