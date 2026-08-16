@@ -68,15 +68,24 @@ async function main() {
   const days = loadDays();
   const req = createRequire(path.join(TOOL, "package.json"));
   const { chromium } = req("playwright");
-  const chrome = path.join(
-    process.env.LOCALAPPDATA || "",
-    "ms-playwright",
-    "chromium-1181",
-    "chrome-win",
-    "chrome.exe"
-  );
+  const msPlaywright = path.join(process.env.LOCALAPPDATA || "", "ms-playwright");
+  let chromeExe;
+  if (fs.existsSync(msPlaywright)) {
+    const builds = fs
+      .readdirSync(msPlaywright)
+      .filter((n) => /^chromium-\d+$/.test(n))
+      .sort()
+      .reverse();
+    for (const build of builds) {
+      const candidate = path.join(msPlaywright, build, "chrome-win", "chrome.exe");
+      if (fs.existsSync(candidate)) {
+        chromeExe = candidate;
+        break;
+      }
+    }
+  }
   const browser = await chromium.launch({
-    executablePath: chrome,
+    executablePath: chromeExe,
     headless: true,
     args: ["--disable-dev-shm-usage"],
   });

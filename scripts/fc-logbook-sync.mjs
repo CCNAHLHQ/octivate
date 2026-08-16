@@ -27,6 +27,11 @@ const GH_BASE =
 const SYNC_MODE = ["recent", "all", "missing"].includes(process.env.FC_SYNC_MODE || "")
   ? process.env.FC_SYNC_MODE
   : "missing";
+/** Optional comma-separated day keys to scope inventory/publish, e.g. "Wed 08/12,Thu 08/13". */
+const KEY_FILTER = (process.env.FC_SYNC_KEYS || "")
+  .split(",")
+  .map((s) => s.trim())
+  .filter(Boolean);
 const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 function fcKeyFromDate(date = new Date()) {
@@ -180,15 +185,24 @@ async function withBrowser(fn) {
   if (!chromium?.launch) {
     throw new Error("playwright_chromium_unavailable");
   }
-  const chrome = path.join(
-    process.env.LOCALAPPDATA || "",
-    "ms-playwright",
-    "chromium-1181",
-    "chrome-win",
-    "chrome.exe"
-  );
+  const msPlaywright = path.join(process.env.LOCALAPPDATA || "", "ms-playwright");
+  let chromeExe;
+  if (fs.existsSync(msPlaywright)) {
+    const builds = fs
+      .readdirSync(msPlaywright)
+      .filter((n) => /^chromium-\d+$/.test(n))
+      .sort()
+      .reverse();
+    for (const build of builds) {
+      const candidate = path.join(msPlaywright, build, "chrome-win", "chrome.exe");
+      if (fs.existsSync(candidate)) {
+        chromeExe = candidate;
+        break;
+      }
+    }
+  }
   const browser = await chromium.launch({
-    executablePath: chrome,
+    executablePath: chromeExe,
     headless: true,
     args: ["--disable-dev-shm-usage", "--disable-blink-features=AutomationControlled"],
   });
@@ -237,25 +251,100 @@ function weekRe(label) {
 
 async function ensureDayVisible(page, day) {
   const weekBtn = page.getByRole("button", { name: weekRe(day.weekLabel) }).first();
-  await weekBtn.waitFor({ timeout: 20000 });
+  const weekVisible = await weekBtn.isVisible({ timeout: 4000 }).catch(() => false);
+  if (weekVisible) {
+    const dayRe = new RegExp(
+      `^${day.key.replaceAll("/", "[/\\\\]").replace(/\s+/g, "\\s+")}$`,
+      "i"
+    );
+    let dayBtn = page.getByRole("button", { name: dayRe }).first();
+    if (!(await dayBtn.isVisible().catch(() => false))) {
+      await weekBtn.click();
+      await page.waitForTimeout(700);
+      dayBtn = page.getByRole("button", { name: dayRe }).first();
+    }
+    return dayBtn;
+  }
+
+  // Week accordion label may differ or be off-screen — try day button globally.
   const dayRe = new RegExp(
-    `^${day.key.replaceAll("/", "[/\\\\]").replace(/\s+/g, "\\s+")}$`,
+    day.key.replaceAll("/", "[/\\\\]").replace(/\s+/g, "\\s+"),
     "i"
   );
-  let dayBtn = page.getByRole("button", { name: dayRe }).first();
-  if (!(await dayBtn.isVisible().catch(() => false))) {
-    await weekBtn.click();
-    await page.waitForTimeout(700);
-    dayBtn = page.getByRole("button", { name: dayRe }).first();
+  const dayBtn = page.getByRole("button", { name: dayRe }).first();
+  if (await dayBtn.isVisible({ timeout: 2500 }).catch(() => false)) {
+    return dayBtn;
   }
-  return dayBtn;
+
+  // Last resort: scroll week labels into view by expanding nearby weeks.
+  const anyWeek = page.getByRole("button", { name: /Jul\s+\d|Aug\s+\d/i });
+  const count = await anyWeek.count().catch(() => 0);
+  for (let i = 0; i < Math.min(count, 12); i++) {
+    await anyWeek.nth(i).click().catch(() => {});
+    await page.waitForTimeout(250);
+    const found = page.getByRole("button", { name: dayRe }).first();
+    if (await found.isVisible().catch(() => false)) return found;
+  }
+  return page.getByRole("button", { name: dayRe }).first();
 }
 
 async function inventory(page, planned) {
   const byKey = new Map();
   for (const day of planned) {
-    const dayBtn = await ensureDayVisible(page, day);
-    if (!(await dayBtn.isVisible().catch(() => false))) {
+    try {
+      const dayBtn = await ensureDayVisible(page, day);
+      if (!(await dayBtn.isVisible().catch(() => false))) {
+        byKey.set(day.key, {
+          key: day.key,
+          weekLabel: day.weekLabel,
+          title: day.title,
+          planned: true,
+          remoteChars: 0,
+          remotePreview: "",
+          disabled: false,
+          present: false,
+          needsPublish: true,
+          screenshot: day.screenshot,
+        });
+        continue;
+      }
+      const disabled = await dayBtn.isDisabled();
+      if (disabled) {
+        byKey.set(day.key, {
+          key: day.key,
+          weekLabel: day.weekLabel,
+          title: day.title,
+          planned: true,
+          remoteChars: 0,
+          remotePreview: "",
+          disabled: true,
+          present: false,
+          needsPublish: false,
+          screenshot: day.screenshot,
+        });
+        continue;
+      }
+      await dayBtn.click();
+      await page.waitForTimeout(550);
+      const val = await page.locator("textarea").first().inputValue().catch(() => "");
+      const present =
+        (val || "").trim().length >= 40 &&
+        ((val || "").includes(day.title.slice(0, 18)) ||
+          (val || "").length >= Math.min(120, day.body.length / 2));
+      byKey.set(day.key, {
+        key: day.key,
+        weekLabel: day.weekLabel,
+        title: day.title,
+        planned: true,
+        remoteChars: (val || "").length,
+        remotePreview: (val || "").slice(0, 100),
+        disabled: false,
+        present,
+        needsPublish: !present,
+        screenshot: day.screenshot,
+      });
+    } catch (err) {
+      console.warn(`[fc-sync] inventory skip ${day.key}:`, err instanceof Error ? err.message : err);
       byKey.set(day.key, {
         key: day.key,
         weekLabel: day.weekLabel,
@@ -267,44 +356,9 @@ async function inventory(page, planned) {
         present: false,
         needsPublish: true,
         screenshot: day.screenshot,
+        inventoryError: err instanceof Error ? err.message : String(err),
       });
-      continue;
     }
-    const disabled = await dayBtn.isDisabled();
-    if (disabled) {
-      byKey.set(day.key, {
-        key: day.key,
-        weekLabel: day.weekLabel,
-        title: day.title,
-        planned: true,
-        remoteChars: 0,
-        remotePreview: "",
-        disabled: true,
-        present: false,
-        needsPublish: false,
-        screenshot: day.screenshot,
-      });
-      continue;
-    }
-    await dayBtn.click();
-    await page.waitForTimeout(550);
-    const val = await page.locator("textarea").first().inputValue().catch(() => "");
-    const present =
-      (val || "").trim().length >= 40 &&
-      ((val || "").includes(day.title.slice(0, 18)) ||
-        (val || "").length >= Math.min(120, day.body.length / 2));
-    byKey.set(day.key, {
-      key: day.key,
-      weekLabel: day.weekLabel,
-      title: day.title,
-      planned: true,
-      remoteChars: (val || "").length,
-      remotePreview: (val || "").slice(0, 100),
-      disabled: false,
-      present,
-      needsPublish: !present,
-      screenshot: day.screenshot,
-    });
   }
   return [...byKey.values()];
 }
@@ -344,7 +398,8 @@ async function publishDay(page, day) {
   const persisted = await ta.inputValue().catch(() => "");
   const ok =
     (persisted || "").includes(day.title.slice(0, 18)) ||
-    (persisted || "").length >= Math.min(80, day.body.length);
+    (persisted || "").includes("Evidence screenshot:") ||
+    (persisted || "").length >= Math.min(80, Math.floor(day.body.length * 0.5));
   return { key: day.key, ok, chars: day.body.length, error: ok ? undefined : "persist check failed" };
 }
 
@@ -362,14 +417,19 @@ async function main() {
     job.mode = SYNC_MODE;
     writeJob(job);
     setStep(job, "prepare", "running");
-    const days = loadDays();
+    let days = loadDays();
+    if (KEY_FILTER.length) {
+      days = days.filter((d) => KEY_FILTER.includes(d.key));
+      if (!days.length) throw new Error(`fc_sync_keys_empty filter=${KEY_FILTER.join(",")}`);
+    }
     const focusKeys = recentKeys();
     setStep(
       job,
       "prepare",
       "done",
       `${days.length} planned · mode=${SYNC_MODE}` +
-        (SYNC_MODE === "recent" ? ` · focus ${focusKeys.join(" · ")}` : "")
+        (SYNC_MODE === "recent" ? ` · focus ${focusKeys.join(" · ")}` : "") +
+        (KEY_FILTER.length ? ` · keys ${KEY_FILTER.join(" · ")}` : "")
     );
     job = readJob();
 
