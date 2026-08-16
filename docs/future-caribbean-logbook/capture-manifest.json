@@ -1,6 +1,6 @@
 {
   "base": "https://octivate.io",
-  "capturedAt": "2026-08-06T15:48:23.036Z",
+  "capturedAt": "2026-08-16T15:30:47.039Z",
   "files": [
     "00-dashboard.png",
     "00-landing.png",
@@ -8,143 +8,39 @@
     "Fri_07_17.png",
     "Fri_07_24.png",
     "Fri_07_31.png",
+    "Fri_08_07.png",
+    "Fri_08_14.png",
     "Mon_07_13.png",
     "Mon_07_20.png",
     "Mon_07_27.png",
     "Mon_08_03.png",
+    "Mon_08_10.png",
     "Sat_07_18.png",
     "Sat_07_25.png",
     "Sat_08_01.png",
+    "Sat_08_08.png",
+    "Sat_08_15.png",
     "Sun_07_19.png",
     "Sun_07_26.png",
     "Sun_08_02.png",
+    "Sun_08_09.png",
+    "Sun_08_16.png",
     "Thu_07_16.png",
     "Thu_07_23.png",
     "Thu_07_30.png",
     "Thu_08_06.png",
+    "Thu_08_13.png",
     "Tue_07_14.png",
     "Tue_07_21.png",
     "Tue_07_28.png",
     "Tue_08_04.png",
+    "Tue_08_11.png",
     "Wed_07_15.png",
     "Wed_07_22.png",
     "Wed_07_29.png",
-    "Wed_08_05.png"
+    "Wed_08_05.png",
+    "Wed_08_12.png"
   ],
-  "captures": [
-    {
-      "key": "Mon 07/13",
-      "path": "/",
-      "public": true
-    },
-    {
-      "key": "Tue 07/14",
-      "path": "/signin",
-      "public": true
-    },
-    {
-      "key": "Wed 07/15",
-      "path": "/",
-      "public": true
-    },
-    {
-      "key": "Thu 07/16",
-      "path": "/dashboard"
-    },
-    {
-      "key": "Fri 07/17",
-      "path": "/dashboard/sources"
-    },
-    {
-      "key": "Sat 07/18",
-      "path": "/dashboard/operator"
-    },
-    {
-      "key": "Sun 07/19",
-      "path": "/dashboard"
-    },
-    {
-      "key": "Mon 07/20",
-      "path": "/dashboard/briefs"
-    },
-    {
-      "key": "Tue 07/21",
-      "path": "/",
-      "public": true
-    },
-    {
-      "key": "Wed 07/22",
-      "path": "/dashboard/operator",
-      "tab": "Mail"
-    },
-    {
-      "key": "Thu 07/23",
-      "path": "/pricing",
-      "public": true
-    },
-    {
-      "key": "Fri 07/24",
-      "path": "/dashboard"
-    },
-    {
-      "key": "Sat 07/25",
-      "path": "/support",
-      "public": true
-    },
-    {
-      "key": "Sun 07/26",
-      "path": "/dashboard/sources"
-    },
-    {
-      "key": "Mon 07/27",
-      "path": "/dashboard/sources"
-    },
-    {
-      "key": "Tue 07/28",
-      "path": "/",
-      "public": true
-    },
-    {
-      "key": "Wed 07/29",
-      "path": "/dashboard/briefs"
-    },
-    {
-      "key": "Thu 07/30",
-      "path": "/dashboard/operator",
-      "tab": "Operations"
-    },
-    {
-      "key": "Fri 07/31",
-      "path": "/dashboard/operator",
-      "tab": "Mail"
-    },
-    {
-      "key": "Sat 08/01",
-      "path": "/dashboard/operator",
-      "tab": "Mail"
-    },
-    {
-      "key": "Sun 08/02",
-      "path": "/dashboard"
-    },
-    {
-      "key": "Mon 08/03",
-      "path": "/dashboard/operator",
-      "tab": "Mail"
-    },
-    {
-      "key": "Tue 08/04",
-      "path": "/dashboard/projects"
-    },
-    {
-      "key": "Wed 08/05",
-      "path": "/dashboard/operator",
-      "tab": "Mail"
-    },
-    {
-      "key": "Thu 08/06",
-      "path": "/dashboard/operator",
-      "tab": "Operations"
-    }
-  ]
+  "missing": [],
+  "note": "All day screenshots are captures of octivate.io only."
 }

@@ -210,6 +210,36 @@
           "title": "SaaS landing polish — tech trust, cookies, legal, workspace showcase",
           "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_08_11.png",
           "body": "Landed a public SaaS stack on octivate.io: Technologies trust strip (OpenRouter / Claude / ChatGPT / PayPal / Bitcoin) with demo video modal (Plyr), cookie CMP + settings modal, real /privacy /terms /cookies pages, and a seed-driven Workspace showcase (#workspace) so prospects explore Insights/Coverage without signing in. Wired every new string through the i18n registry, synced all 9 locales to 100% coverage (catalog v15), rebuilt edge + Next, and confirmed live catalogs serve legal/cookie/workspace keys in realtime. Human + machine closing the Open Track narrative loop.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Tue_08_11.png"
+        },
+        {
+          "key": "Wed 08/12",
+          "title": "Parliamentary Automation ingest + live DNS/TLS tooling",
+          "body": "Wed 08/12 — Shipped the parliamentary Automation ingest path (download-then-ASR queue) so Caribbean media jobs can be held, resumed, and observed from Operator → Automation. Parallel work: origin DNS tooling and host-IP TLS SANs so the Windows live deploy stays reachable on real octivate.io certificates. Also landed SaaS landing polish, theatre coverage map, and Future Caribbean logbook recent-sync so Open Track days can catch up without theatre. Clever fix: treat automation as an operator console surface, not a silent cron — judges can see the queue. Outcome: ingest lives, TLS trusted, map demos clean.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_08_12.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Wed_08_12.png"
+        },
+        {
+          "key": "Thu 08/13",
+          "title": "Local evidence index, PDF extract, and summarize foundations",
+          "body": "Thu 08/13 — Hardened the evidence spine: local evidence index + citation false-positive gates, localOnlySources toggle, map-reduce document summarization, and question-conditioned evidence bundles for PSN/briefs. PDF text extraction (pdf-parse v2 + Next worker) stopped empty-summary ghosts. Operator polish: premium/local-sources policy cards, tap-to-speak mic fix, edit-project modal overlay/scroll lock. Story beat: briefs only deserve confidence when uploads actually ground claims — we made that measurable.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_08_13.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Thu_08_13.png"
+        },
+        {
+          "key": "Fri 08/14",
+          "title": "Cinematic landing hero — muted looping video plate",
+          "body": "Fri 08/14 — Rebuilt the landing hero around a fitted, muted, autoplay looping video plate behind Clarity for the Caribbean. Iterated Mux HLS → self-hosted MP4 for reliability, tuned object-fit (no stretch), breathing blur veil, and text/CTA contrast on the dark plate. CSP media-src/connect-src adjusted so playback is allowed without softening the rest of the security posture. Design rule held: brand first, one composition, content still pops.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_08_14.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Fri_08_14.png"
+        },
+        {
+          "key": "Sat 08/15",
+          "title": "Workspace video shell, pipeline audit, brief fidelity + depth persistence",
+          "body": "Sat 08/15 — Extended the same Caribbean video plate into dashboard/operator shells (fitted, project interiors excluded). Wired full workspace pipeline failures into the live debug/audit console with raw model text. Brief fidelity overhaul: dropped stock “add documents…” recommendations, cited uploads ahead of seed noise, tabbed brief UI (Confidence → Judgement → Analysis → Sources), branded PDF with logo/globe, fair multi-doc packing, confidence meters readable in light/dark, and per-project analysis-depth persistence. JSON truncation retries now bump maxTokens instead of only begging for shorter JSON.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_08_15.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sat_08_15.png"
+        },
+        {
+          "key": "Sun 08/16",
+          "title": "Octivate-only evidence screenshots — detect missing days, GitHub-linked",
+          "body": "Sun 08/16 — Detected Future Caribbean logbook days still unfilled after Tue 08/11 and authored Wed–Sun entries from the real Octivate ship log. Reworked the evidence screenshot system: captures must come from https://octivate.io (marketing + signed-in workspace), upload to GitHub under docs/future-caribbean-logbook/screenshots, and link from each day. Removed the bad path that screenshot os.futurecaribbean.com during publish and overwrote evidence with their builder UI. Certainty over theatre — evidence is our product, not theirs.\n\nEvidence screenshot: https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_08_16.png",
+          "screenshot": "https://github.com/CCNAHLHQ/octivate/blob/main/docs/future-caribbean-logbook/screenshots/Sun_08_16.png"
         }
       ]
     }

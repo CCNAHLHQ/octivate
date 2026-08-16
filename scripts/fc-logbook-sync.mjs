@@ -329,17 +329,14 @@ async function publishDay(page, day) {
     .catch(() => {});
   await page.waitForTimeout(900);
 
-  // Capture screenshot into repo evidence folder
+  // Evidence screenshots must be captures of octivate.io (see scripts/capture-octivate-evidence.mjs).
+  // Never overwrite GitHub evidence with a Future Caribbean builder screenshot.
   const shotName = `${day.key.replace(/\s+/g, "_").replace(/\//g, "_")}.png`;
-  fs.mkdirSync(SHOT_DIR, { recursive: true });
   const shotPath = path.join(SHOT_DIR, shotName);
-  await page.screenshot({ path: shotPath, fullPage: false });
-  // also tool out
-  try {
-    fs.mkdirSync(path.join(TOOL, "out", "screenshots"), { recursive: true });
-    fs.copyFileSync(shotPath, path.join(TOOL, "out", "screenshots", shotName));
-  } catch {
-    /* optional */
+  if (!fs.existsSync(shotPath)) {
+    console.warn(
+      `[fc-sync] missing octivate evidence shot for ${day.key} — run: node scripts/capture-octivate-evidence.mjs --only-missing`
+    );
   }
 
   await dayBtn.click().catch(() => {});

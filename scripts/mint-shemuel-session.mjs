@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
 import { createHash, randomBytes } from "crypto";
+import { fileURLToPath } from "url";
 
-const ROOT = path.resolve("C:/Users/Administrator/Desktop/octivate-deploy-20260720-2012");
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SESS_FILE = path.join(ROOT, "data", "local", "auth-sessions.json");
 const OUT = path.join(ROOT, "data", "local", "octivate-evidence-session.json");
 const users = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "local", "users.json"), "utf8"));
