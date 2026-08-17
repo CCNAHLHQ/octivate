@@ -1,7 +1,7 @@
 {
   "locale": "es",
-  "version": 90,
-  "updatedAt": "2026-08-17T12:27:34.572Z",
+  "version": 158,
+  "updatedAt": "2026-08-17T12:51:44.967Z",
   "entries": {
     "nav.product": {
       "text": "Producto",
@@ -3522,6 +3522,2691 @@
       "text": "Nombre, país, etiquetas…",
       "sourceHash": "dc3035451f83",
       "updatedAt": "2026-08-17T12:27:34.572Z"
+    },
+    "op.catalog.noMatches": {
+      "text": "No matching sources",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T12:31:10.014Z"
+    },
+    "op.catalog.noMatchesHint": {
+      "text": "Adjust filters or drop a CSV above to merge sources into the registry.",
+      "sourceHash": "e82983fce0de",
+      "updatedAt": "2026-08-17T12:31:10.014Z"
+    },
+    "op.catalog.loadFailed": {
+      "text": "Could not load source registry",
+      "sourceHash": "38cec25d4b3c",
+      "updatedAt": "2026-08-17T12:31:10.014Z"
+    },
+    "op.catalog.allCountries": {
+      "text": "All countries",
+      "sourceHash": "b5fccc286fd7",
+      "updatedAt": "2026-08-17T12:31:10.014Z"
+    },
+    "op.catalog.allWatch": {
+      "text": "All watch",
+      "sourceHash": "0ac44d5c86a1",
+      "updatedAt": "2026-08-17T12:31:10.014Z"
+    },
+    "op.catalog.allRetrieval": {
+      "text": "All retrieval",
+      "sourceHash": "386ffc567692",
+      "updatedAt": "2026-08-17T12:31:10.014Z"
+    },
+    "op.catalog.allHealth": {
+      "text": "All health",
+      "sourceHash": "1520fa11da38",
+      "updatedAt": "2026-08-17T12:31:10.014Z"
+    },
+    "op.catalog.prevPage": {
+      "text": "Previous page",
+      "sourceHash": "81f547195bef",
+      "updatedAt": "2026-08-17T12:31:10.014Z"
+    },
+    "op.catalog.nextPage": {
+      "text": "Siguiente página",
+      "sourceHash": "4bfc194b68a3",
+      "updatedAt": "2026-08-17T12:31:18.419Z"
+    },
+    "op.mail.formats": {
+      "text": "CSV · TSV · TXT · JSON",
+      "sourceHash": "704a80b548fb",
+      "updatedAt": "2026-08-17T12:31:18.419Z"
+    },
+    "op.mail.sendFrom": {
+      "text": "Enviar desde staff o no-reply · plantilla opcional",
+      "sourceHash": "ebfea489306a",
+      "updatedAt": "2026-08-17T12:31:18.419Z"
+    },
+    "op.mail.mailingList": {
+      "text": "Lista de distribución",
+      "sourceHash": "d2a1123e6461",
+      "updatedAt": "2026-08-17T12:31:18.419Z"
+    },
+    "op.mail.emptyInbox": {
+      "text": "No hay mensajes en esta bandeja aún.",
+      "sourceHash": "f31d8f7896dc",
+      "updatedAt": "2026-08-17T12:31:18.419Z"
+    },
+    "op.mail.accountMix": {
+      "text": "Mezcla de cuentas",
+      "sourceHash": "82a81d957eee",
+      "updatedAt": "2026-08-17T12:31:18.419Z"
+    },
+    "op.mail.protectedFounder": {
+      "text": "Fundador protegido",
+      "sourceHash": "cde3151a6575",
+      "updatedAt": "2026-08-17T12:31:18.419Z"
+    },
+    "op.mail.subject": {
+      "text": "Línea de asunto",
+      "sourceHash": "26225393bc43",
+      "updatedAt": "2026-08-17T12:31:18.419Z"
+    },
+    "op.mail.body": {
+      "text": "Texto plano — envuelto en la plantilla HTML cuando está habilitada",
+      "sourceHash": "77bf9d220248",
+      "updatedAt": "2026-08-17T12:31:32.564Z"
+    },
+    "op.mail.searchUsers": {
+      "text": "Buscar usuarios…",
+      "sourceHash": "71cd28d65523",
+      "updatedAt": "2026-08-17T12:31:32.564Z"
+    },
+    "op.mail.searchUsersBtn": {
+      "text": "Buscar usuarios",
+      "sourceHash": "1bd6226dd199",
+      "updatedAt": "2026-08-17T12:31:32.564Z"
+    },
+    "op.mail.importFormats": {
+      "text": "Usar CSV, TSV, TXT o JSON",
+      "sourceHash": "5dcb9d06982e",
+      "updatedAt": "2026-08-17T12:31:32.564Z"
+    },
+    "op.mail.importFailed": {
+      "text": "Importación fallida",
+      "sourceHash": "fbae892997d9",
+      "updatedAt": "2026-08-17T12:31:32.564Z"
+    },
+    "op.mail.importing": {
+      "text": "Importando…",
+      "sourceHash": "820599da89a1",
+      "updatedAt": "2026-08-17T12:31:32.564Z"
+    },
+    "op.mail.dropList": {
+      "text": "Lista de arrastre para agregar",
+      "sourceHash": "29511565da37",
+      "updatedAt": "2026-08-17T12:31:32.564Z"
+    },
+    "op.mail.loadFailed": {
+      "text": "Carga de correo fallida",
+      "sourceHash": "2f3b7781aa67",
+      "updatedAt": "2026-08-17T12:31:32.564Z"
+    },
+    "op.mail.clearFailed": {
+      "text": "Error al limpiar",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T12:31:36.223Z"
+    },
+    "op.mail.inboxUpdated": {
+      "text": "Caja de entrada actualizada",
+      "sourceHash": "8018e96574e3",
+      "updatedAt": "2026-08-17T12:31:36.223Z"
+    },
+    "op.mail.sendFirst": {
+      "text": "Enviar al primer destinatario seleccionado",
+      "sourceHash": "f16135d92e4d",
+      "updatedAt": "2026-08-17T12:31:36.223Z"
+    },
+    "op.mail.chooseFirst": {
+      "text": "Elija destinatarios, asunto y cuerpo primero",
+      "sourceHash": "6cd698326ff5",
+      "updatedAt": "2026-08-17T12:31:36.223Z"
+    },
+    "op.mail.sending": {
+      "text": "Enviando…",
+      "sourceHash": "cf765512cc6d",
+      "updatedAt": "2026-08-17T12:31:36.223Z"
+    },
+    "op.mail.selectRecipients": {
+      "text": "Seleccione uno o más destinatarios de la lista de correo",
+      "sourceHash": "1123d3a102d6",
+      "updatedAt": "2026-08-17T12:31:36.223Z"
+    },
+    "op.mail.clearMailbox": {
+      "text": "Limpiar cada mensaje en esta bandeja de entrada",
+      "sourceHash": "5bcd36e89277",
+      "updatedAt": "2026-08-17T12:31:36.223Z"
+    },
+    "op.mail.clearMessage": {
+      "text": "Limpiar este mensaje",
+      "sourceHash": "7e381d95a625",
+      "updatedAt": "2026-08-17T12:31:36.223Z"
+    },
+    "op.mail.clearing": {
+      "text": "Limpiando…",
+      "sourceHash": "bc7a2b58694e",
+      "updatedAt": "2026-08-17T12:31:41.249Z"
+    },
+    "op.mail.clearInboxConfirm": {
+      "text": "¿Limpiar toda la bandeja de entrada?",
+      "sourceHash": "28d19bf7ae0d",
+      "updatedAt": "2026-08-17T12:31:41.249Z"
+    },
+    "op.mail.clearMessageConfirm": {
+      "text": "¿Limpiar este mensaje?",
+      "sourceHash": "2fe6e2fe7526",
+      "updatedAt": "2026-08-17T12:31:41.249Z"
+    },
+    "op.mail.clearAll": {
+      "text": "Limpiar todo",
+      "sourceHash": "c043160a89ba",
+      "updatedAt": "2026-08-17T12:31:41.249Z"
+    },
+    "op.mail.clearMsg": {
+      "text": "Limpiar mensaje",
+      "sourceHash": "0edf6a5099e5",
+      "updatedAt": "2026-08-17T12:31:41.249Z"
+    },
+    "op.mail.usersFailed": {
+      "text": "No se pudieron cargar los usuarios",
+      "sourceHash": "47dd74c0c423",
+      "updatedAt": "2026-08-17T12:31:41.249Z"
+    },
+    "op.mail.passwordCopied": {
+      "text": "Nueva contraseña copiada al portapapeles",
+      "sourceHash": "c69fd69b1d86",
+      "updatedAt": "2026-08-17T12:31:41.249Z"
+    },
+    "op.mail.actionFailed": {
+      "text": "Acción fallida",
+      "sourceHash": "57af949595e3",
+      "updatedAt": "2026-08-17T12:31:41.249Z"
+    },
+    "op.mail.noUserMatch": {
+      "text": "No users match this search.",
+      "sourceHash": "f0f3d70ce761",
+      "updatedAt": "2026-08-17T12:31:42.555Z"
+    },
+    "op.mail.noUsers": {
+      "text": "No users yet.",
+      "sourceHash": "26930b5f7c6f",
+      "updatedAt": "2026-08-17T12:31:42.555Z"
+    },
+    "op.support.loading": {
+      "text": "Loading support inbox…",
+      "sourceHash": "251c89cee942",
+      "updatedAt": "2026-08-17T12:31:42.555Z"
+    },
+    "op.support.noThreads": {
+      "text": "No account threads in this view.",
+      "sourceHash": "7af18f8ac894",
+      "updatedAt": "2026-08-17T12:31:42.555Z"
+    },
+    "op.support.selectThread": {
+      "text": "Select an account conversation to moderate.",
+      "sourceHash": "e10ec1ca0116",
+      "updatedAt": "2026-08-17T12:31:42.555Z"
+    },
+    "op.support.filters": {
+      "text": "Thread filters",
+      "sourceHash": "37a1b6aef086",
+      "updatedAt": "2026-08-17T12:31:42.555Z"
+    },
+    "op.support.conversations": {
+      "text": "Support conversations",
+      "sourceHash": "9f5c09b82d64",
+      "updatedAt": "2026-08-17T12:31:42.555Z"
+    },
+    "op.support.clientEnv": {
+      "text": "Client environment",
+      "sourceHash": "cd3dc59a3a60",
+      "updatedAt": "2026-08-17T12:31:42.555Z"
+    },
+    "op.support.quickReplies": {
+      "text": "Respuestas rápidas formales",
+      "sourceHash": "95c4666d38c0",
+      "updatedAt": "2026-08-17T12:31:47.975Z"
+    },
+    "op.support.attach": {
+      "text": "Adjuntar imagen",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T12:31:47.975Z"
+    },
+    "op.support.compose": {
+      "text": "Componer una respuesta…",
+      "sourceHash": "d50d154a1a48",
+      "updatedAt": "2026-08-17T12:31:47.975Z"
+    },
+    "op.support.awaiting": {
+      "text": "A la espera del cliente",
+      "sourceHash": "25e174a919de",
+      "updatedAt": "2026-08-17T12:31:47.975Z"
+    },
+    "op.support.loadFailed": {
+      "text": "No se pudo cargar la bandeja de entrada",
+      "sourceHash": "23be3576fc7a",
+      "updatedAt": "2026-08-17T12:31:47.975Z"
+    },
+    "op.support.attachFailed": {
+      "text": "No se pudo adjuntar la imagen",
+      "sourceHash": "f9ce8a5e6365",
+      "updatedAt": "2026-08-17T12:31:47.975Z"
+    },
+    "op.support.quickSent": {
+      "text": "Respuesta rápida enviada",
+      "sourceHash": "bec403be3dcf",
+      "updatedAt": "2026-08-17T12:31:47.975Z"
+    },
+    "op.support.replySent": {
+      "text": "Respuesta enviada",
+      "sourceHash": "94295a73231c",
+      "updatedAt": "2026-08-17T12:31:47.975Z"
+    },
+    "op.support.sendFailed": {
+      "text": "Envío fallido",
+      "sourceHash": "07a7900ae8fa",
+      "updatedAt": "2026-08-17T12:31:48.890Z"
+    },
+    "op.support.resolved": {
+      "text": "Hilo resuelto",
+      "sourceHash": "b9d31bc63252",
+      "updatedAt": "2026-08-17T12:31:48.890Z"
+    },
+    "op.support.updateFailed": {
+      "text": "Actualización fallida",
+      "sourceHash": "4de04cd91a3d",
+      "updatedAt": "2026-08-17T12:31:48.890Z"
+    },
+    "op.support.assigned": {
+      "text": "Conversación asignada a ti",
+      "sourceHash": "787db9416277",
+      "updatedAt": "2026-08-17T12:31:48.890Z"
+    },
+    "op.support.assignFailed": {
+      "text": "Asignación fallida",
+      "sourceHash": "bb279ac46030",
+      "updatedAt": "2026-08-17T12:31:48.890Z"
+    },
+    "op.support.archived": {
+      "text": "Conversación resuelta archivada",
+      "sourceHash": "7f2d0c81d33e",
+      "updatedAt": "2026-08-17T12:31:48.890Z"
+    },
+    "op.support.archiveFailed": {
+      "text": "Archivado fallido",
+      "sourceHash": "fa2362f21035",
+      "updatedAt": "2026-08-17T12:31:48.890Z"
+    },
+    "op.support.noResolved": {
+      "text": "No hay conversaciones resueltas para archivar",
+      "sourceHash": "5e23ade8e268",
+      "updatedAt": "2026-08-17T12:31:48.890Z"
+    },
+    "op.support.syncOn": {
+      "text": "La sincronización del buzón siempre está activa",
+      "sourceHash": "5e01620f8932",
+      "updatedAt": "2026-08-17T12:31:52.672Z"
+    },
+    "op.support.reconnecting": {
+      "text": "Reconectando — sondeando hasta que el flujo se recupere",
+      "sourceHash": "5929cb0aabbf",
+      "updatedAt": "2026-08-17T12:31:52.672Z"
+    },
+    "op.support.sync": {
+      "text": "Sincronización…",
+      "sourceHash": "9688745a86c2",
+      "updatedAt": "2026-08-17T12:31:52.672Z"
+    },
+    "op.support.archiveAll": {
+      "text": "Archivar todas las conversaciones resueltas del buzón activo",
+      "sourceHash": "c2f8e41d55c6",
+      "updatedAt": "2026-08-17T12:31:52.672Z"
+    },
+    "op.support.archiveOne": {
+      "text": "Archivar esta conversación resuelta fuera del buzón",
+      "sourceHash": "0a34b2f4d62b",
+      "updatedAt": "2026-08-17T12:31:52.672Z"
+    },
+    "op.support.assignYou": {
+      "text": "Asignar este hilo a tu perfil de personal",
+      "sourceHash": "1885e2da5885",
+      "updatedAt": "2026-08-17T12:31:52.672Z"
+    },
+    "op.support.markAwaiting": {
+      "text": "Marcar como esperando respuesta del cliente",
+      "sourceHash": "926c16ea9910",
+      "updatedAt": "2026-08-17T12:31:52.672Z"
+    },
+    "op.support.resolve": {
+      "text": "Resolver y cerrar esta conversación",
+      "sourceHash": "3c9880945867",
+      "updatedAt": "2026-08-17T12:31:52.672Z"
+    },
+    "op.support.reportedIp": {
+      "text": "IP del cliente reportado en el último contacto",
+      "sourceHash": "8f1e7deadbe3",
+      "updatedAt": "2026-08-17T12:31:56.281Z"
+    },
+    "op.support.ipUnknown": {
+      "text": "IP desconocida",
+      "sourceHash": "cf40c1ba981e",
+      "updatedAt": "2026-08-17T12:31:56.281Z"
+    },
+    "op.support.browserFamily": {
+      "text": "Familia de navegador desde el agente de usuario",
+      "sourceHash": "bc49f40f1bed",
+      "updatedAt": "2026-08-17T12:31:56.281Z"
+    },
+    "op.support.browserUnknown": {
+      "text": "Navegador desconocido",
+      "sourceHash": "5476220afd31",
+      "updatedAt": "2026-08-17T12:31:56.281Z"
+    },
+    "op.support.uaMissing": {
+      "text": "Agente de usuario no capturado",
+      "sourceHash": "e89923195485",
+      "updatedAt": "2026-08-17T12:31:56.281Z"
+    },
+    "op.support.attachHint": {
+      "text": "Adjuntar una imagen (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T12:31:56.281Z"
+    },
+    "op.support.sendAssign": {
+      "text": "Responder y asignar el hilo a ti",
+      "sourceHash": "61eb025fb429",
+      "updatedAt": "2026-08-17T12:31:56.281Z"
+    },
+    "op.autosave.saved": {
+      "text": "Todos los cambios guardados",
+      "sourceHash": "9595b7da9f61",
+      "updatedAt": "2026-08-17T12:31:56.281Z"
+    },
+    "op.autosave.writing": {
+      "text": "Guardando cambios…",
+      "sourceHash": "ea499fa21dce",
+      "updatedAt": "2026-08-17T12:32:01.374Z"
+    },
+    "op.autosave.soon": {
+      "text": "Guardando pronto",
+      "sourceHash": "dac9adeeec35",
+      "updatedAt": "2026-08-17T12:32:01.374Z"
+    },
+    "op.autosave.pending": {
+      "text": "Cambios pendientes — guardando pronto",
+      "sourceHash": "310111dfce84",
+      "updatedAt": "2026-08-17T12:32:01.374Z"
+    },
+    "op.autosave.failed": {
+      "text": "Guardado fallido",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T12:32:01.374Z"
+    },
+    "op.autosave.retry": {
+      "text": "Último guardado falló — haz clic para reintentar",
+      "sourceHash": "3ca55d67a41b",
+      "updatedAt": "2026-08-17T12:32:01.374Z"
+    },
+    "op.tour.replay": {
+      "text": "Reproducir recorrido del operador",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T12:32:01.374Z"
+    },
+    "op.tour.label": {
+      "text": "Recorrido",
+      "sourceHash": "cd9e8f38bcfe",
+      "updatedAt": "2026-08-17T12:32:01.374Z"
+    },
+    "op.modules.runtime": {
+      "text": "Tiempo de ejecución",
+      "sourceHash": "c4740e4ca28c",
+      "updatedAt": "2026-08-17T12:32:01.374Z"
+    },
+    "op.modules.autoCheck": {
+      "text": "Auto-check",
+      "sourceHash": "2e0f9b9f2e4f",
+      "updatedAt": "2026-08-17T12:32:02.295Z"
+    },
+    "op.pulse.reviews": {
+      "text": "Reseñas",
+      "sourceHash": "b83c4cdafef5",
+      "updatedAt": "2026-08-17T12:32:02.295Z"
+    },
+    "op.pulse.stored": {
+      "text": "Almacenado",
+      "sourceHash": "b2b53ee4fc1a",
+      "updatedAt": "2026-08-17T12:32:02.295Z"
+    },
+    "support.chat.title": {
+      "text": "Soporte de Octivate",
+      "sourceHash": "1b54a7b1a62f",
+      "updatedAt": "2026-08-17T12:32:02.295Z"
+    },
+    "support.chat.resolved": {
+      "text": "Conversación resuelta",
+      "sourceHash": "25aaa3efa2f8",
+      "updatedAt": "2026-08-17T12:32:02.295Z"
+    },
+    "support.chat.resolvedClosed": {
+      "text": "Resuelto · mensajería cerrada",
+      "sourceHash": "afd5f6b66e03",
+      "updatedAt": "2026-08-17T12:32:02.295Z"
+    },
+    "support.chat.accountSupport": {
+      "text": "Soporte de cuenta",
+      "sourceHash": "6bd44611563e",
+      "updatedAt": "2026-08-17T12:32:02.295Z"
+    },
+    "support.chat.accountSupportHint": {
+      "text": "Soporte de cuenta · normalmente responde en un día hábil",
+      "sourceHash": "db80d629390b",
+      "updatedAt": "2026-08-17T12:32:02.295Z"
+    },
+    "support.chat.attach": {
+      "text": "Adjuntar imagen",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T12:32:05.794Z"
+    },
+    "support.chat.placeholder": {
+      "text": "Escriba un mensaje formal…",
+      "sourceHash": "08fc39b852ec",
+      "updatedAt": "2026-08-17T12:32:05.794Z"
+    },
+    "support.chat.open": {
+      "text": "Abrir soporte",
+      "sourceHash": "3a80862045b7",
+      "updatedAt": "2026-08-17T12:32:05.794Z"
+    },
+    "support.chat.openAccount": {
+      "text": "Abrir chat de soporte de cuenta",
+      "sourceHash": "afa415115cd0",
+      "updatedAt": "2026-08-17T12:32:05.794Z"
+    },
+    "support.chat.minimize": {
+      "text": "Minimizar chat",
+      "sourceHash": "f6068d8c1fcc",
+      "updatedAt": "2026-08-17T12:32:05.794Z"
+    },
+    "support.chat.close": {
+      "text": "Cerrar chat",
+      "sourceHash": "eb376184348e",
+      "updatedAt": "2026-08-17T12:32:05.794Z"
+    },
+    "support.chat.send": {
+      "text": "Enviar mensaje",
+      "sourceHash": "c70a890d1411",
+      "updatedAt": "2026-08-17T12:32:05.794Z"
+    },
+    "support.chat.assignedStaff": {
+      "text": "Miembro del personal de Octivate asignado",
+      "sourceHash": "e7a8f38cc9f1",
+      "updatedAt": "2026-08-17T12:32:05.794Z"
+    },
+    "support.chat.attachHint": {
+      "text": "Adjuntar una imagen (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T12:32:10.888Z"
+    },
+    "support.chat.newReply": {
+      "text": "Nueva respuesta de soporte",
+      "sourceHash": "c8aad4b8dbca",
+      "updatedAt": "2026-08-17T12:32:10.888Z"
+    },
+    "support.chat.ready": {
+      "text": "Conversación lista — envía un mensaje para comenzar",
+      "sourceHash": "f8df923263c6",
+      "updatedAt": "2026-08-17T12:32:10.888Z"
+    },
+    "support.chat.signInRequired": {
+      "text": "Iniciar sesión requerido para contactar soporte",
+      "sourceHash": "4b61a483a26f",
+      "updatedAt": "2026-08-17T12:32:10.888Z"
+    },
+    "support.chat.resolvedContinue": {
+      "text": "Esta conversación está resuelta. Inicia una nueva conversación para continuar.",
+      "sourceHash": "99fbd68dd31b",
+      "updatedAt": "2026-08-17T12:32:10.888Z"
+    },
+    "support.chat.invalidImage": {
+      "text": "Imagen no válida",
+      "sourceHash": "681014468ba7",
+      "updatedAt": "2026-08-17T12:32:10.888Z"
+    },
+    "support.chat.topic.access": {
+      "text": "Acceso",
+      "sourceHash": "2f81a22de0af",
+      "updatedAt": "2026-08-17T12:32:10.888Z"
+    },
+    "support.chat.topic.briefs": {
+      "text": "Resúmenes",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T12:32:16.897Z"
+    },
+    "support.chat.topic.projects": {
+      "text": "Proyectos",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T12:32:16.897Z"
+    },
+    "support.chat.topic.plans": {
+      "text": "Planes",
+      "sourceHash": "cf2e5f26fef8",
+      "updatedAt": "2026-08-17T12:32:16.897Z"
+    },
+    "support.chat.canned.access": {
+      "text": "Necesito ayuda para iniciar sesión o acceder a mi espacio de trabajo.",
+      "sourceHash": "6921c24ea727",
+      "updatedAt": "2026-08-17T12:32:16.897Z"
+    },
+    "support.chat.canned.briefs": {
+      "text": "Necesito ayuda para revisar o exportar un informe de decisión.",
+      "sourceHash": "0ee61394f841",
+      "updatedAt": "2026-08-17T12:32:16.897Z"
+    },
+    "support.chat.canned.projects": {
+      "text": "Tengo una pregunta sobre la configuración de un proyecto o la ejecución del flujo de trabajo.",
+      "sourceHash": "e400b004fbe8",
+      "updatedAt": "2026-08-17T12:32:16.897Z"
+    },
+    "support.chat.canned.plans": {
+      "text": "Me gustaría orientación sobre planes y acceso al equipo para mi organización.",
+      "sourceHash": "399700ef9ac7",
+      "updatedAt": "2026-08-17T12:32:16.897Z"
+    },
+    "support.page.needWorkspace": {
+      "text": "¿Necesita un espacio de trabajo? Abra Octivate o visite CENSII.",
+      "sourceHash": "dc42eadddae5",
+      "updatedAt": "2026-08-17T12:32:16.897Z"
+    },
+    "support.page.createAccount": {
+      "text": "Crear cuenta",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T12:32:32.273Z"
+    },
+    "support.page.openWorkspace": {
+      "text": "Abrir espacio de trabajo",
+      "sourceHash": "8b23311bbdc0",
+      "updatedAt": "2026-08-17T12:32:32.273Z"
+    },
+    "support.page.builtBy": {
+      "text": "Desarrollado por CENSII",
+      "sourceHash": "890270900ae3",
+      "updatedAt": "2026-08-17T12:32:32.273Z"
+    },
+    "support.page.role.founder": {
+      "text": "Fundador · Producto & Dominio",
+      "sourceHash": "4853fc7f81bc",
+      "updatedAt": "2026-08-17T12:32:32.273Z"
+    },
+    "support.page.role.founderDesc": {
+      "text": "Visión del producto, casos de uso del Caribe y la metodología de decisión CENSII.",
+      "sourceHash": "90cd07f23dbe",
+      "updatedAt": "2026-08-17T12:32:32.273Z"
+    },
+    "support.page.role.ai": {
+      "text": "Flujos de trabajo de IA & Validación",
+      "sourceHash": "12d701f87e36",
+      "updatedAt": "2026-08-17T12:32:32.273Z"
+    },
+    "support.page.role.aiDesc": {
+      "text": "Diseño de flujos de trabajo de agentes, verificaciones de evidencia y evaluación de demo.",
+      "sourceHash": "23e12290635b",
+      "updatedAt": "2026-08-17T12:32:32.273Z"
+    },
+    "support.page.role.tech": {
+      "text": "Arquitectura técnica",
+      "sourceHash": "d6004963fc9a",
+      "updatedAt": "2026-08-17T12:32:32.273Z"
+    },
+    "support.page.role.techDesc": {
+      "text": "MVP architecture, prototype delivery, and platform execution.",
+      "sourceHash": "20179b862557",
+      "updatedAt": "2026-08-17T12:32:33.120Z"
+    },
+    "support.chat.welcome": {
+      "text": "Hi — you’re connected to Octivate account support. Choose a topic or write a formal message.",
+      "sourceHash": "dbdb8c3ff845",
+      "updatedAt": "2026-08-17T12:32:33.120Z"
+    },
+    "support.chat.speakingWith": {
+      "text": "Speaking with",
+      "sourceHash": "1365c04cc97e",
+      "updatedAt": "2026-08-17T12:32:33.120Z"
+    },
+    "support.chat.startNew": {
+      "text": "Start new conversation",
+      "sourceHash": "bf79f47d3ac6",
+      "updatedAt": "2026-08-17T12:32:33.120Z"
+    },
+    "support.chat.you": {
+      "text": "You",
+      "sourceHash": "905cb326c779",
+      "updatedAt": "2026-08-17T12:32:33.120Z"
+    },
+    "support.chat.octivate": {
+      "text": "Octivate",
+      "sourceHash": "5076ec0702e6",
+      "updatedAt": "2026-08-17T12:32:33.120Z"
+    },
+    "support.chat.resolvedBody": {
+      "text": "This thread is closed. Start a new conversation if you still need help.",
+      "sourceHash": "04f13ea5232b",
+      "updatedAt": "2026-08-17T12:32:33.120Z"
+    },
+    "onboard.ui.workspaceTour": {
+      "text": "Workspace tour",
+      "sourceHash": "9edf55888973",
+      "updatedAt": "2026-08-17T12:32:33.120Z"
+    },
+    "onboard.ui.operatorTour": {
+      "text": "Recorrido del operador",
+      "sourceHash": "1538c47330f3",
+      "updatedAt": "2026-08-17T12:32:39.491Z"
+    },
+    "onboard.ui.closeTour": {
+      "text": "Cerrar recorrido",
+      "sourceHash": "1aca7dc4d76a",
+      "updatedAt": "2026-08-17T12:32:39.491Z"
+    },
+    "onboard.ui.skip": {
+      "text": "Saltar recorrido",
+      "sourceHash": "57bc79e3c907",
+      "updatedAt": "2026-08-17T12:32:39.491Z"
+    },
+    "onboard.ui.back": {
+      "text": "Atrás",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T12:32:39.491Z"
+    },
+    "onboard.ui.next": {
+      "text": "Siguiente",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T12:32:39.491Z"
+    },
+    "onboard.ui.getStarted": {
+      "text": "Comenzar",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T12:32:39.491Z"
+    },
+    "onboard.ui.stepOf": {
+      "text": "Paso {n} de {total}",
+      "sourceHash": "78cee4b898d5",
+      "updatedAt": "2026-08-17T12:32:39.491Z"
+    },
+    "onboard.ui.tutorial": {
+      "text": "Tutorial",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T12:32:39.491Z"
+    },
+    "onboard.ui.openTutorial": {
+      "text": "Tutorial de espacio de trabajo",
+      "sourceHash": "e663ca7b5a5b",
+      "updatedAt": "2026-08-17T12:32:51.015Z"
+    },
+    "onboard.ui.replayWorkspace": {
+      "text": "Reproducir recorrido por el espacio de trabajo",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T12:32:51.015Z"
+    },
+    "onboard.ui.replayOperator": {
+      "text": "Reproducir recorrido del operador",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T12:32:51.015Z"
+    },
+    "onboard.ws.1.kicker": {
+      "text": "Paso 1 · Resumen",
+      "sourceHash": "9a4fd5299ca7",
+      "updatedAt": "2026-08-17T12:32:51.015Z"
+    },
+    "onboard.ws.1.title": {
+      "text": "Comienza desde tu",
+      "sourceHash": "211f5f534912",
+      "updatedAt": "2026-08-17T12:32:51.015Z"
+    },
+    "onboard.ws.1.accent": {
+      "text": "inicio del espacio de trabajo",
+      "sourceHash": "a471f82221dc",
+      "updatedAt": "2026-08-17T12:32:51.015Z"
+    },
+    "onboard.ws.1.tagline": {
+      "text": "Briefings, proyectos, cobertura y uso en un solo lugar.",
+      "sourceHash": "b68671724729",
+      "updatedAt": "2026-08-17T12:32:51.015Z"
+    },
+    "onboard.ws.1.desc": {
+      "text": "Resumen es la base principal para la toma de decisiones en el Caribe. Utiliza la barra lateral para moverse entre Proyectos, Briefs, Monitores y Soporte en vivo — más el mapa de cobertura del Teatro para el contexto geográfico.",
+      "sourceHash": "4f772aad2485",
+      "updatedAt": "2026-08-17T12:32:51.015Z"
+    },
+    "onboard.ws.1.b1.lead": {
+      "text": "Barra lateral",
+      "sourceHash": "f5171c931c5c",
+      "updatedAt": "2026-08-17T12:33:30.175Z"
+    },
+    "onboard.ws.1.b1": {
+      "text": "salta Información general, Proyectos, Briefing y Monitores",
+      "sourceHash": "09c2c0b6bc3d",
+      "updatedAt": "2026-08-17T12:33:30.175Z"
+    },
+    "onboard.ws.1.b2.lead": {
+      "text": "Pregunta",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T12:33:30.175Z"
+    },
+    "onboard.ws.1.b2": {
+      "text": "abre un teatro de proyectos en un clic",
+      "sourceHash": "c1d04d6cd14c",
+      "updatedAt": "2026-08-17T12:33:30.175Z"
+    },
+    "onboard.ws.1.b3.lead": {
+      "text": "Reproducción",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T12:33:30.175Z"
+    },
+    "onboard.ws.1.b3": {
+      "text": "este recorrido en cualquier momento desde el Tutorial de Espacio de trabajo",
+      "sourceHash": "c80024feee50",
+      "updatedAt": "2026-08-17T12:33:30.175Z"
+    },
+    "onboard.ws.2.kicker": {
+      "text": "Paso 2 · Cobertura de Teatro",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T12:33:30.175Z"
+    },
+    "onboard.ws.2.title": {
+      "text": "Ver el",
+      "sourceHash": "acc2c52c24a5",
+      "updatedAt": "2026-08-17T12:33:30.175Z"
+    },
+    "onboard.ws.2.accent": {
+      "text": "Theatre coverage map",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T12:39:38.438Z"
+    },
+    "onboard.ws.2.tagline": {
+      "text": "Live Caribbean project geography on Overview.",
+      "sourceHash": "50820f6be866",
+      "updatedAt": "2026-08-17T12:39:38.438Z"
+    },
+    "onboard.ws.2.desc": {
+      "text": "The Theatre coverage map sits on Overview. Hotspots show where projects live; hover for counts, click a country to open the project list, and use Live / Updating when the workspace refreshes.",
+      "sourceHash": "f3d174ce0faa",
+      "updatedAt": "2026-08-17T12:39:38.438Z"
+    },
+    "onboard.ws.2.b1.lead": {
+      "text": "Hotspots",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T12:39:38.438Z"
+    },
+    "onboard.ws.2.b1": {
+      "text": "size by project count across jurisdictions",
+      "sourceHash": "31d40c2d9d01",
+      "updatedAt": "2026-08-17T12:39:38.438Z"
+    },
+    "onboard.ws.2.b2.lead": {
+      "text": "Click",
+      "sourceHash": "79cbc5eb672a",
+      "updatedAt": "2026-08-17T12:39:38.438Z"
+    },
+    "onboard.ws.2.b2": {
+      "text": "opens a modal of projects for that country",
+      "sourceHash": "88d6ba3584eb",
+      "updatedAt": "2026-08-17T12:39:38.438Z"
+    },
+    "onboard.ws.2.b3.lead": {
+      "text": "Live",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T12:39:38.438Z"
+    },
+    "onboard.ws.2.b3": {
+      "text": "pulses when coverage data refreshes",
+      "sourceHash": "dbb22d3bffab",
+      "updatedAt": "2026-08-17T12:39:39.590Z"
+    },
+    "onboard.ws.3.kicker": {
+      "text": "Step 3 · Projects",
+      "sourceHash": "df1977d42ab9",
+      "updatedAt": "2026-08-17T12:39:39.590Z"
+    },
+    "onboard.ws.3.title": {
+      "text": "Create a",
+      "sourceHash": "7d9043bfad91",
+      "updatedAt": "2026-08-17T12:39:39.590Z"
+    },
+    "onboard.ws.3.accent": {
+      "text": "decision theatre",
+      "sourceHash": "f45ac24f2d52",
+      "updatedAt": "2026-08-17T12:39:39.590Z"
+    },
+    "onboard.ws.3.tagline": {
+      "text": "One project = one strategic thread.",
+      "sourceHash": "f3a2465015c7",
+      "updatedAt": "2026-08-17T12:39:39.590Z"
+    },
+    "onboard.ws.3.desc": {
+      "text": "Open Projects and start a new theatre with country, sector, and a question. Upload documents before you run agents when you have proprietary context.",
+      "sourceHash": "4997ef5ee5aa",
+      "updatedAt": "2026-08-17T12:39:39.590Z"
+    },
+    "onboard.ws.3.b1.lead": {
+      "text": "New project",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T12:39:39.590Z"
+    },
+    "onboard.ws.3.b1": {
+      "text": "opens the create flow",
+      "sourceHash": "aca548b6f759",
+      "updatedAt": "2026-08-17T12:39:39.590Z"
+    },
+    "onboard.ws.3.b2.lead": {
+      "text": "Cada proyecto",
+      "sourceHash": "487ba03c31ee",
+      "updatedAt": "2026-08-17T12:39:54.647Z"
+    },
+    "onboard.ws.3.b2": {
+      "text": "mantiene su propia pregunta, docs y ejecuta",
+      "sourceHash": "483a4a50f88f",
+      "updatedAt": "2026-08-17T12:39:54.647Z"
+    },
+    "onboard.ws.3.b3.lead": {
+      "text": "Invitados para iniciar sesión",
+      "sourceHash": "fefaa17e3676",
+      "updatedAt": "2026-08-17T12:39:54.647Z"
+    },
+    "onboard.ws.3.b3": {
+      "text": "puede explorar el espacio de trabajo libremente con acceso de demo",
+      "sourceHash": "275de29aaeb9",
+      "updatedAt": "2026-08-17T12:39:54.647Z"
+    },
+    "onboard.ws.4.kicker": {
+      "text": "Paso 4 · Ejecutar",
+      "sourceHash": "44733d3f28a9",
+      "updatedAt": "2026-08-17T12:39:54.647Z"
+    },
+    "onboard.ws.4.title": {
+      "text": "Abrir un proyecto,",
+      "sourceHash": "c18dad9153ff",
+      "updatedAt": "2026-08-17T12:39:54.647Z"
+    },
+    "onboard.ws.4.tagline": {
+      "text": "Empieza un teatro primero — luego pregunta y ejecuta.",
+      "sourceHash": "708f17ba529c",
+      "updatedAt": "2026-08-17T12:39:54.647Z"
+    },
+    "onboard.ws.4.desc": {
+      "text": "Si no tienes un proyecto aún, usa Iniciar un nuevo proyecto. Dentro de un teatro existente, escribe una pregunta estratégica y ejecuta la tubería Poder–Sistemas–Narrativas.",
+      "sourceHash": "56e25027be02",
+      "updatedAt": "2026-08-17T12:40:16.339Z"
+    },
+    "onboard.ws.4.b1.lead": {
+      "text": "Nuevo proyecto",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T12:40:16.339Z"
+    },
+    "onboard.ws.4.b1": {
+      "text": "crea un teatro de decisiones para este recorrido",
+      "sourceHash": "0f82e9d50b72",
+      "updatedAt": "2026-08-17T12:40:16.339Z"
+    },
+    "onboard.ws.4.b2.lead": {
+      "text": "Pregunta",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T12:40:16.339Z"
+    },
+    "onboard.ws.4.b2": {
+      "text": "carga predefinidos o tu propia instrucción",
+      "sourceHash": "a120c1682683",
+      "updatedAt": "2026-08-17T12:40:16.339Z"
+    },
+    "onboard.ws.4.b3.lead": {
+      "text": "Ejecutar",
+      "sourceHash": "b1b392607dea",
+      "updatedAt": "2026-08-17T12:40:16.339Z"
+    },
+    "onboard.ws.4.b3": {
+      "text": "inicia la tubería en vivo OpenRouter",
+      "sourceHash": "a4f5d7412be6",
+      "updatedAt": "2026-08-17T12:40:16.339Z"
+    },
+    "onboard.ws.5.kicker": {
+      "text": "Paso 5 · Resúmenes",
+      "sourceHash": "ab23c9919bc4",
+      "updatedAt": "2026-08-17T12:40:16.339Z"
+    },
+    "onboard.ws.5.title": {
+      "text": "Abrir el",
+      "sourceHash": "2d7eeba9f46c",
+      "updatedAt": "2026-08-17T12:40:39.867Z"
+    },
+    "onboard.ws.5.accent": {
+      "text": "brief de decisión",
+      "sourceHash": "9a4025f24b62",
+      "updatedAt": "2026-08-17T12:40:39.867Z"
+    },
+    "onboard.ws.5.tagline": {
+      "text": "Recomendaciones, evidencia y brechas.",
+      "sourceHash": "6063763a4ffb",
+      "updatedAt": "2026-08-17T12:40:39.867Z"
+    },
+    "onboard.ws.5.desc": {
+      "text": "Las ejecuciones exitosas aterrizan en briefs. Abre un brief para revisar el juicio, la evidencia, los planes de monitoreo y exportar un paquete compartible para los interesados.",
+      "sourceHash": "f07d8f13ae30",
+      "updatedAt": "2026-08-17T12:40:39.867Z"
+    },
+    "onboard.ws.5.b1.lead": {
+      "text": "Navegación de briefs",
+      "sourceHash": "e913003e38d3",
+      "updatedAt": "2026-08-17T12:40:39.867Z"
+    },
+    "onboard.ws.5.b1": {
+      "text": "lista cada paquete de decisiones completado",
+      "sourceHash": "bea89fd9ef53",
+      "updatedAt": "2026-08-17T12:40:39.867Z"
+    },
+    "onboard.ws.5.b2.lead": {
+      "text": "Exportaciones",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T12:40:39.867Z"
+    },
+    "onboard.ws.5.b2": {
+      "text": "genera Word / PDF con marca para los interesados",
+      "sourceHash": "c9bce8ccfa12",
+      "updatedAt": "2026-08-17T12:40:39.867Z"
+    },
+    "onboard.ws.5.b3.lead": {
+      "text": "Muestra de brief",
+      "sourceHash": "24a56e96ac52",
+      "updatedAt": "2026-08-17T12:40:59.438Z"
+    },
+    "onboard.ws.5.b3": {
+      "text": "también está vinculado desde la página de aterrizaje pública",
+      "sourceHash": "459724e94bb1",
+      "updatedAt": "2026-08-17T12:40:59.438Z"
+    },
+    "onboard.ws.6.kicker": {
+      "text": "Paso 6 · Monitores",
+      "sourceHash": "d168aae1315a",
+      "updatedAt": "2026-08-17T12:40:59.438Z"
+    },
+    "onboard.ws.6.title": {
+      "text": "Señales de vigilancia",
+      "sourceHash": "1ac5be293e80",
+      "updatedAt": "2026-08-17T12:40:59.438Z"
+    },
+    "onboard.ws.6.accent": {
+      "text": "entre ejecuciones",
+      "sourceHash": "785d2df244cb",
+      "updatedAt": "2026-08-17T12:40:59.438Z"
+    },
+    "onboard.ws.6.tagline": {
+      "text": "Palabras clave y vigilancia de jurisdicciones.",
+      "sourceHash": "55bdd583833b",
+      "updatedAt": "2026-08-17T12:40:59.438Z"
+    },
+    "onboard.ws.6.desc": {
+      "text": "Monitores vigilan temas en jurisdicciones del Caribe mientras trabajas. Créalos a partir de Monitores y revisa alertas entre ciclos de brief.",
+      "sourceHash": "11e264bb858e",
+      "updatedAt": "2026-08-17T12:40:59.438Z"
+    },
+    "onboard.ws.6.b1.lead": {
+      "text": "Crear",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T12:40:59.438Z"
+    },
+    "onboard.ws.6.b1": {
+      "text": "un elemento de la barra de Monitores",
+      "sourceHash": "0b2f9dadee88",
+      "updatedAt": "2026-08-17T12:41:09.860Z"
+    },
+    "onboard.ws.6.b2.lead": {
+      "text": "Jurisdicciones",
+      "sourceHash": "f5c46b8a7a74",
+      "updatedAt": "2026-08-17T12:41:09.860Z"
+    },
+    "onboard.ws.6.b2": {
+      "text": "reflejar el carrusel de cobertura en el sitio público",
+      "sourceHash": "d875a1715457",
+      "updatedAt": "2026-08-17T12:41:09.860Z"
+    },
+    "onboard.ws.6.b3.lead": {
+      "text": "Regresar aquí",
+      "sourceHash": "de5937ab71b9",
+      "updatedAt": "2026-08-17T12:41:09.860Z"
+    },
+    "onboard.ws.6.b3": {
+      "text": "cuando necesites ejecutar un análisis completo nuevamente",
+      "sourceHash": "30f05e6db135",
+      "updatedAt": "2026-08-17T12:41:09.860Z"
+    },
+    "onboard.ws.7.kicker": {
+      "text": "Paso 7 · Traducción",
+      "sourceHash": "97ff8d3a52eb",
+      "updatedAt": "2026-08-17T12:41:09.860Z"
+    },
+    "onboard.ws.7.title": {
+      "text": "Cambiar",
+      "sourceHash": "3e44c920427e",
+      "updatedAt": "2026-08-17T12:41:09.860Z"
+    },
+    "onboard.ws.7.accent": {
+      "text": "idioma en cualquier momento",
+      "sourceHash": "d29bfe062b1a",
+      "updatedAt": "2026-08-17T12:41:09.860Z"
+    },
+    "onboard.ws.7.tagline": {
+      "text": "Catálogos en tiempo real desde el control de idioma del sitio.",
+      "sourceHash": "cca5a8c696b4",
+      "updatedAt": "2026-08-17T12:41:26.463Z"
+    },
+    "onboard.ws.7.desc": {
+      "text": "Octivate usa catálogos i18n permanentes — elige un locale del control de idioma público del sitio y chrome actualiza inmediatamente. No widget de traducción de página de terceros.",
+      "sourceHash": "e047844bf1ae",
+      "updatedAt": "2026-08-17T12:41:26.463Z"
+    },
+    "onboard.ws.7.b1.lead": {
+      "text": "Idiomas",
+      "sourceHash": "db07be184479",
+      "updatedAt": "2026-08-17T12:41:26.463Z"
+    },
+    "onboard.ws.7.b1": {
+      "text": "Cubre Caribe y locales de demo globales",
+      "sourceHash": "522d37e0e94c",
+      "updatedAt": "2026-08-17T12:41:26.463Z"
+    },
+    "onboard.ws.7.b2.lead": {
+      "text": "Catálogos",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T12:41:26.463Z"
+    },
+    "onboard.ws.7.b2": {
+      "text": "sincroniza desde OpenRouter y cachea en el servidor",
+      "sourceHash": "106e3bc14187",
+      "updatedAt": "2026-08-17T12:41:26.463Z"
+    },
+    "onboard.ws.7.b3.lead": {
+      "text": "Chrome público",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T12:41:26.463Z"
+    },
+    "onboard.ws.7.b3": {
+      "text": "Hospeda el selector de idioma en las páginas de marketing",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T12:41:26.463Z"
+    },
+    "onboard.ws.8.kicker": {
+      "text": "Paso 8 · Iluminación",
+      "sourceHash": "a80faf25b3ce",
+      "updatedAt": "2026-08-17T12:41:39.814Z"
+    },
+    "onboard.ws.8.title": {
+      "text": "Configura tu",
+      "sourceHash": "277523aea813",
+      "updatedAt": "2026-08-17T12:41:39.814Z"
+    },
+    "onboard.ws.8.accent": {
+      "text": "iluminación",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T12:41:39.814Z"
+    },
+    "onboard.ws.8.tagline": {
+      "text": "Claro u oscuro — mismo idioma del producto.",
+      "sourceHash": "d9336b5e71e3",
+      "updatedAt": "2026-08-17T12:41:39.814Z"
+    },
+    "onboard.ws.8.desc": {
+      "text": "Iluminación alterna entre los temas claro y oscuro en Resumen, proyectos e interfaz. Use el control sol / luna en la barra de navegación o el pie del sitio público — el que mantenga cómodos los mapas y los resúmenes.",
+      "sourceHash": "b9b3db1a1087",
+      "updatedAt": "2026-08-17T12:41:39.814Z"
+    },
+    "onboard.ws.8.b1.lead": {
+      "text": "Alternar",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T12:41:39.814Z"
+    },
+    "onboard.ws.8.b1": {
+      "text": "cambian instantáneamente sol / luna iluminación",
+      "sourceHash": "3731c411d0ff",
+      "updatedAt": "2026-08-17T12:41:39.814Z"
+    },
+    "onboard.ws.8.b2.lead": {
+      "text": "Mapas",
+      "sourceHash": "80071cd75107",
+      "updatedAt": "2026-08-17T12:41:39.814Z"
+    },
+    "onboard.ws.8.b2": {
+      "text": "sigue el tema activo para el contraste de los azulejos",
+      "sourceHash": "52dd87360f0a",
+      "updatedAt": "2026-08-17T12:41:50.670Z"
+    },
+    "onboard.ws.8.b3.lead": {
+      "text": "Preferencia",
+      "sourceHash": "97d9b2888847",
+      "updatedAt": "2026-08-17T12:41:50.670Z"
+    },
+    "onboard.ws.8.b3": {
+      "text": "se mantiene con la sesión del navegador",
+      "sourceHash": "e5feed566b0f",
+      "updatedAt": "2026-08-17T12:41:50.670Z"
+    },
+    "onboard.ws.9.kicker": {
+      "text": "Paso 9 · Alertas de soporte",
+      "sourceHash": "9a34fc8570e3",
+      "updatedAt": "2026-08-17T12:41:50.670Z"
+    },
+    "onboard.ws.9.title": {
+      "text": "¿Necesita ayuda?",
+      "sourceHash": "864a198ed64a",
+      "updatedAt": "2026-08-17T12:41:50.670Z"
+    },
+    "onboard.ws.9.accent": {
+      "text": "Ayuda + alertas",
+      "sourceHash": "5de10bb7b38b",
+      "updatedAt": "2026-08-17T12:41:50.670Z"
+    },
+    "onboard.ws.9.tagline": {
+      "text": "Soporte en vivo para miembros con alertas de respuesta.",
+      "sourceHash": "1be68997ca1c",
+      "updatedAt": "2026-08-17T12:41:50.670Z"
+    },
+    "onboard.ws.9.desc": {
+      "text": "Los miembros del espacio de trabajo utilizan el chat flotante de Ayuda — no la bandeja de entrada del operador. Cuando el personal responde, Octivate puede mostrar alertas de soporte para que no se pierda el hilo. Los operadores responden desde el Soporte al cliente en su lugar.",
+      "sourceHash": "77b21b62e2b9",
+      "updatedAt": "2026-08-17T12:41:50.670Z"
+    },
+    "onboard.ws.9.b1.lead": {
+      "text": "Chat de ayuda",
+      "sourceHash": "7ba80729c84c",
+      "updatedAt": "2026-08-17T12:41:57.366Z"
+    },
+    "onboard.ws.9.b1": {
+      "text": "abre tu hilo de soporte de cuenta",
+      "sourceHash": "d9db0e6aba67",
+      "updatedAt": "2026-08-17T12:41:57.366Z"
+    },
+    "onboard.ws.9.b2.lead": {
+      "text": "Alertas",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T12:41:57.366Z"
+    },
+    "onboard.ws.9.b2": {
+      "text": "te notifica cuando el equipo responde",
+      "sourceHash": "f3cbe9b57721",
+      "updatedAt": "2026-08-17T12:41:57.366Z"
+    },
+    "onboard.ws.9.b3.lead": {
+      "text": "Temas rápidos",
+      "sourceHash": "df9701935ffd",
+      "updatedAt": "2026-08-17T12:41:57.366Z"
+    },
+    "onboard.ws.9.b3": {
+      "text": "cubren briefs, proyectos, demostraciones y planes",
+      "sourceHash": "a00b3d05a891",
+      "updatedAt": "2026-08-17T12:41:57.366Z"
+    },
+    "onboard.ws.10.kicker": {
+      "text": "Paso 10 · Legal",
+      "sourceHash": "d35eeb64a72a",
+      "updatedAt": "2026-08-17T12:41:57.366Z"
+    },
+    "onboard.ws.10.title": {
+      "text": "Política de privacidad",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T12:41:57.366Z"
+    },
+    "onboard.ws.10.accent": {
+      "text": "& Términos de Servicio",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T12:42:01.054Z"
+    },
+    "onboard.ws.10.tagline": {
+      "text": "Abra cualquiera de las páginas desde el pie lateral.",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T12:42:01.054Z"
+    },
+    "onboard.ws.10.desc": {
+      "text": "La Política de Privacidad y los Términos de Servicio están en el pie lateral. Haga clic en cualquiera de los enlaces en cualquier momento para abrir la página pública completa.",
+      "sourceHash": "5acee761c11a",
+      "updatedAt": "2026-08-17T12:42:01.054Z"
+    },
+    "onboard.ws.10.b1.lead": {
+      "text": "Política de Privacidad",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T12:42:01.054Z"
+    },
+    "onboard.ws.10.b1": {
+      "text": "cubre el uso de datos y el contexto de cookies",
+      "sourceHash": "4ee048f7abbd",
+      "updatedAt": "2026-08-17T12:42:01.054Z"
+    },
+    "onboard.ws.10.b2.lead": {
+      "text": "Términos de Servicio",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T12:42:01.054Z"
+    },
+    "onboard.ws.10.b2": {
+      "text": "cubren el uso de la plataforma y las cuentas",
+      "sourceHash": "8867a248339a",
+      "updatedAt": "2026-08-17T12:42:01.054Z"
+    },
+    "onboard.ws.10.b3.lead": {
+      "text": "Pie lateral",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T12:42:01.054Z"
+    },
+    "onboard.ws.10.b3": {
+      "text": "mantiene ambos enlaces a un clic de distancia",
+      "sourceHash": "9e79f002da45",
+      "updatedAt": "2026-08-17T12:42:02.326Z"
+    },
+    "onboard.op.1.kicker": {
+      "text": "Paso 1 · Pulso",
+      "sourceHash": "69e8ed5685c2",
+      "updatedAt": "2026-08-17T12:42:02.326Z"
+    },
+    "onboard.op.1.title": {
+      "text": "Comenzar",
+      "sourceHash": "f6702a1554c6",
+      "updatedAt": "2026-08-17T12:42:02.326Z"
+    },
+    "onboard.op.1.accent": {
+      "text": "Pulso",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T12:42:02.326Z"
+    },
+    "onboard.op.1.tagline": {
+      "text": "Vida saludable del pipeline de producción.",
+      "sourceHash": "60c7ce936d28",
+      "updatedAt": "2026-08-17T12:42:02.326Z"
+    },
+    "onboard.op.1.desc": {
+      "text": "Pulso es el hogar del operador. Escanee la salud de la sesión, la quema de tokens y las colas de revisión antes de profundizar en los controles.",
+      "sourceHash": "a92cbe53d3c5",
+      "updatedAt": "2026-08-17T12:42:02.326Z"
+    },
+    "onboard.op.1.b1.lead": {
+      "text": "KPIs",
+      "sourceHash": "6911b88f3e2c",
+      "updatedAt": "2026-08-17T12:42:02.326Z"
+    },
+    "onboard.op.1.b1": {
+      "text": "muestra tokens, agentes y carga de revisión",
+      "sourceHash": "d85127f0f3b1",
+      "updatedAt": "2026-08-17T12:42:02.326Z"
+    },
+    "onboard.op.1.b2.lead": {
+      "text": "Pestañas hash",
+      "sourceHash": "f235f2664aa1",
+      "updatedAt": "2026-08-17T12:42:15.817Z"
+    },
+    "onboard.op.1.b2": {
+      "text": "saltar cualquier sección de consola al instante",
+      "sourceHash": "1ba380c39f19",
+      "updatedAt": "2026-08-17T12:42:15.817Z"
+    },
+    "onboard.op.2.kicker": {
+      "text": "Paso 2 · Cobertura de teatro",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T12:42:15.817Z"
+    },
+    "onboard.op.2.title": {
+      "text": "Espacio de trabajo envía un",
+      "sourceHash": "fb40fd293dbf",
+      "updatedAt": "2026-08-17T12:42:15.817Z"
+    },
+    "onboard.op.2.accent": {
+      "text": "Mapa de cobertura de teatro",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T12:42:15.817Z"
+    },
+    "onboard.op.2.tagline": {
+      "text": "Indicar solo — se mantiene en la consola del operador.",
+      "sourceHash": "9b4f29cd12bd",
+      "updatedAt": "2026-08-17T12:42:15.817Z"
+    },
+    "onboard.op.2.desc": {
+      "text": "Los miembros ven un mapa en vivo de cobertura de teatro en la Visión general de Espacio de trabajo (Leaflet puntos calientes por país). Los operadores siguen trabajando aquí; activar modo Espacio de trabajo cuando quieras inspeccionar el mapa mismo. Este paso solo indica la adición.",
+      "sourceHash": "d6d28a804b12",
+      "updatedAt": "2026-08-17T12:42:15.817Z"
+    },
+    "onboard.op.2.b1.lead": {
+      "text": "Mapa de visión general",
+      "sourceHash": "c7511c10a051",
+      "updatedAt": "2026-08-17T12:42:15.817Z"
+    },
+    "onboard.op.2.b1": {
+      "text": "vive en /dashboard para miembros",
+      "sourceHash": "1e1143c480cb",
+      "updatedAt": "2026-08-17T12:42:16.845Z"
+    },
+    "onboard.op.2.b2.lead": {
+      "text": "Puntos calientes",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T12:42:16.845Z"
+    },
+    "onboard.op.2.b2": {
+      "text": "reflejan la geografía y los recuentos del proyecto",
+      "sourceHash": "76707569e685",
+      "updatedAt": "2026-08-17T12:42:16.845Z"
+    },
+    "onboard.op.2.b3.lead": {
+      "text": "No redirigir",
+      "sourceHash": "37fe346e787e",
+      "updatedAt": "2026-08-17T12:42:16.845Z"
+    },
+    "onboard.op.2.b3": {
+      "text": "este recorrido se queda en la consola del operador",
+      "sourceHash": "0a35fadeb5cf",
+      "updatedAt": "2026-08-17T12:42:16.845Z"
+    },
+    "onboard.op.3.kicker": {
+      "text": "Paso 3 · Operaciones",
+      "sourceHash": "cdff61105edd",
+      "updatedAt": "2026-08-17T12:42:16.845Z"
+    },
+    "onboard.op.3.title": {
+      "text": "Claro y",
+      "sourceHash": "6667043443c3",
+      "updatedAt": "2026-08-17T12:42:16.845Z"
+    },
+    "onboard.op.3.accent": {
+      "text": "moderado",
+      "sourceHash": "78cd1257c37f",
+      "updatedAt": "2026-08-17T12:42:16.845Z"
+    },
+    "onboard.op.3.tagline": {
+      "text": "Limpieza de sesiones, sincronización de i18n y publicación del registro.",
+      "sourceHash": "3c858c894d26",
+      "updatedAt": "2026-08-17T12:42:18.003Z"
+    },
+    "onboard.op.3.desc": {
+      "text": "Las operaciones cubren el mantenimiento — poda de sesiones atascadas, colas de moderación, sincronización de catálogo de i18n y el futuro editor de Logbook del Caribe.",
+      "sourceHash": "e8ffdad59fd2",
+      "updatedAt": "2026-08-17T12:42:18.003Z"
+    },
+    "onboard.op.3.b1.lead": {
+      "text": "Usar con moderación",
+      "sourceHash": "2e4662c69cf1",
+      "updatedAt": "2026-08-17T12:42:18.003Z"
+    },
+    "onboard.op.3.b1": {
+      "text": "las acciones aquí afectan el estado de producción en vivo",
+      "sourceHash": "ebed7ca8f314",
+      "updatedAt": "2026-08-17T12:42:18.003Z"
+    },
+    "onboard.op.3.b2.lead": {
+      "text": "Auditoría",
+      "sourceHash": "fa1703dd78a0",
+      "updatedAt": "2026-08-17T12:42:18.003Z"
+    },
+    "onboard.op.3.b2": {
+      "text": "los eventos aterrizan en Depuración para forense",
+      "sourceHash": "e2e5b567527e",
+      "updatedAt": "2026-08-17T12:42:18.003Z"
+    },
+    "onboard.op.4.kicker": {
+      "text": "Paso 4 · Control",
+      "sourceHash": "cf409a59474c",
+      "updatedAt": "2026-08-17T12:42:18.003Z"
+    },
+    "onboard.op.4.title": {
+      "text": "Ajustar plataforma",
+      "sourceHash": "6c57929aaaff",
+      "updatedAt": "2026-08-17T12:42:18.003Z"
+    },
+    "onboard.op.4.accent": {
+      "text": "limites",
+      "sourceHash": "9523ccbcc4c5",
+      "updatedAt": "2026-08-17T12:42:24.816Z"
+    },
+    "onboard.op.4.tagline": {
+      "text": "Tokens, subidas, avatares y política de revisión.",
+      "sourceHash": "324ca1ebc063",
+      "updatedAt": "2026-08-17T12:42:24.816Z"
+    },
+    "onboard.op.4.desc": {
+      "text": "Control establece límites de ejecución: tokens diarios, agentes concurrentes, tamaño de subida, avatar KB, longitud de bio y política de revisión humana. Los cambios se guardan automáticamente.",
+      "sourceHash": "89f1ae55703d",
+      "updatedAt": "2026-08-17T12:42:24.816Z"
+    },
+    "onboard.op.4.b1.lead": {
+      "text": "Perfil de cuenta",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T12:42:24.816Z"
+    },
+    "onboard.op.4.b1": {
+      "text": "avatar KB + caracteres de bio para miembros",
+      "sourceHash": "1b67c63a6796",
+      "updatedAt": "2026-08-17T12:42:24.816Z"
+    },
+    "onboard.op.4.b2.lead": {
+      "text": "Toggles de política",
+      "sourceHash": "f55fcb9621a8",
+      "updatedAt": "2026-08-17T12:42:24.816Z"
+    },
+    "onboard.op.4.b2": {
+      "text": "modelos premium y revisión obligatoria",
+      "sourceHash": "040dad7e7738",
+      "updatedAt": "2026-08-17T12:42:24.816Z"
+    },
+    "onboard.op.5.kicker": {
+      "text": "Paso 5 · Catálogo",
+      "sourceHash": "5aa04e638450",
+      "updatedAt": "2026-08-17T12:42:24.816Z"
+    },
+    "onboard.op.5.title": {
+      "text": "Fuentes y",
+      "sourceHash": "802bb75da6d8",
+      "updatedAt": "2026-08-17T12:43:06.728Z"
+    },
+    "onboard.op.5.accent": {
+      "text": "señales",
+      "sourceHash": "0ab56c376c0a",
+      "updatedAt": "2026-08-17T12:43:06.728Z"
+    },
+    "onboard.op.5.tagline": {
+      "text": "Importar y curar entradas de evidencia.",
+      "sourceHash": "2a9d3f29bdd9",
+      "updatedAt": "2026-08-17T12:43:06.728Z"
+    },
+    "onboard.op.5.desc": {
+      "text": "El catálogo gestiona paquetes de fuentes e importaciones que alimentan los monitores y las ejecuciones de doctrina. Mantén la procedencia limpia antes de que los informes se envíen.",
+      "sourceHash": "c33bc98d7906",
+      "updatedAt": "2026-08-17T12:43:06.728Z"
+    },
+    "onboard.op.5.b1.lead": {
+      "text": "Importar",
+      "sourceHash": "d6fbc9d2bdd5",
+      "updatedAt": "2026-08-17T12:43:06.728Z"
+    },
+    "onboard.op.5.b1": {
+      "text": "agrega fuentes regionales curadas",
+      "sourceHash": "172c6349570e",
+      "updatedAt": "2026-08-17T12:43:06.728Z"
+    },
+    "onboard.op.5.b2.lead": {
+      "text": "Calidad en",
+      "sourceHash": "a4734cf2e252",
+      "updatedAt": "2026-08-17T12:43:06.728Z"
+    },
+    "onboard.op.5.b2": {
+      "text": "calidad de salida para informes posteriores",
+      "sourceHash": "0cb55e852c48",
+      "updatedAt": "2026-08-17T12:43:06.728Z"
+    },
+    "onboard.op.6.kicker": {
+      "text": "Paso 6 · Soporte al cliente",
+      "sourceHash": "d3b5d83837c6",
+      "updatedAt": "2026-08-17T12:43:20.636Z"
+    },
+    "onboard.op.6.title": {
+      "text": "Personal",
+      "sourceHash": "a4730a22cf49",
+      "updatedAt": "2026-08-17T12:43:20.636Z"
+    },
+    "onboard.op.6.accent": {
+      "text": "Soporte al cliente",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T12:43:20.636Z"
+    },
+    "onboard.op.6.tagline": {
+      "text": "Hilos de cliente en vivo con vistas previas seguras.",
+      "sourceHash": "50716a3366e6",
+      "updatedAt": "2026-08-17T12:43:20.636Z"
+    },
+    "onboard.op.6.desc": {
+      "text": "El Soporte al cliente es la bandeja de entrada del fundador. Responde en hilo, vista previa de adjuntos en el navegador y nunca descargues archivos no confiables localmente. Los miembros usan chat de Ayuda; responde aquí.",
+      "sourceHash": "541eec4450ce",
+      "updatedAt": "2026-08-17T12:43:20.636Z"
+    },
+    "onboard.op.6.b1.lead": {
+      "text": "Transmisión en vivo",
+      "sourceHash": "d65e4dee2e51",
+      "updatedAt": "2026-08-17T12:43:20.636Z"
+    },
+    "onboard.op.6.b2.lead": {
+      "text": "Avatares",
+      "sourceHash": "fc022ebccbe9",
+      "updatedAt": "2026-08-17T12:43:20.636Z"
+    },
+    "onboard.op.6.b2": {
+      "text": "identificar Shemuel, Nirvana y Jaden",
+      "sourceHash": "48e873e8220f",
+      "updatedAt": "2026-08-17T12:43:34.783Z"
+    },
+    "onboard.op.7.kicker": {
+      "text": "Paso 7 · Alertas de soporte",
+      "sourceHash": "8372eb12faee",
+      "updatedAt": "2026-08-17T12:43:34.783Z"
+    },
+    "onboard.op.7.title": {
+      "text": "No te pierdas de un",
+      "sourceHash": "696735ef48a9",
+      "updatedAt": "2026-08-17T12:43:34.783Z"
+    },
+    "onboard.op.7.accent": {
+      "text": "respuesta de miembro",
+      "sourceHash": "5ecb45f06be4",
+      "updatedAt": "2026-08-17T12:43:34.783Z"
+    },
+    "onboard.op.7.desc": {
+      "text": "Las alertas de soporte para operadores escuchan en segundo plano. Los mensajes de miembros empujan toasts y deep-link al hilo de Soporte al cliente — incluso cuando estés en Pulse o Mail.",
+      "sourceHash": "8055b84f84f5",
+      "updatedAt": "2026-08-17T12:43:34.783Z"
+    },
+    "onboard.op.7.b1.lead": {
+      "text": "Toasts",
+      "sourceHash": "0b021d5f7dac",
+      "updatedAt": "2026-08-17T12:43:34.783Z"
+    },
+    "onboard.op.7.b1": {
+      "text": "Mostrar mensajes de miembros inmediatamente",
+      "sourceHash": "9aae82a3ea4b",
+      "updatedAt": "2026-08-17T12:43:34.783Z"
+    },
+    "onboard.op.7.b2.lead": {
+      "text": "Hilo abierto",
+      "sourceHash": "9309e686d270",
+      "updatedAt": "2026-08-17T12:43:38.853Z"
+    },
+    "onboard.op.7.b2": {
+      "text": "va al Soporte al cliente de esa cuenta",
+      "sourceHash": "cc8dadf92751",
+      "updatedAt": "2026-08-17T12:43:38.853Z"
+    },
+    "onboard.op.7.b3.lead": {
+      "text": "Siempre activo",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T12:43:38.853Z"
+    },
+    "onboard.op.7.b3": {
+      "text": "SSE permanece activado mientras estás conectado como operador",
+      "sourceHash": "2e8dba7c4567",
+      "updatedAt": "2026-08-17T12:43:38.853Z"
+    },
+    "onboard.op.8.kicker": {
+      "text": "Paso 8 · Traducción",
+      "sourceHash": "a025237b5a1e",
+      "updatedAt": "2026-08-17T12:43:38.853Z"
+    },
+    "onboard.op.8.title": {
+      "text": "Operador",
+      "sourceHash": "d0e687b079fb",
+      "updatedAt": "2026-08-17T12:43:38.853Z"
+    },
+    "onboard.op.8.accent": {
+      "text": "control de idioma",
+      "sourceHash": "c834218d9e24",
+      "updatedAt": "2026-08-17T12:43:38.853Z"
+    },
+    "onboard.op.8.tagline": {
+      "text": "Mismos catálogos en tiempo real que el sitio público.",
+      "sourceHash": "b9c781d8ef02",
+      "updatedAt": "2026-08-17T12:43:38.853Z"
+    },
+    "onboard.op.8.desc": {
+      "text": "Catálogos locale que cubren el chrome de los power members y la copia legal. Vista previa de idiomas desde el control de idioma del sitio público; sincroniza catálogos completos desde Operaciones.",
+      "sourceHash": "76e73ee68e58",
+      "updatedAt": "2026-08-17T12:43:54.668Z"
+    },
+    "onboard.op.8.b1.lead": {
+      "text": "Público chrome",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T12:43:54.668Z"
+    },
+    "onboard.op.8.b1": {
+      "text": "alojará el selector de idioma en las páginas de marketing",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T12:43:54.668Z"
+    },
+    "onboard.op.8.b2.lead": {
+      "text": "Catálogos",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T12:43:54.668Z"
+    },
+    "onboard.op.8.b2": {
+      "text": "coincidir con lo que ven los miembros y los visitantes de landing page",
+      "sourceHash": "0fbdcdc9ad6a",
+      "updatedAt": "2026-08-17T12:43:54.668Z"
+    },
+    "onboard.op.8.b3.lead": {
+      "text": "Operaciones",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T12:43:54.668Z"
+    },
+    "onboard.op.8.b3": {
+      "text": "alojará herramientas de sincronización completa de catálogos",
+      "sourceHash": "eb7aa3e340d4",
+      "updatedAt": "2026-08-17T12:43:54.668Z"
+    },
+    "onboard.op.9.kicker": {
+      "text": "Paso 9 · Iluminación",
+      "sourceHash": "7eafa4130147",
+      "updatedAt": "2026-08-17T12:43:54.668Z"
+    },
+    "onboard.op.9.title": {
+      "text": "Consola",
+      "sourceHash": "e3cf75e3a804",
+      "updatedAt": "2026-08-17T12:43:55.792Z"
+    },
+    "onboard.op.9.accent": {
+      "text": "iluminación",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T12:43:55.792Z"
+    },
+    "onboard.op.9.tagline": {
+      "text": "Claro u oscuro para largas sesiones de operador.",
+      "sourceHash": "96665289ffd6",
+      "updatedAt": "2026-08-17T12:43:55.792Z"
+    },
+    "onboard.op.9.desc": {
+      "text": "Los cambios de iluminación alternan los temas claro y oscuro de la consola del operador y el espacio de trabajo. Usa el control sol/luna en la barra de navegación o el pie de página del sitio público.",
+      "sourceHash": "191db2fb643b",
+      "updatedAt": "2026-08-17T12:43:55.792Z"
+    },
+    "onboard.op.9.b1.lead": {
+      "text": "Alternar",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T12:43:55.792Z"
+    },
+    "onboard.op.9.b1": {
+      "text": "está en el encabezado de marketing, no en la barra lateral del operador",
+      "sourceHash": "414d448ecba7",
+      "updatedAt": "2026-08-17T12:43:55.792Z"
+    },
+    "onboard.op.9.b2.lead": {
+      "text": "Compartido",
+      "sourceHash": "50d0d8dd11a9",
+      "updatedAt": "2026-08-17T12:43:55.792Z"
+    },
+    "onboard.op.9.b2": {
+      "text": "la preferencia de tema te sigue al modo Workspace",
+      "sourceHash": "86985668defd",
+      "updatedAt": "2026-08-17T12:43:55.792Z"
+    },
+    "onboard.op.9.b3.lead": {
+      "text": "Accesibilidad",
+      "sourceHash": "d660049bc1f2",
+      "updatedAt": "2026-08-17T12:44:22.081Z"
+    },
+    "onboard.op.9.b3": {
+      "text": "use la iluminación que reduzca la fatiga visual",
+      "sourceHash": "5c3a02dac3e5",
+      "updatedAt": "2026-08-17T12:44:22.081Z"
+    },
+    "onboard.op.10.kicker": {
+      "text": "Paso 10 · Correo",
+      "sourceHash": "191b38258aa7",
+      "updatedAt": "2026-08-17T12:44:22.081Z"
+    },
+    "onboard.op.10.title": {
+      "text": "Enviar desde tu",
+      "sourceHash": "2a06a5d40f16",
+      "updatedAt": "2026-08-17T12:44:22.081Z"
+    },
+    "onboard.op.10.accent": {
+      "text": "cuenta",
+      "sourceHash": "ca20728d35f0",
+      "updatedAt": "2026-08-17T12:44:22.081Z"
+    },
+    "onboard.op.10.tagline": {
+      "text": "lista de correo + Haraka saliente.",
+      "sourceHash": "551cba57a6f5",
+      "updatedAt": "2026-08-17T12:44:22.081Z"
+    },
+    "onboard.op.10.desc": {
+      "text": "Los correos se envían a suscriptores con la plantilla HTML predeterminada. Tu dirección sesión es la preferida From; los destinatarios provienen de la lista de aterrizaje.",
+      "sourceHash": "424de746cee0",
+      "updatedAt": "2026-08-17T12:44:22.081Z"
+    },
+    "onboard.op.10.b1.lead": {
+      "text": "From",
+      "sourceHash": "3f66052a107e",
+      "updatedAt": "2026-08-17T12:44:22.081Z"
+    },
+    "onboard.op.10.b1": {
+      "text": "por defecto usa el correo del operador",
+      "sourceHash": "edef1599b4ef",
+      "updatedAt": "2026-08-17T12:44:29.159Z"
+    },
+    "onboard.op.10.b2.lead": {
+      "text": "Depuración",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T12:44:29.159Z"
+    },
+    "onboard.op.10.b2": {
+      "text": "captura advertencias y errores de Haraka",
+      "sourceHash": "fea5242b81fb",
+      "updatedAt": "2026-08-17T12:44:29.159Z"
+    },
+    "onboard.op.11.kicker": {
+      "text": "Paso 11 · Usuarios",
+      "sourceHash": "ae43054a142a",
+      "updatedAt": "2026-08-17T12:44:29.159Z"
+    },
+    "onboard.op.11.title": {
+      "text": "Ver miembros",
+      "sourceHash": "962ea526bfbe",
+      "updatedAt": "2026-08-17T12:44:29.159Z"
+    },
+    "onboard.op.11.accent": {
+      "text": "y biografías",
+      "sourceHash": "48e930db5788",
+      "updatedAt": "2026-08-17T12:44:29.159Z"
+    },
+    "onboard.op.11.tagline": {
+      "text": "Conteos, deshabilitación y restablecimiento de contraseña.",
+      "sourceHash": "d17f62313435",
+      "updatedAt": "2026-08-17T12:44:29.159Z"
+    },
+    "onboard.op.11.desc": {
+      "text": "Muestra la mezcla de registros, la actividad de correo, los avatares y las descripciones. Los operadores fundadores se mantienen protegidos del deshabilitación/restablecimiento aquí.",
+      "sourceHash": "119d0bd4415b",
+      "updatedAt": "2026-08-17T12:44:29.159Z"
+    },
+    "onboard.op.11.b1.lead": {
+      "text": "Restablecer contraseña",
+      "sourceHash": "5c4bc97ee5d0",
+      "updatedAt": "2026-08-17T12:44:30.252Z"
+    },
+    "onboard.op.11.b1": {
+      "text": "copia un secreto de un solo uso",
+      "sourceHash": "47b0fb92db14",
+      "updatedAt": "2026-08-17T12:44:30.252Z"
+    },
+    "onboard.op.11.b2.lead": {
+      "text": "Fundadores",
+      "sourceHash": "9a7fd749d2d3",
+      "updatedAt": "2026-08-17T12:44:30.252Z"
+    },
+    "onboard.op.11.b2": {
+      "text": "no pueden ser moderados en este panel",
+      "sourceHash": "d220867e9a43",
+      "updatedAt": "2026-08-17T12:44:30.252Z"
+    },
+    "onboard.op.12.kicker": {
+      "text": "Paso 12 · Precios",
+      "sourceHash": "618561daf8bd",
+      "updatedAt": "2026-08-17T12:44:30.252Z"
+    },
+    "onboard.op.12.title": {
+      "text": "Editar plan",
+      "sourceHash": "2cdbc67066c5",
+      "updatedAt": "2026-08-17T12:44:30.252Z"
+    },
+    "onboard.op.12.accent": {
+      "text": "copiar",
+      "sourceHash": "f84e2e2dadd8",
+      "updatedAt": "2026-08-17T12:44:30.252Z"
+    },
+    "onboard.op.12.tagline": {
+      "text": "Tarjetas de precios públicas y notas.",
+      "sourceHash": "8ff7aaafc31b",
+      "updatedAt": "2026-08-17T12:44:30.252Z"
+    },
+    "onboard.op.12.desc": {
+      "text": "Las actualizaciones de precios reflejan los planes en vivo mostrados en el sitio de marketing. Mantén los montos y las notas de características precisos antes de publicar.",
+      "sourceHash": "82983571e556",
+      "updatedAt": "2026-08-17T12:44:38.604Z"
+    },
+    "onboard.op.12.b1.lead": {
+      "text": "Guardado automático",
+      "sourceHash": "ff6ad92011f3",
+      "updatedAt": "2026-08-17T12:44:38.604Z"
+    },
+    "onboard.op.12.b1": {
+      "text": "escribe en el almacenamiento de planes de facturación",
+      "sourceHash": "af7675c6dd25",
+      "updatedAt": "2026-08-17T12:44:38.604Z"
+    },
+    "onboard.op.12.b2.lead": {
+      "text": "Página pública",
+      "sourceHash": "9e54993aed01",
+      "updatedAt": "2026-08-17T12:44:38.604Z"
+    },
+    "onboard.op.12.b2": {
+      "text": "lee la misma fuente de verdad",
+      "sourceHash": "524d72da3a6b",
+      "updatedAt": "2026-08-17T12:44:38.604Z"
+    },
+    "onboard.op.13.kicker": {
+      "text": "Paso 13 · Exportar",
+      "sourceHash": "7eb4878ff011",
+      "updatedAt": "2026-08-17T12:44:38.604Z"
+    },
+    "onboard.op.13.title": {
+      "text": "Define el brief",
+      "sourceHash": "d926be00a71b",
+      "updatedAt": "2026-08-17T12:44:38.604Z"
+    },
+    "onboard.op.13.accent": {
+      "text": "plantillas",
+      "sourceHash": "7981a4e7e9bd",
+      "updatedAt": "2026-08-17T12:44:38.604Z"
+    },
+    "onboard.op.13.tagline": {
+      "text": "HTML export layouts for interesados.",
+      "sourceHash": "ab0a7d1a6206",
+      "updatedAt": "2026-08-17T12:45:02.664Z"
+    },
+    "onboard.op.13.desc": {
+      "text": "Exportar te permite diseñar, previsualizar y subir plantillas HTML usadas cuando los briefs abandonan la plataforma como paquetes.",
+      "sourceHash": "37e62096c9c6",
+      "updatedAt": "2026-08-17T12:45:02.664Z"
+    },
+    "onboard.op.13.b1.lead": {
+      "text": "Previsualizar",
+      "sourceHash": "f1fbb2b43dca",
+      "updatedAt": "2026-08-17T12:45:02.664Z"
+    },
+    "onboard.op.13.b1": {
+      "text": "se renderiza contra un brief de muestra",
+      "sourceHash": "34bf59f2f261",
+      "updatedAt": "2026-08-17T12:45:02.664Z"
+    },
+    "onboard.op.13.b2.lead": {
+      "text": "Subir",
+      "sourceHash": "8bdf057f91e7",
+      "updatedAt": "2026-08-17T12:45:02.664Z"
+    },
+    "onboard.op.13.b2": {
+      "text": "acepta paquetes HTML con estilo",
+      "sourceHash": "54b4e5868afb",
+      "updatedAt": "2026-08-17T12:45:02.664Z"
+    },
+    "onboard.op.14.kicker": {
+      "text": "Paso 14 · Legal",
+      "sourceHash": "ae9396d21227",
+      "updatedAt": "2026-08-17T12:45:02.664Z"
+    },
+    "onboard.op.14.title": {
+      "text": "Política de privacidad",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T12:45:02.664Z"
+    },
+    "onboard.op.14.accent": {
+      "text": "& Condiciones de Servicio",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T12:45:19.236Z"
+    },
+    "onboard.op.14.tagline": {
+      "text": "Abra cualquiera de las páginas desde el pie de página lateral.",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T12:45:19.236Z"
+    },
+    "onboard.op.14.desc": {
+      "text": "Los miembros aceptan la Política de Privacidad y las Condiciones de Servicio al registrarse. Los operadores pueden abrir cualquiera de las páginas públicas desde los enlaces del pie de página lateral en cualquier momento.",
+      "sourceHash": "9ba7513c9ea9",
+      "updatedAt": "2026-08-17T12:45:19.236Z"
+    },
+    "onboard.op.14.b1.lead": {
+      "text": "Política de Privacidad",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T12:45:19.236Z"
+    },
+    "onboard.op.14.b1": {
+      "text": "se publica para la confianza pública",
+      "sourceHash": "45a08c67c9ae",
+      "updatedAt": "2026-08-17T12:45:19.236Z"
+    },
+    "onboard.op.14.b2.lead": {
+      "text": "Condiciones de Servicio",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T12:45:19.236Z"
+    },
+    "onboard.op.14.b2": {
+      "text": "rige las cuentas y el uso de la plataforma",
+      "sourceHash": "ad5b587dd979",
+      "updatedAt": "2026-08-17T12:45:19.236Z"
+    },
+    "onboard.op.14.b3.lead": {
+      "text": "Pie de página lateral",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T12:45:19.236Z"
+    },
+    "onboard.op.14.b3": {
+      "text": "links navigate to the full legal pages",
+      "sourceHash": "9094e6b57be7",
+      "updatedAt": "2026-08-17T12:45:20.831Z"
+    },
+    "onboard.op.15.kicker": {
+      "text": "Step 15 · Debug",
+      "sourceHash": "c5bd8ede0640",
+      "updatedAt": "2026-08-17T12:45:20.831Z"
+    },
+    "onboard.op.15.title": {
+      "text": "Watch the",
+      "sourceHash": "a6490eb13812",
+      "updatedAt": "2026-08-17T12:45:20.831Z"
+    },
+    "onboard.op.15.accent": {
+      "text": "live console",
+      "sourceHash": "961a91cb4e0a",
+      "updatedAt": "2026-08-17T12:45:20.831Z"
+    },
+    "onboard.op.15.tagline": {
+      "text": "OpenRouter, pipeline, mail, and security events.",
+      "sourceHash": "4d26fcf22bcf",
+      "updatedAt": "2026-08-17T12:45:20.831Z"
+    },
+    "onboard.op.15.desc": {
+      "text": "Debug streams ops events. Filter by Mail when testing SMTP, or Security after password/avatar changes. Clear only when you mean it.",
+      "sourceHash": "9dc275e13749",
+      "updatedAt": "2026-08-17T12:45:20.831Z"
+    },
+    "onboard.op.15.b1.lead": {
+      "text": "Mail source",
+      "sourceHash": "2c1dfce6077b",
+      "updatedAt": "2026-08-17T12:45:20.831Z"
+    },
+    "onboard.op.15.b1": {
+      "text": "shows Haraka warn/error payloads",
+      "sourceHash": "95cd087c7f66",
+      "updatedAt": "2026-08-17T12:45:20.831Z"
+    },
+    "onboard.op.15.b2.lead": {
+      "text": "Replay",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T12:45:21.727Z"
+    },
+    "onboard.op.15.b2": {
+      "text": "this tour anytime from Operator Tutorial",
+      "sourceHash": "fe5d5215b04d",
+      "updatedAt": "2026-08-17T12:45:21.727Z"
+    },
+    "common.loading": {
+      "text": "Loading…",
+      "sourceHash": "33ce417454bf",
+      "updatedAt": "2026-08-17T12:45:21.727Z"
+    },
+    "common.save": {
+      "text": "Save",
+      "sourceHash": "efc007a393f6",
+      "updatedAt": "2026-08-17T12:45:21.727Z"
+    },
+    "common.cancel": {
+      "text": "Cancel",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T12:45:21.727Z"
+    },
+    "common.close": {
+      "text": "Close",
+      "sourceHash": "bbfa773e5a63",
+      "updatedAt": "2026-08-17T12:45:21.727Z"
+    },
+    "common.retry": {
+      "text": "Retry",
+      "sourceHash": "9f5cd8a2e880",
+      "updatedAt": "2026-08-17T12:45:21.727Z"
+    },
+    "common.error": {
+      "text": "Something went wrong",
+      "sourceHash": "8d886c0ba6f2",
+      "updatedAt": "2026-08-17T12:45:21.727Z"
+    },
+    "common.home": {
+      "text": "Inicio",
+      "sourceHash": "70f8bb9a8a53",
+      "updatedAt": "2026-08-17T12:45:22.619Z"
+    },
+    "common.all": {
+      "text": "Todo",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T12:45:22.619Z"
+    },
+    "common.search": {
+      "text": "Buscar…",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T12:45:22.619Z"
+    },
+    "common.create": {
+      "text": "Crear",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T12:45:22.619Z"
+    },
+    "common.delete": {
+      "text": "Eliminar",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T12:45:22.619Z"
+    },
+    "common.edit": {
+      "text": "Editar",
+      "sourceHash": "5301648dcf6b",
+      "updatedAt": "2026-08-17T12:45:22.619Z"
+    },
+    "common.back": {
+      "text": "Atrás",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T12:45:22.619Z"
+    },
+    "common.next": {
+      "text": "Siguiente",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T12:45:22.619Z"
+    },
+    "common.previous": {
+      "text": "Anterior",
+      "sourceHash": "50f94286ba30",
+      "updatedAt": "2026-08-17T12:45:23.483Z"
+    },
+    "common.confirm": {
+      "text": "Confirmar",
+      "sourceHash": "04a212215ef9",
+      "updatedAt": "2026-08-17T12:45:23.483Z"
+    },
+    "common.dismiss": {
+      "text": "Descartar",
+      "sourceHash": "70afe9eff3f2",
+      "updatedAt": "2026-08-17T12:45:23.483Z"
+    },
+    "common.noMatches": {
+      "text": "No hay coincidencias",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T12:45:23.483Z"
+    },
+    "common.viewAll": {
+      "text": "Ver todo",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T12:45:23.483Z"
+    },
+    "common.open": {
+      "text": "Abrir",
+      "sourceHash": "cf9b77061f7b",
+      "updatedAt": "2026-08-17T12:45:23.483Z"
+    },
+    "common.refresh": {
+      "text": "Actualizar",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T12:45:23.483Z"
+    },
+    "pricing.eyebrow": {
+      "text": "Precios",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T12:45:23.483Z"
+    },
+    "pricing.title": {
+      "text": "Plans for Caribbean decision work",
+      "sourceHash": "037c126105d5",
+      "updatedAt": "2026-08-17T12:45:24.455Z"
+    },
+    "pricing.lede": {
+      "text": "Start free, then scale when your organisation needs more seats, depth, and monitoring.",
+      "sourceHash": "9166dc69b88d",
+      "updatedAt": "2026-08-17T12:45:24.455Z"
+    },
+    "pricing.monthly": {
+      "text": "Monthly",
+      "sourceHash": "d31edb7b8a94",
+      "updatedAt": "2026-08-17T12:45:24.455Z"
+    },
+    "pricing.annual": {
+      "text": "Annual",
+      "sourceHash": "0930f3f8992c",
+      "updatedAt": "2026-08-17T12:45:24.455Z"
+    },
+    "pricing.cta": {
+      "text": "Get started",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T12:45:24.455Z"
+    },
+    "pricing.contact": {
+      "text": "Talk to us",
+      "sourceHash": "90214883b63b",
+      "updatedAt": "2026-08-17T12:45:24.455Z"
+    },
+    "pricing.payments": {
+      "text": "Accepted payment methods",
+      "sourceHash": "a5b32f6784e2",
+      "updatedAt": "2026-08-17T12:45:24.455Z"
+    },
+    "cookie.pillLabel": {
+      "text": "We use cookies.",
+      "sourceHash": "445cbc2a36bf",
+      "updatedAt": "2026-08-17T12:45:24.455Z"
+    },
+    "cookie.acceptAll": {
+      "text": "Aceptar cookies",
+      "sourceHash": "e3b35bb7daa5",
+      "updatedAt": "2026-08-17T12:45:28.771Z"
+    },
+    "cookie.settingsTitle": {
+      "text": "Configuración",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T12:45:28.771Z"
+    },
+    "cookie.close": {
+      "text": "Cerrar configuración de cookies",
+      "sourceHash": "90601d80d7e5",
+      "updatedAt": "2026-08-17T12:45:28.771Z"
+    },
+    "cookie.essential": {
+      "text": "Cookies esenciales del sitio web",
+      "sourceHash": "62a4222f6e4d",
+      "updatedAt": "2026-08-17T12:45:28.771Z"
+    },
+    "cookie.essentialHint": {
+      "text": "Requerido para iniciar sesión, seguridad, tema y idioma.",
+      "sourceHash": "e667ce996fa5",
+      "updatedAt": "2026-08-17T12:45:28.771Z"
+    },
+    "cookie.alwaysOn": {
+      "text": "Siempre activado",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T12:45:28.771Z"
+    },
+    "cookie.analytics": {
+      "text": "Cookies de análisis",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T12:45:28.771Z"
+    },
+    "cookie.analyticsHint": {
+      "text": "Ayuda a entender el uso del producto. No se cargan rastreadores hasta que lo habilites.",
+      "sourceHash": "b334ec855aab",
+      "updatedAt": "2026-08-17T12:45:28.771Z"
+    },
+    "cookie.marketing": {
+      "text": "cookies de marketing",
+      "sourceHash": "c2c7a10bf1bf",
+      "updatedAt": "2026-08-17T12:45:33.389Z"
+    },
+    "cookie.marketingHint": {
+      "text": "Sólo se usa si ejecutamos campañas más adelante. Desactivado por defecto.",
+      "sourceHash": "e33b06c9570f",
+      "updatedAt": "2026-08-17T12:45:33.389Z"
+    },
+    "cookie.statement": {
+      "text": "Nuestra declaración de cookies",
+      "sourceHash": "2d8cd77d9cf0",
+      "updatedAt": "2026-08-17T12:45:33.389Z"
+    },
+    "cookie.save": {
+      "text": "Guardar configuración",
+      "sourceHash": "913aba9f96cf",
+      "updatedAt": "2026-08-17T12:45:33.389Z"
+    },
+    "cookie.openSettings": {
+      "text": "Configuración de cookies",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T12:45:33.389Z"
+    },
+    "legal.lastUpdated": {
+      "text": "Última actualización",
+      "sourceHash": "583c9e23574a",
+      "updatedAt": "2026-08-17T12:45:33.389Z"
+    },
+    "legal.kicker": {
+      "text": "Octivate · CENSII",
+      "sourceHash": "db72eb4d75f1",
+      "updatedAt": "2026-08-17T12:45:33.389Z"
+    },
+    "legal.privacyTitle": {
+      "text": "Política de privacidad",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T12:45:33.389Z"
+    },
+    "legal.termsTitle": {
+      "text": "Términos de Servicio",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T12:46:04.330Z"
+    },
+    "legal.cookiesTitle": {
+      "text": "Aviso de Cookies",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T12:46:04.330Z"
+    },
+    "legal.backHome": {
+      "text": "Volver a Octivate",
+      "sourceHash": "c03f0805dd7d",
+      "updatedAt": "2026-08-17T12:46:04.330Z"
+    },
+    "legal.contact": {
+      "text": "Contacto",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T12:46:04.330Z"
+    },
+    "legal.updatedDate": {
+      "text": "11 de agosto de 2026",
+      "sourceHash": "3632e92d3018",
+      "updatedAt": "2026-08-17T12:46:04.330Z"
+    },
+    "legal.privacy.cover.title": {
+      "text": "Qué cubre esta Política de Privacidad",
+      "sourceHash": "ceca340c15f9",
+      "updatedAt": "2026-08-17T12:46:04.330Z"
+    },
+    "legal.privacy.cover.p1": {
+      "text": "Esta Política de Privacidad explica cómo CENSII (“we”, “us”) recoge, usa y comparte información personal cuando visite octivate.io, cree una cuenta Octivate, se una a nuestra lista de correo o utilice el espacio de trabajo de Octivate y los servicios relacionados.",
+      "sourceHash": "da0b35cddd1e",
+      "updatedAt": "2026-08-17T12:46:04.330Z"
+    },
+    "legal.privacy.cover.p2": {
+      "text": "Octivate es un producto de inteligencia de decisiones para contextos operativos del Caribe. Es operado por CENSII. Si tiene preguntas, envíe un correo a info@octivate.co.",
+      "sourceHash": "a3ee0fedaecb",
+      "updatedAt": "2026-08-17T12:46:04.330Z"
+    },
+    "legal.privacy.collect.title": {
+      "text": "Información que recopilamos",
+      "sourceHash": "ca195d50ca27",
+      "updatedAt": "2026-08-17T12:46:21.437Z"
+    },
+    "legal.privacy.collect.p1": {
+      "text": "Recopilamos la información que nos proporciona directamente y la información generada cuando usa el servicio:",
+      "sourceHash": "f01456bd7458",
+      "updatedAt": "2026-08-17T12:46:21.437Z"
+    },
+    "legal.privacy.collect.b1": {
+      "text": "Detalles de la cuenta como nombre, dirección de correo electrónico, organización y credenciales de autenticación.",
+      "sourceHash": "af0ec8e327f2",
+      "updatedAt": "2026-08-17T12:46:21.437Z"
+    },
+    "legal.privacy.collect.b2": {
+      "text": "Contenido del espacio de trabajo que envía (preguntas de proyecto, documentos, informes, monitores y artefactos de análisis relacionados).",
+      "sourceHash": "5892431b22fd",
+      "updatedAt": "2026-08-17T12:46:21.437Z"
+    },
+    "legal.privacy.collect.b3": {
+      "text": "Detalles de la lista de distribución si se suscribe (correo electrónico y nombre opcional).",
+      "sourceHash": "34eb00f7d54c",
+      "updatedAt": "2026-08-17T12:46:21.437Z"
+    },
+    "legal.privacy.collect.b4": {
+      "text": "Datos técnicos necesarios para ejecutar el servicio: cookies de sesión, registros de seguridad, métricas de uso aproximadas, preferencia de configuración regional del navegador y preferencia de tema almacenadas localmente.",
+      "sourceHash": "1cd7a6671dc5",
+      "updatedAt": "2026-08-17T12:46:21.437Z"
+    },
+    "legal.privacy.collect.b5": {
+      "text": "Identificadores relacionados con el pago al comprar un plan a través de nuestros procesadores de pago (no almacenamos números completos de tarjeta en los servidores de Octivate).",
+      "sourceHash": "33e270085714",
+      "updatedAt": "2026-08-17T12:46:21.437Z"
+    },
+    "legal.privacy.use.title": {
+      "text": "Cómo utilizamos la información",
+      "sourceHash": "98a72067ee54",
+      "updatedAt": "2026-08-17T12:46:21.437Z"
+    },
+    "legal.privacy.use.p1": {
+      "text": "Usamos información personal para:",
+      "sourceHash": "582e3b9752f3",
+      "updatedAt": "2026-08-17T12:46:40.728Z"
+    },
+    "legal.privacy.use.b1": {
+      "text": "Proporcionar, asegurar y mejorar Octivate (autenticación, características de espacio de trabajo, soporte).",
+      "sourceHash": "e1c1d704e9e8",
+      "updatedAt": "2026-08-17T12:46:40.728Z"
+    },
+    "legal.privacy.use.b2": {
+      "text": "Ejecutar flujos de análisis que solicite, incluido el envío de prompts y documentos necesarios a proveedores de modelos como OpenRouter y los modelos que seleccione.",
+      "sourceHash": "b0f14789ce72",
+      "updatedAt": "2026-08-17T12:46:40.728Z"
+    },
+    "legal.privacy.use.b3": {
+      "text": "Enviar actualizaciones de producto cuando haya consentido a la lista de distribución.",
+      "sourceHash": "795947ef39af",
+      "updatedAt": "2026-08-17T12:46:40.728Z"
+    },
+    "legal.privacy.use.b4": {
+      "text": "Cumplir con obligaciones legales, contables y de seguridad.",
+      "sourceHash": "33e5b0f8726c",
+      "updatedAt": "2026-08-17T12:46:40.728Z"
+    },
+    "legal.privacy.cookies.title": {
+      "text": "Cookies y tecnologías similares",
+      "sourceHash": "f7b1e4ca11a4",
+      "updatedAt": "2026-08-17T12:46:40.728Z"
+    },
+    "legal.privacy.cookies.p1": {
+      "text": "Las cookies esenciales y el almacenamiento local mantienen la sesión iniciada, protegen las sesiones, recuerdan el tema (luz/oscuro) y la preferencia de idioma. Son necesarios para el funcionamiento del sitio.",
+      "sourceHash": "04cfe776b96d",
+      "updatedAt": "2026-08-17T12:46:40.728Z"
+    },
+    "legal.privacy.cookies.p2": {
+      "text": "Las cookies de analítica y marketing están desactivadas por defecto. Si las habilita en la configuración de cookies, podemos usarlas en el futuro para comprender el uso del producto o ejecutar campañas. Hoy, habilitar esas categorías no carga rastreadores de publicidad de terceros; su elección se almacena para que podamos honrarla cuando se añadan integraciones. Consulte nuestro Aviso de cookies para más detalles.",
+      "sourceHash": "47a465df2959",
+      "updatedAt": "2026-08-17T12:46:40.728Z"
+    },
+    "legal.privacy.sharing.title": {
+      "text": "Cuando compartimos información",
+      "sourceHash": "7a2ce00c7fd3",
+      "updatedAt": "2026-08-17T12:46:42.071Z"
+    },
+    "legal.privacy.sharing.p1": {
+      "text": "No vendemos información personal. Solo compartimos datos con procesadores que nos ayudan a operar Octivate, bajo acuerdos apropiados, por ejemplo:",
+      "sourceHash": "d2bf64f6c698",
+      "updatedAt": "2026-08-17T12:46:42.071Z"
+    },
+    "legal.privacy.sharing.b1": {
+      "text": "Proveedores de infraestructura y alojamiento que almacenan datos de la aplicación.",
+      "sourceHash": "4d800473b32a",
+      "updatedAt": "2026-08-17T12:46:42.071Z"
+    },
+    "legal.privacy.sharing.b2": {
+      "text": "Proveedores de enrutamiento de modelos (como OpenRouter) y proveedores de modelos subyacentes cuando ejecutas análisis.",
+      "sourceHash": "3ef2e101e0cb",
+      "updatedAt": "2026-08-17T12:46:42.071Z"
+    },
+    "legal.privacy.sharing.b3": {
+      "text": "Procesadores de pagos (como Stripe o PayPal) cuando compras un plan.",
+      "sourceHash": "afa78f66f0cb",
+      "updatedAt": "2026-08-17T12:46:42.071Z"
+    },
+    "legal.privacy.sharing.b4": {
+      "text": "Infraestructura de entrega de correo electrónico usada para enviar mensajes transaccionales o de lista de correo que solicitaste.",
+      "sourceHash": "fa83b06a582d",
+      "updatedAt": "2026-08-17T12:46:42.071Z"
+    },
+    "legal.privacy.sharing.b5": {
+      "text": "Asesores profesionales o autoridades cuando lo exija la ley.",
+      "sourceHash": "8f3a144729ae",
+      "updatedAt": "2026-08-17T12:46:42.071Z"
+    },
+    "legal.privacy.retention.title": {
+      "text": "Retención",
+      "sourceHash": "c7199d9e9593",
+      "updatedAt": "2026-08-17T12:46:42.071Z"
+    },
+    "legal.privacy.retention.p1": {
+      "text": "Conservamos los datos de cuenta y espacio de trabajo mientras tu cuenta está activa y por un período razonable después según sea necesario para copias de seguridad, resolución de disputas y cumplimiento legal. Los registros de la lista de correo se conservan hasta que te des de baja o cerramos la lista. Puedes solicitar la eliminación según se describe a continuación.",
+      "sourceHash": "f0d4f4a09397",
+      "updatedAt": "2026-08-17T12:47:10.753Z"
+    },
+    "legal.privacy.rights.title": {
+      "text": "Tus derechos",
+      "sourceHash": "e71102d544b3",
+      "updatedAt": "2026-08-17T12:47:10.753Z"
+    },
+    "legal.privacy.rights.p1": {
+      "text": "Dependiendo de dónde vivas, puedes tener derechos de acceso, corrección, eliminación o exportación de información personal, o para oponerte o restringir ciertos tratamientos. Para visitantes de la UE y Reino Unido, aplican derechos bajo GDPR / UK GDPR. Para visitantes en jurisdicciones caribeñas con leyes de protección de datos (incluyendo Jamaica, Trinidad y Tobago, Barbados y otras), cumplimos los derechos estatutarios aplicables.",
+      "sourceHash": "d0eca93b39f0",
+      "updatedAt": "2026-08-17T12:47:10.753Z"
+    },
+    "legal.privacy.rights.p2": {
+      "text": "Para realizar una solicitud, envía un correo a info@octivate.co o shemuel@censii.co con el asunto “Solicitud de sujeto de datos”. Respondemos dentro del plazo estatutario aplicable.",
+      "sourceHash": "5be87f549dc6",
+      "updatedAt": "2026-08-17T12:47:10.753Z"
+    },
+    "legal.privacy.children.title": {
+      "text": "Niños",
+      "sourceHash": "dcf75191c585",
+      "updatedAt": "2026-08-17T12:47:10.753Z"
+    },
+    "legal.privacy.children.p1": {
+      "text": "Octivate está destinado para uso profesional y organizacional. No recopilamos información personal de niños menores de 16 años de manera intencionada.",
+      "sourceHash": "07a14e4d629c",
+      "updatedAt": "2026-08-17T12:47:10.753Z"
+    },
+    "legal.privacy.changes.title": {
+      "text": "Cambios a esta política",
+      "sourceHash": "615043a5515f",
+      "updatedAt": "2026-08-17T12:47:10.753Z"
+    },
+    "legal.privacy.changes.p1": {
+      "text": "Podemos actualizar esta Política de privacidad de vez en cuando. La fecha “Última actualización” en la parte superior cambiará cuando lo hagamos. Los cambios materiales se destacarán en esta página o se comunicarán a través del producto según sea apropiado.",
+      "sourceHash": "476874f7f005",
+      "updatedAt": "2026-08-17T12:47:10.753Z"
+    },
+    "legal.privacy.contact.title": {
+      "text": "Contacto",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T12:47:46.888Z"
+    },
+    "legal.privacy.contact.p1": {
+      "text": "CENSII — Octivate consultas de privacidad: info@octivate.co. Las solicitudes de sujeto de datos también pueden enviarse a shemuel@censii.co. Más sobre CENSII: https://censii.co.",
+      "sourceHash": "2a9de25118a0",
+      "updatedAt": "2026-08-17T12:47:46.888Z"
+    },
+    "legal.terms.agreement.title": {
+      "text": "Acuerdo",
+      "sourceHash": "c8fee8eabe07",
+      "updatedAt": "2026-08-17T12:47:46.888Z"
+    },
+    "legal.terms.agreement.p1": {
+      "text": "Estos Términos de Servicio (“Términos”) rigen el acceso y uso de Octivate (el “Servicio”), un producto de inteligencia de decisiones operado por CENSII (“CENSII”, “nosotros”, “nos”). Al crear una cuenta o utilizar el Servicio, usted acepta estos Términos.",
+      "sourceHash": "1920871854ab",
+      "updatedAt": "2026-08-17T12:47:46.888Z"
+    },
+    "legal.terms.agreement.p2": {
+      "text": "Si usa Octivate en nombre de una organización, representa que tiene la autoridad para obligar a esa organización.",
+      "sourceHash": "f8297c380c9a",
+      "updatedAt": "2026-08-17T12:47:46.888Z"
+    },
+    "legal.terms.service.title": {
+      "text": "El Servicio",
+      "sourceHash": "bc4a155b6578",
+      "updatedAt": "2026-08-17T12:47:46.888Z"
+    },
+    "legal.terms.service.p1": {
+      "text": "Octivate ayuda a las organizaciones estructurar teatros de decisión del Caribe, reunir y probar evidencia, y producir informes y monitoreo listos para decisiones. Las características pueden incluir proyectos, informes, monitores, paquetes de fuentes, mapas de partes interesadas y herramientas de espacio de trabajo relacionados.",
+      "sourceHash": "cafd042947e6",
+      "updatedAt": "2026-08-17T12:47:46.888Z"
+    },
+    "legal.terms.service.p2": {
+      "text": "Los resultados del análisis son materiales de apoyo a la decisión. No son asesoramiento legal, financiero, de inversión o regulatorio. Usted sigue siendo responsable de cómo utilice los resultados.",
+      "sourceHash": "c2714c09aad4",
+      "updatedAt": "2026-08-17T12:47:46.888Z"
+    },
+    "legal.terms.accounts.title": {
+      "text": "Cuentas y uso aceptable",
+      "sourceHash": "5d78eee41938",
+      "updatedAt": "2026-08-17T12:48:04.687Z"
+    },
+    "legal.terms.accounts.p1": {
+      "text": "Usted está de acuerdo con:",
+      "sourceHash": "ecad8570099e",
+      "updatedAt": "2026-08-17T12:48:04.687Z"
+    },
+    "legal.terms.accounts.b1": {
+      "text": "Proporcione información de cuenta precisa y mantenga sus credenciales seguras.",
+      "sourceHash": "25e318d9c60c",
+      "updatedAt": "2026-08-17T12:48:04.687Z"
+    },
+    "legal.terms.accounts.b2": {
+      "text": "Use el Servicio solo para fines lícitos y de acuerdo con las políticas de su organización.",
+      "sourceHash": "1792588ceba4",
+      "updatedAt": "2026-08-17T12:48:04.687Z"
+    },
+    "legal.terms.accounts.b3": {
+      "text": "No intente interrumpir, realizar ingeniería inversa o malutilizar el servicio, o acceder a los datos de otros clientes.",
+      "sourceHash": "d8cee3f610f2",
+      "updatedAt": "2026-08-17T12:48:04.687Z"
+    },
+    "legal.terms.accounts.b4": {
+      "text": "No cargue contenido al que no tenga derechos para procesar, o contenido que sea ilícito o dañino.",
+      "sourceHash": "68ea1009e1a7",
+      "updatedAt": "2026-08-17T12:48:04.687Z"
+    },
+    "legal.terms.ai.title": {
+      "text": "Análisis asistido por modelo",
+      "sourceHash": "f139b756fb2a",
+      "updatedAt": "2026-08-17T12:48:04.687Z"
+    },
+    "legal.terms.ai.p1": {
+      "text": "Partes de Octivate utilizan proveedores de modelos de terceros (por ejemplo, vía OpenRouter) para procesar los prompts y los documentos que envía. Las salidas pueden ser incompletas o incorrectas. Debe revisar la evidencia y las recomendaciones antes de actuar.",
+      "sourceHash": "2249195c0061",
+      "updatedAt": "2026-08-17T12:48:04.687Z"
+    },
+    "legal.terms.plans.title": {
+      "text": "Planes, pruebas y pagos",
+      "sourceHash": "66eaef3bcd17",
+      "updatedAt": "2026-08-17T12:48:18.541Z"
+    },
+    "legal.terms.plans.p1": {
+      "text": "Los planes de pago, las pruebas y la facturación se describen en la página de precios y en el checkout. Las tarifas se procesan por proveedores de pago como Stripe o PayPal. A menos que lo exija la ley, las tarifas son no reembolsables una vez que comienza un período de facturación, salvo que lo indiquemos por escrito.",
+      "sourceHash": "a74086033e27",
+      "updatedAt": "2026-08-17T12:48:18.541Z"
+    },
+    "legal.terms.ip.title": {
+      "text": "Propiedad intelectual",
+      "sourceHash": "3e694b7e8d03",
+      "updatedAt": "2026-08-17T12:48:18.541Z"
+    },
+    "legal.terms.ip.p1": {
+      "text": "CENSII y sus licenciantes poseen el software Octivate, la marca y el contenido del sitio. Usted conserva derechos en el contenido que carga. Usted nos otorga una licencia limitada para alojar y procesar ese contenido únicamente para prestar el servicio.",
+      "sourceHash": "b14a3529c91c",
+      "updatedAt": "2026-08-17T12:48:18.541Z"
+    },
+    "legal.terms.ip.p2": {
+      "text": "Los informes de muestra y las demostraciones públicas son ilustrativos y pueden usar escenarios ficticios o anonimizados.",
+      "sourceHash": "93fd6d9964e9",
+      "updatedAt": "2026-08-17T12:48:18.541Z"
+    },
+    "legal.terms.confidentiality.title": {
+      "text": "Confidencialidad",
+      "sourceHash": "642e7d86380c",
+      "updatedAt": "2026-08-17T12:48:18.541Z"
+    },
+    "legal.terms.confidentiality.p1": {
+      "text": "Tratamos el contenido de su espacio de trabajo como confidencial y lo procesamos bajo nuestra Política de Privacidad. Usted acepta no divulgar características no públicas del servicio excepto según sea necesario para su evaluación interna.",
+      "sourceHash": "a68c21b965e4",
+      "updatedAt": "2026-08-17T12:48:18.541Z"
+    },
+    "legal.terms.disclaimer.title": {
+      "text": "Descargo de responsabilidad",
+      "sourceHash": "4c4a2e80cc87",
+      "updatedAt": "2026-08-17T12:48:18.541Z"
+    },
+    "legal.terms.disclaimer.p1": {
+      "text": "EL SERVICIO SE PROPORciona \"TAL CUAL\" Y \"TAL COMO ESTÁ\". EN LA MEDIDA MÁXIMA PERMITIDA POR LA LEY, RENUNCIAMOS A GARANTíAS DE COMERCIALIDAD, IDONEIDAD PARA UN PROPóSITO EN PARTICULAR Y NO INFRACCIóN. No garantizamos una operación ininterrumpente o sin errores, ni que las salidas satisfagan sus requisitos.",
+      "sourceHash": "d40ff71ccb41",
+      "updatedAt": "2026-08-17T12:48:20.614Z"
+    },
+    "legal.terms.liability.title": {
+      "text": "Limitación de responsabilidad",
+      "sourceHash": "b1a6f886289a",
+      "updatedAt": "2026-08-17T12:48:20.614Z"
+    },
+    "legal.terms.liability.p1": {
+      "text": "EN LA MEDIDA MÁXIMA PERMITIDA POR LA LEY, CENSII Y SUS AFILIADOS NO SERíAN RESPONSABLES DE DAíNDIRECTOS, INCIDENTALES, ESPECIALES, CONSECUENCIALES O PUNITIVOS, O DE PÉRDIDAS DE LUCROS, DATOS O BUENA VOLUNTAD. Nuestra responsabilidad aggregate derivada del Servicio no excederá las tarifas que nos pagó por el Servicio en los doce meses anteriores a la reclamación.",
+      "sourceHash": "365dfc530ba0",
+      "updatedAt": "2026-08-17T12:48:20.614Z"
+    },
+    "legal.terms.termination.title": {
+      "text": "Suspensión y terminación",
+      "sourceHash": "bd4963b1d885",
+      "updatedAt": "2026-08-17T12:48:20.614Z"
+    },
+    "legal.terms.termination.p1": {
+      "text": "Podemos suspender o terminar el acceso si incumple estos Términos o si es necesario para proteger el Servicio o otros usuarios. Puede dejar de usar el Servicio en cualquier momento. Las disposiciones que por su naturaleza deben sobrevivir (incluyendo IP, descargo de responsabilidad, responsabilidad y ley aplicable) sobrevivirán a la terminación.",
+      "sourceHash": "566454aef6a7",
+      "updatedAt": "2026-08-17T12:48:20.614Z"
+    },
+    "legal.terms.law.title": {
+      "text": "Ley aplicable",
+      "sourceHash": "4676ad8df95e",
+      "updatedAt": "2026-08-17T12:48:20.614Z"
+    },
+    "legal.terms.law.p1": {
+      "text": "Estos Términos se rigen por las leyes de Trinidad y Tobago, sin tener en cuenta las reglas de conflicto de leyes, a menos que las protecciones al consumidor obligatorias en su jurisdicción lo requieran de otro modo. Los tribunales de Trinidad y Tobago tienen jurisdicción exclusiva, sujetos a esas protecciones obligatorias.",
+      "sourceHash": "8625634a95dc",
+      "updatedAt": "2026-08-17T12:48:20.614Z"
+    },
+    "legal.terms.contact.title": {
+      "text": "Contacto",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T12:48:20.614Z"
+    },
+    "legal.terms.contact.p1": {
+      "text": "Questions about these Terms: info@octivate.co. About CENSII: https://censii.co.",
+      "sourceHash": "baefec6a2022",
+      "updatedAt": "2026-08-17T12:51:00.519Z"
+    },
+    "legal.cookies.overview.title": {
+      "text": "Overview",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T12:51:00.519Z"
+    },
+    "legal.cookies.overview.p1": {
+      "text": "This Cookie Statement explains how Octivate (operated by CENSII) uses cookies and similar technologies on octivate.io. You can manage optional categories any time via Cookie settings.",
+      "sourceHash": "4fe70d776df2",
+      "updatedAt": "2026-08-17T12:51:00.519Z"
+    },
+    "legal.cookies.essential.title": {
+      "text": "Essential cookies",
+      "sourceHash": "e766aa84901b",
+      "updatedAt": "2026-08-17T12:51:00.519Z"
+    },
+    "legal.cookies.essential.p1": {
+      "text": "Essential cookies and local storage are required for the Service to work. They include session authentication, security, theme preference (light/dark), and language preference. These remain on; the Service cannot operate correctly without them.",
+      "sourceHash": "3c529d19f95b",
+      "updatedAt": "2026-08-17T12:51:00.519Z"
+    },
+    "legal.cookies.analytics.title": {
+      "text": "Analytics cookies",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T12:51:00.519Z"
+    },
+    "legal.cookies.analytics.p1": {
+      "text": "Analytics cookies help us understand how the product is used. They are off until you enable them. We do not currently load third-party analytics SDKs; if we add them later, we will only do so when your stored preference allows Analytics.",
+      "sourceHash": "e87b8d7ae969",
+      "updatedAt": "2026-08-17T12:51:00.519Z"
+    },
+    "legal.cookies.marketing.title": {
+      "text": "Marketing cookies",
+      "sourceHash": "c2c7a10bf1bf",
+      "updatedAt": "2026-08-17T12:51:00.519Z"
+    },
+    "legal.cookies.marketing.p1": {
+      "text": "Las cookies de marketing apoyarían campañas o remarketing si las ejecutamos. Están desactivadas por defecto y sin usar hoy. Habilitar marketing almacena tu preferencia para uso futuro; no activa píxeles publicitarios por sí mismo.",
+      "sourceHash": "86be873965c0",
+      "updatedAt": "2026-08-17T12:51:32.281Z"
+    },
+    "legal.cookies.manage.title": {
+      "text": "Cómo gestionar preferencias",
+      "sourceHash": "fe104b22e6a2",
+      "updatedAt": "2026-08-17T12:51:32.281Z"
+    },
+    "legal.cookies.manage.p1": {
+      "text": "Usa el control flotante de cookies o abre la configuración de cookies desde el pie de página. Elegir Aceptar habilita las preferencias de Analítica y Marketing. Elegir Guardar configuración guarda los ajustes que seleccionas. Limpiar los datos del sitio en tu navegador restablecerá el banner.",
+      "sourceHash": "7afe22d445c8",
+      "updatedAt": "2026-08-17T12:51:32.281Z"
+    },
+    "legal.cookies.more.title": {
+      "text": "Más información",
+      "sourceHash": "f925f9bea399",
+      "updatedAt": "2026-08-17T12:51:32.281Z"
+    },
+    "legal.cookies.more.p1": {
+      "text": "Para prácticas de datos más amplias, lee nuestra Política de privacidad. Preguntas: info@octivate.co.",
+      "sourceHash": "407b95384bff",
+      "updatedAt": "2026-08-17T12:51:32.281Z"
+    },
+    "dyn.marquee.mq_proc_ports.text": {
+      "text": "La autoridad portuaria publica aviso de precalificación — logística",
+      "sourceHash": "1a71672fedbc",
+      "updatedAt": "2026-08-17T12:51:32.281Z"
+    },
+    "dyn.marquee.mq_proc_ports.badge": {
+      "text": "Aprovisionamiento",
+      "sourceHash": "08433110a671",
+      "updatedAt": "2026-08-17T12:51:32.281Z"
+    },
+    "dyn.marquee.mq_sys_grid.text": {
+      "text": "Ventana de mantenimiento de red extendida; alimentadores industriales afectados",
+      "sourceHash": "740cfd102e0c",
+      "updatedAt": "2026-08-17T12:51:32.281Z"
+    },
+    "dyn.marquee.mq_sys_grid.badge": {
+      "text": "SISTEMAS",
+      "sourceHash": "e6caf1e7e33e",
+      "updatedAt": "2026-08-17T12:51:44.958Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.text": {
+      "text": "La reorganización del gabinete señala un cambio en las prioridades de la cartera energética",
+      "sourceHash": "3b08d154b099",
+      "updatedAt": "2026-08-17T12:51:44.958Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.badge": {
+      "text": "PODER",
+      "sourceHash": "c2b6b521a777",
+      "updatedAt": "2026-08-17T12:51:44.958Z"
+    },
+    "dyn.marquee.mq_narr_radio.text": {
+      "text": "El sentimiento de contenido local está en ascenso en la radio talk y WhatsApp",
+      "sourceHash": "48213741cc6a",
+      "updatedAt": "2026-08-17T12:51:44.958Z"
+    },
+    "dyn.marquee.mq_narr_radio.badge": {
+      "text": "NARRATIVA",
+      "sourceHash": "3e3886da8fd5",
+      "updatedAt": "2026-08-17T12:51:44.958Z"
     }
   }
 }

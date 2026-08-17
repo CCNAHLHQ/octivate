@@ -1,0 +1,127 @@
+{
+  "locale": "fr",
+  "version": 4,
+  "updatedAt": "2026-08-17T12:52:16.868Z",
+  "entries": {
+    "nav.product": {
+      "text": "Produit",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T12:51:57.578Z"
+    },
+    "nav.why": {
+      "text": "Pourquoi Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T12:51:57.578Z"
+    },
+    "nav.how": {
+      "text": "Comment ça marche",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T12:51:57.578Z"
+    },
+    "nav.pricing": {
+      "text": "Tarifs",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T12:51:57.578Z"
+    },
+    "nav.team": {
+      "text": "Équipe",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T12:51:57.578Z"
+    },
+    "nav.about": {
+      "text": "À propos",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T12:51:57.578Z"
+    },
+    "nav.signIn": {
+      "text": "Se connecter",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T12:51:57.578Z"
+    },
+    "nav.requestDemo": {
+      "text": "Commencer",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T12:51:57.578Z"
+    },
+    "nav.returnWorkspace": {
+      "text": "Retour à l'espace de travail",
+      "sourceHash": "74f11e0defca",
+      "updatedAt": "2026-08-17T12:52:06.427Z"
+    },
+    "nav.operatorDashboard": {
+      "text": "Tableau de bord de l'opérateur",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T12:52:06.427Z"
+    },
+    "nav.askQuestion": {
+      "text": "Poser une question",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T12:52:06.427Z"
+    },
+    "nav.askQuestionLong": {
+      "text": "Poser une question",
+      "sourceHash": "cf94bdf39103",
+      "updatedAt": "2026-08-17T12:52:06.427Z"
+    },
+    "nav.skip": {
+      "text": "Sauter au contenu",
+      "sourceHash": "0a4470d64e9d",
+      "updatedAt": "2026-08-17T12:52:06.427Z"
+    },
+    "nav.explore": {
+      "text": "Explorer",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T12:52:06.427Z"
+    },
+    "nav.openMenu": {
+      "text": "Ouvrir le menu",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T12:52:06.427Z"
+    },
+    "nav.closeMenu": {
+      "text": "Fermer le menu",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T12:52:06.427Z"
+    },
+    "nav.translate": {
+      "text": "Traduire",
+      "sourceHash": "2be17aa181d8",
+      "updatedAt": "2026-08-17T12:52:16.868Z"
+    },
+    "nav.translateHint": {
+      "text": "Mise en cache sur le serveur · Octivate i18n",
+      "sourceHash": "16abeab228fd",
+      "updatedAt": "2026-08-17T12:52:16.868Z"
+    },
+    "nav.primary": {
+      "text": "Primaire",
+      "sourceHash": "a9a96ec01949",
+      "updatedAt": "2026-08-17T12:52:16.868Z"
+    },
+    "nav.mobile": {
+      "text": "Mobile",
+      "sourceHash": "b1d702459399",
+      "updatedAt": "2026-08-17T12:52:16.868Z"
+    },
+    "mailing.eyebrow": {
+      "text": "Restez proche",
+      "sourceHash": "c1abb6630b0e",
+      "updatedAt": "2026-08-17T12:52:16.868Z"
+    },
+    "mailing.title": {
+      "text": "Restez proche de ce que nous construisons.",
+      "sourceHash": "e415b8d83f68",
+      "updatedAt": "2026-08-17T12:52:16.868Z"
+    },
+    "mailing.lede": {
+      "text": "Mises à jour occasionnelles sur Octivate, nouvelles capacités analytiques, informations sur le contexte d'exploitation des Caraïbes et opportunités de tester la plateforme.",
+      "sourceHash": "afa148dcdaae",
+      "updatedAt": "2026-08-17T12:52:16.868Z"
+    },
+    "mailing.benefit.updates": {
+      "text": "Mises à jour du produit et nouvelles capacités.",
+      "sourceHash": "45397ac51acf",
+      "updatedAt": "2026-08-17T12:52:16.868Z"
+    }
+  }
+}
