@@ -29,13 +29,15 @@ export type ModelConfig = {
   docs: DocsFeatureClass;
 };
 
-const NEMOTRON_DEFAULT = "nvidia/nemotron-3-super-120b-a12b:free";
+const NEMOTRON_DEFAULT = "nvidia/nemotron-3.5-lightning:free";
 const NEMOTRON_PREMIUM = "nvidia/nemotron-3-ultra-550b-a55b:free";
 /** Strong flash-tier default for document tooling — cheaper than doctrine Super. */
 const DOCS_DEFAULT_MODEL = "deepseek/deepseek-v4-flash";
 
 const BASE_ALLOWLIST = [
   NEMOTRON_DEFAULT,
+  "nvidia/nemotron-3.5-lightning",
+  "nvidia/nemotron-3-super-120b-a12b:free",
   NEMOTRON_PREMIUM,
   "nvidia/nemotron-3-nano-30b-a3b:free",
   DOCS_DEFAULT_MODEL,
@@ -157,9 +159,11 @@ export async function readModelConfig(): Promise<ModelConfig> {
       const next = stored ? clampConfig(stored) : bootstrapFromEnv();
       if (!stored) await setAppConfig(STORE_KEY, next);
       else {
-        // Ensure DeepSeek/Kimi catalog stays merged into allowlist.
+        // Ensure curated catalog (Nemotron / DeepSeek / Kimi) stays merged into allowlist.
         const merged = clampConfig(stored);
-        if (merged.allowlist.length !== stored.allowlist?.length) {
+        const before = new Set((stored.allowlist || []).map(String));
+        const added = merged.allowlist.some((id) => !before.has(id));
+        if (added || merged.allowlist.length !== stored.allowlist?.length) {
           await setAppConfig(STORE_KEY, merged);
           cache = merged;
           return merged;

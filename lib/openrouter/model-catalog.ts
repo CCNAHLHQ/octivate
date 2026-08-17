@@ -3,6 +3,14 @@
  * DeepSeek V4.1 Flash is not a separate OpenRouter slug — use deepseek/deepseek-v4-flash.
  */
 
+export const NEMOTRON_MODELS = [
+  "nvidia/nemotron-3.5-lightning:free",
+  "nvidia/nemotron-3.5-lightning",
+  "nvidia/nemotron-3-super-120b-a12b:free",
+  "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "nvidia/nemotron-3-nano-30b-a3b:free",
+] as const;
+
 export const DEEPSEEK_MODELS = [
   "deepseek/deepseek-v4-flash",
   "deepseek/deepseek-v4-pro",
@@ -28,8 +36,13 @@ export const KIMI_MODELS = [
   "~moonshotai/kimi-latest",
 ] as const;
 
-/** Blended $/1M from OpenRouter prompt+completion midpoints (Jul 2026). */
+/** Blended $/1M from OpenRouter prompt+completion midpoints (Jul–Aug 2026). */
 export const CATALOG_MODEL_RATES: Record<string, number> = {
+  "nvidia/nemotron-3.5-lightning:free": 0,
+  "nvidia/nemotron-3.5-lightning": 0.14,
+  "nvidia/nemotron-3-super-120b-a12b:free": 0,
+  "nvidia/nemotron-3-ultra-550b-a55b:free": 0,
+  "nvidia/nemotron-3-nano-30b-a3b:free": 0,
   "deepseek/deepseek-v4-flash": 0.21,
   "deepseek/deepseek-v4-pro": 0.6525,
   "deepseek/deepseek-chat": 0.643,
@@ -52,5 +65,5 @@ export const CATALOG_MODEL_RATES: Record<string, number> = {
 };
 
 export function catalogModelIds(): string[] {
-  return [...DEEPSEEK_MODELS, ...KIMI_MODELS];
+  return [...NEMOTRON_MODELS, ...DEEPSEEK_MODELS, ...KIMI_MODELS];
 }

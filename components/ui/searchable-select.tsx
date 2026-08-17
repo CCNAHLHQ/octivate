@@ -39,6 +39,7 @@ export function SearchableSelect({
   disabled,
   className,
   emptyLabel = "No matches",
+  panelMaxHeight,
 }: {
   value: string;
   onChange: (next: string) => void;
@@ -49,6 +50,8 @@ export function SearchableSelect({
   disabled?: boolean;
   className?: string;
   emptyLabel?: string;
+  /** Cap for the portal list height (px). Default 200. */
+  panelMaxHeight?: number;
 }) {
   const listId = useId();
   const rootRef = useRef<HTMLDivElement>(null);
@@ -86,7 +89,10 @@ export function SearchableSelect({
     const spaceBelow = vh - r.bottom - pad;
     const spaceAbove = r.top - pad;
     const preferBelow = spaceBelow >= 132 || spaceBelow >= spaceAbove;
-    const maxHeight = Math.min(200, Math.max(88, preferBelow ? spaceBelow - gap : spaceAbove - gap));
+    const maxHeight = Math.min(
+      panelMaxHeight ?? 200,
+      Math.max(88, preferBelow ? spaceBelow - gap : spaceAbove - gap)
+    );
     const side: "top" | "bottom" = preferBelow ? "bottom" : "top";
     let left = r.left;
     left = Math.min(Math.max(pad, left), vw - width - pad);
@@ -99,7 +105,7 @@ export function SearchableSelect({
         : Math.max(pad, r.top - gap - panelH);
 
     setCoords({ top, left, width, maxHeight, side });
-  }, []);
+  }, [panelMaxHeight]);
 
   useLayoutEffect(() => {
     if (!open) return;

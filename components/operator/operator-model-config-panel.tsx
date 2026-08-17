@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import {
   AutosaveStatusPill,
@@ -8,6 +8,7 @@ import {
   type AutosaveStatus,
 } from "@/components/operator/autosave-status";
 import { Button } from "@/components/ui/button";
+import { SearchableSelect } from "@/components/ui/searchable-select";
 import { Select } from "@/components/ui/select";
 import { Tooltip } from "@/components/ui/tooltip";
 import { toast } from "@/components/ui/toast";
@@ -42,6 +43,14 @@ function docsFromMode(mode: DocsMode, prev: DocsFeatureClass): DocsFeatureClass 
 function shortModel(slug: string): string {
   const leaf = slug.split("/").pop() || slug;
   return leaf.length > 42 ? `${leaf.slice(0, 40)}…` : leaf;
+}
+
+function modelOptions(allowlist: string[]) {
+  return allowlist.map((m) => ({
+    value: m,
+    label: shortModel(m),
+    keywords: [m, m.split("/")[0] || "", ...m.split(/[\/\-:_]/g)],
+  }));
 }
 
 function SliderField({
@@ -216,6 +225,11 @@ export function OperatorModelConfigPanel({ embedded = false }: { embedded?: bool
     }
   }
 
+  const allowlistOptions = useMemo(
+    () => modelOptions(config?.allowlist || []),
+    [config?.allowlist]
+  );
+
   if (loading || !config) {
     return <p className="op-slider-panel-loading">Loading models…</p>;
   }
@@ -230,46 +244,37 @@ export function OperatorModelConfigPanel({ embedded = false }: { embedded?: bool
           <Tooltip content="resolveModel(false) · free path for doctrine when premium is not requested">
             <span>Default</span>
           </Tooltip>
-          <Select
+          <SearchableSelect
             value={config.defaultModel}
-            onChange={(e) => patch({ defaultModel: e.target.value })}
-          >
-            {config.allowlist.map((m) => (
-              <option key={m} value={m}>
-                {shortModel(m)}
-              </option>
-            ))}
-          </Select>
+            onChange={(next) => patch({ defaultModel: next })}
+            options={allowlistOptions}
+            searchPlaceholder="Search models…"
+            panelMaxHeight={280}
+          />
         </label>
         <label className="op-model-field">
           <Tooltip content="resolveModel(true) · used when Limits allow premium and the project opts in (usePaidModel)">
             <span>Premium</span>
           </Tooltip>
-          <Select
+          <SearchableSelect
             value={config.premiumModel}
-            onChange={(e) => patch({ premiumModel: e.target.value })}
-          >
-            {config.allowlist.map((m) => (
-              <option key={`p-${m}`} value={m}>
-                {shortModel(m)}
-              </option>
-            ))}
-          </Select>
+            onChange={(next) => patch({ premiumModel: next })}
+            options={allowlistOptions}
+            searchPlaceholder="Search models…"
+            panelMaxHeight={280}
+          />
         </label>
         <label className="op-model-field">
           <Tooltip content="getFallbackOpenRouterModel · retry slug after empty / soft-fail completions">
             <span>Fallback</span>
           </Tooltip>
-          <Select
+          <SearchableSelect
             value={config.fallbackModel}
-            onChange={(e) => patch({ fallbackModel: e.target.value })}
-          >
-            {config.allowlist.map((m) => (
-              <option key={`f-${m}`} value={m}>
-                {shortModel(m)}
-              </option>
-            ))}
-          </Select>
+            onChange={(next) => patch({ fallbackModel: next })}
+            options={allowlistOptions}
+            searchPlaceholder="Search models…"
+            panelMaxHeight={280}
+          />
         </label>
         <label className="op-model-field">
           <Tooltip content="OpenRouter reasoning_effort for models that support it">
@@ -306,17 +311,14 @@ export function OperatorModelConfigPanel({ embedded = false }: { embedded?: bool
             <Tooltip content="resolveDocsModel · extract/summarize feature class (not doctrine premium)">
               <span>Docs model</span>
             </Tooltip>
-            <Select
+            <SearchableSelect
               value={docs.model}
               disabled={!docs.enabled}
-              onChange={(e) => patchDocs({ model: e.target.value })}
-            >
-              {config.allowlist.map((m) => (
-                <option key={`d-${m}`} value={m}>
-                  {shortModel(m)}
-                </option>
-              ))}
-            </Select>
+              onChange={(next) => patchDocs({ model: next })}
+              options={allowlistOptions}
+              searchPlaceholder="Search models…"
+              panelMaxHeight={280}
+            />
           </label>
         </div>
         <SliderField

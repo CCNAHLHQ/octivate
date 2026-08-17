@@ -32,6 +32,8 @@ export interface CompletionResult {
 
 /** Approximate pricing per 1M tokens (input/output blended). */
 export const MODEL_RATES: Record<string, number> = {
+  "nvidia/nemotron-3.5-lightning:free": 0,
+  "nvidia/nemotron-3.5-lightning": 0.14,
   "nvidia/nemotron-3-super-120b-a12b:free": 0,
   "nvidia/nemotron-3-ultra-550b-a55b:free": 0,
   "nvidia/nemotron-3-nano-30b-a3b:free": 0,
