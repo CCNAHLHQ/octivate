@@ -1,0 +1,4647 @@
+{
+  "locale": "hi",
+  "version": 118,
+  "updatedAt": "2026-08-17T20:57:26.729Z",
+  "entries": {
+    "mailing.benefit.notes": {
+      "text": "Selected Caribbean operating context insights.",
+      "sourceHash": "8ced50f6a103",
+      "updatedAt": "2026-08-17T17:58:46.514Z"
+    },
+    "mailing.benefit.unsubscribe": {
+      "text": "Early access to pilots, briefs and testing opportunities.",
+      "sourceHash": "e6df0dd5f574",
+      "updatedAt": "2026-08-17T17:58:46.514Z"
+    },
+    "mailing.email": {
+      "text": "Email address",
+      "sourceHash": "c94d3175a656",
+      "updatedAt": "2026-08-17T17:58:46.514Z"
+    },
+    "mailing.name": {
+      "text": "First name",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T17:58:46.514Z"
+    },
+    "mailing.nameOptional": {
+      "text": "(optional)",
+      "sourceHash": "b16c7ac6faff",
+      "updatedAt": "2026-08-17T17:58:46.514Z"
+    },
+    "mailing.emailPlaceholder": {
+      "text": "you@organisation.org",
+      "sourceHash": "2210623ebf8b",
+      "updatedAt": "2026-08-17T17:58:46.514Z"
+    },
+    "mailing.namePlaceholder": {
+      "text": "First name",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T17:58:46.514Z"
+    },
+    "mailing.consent": {
+      "text": "I agree to receive occasional emails from Octivate. I can opt-out at any time.",
+      "sourceHash": "251b640d0e70",
+      "updatedAt": "2026-08-17T17:58:46.514Z"
+    },
+    "mailing.join": {
+      "text": "सूची में शामिल हों",
+      "sourceHash": "04707f33d156",
+      "updatedAt": "2026-08-17T18:03:59.267Z"
+    },
+    "mailing.saving": {
+      "text": "सेविंग…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T18:03:59.267Z"
+    },
+    "mailing.optOut": {
+      "text": "बाहर निकलें",
+      "sourceHash": "39eb4312f1ff",
+      "updatedAt": "2026-08-17T18:03:59.267Z"
+    },
+    "mailing.fine": {
+      "text": "आपकी जानकारी Octivate मेलिंग सूची के लिए केवल संग्रहीत की गई है और बेची नहीं जाती। हमारी गोपनीयता नीति देखें कि हम ईमेल कैसे संसाधित करते हैं।",
+      "sourceHash": "45f14a872fda",
+      "updatedAt": "2026-08-17T18:03:59.267Z"
+    },
+    "mailing.consentRequired": {
+      "text": "कृपया पुष्टि करें कि आप उत्पाद अपडेट चाहते हैं।",
+      "sourceHash": "0bd437fefded",
+      "updatedAt": "2026-08-17T18:03:59.267Z"
+    },
+    "mailing.success": {
+      "text": "आप सूची में हैं — केवल अवसर पर उत्पाद नोट्स।",
+      "sourceHash": "fefa7875f49b",
+      "updatedAt": "2026-08-17T18:03:59.267Z"
+    },
+    "mailing.unsubscribed": {
+      "text": "आप सूची से बाहर हैं। आप कभी भी पुनः जुड़ सकते हैं।",
+      "sourceHash": "15eae8c5d42e",
+      "updatedAt": "2026-08-17T18:03:59.267Z"
+    },
+    "mailing.networkError": {
+      "text": "नेटवर्क त्रुटि। अपने कनेक्शन की जांच करें और फिर से प्रयास करें।",
+      "sourceHash": "916c8a25c301",
+      "updatedAt": "2026-08-17T18:03:59.267Z"
+    },
+    "mailing.genericError": {
+      "text": "Something went wrong. Try again.",
+      "sourceHash": "4244e822a06c",
+      "updatedAt": "2026-08-17T18:09:48.937Z"
+    },
+    "land.hero.title": {
+      "text": "Clarity for the decisions that shape the Caribbean.",
+      "sourceHash": "c977ff7e2f70",
+      "updatedAt": "2026-08-17T18:09:48.937Z"
+    },
+    "land.hero.body": {
+      "text": "In a region overflowing with competing signals, the hard part is knowing what they mean together. Octivate connects scattered regional information, tests what can be trusted and turns it into evidence-backed judgement for the decisions that cannot wait.",
+      "sourceHash": "e219cf53254c",
+      "updatedAt": "2026-08-17T18:09:48.937Z"
+    },
+    "land.hero.ctaPrimary": {
+      "text": "Get Started",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T18:09:48.937Z"
+    },
+    "land.hero.ctaSample": {
+      "text": "See a Sample Brief",
+      "sourceHash": "bdf4ce16698a",
+      "updatedAt": "2026-08-17T18:09:48.937Z"
+    },
+    "land.why.eyebrow": {
+      "text": "Why Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T18:09:48.937Z"
+    },
+    "land.why.title": {
+      "text": "Built for the way information actually moves in the Caribbean.",
+      "sourceHash": "f2f24843f23e",
+      "updatedAt": "2026-08-17T18:09:48.937Z"
+    },
+    "land.why.1": {
+      "text": "Regional sources are fragmented across institutions and jurisdictions.",
+      "sourceHash": "6a2168b0edc0",
+      "updatedAt": "2026-08-17T18:09:48.937Z"
+    },
+    "land.why.2": {
+      "text": "महत्वपूर्ण संदर्भ अक्सर औपचारिक डेटा के बाहर दिखाई देता है.",
+      "sourceHash": "f24b4dfd9981",
+      "updatedAt": "2026-08-17T18:13:44.933Z"
+    },
+    "land.why.3": {
+      "text": "छोटे पैमाने के संबंध व्यक्तिगत कार्यों को असाधारण रूप से परिणामी बना सकते हैं.",
+      "sourceHash": "aa7f3c1348b3",
+      "updatedAt": "2026-08-17T18:13:44.933Z"
+    },
+    "land.why.4": {
+      "text": "क्षेत्रीय, अंतर्राष्ट्रीय और घरेलू गतिशील अक्सर एक-दूसरे को पार करती हैं.",
+      "sourceHash": "7d7279cd7d5b",
+      "updatedAt": "2026-08-17T18:13:44.933Z"
+    },
+    "land.why.close": {
+      "text": "Octivate इस परिचालन वास्तविकता के चारों ओर डिज़ाइन किया गया है, एक सामान्य वैश्विक बुद्धिमत्ता उत्पाद को क्षेत्र में बाद में अनुकूलित करने के बजाय.",
+      "sourceHash": "316ad433f656",
+      "updatedAt": "2026-08-17T18:13:44.933Z"
+    },
+    "land.lenses.title": {
+      "text": "कैसे Octivate कैरेबिया को पढ़ती है",
+      "sourceHash": "f2b8e64c1256",
+      "updatedAt": "2026-08-17T18:13:44.933Z"
+    },
+    "land.lenses.lede": {
+      "text": "Octivate हर प्रश्न को तीन परस्पर जुड़े हुए लेंसों से गुज़रती है, फिर यह देखती है कि वे कैसे परस्पर मिलती हैं.",
+      "sourceHash": "700e2367b157",
+      "updatedAt": "2026-08-17T18:13:44.933Z"
+    },
+    "land.lenses.power": {
+      "text": "शक्ति",
+      "sourceHash": "7548ab52c3d1",
+      "updatedAt": "2026-08-17T18:13:44.933Z"
+    },
+    "land.lenses.power.q": {
+      "text": "कौन परिणाम को आकार दे सकता है?",
+      "sourceHash": "0b0288ef46ce",
+      "updatedAt": "2026-08-17T18:13:44.933Z"
+    },
+    "land.how.title": {
+      "text": "एक कठिन परिचालन संदर्भ से निर्णय-तैयार निर्णय तक",
+      "sourceHash": "e2a54852c40d",
+      "updatedAt": "2026-08-17T18:13:49.164Z"
+    },
+    "land.how.01.title": {
+      "text": "निर्णय को फ्रेम करें",
+      "sourceHash": "c7c7bf44e724",
+      "updatedAt": "2026-08-17T18:13:49.164Z"
+    },
+    "land.how.01.body": {
+      "text": "क्या निर्णय लिया जाना है, कब तक और क्या साक्ष्य उत्तर बदल देगा।",
+      "sourceHash": "607c39bf28f6",
+      "updatedAt": "2026-08-17T18:13:49.164Z"
+    },
+    "land.how.02.title": {
+      "text": "साक्ष्य खोजें और उसका परीक्षण करें",
+      "sourceHash": "427c8a624037",
+      "updatedAt": "2026-08-17T18:13:49.164Z"
+    },
+    "land.how.02.body": {
+      "text": "प्रासंगिक स्रोत एकत्र करें, दावों की तुलना करें, विरोधाभासों की पहचान करें और अनिश्चितता को उजागर करें।",
+      "sourceHash": "1ab2f5a019c7",
+      "updatedAt": "2026-08-17T18:13:49.164Z"
+    },
+    "land.how.03.title": {
+      "text": "निर्णय-तैयार निर्णय दें",
+      "sourceHash": "df73304ba4ed",
+      "updatedAt": "2026-08-17T18:13:49.164Z"
+    },
+    "land.how.03.body": {
+      "text": "साक्ष्य को विकल्पों, व्यापार-बंद, हितधारक विचार, साक्ष्य अंतराल और निगरानी के संकेतों में बदलें।",
+      "sourceHash": "4680e62424c4",
+      "updatedAt": "2026-08-17T18:13:49.164Z"
+    },
+    "land.how.ctaSample": {
+      "text": "नमूना विवरण देखें",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T18:13:49.164Z"
+    },
+    "land.disc.eyebrow": {
+      "text": "छह एकीकृत विषय",
+      "sourceHash": "5758b703370e",
+      "updatedAt": "2026-08-17T18:13:53.218Z"
+    },
+    "land.disc.title": {
+      "text": "छह विषय। एकीकृत निर्णय।",
+      "sourceHash": "ded00ef93dd7",
+      "updatedAt": "2026-08-17T18:13:53.218Z"
+    },
+    "land.disc.lede": {
+      "text": "प्रत्येक विषय विश्लेषण का एक अलग भाग योगदान देता है। साथ मिलकर, वे बिखरे हुए साक्ष्य को उस बात में बदल देते हैं जो महत्वपूर्ण है, क्या हो सकता है और कैसे प्रतिक्रिया देनी है।",
+      "sourceHash": "05bd7f63cdb4",
+      "updatedAt": "2026-08-17T18:13:53.218Z"
+    },
+    "land.disc.1.title": {
+      "text": "राजनीतिक अर्थव्यवस्था और भू-राजनीतिक विश्लेषण",
+      "sourceHash": "dd28e1937d74",
+      "updatedAt": "2026-08-17T18:13:53.218Z"
+    },
+    "land.disc.1.body": {
+      "text": "सत्ताधिकार, आर्थिक हित और बाहरी दबाव कैसे निर्णयों और संभावित परिणामों को आकार देते हैं।",
+      "sourceHash": "8afd68a3d3ef",
+      "updatedAt": "2026-08-17T18:13:53.218Z"
+    },
+    "land.disc.2.title": {
+      "text": "प्रणाली और पूर्वानुमान विश्लेषण",
+      "sourceHash": "253865fba412",
+      "updatedAt": "2026-08-17T18:13:53.218Z"
+    },
+    "land.disc.2.body": {
+      "text": "संस्थाएँ, अवसंरचना, नियम और निर्भरताएँ क्या संभव बनाती हैं और क्या हो सकता है।",
+      "sourceHash": "a4b68fecad0c",
+      "updatedAt": "2026-08-17T18:13:53.218Z"
+    },
+    "land.disc.3.title": {
+      "text": "हितधारक विश्लेषण और जुड़ाव",
+      "sourceHash": "fc1ee57068cc",
+      "updatedAt": "2026-08-17T18:13:53.218Z"
+    },
+    "land.disc.3.body": {
+      "text": "जो व्यक्ति निर्णय को प्रभावित, बाधित या वैध कर सकते हैं, और इन संबंधों का प्रबंधन कैसे किया जाना चाहिए।",
+      "sourceHash": "e4fa7ce7e339",
+      "updatedAt": "2026-08-17T18:13:56.563Z"
+    },
+    "land.disc.4.title": {
+      "text": "कथा निगरानी और रणनीतिक संचार",
+      "sourceHash": "67e865e68529",
+      "updatedAt": "2026-08-17T18:13:56.563Z"
+    },
+    "land.disc.4.body": {
+      "text": "फ्रेमिंग, वैधता और सार्वजनिक व्याख्या कैसे व्यवहार, कार्यान्वयन और प्रतिक्रिया को प्रभावित करती है।",
+      "sourceHash": "98cb45abf1e1",
+      "updatedAt": "2026-08-17T18:13:56.563Z"
+    },
+    "land.disc.5.title": {
+      "text": "खुली स्रोत खुफिया और मान्यता",
+      "sourceHash": "35756d94e827",
+      "updatedAt": "2026-08-17T18:13:56.563Z"
+    },
+    "land.disc.5.body": {
+      "text": "दावों का परीक्षण करने, विरोधाभासों की पहचान करने और स्रोत अधिकार का आकलन करने के लिए साक्ष्य एकत्र करना, सत्यापन करना और तुलना करना।",
+      "sourceHash": "42f7468221bb",
+      "updatedAt": "2026-08-17T18:13:56.563Z"
+    },
+    "land.disc.6.title": {
+      "text": "निर्णय विश्लेषण और विकल्प मूल्यांकन",
+      "sourceHash": "cc06adf088e1",
+      "updatedAt": "2026-08-17T18:13:56.563Z"
+    },
+    "land.disc.6.body": {
+      "text": "साक्ष्य एक साथ लाना ताकि विकल्पों की तुलना की जा सके, धारणाओं का परीक्षण किया जा सके, व्यापार-बदलाव का आकलन किया जा सके और निगरानी के लिए संकेतों की पहचान की जा सके।",
+      "sourceHash": "7108d1316127",
+      "updatedAt": "2026-08-17T18:13:56.563Z"
+    },
+    "land.cta.eyebrow": {
+      "text": "शुरू करें",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T18:13:56.563Z"
+    },
+    "land.cta.title": {
+      "text": "आप किस निर्णय को लेना चाहते हैं?",
+      "sourceHash": "2ce1ab5a8081",
+      "updatedAt": "2026-08-17T18:13:59.205Z"
+    },
+    "land.cta.body": {
+      "text": "एक खाता बनाएं ताकि Octivate को एक वास्तविक परिचालन संदर्भ प्रश्न दे सकें, वह साक्ष्य पहचान सकें जो मायने रखता है और उसे निर्णय-तैयार विश्लेषण में बदल सकें।",
+      "sourceHash": "11f71cd06f74",
+      "updatedAt": "2026-08-17T18:13:59.205Z"
+    },
+    "land.cta.create": {
+      "text": "खाता बनाएं",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T18:13:59.205Z"
+    },
+    "land.cta.sample": {
+      "text": "नमूना विवरण देखें",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T18:13:59.205Z"
+    },
+    "land.cta.emailPrefix": {
+      "text": "या ईमेल",
+      "sourceHash": "921d0ad714dc",
+      "updatedAt": "2026-08-17T18:13:59.205Z"
+    },
+    "land.about.body": {
+      "text": "जटिल कैरिबियन परिचालन वातावरण के लिए कार्य-उन्मुख निर्णय बुद्धिमत्ता। CENSII द्वारा विकसित, Octivate fragmented Caribbean evidence को एक संरचित दृश्य में लाता है clearer decisions के लिए।",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T18:13:59.205Z"
+    },
+    "land.about.censii": {
+      "text": "CENSII के बारे में",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T18:13:59.205Z"
+    },
+    "land.about.team": {
+      "text": "टीम",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T18:13:59.205Z"
+    },
+    "land.mail.fab": {
+      "text": "Join the mailing list",
+      "sourceHash": "dc46f4e0b25c",
+      "updatedAt": "2026-08-17T18:14:01.497Z"
+    },
+    "land.tech.heading": {
+      "text": "Technologies",
+      "sourceHash": "1310a448775a",
+      "updatedAt": "2026-08-17T18:14:01.497Z"
+    },
+    "land.tech.lede": {
+      "text": "Model routing and assistants for analysis — plus payment rails for plans.",
+      "sourceHash": "d150c5578dfd",
+      "updatedAt": "2026-08-17T18:14:01.497Z"
+    },
+    "land.tech.demoCta": {
+      "text": "Watch a 1-minute demo",
+      "sourceHash": "db9b420f3fdb",
+      "updatedAt": "2026-08-17T18:14:01.497Z"
+    },
+    "land.tech.demoKicker": {
+      "text": "Product walkthrough",
+      "sourceHash": "76b995c4422a",
+      "updatedAt": "2026-08-17T18:14:01.497Z"
+    },
+    "land.tech.demoTitle": {
+      "text": "See Octivate in one minute",
+      "sourceHash": "20abdfb8380b",
+      "updatedAt": "2026-08-17T18:14:01.497Z"
+    },
+    "land.tech.demoBody": {
+      "text": "A short walkthrough of framing a Caribbean decision theatre, validating evidence, and opening a decision-ready brief.",
+      "sourceHash": "a9418180a664",
+      "updatedAt": "2026-08-17T18:14:01.497Z"
+    },
+    "land.tech.demoSample": {
+      "text": "Open sample brief",
+      "sourceHash": "5ed6e8105a32",
+      "updatedAt": "2026-08-17T18:14:01.497Z"
+    },
+    "land.tech.demoSignup": {
+      "text": "खाता बनाएँ",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T18:14:06.261Z"
+    },
+    "land.tech.demoClose": {
+      "text": "बंद करें",
+      "sourceHash": "629a741a5ebc",
+      "updatedAt": "2026-08-17T18:14:06.261Z"
+    },
+    "land.ws.eyebrow": {
+      "text": "वर्कस्पेस के अंदर",
+      "sourceHash": "2b4c8c6a7bc7",
+      "updatedAt": "2026-08-17T18:14:06.261Z"
+    },
+    "land.ws.title": {
+      "text": "लाइव उत्पाद सतहें — बिना साइन इन के अन्वेषण करें।",
+      "sourceHash": "37fc4592ccec",
+      "updatedAt": "2026-08-17T18:14:06.261Z"
+    },
+    "land.ws.lede": {
+      "text": "चार्ट पर होवर करें, टैब स्विच करें, और मानचित्र पर थिएटर पर क्लिक करें। यह डेमो कैरेबियन के नमूना डेटा का उपयोग करता है और ओवरव्यू स्टाइलिंग को प्रतिबिंबित करता है — कोई खाता कार्रवाई नहीं।",
+      "sourceHash": "e46ccd61513d",
+      "updatedAt": "2026-08-17T18:14:06.261Z"
+    },
+    "land.ws.chromeLabel": {
+      "text": "Octivate · ओवरव्यू",
+      "sourceHash": "af30e9554fe0",
+      "updatedAt": "2026-08-17T18:14:06.261Z"
+    },
+    "land.ws.tabsLabel": {
+      "text": "वर्कस्पेस डेमो टैब",
+      "sourceHash": "4dfeacdbd87c",
+      "updatedAt": "2026-08-17T18:14:06.261Z"
+    },
+    "land.ws.tabInsights": {
+      "text": "अंतर्दृष्टि",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T18:14:06.261Z"
+    },
+    "land.ws.tabCoverage": {
+      "text": "कवरेज",
+      "sourceHash": "80e13549b47a",
+      "updatedAt": "2026-08-17T18:14:09.102Z"
+    },
+    "land.ws.riskMix": {
+      "text": "जोखिम मिश्रण",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T18:14:09.102Z"
+    },
+    "land.ws.avgConfidence": {
+      "text": "औसत आत्मविश्वास",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T18:14:09.102Z"
+    },
+    "land.ws.briefs": {
+      "text": "ब्रीफ",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T18:14:09.102Z"
+    },
+    "land.ws.briefsFinal": {
+      "text": "अंतिम",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T18:14:09.102Z"
+    },
+    "land.ws.briefsDraft": {
+      "text": "ड्राफ्ट",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T18:14:09.102Z"
+    },
+    "land.ws.trends": {
+      "text": "नवीनतम रुझान",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T18:14:09.102Z"
+    },
+    "land.ws.recentBriefs": {
+      "text": "हाल के ब्रीफ",
+      "sourceHash": "157c46a63c49",
+      "updatedAt": "2026-08-17T18:14:09.102Z"
+    },
+    "land.ws.colBrief": {
+      "text": "संक्षिप्त",
+      "sourceHash": "230e0f8d137e",
+      "updatedAt": "2026-08-17T18:15:17.854Z"
+    },
+    "land.ws.colCountry": {
+      "text": "देश",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T18:15:17.854Z"
+    },
+    "land.ws.colRisk": {
+      "text": "जोखिम",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T18:15:17.854Z"
+    },
+    "land.ws.colConfidence": {
+      "text": "विश्वास",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T18:15:17.854Z"
+    },
+    "land.ws.coverageSide": {
+      "text": "चयनित थिएटर",
+      "sourceHash": "1f2f630d6e6c",
+      "updatedAt": "2026-08-17T18:15:17.854Z"
+    },
+    "land.ws.coverageHint": {
+      "text": "एक देश के मार्कर पर क्लिक करें ताकि नमूना परियोजनाओं की सूची देखें।",
+      "sourceHash": "75953108dd09",
+      "updatedAt": "2026-08-17T18:15:17.854Z"
+    },
+    "land.ws.coverageStats": {
+      "text": "{n} परियोजनाएँ · {active} सक्रिय",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T18:15:17.854Z"
+    },
+    "land.ws.ctaSample": {
+      "text": "नमूना संक्षिप्त का अन्वेषण करें",
+      "sourceHash": "72048fd54a2e",
+      "updatedAt": "2026-08-17T18:15:17.854Z"
+    },
+    "footer.blurb": {
+      "text": "कारिबियाई परिचालन वातावरण के लिए क्रिया-उन्मुख निर्णय बुद्धि। CENSII द्वारा विकसित, Octivate कारिबियाई साक्ष्य को एक संरचित दृश्य में लाता है clearer निर्णय के लिए।",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T18:15:21.774Z"
+    },
+    "footer.explore": {
+      "text": "खोजें",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T18:15:21.774Z"
+    },
+    "footer.product": {
+      "text": "उत्पाद",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T18:15:21.774Z"
+    },
+    "footer.why": {
+      "text": "Octivate क्यों",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T18:15:21.774Z"
+    },
+    "footer.how": {
+      "text": "यह कैसे काम करता है",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T18:15:21.774Z"
+    },
+    "footer.disciplines": {
+      "text": "छह विषय",
+      "sourceHash": "926d0eec2cb3",
+      "updatedAt": "2026-08-17T18:15:21.774Z"
+    },
+    "footer.sample": {
+      "text": "नमूना विवरण",
+      "sourceHash": "8ad8c7f36656",
+      "updatedAt": "2026-08-17T18:15:21.774Z"
+    },
+    "footer.takeAction": {
+      "text": "कार्रवाई करें",
+      "sourceHash": "5ed99cd0b91e",
+      "updatedAt": "2026-08-17T18:15:21.774Z"
+    },
+    "footer.getStarted": {
+      "text": "शुरू करें",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T18:15:23.619Z"
+    },
+    "footer.signIn": {
+      "text": "साइन इन करें",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T18:15:23.619Z"
+    },
+    "footer.pricing": {
+      "text": "कीमत",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T18:15:23.619Z"
+    },
+    "footer.contact": {
+      "text": "हमसे संपर्क करें",
+      "sourceHash": "4832e45812a2",
+      "updatedAt": "2026-08-17T18:15:23.619Z"
+    },
+    "footer.about": {
+      "text": "हमारे बारे में",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T18:15:23.619Z"
+    },
+    "footer.aboutCensii": {
+      "text": "CENSII के बारे में",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T18:15:23.619Z"
+    },
+    "footer.team": {
+      "text": "टीम",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T18:15:23.619Z"
+    },
+    "footer.legal": {
+      "text": "कानूनी",
+      "sourceHash": "902c91d94e0f",
+      "updatedAt": "2026-08-17T18:15:23.619Z"
+    },
+    "footer.privacy": {
+      "text": "निजता नीति",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T18:18:21.564Z"
+    },
+    "footer.terms": {
+      "text": "सेवा की शर्तें",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T18:18:21.564Z"
+    },
+    "footer.cookies": {
+      "text": "कुकीज़ विवरण",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T18:18:21.564Z"
+    },
+    "footer.cookieSettings": {
+      "text": "कुकीज़ सेटिंग्स",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T18:18:21.564Z"
+    },
+    "footer.seo": {
+      "text": "Octivate by CENSII कैरेबियाई निर्णय बुद्धि प्रदान करता है: Power–Systems–Narratives विश्लेषण, साक्ष्य पुष्टि, विकल्प आकलन और निगरानी। यह Trinidad and Tobago, Jamaica, Barbados, Guyana, Suriname, the OECS और व्यापक क्षेत्र में संगठनों के लिए है।",
+      "sourceHash": "0e3cd5403e35",
+      "updatedAt": "2026-08-17T18:18:21.564Z"
+    },
+    "footer.backToTop": {
+      "text": "शीर्ष पर जाएं",
+      "sourceHash": "d9c883a90573",
+      "updatedAt": "2026-08-17T18:18:21.564Z"
+    },
+    "footer.copyright": {
+      "text": "© 2026 CENSII · Octivate · octivate.io",
+      "sourceHash": "134a51892744",
+      "updatedAt": "2026-08-17T18:18:21.564Z"
+    },
+    "auth.signin.kicker": {
+      "text": "वर्कस्पेस एक्सेस",
+      "sourceHash": "9973694cce2b",
+      "updatedAt": "2026-08-17T18:18:21.564Z"
+    },
+    "ws.mode.operator": {
+      "text": "ऑपरेटर मोड",
+      "sourceHash": "594a7f797f7d",
+      "updatedAt": "2026-08-17T18:18:25.261Z"
+    },
+    "ws.askStrategic": {
+      "text": "रणनीतिक प्रश्न पूछें",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T18:18:25.261Z"
+    },
+    "ws.operatorDashboard": {
+      "text": "ऑपरेटर डैशबोर्ड",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T18:18:25.261Z"
+    },
+    "ws.collapseSidebar": {
+      "text": "साइडबार collapse",
+      "sourceHash": "9e6876286e45",
+      "updatedAt": "2026-08-17T18:18:25.261Z"
+    },
+    "ws.expandSidebar": {
+      "text": "साइडबार expand",
+      "sourceHash": "f462e889fd88",
+      "updatedAt": "2026-08-17T18:18:25.261Z"
+    },
+    "ws.openMenu": {
+      "text": "मेनू खोलें",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T18:18:25.261Z"
+    },
+    "ws.closeMenu": {
+      "text": "मेनू बंद करें",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T18:18:25.261Z"
+    },
+    "ws.overview.title": {
+      "text": "अवलोकन",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T18:18:25.261Z"
+    },
+    "ws.overview.lede": {
+      "text": "कैरिबियाई बुद्धि कार्यक्षेत्र - रुझान, परियोजनाएं, संक्षिप्त विवरण, पैक और उपयोग।",
+      "sourceHash": "f89a3516e147",
+      "updatedAt": "2026-08-17T18:18:28.802Z"
+    },
+    "ws.overview.newAnalysis": {
+      "text": "नई विश्लेषण",
+      "sourceHash": "3874bbceddf5",
+      "updatedAt": "2026-08-17T18:18:28.802Z"
+    },
+    "ws.overview.tab.insights": {
+      "text": "अंतर्दृष्टि",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T18:18:28.802Z"
+    },
+    "ws.overview.tab.pipeline": {
+      "text": "पाइपलाइन",
+      "sourceHash": "32b1d5a78493",
+      "updatedAt": "2026-08-17T18:18:28.802Z"
+    },
+    "ws.overview.riskMix": {
+      "text": "जोखिम मिश्रण",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T18:18:28.802Z"
+    },
+    "ws.overview.riskMixSub": {
+      "text": "जोखिम स्तर के अनुसार संक्षिप्त विवरण",
+      "sourceHash": "ec9ed226c4fa",
+      "updatedAt": "2026-08-17T18:18:28.802Z"
+    },
+    "ws.overview.latestTrends": {
+      "text": "नवीनतम रुझान",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T18:18:28.802Z"
+    },
+    "ws.overview.avgConfidence": {
+      "text": "औसत विश्वास",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T18:18:28.802Z"
+    },
+    "ws.overview.briefs": {
+      "text": "ब्रीफ्स",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T18:18:30.653Z"
+    },
+    "ws.overview.briefsTotal": {
+      "text": "{n} कुल",
+      "sourceHash": "aeb6ea7ac893",
+      "updatedAt": "2026-08-17T18:18:30.653Z"
+    },
+    "ws.overview.final": {
+      "text": "अंतिम",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T18:18:30.653Z"
+    },
+    "ws.overview.draft": {
+      "text": "ड्राफ्ट",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T18:18:30.653Z"
+    },
+    "ws.overview.countryPacks": {
+      "text": "देश पैक",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T18:18:30.653Z"
+    },
+    "ws.overview.caribbeanMarkets": {
+      "text": "{n} कैरेबियाई बाजार",
+      "sourceHash": "9f1512466503",
+      "updatedAt": "2026-08-17T18:18:30.653Z"
+    },
+    "ws.overview.aiUsage": {
+      "text": "AI उपयोग",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T18:18:30.653Z"
+    },
+    "ws.overview.tokens": {
+      "text": "टोकन",
+      "sourceHash": "3391436a4e72",
+      "updatedAt": "2026-08-17T18:18:30.653Z"
+    },
+    "ws.overview.estCost": {
+      "text": "लगत ${amount}",
+      "sourceHash": "f9dc4ad795a4",
+      "updatedAt": "2026-08-17T18:18:33.131Z"
+    },
+    "ws.overview.agenticPipeline": {
+      "text": "एजेंटिक पाइपलाइन",
+      "sourceHash": "a8b4a909f8ce",
+      "updatedAt": "2026-08-17T18:18:33.131Z"
+    },
+    "ws.overview.agenticLede": {
+      "text": "आठ विशेषीकृत एजेंट प्रवेश → साक्ष्य → PSN विश्लेषण → निर्णय संक्षिप्त.",
+      "sourceHash": "d5d084c354a2",
+      "updatedAt": "2026-08-17T18:18:33.131Z"
+    },
+    "ws.overview.startWorkflow": {
+      "text": "कार्यप्रवाह शुरू करें",
+      "sourceHash": "5d07bdb74e62",
+      "updatedAt": "2026-08-17T18:18:33.131Z"
+    },
+    "ws.overview.latestBriefs": {
+      "text": "नवीनतम संक्षिप्त",
+      "sourceHash": "52ce1d088ad9",
+      "updatedAt": "2026-08-17T18:18:33.131Z"
+    },
+    "ws.overview.viewAll": {
+      "text": "सभी देखें",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T18:18:33.131Z"
+    },
+    "ws.overview.col.title": {
+      "text": "शीर्षक",
+      "sourceHash": "768e0c1c6957",
+      "updatedAt": "2026-08-17T18:18:33.131Z"
+    },
+    "ws.overview.col.country": {
+      "text": "देश",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T18:18:33.131Z"
+    },
+    "ws.overview.total": {
+      "text": "कुल",
+      "sourceHash": "5a537e209151",
+      "updatedAt": "2026-08-17T18:22:16.540Z"
+    },
+    "ws.overview.map.title": {
+      "text": "थिएटर कवरेज",
+      "sourceHash": "597b741ee58c",
+      "updatedAt": "2026-08-17T18:22:16.540Z"
+    },
+    "ws.overview.map.lede": {
+      "text": "देश के परियोजना थिएटरों का जीवित नक्शा — होवर करें गिनतियाँ देखने के लिए, क्लिक करें परियोजना सूची खोलें।",
+      "sourceHash": "50dd24fff5fe",
+      "updatedAt": "2026-08-17T18:22:16.540Z"
+    },
+    "ws.overview.map.summary": {
+      "text": "{countries} देश · {projects} परियोजनाएँ",
+      "sourceHash": "e09cdd8b4569",
+      "updatedAt": "2026-08-17T18:22:16.540Z"
+    },
+    "ws.overview.map.live": {
+      "text": "लाइव",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T18:22:16.540Z"
+    },
+    "ws.overview.map.liveHint": {
+      "text": "वर्कस्पेस लाइटनिंग रिफ्रेश और सॉफ्ट पोल से अपडेट्स",
+      "sourceHash": "de35b65a98de",
+      "updatedAt": "2026-08-17T18:22:16.540Z"
+    },
+    "ws.overview.map.updating": {
+      "text": "अद्यतन",
+      "sourceHash": "ec6952e09b9c",
+      "updatedAt": "2026-08-17T18:22:16.540Z"
+    },
+    "ws.overview.map.updatingHint": {
+      "text": "थिएटर कवरेज़ का रिफ्रेश",
+      "sourceHash": "64415f399cc6",
+      "updatedAt": "2026-08-17T18:22:16.540Z"
+    },
+    "ws.overview.map.reset": {
+      "text": "कैरिबियाई",
+      "sourceHash": "4a2e3865acb4",
+      "updatedAt": "2026-08-17T18:24:04.025Z"
+    },
+    "ws.overview.map.resetHint": {
+      "text": "नक्शे का फोकस कैरिबियाई क्षेत्र पर रिसेट करें।",
+      "sourceHash": "7d81dd21b898",
+      "updatedAt": "2026-08-17T18:24:04.025Z"
+    },
+    "ws.overview.map.hoverStats": {
+      "text": "{n} परियोजनाएं · {active} सक्रिय",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T18:24:04.025Z"
+    },
+    "ws.overview.map.clickHint": {
+      "text": "क्लिक करें ताकि परियोजनाएं देख सकें।",
+      "sourceHash": "daaaa430f8b1",
+      "updatedAt": "2026-08-17T18:24:04.025Z"
+    },
+    "ws.overview.map.empty": {
+      "text": "मानचित्र को जगमगाने के लिए एक परियोजना बनाएं।",
+      "sourceHash": "40ee077e9f45",
+      "updatedAt": "2026-08-17T18:24:04.025Z"
+    },
+    "ws.overview.map.emptyCountry": {
+      "text": "इस देश में अभी कोई परियोजना नहीं है।",
+      "sourceHash": "561147a5f7cd",
+      "updatedAt": "2026-08-17T18:24:04.025Z"
+    },
+    "ws.overview.map.modalKicker": {
+      "text": "देश थिएटर",
+      "sourceHash": "93a542767481",
+      "updatedAt": "2026-08-17T18:24:04.025Z"
+    },
+    "ws.overview.map.projectCount": {
+      "text": "{n} परियोजनाएं · {active} सक्रिय",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T18:24:04.025Z"
+    },
+    "ws.projects.filter.archived": {
+      "text": "आर्काइवित",
+      "sourceHash": "eddc813f35b1",
+      "updatedAt": "2026-08-17T18:27:54.879Z"
+    },
+    "ws.projects.search": {
+      "text": "परियोजनाएँ, देश, क्षेत्र खोजें…",
+      "sourceHash": "277b594595b9",
+      "updatedAt": "2026-08-17T18:27:54.879Z"
+    },
+    "ws.projects.new": {
+      "text": "नई परियोजना",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T18:27:54.879Z"
+    },
+    "ws.projects.newHint": {
+      "text": "एक निर्णय थिएटर खोलें",
+      "sourceHash": "08c180ad8a2b",
+      "updatedAt": "2026-08-17T18:27:54.879Z"
+    },
+    "ws.projects.newInvite": {
+      "text": "यहाँ शुरू करें",
+      "sourceHash": "54acc2806d4d",
+      "updatedAt": "2026-08-17T18:27:54.879Z"
+    },
+    "ws.projects.newClose": {
+      "text": "कॉम्पोजर बंद करें",
+      "sourceHash": "49f1b7e9f2a5",
+      "updatedAt": "2026-08-17T18:27:54.879Z"
+    },
+    "ws.projects.newPanelLede": {
+      "text": "थिएटर का नाम रखें, देश और क्षेत्र चुनें, फिर बनाएँ— आप अगला रणनीतिक प्रश्न पूछ सकते हैं.",
+      "sourceHash": "8d7dc359b19a",
+      "updatedAt": "2026-08-17T18:27:54.879Z"
+    },
+    "ws.projects.name": {
+      "text": "परियोजना का नाम",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T18:27:54.879Z"
+    },
+    "ws.projects.namePlaceholder": {
+      "text": "e.g. Guyana ऊर्जा तैयारी",
+      "sourceHash": "6cc1d1132f94",
+      "updatedAt": "2026-08-17T18:30:00.509Z"
+    },
+    "ws.projects.country": {
+      "text": "देश",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T18:30:00.509Z"
+    },
+    "ws.projects.sector": {
+      "text": "क्षेत्र",
+      "sourceHash": "39fd2070d41b",
+      "updatedAt": "2026-08-17T18:30:00.509Z"
+    },
+    "ws.projects.cancel": {
+      "text": "रद्द करें",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T18:30:00.509Z"
+    },
+    "ws.projects.create": {
+      "text": "परियोजना बनाएं",
+      "sourceHash": "a8d8ff51e4c8",
+      "updatedAt": "2026-08-17T18:30:00.509Z"
+    },
+    "ws.projects.creating": {
+      "text": "बनाया जा रहा है…",
+      "sourceHash": "94d7d8ee473f",
+      "updatedAt": "2026-08-17T18:30:00.509Z"
+    },
+    "ws.projects.empty": {
+      "text": "अभी तक कोई परियोजना नहीं",
+      "sourceHash": "cac330d7f9c7",
+      "updatedAt": "2026-08-17T18:30:00.509Z"
+    },
+    "ws.projects.emptyHint": {
+      "text": "एक परियोजना बनाएं ताकि देश, क्षेत्र और रणनीतिक प्रश्न परिभाषित किया जा सके जिसे तुम्हारी टीम का उत्तर देना है.",
+      "sourceHash": "e44e10633ff5",
+      "updatedAt": "2026-08-17T18:30:00.509Z"
+    },
+    "ws.projects.noMatches": {
+      "text": "कोई मिलान नहीं",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T18:30:33.382Z"
+    },
+    "ws.projects.noMatchesHint": {
+      "text": "वैकल्पिक खोज या फ़िल्टर — या एक नई परियोजना बनाएँ.",
+      "sourceHash": "42a5a4c7b0f8",
+      "updatedAt": "2026-08-17T18:30:33.382Z"
+    },
+    "ws.projects.createdTitle": {
+      "text": "परियोजना बनाया गया",
+      "sourceHash": "76556f09a383",
+      "updatedAt": "2026-08-17T18:30:33.382Z"
+    },
+    "ws.projects.createdBody": {
+      "text": "आपका नया निर्णय थिएटर तैयार है.",
+      "sourceHash": "37fcd61e8ade",
+      "updatedAt": "2026-08-17T18:30:33.382Z"
+    },
+    "ws.projects.createFailed": {
+      "text": "परियोजना बनाना संभव नहीं था",
+      "sourceHash": "373981fcc313",
+      "updatedAt": "2026-08-17T18:30:33.382Z"
+    },
+    "ws.projects.edit": {
+      "text": "परियोजना संपादित करें",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T18:30:33.382Z"
+    },
+    "ws.projects.delete": {
+      "text": "परियोजना हटाएँ",
+      "sourceHash": "af1456f256eb",
+      "updatedAt": "2026-08-17T18:30:33.382Z"
+    },
+    "ws.projects.deleted": {
+      "text": "परियोजना हटाया गया",
+      "sourceHash": "6b17c222a23a",
+      "updatedAt": "2026-08-17T18:30:33.382Z"
+    },
+    "ws.projects.updated": {
+      "text": "परियोजना अपडेट की गई",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T18:32:54.610Z"
+    },
+    "ws.projects.deleteConfirmTitle": {
+      "text": "इस परियोजना को हटाएं?",
+      "sourceHash": "346956aef203",
+      "updatedAt": "2026-08-17T18:32:54.610Z"
+    },
+    "ws.projects.deleteConfirmBody": {
+      "text": "इस परियोजना के विवरण, कार्य प्रवाह सत्र और अपलोड किए गए दस्तावेज़ भी हटा दिए जाएंगे। यह पुनर्स्थापित नहीं किया जा सकता।",
+      "sourceHash": "82d71fd44e99",
+      "updatedAt": "2026-08-17T18:32:54.610Z"
+    },
+    "ws.project.askStrategic": {
+      "text": "रणनीतिक प्रश्न पूछें",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T18:32:54.610Z"
+    },
+    "ws.project.depth.rapid": {
+      "text": "त्वरित — कार्य करने से पहले सत्यापित करें",
+      "sourceHash": "6b189c5ab71d",
+      "updatedAt": "2026-08-17T18:32:54.610Z"
+    },
+    "ws.project.depth.standard": {
+      "text": "मानक — संतुलित प्रारूप",
+      "sourceHash": "49d0af9134ee",
+      "updatedAt": "2026-08-17T18:32:54.610Z"
+    },
+    "ws.project.depth.deep": {
+      "text": "गहरा गोता — व्यापक परिदृश्य",
+      "sourceHash": "ed533d1558c6",
+      "updatedAt": "2026-08-17T18:32:54.610Z"
+    },
+    "ws.project.depth.rapidShort": {
+      "text": "त्वरित",
+      "sourceHash": "9a6ee6647c4c",
+      "updatedAt": "2026-08-17T18:32:54.610Z"
+    },
+    "ws.project.depth.standardShort": {
+      "text": "मानक",
+      "sourceHash": "2dfa66079d9b",
+      "updatedAt": "2026-08-17T18:32:57.705Z"
+    },
+    "ws.project.depth.deepShort": {
+      "text": "गहन विश्लेषण",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T18:32:57.705Z"
+    },
+    "ws.project.depth.rapidHint": {
+      "text": "ओरिएंटेशन के लिए संकुचित खोज; अभी भी मानवीय समीक्षा की आवश्यकता है।",
+      "sourceHash": "5a5cdba724e2",
+      "updatedAt": "2026-08-17T18:32:57.705Z"
+    },
+    "ws.project.depth.standardHint": {
+      "text": "मानवीय समीक्षा के लिए pending PSN ड्राफ्ट।",
+      "sourceHash": "15aa10c6c242",
+      "updatedAt": "2026-08-17T18:32:57.705Z"
+    },
+    "ws.project.depth.deepHint": {
+      "text": "ब्रोडर परिदृश्य; कभी भी बिना समीक्षा के ऑटो-फाइनल नहीं।",
+      "sourceHash": "bb30efc3d878",
+      "updatedAt": "2026-08-17T18:32:57.705Z"
+    },
+    "ws.project.run": {
+      "text": "एजेंट वर्कफ़्लो चलाएँ",
+      "sourceHash": "7dd6527ed98b",
+      "updatedAt": "2026-08-17T18:32:57.705Z"
+    },
+    "ws.project.agentsRunning": {
+      "text": "एजेंट्स चल रहे हैं…",
+      "sourceHash": "e072b895cb8b",
+      "updatedAt": "2026-08-17T18:32:57.705Z"
+    },
+    "ws.project.rerunning": {
+      "text": "दोबारा चलाया जा रहा है…",
+      "sourceHash": "53920a3e9816",
+      "updatedAt": "2026-08-17T18:32:57.705Z"
+    },
+    "ws.project.alreadyRunning": {
+      "text": "एक वर्कफ़्लो पहले से चल रहा है।",
+      "sourceHash": "5717f12dab7a",
+      "updatedAt": "2026-08-17T18:33:03.553Z"
+    },
+    "ws.project.workflowStarted": {
+      "text": "वर्कफ़्लो शुरू हो गया है — एजेंट्स चल रहे हैं।",
+      "sourceHash": "ba2f05f6a246",
+      "updatedAt": "2026-08-17T18:33:03.553Z"
+    },
+    "ws.project.needQuestion": {
+      "text": "रणनीतिक प्रश्न जोड़ें (10+ वर्ण) पुनः चलाने से पहले।",
+      "sourceHash": "c5855c7fedf6",
+      "updatedAt": "2026-08-17T18:33:03.553Z"
+    },
+    "ws.project.stuckRerun": {
+      "text": "पिछला रन फँस गया दिखा — ताज़ा वर्कफ़्लो शुरू कर रहे हैं…",
+      "sourceHash": "7a06899218f0",
+      "updatedAt": "2026-08-17T18:33:03.553Z"
+    },
+    "ws.project.rerunningToast": {
+      "text": "एजेंट वर्कफ़्लो पुनः चल रहा है…",
+      "sourceHash": "2e84385a93af",
+      "updatedAt": "2026-08-17T18:33:03.553Z"
+    },
+    "ws.project.edit": {
+      "text": "परियोजना संपादित करें",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T18:33:03.553Z"
+    },
+    "ws.project.name": {
+      "text": "परियोजना नाम",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T18:33:03.553Z"
+    },
+    "ws.project.save": {
+      "text": "परिवर्तन बचाएं",
+      "sourceHash": "179359b39edb",
+      "updatedAt": "2026-08-17T18:33:03.553Z"
+    },
+    "ws.project.saving": {
+      "text": "सेविंग…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T18:33:05.961Z"
+    },
+    "ws.project.updated": {
+      "text": "परियोजना अपडेट",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T18:33:05.961Z"
+    },
+    "ws.project.archived": {
+      "text": "परियोजना आर्काइव",
+      "sourceHash": "225209bf7dec",
+      "updatedAt": "2026-08-17T18:33:05.961Z"
+    },
+    "ws.project.restored": {
+      "text": "परियोजना पुनर्स्थापित",
+      "sourceHash": "cd1b8386c131",
+      "updatedAt": "2026-08-17T18:33:05.961Z"
+    },
+    "ws.project.notFound": {
+      "text": "परियोजना नहीं मिली",
+      "sourceHash": "3955a012ec3c",
+      "updatedAt": "2026-08-17T18:33:05.961Z"
+    },
+    "ws.project.loadFailed": {
+      "text": "लोड करने में विफल",
+      "sourceHash": "af14db26285b",
+      "updatedAt": "2026-08-17T18:33:05.961Z"
+    },
+    "ws.project.closeSettings": {
+      "text": "परियोजना सेटिंग्स बंद करें",
+      "sourceHash": "f24a1261f0cb",
+      "updatedAt": "2026-08-17T18:33:05.961Z"
+    },
+    "ws.project.restoreForAgents": {
+      "text": "इस परियोजना को एजेंट वर्कफ़्लो चलाने के लिए पुनर्स्थापित करें।",
+      "sourceHash": "943965352a99",
+      "updatedAt": "2026-08-17T18:33:05.961Z"
+    },
+    "ws.project.restoreForDocs": {
+      "text": "इस परियोजना को पुनर्स्थापित करें ताकि दस्तावेज़ जोड़े जा सकें।",
+      "sourceHash": "76bb5e7cd3cd",
+      "updatedAt": "2026-08-17T18:33:29.728Z"
+    },
+    "ws.project.module.reset": {
+      "text": "मॉड्यूल लेआउट रीसेट",
+      "sourceHash": "43b548921a20",
+      "updatedAt": "2026-08-17T18:33:29.728Z"
+    },
+    "ws.project.liveAwaiting": {
+      "text": "लाइव · कुंजी की प्रतीक्षा",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T18:33:29.728Z"
+    },
+    "ws.project.module.question": {
+      "text": "प्रश्न",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T18:33:29.728Z"
+    },
+    "ws.project.module.documents": {
+      "text": "दस्तावेज़",
+      "sourceHash": "687c82861c95",
+      "updatedAt": "2026-08-17T18:33:29.728Z"
+    },
+    "ws.project.module.monitors": {
+      "text": "निगराणी",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T18:33:29.728Z"
+    },
+    "ws.project.module.agent": {
+      "text": "एजेंट",
+      "sourceHash": "5ce2e6f40299",
+      "updatedAt": "2026-08-17T18:33:29.728Z"
+    },
+    "ws.project.module.pulse": {
+      "text": "पल्स",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T18:33:29.728Z"
+    },
+    "ws.account.title": {
+      "text": "Settings",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T18:33:33.822Z"
+    },
+    "ws.account.lede": {
+      "text": "Profile, security, presence, alerts, and session controls.",
+      "sourceHash": "8a35cc38fbac",
+      "updatedAt": "2026-08-17T18:33:33.822Z"
+    },
+    "ws.account.loading": {
+      "text": "Loading account…",
+      "sourceHash": "c3ffe1ef49d0",
+      "updatedAt": "2026-08-17T18:33:33.822Z"
+    },
+    "ws.account.tab.profile": {
+      "text": "Profile",
+      "sourceHash": "ff4fc0276e96",
+      "updatedAt": "2026-08-17T18:33:33.822Z"
+    },
+    "ws.account.tab.security": {
+      "text": "Security",
+      "sourceHash": "f25ce1b8a399",
+      "updatedAt": "2026-08-17T18:33:33.822Z"
+    },
+    "ws.account.tab.presence": {
+      "text": "Presence",
+      "sourceHash": "89a8a335a746",
+      "updatedAt": "2026-08-17T18:33:33.822Z"
+    },
+    "ws.account.tab.alerts": {
+      "text": "Alerts",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T18:33:33.822Z"
+    },
+    "ws.account.tab.session": {
+      "text": "Session",
+      "sourceHash": "f7f1997c6cd1",
+      "updatedAt": "2026-08-17T18:33:33.822Z"
+    },
+    "ws.account.uploadPhoto": {
+      "text": "Upload profile photo",
+      "sourceHash": "888d7bc45d2f",
+      "updatedAt": "2026-08-17T18:33:35.166Z"
+    },
+    "ws.account.remove": {
+      "text": "Remove",
+      "sourceHash": "e963907dac5c",
+      "updatedAt": "2026-08-17T18:33:35.166Z"
+    },
+    "ws.account.displayName": {
+      "text": "Display name",
+      "sourceHash": "c7874aaa0fab",
+      "updatedAt": "2026-08-17T18:33:35.166Z"
+    },
+    "ws.account.bio": {
+      "text": "About / bio",
+      "sourceHash": "32b952c4847b",
+      "updatedAt": "2026-08-17T18:33:35.166Z"
+    },
+    "ws.account.saveProfile": {
+      "text": "Save profile",
+      "sourceHash": "f597c0e8201d",
+      "updatedAt": "2026-08-17T18:33:35.166Z"
+    },
+    "ws.account.password": {
+      "text": "Password",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T18:33:35.166Z"
+    },
+    "ws.account.currentPassword": {
+      "text": "Current password",
+      "sourceHash": "19dff4dad0a7",
+      "updatedAt": "2026-08-17T18:33:35.166Z"
+    },
+    "ws.account.newPassword": {
+      "text": "New password",
+      "sourceHash": "d850ee188c7c",
+      "updatedAt": "2026-08-17T18:33:35.166Z"
+    },
+    "ws.account.updatePassword": {
+      "text": "पासवर्ड अपडेट करें",
+      "sourceHash": "350c355e16e3",
+      "updatedAt": "2026-08-17T18:33:38.389Z"
+    },
+    "ws.account.signOut": {
+      "text": "साइन आउट करें",
+      "sourceHash": "dc1649a16c14",
+      "updatedAt": "2026-08-17T18:33:38.389Z"
+    },
+    "ws.account.presence": {
+      "text": "स्थिति",
+      "sourceHash": "a02b358912bf",
+      "updatedAt": "2026-08-17T18:33:38.389Z"
+    },
+    "ws.account.profileSaved": {
+      "text": "प्रोफ़ाइल बचाया गया",
+      "sourceHash": "e9983dc9ac3f",
+      "updatedAt": "2026-08-17T18:33:38.389Z"
+    },
+    "ws.account.saveFailed": {
+      "text": "सेव करना विफल",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T18:33:38.389Z"
+    },
+    "ws.account.passwordUpdated": {
+      "text": "पासवर्ड अपडेट किया गया",
+      "sourceHash": "1de6d0816c54",
+      "updatedAt": "2026-08-17T18:33:38.389Z"
+    },
+    "ws.account.passwordFailed": {
+      "text": "पासवर्ड अपडेट विफल",
+      "sourceHash": "b651e6821043",
+      "updatedAt": "2026-08-17T18:33:38.389Z"
+    },
+    "ws.account.statusFailed": {
+      "text": "स्थिति अपडेट नहीं कर सका",
+      "sourceHash": "b1073af68cc9",
+      "updatedAt": "2026-08-17T18:33:38.389Z"
+    },
+    "ws.monitors.lede": {
+      "text": "सतत निगरानी प्रोफ़ाइल, जहाँ कीवर्ड और अधिकार क्षेत्र के संकेत आपके संक्षिप्त दायरे से मिलते ही अलर्ट सामने आते हैं।",
+      "sourceHash": "96c578a78d41",
+      "updatedAt": "2026-08-17T18:33:41.994Z"
+    },
+    "ws.monitors.name": {
+      "text": "निगरानी नाम",
+      "sourceHash": "8f3d2b89f0f7",
+      "updatedAt": "2026-08-17T18:33:41.994Z"
+    },
+    "ws.monitors.keywords": {
+      "text": "कीवर्ड (विराम-सेparated)",
+      "sourceHash": "4772c39c2fd8",
+      "updatedAt": "2026-08-17T18:33:41.994Z"
+    },
+    "ws.monitors.countries": {
+      "text": "देश (विराम-सेparated)",
+      "sourceHash": "a6644ccc36eb",
+      "updatedAt": "2026-08-17T18:33:41.994Z"
+    },
+    "ws.monitors.linkProject": {
+      "text": "परियोजना से जुड़ें (वैकल्पिक)",
+      "sourceHash": "b377c0bd90d9",
+      "updatedAt": "2026-08-17T18:33:41.994Z"
+    },
+    "ws.monitors.keywordsPlaceholder": {
+      "text": "EPA, पेट्रोलियम",
+      "sourceHash": "b0441f183a91",
+      "updatedAt": "2026-08-17T18:33:41.994Z"
+    },
+    "ws.monitors.sort.lastAlert": {
+      "text": "विन्यस्त करें: अंतिम अलर्ट",
+      "sourceHash": "871e1671f3cc",
+      "updatedAt": "2026-08-17T18:33:41.994Z"
+    },
+    "ws.monitors.sort.alertCount": {
+      "text": "विन्यस्त करें: अलर्ट की संख्या",
+      "sourceHash": "30818550f03c",
+      "updatedAt": "2026-08-17T18:33:41.994Z"
+    },
+    "ws.monitors.empty": {
+      "text": "नहीं, कोई मॉनिटर नहीं",
+      "sourceHash": "01356e674f83",
+      "updatedAt": "2026-08-17T18:33:44.660Z"
+    },
+    "ws.monitors.emptyHint": {
+      "text": "एक निगरानी प्रोफ़ाइल जोड़ें जिसे आप कीवर्ड और देशों के बीच संक्षिप्त चक्रों में ट्रैक करना चाहते हैं।",
+      "sourceHash": "5e619550a5fb",
+      "updatedAt": "2026-08-17T18:33:44.660Z"
+    },
+    "ws.monitors.noMatches": {
+      "text": "नहीं, कोई मिलान नहीं",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T18:33:44.660Z"
+    },
+    "ws.monitors.noMatchesHint": {
+      "text": "खोज या फ़िल्टर समायोजित करें, या एक नया मॉनिटर बनाएँ।",
+      "sourceHash": "29c9f7839ead",
+      "updatedAt": "2026-08-17T18:33:44.660Z"
+    },
+    "ws.monitors.created": {
+      "text": "मॉनिटर बनाया गया",
+      "sourceHash": "395dbfc3b9df",
+      "updatedAt": "2026-08-17T18:33:44.660Z"
+    },
+    "ws.monitors.createFailed": {
+      "text": "मॉनिटर नहीं बनाया गया",
+      "sourceHash": "0e94667b5b74",
+      "updatedAt": "2026-08-17T18:33:44.660Z"
+    },
+    "ws.monitors.watchProfile": {
+      "text": "निगरानी प्रोफ़ाइल",
+      "sourceHash": "42032bba3d02",
+      "updatedAt": "2026-08-17T18:33:44.660Z"
+    },
+    "ws.monitors.lastAlert": {
+      "text": "आखिरी अलर्ट",
+      "sourceHash": "6badefe08b70",
+      "updatedAt": "2026-08-17T18:33:44.660Z"
+    },
+    "ws.briefs.deepDive": {
+      "text": "गहन विश्लेषण",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T18:33:49.027Z"
+    },
+    "ws.briefs.approve": {
+      "text": "स्वीकार करें",
+      "sourceHash": "7b2c7f146aba",
+      "updatedAt": "2026-08-17T18:33:49.027Z"
+    },
+    "ws.briefs.needsRevision": {
+      "text": "संशोधन की आवश्यकता है",
+      "sourceHash": "a75105d396fa",
+      "updatedAt": "2026-08-17T18:33:49.027Z"
+    },
+    "ws.briefs.reject": {
+      "text": "अस्वीकार करें",
+      "sourceHash": "2b03b59293b6",
+      "updatedAt": "2026-08-17T18:33:49.027Z"
+    },
+    "ws.briefs.openProject": {
+      "text": "लिंक किया गया परियोजना खोलें",
+      "sourceHash": "11bdb0dc219d",
+      "updatedAt": "2026-08-17T18:33:49.027Z"
+    },
+    "ws.briefs.confidence": {
+      "text": "विश्वास",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T18:33:49.027Z"
+    },
+    "ws.briefs.pagination": {
+      "text": "ब्रीफ्स पेजिनेशन",
+      "sourceHash": "ca1f68feb387",
+      "updatedAt": "2026-08-17T18:33:49.027Z"
+    },
+    "ws.briefs.prevPage": {
+      "text": "पिछली ब्रीफ्स पृष्ठ",
+      "sourceHash": "5f855ab42223",
+      "updatedAt": "2026-08-17T18:33:49.027Z"
+    },
+    "ws.briefs.nextPage": {
+      "text": "अगली briefs पृष्ठ",
+      "sourceHash": "12274555c7e6",
+      "updatedAt": "2026-08-17T18:33:51.227Z"
+    },
+    "ws.briefs.showing": {
+      "text": "दिखा रहा है {from}–{to} of {total}",
+      "sourceHash": "d236a8e46b06",
+      "updatedAt": "2026-08-17T18:33:51.227Z"
+    },
+    "ws.sources.title": {
+      "text": "स्रोत",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T18:33:51.227Z"
+    },
+    "ws.sources.lede": {
+      "text": "रेगिस्ट्री पासपोर्ट को क्यूरेट करें जो मॉनिटर और डॉक्ट्रिन रन को खिलाते हैं।",
+      "sourceHash": "34da3d01d122",
+      "updatedAt": "2026-08-17T18:33:51.227Z"
+    },
+    "ws.sources.search": {
+      "text": "नाम, देश, टैग…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T18:33:51.227Z"
+    },
+    "ws.sources.empty": {
+      "text": "नहीं मिले स्रोत",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T18:33:51.227Z"
+    },
+    "ws.sources.emptyHint": {
+      "text": "एक अलग खोज कोशिश करें या रजिस्ट्री आयात करने के लिए CSV गिराएँ।",
+      "sourceHash": "bf5f1c857903",
+      "updatedAt": "2026-08-17T18:33:51.227Z"
+    },
+    "ws.sources.pagination": {
+      "text": "स्रोत pagination",
+      "sourceHash": "50f66b346611",
+      "updatedAt": "2026-08-17T18:33:51.227Z"
+    },
+    "ws.topics.pipelineStarted": {
+      "text": "पाइपलाइन शुरू हुई",
+      "sourceHash": "f2d5ecf09040",
+      "updatedAt": "2026-08-17T18:36:09.242Z"
+    },
+    "ws.topics.projectReady": {
+      "text": "परियोजना तैयार है",
+      "sourceHash": "0e47cf96af8d",
+      "updatedAt": "2026-08-17T18:36:09.242Z"
+    },
+    "ws.topics.workflowRunning": {
+      "text": "एजेंट वर्कफ़्लो चल रहा है.",
+      "sourceHash": "bde7d40c5be3",
+      "updatedAt": "2026-08-17T18:36:09.242Z"
+    },
+    "ws.topics.readyContinue": {
+      "text": "आपका प्रोजेक्ट जारी रखने के लिए तैयार है.",
+      "sourceHash": "6e0428373274",
+      "updatedAt": "2026-08-17T18:36:09.242Z"
+    },
+    "ws.docs.clickUpload": {
+      "text": "क्लिक करें अपलोड करें",
+      "sourceHash": "c77c363d22ab",
+      "updatedAt": "2026-08-17T18:36:09.242Z"
+    },
+    "ws.docs.orDrag": {
+      "text": "या खींचें & छोड़ें",
+      "sourceHash": "9ddf49cdc8ed",
+      "updatedAt": "2026-08-17T18:36:09.242Z"
+    },
+    "ws.docs.uploadFailed": {
+      "text": "अपलोड विफल",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T18:36:09.242Z"
+    },
+    "ws.docs.noUploads": {
+      "text": "अभी तक कोई अपलोड नहीं.",
+      "sourceHash": "11da33e0d997",
+      "updatedAt": "2026-08-17T18:36:09.242Z"
+    },
+    "ws.docs.readSummary": {
+      "text": "पढ़ें सारांश",
+      "sourceHash": "f7685ae9e39b",
+      "updatedAt": "2026-08-17T18:36:11.226Z"
+    },
+    "ws.docs.summarize": {
+      "text": "सारांश बनाएं",
+      "sourceHash": "365b99b5cffd",
+      "updatedAt": "2026-08-17T18:36:11.226Z"
+    },
+    "ws.docs.rework": {
+      "text": "सारांश फिर से बनाएं",
+      "sourceHash": "bad6aa15f0ee",
+      "updatedAt": "2026-08-17T18:36:11.226Z"
+    },
+    "ws.docs.openSummary": {
+      "text": "सारांश खोलें",
+      "sourceHash": "cbb4c597aff6",
+      "updatedAt": "2026-08-17T18:36:11.226Z"
+    },
+    "ws.docs.summaryReady": {
+      "text": "सारांश तैयार है",
+      "sourceHash": "cedb562d4da5",
+      "updatedAt": "2026-08-17T18:36:11.226Z"
+    },
+    "ws.docs.reworkReady": {
+      "text": "फिर से बनाया गया सारांश तैयार है",
+      "sourceHash": "2f61dbbae128",
+      "updatedAt": "2026-08-17T18:36:11.226Z"
+    },
+    "ws.docs.deleteConfirm": {
+      "text": "क्या आप इस दस्तावेज़ को हटाना चाहते हैं?",
+      "sourceHash": "1ce5593800b3",
+      "updatedAt": "2026-08-17T18:36:11.226Z"
+    },
+    "ws.docs.delete": {
+      "text": "दस्तावेज़ हटाएं",
+      "sourceHash": "e8df0b79020b",
+      "updatedAt": "2026-08-17T18:36:11.226Z"
+    },
+    "ws.docs.deleted": {
+      "text": "दस्तावेज़ हटाया गया",
+      "sourceHash": "e4db4d66b499",
+      "updatedAt": "2026-08-17T18:36:13.749Z"
+    },
+    "ws.docs.downloadFailed": {
+      "text": "डाउनलोड विफल",
+      "sourceHash": "01125e1be1f5",
+      "updatedAt": "2026-08-17T18:36:13.749Z"
+    },
+    "ws.docs.summary.pipeline": {
+      "text": "सारांश पाइपलाइन",
+      "sourceHash": "b0647716ca0e",
+      "updatedAt": "2026-08-17T18:36:13.749Z"
+    },
+    "ws.docs.summary.extractHint": {
+      "text": "निर्णय प्रासंगिक पाठ निकालें अपलोड से (बाइनरी फ़ाइलें केवल मेटाडेटा का उपयोग करती हैं)।",
+      "sourceHash": "74117cd5dd45",
+      "updatedAt": "2026-08-17T18:36:13.749Z"
+    },
+    "ws.docs.summary.reviewHint": {
+      "text": "पढ़ने योग्य संक्षिप्त खोलें — संपादन intentionally disabled है।",
+      "sourceHash": "683c57d5a83f",
+      "updatedAt": "2026-08-17T18:36:13.749Z"
+    },
+    "ws.docs.summary.disabled": {
+      "text": "दस्तावेज़ सारांश ऑपरेटर द्वारा अक्षम है।",
+      "sourceHash": "499a1a5ea2ff",
+      "updatedAt": "2026-08-17T18:36:13.749Z"
+    },
+    "ws.docs.summary.reworkDisabled": {
+      "text": "Rework अक्षम है। आप अभी भी read-only सारांश खोल सकते हैं।",
+      "sourceHash": "66773a613619",
+      "updatedAt": "2026-08-17T18:36:13.749Z"
+    },
+    "ws.docs.summary.running": {
+      "text": "दस्तावेज़ पाइपलाइन चल रही है…",
+      "sourceHash": "0fe516637573",
+      "updatedAt": "2026-08-17T18:36:13.749Z"
+    },
+    "ws.docs.summary.keepOpen": {
+      "text": "निष्कर्ष → संश्लेषण इस थिएटर के लिए। इस पैनल को खुला रखें।",
+      "sourceHash": "b88686364225",
+      "updatedAt": "2026-08-17T18:36:16.400Z"
+    },
+    "ws.docs.summary.failed": {
+      "text": "पिछला चलन असफल रहा। यदि आवश्यक हो तो ध्यान केंद्रित करें, फिर से प्रयास करें।",
+      "sourceHash": "ec3c5129064e",
+      "updatedAt": "2026-08-17T18:36:16.400Z"
+    },
+    "ws.docs.summary.none": {
+      "text": "कोई सारांश पाठ उपलब्ध नहीं है।",
+      "sourceHash": "217d2512f8ca",
+      "updatedAt": "2026-08-17T18:36:16.400Z"
+    },
+    "ws.docs.summary.focusPlaceholder": {
+      "text": "उदाहरण के लिए, विनियामक मार्ग, पूंजी भागीदार, और यह निर्णय प्रश्न के लिए क्या अर्थ रखता है…",
+      "sourceHash": "4226d6321002",
+      "updatedAt": "2026-08-17T18:36:16.400Z"
+    },
+    "ws.docs.summary.relevance": {
+      "text": "निर्णय प्रासंगिकता",
+      "sourceHash": "bded871bb02a",
+      "updatedAt": "2026-08-17T18:36:16.400Z"
+    },
+    "ws.docs.summary.keyPoints": {
+      "text": "मुख्य बिंदु",
+      "sourceHash": "5d1855a1eaac",
+      "updatedAt": "2026-08-17T18:36:16.400Z"
+    },
+    "ws.docs.summary.gaps": {
+      "text": "साक्ष्य के अंतर",
+      "sourceHash": "4285633d539c",
+      "updatedAt": "2026-08-17T18:36:16.400Z"
+    },
+    "ws.docs.summary.riskFlags": {
+      "text": "जोखिम चिन्ह",
+      "sourceHash": "024790205e21",
+      "updatedAt": "2026-08-17T18:36:16.400Z"
+    },
+    "ws.docs.summary.reviewFlags": {
+      "text": "समीक्षा झंडे",
+      "sourceHash": "c637c236e807",
+      "updatedAt": "2026-08-17T18:36:18.434Z"
+    },
+    "ws.docs.summary.operatorFocus": {
+      "text": "ऑपरेटर ध्यान का उपयोग",
+      "sourceHash": "541e0f17e21c",
+      "updatedAt": "2026-08-17T18:36:18.434Z"
+    },
+    "ws.docs.summary.generate": {
+      "text": "सारांश उत्पन्न करें",
+      "sourceHash": "edd0f4b8c42f",
+      "updatedAt": "2026-08-17T18:36:18.434Z"
+    },
+    "ws.docs.summary.regenerate": {
+      "text": "सारांश पुनः उत्पन्न करें",
+      "sourceHash": "a4be29f8457d",
+      "updatedAt": "2026-08-17T18:36:18.434Z"
+    },
+    "ws.voice.tap": {
+      "text": "बोलने के लिए टैप करें",
+      "sourceHash": "4f4d692fb7a0",
+      "updatedAt": "2026-08-17T18:36:18.434Z"
+    },
+    "ws.voice.stop": {
+      "text": "बंद करो सुनना",
+      "sourceHash": "e134211eedf1",
+      "updatedAt": "2026-08-17T18:36:18.434Z"
+    },
+    "ws.voice.blocked": {
+      "text": "माइक्रोफ़ोन अवरुद्ध",
+      "sourceHash": "7b63697f6dc7",
+      "updatedAt": "2026-08-17T18:36:18.434Z"
+    },
+    "ws.voice.allow": {
+      "text": "माइक्रोफ़ोन की अनुमति दें और बोलें",
+      "sourceHash": "f1132cb60ca8",
+      "updatedAt": "2026-08-17T18:36:18.434Z"
+    },
+    "ws.voice.startSpeaking": {
+      "text": "शुरू करें बोलना — यहाँ आपके शब्द जीवंत रूप में दिखाई देंगे।",
+      "sourceHash": "99cd968419fe",
+      "updatedAt": "2026-08-17T18:36:24.748Z"
+    },
+    "ws.voice.tapThenSpeak": {
+      "text": "माइक पर टैप करें, फिर बोलें — यहाँ शब्द जीवंत रूप में दिखाई देंगे।",
+      "sourceHash": "32cbf9c484b9",
+      "updatedAt": "2026-08-17T18:36:24.748Z"
+    },
+    "ws.voice.placeholder": {
+      "text": "आपको किस रणनीतिक निर्णय के लिए प्रमाण-आधारित निर्णय की आवश्यकता है?",
+      "sourceHash": "cd88d0acf018",
+      "updatedAt": "2026-08-17T18:36:24.748Z"
+    },
+    "ws.voice.blockedToast": {
+      "text": "माइक्रोफ़ोन एक्सेस अवरुद्ध था। साइट के लिए माइक्रोफ़ोन अनुमति दें, फिर पुनः प्रयास करें।",
+      "sourceHash": "42117e1fcf00",
+      "updatedAt": "2026-08-17T18:36:24.748Z"
+    },
+    "ws.voice.unavailable": {
+      "text": "इस ब्राउज़र में वॉयस डिक्टेशन उपलब्ध नहीं है — इसके बजाय टाइप करें।",
+      "sourceHash": "4497fd5a6538",
+      "updatedAt": "2026-08-17T18:36:24.748Z"
+    },
+    "ws.voice.needsHttps": {
+      "text": "वॉयस के लिए HTTPS की आवश्यकता है (या localhost)। सुरक्षित साइट URL खोलें।",
+      "sourceHash": "b3b6c9c79cc8",
+      "updatedAt": "2026-08-17T18:36:24.748Z"
+    },
+    "ws.voice.settingsBlocked": {
+      "text": "माइक्रोफ़ोन ब्राउज़र सेटिंग्स में अवरुद्ध है। लॉक आइकॉन पर क्लिक करें → साइट सेटिंग्स → माइक्रोफ़ोन → अनुमति दें।",
+      "sourceHash": "1b6c12cfa138",
+      "updatedAt": "2026-08-17T18:36:24.748Z"
+    },
+    "ws.pulse.title": {
+      "text": "वर्कस्पेस पल्स",
+      "sourceHash": "0d2a193b046d",
+      "updatedAt": "2026-08-17T18:36:24.748Z"
+    },
+    "ws.pulse.completedAgents": {
+      "text": "पूरा किया गया एजेंट",
+      "sourceHash": "8b06c1de3eb3",
+      "updatedAt": "2026-08-17T18:36:27.200Z"
+    },
+    "ws.pulse.awaitingRun": {
+      "text": "रन का इंतजार",
+      "sourceHash": "314aa3b51bbd",
+      "updatedAt": "2026-08-17T18:36:27.200Z"
+    },
+    "ws.pulse.onProject": {
+      "text": "परियोजना पर",
+      "sourceHash": "8d6e72e7313f",
+      "updatedAt": "2026-08-17T18:36:27.200Z"
+    },
+    "ws.pulse.noSpend": {
+      "text": "अभी तक कोई खर्च नहीं",
+      "sourceHash": "18ad8a4907a5",
+      "updatedAt": "2026-08-17T18:36:27.200Z"
+    },
+    "ws.pulse.metric.stages": {
+      "text": "चरण",
+      "sourceHash": "c1d33ad534e8",
+      "updatedAt": "2026-08-17T18:36:27.200Z"
+    },
+    "ws.pulse.metric.progress": {
+      "text": "प्रगति",
+      "sourceHash": "1b90271d66cf",
+      "updatedAt": "2026-08-17T18:36:27.200Z"
+    },
+    "ws.pulse.metric.tokens": {
+      "text": "टोकन",
+      "sourceHash": "c38c6c1f3a27",
+      "updatedAt": "2026-08-17T18:36:27.200Z"
+    },
+    "ws.pulse.onAgent": {
+      "text": "एजेंट कार्ड पर लाइव",
+      "sourceHash": "9e9662365193",
+      "updatedAt": "2026-08-17T18:36:27.200Z"
+    },
+    "ws.pulse.onAgentBody": {
+      "text": "चरण, प्रगति, दस्तावेज़, और व्यय अब एजेंट कार्ड पर कार्यप्रवाह के साथ बैठते हैं।",
+      "sourceHash": "0b1ec9b2b478",
+      "updatedAt": "2026-08-17T18:36:29.428Z"
+    },
+    "ws.pipeline.doctrine": {
+      "text": "डॉक्ट्रिन कार्यप्रवाह v0.2",
+      "sourceHash": "aa4272292b41",
+      "updatedAt": "2026-08-17T18:36:29.428Z"
+    },
+    "ws.pipeline.demo": {
+      "text": "एजेंट कार्यप्रवाह (डेमो)",
+      "sourceHash": "f8b8b59087a6",
+      "updatedAt": "2026-08-17T18:36:29.428Z"
+    },
+    "ws.pipeline.ready": {
+      "text": "जब आप तैयार हों",
+      "sourceHash": "aec1322315e6",
+      "updatedAt": "2026-08-17T18:36:29.428Z"
+    },
+    "ws.tour.replay": {
+      "text": "कार्यप्रवाह दौरा दोहराएँ",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T18:36:29.428Z"
+    },
+    "ws.tour.tutorial": {
+      "text": "ट्यूटोरियल",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T18:36:29.428Z"
+    },
+    "ws.account.avatarRules": {
+      "text": "JPEG, PNG, या WebP। अधिकतम आकार ऑपरेटर द्वारा निर्धारित किया गया है।",
+      "sourceHash": "1ffab77f5756",
+      "updatedAt": "2026-08-17T18:36:29.428Z"
+    },
+    "ws.account.passwordMin": {
+      "text": "नया पासवर्ड कम से कम 8 वर्णों का होना चाहिए।",
+      "sourceHash": "f36bc78e2e46",
+      "updatedAt": "2026-08-17T18:36:29.428Z"
+    },
+    "ws.account.signOutNote": {
+      "text": "इस ब्राउज़र सत्र को इस डिवाइस पर समाप्त करता है।",
+      "sourceHash": "798b10424390",
+      "updatedAt": "2026-08-17T18:36:31.166Z"
+    },
+    "ws.account.presence.available": {
+      "text": "उपलब्ध",
+      "sourceHash": "7c62a1424469",
+      "updatedAt": "2026-08-17T18:36:31.166Z"
+    },
+    "ws.account.presence.availableHint": {
+      "text": "समर्थन थ्रेड का दावा करने और संभालने के लिए तैयार",
+      "sourceHash": "f608d72be1eb",
+      "updatedAt": "2026-08-17T18:36:31.166Z"
+    },
+    "ws.account.presence.away": {
+      "text": "अनुपलब्ध",
+      "sourceHash": "4fae89296662",
+      "updatedAt": "2026-08-17T18:36:31.166Z"
+    },
+    "ws.account.presence.awayHint": {
+      "text": "समर्थन के लिए सीमित उपलब्धता",
+      "sourceHash": "a2ae2ea4ecd3",
+      "updatedAt": "2026-08-17T18:36:31.166Z"
+    },
+    "ws.account.presence.busy": {
+      "text": "व्यस्त",
+      "sourceHash": "592a9d1678c2",
+      "updatedAt": "2026-08-17T18:36:31.166Z"
+    },
+    "ws.account.presence.busyHint": {
+      "text": "वार्तालाप में — सीमित नए दावे",
+      "sourceHash": "0e2a07ad911e",
+      "updatedAt": "2026-08-17T18:36:31.166Z"
+    },
+    "ws.account.presence.offline": {
+      "text": "ऑफलाइन",
+      "sourceHash": "e01fa717bacc",
+      "updatedAt": "2026-08-17T18:36:31.166Z"
+    },
+    "ws.account.presence.offlineHint": {
+      "text": "नहीं दे रहा हूँ समर्थन अभी",
+      "sourceHash": "5d54853ddb06",
+      "updatedAt": "2026-08-17T18:36:34.352Z"
+    },
+    "ws.account.presence.lede": {
+      "text": "आपकी स्थिति समर्थन स्टाफ और कार्यक्षेत्र सहयोगियों के लिए दृश्यमान है।",
+      "sourceHash": "b9e64e6d941b",
+      "updatedAt": "2026-08-17T18:36:34.352Z"
+    },
+    "ws.usage.lede": {
+      "text": "टोकन, क्रेडिट, और आपके कार्यक्षेत्र अवधि के लिए अनुमानित OpenRouter लागत।",
+      "sourceHash": "98bfd9f1db1f",
+      "updatedAt": "2026-08-17T18:36:34.352Z"
+    },
+    "ws.monitors.kpi.paused": {
+      "text": "रुका हुआ",
+      "sourceHash": "c7dfb6f1d9c5",
+      "updatedAt": "2026-08-17T18:36:34.352Z"
+    },
+    "ws.monitors.new": {
+      "text": "नया मॉनिटर",
+      "sourceHash": "8bf83b0730ca",
+      "updatedAt": "2026-08-17T18:36:34.352Z"
+    },
+    "ws.topics.lede": {
+      "text": "एक जीवंत कैरिबियन संकेत को एक प्रोजेक्ट थिएटर में लोड करें, फिर एजेंट चलाएँ।",
+      "sourceHash": "889a75409945",
+      "updatedAt": "2026-08-17T18:36:34.352Z"
+    },
+    "ws.topics.starters": {
+      "text": "स्टार्टर्स",
+      "sourceHash": "7bfec88cf924",
+      "updatedAt": "2026-08-17T18:36:34.352Z"
+    },
+    "ws.topics.useHere": {
+      "text": "यहाँ उपयोग करें",
+      "sourceHash": "72c384afab37",
+      "updatedAt": "2026-08-17T18:36:34.352Z"
+    },
+    "ws.voice.listening": {
+      "text": "सुन रहे हैं…",
+      "sourceHash": "6c19a4761d7e",
+      "updatedAt": "2026-08-17T18:36:36.716Z"
+    },
+    "ws.voice.micBlockedShort": {
+      "text": "माइक्रोफ़ोन अवरुद्ध",
+      "sourceHash": "08f9ba43eef0",
+      "updatedAt": "2026-08-17T18:36:36.716Z"
+    },
+    "ws.voice.allowMicShort": {
+      "text": "माइक्रोफ़ोन की अनुमति दें",
+      "sourceHash": "43f5f6857d60",
+      "updatedAt": "2026-08-17T18:36:36.716Z"
+    },
+    "ws.voice.unavailableShort": {
+      "text": "वॉइस अनुपलब्ध",
+      "sourceHash": "1aeefb24cc0d",
+      "updatedAt": "2026-08-17T18:36:36.716Z"
+    },
+    "ws.voice.spoken": {
+      "text": "बोला गया",
+      "sourceHash": "77459e51c50c",
+      "updatedAt": "2026-08-17T18:36:36.716Z"
+    },
+    "ws.voice.deniedHint": {
+      "text": "माइक्रोफ़ोन की अनुमति दें, फिर पुनः प्रयास करें।",
+      "sourceHash": "5b0bc80e09a9",
+      "updatedAt": "2026-08-17T18:36:36.716Z"
+    },
+    "ws.project.analysisDepth": {
+      "text": "विश्लेषण की गहराई",
+      "sourceHash": "903ec812ae6d",
+      "updatedAt": "2026-08-17T18:36:36.716Z"
+    },
+    "ws.project.paidModels": {
+      "text": "इस रन के लिए भुगतान किए गए मॉडल की अनुमति दें",
+      "sourceHash": "06cd26ce7c61",
+      "updatedAt": "2026-08-17T18:36:36.716Z"
+    },
+    "ws.project.stuckHint": {
+      "text": "यदि एजेंट्स फंसे हुए लग रहे हैं, तो एक नया पुनरारंभ करें।",
+      "sourceHash": "02d66d9bd268",
+      "updatedAt": "2026-08-17T18:36:43.066Z"
+    },
+    "ws.project.resetLayout": {
+      "text": "लेआउट रीसेट करें",
+      "sourceHash": "5179087c02b4",
+      "updatedAt": "2026-08-17T18:36:43.066Z"
+    },
+    "ws.project.archive": {
+      "text": "आर्काइव",
+      "sourceHash": "2621c6fd51a5",
+      "updatedAt": "2026-08-17T18:36:43.066Z"
+    },
+    "ws.project.restore": {
+      "text": "पुनर्स्थापित करें",
+      "sourceHash": "3cbe6d6b9a8d",
+      "updatedAt": "2026-08-17T18:36:43.066Z"
+    },
+    "ws.project.briefRevealBody": {
+      "text": "निर्णय और साक्ष्य की समीक्षा के लिए विवरण खोलें।",
+      "sourceHash": "fc1c1408e907",
+      "updatedAt": "2026-08-17T18:36:43.066Z"
+    },
+    "ws.docs.fileTypes": {
+      "text": "PDF, Word, पाठ, और छवियाँ · 30-दिन की अवधि तक रखरखाव",
+      "sourceHash": "c766e5559e6a",
+      "updatedAt": "2026-08-17T18:36:43.066Z"
+    },
+    "ws.docs.deleteShort": {
+      "text": "हटाएं",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T18:36:43.066Z"
+    },
+    "ws.docs.downloadShort": {
+      "text": "डाउनलोड करें",
+      "sourceHash": "a479c9c34e87",
+      "updatedAt": "2026-08-17T18:36:43.066Z"
+    },
+    "op.section.production": {
+      "text": "उत्पादन",
+      "sourceHash": "df70fc7991d3",
+      "updatedAt": "2026-08-17T18:36:47.611Z"
+    },
+    "op.brand": {
+      "text": "Octivate Operator",
+      "sourceHash": "c083a340a671",
+      "updatedAt": "2026-08-17T18:36:47.611Z"
+    },
+    "op.title": {
+      "text": "ऑपरेटर कमांड केंद्र",
+      "sourceHash": "f1ae56b9207a",
+      "updatedAt": "2026-08-17T18:36:47.611Z"
+    },
+    "op.subtitle": {
+      "text": "लाइव पाइपलाइन मेट्रिक्स, ऑपरेशन, कंट्रोल प्लेन, कैटलॉग और मूल्य — विभाजित-स्क्रीन मॉड्यूल, वास्तविक API संख्या।",
+      "sourceHash": "cb9be5c7af4d",
+      "updatedAt": "2026-08-17T18:36:47.611Z"
+    },
+    "op.refresh": {
+      "text": "ताज़ा करें",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T18:36:47.611Z"
+    },
+    "op.tab.pulse": {
+      "text": "धड़कन",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T18:36:47.611Z"
+    },
+    "op.tab.pulse.hint": {
+      "text": "प्लेटफ़ॉर्म स्वास्थ्य और लाइव गतिविधि",
+      "sourceHash": "7158af122607",
+      "updatedAt": "2026-08-17T18:36:47.611Z"
+    },
+    "op.tab.operations": {
+      "text": "ऑपरेशन",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T18:36:47.611Z"
+    },
+    "op.tab.mail.hint": {
+      "text": "ऑपरेटर आउटबाउंड मेल और मेलिंग सूची",
+      "sourceHash": "89336a920d33",
+      "updatedAt": "2026-08-17T18:36:50.275Z"
+    },
+    "op.tab.users": {
+      "text": "उपयोगकर्ता",
+      "sourceHash": "57f2b181d0a5",
+      "updatedAt": "2026-08-17T18:36:50.275Z"
+    },
+    "op.tab.users.hint": {
+      "text": "मember accounts and access",
+      "sourceHash": "cdcf5d5c424f",
+      "updatedAt": "2026-08-17T18:36:50.275Z"
+    },
+    "op.tab.pricing": {
+      "text": "मूल्य निर्धारण",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T18:36:50.275Z"
+    },
+    "op.tab.pricing.hint": {
+      "text": "योजना और मूल्य निर्धारण कॉन्फ़िगरेशन",
+      "sourceHash": "c56f16d3a8b8",
+      "updatedAt": "2026-08-17T18:36:50.275Z"
+    },
+    "op.tab.merchants": {
+      "text": "व्यापारी",
+      "sourceHash": "37633677209d",
+      "updatedAt": "2026-08-17T18:36:50.275Z"
+    },
+    "op.tab.merchants.hint": {
+      "text": "चेकआउट बिलिंग प्रोफ़ाइल और खरीद प्रस्तुतियाँ",
+      "sourceHash": "f74180193a8c",
+      "updatedAt": "2026-08-17T18:36:50.275Z"
+    },
+    "op.tab.automation": {
+      "text": "स्वचालन",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T18:36:50.275Z"
+    },
+    "op.i18n.lede": {
+      "text": "पूर्वनिर्मित स्थायी स्थानीयकृतिकरण कैटलॉग via OpenRouter. पेज लोड कभी भी अनुवादक को नहीं बुलाते।",
+      "sourceHash": "f41683cce4eb",
+      "updatedAt": "2026-08-17T18:36:53.436Z"
+    },
+    "op.i18n.sync": {
+      "text": "अनुवाद सिंक करें",
+      "sourceHash": "0a40962f0248",
+      "updatedAt": "2026-08-17T18:36:53.436Z"
+    },
+    "op.i18n.syncing": {
+      "text": "सिंकिंग…",
+      "sourceHash": "221ca63005ea",
+      "updatedAt": "2026-08-17T18:36:53.436Z"
+    },
+    "op.i18n.refresh": {
+      "text": "स्थिति ताज़ा करें",
+      "sourceHash": "ade15a52e213",
+      "updatedAt": "2026-08-17T18:36:53.436Z"
+    },
+    "op.modules.liveKpis": {
+      "text": "लाइव KPIs",
+      "sourceHash": "864cca8d77e4",
+      "updatedAt": "2026-08-17T18:36:53.436Z"
+    },
+    "op.modules.liveKpisHint": {
+      "text": "एक मीट्रिक पर क्लिक करके इसकी कंसोल दृश्य खोलें",
+      "sourceHash": "d41d360e119d",
+      "updatedAt": "2026-08-17T18:36:53.436Z"
+    },
+    "op.modules.revisionQueue": {
+      "text": "संशोधन कतार",
+      "sourceHash": "0acf2dc1f773",
+      "updatedAt": "2026-08-17T18:36:53.436Z"
+    },
+    "op.modules.revisionHint": {
+      "text": "मूल खाते द्वारा जोड़े गए लंबित प्रलेख",
+      "sourceHash": "607fc44d0589",
+      "updatedAt": "2026-08-17T18:36:53.436Z"
+    },
+    "op.modules.noRevision": {
+      "text": "नहीं, कोई संशोधन प्रतीक्षा में है।",
+      "sourceHash": "d6dfa3886a0e",
+      "updatedAt": "2026-08-17T18:36:56.355Z"
+    },
+    "op.modules.sessionMix": {
+      "text": "सत्र मिश्रण",
+      "sourceHash": "341919f517c9",
+      "updatedAt": "2026-08-17T18:36:56.355Z"
+    },
+    "op.modules.sessionHint": {
+      "text": "एजेंट कार्य प्रवाह राज्यों के रूप में गतिविधि पट्टियाँ",
+      "sourceHash": "c3f1f3eadcd5",
+      "updatedAt": "2026-08-17T18:36:56.355Z"
+    },
+    "op.modules.costByModel": {
+      "text": "मॉडल द्वारा लागत",
+      "sourceHash": "d281caa03bcc",
+      "updatedAt": "2026-08-17T18:36:56.355Z"
+    },
+    "op.modules.costHint": {
+      "text": "गतिविधि पट्टियों के रूप में लागत ledger से खर्च",
+      "sourceHash": "09f4a8a24cb9",
+      "updatedAt": "2026-08-17T18:36:56.355Z"
+    },
+    "op.modules.tokensConcurrency": {
+      "text": "टोकन और समानांतरता",
+      "sourceHash": "fa26e388feb6",
+      "updatedAt": "2026-08-17T18:36:56.355Z"
+    },
+    "op.modules.tokenBudget": {
+      "text": "टोकन बजट और समानांतरता पट्टियाँ",
+      "sourceHash": "4e046c938df1",
+      "updatedAt": "2026-08-17T18:36:56.355Z"
+    },
+    "op.modules.liveSystem": {
+      "text": "लाइव सिस्टम स्थिति — पुनर्व्यवस्थित करने के लिए खींचें",
+      "sourceHash": "57e91bf745c5",
+      "updatedAt": "2026-08-17T18:36:56.355Z"
+    },
+    "op.modules.liveRegistry": {
+      "text": "Live registry — drag to rearrange",
+      "sourceHash": "544cb1f76259",
+      "updatedAt": "2026-08-17T18:36:58.403Z"
+    },
+    "op.modules.signalTicker": {
+      "text": "Signal ticker",
+      "sourceHash": "e0fa7496c8b3",
+      "updatedAt": "2026-08-17T18:36:58.403Z"
+    },
+    "op.modules.tickerHint": {
+      "text": "Live site marquee — compose, preview, queue",
+      "sourceHash": "53c2b36d9e58",
+      "updatedAt": "2026-08-17T18:36:58.403Z"
+    },
+    "op.modules.unassigned": {
+      "text": "Unassigned / seed",
+      "sourceHash": "c15e034fd891",
+      "updatedAt": "2026-08-17T18:36:58.403Z"
+    },
+    "op.pulse.liveConsole": {
+      "text": "Live console",
+      "sourceHash": "99254e92d752",
+      "updatedAt": "2026-08-17T18:36:58.403Z"
+    },
+    "op.pulse.reload": {
+      "text": "Reload all operator API panels",
+      "sourceHash": "d9fb2ba01854",
+      "updatedAt": "2026-08-17T18:36:58.403Z"
+    },
+    "op.pulse.periodCost": {
+      "text": "Period cost",
+      "sourceHash": "cb8a109f1f4b",
+      "updatedAt": "2026-08-17T18:36:58.403Z"
+    },
+    "op.pulse.periodCostHint": {
+      "text": "Ledger-committed period spend + in-flight pipeline (live)",
+      "sourceHash": "59084279a9c0",
+      "updatedAt": "2026-08-17T18:36:58.403Z"
+    },
+    "op.pulse.tokenBudget": {
+      "text": "टोकन बजट",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T18:38:22.302Z"
+    },
+    "op.pulse.tokenBudgetHint": {
+      "text": "लेखा बही से टोकन (सिंक्रनाइज़्ड) · लाइव सत्र जोड़े गए",
+      "sourceHash": "2769bcf48179",
+      "updatedAt": "2026-08-17T18:38:22.302Z"
+    },
+    "op.pulse.liveAwaiting": {
+      "text": "लाइव · कुंजी का इंतज़ार",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T18:38:22.302Z"
+    },
+    "op.pulse.openOpsSessions": {
+      "text": "खुले संचालन · एजेंट सत्र कतार",
+      "sourceHash": "c0f238a02a7d",
+      "updatedAt": "2026-08-17T18:38:22.302Z"
+    },
+    "op.pulse.openCatalog": {
+      "text": "खुला कैटलॉग · स्रोत रजिस्टर & टिकर",
+      "sourceHash": "a238e6ce5284",
+      "updatedAt": "2026-08-17T18:38:22.302Z"
+    },
+    "op.pulse.openPulseReviews": {
+      "text": "खुला पल्स · लंबित संक्षिप्त समीक्षाएं",
+      "sourceHash": "d2b934845eee",
+      "updatedAt": "2026-08-17T18:38:22.302Z"
+    },
+    "op.pulse.openOpsModeration": {
+      "text": "खुले संचालन · मॉडरेशन इन्वेंट्री",
+      "sourceHash": "ae2238c4a37e",
+      "updatedAt": "2026-08-17T18:38:22.302Z"
+    },
+    "op.pulse.loadFailed": {
+      "text": "ऑपरेटर कंसोल लोड करने में विफल",
+      "sourceHash": "52090fbc038a",
+      "updatedAt": "2026-08-17T18:38:22.302Z"
+    },
+    "op.pulse.autosaveFailed": {
+      "text": "ऑटोसेव विफल",
+      "sourceHash": "874eeff8b691",
+      "updatedAt": "2026-08-17T18:38:25.375Z"
+    },
+    "op.pulse.refreshed": {
+      "text": "कंसोल ताज़ा किया गया",
+      "sourceHash": "036e418d4072",
+      "updatedAt": "2026-08-17T18:38:25.375Z"
+    },
+    "op.pulse.refreshFailed": {
+      "text": "ताज़ा करने में विफल",
+      "sourceHash": "3d1f4a6759f4",
+      "updatedAt": "2026-08-17T18:38:25.375Z"
+    },
+    "op.pulse.clearReviews": {
+      "text": "सभी लंबित समीक्षाएँ हटाएँ?",
+      "sourceHash": "6fdeaaa15241",
+      "updatedAt": "2026-08-17T18:38:25.375Z"
+    },
+    "op.pulse.clearStale": {
+      "text": "पुरानी बीज समीक्षाएँ हटाएँ?",
+      "sourceHash": "df6187395702",
+      "updatedAt": "2026-08-17T18:38:25.375Z"
+    },
+    "op.pulse.clearReviewsHint": {
+      "text": "हर लंबित संक्षिप्त समीक्षा को अस्वीकारित चिह्नित करता है और मानव-समीक्षा रिकॉर्ड अपडेट करता है। ऑपरेटरों के लिए लाइव में प्रेषित करता है।",
+      "sourceHash": "07afb627b450",
+      "updatedAt": "2026-08-17T18:38:25.375Z"
+    },
+    "op.pulse.clearStaleHint": {
+      "text": "केवल उन लंबित समीक्षाओं को साफ़ करता है जिनका स्वामी खाता नहीं है (बीज/परित्यक्त)।",
+      "sourceHash": "63a7081f3fd6",
+      "updatedAt": "2026-08-17T18:38:25.375Z"
+    },
+    "op.pulse.clearAllReviews": {
+      "text": "सभी समीक्षाएँ हटाएँ",
+      "sourceHash": "8aaf3beff76b",
+      "updatedAt": "2026-08-17T18:38:25.375Z"
+    },
+    "op.pulse.clearStaleBtn": {
+      "text": "स्पष्ट करें",
+      "sourceHash": "c760db651884",
+      "updatedAt": "2026-08-17T18:38:29.211Z"
+    },
+    "op.pulse.nothingToClear": {
+      "text": "कुछ भी स्पष्ट करने के लिए नहीं",
+      "sourceHash": "ec219a9ca961",
+      "updatedAt": "2026-08-17T18:38:29.211Z"
+    },
+    "op.pulse.clearFailed": {
+      "text": "स्पष्ट करना विफल",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T18:38:29.211Z"
+    },
+    "op.pulse.resetLedger": {
+      "text": "लागत बही को रीसेट करें?",
+      "sourceHash": "34f8b9727821",
+      "updatedAt": "2026-08-17T18:38:29.211Z"
+    },
+    "op.pulse.resetLedgerHint": {
+      "text": "हर Supabase cost_ledger पंक्ति को हटाता है और अवधि उपयोग को शून्य करता है। चल रहे सत्र स्थानीय काउंटर बनाए रखते हैं जब तक वे फ्लश नहीं होते।",
+      "sourceHash": "18f1d6f36043",
+      "updatedAt": "2026-08-17T18:38:29.211Z"
+    },
+    "op.pulse.clearLedger": {
+      "text": "बही साफ करें",
+      "sourceHash": "fe2640defa59",
+      "updatedAt": "2026-08-17T18:38:29.211Z"
+    },
+    "op.pulse.ledgerClearFailed": {
+      "text": "बही साफ करना विफल",
+      "sourceHash": "df287f9b11ba",
+      "updatedAt": "2026-08-17T18:38:29.211Z"
+    },
+    "op.pulse.clearSessions": {
+      "text": "सभी सत्र स्पष्ट करें?",
+      "sourceHash": "17f0d287182d",
+      "updatedAt": "2026-08-17T18:38:29.211Z"
+    },
+    "op.pulse.clearSessionsHint": {
+      "text": "हर एजेंट सत्र को Supabase और स्मृति से हटाता है। लागत लेदरर को हटाता नहीं है (Clear ledger का उपयोग करें).",
+      "sourceHash": "295d68d41ceb",
+      "updatedAt": "2026-08-17T18:38:32.233Z"
+    },
+    "op.pulse.clearSessionsBtn": {
+      "text": "सत्र साफ़ करें",
+      "sourceHash": "5d82a79211cc",
+      "updatedAt": "2026-08-17T18:38:32.233Z"
+    },
+    "op.pulse.sessionClearFailed": {
+      "text": "सत्र साफ़ करना विफल",
+      "sourceHash": "2d27d861520a",
+      "updatedAt": "2026-08-17T18:38:32.233Z"
+    },
+    "op.pulse.deleteConfirm": {
+      "text": "चयनित रिकॉर्ड को स्थायी रूप से हटाता है।\n\nयह पुनर्प्राप्त नहीं किया जा सकता।",
+      "sourceHash": "0621d2ec0e04",
+      "updatedAt": "2026-08-17T18:38:32.233Z"
+    },
+    "op.pulse.deleteCancelled": {
+      "text": "हटाना रद्द कर दिया गया",
+      "sourceHash": "e10929fe22ea",
+      "updatedAt": "2026-08-17T18:38:32.233Z"
+    },
+    "op.pulse.deleteFailed": {
+      "text": "हटाना विफल",
+      "sourceHash": "64513b47d460",
+      "updatedAt": "2026-08-17T18:38:32.233Z"
+    },
+    "op.control.limitsTitle": {
+      "text": "प्लेटफ़ॉर्म सीमाएँ",
+      "sourceHash": "f81483fa3c52",
+      "updatedAt": "2026-08-17T18:38:32.233Z"
+    },
+    "op.control.limitsLede": {
+      "text": "लाइव पाइपलाइन के लिए गणना कैप, समानांतरता, अपलोड गार्डराइल, और मॉडल नीति।",
+      "sourceHash": "2173dff3c43f",
+      "updatedAt": "2026-08-17T18:38:32.233Z"
+    },
+    "op.control.concurrentAgents": {
+      "text": "समानांतर एजेंट",
+      "sourceHash": "66802c8476b0",
+      "updatedAt": "2026-08-17T18:38:37.855Z"
+    },
+    "op.control.concurrentHint": {
+      "text": "अधिकतम समानांतर डॉक्ट्रिन पाइपलाइन चलाना।",
+      "sourceHash": "5775a32b9fa6",
+      "updatedAt": "2026-08-17T18:38:37.855Z"
+    },
+    "op.control.uploadsPerProject": {
+      "text": "प्रोजेक्ट प्रति अपलोड",
+      "sourceHash": "f8fa8fd01015",
+      "updatedAt": "2026-08-17T18:38:37.855Z"
+    },
+    "op.control.uploadsHint": {
+      "text": "एकल प्रोजेक्ट से जुड़े स्रोत दस्तावेजों की अधिकतम संख्या।",
+      "sourceHash": "a9dabf17039d",
+      "updatedAt": "2026-08-17T18:38:37.855Z"
+    },
+    "op.control.maxFileSize": {
+      "text": "अधिकतम फ़ाइल आकार",
+      "sourceHash": "9568dad88fad",
+      "updatedAt": "2026-08-17T18:38:37.855Z"
+    },
+    "op.control.maxFileHint": {
+      "text": "प्रत्येक अपलोड किए गए दस्तावेज के लिए ऊपरी सीमा।",
+      "sourceHash": "abbd0701335a",
+      "updatedAt": "2026-08-17T18:38:37.855Z"
+    },
+    "op.control.docRetention": {
+      "text": "दस्तावेज़ प्रतिधारण",
+      "sourceHash": "a079e024e8b0",
+      "updatedAt": "2026-08-17T18:38:37.855Z"
+    },
+    "op.control.docRetentionHint": {
+      "text": "अपलोड के समाप्त होने और deletion के कतार में डालने तक के दिन। इस बदलाव से हर फ़ाइल के लिए expiry की पुनर्गणना होती है।",
+      "sourceHash": "cb4ebc4796b2",
+      "updatedAt": "2026-08-17T18:38:37.855Z"
+    },
+    "op.control.maxAvatar": {
+      "text": "अवतार का अधिकतम आकार",
+      "sourceHash": "e711d3b824bf",
+      "updatedAt": "2026-08-17T18:38:40.751Z"
+    },
+    "op.control.maxAvatarHint": {
+      "text": "JPEG / PNG / WebP प्रोफ़ाइल फ़ोटो। डिफ़ॉल्ट 2 MB; ऑपरेटर अधिकतम 10 MB।",
+      "sourceHash": "f5e78f1906f4",
+      "updatedAt": "2026-08-17T18:38:40.751Z"
+    },
+    "op.control.maxBio": {
+      "text": "बायो की अधिकतम लंबाई",
+      "sourceHash": "a0b891ea0ece",
+      "updatedAt": "2026-08-17T18:38:40.751Z"
+    },
+    "op.control.maxBioHint": {
+      "text": "BBCode प्रोफ़ाइल विवरण के लिए वर्ण सीमा।",
+      "sourceHash": "63b69d9c925e",
+      "updatedAt": "2026-08-17T18:38:40.751Z"
+    },
+    "op.control.autogenAccounts": {
+      "text": "स्वतः खाता बनाना",
+      "sourceHash": "ea2935b73e48",
+      "updatedAt": "2026-08-17T18:38:40.751Z"
+    },
+    "op.control.premiumModels": {
+      "text": "प्रीमियम मॉडल",
+      "sourceHash": "1db84bd8860a",
+      "updatedAt": "2026-08-17T18:38:40.751Z"
+    },
+    "op.control.premiumHint": {
+      "text": "जब सर्वर पर कॉन्फ़िगर किया गया हो, तो OpenRouter प्रीमियम मॉडल रूटिंग की अनुमति देना।",
+      "sourceHash": "636f47dd34dc",
+      "updatedAt": "2026-08-17T18:38:40.751Z"
+    },
+    "op.control.requireReview": {
+      "text": "मानव समीक्षा आवश्यक",
+      "sourceHash": "1a4321561031",
+      "updatedAt": "2026-08-17T18:38:40.751Z"
+    },
+    "op.operations.costLedger": {
+      "text": "लागत अभिलेख",
+      "sourceHash": "7af91996d5c5",
+      "updatedAt": "2026-08-17T18:38:44.221Z"
+    },
+    "op.operations.inventoryHint": {
+      "text": "इन्वेंटरी और नीति कार्रवाई · पुनर्व्यवस्थित करने के लिए खींचें",
+      "sourceHash": "5012fe617ecf",
+      "updatedAt": "2026-08-17T18:38:44.221Z"
+    },
+    "op.operations.ledgerSummary": {
+      "text": "अभिलेख सारांश",
+      "sourceHash": "7cd55cb04aa7",
+      "updatedAt": "2026-08-17T18:38:44.221Z"
+    },
+    "op.operations.noCost": {
+      "text": "अभी तक कोई लागत प्रविष्टि नहीं",
+      "sourceHash": "29e480e85bea",
+      "updatedAt": "2026-08-17T18:38:44.221Z"
+    },
+    "op.operations.noCostHint": {
+      "text": "जब लाइव सत्र टोकन का उपभोग करते हैं तो पंक्तियाँ दिखाई देती हैं।",
+      "sourceHash": "9dd655498920",
+      "updatedAt": "2026-08-17T18:38:44.221Z"
+    },
+    "op.operations.noSessions": {
+      "text": "नहीं कोई एजेंट सत्र",
+      "sourceHash": "883776c0ff81",
+      "updatedAt": "2026-08-17T18:38:44.221Z"
+    },
+    "op.operations.noSessionsHint": {
+      "text": "एक प्रश्न एक परियोजना से चलाएँ ताकि इस लॉग को populate किया जा सके।",
+      "sourceHash": "ec6e46dbc36f",
+      "updatedAt": "2026-08-17T18:38:44.221Z"
+    },
+    "op.operations.openProjects": {
+      "text": "खुली परियोजनाएँ",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T18:38:44.221Z"
+    },
+    "op.operations.wipeLedger": {
+      "text": "वाइप सुपाबेस cost_ledger + अवधि उपयोग (लाइव सभी ऑपरेटरों के लिए)",
+      "sourceHash": "8669767d1260",
+      "updatedAt": "2026-08-17T18:38:47.055Z"
+    },
+    "op.operations.deleteLedgerRow": {
+      "text": "लेजर पंक्ति हटाएं",
+      "sourceHash": "d333e4b0a85f",
+      "updatedAt": "2026-08-17T18:38:47.055Z"
+    },
+    "op.operations.deleteAllSessions": {
+      "text": "सभी एजेंट सत्र सुपाबेस + स्मृति से हटाएं",
+      "sourceHash": "21052d012d71",
+      "updatedAt": "2026-08-17T18:38:47.055Z"
+    },
+    "op.operations.deleteSession": {
+      "text": "सत्र हटाएं",
+      "sourceHash": "ca5747020239",
+      "updatedAt": "2026-08-17T18:38:47.055Z"
+    },
+    "op.catalog.sourceRegistry": {
+      "text": "स्रोत रजिस्ट्री",
+      "sourceHash": "941b018c3188",
+      "updatedAt": "2026-08-17T18:38:47.055Z"
+    },
+    "op.catalog.sourceLede": {
+      "text": "एक कार्ड पर क्लिक करके टैग पुनः नाम दें और URLS अपडेट करें — संपादन ऑटो-सेव करता है; कार्ड से किसी भी CSV पंक्ति हटाएं।",
+      "sourceHash": "7c8b080747dc",
+      "updatedAt": "2026-08-17T18:38:47.055Z"
+    },
+    "op.catalog.registrySummary": {
+      "text": "रजिस्ट्री सारांश",
+      "sourceHash": "6011e3289ff5",
+      "updatedAt": "2026-08-17T18:38:47.055Z"
+    },
+    "op.catalog.search": {
+      "text": "नाम, देश, टैग…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T18:38:47.055Z"
+    },
+    "op.support.syncOn": {
+      "text": "इनबॉक्स सिंक हमेशा चालू रहता है",
+      "sourceHash": "5e01620f8932",
+      "updatedAt": "2026-08-17T18:38:54.435Z"
+    },
+    "op.support.reconnecting": {
+      "text": "पुनः कनेक्ट हो रहा है — स्ट्रीम के पुनः प्राप्त होने तक पोलिंग कर रहा है",
+      "sourceHash": "5929cb0aabbf",
+      "updatedAt": "2026-08-17T18:38:54.435Z"
+    },
+    "op.support.sync": {
+      "text": "सिंक कर रहा है…",
+      "sourceHash": "9688745a86c2",
+      "updatedAt": "2026-08-17T18:38:54.435Z"
+    },
+    "op.support.archiveAll": {
+      "text": "सक्रिय इनबॉक्स से सभी हल किए गए वार्तालापों को अभिलेखागार में रखें",
+      "sourceHash": "c2f8e41d55c6",
+      "updatedAt": "2026-08-17T18:38:54.435Z"
+    },
+    "op.support.archiveOne": {
+      "text": "इस हल किए गए वार्तालाप को इनबॉक्स से अभिलेखागार में रखें",
+      "sourceHash": "0a34b2f4d62b",
+      "updatedAt": "2026-08-17T18:38:54.435Z"
+    },
+    "op.support.assignYou": {
+      "text": "इस थ्रेड को अपने स्टाफ प्रोफ़ाइल में असाइन करें",
+      "sourceHash": "1885e2da5885",
+      "updatedAt": "2026-08-17T18:38:54.435Z"
+    },
+    "op.support.markAwaiting": {
+      "text": "ग्राहक उत्तर की प्रतीक्षा में चिह्नित करें",
+      "sourceHash": "926c16ea9910",
+      "updatedAt": "2026-08-17T18:38:54.435Z"
+    },
+    "op.support.resolve": {
+      "text": "इस वार्तालाप को हल करें और बंद करें",
+      "sourceHash": "3c9880945867",
+      "updatedAt": "2026-08-17T18:38:54.435Z"
+    },
+    "support.chat.attachHint": {
+      "text": "छवि संलग्न करें (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T18:41:15.562Z"
+    },
+    "support.chat.newReply": {
+      "text": "नया समर्थन उत्तर",
+      "sourceHash": "c8aad4b8dbca",
+      "updatedAt": "2026-08-17T18:41:15.562Z"
+    },
+    "support.chat.ready": {
+      "text": "नई बातचीत तैयार है — संदेश भेजकर शुरू करें",
+      "sourceHash": "f8df923263c6",
+      "updatedAt": "2026-08-17T18:41:15.562Z"
+    },
+    "support.chat.signInRequired": {
+      "text": "साइन इन आवश्यक है समर्थन से संपर्क करने के लिए",
+      "sourceHash": "4b61a483a26f",
+      "updatedAt": "2026-08-17T18:41:15.562Z"
+    },
+    "support.chat.resolvedContinue": {
+      "text": "यह बातचीत हल कर दी गई है। एक नई बातचीत शुरू करके जारी रखें।",
+      "sourceHash": "99fbd68dd31b",
+      "updatedAt": "2026-08-17T18:41:15.562Z"
+    },
+    "support.chat.sendFailed": {
+      "text": "नहीं भेज सका",
+      "sourceHash": "8b34d37599a8",
+      "updatedAt": "2026-08-17T18:41:15.562Z"
+    },
+    "support.chat.invalidImage": {
+      "text": "अमान्य छवि",
+      "sourceHash": "681014468ba7",
+      "updatedAt": "2026-08-17T18:41:15.562Z"
+    },
+    "support.chat.topic.access": {
+      "text": "प्रवेश",
+      "sourceHash": "2f81a22de0af",
+      "updatedAt": "2026-08-17T18:41:15.562Z"
+    },
+    "support.chat.topic.briefs": {
+      "text": "ब्रीफ",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T18:41:17.833Z"
+    },
+    "support.chat.topic.projects": {
+      "text": "परियोजनाएँ",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T18:41:17.833Z"
+    },
+    "support.chat.topic.plans": {
+      "text": "योजनाएँ",
+      "sourceHash": "cf2e5f26fef8",
+      "updatedAt": "2026-08-17T18:41:17.833Z"
+    },
+    "support.chat.canned.access": {
+      "text": "मैं अपने कार्यक्षेत्र में साइन-इन करने या पहुँच प्राप्त करने में सहायता चाहता हूँ।",
+      "sourceHash": "6921c24ea727",
+      "updatedAt": "2026-08-17T18:41:17.833Z"
+    },
+    "support.chat.canned.briefs": {
+      "text": "मैं एक निर्णय ब्रीफ की समीक्षा करने या निर्यात करने में मदद चाहता हूँ।",
+      "sourceHash": "0ee61394f841",
+      "updatedAt": "2026-08-17T18:41:17.833Z"
+    },
+    "support.chat.canned.projects": {
+      "text": "मैं एक परियोजना को कॉन्फ़िगर करने या कार्यफ़्लो चलाने के बारे में एक प्रश्न है।",
+      "sourceHash": "e400b004fbe8",
+      "updatedAt": "2026-08-17T18:41:17.833Z"
+    },
+    "support.chat.canned.plans": {
+      "text": "मैं अपनी संगठन के लिए योजनाओं और टीम पहुँच के बारे में मार्गदर्शन चाहता हूँ।",
+      "sourceHash": "399700ef9ac7",
+      "updatedAt": "2026-08-17T18:41:17.833Z"
+    },
+    "support.page.needWorkspace": {
+      "text": "कामर्शेस्पेस चाहिए? Octivate खोलें या CENSII पर जाएँ।",
+      "sourceHash": "dc42eadddae5",
+      "updatedAt": "2026-08-17T18:41:17.833Z"
+    },
+    "support.page.createAccount": {
+      "text": "खाता बनाएँ",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T18:41:19.667Z"
+    },
+    "support.page.openWorkspace": {
+      "text": "वर्कस्पेस खोलें",
+      "sourceHash": "8b23311bbdc0",
+      "updatedAt": "2026-08-17T18:41:19.667Z"
+    },
+    "support.page.builtBy": {
+      "text": "CENSII द्वारा बनाया गया",
+      "sourceHash": "890270900ae3",
+      "updatedAt": "2026-08-17T18:41:19.667Z"
+    },
+    "support.page.role.founder": {
+      "text": "संस्थापक · उत्पाद एवं डोमेन",
+      "sourceHash": "4853fc7f81bc",
+      "updatedAt": "2026-08-17T18:41:19.667Z"
+    },
+    "support.page.role.founderDesc": {
+      "text": "उत्पाद दृष्टिकोण, कैरेबियन उपयोग केस, और CENSII निर्णय पद्धति।",
+      "sourceHash": "90cd07f23dbe",
+      "updatedAt": "2026-08-17T18:41:19.667Z"
+    },
+    "support.page.role.ai": {
+      "text": "AI कार्य प्रवाह एवं मान्यता",
+      "sourceHash": "12d701f87e36",
+      "updatedAt": "2026-08-17T18:41:19.667Z"
+    },
+    "support.page.role.aiDesc": {
+      "text": "एजेंट कार्य प्रवाह डिज़ाइन, साक्ष्य जांच, और डेमो मूल्यांकन।",
+      "sourceHash": "23e12290635b",
+      "updatedAt": "2026-08-17T18:41:19.667Z"
+    },
+    "support.page.role.tech": {
+      "text": "तकनीकी वास्तुकला",
+      "sourceHash": "d6004963fc9a",
+      "updatedAt": "2026-08-17T18:41:19.667Z"
+    },
+    "support.page.role.techDesc": {
+      "text": "MVP वास्तुकला, प्रोटोटाइप डिलीवरी, और प्लेटफ़ॉर्म कार्यान्वयन।",
+      "sourceHash": "20179b862557",
+      "updatedAt": "2026-08-17T18:41:21.527Z"
+    },
+    "support.chat.welcome": {
+      "text": "नमस्ते — आप Octivate खाता समर्थन से जुड़े हुए हैं। एक विषय चुनें या एक औपचारिक संदेश लिखें।",
+      "sourceHash": "dbdb8c3ff845",
+      "updatedAt": "2026-08-17T18:41:21.527Z"
+    },
+    "support.chat.speakingWith": {
+      "text": "बात कर रहे हैं",
+      "sourceHash": "1365c04cc97e",
+      "updatedAt": "2026-08-17T18:41:21.527Z"
+    },
+    "support.chat.startNew": {
+      "text": "नई बातचीत शुरू करें",
+      "sourceHash": "bf79f47d3ac6",
+      "updatedAt": "2026-08-17T18:41:21.527Z"
+    },
+    "support.chat.you": {
+      "text": "आप",
+      "sourceHash": "905cb326c779",
+      "updatedAt": "2026-08-17T18:41:21.527Z"
+    },
+    "support.chat.octivate": {
+      "text": "Octivate",
+      "sourceHash": "5076ec0702e6",
+      "updatedAt": "2026-08-17T18:41:21.527Z"
+    },
+    "support.chat.resolvedBody": {
+      "text": "यह धागा बंद है। यदि आपको अभी भी मदद चाहिए तो एक नई बातचीत शुरू करें।",
+      "sourceHash": "04f13ea5232b",
+      "updatedAt": "2026-08-17T18:41:21.527Z"
+    },
+    "onboard.ui.workspaceTour": {
+      "text": "वर्कस्पेस टूर",
+      "sourceHash": "9edf55888973",
+      "updatedAt": "2026-08-17T18:41:21.527Z"
+    },
+    "onboard.ui.operatorTour": {
+      "text": "ऑपरेटर टूर",
+      "sourceHash": "1538c47330f3",
+      "updatedAt": "2026-08-17T18:42:33.561Z"
+    },
+    "onboard.ui.closeTour": {
+      "text": "टूर बंद करें",
+      "sourceHash": "1aca7dc4d76a",
+      "updatedAt": "2026-08-17T18:42:33.561Z"
+    },
+    "onboard.ui.skip": {
+      "text": "टूर स्किप करें",
+      "sourceHash": "57bc79e3c907",
+      "updatedAt": "2026-08-17T18:42:33.561Z"
+    },
+    "onboard.ui.back": {
+      "text": "वापस",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T18:42:33.561Z"
+    },
+    "onboard.ui.next": {
+      "text": "अगला",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T18:42:33.561Z"
+    },
+    "onboard.ui.getStarted": {
+      "text": "शुरू करें",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T18:42:33.561Z"
+    },
+    "onboard.ui.stepOf": {
+      "text": "चरण {n} of {total}",
+      "sourceHash": "78cee4b898d5",
+      "updatedAt": "2026-08-17T18:42:33.561Z"
+    },
+    "onboard.ui.tutorial": {
+      "text": "ट्यूटोरियल",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T18:42:33.561Z"
+    },
+    "onboard.ui.openTutorial": {
+      "text": "खुला कार्यक्षेत्र ट्यूटोरियल",
+      "sourceHash": "e663ca7b5a5b",
+      "updatedAt": "2026-08-17T18:42:36.608Z"
+    },
+    "onboard.ui.replayWorkspace": {
+      "text": "कार्यक्षेत्र दौरा दोहराएँ",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T18:42:36.608Z"
+    },
+    "onboard.ui.replayOperator": {
+      "text": "ऑपरेटर दौरा दोहराएँ",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T18:42:36.608Z"
+    },
+    "onboard.ws.1.kicker": {
+      "text": "चरण 1 · अवलोकन",
+      "sourceHash": "9a4fd5299ca7",
+      "updatedAt": "2026-08-17T18:42:36.608Z"
+    },
+    "onboard.ws.1.title": {
+      "text": "अपने",
+      "sourceHash": "211f5f534912",
+      "updatedAt": "2026-08-17T18:42:36.608Z"
+    },
+    "onboard.ws.1.accent": {
+      "text": "कार्यालय घर",
+      "sourceHash": "a471f82221dc",
+      "updatedAt": "2026-08-17T18:42:36.608Z"
+    },
+    "onboard.ws.1.tagline": {
+      "text": "एक जगह पर ब्रीफ, परियोजना, कवरेज, और उपयोग।",
+      "sourceHash": "b68671724729",
+      "updatedAt": "2026-08-17T18:42:36.608Z"
+    },
+    "onboard.ws.1.desc": {
+      "text": "अवलोकन कैरिबियन निर्णय कार्य का घर है। साइडबार का उपयोग करके Projects, Briefs, Monitors, और live Support के बीच 이동 करें — साथ ही भूगोलिक संदर्भ के लिए Theatre coverage map।",
+      "sourceHash": "4f772aad2485",
+      "updatedAt": "2026-08-17T18:42:36.608Z"
+    },
+    "onboard.ws.1.b1.lead": {
+      "text": "साइडबार",
+      "sourceHash": "f5171c931c5c",
+      "updatedAt": "2026-08-17T18:42:40.662Z"
+    },
+    "onboard.ws.1.b1": {
+      "text": "Overview, Projects, Briefs, and Monitors पर कूदता है",
+      "sourceHash": "09c2c0b6bc3d",
+      "updatedAt": "2026-08-17T18:42:40.662Z"
+    },
+    "onboard.ws.1.b2.lead": {
+      "text": "पूछें",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T18:42:40.662Z"
+    },
+    "onboard.ws.1.b2": {
+      "text": "एक क्लिक में प्रोजेक्ट थिएटर खोलता है",
+      "sourceHash": "c1d04d6cd14c",
+      "updatedAt": "2026-08-17T18:42:40.662Z"
+    },
+    "onboard.ws.1.b3.lead": {
+      "text": "पुनर्प्राप्ति",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T18:42:40.662Z"
+    },
+    "onboard.ws.1.b3": {
+      "text": "कभी भी Workspace Tutorial से इस टूर को पुनः चलाएँ",
+      "sourceHash": "c80024feee50",
+      "updatedAt": "2026-08-17T18:42:40.662Z"
+    },
+    "onboard.ws.2.kicker": {
+      "text": "चरण 2 · थिएटर कवरेज",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T18:42:40.662Z"
+    },
+    "onboard.ws.2.title": {
+      "text": "देखें",
+      "sourceHash": "acc2c52c24a5",
+      "updatedAt": "2026-08-17T18:42:40.662Z"
+    },
+    "onboard.ws.2.accent": {
+      "text": "थिएटर कवरेज मैप",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T18:44:52.432Z"
+    },
+    "onboard.ws.2.tagline": {
+      "text": "ओवरव्यू पर जीवंत कैरेबियाई प्रोजेक्ट भूगोल।",
+      "sourceHash": "50820f6be866",
+      "updatedAt": "2026-08-17T18:44:52.432Z"
+    },
+    "onboard.ws.2.desc": {
+      "text": "थिएटर कवरेज मैप ओवरव्यू पर बैठता है। हॉटस्पॉट्स बताते हैं कि परियोजनाएं कहाँ हैं; होवर करें काउंट्स के लिए, एक देश क्लिक करें प्रोजेक्ट सूची खोलने के लिए, और लाइव / अपडेटिंग का उपयोग करें जब workspace रिफ्रेश होता है।",
+      "sourceHash": "f3d174ce0faa",
+      "updatedAt": "2026-08-17T18:44:52.432Z"
+    },
+    "onboard.ws.2.b1.lead": {
+      "text": "हॉटस्पॉट्स",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T18:44:52.432Z"
+    },
+    "onboard.ws.2.b1": {
+      "text": "क्षेत्राधिकारों द्वारा परियोजना की संख्या के अनुसार आकार",
+      "sourceHash": "31d40c2d9d01",
+      "updatedAt": "2026-08-17T18:44:52.432Z"
+    },
+    "onboard.ws.2.b2.lead": {
+      "text": "क्लिक",
+      "sourceHash": "79cbc5eb672a",
+      "updatedAt": "2026-08-17T18:44:52.432Z"
+    },
+    "onboard.ws.2.b2": {
+      "text": "उस देश के लिए एक मॉडल खुलता है।",
+      "sourceHash": "88d6ba3584eb",
+      "updatedAt": "2026-08-17T18:44:52.432Z"
+    },
+    "onboard.ws.2.b3.lead": {
+      "text": "लाइव",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T18:44:52.432Z"
+    },
+    "onboard.ws.2.b3": {
+      "text": "पुल्स जब कवरेज डेटा रिफ्रेश होता है",
+      "sourceHash": "dbb22d3bffab",
+      "updatedAt": "2026-08-17T18:44:56.570Z"
+    },
+    "onboard.ws.3.kicker": {
+      "text": "चरण 3 · प्रोजेक्ट्स",
+      "sourceHash": "df1977d42ab9",
+      "updatedAt": "2026-08-17T18:44:56.570Z"
+    },
+    "onboard.ws.3.title": {
+      "text": "एक बनाएं",
+      "sourceHash": "7d9043bfad91",
+      "updatedAt": "2026-08-17T18:44:56.570Z"
+    },
+    "onboard.ws.3.accent": {
+      "text": "निर्णय थिएटर",
+      "sourceHash": "f45ac24f2d52",
+      "updatedAt": "2026-08-17T18:44:56.570Z"
+    },
+    "onboard.ws.3.tagline": {
+      "text": "एक प्रोजेक्ट = एक रणनीतिक धागा।",
+      "sourceHash": "f3a2465015c7",
+      "updatedAt": "2026-08-17T18:44:56.570Z"
+    },
+    "onboard.ws.3.desc": {
+      "text": "प्रोजेक्ट्स खोलें और एक थिएटर शुरू करें देश, क्षेत्र और एक प्रश्न के साथ। प्रॉपरायटरी संदर्भ होने पर एजेंट्स चलाने से पहले दस्तावेज़ अपलोड करें।",
+      "sourceHash": "4997ef5ee5aa",
+      "updatedAt": "2026-08-17T18:44:56.570Z"
+    },
+    "onboard.ws.3.b1.lead": {
+      "text": "नया प्रोजेक्ट",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T18:44:56.570Z"
+    },
+    "onboard.ws.3.b1": {
+      "text": "क्रिएट फ्लो खोलता है",
+      "sourceHash": "aca548b6f759",
+      "updatedAt": "2026-08-17T18:44:56.570Z"
+    },
+    "onboard.ws.3.b2.lead": {
+      "text": "प्रत्येक परियोजना",
+      "sourceHash": "487ba03c31ee",
+      "updatedAt": "2026-08-17T18:47:30.916Z"
+    },
+    "onboard.ws.3.b2": {
+      "text": "अपना प्रश्न, दस्तावेज़ और संचालन करता है",
+      "sourceHash": "483a4a50f88f",
+      "updatedAt": "2026-08-17T18:47:30.916Z"
+    },
+    "onboard.ws.3.b3.lead": {
+      "text": "साइन-इन अतिथि",
+      "sourceHash": "fefaa17e3676",
+      "updatedAt": "2026-08-17T18:47:30.916Z"
+    },
+    "onboard.ws.3.b3": {
+      "text": "डेमो एक्सेस पर स्वतंत्र रूप से कार्यक्षेत्र का अन्वेषण कर सकते हैं",
+      "sourceHash": "275de29aaeb9",
+      "updatedAt": "2026-08-17T18:47:30.916Z"
+    },
+    "onboard.ws.4.kicker": {
+      "text": "चरण 4 · चलाएं",
+      "sourceHash": "44733d3f28a9",
+      "updatedAt": "2026-08-17T18:47:30.916Z"
+    },
+    "onboard.ws.4.title": {
+      "text": "परियोजना खोलें,",
+      "sourceHash": "c18dad9153ff",
+      "updatedAt": "2026-08-17T18:47:30.916Z"
+    },
+    "onboard.ws.4.accent": {
+      "text": "फिर चलाएं",
+      "sourceHash": "1c015e3e76ad",
+      "updatedAt": "2026-08-17T18:47:30.916Z"
+    },
+    "onboard.ws.4.tagline": {
+      "text": "सबसे पहले एक थिएटर शुरू करें — फिर पूछें और चलाएं.",
+      "sourceHash": "708f17ba529c",
+      "updatedAt": "2026-08-17T18:47:30.916Z"
+    },
+    "onboard.ws.4.desc": {
+      "text": "यदि अभी तक आपके पास कोई प्रोजेक्ट न हो, तो नया प्रोजेक्ट शुरू करें। एक मौजूदा थिएटर में, एक रणनीतिक प्रश्न लिखें और Power–Systems–Narratives पाइपलाइन चलाएं।",
+      "sourceHash": "56e25027be02",
+      "updatedAt": "2026-08-17T18:50:44.261Z"
+    },
+    "onboard.ws.4.b1.lead": {
+      "text": "नया प्रोजेक्ट",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T18:50:44.261Z"
+    },
+    "onboard.ws.4.b1": {
+      "text": "इस टूर के लिए एक निर्णय थिएटर बनाता है",
+      "sourceHash": "0f82e9d50b72",
+      "updatedAt": "2026-08-17T18:50:44.261Z"
+    },
+    "onboard.ws.4.b2.lead": {
+      "text": "प्रश्न",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T18:50:44.261Z"
+    },
+    "onboard.ws.4.b2": {
+      "text": "शुरुआती विकल्प लोड करता है या अपना प्रश्न",
+      "sourceHash": "a120c1682683",
+      "updatedAt": "2026-08-17T18:50:44.261Z"
+    },
+    "onboard.ws.4.b3.lead": {
+      "text": "चलाएं",
+      "sourceHash": "b1b392607dea",
+      "updatedAt": "2026-08-17T18:50:44.261Z"
+    },
+    "onboard.ws.4.b3": {
+      "text": "लाइव OpenRouter पाइपलाइन शुरू करता है",
+      "sourceHash": "a4f5d7412be6",
+      "updatedAt": "2026-08-17T18:50:44.261Z"
+    },
+    "onboard.ws.5.kicker": {
+      "text": "स्टेप 5 · विवरण",
+      "sourceHash": "ab23c9919bc4",
+      "updatedAt": "2026-08-17T18:50:44.261Z"
+    },
+    "onboard.ws.5.title": {
+      "text": "खोलें",
+      "sourceHash": "2d7eeba9f46c",
+      "updatedAt": "2026-08-17T18:50:46.918Z"
+    },
+    "onboard.ws.5.accent": {
+      "text": "निर्णय सारांश",
+      "sourceHash": "9a4025f24b62",
+      "updatedAt": "2026-08-17T18:50:46.918Z"
+    },
+    "onboard.ws.5.tagline": {
+      "text": "सिफारिशें, प्रमाण, और अंतराल।",
+      "sourceHash": "6063763a4ffb",
+      "updatedAt": "2026-08-17T18:50:46.918Z"
+    },
+    "onboard.ws.5.desc": {
+      "text": "सफल कार्यवाही सारांश में बदल जाती है। सारांश खोलें ताकि निर्णय, प्रमाण, निगरानी योजनाओं की समीक्षा कर सकें और हितधारकों के साथ साझा करने योग्य पैकेज निर्यात कर सकें।",
+      "sourceHash": "f07d8f13ae30",
+      "updatedAt": "2026-08-17T18:50:46.918Z"
+    },
+    "onboard.ws.5.b1.lead": {
+      "text": "सारांश नेविगेशन",
+      "sourceHash": "e913003e38d3",
+      "updatedAt": "2026-08-17T18:50:46.918Z"
+    },
+    "onboard.ws.5.b1": {
+      "text": "हर पूर्ण निर्णय पैकेज सूचीबद्ध करता है",
+      "sourceHash": "bea89fd9ef53",
+      "updatedAt": "2026-08-17T18:50:46.918Z"
+    },
+    "onboard.ws.5.b2.lead": {
+      "text": "निर्यात",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T18:50:46.918Z"
+    },
+    "onboard.ws.5.b2": {
+      "text": "हितधारकों के लिए ब्रांडेड Word / PDF बनाता है",
+      "sourceHash": "c9bce8ccfa12",
+      "updatedAt": "2026-08-17T18:50:46.918Z"
+    },
+    "onboard.ws.5.b3.lead": {
+      "text": "नमूना संक्षिप्त",
+      "sourceHash": "24a56e96ac52",
+      "updatedAt": "2026-08-17T18:50:49.416Z"
+    },
+    "onboard.ws.5.b3": {
+      "text": "सार्वजनिक लैंडिंग पृष्ठ से भी जुड़ा है",
+      "sourceHash": "459724e94bb1",
+      "updatedAt": "2026-08-17T18:50:49.416Z"
+    },
+    "onboard.ws.6.kicker": {
+      "text": "चरण 6 · मॉनिटर",
+      "sourceHash": "d168aae1315a",
+      "updatedAt": "2026-08-17T18:50:49.416Z"
+    },
+    "onboard.ws.6.title": {
+      "text": "सिग्नल देखें",
+      "sourceHash": "1ac5be293e80",
+      "updatedAt": "2026-08-17T18:50:49.416Z"
+    },
+    "onboard.ws.6.accent": {
+      "text": "बीच के रन में",
+      "sourceHash": "785d2df244cb",
+      "updatedAt": "2026-08-17T18:50:49.416Z"
+    },
+    "onboard.ws.6.tagline": {
+      "text": "कीवर्ड और क्षेत्राधिकार निगरानी।",
+      "sourceHash": "55bdd583833b",
+      "updatedAt": "2026-08-17T18:50:49.416Z"
+    },
+    "onboard.ws.6.desc": {
+      "text": "निगरानी विषयों पर कैरिबियन अधिकार क्षेत्रों पर नज़र रखती है जबकि आप काम करते हैं। उन्हें निगरानी से बनाएं और अलर्ट की जांच करें बीच चक्र संक्षिप्त।",
+      "sourceHash": "11e264bb858e",
+      "updatedAt": "2026-08-17T18:50:49.416Z"
+    },
+    "onboard.ws.6.b1.lead": {
+      "text": "बनाएँ",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T18:50:49.416Z"
+    },
+    "onboard.ws.6.b1": {
+      "text": "एक नज़र Monitors टूलबार से",
+      "sourceHash": "0b2f9dadee88",
+      "updatedAt": "2026-08-17T18:50:50.962Z"
+    },
+    "onboard.ws.6.b2.lead": {
+      "text": "क्षेत्राधिकार",
+      "sourceHash": "f5c46b8a7a74",
+      "updatedAt": "2026-08-17T18:50:50.962Z"
+    },
+    "onboard.ws.6.b2": {
+      "text": "सार्वजनिक साइट पर कवरेज मार्की को प्रतिबिंबित करें",
+      "sourceHash": "d875a1715457",
+      "updatedAt": "2026-08-17T18:50:50.962Z"
+    },
+    "onboard.ws.6.b3.lead": {
+      "text": "यहाँ लौटें",
+      "sourceHash": "de5937ab71b9",
+      "updatedAt": "2026-08-17T18:50:50.962Z"
+    },
+    "onboard.ws.6.b3": {
+      "text": "जब आपको फिर से पूर्ण विश्लेषण चलाने की आवश्यकता हो",
+      "sourceHash": "30f05e6db135",
+      "updatedAt": "2026-08-17T18:50:50.962Z"
+    },
+    "onboard.ws.7.kicker": {
+      "text": "चरण 7 · अनुवाद",
+      "sourceHash": "97ff8d3a52eb",
+      "updatedAt": "2026-08-17T18:50:50.962Z"
+    },
+    "onboard.ws.7.title": {
+      "text": "स्विच",
+      "sourceHash": "3e44c920427e",
+      "updatedAt": "2026-08-17T18:50:50.962Z"
+    },
+    "onboard.ws.7.accent": {
+      "text": "किसी भी समय भाषा",
+      "sourceHash": "d29bfe062b1a",
+      "updatedAt": "2026-08-17T18:50:50.962Z"
+    },
+    "onboard.ws.7.tagline": {
+      "text": "Realtime catalogs from the site language control.",
+      "sourceHash": "cca5a8c696b4",
+      "updatedAt": "2026-08-17T18:50:52.710Z"
+    },
+    "onboard.ws.7.desc": {
+      "text": "Octivate uses permanent i18n catalogs — pick a locale from the public site language control and chrome updates immediately. No third-party page-translation widget.",
+      "sourceHash": "e047844bf1ae",
+      "updatedAt": "2026-08-17T18:50:52.710Z"
+    },
+    "onboard.ws.7.b1.lead": {
+      "text": "Languages",
+      "sourceHash": "db07be184479",
+      "updatedAt": "2026-08-17T18:50:52.710Z"
+    },
+    "onboard.ws.7.b1": {
+      "text": "cover Caribbean and global demo locales",
+      "sourceHash": "522d37e0e94c",
+      "updatedAt": "2026-08-17T18:50:52.710Z"
+    },
+    "onboard.ws.7.b2.lead": {
+      "text": "Catalogs",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T18:50:52.710Z"
+    },
+    "onboard.ws.7.b2": {
+      "text": "sync from OpenRouter and cache on the server",
+      "sourceHash": "106e3bc14187",
+      "updatedAt": "2026-08-17T18:50:52.710Z"
+    },
+    "onboard.ws.7.b3.lead": {
+      "text": "Public chrome",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T18:50:52.710Z"
+    },
+    "onboard.ws.7.b3": {
+      "text": "hosts the language picker on marketing pages",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T18:50:52.710Z"
+    },
+    "onboard.ws.8.kicker": {
+      "text": "Step 8 · Lighting",
+      "sourceHash": "a80faf25b3ce",
+      "updatedAt": "2026-08-17T19:00:53.665Z"
+    },
+    "onboard.ws.8.title": {
+      "text": "Set your",
+      "sourceHash": "277523aea813",
+      "updatedAt": "2026-08-17T19:00:53.665Z"
+    },
+    "onboard.ws.8.accent": {
+      "text": "lighting",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T19:00:53.665Z"
+    },
+    "onboard.ws.8.tagline": {
+      "text": "Light or dark — same product language.",
+      "sourceHash": "d9336b5e71e3",
+      "updatedAt": "2026-08-17T19:00:53.665Z"
+    },
+    "onboard.ws.8.desc": {
+      "text": "Lighting toggles light and dark themes across Overview, projects, and chrome. Use the sun / moon control on the public site navbar or footer — whichever keeps maps and briefs comfortable.",
+      "sourceHash": "b9b3db1a1087",
+      "updatedAt": "2026-08-17T19:00:53.665Z"
+    },
+    "onboard.ws.8.b1.lead": {
+      "text": "Toggle",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T19:00:53.665Z"
+    },
+    "onboard.ws.8.b1": {
+      "text": "switches sun / moon lighting instantly",
+      "sourceHash": "3731c411d0ff",
+      "updatedAt": "2026-08-17T19:00:53.665Z"
+    },
+    "onboard.ws.8.b2.lead": {
+      "text": "Maps",
+      "sourceHash": "80071cd75107",
+      "updatedAt": "2026-08-17T19:00:53.665Z"
+    },
+    "onboard.ws.8.b2": {
+      "text": "सक्रिय थीम के लिए टाइल्स का विपरीत",
+      "sourceHash": "52dd87360f0a",
+      "updatedAt": "2026-08-17T19:06:25.211Z"
+    },
+    "onboard.ws.8.b3.lead": {
+      "text": "प्राथमिकता",
+      "sourceHash": "97d9b2888847",
+      "updatedAt": "2026-08-17T19:06:25.211Z"
+    },
+    "onboard.ws.8.b3": {
+      "text": "ब्राउज़र सत्र के साथ बना रहता है",
+      "sourceHash": "e5feed566b0f",
+      "updatedAt": "2026-08-17T19:06:25.211Z"
+    },
+    "onboard.ws.9.kicker": {
+      "text": "स्टेप 9 · समर्थन अलर्ट",
+      "sourceHash": "9a34fc8570e3",
+      "updatedAt": "2026-08-17T19:06:25.211Z"
+    },
+    "onboard.ws.9.title": {
+      "text": "क्या मदद चाहिए?",
+      "sourceHash": "864a198ed64a",
+      "updatedAt": "2026-08-17T19:06:25.211Z"
+    },
+    "onboard.ws.9.accent": {
+      "text": "मदद + अलर्ट",
+      "sourceHash": "5de10bb7b38b",
+      "updatedAt": "2026-08-17T19:06:25.211Z"
+    },
+    "onboard.ws.9.tagline": {
+      "text": "लाइव सदस्य सहायता के साथ उत्तर अलर्ट.",
+      "sourceHash": "1be68997ca1c",
+      "updatedAt": "2026-08-17T19:06:25.211Z"
+    },
+    "onboard.ws.9.desc": {
+      "text": "वर्कस्पेस सदस्य तैरता हुआ मदद चैट — ऑपरेटर इनबॉक्स नहीं. जब कर्मचारी उत्तर, Octivate समर्थन अलर्ट उभार सकता है कि आप थ्रेड न चूकें. ऑपरेटर ग्राहक सहायता के बदले उत्तर देते हैं.",
+      "sourceHash": "77b21b62e2b9",
+      "updatedAt": "2026-08-17T19:06:25.211Z"
+    },
+    "onboard.ws.9.b1.lead": {
+      "text": "मदद चैट",
+      "sourceHash": "7ba80729c84c",
+      "updatedAt": "2026-08-17T19:07:27.670Z"
+    },
+    "onboard.ws.9.b1": {
+      "text": "आपका खाता thread खोलता है",
+      "sourceHash": "d9db0e6aba67",
+      "updatedAt": "2026-08-17T19:07:27.670Z"
+    },
+    "onboard.ws.9.b2.lead": {
+      "text": "अलर्ट",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T19:07:27.670Z"
+    },
+    "onboard.ws.9.b2": {
+      "text": "जब टीम जवाब दे, तो आपको सूचित करती है",
+      "sourceHash": "f3cbe9b57721",
+      "updatedAt": "2026-08-17T19:07:27.670Z"
+    },
+    "onboard.ws.9.b3.lead": {
+      "text": "त्वरित विषय",
+      "sourceHash": "df9701935ffd",
+      "updatedAt": "2026-08-17T19:07:27.670Z"
+    },
+    "onboard.ws.9.b3": {
+      "text": "ब्रीफ्स, प्रोजेक्ट्स, डेमोस और प्लान्स को कवर करता है",
+      "sourceHash": "a00b3d05a891",
+      "updatedAt": "2026-08-17T19:07:27.670Z"
+    },
+    "onboard.ws.10.kicker": {
+      "text": "चरण 10 · कानूनी",
+      "sourceHash": "d35eeb64a72a",
+      "updatedAt": "2026-08-17T19:07:27.670Z"
+    },
+    "onboard.ws.10.title": {
+      "text": "गोपनीयता नीति",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T19:07:27.670Z"
+    },
+    "onboard.ws.10.accent": {
+      "text": "& शर्तें सेवा",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T19:07:29.521Z"
+    },
+    "onboard.ws.10.tagline": {
+      "text": "साइडबार के फ़ूटर से कोई भी पृष्ठ खोलें।",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T19:07:29.521Z"
+    },
+    "onboard.ws.10.desc": {
+      "text": "निजता नीति और शर्तें सेवा साइडबार के फ़ूटर में रहती हैं। किसी भी समय दोनों लिंक पर क्लिक करके पूर्ण सार्वजनिक पृष्ठ खोलें।",
+      "sourceHash": "5acee761c11a",
+      "updatedAt": "2026-08-17T19:07:29.521Z"
+    },
+    "onboard.ws.10.b1.lead": {
+      "text": "निजता नीति",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T19:07:29.521Z"
+    },
+    "onboard.ws.10.b1": {
+      "text": "डेटा उपयोग और कुकीज़ संदर्भ को कवर करता है",
+      "sourceHash": "4ee048f7abbd",
+      "updatedAt": "2026-08-17T19:07:29.521Z"
+    },
+    "onboard.ws.10.b2.lead": {
+      "text": "शर्तें सेवा",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T19:07:29.521Z"
+    },
+    "onboard.ws.10.b2": {
+      "text": "खाता और प्लेटफ़ॉर्म उपयोग को कवर करते हैं",
+      "sourceHash": "8867a248339a",
+      "updatedAt": "2026-08-17T19:07:29.521Z"
+    },
+    "onboard.ws.10.b3.lead": {
+      "text": "साइडबार फ़ूटर",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T19:07:29.521Z"
+    },
+    "onboard.ws.10.b3": {
+      "text": "एक क्लिक के भीतर दोनों लिंक रखता है",
+      "sourceHash": "9e79f002da45",
+      "updatedAt": "2026-08-17T19:07:31.210Z"
+    },
+    "onboard.op.1.kicker": {
+      "text": "चरण 1 · पल्स",
+      "sourceHash": "69e8ed5685c2",
+      "updatedAt": "2026-08-17T19:07:31.210Z"
+    },
+    "onboard.op.1.title": {
+      "text": "शुरू करें",
+      "sourceHash": "f6702a1554c6",
+      "updatedAt": "2026-08-17T19:07:31.210Z"
+    },
+    "onboard.op.1.accent": {
+      "text": "पल्स",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T19:07:31.210Z"
+    },
+    "onboard.op.1.tagline": {
+      "text": "उत्पादन पाइपलाइन का जीवंत स्वास्थ्य।",
+      "sourceHash": "60c7ce936d28",
+      "updatedAt": "2026-08-17T19:07:31.210Z"
+    },
+    "onboard.op.1.desc": {
+      "text": "पल्स ऑपरेटर होम है। सत्र स्वास्थ्य, टोकन जलना, और समीक्षा कतारों की जांच करें इससे पहले कि आप गहन नियंत्रण में जाएं।",
+      "sourceHash": "a92cbe53d3c5",
+      "updatedAt": "2026-08-17T19:07:31.210Z"
+    },
+    "onboard.op.1.b1.lead": {
+      "text": "KPIs",
+      "sourceHash": "6911b88f3e2c",
+      "updatedAt": "2026-08-17T19:07:31.210Z"
+    },
+    "onboard.op.1.b1": {
+      "text": "टोकन, एजेंट, और समीक्षा भार दिखाएं",
+      "sourceHash": "d85127f0f3b1",
+      "updatedAt": "2026-08-17T19:07:31.210Z"
+    },
+    "onboard.op.1.b2.lead": {
+      "text": "Hash tabs",
+      "sourceHash": "f235f2664aa1",
+      "updatedAt": "2026-08-17T19:14:47.560Z"
+    },
+    "onboard.op.1.b2": {
+      "text": "jump any console section instantly",
+      "sourceHash": "1ba380c39f19",
+      "updatedAt": "2026-08-17T19:14:47.560Z"
+    },
+    "onboard.op.2.kicker": {
+      "text": "Step 2 · Theatre coverage",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T19:14:47.560Z"
+    },
+    "onboard.op.2.title": {
+      "text": "Workspace ships a",
+      "sourceHash": "fb40fd293dbf",
+      "updatedAt": "2026-08-17T19:14:47.560Z"
+    },
+    "onboard.op.2.accent": {
+      "text": "Theatre coverage map",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T19:14:47.560Z"
+    },
+    "onboard.op.2.tagline": {
+      "text": "Indicate only — stays on the operator console.",
+      "sourceHash": "9b4f29cd12bd",
+      "updatedAt": "2026-08-17T19:14:47.560Z"
+    },
+    "onboard.op.2.desc": {
+      "text": "Members see a live Theatre coverage map on Workspace Overview (Leaflet hotspots by country). Operators keep working here; open Workspace mode when you want to inspect the map itself. This step only indicates the addition.",
+      "sourceHash": "d6d28a804b12",
+      "updatedAt": "2026-08-17T19:14:47.560Z"
+    },
+    "onboard.op.2.b1.lead": {
+      "text": "Overview map",
+      "sourceHash": "c7511c10a051",
+      "updatedAt": "2026-08-17T19:14:47.560Z"
+    },
+    "onboard.op.2.b1": {
+      "text": "मेम्बर के लिए /डैशबोर्ड पर रहता है",
+      "sourceHash": "1e1143c480cb",
+      "updatedAt": "2026-08-17T19:14:49.748Z"
+    },
+    "onboard.op.2.b2.lead": {
+      "text": "हॉटस्पॉट",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T19:14:49.748Z"
+    },
+    "onboard.op.2.b2": {
+      "text": "परियोजना भूगोल और गिनती को दर्शाता है",
+      "sourceHash": "76707569e685",
+      "updatedAt": "2026-08-17T19:14:49.748Z"
+    },
+    "onboard.op.2.b3.lead": {
+      "text": "नहीं रीडायरेक्ट",
+      "sourceHash": "37fe346e787e",
+      "updatedAt": "2026-08-17T19:14:49.748Z"
+    },
+    "onboard.op.2.b3": {
+      "text": "यह दौरा ऑपरेटर कंसोल पर रहता है",
+      "sourceHash": "0a35fadeb5cf",
+      "updatedAt": "2026-08-17T19:14:49.748Z"
+    },
+    "onboard.op.3.kicker": {
+      "text": "चरण 3 · ऑपरेशंस",
+      "sourceHash": "cdff61105edd",
+      "updatedAt": "2026-08-17T19:14:49.748Z"
+    },
+    "onboard.op.3.title": {
+      "text": "स्पष्ट और",
+      "sourceHash": "6667043443c3",
+      "updatedAt": "2026-08-17T19:14:49.748Z"
+    },
+    "onboard.op.3.accent": {
+      "text": "मध्यम",
+      "sourceHash": "78cd1257c37f",
+      "updatedAt": "2026-08-17T19:14:49.748Z"
+    },
+    "onboard.op.3.tagline": {
+      "text": "सत्र सफाई, i18n सिंक, और लॉगबुक प्रकाशन.",
+      "sourceHash": "3c858c894d26",
+      "updatedAt": "2026-08-17T19:18:58.759Z"
+    },
+    "onboard.op.3.desc": {
+      "text": "ऑपरेशंस रखरखाव को कवर करती है — छंटाई फंसे सत्र, मॉडरेशन कतारें, i18n कैटलॉग सिंक, और फ्यूचर करिबियाई लॉगबुक प्रकाशक.",
+      "sourceHash": "e8ffdad59fd2",
+      "updatedAt": "2026-08-17T19:18:58.759Z"
+    },
+    "onboard.op.3.b1.lead": {
+      "text": "lead:",
+      "sourceHash": "2e4662c69cf1",
+      "updatedAt": "2026-08-17T19:18:58.759Z"
+    },
+    "onboard.op.3.b2.lead": {
+      "text": "ऑडिट",
+      "sourceHash": "fa1703dd78a0",
+      "updatedAt": "2026-08-17T19:18:58.759Z"
+    },
+    "onboard.op.3.b2": {
+      "text": "घटनाएँ डिबग में फॉरेंसिक्स के लिए",
+      "sourceHash": "e2e5b567527e",
+      "updatedAt": "2026-08-17T19:18:58.759Z"
+    },
+    "onboard.op.4.kicker": {
+      "text": "चरण 4 · नियंत्रण",
+      "sourceHash": "cf409a59474c",
+      "updatedAt": "2026-08-17T19:18:58.759Z"
+    },
+    "onboard.op.4.title": {
+      "text": "प्लेटफ़ॉर्म को ट्यून करें",
+      "sourceHash": "6c57929aaaff",
+      "updatedAt": "2026-08-17T19:18:58.759Z"
+    },
+    "onboard.op.4.accent": {
+      "text": "limits",
+      "sourceHash": "9523ccbcc4c5",
+      "updatedAt": "2026-08-17T19:27:49.454Z"
+    },
+    "onboard.op.4.tagline": {
+      "text": "Tokens, uploads, avatars, and review policy.",
+      "sourceHash": "324ca1ebc063",
+      "updatedAt": "2026-08-17T19:27:49.454Z"
+    },
+    "onboard.op.4.desc": {
+      "text": "Control sets runtime caps: daily tokens, concurrent agents, upload size, avatar KB, bio length, and human-review policy. Changes autosave.",
+      "sourceHash": "89f1ae55703d",
+      "updatedAt": "2026-08-17T19:27:49.454Z"
+    },
+    "onboard.op.4.b1.lead": {
+      "text": "Account profile",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T19:27:49.454Z"
+    },
+    "onboard.op.4.b1": {
+      "text": "avatar KB + bio chars for members",
+      "sourceHash": "1b67c63a6796",
+      "updatedAt": "2026-08-17T19:27:49.454Z"
+    },
+    "onboard.op.4.b2.lead": {
+      "text": "Policy toggles",
+      "sourceHash": "f55fcb9621a8",
+      "updatedAt": "2026-08-17T19:27:49.454Z"
+    },
+    "onboard.op.4.b2": {
+      "text": "premium models and required review",
+      "sourceHash": "040dad7e7738",
+      "updatedAt": "2026-08-17T19:27:49.454Z"
+    },
+    "onboard.op.5.kicker": {
+      "text": "Step 5 · Catalog",
+      "sourceHash": "5aa04e638450",
+      "updatedAt": "2026-08-17T19:27:49.454Z"
+    },
+    "onboard.op.5.title": {
+      "text": "स्रोत और",
+      "sourceHash": "802bb75da6d8",
+      "updatedAt": "2026-08-17T19:29:54.705Z"
+    },
+    "onboard.op.5.accent": {
+      "text": "सिग्नल",
+      "sourceHash": "0ab56c376c0a",
+      "updatedAt": "2026-08-17T19:29:54.705Z"
+    },
+    "onboard.op.5.tagline": {
+      "text": "साक्ष्य इनपुट्स को आयात करें और संवारें।",
+      "sourceHash": "2a9d3f29bdd9",
+      "updatedAt": "2026-08-17T19:29:54.705Z"
+    },
+    "onboard.op.5.desc": {
+      "text": "कैटलॉग स्रोत पैक का प्रबंधन करता है और मॉनिटर और डॉक्ट्रिन रन को feed करता है। ब्रीफ्स भेजने से पहले प्रोवेनेंस साफ रखें।",
+      "sourceHash": "c33bc98d7906",
+      "updatedAt": "2026-08-17T19:29:54.705Z"
+    },
+    "onboard.op.5.b1.lead": {
+      "text": "आयात",
+      "sourceHash": "d6fbc9d2bdd5",
+      "updatedAt": "2026-08-17T19:29:54.705Z"
+    },
+    "onboard.op.5.b1": {
+      "text": "क्यूरेटेड क्षेत्रीय स्रोत जोड़ता है",
+      "sourceHash": "172c6349570e",
+      "updatedAt": "2026-08-17T19:29:54.705Z"
+    },
+    "onboard.op.5.b2.lead": {
+      "text": "गुणवत्ता में",
+      "sourceHash": "a4734cf2e252",
+      "updatedAt": "2026-08-17T19:29:54.705Z"
+    },
+    "onboard.op.5.b2": {
+      "text": "डाउनस्ट्रीम ब्रीफ्स के लिए गुणवत्ता बाहर",
+      "sourceHash": "0cb55e852c48",
+      "updatedAt": "2026-08-17T19:29:54.705Z"
+    },
+    "onboard.op.6.kicker": {
+      "text": "चरण 6 · ग्राहक सहायता",
+      "sourceHash": "d3b5d83837c6",
+      "updatedAt": "2026-08-17T19:29:56.257Z"
+    },
+    "onboard.op.6.title": {
+      "text": "कर्मचारी",
+      "sourceHash": "a4730a22cf49",
+      "updatedAt": "2026-08-17T19:29:56.257Z"
+    },
+    "onboard.op.6.accent": {
+      "text": "ग्राहक सहायता",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T19:29:56.257Z"
+    },
+    "onboard.op.6.tagline": {
+      "text": "सुरक्षित पूर्वावलोकन के साथ जीवंत ग्राहक थ्रेड।",
+      "sourceHash": "50716a3366e6",
+      "updatedAt": "2026-08-17T19:29:56.257Z"
+    },
+    "onboard.op.6.desc": {
+      "text": "ग्राहक सहायता संस्थापक इनबॉक्स है। थ्रेड में उत्तर दें, ब्राउज़र में अटैचमेंट का पूर्वावलोकन करें, और स्थानीय रूप से अविश्वसनीय फ़ाइलें कभी डाउनलोड न करें। सदस्य मदद चैट का उपयोग करते हैं; यहाँ आप उत्तर दें।",
+      "sourceHash": "541eec4450ce",
+      "updatedAt": "2026-08-17T19:29:56.257Z"
+    },
+    "onboard.op.6.b1.lead": {
+      "text": "लाइव स्ट्रीम",
+      "sourceHash": "d65e4dee2e51",
+      "updatedAt": "2026-08-17T19:29:56.257Z"
+    },
+    "onboard.op.6.b1": {
+      "text": "लोड के तहत थ्रेड्स को वर्तमान रखता है",
+      "sourceHash": "4b1e8af493f7",
+      "updatedAt": "2026-08-17T19:29:56.257Z"
+    },
+    "onboard.op.6.b2.lead": {
+      "text": "अवतार",
+      "sourceHash": "fc022ebccbe9",
+      "updatedAt": "2026-08-17T19:29:56.257Z"
+    },
+    "onboard.op.6.b2": {
+      "text": "सहेमूल, नेमोट्रॉन, और जेडन की पहचान करें",
+      "sourceHash": "48e873e8220f",
+      "updatedAt": "2026-08-17T19:29:57.477Z"
+    },
+    "onboard.op.7.kicker": {
+      "text": "चरण 7 · समर्थन अलर्ट",
+      "sourceHash": "8372eb12faee",
+      "updatedAt": "2026-08-17T19:29:57.477Z"
+    },
+    "onboard.op.7.title": {
+      "text": "कभी भी न चूकें",
+      "sourceHash": "696735ef48a9",
+      "updatedAt": "2026-08-17T19:29:57.477Z"
+    },
+    "onboard.op.7.accent": {
+      "text": "मेंबर reply",
+      "sourceHash": "5ecb45f06be4",
+      "updatedAt": "2026-08-17T19:29:57.477Z"
+    },
+    "onboard.op.7.tagline": {
+      "text": "पृष्ठभूमि में अलर्ट सतर्क रहते हैं, कंसोल टैब के बीच।",
+      "sourceHash": "933fce9bc803",
+      "updatedAt": "2026-08-17T19:29:57.477Z"
+    },
+    "onboard.op.7.desc": {
+      "text": "ऑपरेटर समर्थन अलर्ट पृष्ठभूमि में सुनते हैं। नए मेंबर संदेश टोस्ट में बदल जाते हैं और ग्राहक सहायता थ्रेड में गहरा लिंक करते हैं — भले ही आप पल्स या मेल पर हों।",
+      "sourceHash": "8055b84f84f5",
+      "updatedAt": "2026-08-17T19:29:57.477Z"
+    },
+    "onboard.op.7.b1.lead": {
+      "text": "टोस्ट",
+      "sourceHash": "0b021d5f7dac",
+      "updatedAt": "2026-08-17T19:29:57.477Z"
+    },
+    "onboard.op.7.b1": {
+      "text": "नए मेंबर संदेश तुरंत प्रदर्शित करते हैं",
+      "sourceHash": "9aae82a3ea4b",
+      "updatedAt": "2026-08-17T19:29:57.477Z"
+    },
+    "onboard.op.7.b2.lead": {
+      "text": "खुली चर्चा",
+      "sourceHash": "9309e686d270",
+      "updatedAt": "2026-08-17T19:31:24.526Z"
+    },
+    "onboard.op.7.b2": {
+      "text": "उस खाते के लिए ग्राहक सहायता में कूदें",
+      "sourceHash": "cc8dadf92751",
+      "updatedAt": "2026-08-17T19:31:24.526Z"
+    },
+    "onboard.op.7.b3.lead": {
+      "text": "हमेशा सक्रिय",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T19:31:24.526Z"
+    },
+    "onboard.op.7.b3": {
+      "text": "SSE ऑपरेटर के रूप में साइन इन करते हुए सक्रिय रहती है",
+      "sourceHash": "2e8dba7c4567",
+      "updatedAt": "2026-08-17T19:31:24.526Z"
+    },
+    "onboard.op.8.kicker": {
+      "text": "चरण 8 · अनुवाद",
+      "sourceHash": "a025237b5a1e",
+      "updatedAt": "2026-08-17T19:31:24.526Z"
+    },
+    "onboard.op.8.title": {
+      "text": "ऑपरेटर",
+      "sourceHash": "d0e687b079fb",
+      "updatedAt": "2026-08-17T19:31:24.526Z"
+    },
+    "onboard.op.8.accent": {
+      "text": "भाषा नियंत्रण",
+      "sourceHash": "c834218d9e24",
+      "updatedAt": "2026-08-17T19:31:24.526Z"
+    },
+    "onboard.op.8.tagline": {
+      "text": "सार्वजनिक साइट की तरह वास्तविक समय में कैटलॉग.",
+      "sourceHash": "b9c781d8ef02",
+      "updatedAt": "2026-08-17T19:31:24.526Z"
+    },
+    "onboard.op.8.desc": {
+      "text": "स्थानीयकृत कैटलॉग, शक्ति मेंबर क्रोम और कानूनी कॉपी। सार्वजनिक साइट भाषा नियंत्रण से भाषा विकल्पों का पूर्वावलोकन; ऑपरेशंस से पूर्ण कैटलॉग सिंक करें।",
+      "sourceHash": "76e73ee68e58",
+      "updatedAt": "2026-08-17T19:31:26.232Z"
+    },
+    "onboard.op.8.b1.lead": {
+      "text": "सार्वजनिक क्रोम",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T19:31:26.232Z"
+    },
+    "onboard.op.8.b1": {
+      "text": "मार्केटिंग पृष्ठों पर भाषा चुनने वाला होस्ट करता है",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T19:31:26.232Z"
+    },
+    "onboard.op.8.b2.lead": {
+      "text": "कैटलॉग",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T19:31:26.232Z"
+    },
+    "onboard.op.8.b2": {
+      "text": "मेम्बर्स और लैंडिंग विज़िटर द्वारा देखे जाने वाले से मिलान करता है",
+      "sourceHash": "0fbdcdc9ad6a",
+      "updatedAt": "2026-08-17T19:31:26.232Z"
+    },
+    "onboard.op.8.b3.lead": {
+      "text": "ऑपरेशंस",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T19:31:26.232Z"
+    },
+    "onboard.op.8.b3": {
+      "text": "पूर्ण कैटलॉग सिंक टूलिंग होस्ट करता है",
+      "sourceHash": "eb7aa3e340d4",
+      "updatedAt": "2026-08-17T19:31:26.232Z"
+    },
+    "onboard.op.9.kicker": {
+      "text": "चरण 9 · रोशनी",
+      "sourceHash": "7eafa4130147",
+      "updatedAt": "2026-08-17T19:31:26.232Z"
+    },
+    "onboard.op.9.title": {
+      "text": "कंसोल सेट करें",
+      "sourceHash": "e3cf75e3a804",
+      "updatedAt": "2026-08-17T19:31:27.435Z"
+    },
+    "onboard.op.9.accent": {
+      "text": "लाइटिंग",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T19:31:27.435Z"
+    },
+    "onboard.op.9.tagline": {
+      "text": "लंबे ऑपरेटर सत्र के लिए हल्का या अंधेरा।",
+      "sourceHash": "96665289ffd6",
+      "updatedAt": "2026-08-17T19:31:27.435Z"
+    },
+    "onboard.op.9.desc": {
+      "text": "लाइटिंग ऑपरेटर कंसोल और कार्यक्षेत्र के लिए हल्का और अंधेरा विषय स्विच करती है। सार्वजनिक साइट के नेविगेशन बार या फुटर पर सूर्य / चंद्रमा नियंत्रण का उपयोग करें।",
+      "sourceHash": "191db2fb643b",
+      "updatedAt": "2026-08-17T19:31:27.435Z"
+    },
+    "onboard.op.9.b1.lead": {
+      "text": "टॉगल",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T19:31:27.435Z"
+    },
+    "onboard.op.9.b1": {
+      "text": "मार्केटिंग क्रोम पर रहता है, ऑपरेटर साइडबार पर नहीं",
+      "sourceHash": "414d448ecba7",
+      "updatedAt": "2026-08-17T19:31:27.435Z"
+    },
+    "onboard.op.9.b2.lead": {
+      "text": "साझा",
+      "sourceHash": "50d0d8dd11a9",
+      "updatedAt": "2026-08-17T19:31:27.435Z"
+    },
+    "onboard.op.9.b2": {
+      "text": "थीम वरीयता workspace मोड में आपके साथ चलती है",
+      "sourceHash": "86985668defd",
+      "updatedAt": "2026-08-17T19:31:27.435Z"
+    },
+    "onboard.op.9.b3.lead": {
+      "text": "Accessibility",
+      "sourceHash": "d660049bc1f2",
+      "updatedAt": "2026-08-17T19:53:35.402Z"
+    },
+    "onboard.op.9.b3": {
+      "text": "use whichever lighting reduces eye strain",
+      "sourceHash": "5c3a02dac3e5",
+      "updatedAt": "2026-08-17T19:53:35.402Z"
+    },
+    "onboard.op.10.kicker": {
+      "text": "Step 10 · Mail",
+      "sourceHash": "191b38258aa7",
+      "updatedAt": "2026-08-17T19:53:35.402Z"
+    },
+    "onboard.op.10.title": {
+      "text": "Send from your",
+      "sourceHash": "2a06a5d40f16",
+      "updatedAt": "2026-08-17T19:53:35.402Z"
+    },
+    "onboard.op.10.accent": {
+      "text": "account",
+      "sourceHash": "ca20728d35f0",
+      "updatedAt": "2026-08-17T19:53:35.402Z"
+    },
+    "onboard.op.10.tagline": {
+      "text": "Mailing list + Haraka outbound.",
+      "sourceHash": "551cba57a6f5",
+      "updatedAt": "2026-08-17T19:53:35.402Z"
+    },
+    "onboard.op.10.desc": {
+      "text": "Mail composes to subscribers with the default HTML template. Your signed-in address is the preferred From; list recipients come from the landing mailing list.",
+      "sourceHash": "424de746cee0",
+      "updatedAt": "2026-08-17T19:53:35.402Z"
+    },
+    "onboard.op.10.b1.lead": {
+      "text": "From",
+      "sourceHash": "3f66052a107e",
+      "updatedAt": "2026-08-17T19:53:35.402Z"
+    },
+    "onboard.op.10.b1": {
+      "text": "डिफ़ॉल्ट आपके ऑपरेटर ईमेल पर",
+      "sourceHash": "edef1599b4ef",
+      "updatedAt": "2026-08-17T20:01:45.560Z"
+    },
+    "onboard.op.10.b2.lead": {
+      "text": "डिबग",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T20:01:45.560Z"
+    },
+    "onboard.op.10.b2": {
+      "text": "Haraka चेतावनी और त्रुटियाँ ग्रहण करता है",
+      "sourceHash": "fea5242b81fb",
+      "updatedAt": "2026-08-17T20:01:45.560Z"
+    },
+    "onboard.op.11.kicker": {
+      "text": "चरण 11 · उपयोगकर्ता",
+      "sourceHash": "ae43054a142a",
+      "updatedAt": "2026-08-17T20:01:45.560Z"
+    },
+    "onboard.op.11.title": {
+      "text": "देखें सदस्य",
+      "sourceHash": "962ea526bfbe",
+      "updatedAt": "2026-08-17T20:01:45.560Z"
+    },
+    "onboard.op.11.accent": {
+      "text": "और जीवनी",
+      "sourceHash": "48e930db5788",
+      "updatedAt": "2026-08-17T20:01:45.560Z"
+    },
+    "onboard.op.11.tagline": {
+      "text": "गिनती, अक्षम करें, और पासवर्ड रीसेट.",
+      "sourceHash": "d17f62313435",
+      "updatedAt": "2026-08-17T20:01:45.560Z"
+    },
+    "onboard.op.11.desc": {
+      "text": "उपयोगकर्ता पंजीकरण मिश्रण, मेलिंग गतिविधि, अवतार, और विवरण दिखाता है। संस्थापक ऑपरेटर यहाँ अक्षम/रीसेट से सुरक्षित रहें।",
+      "sourceHash": "119d0bd4415b",
+      "updatedAt": "2026-08-17T20:01:45.560Z"
+    },
+    "onboard.op.11.b1.lead": {
+      "text": "पासवर्ड रीसेट",
+      "sourceHash": "5c4bc97ee5d0",
+      "updatedAt": "2026-08-17T20:02:01.190Z"
+    },
+    "onboard.op.11.b1": {
+      "text": "एक बार इस्तेमाल वाला गुप्त रहस्य कॉपी करता है",
+      "sourceHash": "47b0fb92db14",
+      "updatedAt": "2026-08-17T20:02:01.190Z"
+    },
+    "onboard.op.12.kicker": {
+      "text": "चरण 12 · कीमत",
+      "sourceHash": "618561daf8bd",
+      "updatedAt": "2026-08-17T20:02:01.190Z"
+    },
+    "onboard.op.12.title": {
+      "text": "योजना संपादित करें",
+      "sourceHash": "2cdbc67066c5",
+      "updatedAt": "2026-08-17T20:02:01.190Z"
+    },
+    "onboard.op.12.tagline": {
+      "text": "सार्वजनिक कीमत कार्ड और नोट्स.",
+      "sourceHash": "8ff7aaafc31b",
+      "updatedAt": "2026-08-17T20:02:01.190Z"
+    },
+    "onboard.op.12.desc": {
+      "text": "कीमतें लाइव योजनाओं को मार्केटिंग साइट पर अपडेट करती हैं। प्रकाशित करने से पहले राशि और सुविधा नोट्स सटीक रखें।",
+      "sourceHash": "82983571e556",
+      "updatedAt": "2026-08-17T20:05:48.229Z"
+    },
+    "onboard.op.12.b1.lead": {
+      "text": "ऑटोसेव",
+      "sourceHash": "ff6ad92011f3",
+      "updatedAt": "2026-08-17T20:05:48.229Z"
+    },
+    "onboard.op.12.b1": {
+      "text": "बिलिंग प्लान स्टोरेज में लिखता है",
+      "sourceHash": "af7675c6dd25",
+      "updatedAt": "2026-08-17T20:05:48.229Z"
+    },
+    "onboard.op.12.b2.lead": {
+      "text": "सार्वजनिक पृष्ठ",
+      "sourceHash": "9e54993aed01",
+      "updatedAt": "2026-08-17T20:05:48.229Z"
+    },
+    "onboard.op.12.b2": {
+      "text": "इसी स्रोत सच्चाई को पढ़ता है",
+      "sourceHash": "524d72da3a6b",
+      "updatedAt": "2026-08-17T20:05:48.229Z"
+    },
+    "onboard.op.13.kicker": {
+      "text": "स्टेप 13 · एक्सपोर्ट",
+      "sourceHash": "7eb4878ff011",
+      "updatedAt": "2026-08-17T20:05:48.229Z"
+    },
+    "onboard.op.13.title": {
+      "text": "ब्रिफ़ बनाएं",
+      "sourceHash": "d926be00a71b",
+      "updatedAt": "2026-08-17T20:05:48.229Z"
+    },
+    "onboard.op.13.accent": {
+      "text": "टेम्पलेट्स",
+      "sourceHash": "7981a4e7e9bd",
+      "updatedAt": "2026-08-17T20:05:48.229Z"
+    },
+    "onboard.op.13.tagline": {
+      "text": "स्टेकहोल्डर्स के लिए HTML एक्सपोर्ट लेआउट।",
+      "sourceHash": "ab0a7d1a6206",
+      "updatedAt": "2026-08-17T20:12:57.839Z"
+    },
+    "onboard.op.13.desc": {
+      "text": "एक्सपोर्ट आपको HTML टेम्पलेट डिज़ाइन करने, पूर्वावलोकन करने और अपलोड करने देता है जब briefs प्लेटफ़ॉर्म से पैक के रूप में बाहर निकलते हैं।",
+      "sourceHash": "37e62096c9c6",
+      "updatedAt": "2026-08-17T20:12:57.839Z"
+    },
+    "onboard.op.13.b1.lead": {
+      "text": "पूर्वावलोकन",
+      "sourceHash": "f1fbb2b43dca",
+      "updatedAt": "2026-08-17T20:12:57.839Z"
+    },
+    "onboard.op.13.b1": {
+      "text": "एक नमूना brief के लिए रेंडर करता है",
+      "sourceHash": "34bf59f2f261",
+      "updatedAt": "2026-08-17T20:12:57.839Z"
+    },
+    "onboard.op.13.b2.lead": {
+      "text": "अपलोड",
+      "sourceHash": "8bdf057f91e7",
+      "updatedAt": "2026-08-17T20:12:57.839Z"
+    },
+    "onboard.op.13.b2": {
+      "text": "स्टाइल्ड HTML पैकेज स्वीकार करता है",
+      "sourceHash": "54b4e5868afb",
+      "updatedAt": "2026-08-17T20:12:57.839Z"
+    },
+    "onboard.op.14.kicker": {
+      "text": "चरण 14 · कानूनी",
+      "sourceHash": "ae9396d21227",
+      "updatedAt": "2026-08-17T20:12:57.839Z"
+    },
+    "onboard.op.14.title": {
+      "text": "गोपनीयता नीति",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T20:12:57.839Z"
+    },
+    "onboard.op.14.accent": {
+      "text": "& शर्तें सेवा",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T20:12:59.601Z"
+    },
+    "onboard.op.14.tagline": {
+      "text": "साइडबार के फुटर से कोई भी पृष्ठ खोलें।",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T20:12:59.601Z"
+    },
+    "onboard.op.14.desc": {
+      "text": "सदस्य साइनअप के समय गोपनीयता नीति और शर्तें सेवा स्वीकार करते हैं। ऑपरेटर किसी भी समय साइडबार फुटर लिंक से कोई भी सार्वजनिक पृष्ठ खोल सकते हैं।",
+      "sourceHash": "9ba7513c9ea9",
+      "updatedAt": "2026-08-17T20:12:59.601Z"
+    },
+    "onboard.op.14.b1.lead": {
+      "text": "गोपनीयता नीति",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T20:12:59.601Z"
+    },
+    "onboard.op.14.b1": {
+      "text": "सार्वजनिक विश्वास के लिए प्रकाशित",
+      "sourceHash": "45a08c67c9ae",
+      "updatedAt": "2026-08-17T20:12:59.601Z"
+    },
+    "onboard.op.14.b2.lead": {
+      "text": "शर्तें सेवा",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T20:12:59.601Z"
+    },
+    "onboard.op.14.b2": {
+      "text": "खातों और प्लेटफ़ॉर्म उपयोग को नियंत्रित करती हैं",
+      "sourceHash": "ad5b587dd979",
+      "updatedAt": "2026-08-17T20:12:59.601Z"
+    },
+    "onboard.op.14.b3.lead": {
+      "text": "साइडबार फुटर",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T20:12:59.601Z"
+    },
+    "onboard.op.14.b3": {
+      "text": "लिंक पूर्ण कानूनी पृष्ठों पर जाते हैं",
+      "sourceHash": "9094e6b57be7",
+      "updatedAt": "2026-08-17T20:13:00.969Z"
+    },
+    "onboard.op.15.kicker": {
+      "text": "चरण 15 · डीबग",
+      "sourceHash": "c5bd8ede0640",
+      "updatedAt": "2026-08-17T20:13:00.969Z"
+    },
+    "onboard.op.15.title": {
+      "text": "देखें",
+      "sourceHash": "a6490eb13812",
+      "updatedAt": "2026-08-17T20:13:00.969Z"
+    },
+    "onboard.op.15.accent": {
+      "text": "लाइव कंसोल",
+      "sourceHash": "961a91cb4e0a",
+      "updatedAt": "2026-08-17T20:13:00.969Z"
+    },
+    "onboard.op.15.tagline": {
+      "text": "OpenRouter, पाइपलाइन, मेल, और सुरक्षा घटनाएँ",
+      "sourceHash": "4d26fcf22bcf",
+      "updatedAt": "2026-08-17T20:13:00.969Z"
+    },
+    "onboard.op.15.desc": {
+      "text": "डीबग स्ट्रीम ऑप्स घटनाएँ। एसएमटीपी परीक्षण करते समय मेल द्वारा फ़िल्टर करें, या पासवर्ड/अवतार परिवर्तन के बाद सुरक्षा द्वारा। केवल तभी स्पष्ट करें जब आप इसका अर्थ रखते हैं।",
+      "sourceHash": "9dc275e13749",
+      "updatedAt": "2026-08-17T20:13:00.969Z"
+    },
+    "onboard.op.15.b1.lead": {
+      "text": "मेल स्रोत",
+      "sourceHash": "2c1dfce6077b",
+      "updatedAt": "2026-08-17T20:13:00.969Z"
+    },
+    "onboard.op.15.b1": {
+      "text": "हारिका चेतावनी/त्रुटि लोड प्रदर्शित करता है",
+      "sourceHash": "95cd087c7f66",
+      "updatedAt": "2026-08-17T20:13:00.969Z"
+    },
+    "onboard.op.15.b2.lead": {
+      "text": "पुनः चलाएं",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T20:16:11.370Z"
+    },
+    "onboard.op.15.b2": {
+      "text": "कभी भी इस टूर को ऑपरेटर ट्यूटोरियल से पुनः चलाएं",
+      "sourceHash": "fe5d5215b04d",
+      "updatedAt": "2026-08-17T20:16:11.370Z"
+    },
+    "common.loading": {
+      "text": "लोडिंग…",
+      "sourceHash": "33ce417454bf",
+      "updatedAt": "2026-08-17T20:16:11.370Z"
+    },
+    "common.save": {
+      "text": "सेव करें",
+      "sourceHash": "efc007a393f6",
+      "updatedAt": "2026-08-17T20:16:11.370Z"
+    },
+    "common.cancel": {
+      "text": "रद्द करें",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T20:16:11.370Z"
+    },
+    "common.close": {
+      "text": "बंद करें",
+      "sourceHash": "bbfa773e5a63",
+      "updatedAt": "2026-08-17T20:16:11.370Z"
+    },
+    "common.retry": {
+      "text": "पुनः प्रयास करें",
+      "sourceHash": "9f5cd8a2e880",
+      "updatedAt": "2026-08-17T20:16:11.370Z"
+    },
+    "common.error": {
+      "text": "कुछ गलत हो गया",
+      "sourceHash": "8d886c0ba6f2",
+      "updatedAt": "2026-08-17T20:16:11.370Z"
+    },
+    "common.home": {
+      "text": "होम",
+      "sourceHash": "70f8bb9a8a53",
+      "updatedAt": "2026-08-17T20:17:28.642Z"
+    },
+    "common.all": {
+      "text": "सभी",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T20:17:28.642Z"
+    },
+    "common.search": {
+      "text": "खोजें...",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T20:17:28.642Z"
+    },
+    "common.create": {
+      "text": "बनाएँ",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T20:17:28.642Z"
+    },
+    "common.delete": {
+      "text": "हटाएँ",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T20:17:28.642Z"
+    },
+    "common.edit": {
+      "text": "संपादित करें",
+      "sourceHash": "5301648dcf6b",
+      "updatedAt": "2026-08-17T20:17:28.642Z"
+    },
+    "common.back": {
+      "text": "वापस",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T20:17:28.642Z"
+    },
+    "common.next": {
+      "text": "अगला",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T20:17:28.642Z"
+    },
+    "common.previous": {
+      "text": "पिछला",
+      "sourceHash": "50f94286ba30",
+      "updatedAt": "2026-08-17T20:17:29.785Z"
+    },
+    "common.confirm": {
+      "text": "पुष्टि",
+      "sourceHash": "04a212215ef9",
+      "updatedAt": "2026-08-17T20:17:29.785Z"
+    },
+    "common.dismiss": {
+      "text": "डिसमिस",
+      "sourceHash": "70afe9eff3f2",
+      "updatedAt": "2026-08-17T20:17:29.785Z"
+    },
+    "common.noMatches": {
+      "text": "कोई मिलान नहीं",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T20:17:29.785Z"
+    },
+    "common.viewAll": {
+      "text": "सभी देखें",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T20:17:29.785Z"
+    },
+    "common.open": {
+      "text": "खोलें",
+      "sourceHash": "cf9b77061f7b",
+      "updatedAt": "2026-08-17T20:17:29.785Z"
+    },
+    "common.refresh": {
+      "text": "रिफ्रेश",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T20:17:29.785Z"
+    },
+    "pricing.eyebrow": {
+      "text": "मूल्य निर्धारण",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T20:17:29.785Z"
+    },
+    "pricing.title": {
+      "text": "कैरेबियन निर्णय कार्य के लिए योजनाएं",
+      "sourceHash": "037c126105d5",
+      "updatedAt": "2026-08-17T20:19:45.767Z"
+    },
+    "pricing.lede": {
+      "text": "मुफ्त शुरू करें, फिर अपनी संगठन की आवश्यकता के अनुसार सीटों, गहराई और निगरानी को स्केल करें.",
+      "sourceHash": "9166dc69b88d",
+      "updatedAt": "2026-08-17T20:19:45.767Z"
+    },
+    "pricing.monthly": {
+      "text": "मासिक",
+      "sourceHash": "d31edb7b8a94",
+      "updatedAt": "2026-08-17T20:19:45.767Z"
+    },
+    "pricing.annual": {
+      "text": "वार्षिक",
+      "sourceHash": "0930f3f8992c",
+      "updatedAt": "2026-08-17T20:19:45.767Z"
+    },
+    "pricing.cta": {
+      "text": "शुरू करें",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T20:19:45.767Z"
+    },
+    "pricing.contact": {
+      "text": "हमसे बात करें",
+      "sourceHash": "90214883b63b",
+      "updatedAt": "2026-08-17T20:19:45.767Z"
+    },
+    "pricing.payments": {
+      "text": "स्वीकृत भुगतान विधियां",
+      "sourceHash": "a5b32f6784e2",
+      "updatedAt": "2026-08-17T20:19:45.767Z"
+    },
+    "cookie.pillLabel": {
+      "text": "हम कुकीज़ का उपयोग करते हैं.",
+      "sourceHash": "445cbc2a36bf",
+      "updatedAt": "2026-08-17T20:19:45.767Z"
+    },
+    "cookie.acceptAll": {
+      "text": "कुकीज़ स्वीकार करें",
+      "sourceHash": "e3b35bb7daa5",
+      "updatedAt": "2026-08-17T20:23:35.740Z"
+    },
+    "cookie.settingsTitle": {
+      "text": "सेटिंग्स",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T20:23:35.740Z"
+    },
+    "cookie.close": {
+      "text": "कुकीज़ सेटिंग्स बंद करें",
+      "sourceHash": "90601d80d7e5",
+      "updatedAt": "2026-08-17T20:23:35.740Z"
+    },
+    "cookie.essential": {
+      "text": "आवश्यक वेबसाइट कुकीज़",
+      "sourceHash": "62a4222f6e4d",
+      "updatedAt": "2026-08-17T20:23:35.740Z"
+    },
+    "cookie.essentialHint": {
+      "text": "साइन-इन, सुरक्षा, थीम और भाषा के लिए आवश्यक।",
+      "sourceHash": "e667ce996fa5",
+      "updatedAt": "2026-08-17T20:23:35.740Z"
+    },
+    "cookie.alwaysOn": {
+      "text": "हमेशा चालू",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T20:23:35.740Z"
+    },
+    "cookie.analytics": {
+      "text": "एनालिटिक्स कुकीज़",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T20:23:35.740Z"
+    },
+    "cookie.analyticsHint": {
+      "text": "हम उत्पाद के उपयोग को समझने में मदद करते हैं। जब तक आप इसे सक्षम नहीं करते, कोई ट्रैकर्स लोड नहीं होते।",
+      "sourceHash": "b334ec855aab",
+      "updatedAt": "2026-08-17T20:23:35.740Z"
+    },
+    "cookie.marketing": {
+      "text": "विपणन कुकीज़",
+      "sourceHash": "c2c7a10bf1bf",
+      "updatedAt": "2026-08-17T20:25:26.476Z"
+    },
+    "cookie.marketingHint": {
+      "text": "यदि हम बाद में अभियान चलाएं तो उपयोग किया जाएगा। डिफ़ॉल्ट रूप से बंद।",
+      "sourceHash": "e33b06c9570f",
+      "updatedAt": "2026-08-17T20:25:26.476Z"
+    },
+    "cookie.statement": {
+      "text": "हमारी कुकीज़ की घोषणा",
+      "sourceHash": "2d8cd77d9cf0",
+      "updatedAt": "2026-08-17T20:25:26.476Z"
+    },
+    "cookie.save": {
+      "text": "सेटिंग्स सहेजें",
+      "sourceHash": "913aba9f96cf",
+      "updatedAt": "2026-08-17T20:25:26.476Z"
+    },
+    "cookie.openSettings": {
+      "text": "कुकीज़ सेटिंग्स",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T20:25:26.476Z"
+    },
+    "legal.lastUpdated": {
+      "text": "अंतिम अपडेट",
+      "sourceHash": "583c9e23574a",
+      "updatedAt": "2026-08-17T20:25:26.476Z"
+    },
+    "legal.kicker": {
+      "text": "Octivate · CENSII",
+      "sourceHash": "db72eb4d75f1",
+      "updatedAt": "2026-08-17T20:25:26.476Z"
+    },
+    "legal.privacyTitle": {
+      "text": "गोपनीयता नीति",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T20:25:26.476Z"
+    },
+    "legal.termsTitle": {
+      "text": "सेवा के नियम",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T20:25:28.209Z"
+    },
+    "legal.cookiesTitle": {
+      "text": "कुकी विवरण",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T20:25:28.209Z"
+    },
+    "legal.backHome": {
+      "text": "Octivate पर वापस जाएँ",
+      "sourceHash": "c03f0805dd7d",
+      "updatedAt": "2026-08-17T20:25:28.209Z"
+    },
+    "legal.contact": {
+      "text": "संपर्क करें",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T20:25:28.209Z"
+    },
+    "legal.updatedDate": {
+      "text": "11 अगस्त 2026",
+      "sourceHash": "3632e92d3018",
+      "updatedAt": "2026-08-17T20:25:28.209Z"
+    },
+    "legal.privacy.cover.title": {
+      "text": "यह गोपनीयता नीति क्या कवर करती है",
+      "sourceHash": "ceca340c15f9",
+      "updatedAt": "2026-08-17T20:25:28.209Z"
+    },
+    "legal.privacy.cover.p1": {
+      "text": "यह गोपनीयता नीति बताती है कि CENSII (\"हम\", \"हमारे\") octivate.io पर विज़िट करने, Octivate खाता बनाने, हमारी मेलिंग सूची में शामिल होने, या Octivate कार्यक्षेत्र और संबंधित सेवाओं का उपयोग करने के दौरान व्यक्तिगत जानकारी कैसे एकत्र करती है, उपयोग करती है और साझा करती है।",
+      "sourceHash": "da0b35cddd1e",
+      "updatedAt": "2026-08-17T20:25:28.209Z"
+    },
+    "legal.privacy.cover.p2": {
+      "text": "Octivate कैरेबियन परिचालन संदर्भों के लिए एक निर्णय-बुद्धिमत्ता उत्पाद है। इसे CENSII द्वारा संचालित किया गया है। यदि आपके कोई प्रश्न हैं, तो info@octivate.co पर ईमेल करें।",
+      "sourceHash": "a3ee0fedaecb",
+      "updatedAt": "2026-08-17T20:25:28.209Z"
+    },
+    "legal.privacy.collect.title": {
+      "text": "हम एकत्रित की गई जानकारी",
+      "sourceHash": "ca195d50ca27",
+      "updatedAt": "2026-08-17T20:25:30.105Z"
+    },
+    "legal.privacy.collect.p1": {
+      "text": "जब आप सेवा का उपयोग करते हैं तो हम प्रत्यक्ष रूप से आपको दी गई जानकारी और बनाई गई जानकारी एकत्रित करते हैं:",
+      "sourceHash": "f01456bd7458",
+      "updatedAt": "2026-08-17T20:25:30.105Z"
+    },
+    "legal.privacy.collect.b1": {
+      "text": "खाता विवरण जैसे नाम, ईमेल पता, संगठन, और प्रमाणीकरण प्रमाणपत्र।",
+      "sourceHash": "af0ec8e327f2",
+      "updatedAt": "2026-08-17T20:25:30.105Z"
+    },
+    "legal.privacy.collect.b2": {
+      "text": "आप द्वारा प्रस्तुत कार्यक्षेत्र सामग्री (परियोजना प्रश्न, दस्तावेज, विवरण, मॉनिटर, और संबंधित विश्लेषणात्मक कलाकृतियाँ)।",
+      "sourceHash": "5892431b22fd",
+      "updatedAt": "2026-08-17T20:25:30.105Z"
+    },
+    "legal.privacy.collect.b3": {
+      "text": "यदि आप सदस्यता लेते हैं तो मेलिंग सूची विवरण (ईमेल और वैकल्पिक पहला नाम)।",
+      "sourceHash": "34eb00f7d54c",
+      "updatedAt": "2026-08-17T20:25:30.105Z"
+    },
+    "legal.privacy.collect.b4": {
+      "text": "सेवा चलाने के लिए आवश्यक तकनीकी डेटा: सत्र कुकीज़, सुरक्षा लॉग, लगभग उपयोग मेट्रिक्स, ब्राउज़र स्थानीय भाषा प्राथमिकता, और स्थानीय रूप से संग्रहीत थीम प्राथमिकता।",
+      "sourceHash": "1cd7a6671dc5",
+      "updatedAt": "2026-08-17T20:25:30.105Z"
+    },
+    "legal.privacy.collect.b5": {
+      "text": "जब आप हमारे भुगतान प्रोसेसर के माध्यम से योजना खरीदते हैं तो भुगतान से संबंधित पहचानकर्ता (हम Octivate सर्वरों पर पूर्ण कार्ड संख्या संग्रहीत नहीं करते)।",
+      "sourceHash": "33e270085714",
+      "updatedAt": "2026-08-17T20:25:30.105Z"
+    },
+    "legal.privacy.use.title": {
+      "text": "हम जानकारी का उपयोग कैसे करते हैं",
+      "sourceHash": "98a72067ee54",
+      "updatedAt": "2026-08-17T20:25:30.105Z"
+    },
+    "legal.privacy.use.p1": {
+      "text": "हम व्यक्तिगत जानकारी का उपयोग करते हैं:",
+      "sourceHash": "582e3b9752f3",
+      "updatedAt": "2026-08-17T20:25:32.211Z"
+    },
+    "legal.privacy.use.b1": {
+      "text": "Octivate (प्रमाणीकरण, कार्यक्षेत्र की सुविधाएँ, समर्थन) प्रदान करना, सुरक्षित करना और सुधारना।",
+      "sourceHash": "e1c1d704e9e8",
+      "updatedAt": "2026-08-17T20:25:32.211Z"
+    },
+    "legal.privacy.use.b2": {
+      "text": "आप द्वारा अनुरोधित विश्लेषण कार्यप्रवाह चलाना, जिसमें OpenRouter और चुने गए मॉडल जैसे मॉडल प्रदाताओं को आवश्यक प्रॉम्प्ट और दस्तावेज़ भेजना।",
+      "sourceHash": "b0f14789ce72",
+      "updatedAt": "2026-08-17T20:25:32.211Z"
+    },
+    "legal.privacy.use.b3": {
+      "text": "जब आप मेलिंग सूची के लिए सहमति दी हो तो उत्पाद अपडेट भेजना।",
+      "sourceHash": "795947ef39af",
+      "updatedAt": "2026-08-17T20:25:32.211Z"
+    },
+    "legal.privacy.use.b4": {
+      "text": "कानूनी, लेखा और सुरक्षा दायित्वों को पूरा करना।",
+      "sourceHash": "33e5b0f8726c",
+      "updatedAt": "2026-08-17T20:25:32.211Z"
+    },
+    "legal.privacy.cookies.title": {
+      "text": "कुकीज़ और इसी तरह की तकनीक",
+      "sourceHash": "f7b1e4ca11a4",
+      "updatedAt": "2026-08-17T20:25:32.211Z"
+    },
+    "legal.privacy.cookies.p1": {
+      "text": "आवश्यक कुकीज़ और स्थानीय भंडारण आपको साइन इन रखते हैं, सत्रों की रक्षा करते हैं, थीम (प्रकाश/अंधेरा) याद रखते हैं, और भाषा प्राथमिकता याद रखते हैं। ये साइट के कार्य करने के लिए आवश्यक हैं।",
+      "sourceHash": "04cfe776b96d",
+      "updatedAt": "2026-08-17T20:25:32.211Z"
+    },
+    "legal.privacy.cookies.p2": {
+      "text": "विश्लेषण और मार्केटिंग कुकीज़ डिफ़ॉल्ट रूप से बंद हैं। यदि आप कुकी सेटिंग्स में उन्हें सक्षम करते हैं, तो हम भविष्य में उत्पाद उपयोग को समझने या अभियान चलाने के लिए उनका उपयोग कर सकते हैं। आज, उन श्रेणियों को सक्षम करना तीसरे पक्ष के विज्ञापन ट्रैकर्स लोड नहीं करता; आपका विकल्प संग्रहीत किया गया है ताकि हम एकीकरण जोड़े जाने पर इसे मान सकें। Cookie Statement देखें।",
+      "sourceHash": "47a465df2959",
+      "updatedAt": "2026-08-17T20:25:32.211Z"
+    },
+    "legal.privacy.sharing.title": {
+      "text": "जब हम जानकारी साझा करते हैं",
+      "sourceHash": "7a2ce00c7fd3",
+      "updatedAt": "2026-08-17T20:25:34.165Z"
+    },
+    "legal.privacy.sharing.p1": {
+      "text": "हम व्यक्तिगत जानकारी नहीं बेचते। हम केवल तभी डेटा साझा करते हैं जब प्रक्रियाकर्ता हमें Octivate चलाने में मदद करते हैं, उचित समझौतों के तहत, उदाहरण के लिए:",
+      "sourceHash": "d2bf64f6c698",
+      "updatedAt": "2026-08-17T20:25:34.165Z"
+    },
+    "legal.privacy.sharing.b1": {
+      "text": "ऐप्लिकेशन डेटा संग्रहीत करने वाले बुनियादी ढांचा और होस्टिंग प्रदाता।",
+      "sourceHash": "4d800473b32a",
+      "updatedAt": "2026-08-17T20:25:34.165Z"
+    },
+    "legal.privacy.sharing.b2": {
+      "text": "मॉडल रूटिंग प्रदाता (जैसे OpenRouter) और अंतर्निहित मॉडल विक्रेता जब आप विश्लेषण चलाते हैं।",
+      "sourceHash": "3ef2e101e0cb",
+      "updatedAt": "2026-08-17T20:25:34.165Z"
+    },
+    "legal.privacy.sharing.b3": {
+      "text": "भुगतान प्रक्रियाकर्ता (जैसे Stripe या PayPal) जब आप कोई योजना खरीदते हैं।",
+      "sourceHash": "afa78f66f0cb",
+      "updatedAt": "2026-08-17T20:25:34.165Z"
+    },
+    "legal.privacy.sharing.b4": {
+      "text": "लेन-देन या मेलिंग-लिस्ट संदेश भेजने के लिए उपयोग किया गया ईमेल डिलीवरी बुनियादी ढांचा।",
+      "sourceHash": "fa83b06a582d",
+      "updatedAt": "2026-08-17T20:25:34.165Z"
+    },
+    "legal.privacy.sharing.b5": {
+      "text": "पेशेवर सलाहकार या प्राधिकरण जब कानून द्वारा आवश्यक हो।",
+      "sourceHash": "8f3a144729ae",
+      "updatedAt": "2026-08-17T20:25:34.165Z"
+    },
+    "legal.privacy.retention.title": {
+      "text": "धारणा",
+      "sourceHash": "c7199d9e9593",
+      "updatedAt": "2026-08-17T20:25:34.165Z"
+    },
+    "legal.privacy.retention.p1": {
+      "text": "जब तक आपका खाता सक्रिय है, तब तक हम खाता और कार्यस्थल डेटा बनाए रखते हैं और बैकअप, विवाद समाधान और कानूनी अनुपालन के लिए आवश्यक अवधि के बाद भी। मेलिंग-लिस्ट रिकॉर्ड तब तक रखे जाते हैं जब तक आप सदस्यता नहीं लेते या हम सूची बंद नहीं करते। नीचे वर्णित के अनुसार आप deletion का अनुरोध कर सकते हैं।",
+      "sourceHash": "f0d4f4a09397",
+      "updatedAt": "2026-08-17T20:25:36.427Z"
+    },
+    "legal.privacy.rights.title": {
+      "text": "आपके अधिकार",
+      "sourceHash": "e71102d544b3",
+      "updatedAt": "2026-08-17T20:25:36.427Z"
+    },
+    "legal.privacy.rights.p1": {
+      "text": "जहां आप रहते हैं के आधार पर, आपको व्यक्तिगत जानकारी तक पहुंचने, सुधारने, हटाने या निर्यात करने का अधिकार हो सकता है, या certain processing को आपत्ति करने या प्रतिबंधित करने का अधिकार हो सकता है। EU/UK訪問कर्ताओं के लिए, GDPR / UK GDPR अधिकार लागू होते हैं। कैरिबियन अधिकार क्षेत्र के訪問कर्ताओं के लिए, जिसमें जमाइका, ट्रिनिदाद और टोबैगो, बारबाडोस और अन्य शामिल हैं, हम लागू सांविधिक अधिकार का सम्मान करते हैं।",
+      "sourceHash": "d0eca93b39f0",
+      "updatedAt": "2026-08-17T20:25:36.427Z"
+    },
+    "legal.privacy.rights.p2": {
+      "text": "एक अनुरोध करने के लिए, info@octivate.co या shemuel@censii.co पर ईमेल करें और विषय ‘Data subject request’ रखें। हम लागू सांविधिक खिड़की के भीतर जवाब देंगे।",
+      "sourceHash": "5be87f549dc6",
+      "updatedAt": "2026-08-17T20:25:36.427Z"
+    },
+    "legal.privacy.children.title": {
+      "text": "बच्चे",
+      "sourceHash": "dcf75191c585",
+      "updatedAt": "2026-08-17T20:25:36.427Z"
+    },
+    "legal.privacy.children.p1": {
+      "text": "Octivate पेशेवर और संगठनात्मक उपयोग के लिए है। हम 16 वर्ष से कम उम्र के बच्चों से व्यक्तिगत जानकारी एकत्र करने के बारे में जानबूझकर नहीं करते।",
+      "sourceHash": "07a14e4d629c",
+      "updatedAt": "2026-08-17T20:25:36.427Z"
+    },
+    "legal.privacy.changes.title": {
+      "text": "इस नीति में बदलाव",
+      "sourceHash": "615043a5515f",
+      "updatedAt": "2026-08-17T20:25:36.427Z"
+    },
+    "legal.privacy.changes.p1": {
+      "text": "हम समय-समय पर इस Privacy Policy को अपडेट कर सकते हैं। शीर्ष पर ‘Last updated’ तारीख बदल जाएगी जब हम ऐसा करेंगे। महत्वपूर्ण बदलाव इस पृष्ठ पर उजागर किए जाएंगे या जहाँ उचित हो उत्पाद के माध्यम से संचारित किए जाएंगे।",
+      "sourceHash": "476874f7f005",
+      "updatedAt": "2026-08-17T20:25:36.427Z"
+    },
+    "legal.privacy.contact.title": {
+      "text": "संपर्क",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T20:41:06.833Z"
+    },
+    "legal.privacy.contact.p1": {
+      "text": "CENSII — Octivate गोपनीयता पूछताछ: info@octivate.co. डेटा विषय अनुरोधों को भी भेजा जा सकता है shemuel@censii.co. CENSII के बारे में अधिक: https://censii.co.",
+      "sourceHash": "2a9de25118a0",
+      "updatedAt": "2026-08-17T20:41:06.833Z"
+    },
+    "legal.terms.agreement.title": {
+      "text": "समझौता",
+      "sourceHash": "c8fee8eabe07",
+      "updatedAt": "2026-08-17T20:41:06.833Z"
+    },
+    "legal.terms.agreement.p1": {
+      "text": "ये सेवा के नियम (“शर्तें”) Octivate (सेवा) के पहुँच और उपयोग को नियंत्रित करती हैं, एक CENSII (“CENSII”, “हम”, “हमारी”) द्वारा संचालित निर्णय-बुद्धिमत्ता उत्पाद। एक खाता बनाना या सेवा का उपयोग करना, आप इन नियमों से सहमत होते हैं।",
+      "sourceHash": "1920871854ab",
+      "updatedAt": "2026-08-17T20:41:06.833Z"
+    },
+    "legal.terms.service.title": {
+      "text": "सेवा",
+      "sourceHash": "bc4a155b6578",
+      "updatedAt": "2026-08-17T20:41:06.833Z"
+    },
+    "legal.terms.service.p1": {
+      "text": "Octivate कैरिबियाई निर्णय थिएटरों को संरचित करने में मदद करता है, साक्ष्य एकत्रित करता है और उनका परीक्षण करता है, और निर्णय-तैयार विवरण और निगरानी उत्पन्न करता है। विशेषताओं में परियोजनाएँ, विवरण, निगरानी, स्रोत पैक, हितधारक मानचित्र, और संबंधित workspace उपकरण शामिल हो सकते हैं।",
+      "sourceHash": "cafd042947e6",
+      "updatedAt": "2026-08-17T20:41:06.833Z"
+    },
+    "legal.terms.service.p2": {
+      "text": "विश्लेषण आउटपुट निर्णय-सहायक सामग्री हैं। ये कानूनी, वित्तीय, निवेश, या विनियामक सलाह नहीं हैं। आप आउटपुट के उपयोग के लिए जिम्मेदार बने रहते हैं।",
+      "sourceHash": "c2714c09aad4",
+      "updatedAt": "2026-08-17T20:41:06.833Z"
+    },
+    "legal.terms.accounts.title": {
+      "text": "खाते और स्वीकार्य उपयोग",
+      "sourceHash": "5d78eee41938",
+      "updatedAt": "2026-08-17T20:43:13.927Z"
+    },
+    "legal.terms.accounts.p1": {
+      "text": "आप सहमत हैं:",
+      "sourceHash": "ecad8570099e",
+      "updatedAt": "2026-08-17T20:43:13.927Z"
+    },
+    "legal.terms.accounts.b1": {
+      "text": "सटीक खाता जानकारी प्रदान करें और क्रेडेंशियल्स को सुरक्षित रखें।",
+      "sourceHash": "25e318d9c60c",
+      "updatedAt": "2026-08-17T20:43:13.927Z"
+    },
+    "legal.terms.accounts.b2": {
+      "text": "केवल कानूनी उद्देश्यों के लिए सेवा का उपयोग करें और अपने संगठन की नीतियों के अनुसार।",
+      "sourceHash": "1792588ceba4",
+      "updatedAt": "2026-08-17T20:43:13.927Z"
+    },
+    "legal.terms.accounts.b3": {
+      "text": "सेवा को बाधित करने, reverse engineer करने, या गलत उपयोग करने का प्रयास न करें, या अन्य ग्राहकों के डेटा तक पहुंचें।",
+      "sourceHash": "d8cee3f610f2",
+      "updatedAt": "2026-08-17T20:43:13.927Z"
+    },
+    "legal.terms.accounts.b4": {
+      "text": "ऐसी सामग्री अपलोड न करें जिसे आप संसाधित करने के अधिकार नहीं रखते, या जो अवैध या हानिकारक हो।",
+      "sourceHash": "68ea1009e1a7",
+      "updatedAt": "2026-08-17T20:43:13.927Z"
+    },
+    "legal.terms.ai.title": {
+      "text": "मॉडल-सहायता विश्लेषण",
+      "sourceHash": "f139b756fb2a",
+      "updatedAt": "2026-08-17T20:43:13.927Z"
+    },
+    "legal.terms.ai.p1": {
+      "text": "Octivate के कुछ भाग तीसरे पक्ष के मॉडल प्रदाताओं (उदाहरण के लिए OpenRouter) द्वारा प्रॉम्प्ट और दस्तावेज़ संसाधित करते हैं, जिसे आप जमा करते हैं। आउटपुट अधूरा या गलत हो सकता है। आपको साक्ष्य और सिफ़ारिशों की समीक्षा करने के बाद ही कार्य करना चाहिए।",
+      "sourceHash": "2249195c0061",
+      "updatedAt": "2026-08-17T20:43:13.927Z"
+    },
+    "legal.terms.plans.title": {
+      "text": "योजनाएं, परीक्षण और भुगतान",
+      "sourceHash": "66eaef3bcd17",
+      "updatedAt": "2026-08-17T20:44:21.941Z"
+    },
+    "legal.terms.plans.p1": {
+      "text": "पेड योजनाएं, ट्रायल्स, और बिलिंग कीमत सूची पृष्ठ और चेकआउट पर वर्णित हैं। फीस Stripe या PayPal जैसे पेमेंट प्रोवाइडर्स द्वारा संसाधित की जाती है। कानून द्वारा आवश्यक होने को छोड़कर, एक बिलिंग अवधि शुरू होने के बाद फीस वापस नहीं ली जाती, जब तक हम लिखित रूप में अन्यथा नहीं कहते।",
+      "sourceHash": "a74086033e27",
+      "updatedAt": "2026-08-17T20:44:21.941Z"
+    },
+    "legal.terms.ip.title": {
+      "text": "बौद्धिक संपदा",
+      "sourceHash": "3e694b7e8d03",
+      "updatedAt": "2026-08-17T20:44:21.941Z"
+    },
+    "legal.terms.ip.p1": {
+      "text": "CENSII और इसके लाइसेंसधारक Octivate सॉफ़्टवेयर, ब्रांडिंग, और साइट सामग्री के मालिक हैं। आप वह सामग्री जिसे आप अपलोड करते हैं, में अपने अधिकार बनाए रखते हैं। आप हमें वह सीमित लाइसेंस देते हैं कि हम वह सामग्री होस्ट और प्रक्रिया करें केवल सेवा प्रदान करने के लिए।",
+      "sourceHash": "b14a3529c91c",
+      "updatedAt": "2026-08-17T20:44:21.941Z"
+    },
+    "legal.terms.ip.p2": {
+      "text": "नमूना संक्षिप्त विवरण और सार्वजनिक प्रदर्शन उदाहरणात्मक हैं और काल्पनिक या गुमनामीकृत परिदृश्यों का उपयोग किया जा सकता है।",
+      "sourceHash": "93fd6d9964e9",
+      "updatedAt": "2026-08-17T20:44:21.941Z"
+    },
+    "legal.terms.confidentiality.title": {
+      "text": "गोपनीयता",
+      "sourceHash": "642e7d86380c",
+      "updatedAt": "2026-08-17T20:44:21.941Z"
+    },
+    "legal.terms.confidentiality.p1": {
+      "text": "हम आपके वर्कस्पेस सामग्री को गोपनीय मानते हैं और इसे हमारी गोपनीयता नीति के अंतर्गत प्रक्रिया करते हैं। आप सेवा की गैर-जनता विशेषताओं का खुलासा करने के लिए सहमत नहीं हैं, जब तक आपके आंतरिक मूल्यांकन के लिए आवश्यक न हो।",
+      "sourceHash": "a68c21b965e4",
+      "updatedAt": "2026-08-17T20:44:21.941Z"
+    },
+    "legal.terms.disclaimer.title": {
+      "text": "अस्वीकरण",
+      "sourceHash": "4c4a2e80cc87",
+      "updatedAt": "2026-08-17T20:44:21.941Z"
+    },
+    "legal.terms.disclaimer.p1": {
+      "text": "सेवा “जैसे है” और “जैसे उपलब्ध है” प्रदान की जाती है। कानून द्वारा अनुमत अधिकतम सीमा तक, हम विक्रययोग्यता, विशिष्ट प्रयोजन के लिए उपयुक्तता और उल्लंघन से बचाव की वारंटी अस्वीकार करते हैं। हम यह वारंटी नहीं देते कि सेवा बाधित मुक्त या त्रुटि मुक्त चलेगी, या कि आउटपुट आपकी आवश्यकताओं को पूरा करेंगे।",
+      "sourceHash": "d40ff71ccb41",
+      "updatedAt": "2026-08-17T20:44:24.375Z"
+    },
+    "legal.terms.liability.title": {
+      "text": "दायित्व की सीमा",
+      "sourceHash": "b1a6f886289a",
+      "updatedAt": "2026-08-17T20:44:24.375Z"
+    },
+    "legal.terms.liability.p1": {
+      "text": "कानून द्वारा अनुमत अधिकतम सीमा तक, CENSII और इसकी सहयोगी कंपनियां सेवा से उत्पन्न indirect, incidental, special, consequential, या punitive damages, या lost profits, data, या goodwill के लिए उत्तरदायी नहीं होंगी। सेवा से उत्पन्न हमारा कुल दायित्व उस शुल्क से अधिक नहीं होगा जिसे आप सेवा के लिए भुगतान किया गया है जिसे दावा करने के बारह महीने पहले भुगतान किया गया है।",
+      "sourceHash": "365dfc530ba0",
+      "updatedAt": "2026-08-17T20:44:24.375Z"
+    },
+    "legal.terms.termination.title": {
+      "text": "निलंबन और समाप्ति",
+      "sourceHash": "bd4963b1d885",
+      "updatedAt": "2026-08-17T20:44:24.375Z"
+    },
+    "legal.terms.termination.p1": {
+      "text": "यदि आप इन शर्तों का उल्लंघन करते हैं या सेवा या अन्य उपयोगकर्ताओं की रक्षा के लिए आवश्यक है, तो हम एक्सेस को निलंबित या समाप्त कर सकते हैं। आप किसी भी समय सेवा का उपयोग बंद कर सकते हैं। उन प्रावधानों द्वारा जो स्वाभाविक रूप से समाप्ति के बाद भी जीवित रहना चाहिए (जैसे IP, disclaimer, liability, और governing law) समाप्ति के बाद भी जीवित रहेंगे।",
+      "sourceHash": "566454aef6a7",
+      "updatedAt": "2026-08-17T20:44:24.375Z"
+    },
+    "legal.terms.law.title": {
+      "text": "शासक कानून",
+      "sourceHash": "4676ad8df95e",
+      "updatedAt": "2026-08-17T20:44:24.375Z"
+    },
+    "legal.terms.law.p1": {
+      "text": "ये शर्तें त्रिनिदाद और टोबैगो के कानूनों द्वारा शासित होती हैं, बगैर conflict-of-law नियमों के, जब तक कि आपके अधिकार क्षेत्र में अनिवार्य उपभोक्ता संरक्षण आवश्यक न हो। त्रिनिदाद और टोबैगो के न्यायालयों के पास विशेष अधिकार क्षेत्र है, जब तक कि उन अनिवार्य संरक्षणों के अधीन न हो।",
+      "sourceHash": "8625634a95dc",
+      "updatedAt": "2026-08-17T20:44:24.375Z"
+    },
+    "legal.terms.contact.title": {
+      "text": "संपर्क",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T20:44:24.375Z"
+    },
+    "legal.terms.contact.p1": {
+      "text": "शर्तों के बारे में प्रश्न: info@octivate.co. CENSII के बारे में: https://censii.co.",
+      "sourceHash": "baefec6a2022",
+      "updatedAt": "2026-08-17T20:44:27.005Z"
+    },
+    "legal.cookies.overview.title": {
+      "text": "अवलोकन",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T20:44:27.005Z"
+    },
+    "legal.cookies.overview.p1": {
+      "text": "यह कुकी विवरण बताता है कि Octivate (CENSII द्वारा संचालित) octivate.io पर कुकीज़ और इसी तरह की तकनीकों का उपयोग कैसे करता है। आप किसी भी समय विकल्पात्मक श्रेणियों का प्रबंधन कुकी सेटिंग्स के माध्यम से कर सकते हैं।",
+      "sourceHash": "4fe70d776df2",
+      "updatedAt": "2026-08-17T20:44:27.005Z"
+    },
+    "legal.cookies.essential.title": {
+      "text": "आवश्यक कुकीज़",
+      "sourceHash": "e766aa84901b",
+      "updatedAt": "2026-08-17T20:44:27.005Z"
+    },
+    "legal.cookies.essential.p1": {
+      "text": "आवश्यक कुकीज़ और स्थानीय भंडारण सेवा के लिए आवश्यक हैं। इनमें सत्र प्रमाणीकरण, सुरक्षा, थीम प्राथमिकता (प्रकाश/अंधेरा), और भाषा प्राथमिकता शामिल हैं। ये चालू बनी रहती हैं; सेवा सही ढंग से कार्य किए बिना नहीं रह सकती।",
+      "sourceHash": "3c529d19f95b",
+      "updatedAt": "2026-08-17T20:44:27.005Z"
+    },
+    "legal.cookies.analytics.title": {
+      "text": "विश्लेषिकी कुकीज़",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T20:44:27.005Z"
+    },
+    "legal.cookies.analytics.p1": {
+      "text": "विश्लेषिकी कुकीज़ हमें समझने में मदद करती हैं कि उत्पाद का उपयोग कैसे किया जाता है। इन्हें तब तक के लिए बंद रखा गया है जब तक आप इन्हें सक्षम न करें। हम वर्तमान में तीसरे पक्ष के विश्लेषिकी SDK लोड नहीं करते; यदि हम बाद में इन्हें जोड़ते हैं, तो हम केवल तभी करेंगे जब आपकी संग्रहीत प्राथमिकता विश्लेषिकी की अनुमति दे।",
+      "sourceHash": "e87b8d7ae969",
+      "updatedAt": "2026-08-17T20:44:27.005Z"
+    },
+    "legal.cookies.marketing.title": {
+      "text": "विपणन कुकीज़",
+      "sourceHash": "c2c7a10bf1bf",
+      "updatedAt": "2026-08-17T20:44:27.005Z"
+    },
+    "legal.cookies.marketing.p1": {
+      "text": "विपणन कुकीज़ यदि हम इन्हें चलाएँ तो अभियानों या पुनः लक्ष्यीकरण का समर्थन करेंगी। वे डिफ़ॉल्ट रूप से बंद हैं और आज उपयोग में नहीं हैं। विपणन सक्षम करने से भविष्य के लिए आपकी प्राथमिकता संग्रहीत होती है; यह स्वयं विज्ञापन पिक्सेल को सक्रिय नहीं करता।",
+      "sourceHash": "86be873965c0",
+      "updatedAt": "2026-08-17T20:53:41.511Z"
+    },
+    "legal.cookies.manage.title": {
+      "text": "प्राथमिकताओं को कैसे प्रबंधित करें",
+      "sourceHash": "fe104b22e6a2",
+      "updatedAt": "2026-08-17T20:53:41.511Z"
+    },
+    "legal.cookies.manage.p1": {
+      "text": "फ़्लोटिंग कुकी नियंत्रण का उपयोग करें या साइट फ़ूटर से कुकी सेटिंग्स खोलें। 'स्वीकार करें' चुनने से एनालिटिक्स और विपणन प्राथमिकताएँ सक्षम होती है। 'सेव सेटिंग्स' चुनने से आप द्वारा चुनी गई टॉगल्स संग्रहीत होती है। ब्राउज़र में साइट डेटा साफ़ करने से बैनर रीसेट हो जाएगा।",
+      "sourceHash": "7afe22d445c8",
+      "updatedAt": "2026-08-17T20:53:41.511Z"
+    },
+    "legal.cookies.more.title": {
+      "text": "अधिक जानकारी",
+      "sourceHash": "f925f9bea399",
+      "updatedAt": "2026-08-17T20:53:41.511Z"
+    },
+    "legal.cookies.more.p1": {
+      "text": "व्यापक डेटा प्रथाओं के लिए, हमारी गोपनीयता नीति पढ़ें। प्रश्न: info@octivate.co.",
+      "sourceHash": "407b95384bff",
+      "updatedAt": "2026-08-17T20:53:41.511Z"
+    },
+    "dyn.marquee.mq_proc_ports.text": {
+      "text": "पोर्ट अधिकार द्वारा पूर्व योग्यता नोटिस प्रकाशित — लॉजिस्टिक्स",
+      "sourceHash": "1a71672fedbc",
+      "updatedAt": "2026-08-17T20:53:41.511Z"
+    },
+    "dyn.marquee.mq_proc_ports.badge": {
+      "text": "क्रय",
+      "sourceHash": "08433110a671",
+      "updatedAt": "2026-08-17T20:53:41.511Z"
+    },
+    "dyn.marquee.mq_sys_grid.text": {
+      "text": "ग्रिड रखरखाव खिड़की विस्तारित; औद्योगिक फीडर प्रभावित",
+      "sourceHash": "740cfd102e0c",
+      "updatedAt": "2026-08-17T20:53:41.511Z"
+    },
+    "dyn.marquee.mq_sys_grid.badge": {
+      "text": "प्रणाली",
+      "sourceHash": "e6caf1e7e33e",
+      "updatedAt": "2026-08-17T20:57:26.721Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.text": {
+      "text": "कैबिनेट पुनर्गठन ऊर्जा पोर्टफोलियो की प्राथमिकताओं में बदलाव का संकेत देता है",
+      "sourceHash": "3b08d154b099",
+      "updatedAt": "2026-08-17T20:57:26.721Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.badge": {
+      "text": "शक्ति",
+      "sourceHash": "c2b6b521a777",
+      "updatedAt": "2026-08-17T20:57:26.721Z"
+    },
+    "dyn.marquee.mq_narr_radio.text": {
+      "text": "स्थानीय सामग्री की भावना बातचीत रेडियो और WhatsApp पर बढ़ रही है",
+      "sourceHash": "48213741cc6a",
+      "updatedAt": "2026-08-17T20:57:26.721Z"
+    },
+    "dyn.marquee.mq_narr_radio.badge": {
+      "text": "कहानी",
+      "sourceHash": "3e3886da8fd5",
+      "updatedAt": "2026-08-17T20:57:26.721Z"
+    }
+  }
+}

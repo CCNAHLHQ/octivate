@@ -1,0 +1,6147 @@
+{
+  "locale": "zh-CN",
+  "version": 155,
+  "updatedAt": "2026-08-17T17:00:45.423Z",
+  "entries": {
+    "nav.product": {
+      "text": "产品",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T15:53:29.053Z"
+    },
+    "nav.why": {
+      "text": "为什么 Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T15:53:29.053Z"
+    },
+    "nav.how": {
+      "text": "如何工作",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T15:53:29.053Z"
+    },
+    "nav.pricing": {
+      "text": "定价",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T15:53:29.053Z"
+    },
+    "nav.team": {
+      "text": "团队",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T15:53:29.053Z"
+    },
+    "nav.about": {
+      "text": "关于",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T15:53:29.053Z"
+    },
+    "nav.signIn": {
+      "text": "登录",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T15:53:29.053Z"
+    },
+    "nav.requestDemo": {
+      "text": "开始使用",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T15:53:29.053Z"
+    },
+    "nav.returnWorkspace": {
+      "text": "返回工作区",
+      "sourceHash": "74f11e0defca",
+      "updatedAt": "2026-08-17T15:53:53.475Z"
+    },
+    "nav.operatorDashboard": {
+      "text": "操作员仪表板",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T15:53:53.475Z"
+    },
+    "nav.askQuestion": {
+      "text": "提问",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T15:53:53.475Z"
+    },
+    "nav.askQuestionLong": {
+      "text": "提出问题",
+      "sourceHash": "cf94bdf39103",
+      "updatedAt": "2026-08-17T15:53:53.475Z"
+    },
+    "nav.skip": {
+      "text": "跳至内容",
+      "sourceHash": "0a4470d64e9d",
+      "updatedAt": "2026-08-17T15:53:53.475Z"
+    },
+    "nav.explore": {
+      "text": "探索",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T15:53:53.475Z"
+    },
+    "nav.openMenu": {
+      "text": "打开菜单",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T15:53:53.475Z"
+    },
+    "nav.closeMenu": {
+      "text": "关闭菜单",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T15:53:53.475Z"
+    },
+    "nav.translate": {
+      "text": "翻译",
+      "sourceHash": "2be17aa181d8",
+      "updatedAt": "2026-08-17T15:53:55.199Z"
+    },
+    "nav.translateHint": {
+      "text": "服务器缓存 · Octivate i18n",
+      "sourceHash": "16abeab228fd",
+      "updatedAt": "2026-08-17T15:53:55.199Z"
+    },
+    "nav.primary": {
+      "text": "主要",
+      "sourceHash": "a9a96ec01949",
+      "updatedAt": "2026-08-17T15:53:55.199Z"
+    },
+    "nav.mobile": {
+      "text": "移动端",
+      "sourceHash": "b1d702459399",
+      "updatedAt": "2026-08-17T15:53:55.199Z"
+    },
+    "mailing.eyebrow": {
+      "text": "保持联系",
+      "sourceHash": "c1abb6630b0e",
+      "updatedAt": "2026-08-17T15:53:55.199Z"
+    },
+    "mailing.title": {
+      "text": "保持我们正在构建的事物的了解",
+      "sourceHash": "e415b8d83f68",
+      "updatedAt": "2026-08-17T15:53:55.199Z"
+    },
+    "mailing.lede": {
+      "text": "关于 Octivate 的不定期更新、新的分析能力、加勒比地区运营语境的见解以及测试平台的机会。",
+      "sourceHash": "afa148dcdaae",
+      "updatedAt": "2026-08-17T15:53:55.199Z"
+    },
+    "mailing.benefit.updates": {
+      "text": "产品更新和新功能。",
+      "sourceHash": "45397ac51acf",
+      "updatedAt": "2026-08-17T15:53:55.199Z"
+    },
+    "mailing.benefit.notes": {
+      "text": "选定的加勒比运营语境洞察。",
+      "sourceHash": "8ced50f6a103",
+      "updatedAt": "2026-08-17T15:53:59.069Z"
+    },
+    "mailing.benefit.unsubscribe": {
+      "text": "抢先体验试点、简报和测试机会。",
+      "sourceHash": "e6df0dd5f574",
+      "updatedAt": "2026-08-17T15:53:59.069Z"
+    },
+    "mailing.email": {
+      "text": "电子邮件地址",
+      "sourceHash": "c94d3175a656",
+      "updatedAt": "2026-08-17T15:53:59.069Z"
+    },
+    "mailing.name": {
+      "text": "名字",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T15:53:59.069Z"
+    },
+    "mailing.nameOptional": {
+      "text": "(可选)",
+      "sourceHash": "b16c7ac6faff",
+      "updatedAt": "2026-08-17T15:53:59.069Z"
+    },
+    "mailing.emailPlaceholder": {
+      "text": "you@organisation.org",
+      "sourceHash": "2210623ebf8b",
+      "updatedAt": "2026-08-17T15:53:59.069Z"
+    },
+    "mailing.namePlaceholder": {
+      "text": "First name",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T15:53:59.069Z"
+    },
+    "mailing.consent": {
+      "text": "我同意偶尔收到 Octivate 的电子邮件。随时可以退订。",
+      "sourceHash": "251b640d0e70",
+      "updatedAt": "2026-08-17T15:53:59.069Z"
+    },
+    "mailing.join": {
+      "text": "加入列表",
+      "sourceHash": "04707f33d156",
+      "updatedAt": "2026-08-17T15:54:09.667Z"
+    },
+    "mailing.saving": {
+      "text": "保存中…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T15:54:09.667Z"
+    },
+    "mailing.optOut": {
+      "text": "取消订阅",
+      "sourceHash": "39eb4312f1ff",
+      "updatedAt": "2026-08-17T15:54:09.667Z"
+    },
+    "mailing.fine": {
+      "text": "您的详细信息仅存储在 Octivate 邮件列表中，且不出售。请参阅我们的隐私政策，了解我们如何处理电子邮件。",
+      "sourceHash": "45f14a872fda",
+      "updatedAt": "2026-08-17T15:54:09.667Z"
+    },
+    "mailing.consentRequired": {
+      "text": "请确认您想要产品更新。",
+      "sourceHash": "0bd437fefded",
+      "updatedAt": "2026-08-17T15:54:09.667Z"
+    },
+    "mailing.success": {
+      "text": "您已订阅 — 仅偶尔产品通知。",
+      "sourceHash": "fefa7875f49b",
+      "updatedAt": "2026-08-17T15:54:09.667Z"
+    },
+    "mailing.unsubscribed": {
+      "text": "您已退订。随时可以重新加入。",
+      "sourceHash": "15eae8c5d42e",
+      "updatedAt": "2026-08-17T15:54:09.667Z"
+    },
+    "mailing.networkError": {
+      "text": "网络错误。请检查您的连接并重试。",
+      "sourceHash": "916c8a25c301",
+      "updatedAt": "2026-08-17T15:54:09.667Z"
+    },
+    "mailing.genericError": {
+      "text": "发生错误。再试一次。",
+      "sourceHash": "4244e822a06c",
+      "updatedAt": "2026-08-17T15:55:10.963Z"
+    },
+    "land.hero.title": {
+      "text": "塑造加勒比地区决策的清晰度。",
+      "sourceHash": "c977ff7e2f70",
+      "updatedAt": "2026-08-17T15:55:10.963Z"
+    },
+    "land.hero.body": {
+      "text": "在一个充斥着竞争信号的地区，最难的就是知道它们共同意味着什么。Octivate 整合分散的地区信息，测试可信信息，并将其转化为不能拖延的决策的证据支持判断。",
+      "sourceHash": "e219cf53254c",
+      "updatedAt": "2026-08-17T15:55:10.963Z"
+    },
+    "land.hero.ctaPrimary": {
+      "text": "开始使用",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T15:55:10.963Z"
+    },
+    "land.hero.ctaSample": {
+      "text": "查看样例简报",
+      "sourceHash": "bdf4ce16698a",
+      "updatedAt": "2026-08-17T15:55:10.963Z"
+    },
+    "land.why.eyebrow": {
+      "text": "为什么选择Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T15:55:10.963Z"
+    },
+    "land.why.title": {
+      "text": "为加勒比地区信息的实际流动而设计。",
+      "sourceHash": "f2f24843f23e",
+      "updatedAt": "2026-08-17T15:55:10.963Z"
+    },
+    "land.why.1": {
+      "text": "地区信息在机构和司法管辖区之间分散。",
+      "sourceHash": "6a2168b0edc0",
+      "updatedAt": "2026-08-17T15:55:10.963Z"
+    },
+    "land.why.2": {
+      "text": "重要的语境经常出现在正式数据集之外。",
+      "sourceHash": "f24b4dfd9981",
+      "updatedAt": "2026-08-17T15:55:59.434Z"
+    },
+    "land.why.3": {
+      "text": "小规模关系可以使个人的行动异常后果重大。",
+      "sourceHash": "aa7f3c1348b3",
+      "updatedAt": "2026-08-17T15:55:59.434Z"
+    },
+    "land.why.4": {
+      "text": "区域、国际和国内动态经常重叠。",
+      "sourceHash": "7d7279cd7d5b",
+      "updatedAt": "2026-08-17T15:55:59.434Z"
+    },
+    "land.why.close": {
+      "text": "Octivate 是围绕这一运营现实设计的，而不是在事后将通用的全球情报产品适应到该地区。",
+      "sourceHash": "316ad433f656",
+      "updatedAt": "2026-08-17T15:55:59.434Z"
+    },
+    "land.lenses.title": {
+      "text": "Octivate 如何阅读加勒比地区",
+      "sourceHash": "f2b8e64c1256",
+      "updatedAt": "2026-08-17T15:55:59.434Z"
+    },
+    "land.lenses.lede": {
+      "text": "Octivate 通过三个相互关联的视角审视每一个问题，然后检查它们如何交叉。",
+      "sourceHash": "700e2367b157",
+      "updatedAt": "2026-08-17T15:55:59.434Z"
+    },
+    "land.lenses.power": {
+      "text": "权力",
+      "sourceHash": "7548ab52c3d1",
+      "updatedAt": "2026-08-17T15:55:59.434Z"
+    },
+    "land.lenses.power.q": {
+      "text": "谁可以塑造结果？",
+      "sourceHash": "0b0288ef46ce",
+      "updatedAt": "2026-08-17T15:55:59.434Z"
+    },
+    "land.lenses.power.body": {
+      "text": "权威, 影响力, 激励, 联盟和关系影响决策.",
+      "sourceHash": "34c4c47d1bce",
+      "updatedAt": "2026-08-17T15:57:21.715Z"
+    },
+    "land.lenses.systems": {
+      "text": "系统",
+      "sourceHash": "e26dfc1f8d96",
+      "updatedAt": "2026-08-17T15:57:21.715Z"
+    },
+    "land.lenses.systems.q": {
+      "text": "什么能够促进或限制行动?",
+      "sourceHash": "2c1c0efa8537",
+      "updatedAt": "2026-08-17T15:57:21.715Z"
+    },
+    "land.lenses.systems.body": {
+      "text": "机构, 监管, 能力和实施.",
+      "sourceHash": "f38b6e3ee324",
+      "updatedAt": "2026-08-17T15:57:21.715Z"
+    },
+    "land.lenses.narratives": {
+      "text": "叙事",
+      "sourceHash": "1c26c2b8063a",
+      "updatedAt": "2026-08-17T15:57:21.715Z"
+    },
+    "land.lenses.narratives.q": {
+      "text": "如何理解该问题?",
+      "sourceHash": "af380e3bacdb",
+      "updatedAt": "2026-08-17T15:57:21.715Z"
+    },
+    "land.lenses.narratives.body": {
+      "text": "框架, 合法性, 公众情感和塑造认知和行为的故事.",
+      "sourceHash": "4ad73376c397",
+      "updatedAt": "2026-08-17T15:57:21.715Z"
+    },
+    "land.how.eyebrow": {
+      "text": "Octivate 的工作原理",
+      "sourceHash": "fd1649f0e29c",
+      "updatedAt": "2026-08-17T15:57:21.715Z"
+    },
+    "land.how.title": {
+      "text": "从艰难的经营环境问题，到决策就绪的判断.",
+      "sourceHash": "e2a54852c40d",
+      "updatedAt": "2026-08-17T15:58:20.347Z"
+    },
+    "land.how.01.title": {
+      "text": "框定决策",
+      "sourceHash": "c7c7bf44e724",
+      "updatedAt": "2026-08-17T15:58:20.347Z"
+    },
+    "land.how.01.body": {
+      "text": "需要决定什么、何时决定，以及什么证据会改变答案.",
+      "sourceHash": "607c39bf28f6",
+      "updatedAt": "2026-08-17T15:58:20.347Z"
+    },
+    "land.how.02.title": {
+      "text": "寻找并验证证据",
+      "sourceHash": "427c8a624037",
+      "updatedAt": "2026-08-17T15:58:20.347Z"
+    },
+    "land.how.02.body": {
+      "text": "汇集相关来源，比较主张，识别矛盾，并浮现不确定性.",
+      "sourceHash": "1ab2f5a019c7",
+      "updatedAt": "2026-08-17T15:58:20.347Z"
+    },
+    "land.how.03.title": {
+      "text": "交付决策就绪的判断",
+      "sourceHash": "df73304ba4ed",
+      "updatedAt": "2026-08-17T15:58:20.347Z"
+    },
+    "land.how.03.body": {
+      "text": "将证据转化为选项、权衡、利益相关者考量、证据盲区和需要监测的信号.",
+      "sourceHash": "4680e62424c4",
+      "updatedAt": "2026-08-17T15:58:20.347Z"
+    },
+    "land.how.ctaSample": {
+      "text": "查看样例简报",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T15:58:20.347Z"
+    },
+    "land.disc.eyebrow": {
+      "text": "六学科一体化",
+      "sourceHash": "5758b703370e",
+      "updatedAt": "2026-08-17T15:59:53.370Z"
+    },
+    "land.disc.title": {
+      "text": "六学科。一体化的判断。",
+      "sourceHash": "ded00ef93dd7",
+      "updatedAt": "2026-08-17T15:59:53.370Z"
+    },
+    "land.disc.lede": {
+      "text": "每个学科贡献分析中的不同部分。它们共同将碎片化的证据转化为更清晰的重要事项，涵盖可能发生的情况和应如何应对。",
+      "sourceHash": "05bd7f63cdb4",
+      "updatedAt": "2026-08-17T15:59:53.370Z"
+    },
+    "land.disc.1.title": {
+      "text": "政治经济与地缘政治分析",
+      "sourceHash": "dd28e1937d74",
+      "updatedAt": "2026-08-17T15:59:53.370Z"
+    },
+    "land.disc.1.body": {
+      "text": "权威、经济利益和外部压力如何塑造决策及可能的结果。",
+      "sourceHash": "8afd68a3d3ef",
+      "updatedAt": "2026-08-17T15:59:53.370Z"
+    },
+    "land.disc.2.title": {
+      "text": "系统与预判分析",
+      "sourceHash": "253865fba412",
+      "updatedAt": "2026-08-17T15:59:53.370Z"
+    },
+    "land.disc.2.body": {
+      "text": "权威、经济利益和外部压力如何塑造决策及可能的结果。",
+      "sourceHash": "a4b68fecad0c",
+      "updatedAt": "2026-08-17T15:59:53.370Z"
+    },
+    "land.disc.3.title": {
+      "text": "利益相关者分析与互动",
+      "sourceHash": "fc1ee57068cc",
+      "updatedAt": "2026-08-17T15:59:53.370Z"
+    },
+    "land.disc.3.body": {
+      "text": "谁可以影响、阻碍或合法化决策，以及这些关系应如何管理。",
+      "sourceHash": "e4fa7ce7e339",
+      "updatedAt": "2026-08-17T16:00:32.869Z"
+    },
+    "land.disc.4.title": {
+      "text": "叙事监测与战略传播",
+      "sourceHash": "67e865e68529",
+      "updatedAt": "2026-08-17T16:00:32.869Z"
+    },
+    "land.disc.4.body": {
+      "text": "框架、合法性和公众解释如何影响行为、实施与响应。",
+      "sourceHash": "98cb45abf1e1",
+      "updatedAt": "2026-08-17T16:00:32.869Z"
+    },
+    "land.disc.5.title": {
+      "text": "开源情报与验证",
+      "sourceHash": "35756d94e827",
+      "updatedAt": "2026-08-17T16:00:32.869Z"
+    },
+    "land.disc.5.body": {
+      "text": "收集、验证和比较证据，以测试主张，识别矛盾并评估源权威。",
+      "sourceHash": "42f7468221bb",
+      "updatedAt": "2026-08-17T16:00:32.869Z"
+    },
+    "land.disc.6.title": {
+      "text": "决策分析与选项评估",
+      "sourceHash": "cc06adf088e1",
+      "updatedAt": "2026-08-17T16:00:32.869Z"
+    },
+    "land.disc.6.body": {
+      "text": "综合证据以比较选项、测试假设、评估权衡并识别需监测的信号。",
+      "sourceHash": "7108d1316127",
+      "updatedAt": "2026-08-17T16:00:32.869Z"
+    },
+    "land.cta.eyebrow": {
+      "text": "开始使用",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T16:00:32.869Z"
+    },
+    "land.cta.title": {
+      "text": "你想做出什么决定？",
+      "sourceHash": "2ce1ab5a8081",
+      "updatedAt": "2026-08-17T16:01:10.677Z"
+    },
+    "land.cta.body": {
+      "text": "创建账户，为 Octivate 提供真实的运营上下文问题，识别关键证据，并将其转化为决策就绪的分析。",
+      "sourceHash": "11f71cd06f74",
+      "updatedAt": "2026-08-17T16:01:10.677Z"
+    },
+    "land.cta.create": {
+      "text": "创建账户",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T16:01:10.677Z"
+    },
+    "land.cta.sample": {
+      "text": "查看样例简报",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T16:01:10.677Z"
+    },
+    "land.cta.emailPrefix": {
+      "text": "或邮箱",
+      "sourceHash": "921d0ad714dc",
+      "updatedAt": "2026-08-17T16:01:10.677Z"
+    },
+    "land.about.body": {
+      "text": "面向行动的决策智能，专为复杂的加勒比运营环境而设。CENSII 开发的 Octivate 将碎片化的加勒比证据汇聚于一处，提供结构化视图，助力更清晰的决策。",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T16:01:10.677Z"
+    },
+    "land.about.censii": {
+      "text": "关于 CENSII",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T16:01:10.677Z"
+    },
+    "land.about.team": {
+      "text": "团队",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T16:01:10.677Z"
+    },
+    "land.mail.fab": {
+      "text": "订阅邮件列表",
+      "sourceHash": "dc46f4e0b25c",
+      "updatedAt": "2026-08-17T16:03:05.788Z"
+    },
+    "land.tech.heading": {
+      "text": "技术",
+      "sourceHash": "1310a448775a",
+      "updatedAt": "2026-08-17T16:03:05.788Z"
+    },
+    "land.tech.lede": {
+      "text": "用于分析的模型路由和助手—计划的支付通道。",
+      "sourceHash": "d150c5578dfd",
+      "updatedAt": "2026-08-17T16:03:05.788Z"
+    },
+    "land.tech.demoCta": {
+      "text": "观看1分钟演示",
+      "sourceHash": "db9b420f3fdb",
+      "updatedAt": "2026-08-17T16:03:05.788Z"
+    },
+    "land.tech.demoKicker": {
+      "text": "产品漫游",
+      "sourceHash": "76b995c4422a",
+      "updatedAt": "2026-08-17T16:03:05.788Z"
+    },
+    "land.tech.demoTitle": {
+      "text": "一分钟内查看Octivate",
+      "sourceHash": "20abdfb8380b",
+      "updatedAt": "2026-08-17T16:03:05.788Z"
+    },
+    "land.tech.demoBody": {
+      "text": "简短的产品漫游，包括加勒比决策剧场的框架搭建、证据验证以及决策就绪简报的开启。",
+      "sourceHash": "a9418180a664",
+      "updatedAt": "2026-08-17T16:03:05.788Z"
+    },
+    "land.tech.demoSample": {
+      "text": "打开样本简报",
+      "sourceHash": "5ed6e8105a32",
+      "updatedAt": "2026-08-17T16:03:05.788Z"
+    },
+    "land.tech.demoSignup": {
+      "text": "创建账户",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T16:04:06.182Z"
+    },
+    "land.tech.demoClose": {
+      "text": "关闭演示",
+      "sourceHash": "629a741a5ebc",
+      "updatedAt": "2026-08-17T16:04:06.182Z"
+    },
+    "land.ws.eyebrow": {
+      "text": "工作区内部",
+      "sourceHash": "2b4c8c6a7bc7",
+      "updatedAt": "2026-08-17T16:04:06.182Z"
+    },
+    "land.ws.title": {
+      "text": "实时产品表面 — 无需登录即可探索。",
+      "sourceHash": "37fc4592ccec",
+      "updatedAt": "2026-08-17T16:04:06.182Z"
+    },
+    "land.ws.lede": {
+      "text": "悬停图表，切换标签，并在地图上点击剧院。本演示使用样本加勒比数据并镜像概览样式 — 无账户操作。",
+      "sourceHash": "e46ccd61513d",
+      "updatedAt": "2026-08-17T16:04:06.182Z"
+    },
+    "land.ws.chromeLabel": {
+      "text": "Octivate · 概览",
+      "sourceHash": "af30e9554fe0",
+      "updatedAt": "2026-08-17T16:04:06.182Z"
+    },
+    "land.ws.tabsLabel": {
+      "text": "工作区演示标签",
+      "sourceHash": "4dfeacdbd87c",
+      "updatedAt": "2026-08-17T16:04:06.182Z"
+    },
+    "land.ws.tabInsights": {
+      "text": "洞察",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T16:04:06.182Z"
+    },
+    "land.ws.tabCoverage": {
+      "text": "覆盖范围",
+      "sourceHash": "80e13549b47a",
+      "updatedAt": "2026-08-17T16:04:39.971Z"
+    },
+    "land.ws.riskMix": {
+      "text": "风险组合",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T16:04:39.971Z"
+    },
+    "land.ws.avgConfidence": {
+      "text": "平均置信度",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T16:04:39.971Z"
+    },
+    "land.ws.briefs": {
+      "text": "简报",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T16:04:39.971Z"
+    },
+    "land.ws.briefsFinal": {
+      "text": "最终",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T16:04:39.971Z"
+    },
+    "land.ws.briefsDraft": {
+      "text": "草稿",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T16:04:39.971Z"
+    },
+    "land.ws.trends": {
+      "text": "最新趋势",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T16:04:39.971Z"
+    },
+    "land.ws.recentBriefs": {
+      "text": "最近简报",
+      "sourceHash": "157c46a63c49",
+      "updatedAt": "2026-08-17T16:04:39.971Z"
+    },
+    "land.ws.colBrief": {
+      "text": "简要",
+      "sourceHash": "230e0f8d137e",
+      "updatedAt": "2026-08-17T16:05:14.511Z"
+    },
+    "land.ws.colCountry": {
+      "text": "国家",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T16:05:14.511Z"
+    },
+    "land.ws.colRisk": {
+      "text": "风险",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T16:05:14.511Z"
+    },
+    "land.ws.colConfidence": {
+      "text": "置信度",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T16:05:14.511Z"
+    },
+    "land.ws.coverageSide": {
+      "text": "选定剧场",
+      "sourceHash": "1f2f630d6e6c",
+      "updatedAt": "2026-08-17T16:05:14.511Z"
+    },
+    "land.ws.coverageHint": {
+      "text": "点击国家标记以列出样本项目。",
+      "sourceHash": "75953108dd09",
+      "updatedAt": "2026-08-17T16:05:14.511Z"
+    },
+    "land.ws.coverageStats": {
+      "text": "{n} 项目 · {active} 活跃",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T16:05:14.511Z"
+    },
+    "land.ws.ctaSample": {
+      "text": "探索样本简报",
+      "sourceHash": "72048fd54a2e",
+      "updatedAt": "2026-08-17T16:05:14.511Z"
+    },
+    "footer.blurb": {
+      "text": "Action-oriented decision intelligence for complex Caribbean operating environments. Developed by CENSII, Octivate brings fragmented Caribbean evidence into one structured view for clearer decisions.",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T16:05:16.618Z"
+    },
+    "footer.explore": {
+      "text": "Explore",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T16:05:16.618Z"
+    },
+    "footer.product": {
+      "text": "Product",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T16:05:16.618Z"
+    },
+    "footer.why": {
+      "text": "Why Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T16:05:16.618Z"
+    },
+    "footer.how": {
+      "text": "How it works",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T16:05:16.618Z"
+    },
+    "footer.disciplines": {
+      "text": "Six disciplines",
+      "sourceHash": "926d0eec2cb3",
+      "updatedAt": "2026-08-17T16:05:16.618Z"
+    },
+    "footer.sample": {
+      "text": "Sample Brief",
+      "sourceHash": "8ad8c7f36656",
+      "updatedAt": "2026-08-17T16:05:16.618Z"
+    },
+    "footer.takeAction": {
+      "text": "Take action",
+      "sourceHash": "5ed99cd0b91e",
+      "updatedAt": "2026-08-17T16:05:16.618Z"
+    },
+    "footer.getStarted": {
+      "text": "Get Started",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T16:05:17.815Z"
+    },
+    "footer.signIn": {
+      "text": "Sign in",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T16:05:17.815Z"
+    },
+    "footer.pricing": {
+      "text": "Pricing",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T16:05:17.815Z"
+    },
+    "footer.contact": {
+      "text": "Contact us",
+      "sourceHash": "4832e45812a2",
+      "updatedAt": "2026-08-17T16:05:17.815Z"
+    },
+    "footer.about": {
+      "text": "About",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T16:05:17.815Z"
+    },
+    "footer.aboutCensii": {
+      "text": "About CENSII",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T16:05:17.815Z"
+    },
+    "footer.team": {
+      "text": "Team",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T16:05:17.815Z"
+    },
+    "footer.legal": {
+      "text": "Legal",
+      "sourceHash": "902c91d94e0f",
+      "updatedAt": "2026-08-17T16:05:17.815Z"
+    },
+    "footer.privacy": {
+      "text": "隐私政策",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T16:05:48.665Z"
+    },
+    "footer.terms": {
+      "text": "服务条款",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T16:05:48.665Z"
+    },
+    "footer.cookies": {
+      "text": "Cookie 政策",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T16:05:48.665Z"
+    },
+    "footer.cookieSettings": {
+      "text": "Cookie 设置",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T16:05:48.665Z"
+    },
+    "footer.seo": {
+      "text": "Octivate by CENSII 提供加勒比决策智能：Power–Systems–Narratives 分析、证据验证、选项评估和监测，适用于在特立尼达和多巴哥、牙买加、巴巴多斯、圭亚那、苏里南、OECS 以及更广泛的地区运营的组织。",
+      "sourceHash": "0e3cd5403e35",
+      "updatedAt": "2026-08-17T16:05:48.665Z"
+    },
+    "footer.backToTop": {
+      "text": "返回顶部",
+      "sourceHash": "d9c883a90573",
+      "updatedAt": "2026-08-17T16:05:48.665Z"
+    },
+    "footer.copyright": {
+      "text": "© 2026 CENSII · Octivate · octivate.io",
+      "sourceHash": "134a51892744",
+      "updatedAt": "2026-08-17T16:05:48.665Z"
+    },
+    "auth.signin.kicker": {
+      "text": "工作区访问",
+      "sourceHash": "9973694cce2b",
+      "updatedAt": "2026-08-17T16:05:48.665Z"
+    },
+    "auth.signin.title": {
+      "text": "登录 Octivate",
+      "sourceHash": "dd0e28bb0b7b",
+      "updatedAt": "2026-08-17T16:05:50.502Z"
+    },
+    "auth.signin.lede": {
+      "text": "使用您的 Octivate 邮箱或用户名以及密码打开决策智能工作区。",
+      "sourceHash": "24e55d4e1216",
+      "updatedAt": "2026-08-17T16:05:50.502Z"
+    },
+    "auth.signin.submit": {
+      "text": "登录",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T16:05:50.502Z"
+    },
+    "auth.signin.switchText": {
+      "text": "没有账户？",
+      "sourceHash": "f838dc11db15",
+      "updatedAt": "2026-08-17T16:05:50.502Z"
+    },
+    "auth.signin.switchLabel": {
+      "text": "注册",
+      "sourceHash": "0b81497c8589",
+      "updatedAt": "2026-08-17T16:05:50.502Z"
+    },
+    "auth.signin.visualTitle": {
+      "text": "加勒比决策的清晰度",
+      "sourceHash": "1294b968f5da",
+      "updatedAt": "2026-08-17T16:05:50.502Z"
+    },
+    "auth.signin.visualBody": {
+      "text": "连接分散的区域信号，测试可信之处，并凭据据证据做出判断前进。",
+      "sourceHash": "8847c4995d52",
+      "updatedAt": "2026-08-17T16:05:50.502Z"
+    },
+    "auth.signup.kicker": {
+      "text": "免费层级",
+      "sourceHash": "5305bc7bfd0f",
+      "updatedAt": "2026-08-17T16:05:50.502Z"
+    },
+    "auth.signup.title": {
+      "text": "创建您的 Octivate 访问权限",
+      "sourceHash": "46146191c6b9",
+      "updatedAt": "2026-08-17T16:07:35.579Z"
+    },
+    "auth.signup.lede": {
+      "text": "使用与登录相同的电子邮件/用户名和密码字段，或在启用时生成安全凭据。",
+      "sourceHash": "4188f5813dcf",
+      "updatedAt": "2026-08-17T16:07:35.579Z"
+    },
+    "auth.signup.submit": {
+      "text": "创建账户",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T16:07:35.579Z"
+    },
+    "auth.signup.switchText": {
+      "text": "已有账户？",
+      "sourceHash": "8559034a07c9",
+      "updatedAt": "2026-08-17T16:07:35.579Z"
+    },
+    "auth.signup.switchLabel": {
+      "text": "登录",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T16:07:35.579Z"
+    },
+    "auth.signup.visualTitle": {
+      "text": "决策智能，即刻运行",
+      "sourceHash": "7428fa4a3e6b",
+      "updatedAt": "2026-08-17T16:07:35.579Z"
+    },
+    "auth.signup.visualBody": {
+      "text": "构建问题，跨 Power–Systems–Narratives 收集证据，并获得可执行的选项。",
+      "sourceHash": "6ce5101d86c9",
+      "updatedAt": "2026-08-17T16:07:35.579Z"
+    },
+    "auth.email": {
+      "text": "电子邮件或用户名",
+      "sourceHash": "094f6a59348a",
+      "updatedAt": "2026-08-17T16:07:35.579Z"
+    },
+    "auth.password": {
+      "text": "密码",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T16:07:38.885Z"
+    },
+    "auth.forgot": {
+      "text": "忘记密码？",
+      "sourceHash": "4c29f7f03358",
+      "updatedAt": "2026-08-17T16:07:38.885Z"
+    },
+    "auth.showPassword": {
+      "text": "显示密码",
+      "sourceHash": "044b852f30b6",
+      "updatedAt": "2026-08-17T16:07:38.885Z"
+    },
+    "auth.hidePassword": {
+      "text": "隐藏密码",
+      "sourceHash": "e40123b4e787",
+      "updatedAt": "2026-08-17T16:07:38.885Z"
+    },
+    "auth.back": {
+      "text": "返回",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T16:07:38.885Z"
+    },
+    "auth.busy": {
+      "text": "请稍候…",
+      "sourceHash": "5afeca73bef6",
+      "updatedAt": "2026-08-17T16:07:38.885Z"
+    },
+    "ws.section.workspace": {
+      "text": "工作区",
+      "sourceHash": "4ca0a75c2b7f",
+      "updatedAt": "2026-08-17T16:07:38.885Z"
+    },
+    "ws.section.intelligence": {
+      "text": "情报",
+      "sourceHash": "c698f940a03e",
+      "updatedAt": "2026-08-17T16:07:38.885Z"
+    },
+    "ws.section.analysis": {
+      "text": "分析",
+      "sourceHash": "62c7fcf46e27",
+      "updatedAt": "2026-08-17T16:07:57.162Z"
+    },
+    "ws.nav.overview": {
+      "text": "概览",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T16:07:57.162Z"
+    },
+    "ws.nav.projects": {
+      "text": "项目",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T16:07:57.162Z"
+    },
+    "ws.nav.monitors": {
+      "text": "监控",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T16:07:57.162Z"
+    },
+    "ws.nav.sources": {
+      "text": "数据源",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T16:07:57.162Z"
+    },
+    "ws.nav.briefs": {
+      "text": "简报",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T16:07:57.162Z"
+    },
+    "ws.nav.stakeholders": {
+      "text": "利益相关者",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T16:07:57.162Z"
+    },
+    "ws.mode.workspace": {
+      "text": "工作区模式",
+      "sourceHash": "8ce322f49b05",
+      "updatedAt": "2026-08-17T16:07:57.162Z"
+    },
+    "ws.mode.operator": {
+      "text": "操作员模式",
+      "sourceHash": "594a7f797f7d",
+      "updatedAt": "2026-08-17T16:08:32.271Z"
+    },
+    "ws.askStrategic": {
+      "text": "提问战略问题",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T16:08:32.271Z"
+    },
+    "ws.operatorDashboard": {
+      "text": "操作员仪表盘",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T16:08:32.271Z"
+    },
+    "ws.collapseSidebar": {
+      "text": "折叠侧边栏",
+      "sourceHash": "9e6876286e45",
+      "updatedAt": "2026-08-17T16:08:32.271Z"
+    },
+    "ws.expandSidebar": {
+      "text": "展开侧边栏",
+      "sourceHash": "f462e889fd88",
+      "updatedAt": "2026-08-17T16:08:32.271Z"
+    },
+    "ws.openMenu": {
+      "text": "打开菜单",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T16:08:32.271Z"
+    },
+    "ws.closeMenu": {
+      "text": "关闭菜单",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T16:08:32.271Z"
+    },
+    "ws.overview.title": {
+      "text": "概览",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T16:08:32.271Z"
+    },
+    "ws.overview.lede": {
+      "text": "加勒比智能工作空间 — 趋势、项目、简报、套餐与使用情况。",
+      "sourceHash": "f89a3516e147",
+      "updatedAt": "2026-08-17T16:08:34.059Z"
+    },
+    "ws.overview.newAnalysis": {
+      "text": "新分析",
+      "sourceHash": "3874bbceddf5",
+      "updatedAt": "2026-08-17T16:08:34.059Z"
+    },
+    "ws.overview.tab.insights": {
+      "text": "洞察",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T16:08:34.059Z"
+    },
+    "ws.overview.tab.pipeline": {
+      "text": "管道",
+      "sourceHash": "32b1d5a78493",
+      "updatedAt": "2026-08-17T16:08:34.059Z"
+    },
+    "ws.overview.riskMix": {
+      "text": "风险构成",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T16:08:34.059Z"
+    },
+    "ws.overview.riskMixSub": {
+      "text": "按风险级别的简报",
+      "sourceHash": "ec9ed226c4fa",
+      "updatedAt": "2026-08-17T16:08:34.059Z"
+    },
+    "ws.overview.latestTrends": {
+      "text": "最新趋势",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T16:08:34.059Z"
+    },
+    "ws.overview.avgConfidence": {
+      "text": "平均置信度",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T16:08:34.059Z"
+    },
+    "ws.overview.briefs": {
+      "text": "简报",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T16:08:37.321Z"
+    },
+    "ws.overview.briefsTotal": {
+      "text": "{n} 总计",
+      "sourceHash": "aeb6ea7ac893",
+      "updatedAt": "2026-08-17T16:08:37.321Z"
+    },
+    "ws.overview.final": {
+      "text": "最终",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T16:08:37.321Z"
+    },
+    "ws.overview.draft": {
+      "text": "草稿",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T16:08:37.321Z"
+    },
+    "ws.overview.countryPacks": {
+      "text": "国家套餐",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T16:08:37.321Z"
+    },
+    "ws.overview.caribbeanMarkets": {
+      "text": "{n} 加勒比市场",
+      "sourceHash": "9f1512466503",
+      "updatedAt": "2026-08-17T16:08:37.321Z"
+    },
+    "ws.overview.aiUsage": {
+      "text": "AI 使用量",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T16:08:37.321Z"
+    },
+    "ws.overview.tokens": {
+      "text": "tokens",
+      "sourceHash": "3391436a4e72",
+      "updatedAt": "2026-08-17T16:08:37.321Z"
+    },
+    "ws.overview.estCost": {
+      "text": "估计费用 ${amount}",
+      "sourceHash": "f9dc4ad795a4",
+      "updatedAt": "2026-08-17T16:09:24.160Z"
+    },
+    "ws.overview.agenticPipeline": {
+      "text": "智能体管道",
+      "sourceHash": "a8b4a909f8ce",
+      "updatedAt": "2026-08-17T16:09:24.160Z"
+    },
+    "ws.overview.agenticLede": {
+      "text": "八个专业的代理构建输入 → 证据 → PSN 分析 → 决策简报.",
+      "sourceHash": "d5d084c354a2",
+      "updatedAt": "2026-08-17T16:09:24.160Z"
+    },
+    "ws.overview.startWorkflow": {
+      "text": "开始工作流",
+      "sourceHash": "5d07bdb74e62",
+      "updatedAt": "2026-08-17T16:09:24.160Z"
+    },
+    "ws.overview.latestBriefs": {
+      "text": "最新简报",
+      "sourceHash": "52ce1d088ad9",
+      "updatedAt": "2026-08-17T16:09:24.160Z"
+    },
+    "ws.overview.viewAll": {
+      "text": "查看全部",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T16:09:24.160Z"
+    },
+    "ws.overview.col.title": {
+      "text": "标题",
+      "sourceHash": "768e0c1c6957",
+      "updatedAt": "2026-08-17T16:09:24.160Z"
+    },
+    "ws.overview.col.country": {
+      "text": "国家",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T16:09:24.160Z"
+    },
+    "ws.overview.col.risk": {
+      "text": "风险",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T16:09:29.029Z"
+    },
+    "ws.overview.col.confidence": {
+      "text": "置信度",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T16:09:29.029Z"
+    },
+    "ws.overview.activeProjects": {
+      "text": "活跃项目",
+      "sourceHash": "f361946445f2",
+      "updatedAt": "2026-08-17T16:09:29.029Z"
+    },
+    "ws.overview.monitoring": {
+      "text": "监控",
+      "sourceHash": "a81434589757",
+      "updatedAt": "2026-08-17T16:09:29.029Z"
+    },
+    "ws.overview.briefsLabel": {
+      "text": "简报",
+      "sourceHash": "81aad378d8e5",
+      "updatedAt": "2026-08-17T16:09:29.029Z"
+    },
+    "ws.overview.sourcesLabel": {
+      "text": "来源",
+      "sourceHash": "bce16dd02608",
+      "updatedAt": "2026-08-17T16:09:29.029Z"
+    },
+    "ws.overview.runsLabel": {
+      "text": "运行",
+      "sourceHash": "71b3f0bbe7d5",
+      "updatedAt": "2026-08-17T16:09:29.029Z"
+    },
+    "ws.overview.sessions": {
+      "text": "会话",
+      "sourceHash": "e11e37a9253b",
+      "updatedAt": "2026-08-17T16:09:29.029Z"
+    },
+    "ws.overview.total": {
+      "text": "总计",
+      "sourceHash": "5a537e209151",
+      "updatedAt": "2026-08-17T16:09:47.606Z"
+    },
+    "ws.overview.map.title": {
+      "text": "劇院覆蓋",
+      "sourceHash": "597b741ee58c",
+      "updatedAt": "2026-08-17T16:09:47.606Z"
+    },
+    "ws.overview.map.lede": {
+      "text": "实时地图：按国家展示项目劇院 — 悬停查看数量，点击打开项目列表。",
+      "sourceHash": "50dd24fff5fe",
+      "updatedAt": "2026-08-17T16:09:47.606Z"
+    },
+    "ws.overview.map.summary": {
+      "text": "{countries} 国家 · {projects} 项目",
+      "sourceHash": "e09cdd8b4569",
+      "updatedAt": "2026-08-17T16:09:47.606Z"
+    },
+    "ws.overview.map.live": {
+      "text": "实时",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T16:09:47.606Z"
+    },
+    "ws.overview.map.liveHint": {
+      "text": "来自工作区的 lightning 刷新和轮询的更新",
+      "sourceHash": "de35b65a98de",
+      "updatedAt": "2026-08-17T16:09:47.606Z"
+    },
+    "ws.overview.map.updating": {
+      "text": "更新中",
+      "sourceHash": "ec6952e09b9c",
+      "updatedAt": "2026-08-17T16:09:47.606Z"
+    },
+    "ws.overview.map.updatingHint": {
+      "text": "正在刷新劇院覆蓋",
+      "sourceHash": "64415f399cc6",
+      "updatedAt": "2026-08-17T16:09:47.606Z"
+    },
+    "ws.overview.map.reset": {
+      "text": "加勒比海",
+      "sourceHash": "4a2e3865acb4",
+      "updatedAt": "2026-08-17T16:10:22.767Z"
+    },
+    "ws.overview.map.resetHint": {
+      "text": "将地图焦点重置至加勒比海",
+      "sourceHash": "7d81dd21b898",
+      "updatedAt": "2026-08-17T16:10:22.767Z"
+    },
+    "ws.overview.map.hoverStats": {
+      "text": "{n} 项目 · {active} 活跃",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T16:10:22.767Z"
+    },
+    "ws.overview.map.clickHint": {
+      "text": "点击查看项目",
+      "sourceHash": "daaaa430f8b1",
+      "updatedAt": "2026-08-17T16:10:22.767Z"
+    },
+    "ws.overview.map.empty": {
+      "text": "创建一个项目点亮地图.",
+      "sourceHash": "40ee077e9f45",
+      "updatedAt": "2026-08-17T16:10:22.767Z"
+    },
+    "ws.overview.map.emptyCountry": {
+      "text": "此国家暂无项目.",
+      "sourceHash": "561147a5f7cd",
+      "updatedAt": "2026-08-17T16:10:22.767Z"
+    },
+    "ws.overview.map.modalKicker": {
+      "text": "国家院线",
+      "sourceHash": "93a542767481",
+      "updatedAt": "2026-08-17T16:10:22.767Z"
+    },
+    "ws.overview.map.projectCount": {
+      "text": "{n} 项目 · {active} 活跃",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T16:10:22.767Z"
+    },
+    "ws.overview.map.close": {
+      "text": "Close country projects",
+      "sourceHash": "9dcfebb87cf3",
+      "updatedAt": "2026-08-17T16:10:24.096Z"
+    },
+    "ws.overview.map.projectsWord": {
+      "text": "projects",
+      "sourceHash": "b37b5674e3d0",
+      "updatedAt": "2026-08-17T16:10:24.096Z"
+    },
+    "ws.projects.title": {
+      "text": "Projects",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T16:10:24.096Z"
+    },
+    "ws.projects.lede": {
+      "text": "Scope a decision theatre by country and sector, then run the agent workflow to produce a brief.",
+      "sourceHash": "89564efb1fce",
+      "updatedAt": "2026-08-17T16:10:24.096Z"
+    },
+    "ws.projects.sort.updated": {
+      "text": "Sort: Recently updated",
+      "sourceHash": "92e532b2ba41",
+      "updatedAt": "2026-08-17T16:10:24.096Z"
+    },
+    "ws.projects.sort.name": {
+      "text": "Sort: Name",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T16:10:24.096Z"
+    },
+    "ws.projects.sort.country": {
+      "text": "Sort: Country",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T16:10:24.096Z"
+    },
+    "ws.projects.kpi.projects": {
+      "text": "Projects",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T16:10:24.096Z"
+    },
+    "ws.projects.kpi.active": {
+      "text": "活跃",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T16:10:26.408Z"
+    },
+    "ws.projects.kpi.activeHint": {
+      "text": "进行中",
+      "sourceHash": "b6bd42e4e730",
+      "updatedAt": "2026-08-17T16:10:26.408Z"
+    },
+    "ws.projects.kpi.withQuestion": {
+      "text": "有问题",
+      "sourceHash": "adfd7bee4031",
+      "updatedAt": "2026-08-17T16:10:26.408Z"
+    },
+    "ws.projects.kpi.withQuestionHint": {
+      "text": "准备好代理",
+      "sourceHash": "1bace2d9eaed",
+      "updatedAt": "2026-08-17T16:10:26.408Z"
+    },
+    "ws.projects.kpi.countries": {
+      "text": "国家",
+      "sourceHash": "8467c0d99c79",
+      "updatedAt": "2026-08-17T16:10:26.408Z"
+    },
+    "ws.projects.filter.all": {
+      "text": "全部",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T16:10:26.408Z"
+    },
+    "ws.projects.filter.active": {
+      "text": "活跃",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T16:10:26.408Z"
+    },
+    "ws.projects.filter.needsQuestion": {
+      "text": "需要问题",
+      "sourceHash": "d47967177def",
+      "updatedAt": "2026-08-17T16:10:26.408Z"
+    },
+    "ws.projects.filter.archived": {
+      "text": "已归档",
+      "sourceHash": "eddc813f35b1",
+      "updatedAt": "2026-08-17T16:10:29.342Z"
+    },
+    "ws.projects.search": {
+      "text": "搜索项目、国家、部门…",
+      "sourceHash": "277b594595b9",
+      "updatedAt": "2026-08-17T16:10:29.342Z"
+    },
+    "ws.projects.new": {
+      "text": "新建项目",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T16:10:29.342Z"
+    },
+    "ws.projects.newHint": {
+      "text": "打开决策剧场",
+      "sourceHash": "08c180ad8a2b",
+      "updatedAt": "2026-08-17T16:10:29.342Z"
+    },
+    "ws.projects.newInvite": {
+      "text": "从这里开始",
+      "sourceHash": "54acc2806d4d",
+      "updatedAt": "2026-08-17T16:10:29.342Z"
+    },
+    "ws.projects.newClose": {
+      "text": "关闭剧本",
+      "sourceHash": "49f1b7e9f2a5",
+      "updatedAt": "2026-08-17T16:10:29.342Z"
+    },
+    "ws.projects.newPanelLede": {
+      "text": "命名剧场，设定国家和部门，然后创建——随后即可提问战略问题。",
+      "sourceHash": "8d7dc359b19a",
+      "updatedAt": "2026-08-17T16:10:29.342Z"
+    },
+    "ws.projects.name": {
+      "text": "项目名称",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T16:10:29.342Z"
+    },
+    "ws.projects.namePlaceholder": {
+      "text": "例如：圭亚那能源准备",
+      "sourceHash": "6cc1d1132f94",
+      "updatedAt": "2026-08-17T16:10:47.333Z"
+    },
+    "ws.projects.country": {
+      "text": "国家",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T16:10:47.333Z"
+    },
+    "ws.projects.sector": {
+      "text": "行业",
+      "sourceHash": "39fd2070d41b",
+      "updatedAt": "2026-08-17T16:10:47.333Z"
+    },
+    "ws.projects.cancel": {
+      "text": "取消",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T16:10:47.333Z"
+    },
+    "ws.projects.create": {
+      "text": "创建项目",
+      "sourceHash": "a8d8ff51e4c8",
+      "updatedAt": "2026-08-17T16:10:47.333Z"
+    },
+    "ws.projects.creating": {
+      "text": "创建中…",
+      "sourceHash": "94d7d8ee473f",
+      "updatedAt": "2026-08-17T16:10:47.333Z"
+    },
+    "ws.projects.empty": {
+      "text": "暂无项目",
+      "sourceHash": "cac330d7f9c7",
+      "updatedAt": "2026-08-17T16:10:47.333Z"
+    },
+    "ws.projects.emptyHint": {
+      "text": "创建一个项目以定义国家、行业和团队需要解答的战略问题。",
+      "sourceHash": "e44e10633ff5",
+      "updatedAt": "2026-08-17T16:10:47.333Z"
+    },
+    "ws.projects.noMatches": {
+      "text": "无匹配结果",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T16:10:50.512Z"
+    },
+    "ws.projects.noMatchesHint": {
+      "text": "尝试不同的搜索或过滤条件 — 或者创建一个新项目。",
+      "sourceHash": "42a5a4c7b0f8",
+      "updatedAt": "2026-08-17T16:10:50.512Z"
+    },
+    "ws.projects.createdTitle": {
+      "text": "项目已创建",
+      "sourceHash": "76556f09a383",
+      "updatedAt": "2026-08-17T16:10:50.512Z"
+    },
+    "ws.projects.createdBody": {
+      "text": "您的新决策剧场已准备就绪。",
+      "sourceHash": "37fcd61e8ade",
+      "updatedAt": "2026-08-17T16:10:50.512Z"
+    },
+    "ws.projects.createFailed": {
+      "text": "无法创建项目",
+      "sourceHash": "373981fcc313",
+      "updatedAt": "2026-08-17T16:10:50.512Z"
+    },
+    "ws.projects.edit": {
+      "text": "编辑项目",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T16:10:50.512Z"
+    },
+    "ws.projects.delete": {
+      "text": "删除项目",
+      "sourceHash": "af1456f256eb",
+      "updatedAt": "2026-08-17T16:10:50.512Z"
+    },
+    "ws.projects.deleted": {
+      "text": "项目已删除",
+      "sourceHash": "6b17c222a23a",
+      "updatedAt": "2026-08-17T16:10:50.512Z"
+    },
+    "ws.projects.updated": {
+      "text": "项目已更新",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T16:11:48.935Z"
+    },
+    "ws.projects.deleteConfirmTitle": {
+      "text": "删除该项目?",
+      "sourceHash": "346956aef203",
+      "updatedAt": "2026-08-17T16:11:48.935Z"
+    },
+    "ws.projects.deleteConfirmBody": {
+      "text": "该项目的简报、工作流会话和上传的文档也将被删除。此操作无法撤销。",
+      "sourceHash": "82d71fd44e99",
+      "updatedAt": "2026-08-17T16:11:48.935Z"
+    },
+    "ws.project.askStrategic": {
+      "text": "提问战略问题",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T16:11:48.935Z"
+    },
+    "ws.project.depth.rapid": {
+      "text": "快速 — 操作前验证",
+      "sourceHash": "6b189c5ab71d",
+      "updatedAt": "2026-08-17T16:11:48.935Z"
+    },
+    "ws.project.depth.standard": {
+      "text": "标准 — 平衡草稿",
+      "sourceHash": "49d0af9134ee",
+      "updatedAt": "2026-08-17T16:11:48.935Z"
+    },
+    "ws.project.depth.deep": {
+      "text": "深入 — 更广泛的情景",
+      "sourceHash": "ed533d1558c6",
+      "updatedAt": "2026-08-17T16:11:48.935Z"
+    },
+    "ws.project.depth.rapidShort": {
+      "text": "快速",
+      "sourceHash": "9a6ee6647c4c",
+      "updatedAt": "2026-08-17T16:11:48.935Z"
+    },
+    "ws.project.depth.standardShort": {
+      "text": "标准",
+      "sourceHash": "2dfa66079d9b",
+      "updatedAt": "2026-08-17T16:12:17.409Z"
+    },
+    "ws.project.depth.deepShort": {
+      "text": "深度分析",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T16:12:17.409Z"
+    },
+    "ws.project.depth.rapidHint": {
+      "text": "仅提供定向发现；仍需人工审阅。",
+      "sourceHash": "5a5cdba724e2",
+      "updatedAt": "2026-08-17T16:12:17.409Z"
+    },
+    "ws.project.depth.standardHint": {
+      "text": "平衡的 PSN 草稿待人工审阅。",
+      "sourceHash": "15aa10c6c242",
+      "updatedAt": "2026-08-17T16:12:17.409Z"
+    },
+    "ws.project.depth.deepHint": {
+      "text": "更广泛的场景；永不在无审阅情况下自动最终。",
+      "sourceHash": "bb30efc3d878",
+      "updatedAt": "2026-08-17T16:12:17.409Z"
+    },
+    "ws.project.run": {
+      "text": "运行代理工作流",
+      "sourceHash": "7dd6527ed98b",
+      "updatedAt": "2026-08-17T16:12:17.409Z"
+    },
+    "ws.project.agentsRunning": {
+      "text": "代理运行中…",
+      "sourceHash": "e072b895cb8b",
+      "updatedAt": "2026-08-17T16:12:17.409Z"
+    },
+    "ws.project.rerunning": {
+      "text": "重新运行中…",
+      "sourceHash": "53920a3e9816",
+      "updatedAt": "2026-08-17T16:12:17.409Z"
+    },
+    "ws.project.rerun": {
+      "text": "重新运行工作流",
+      "sourceHash": "7792e8052528",
+      "updatedAt": "2026-08-17T16:12:19.122Z"
+    },
+    "ws.project.forceRerun": {
+      "text": "强制重新运行（卡住）",
+      "sourceHash": "26a80611d4e0",
+      "updatedAt": "2026-08-17T16:12:19.122Z"
+    },
+    "ws.project.linkedMonitors": {
+      "text": "关联的监视器",
+      "sourceHash": "2788d1641b22",
+      "updatedAt": "2026-08-17T16:12:19.122Z"
+    },
+    "ws.project.noMonitors": {
+      "text": "暂无关联的监视器",
+      "sourceHash": "b202f7c531ac",
+      "updatedAt": "2026-08-17T16:12:19.122Z"
+    },
+    "ws.project.briefReady": {
+      "text": "决策简报已准备好",
+      "sourceHash": "f94bed6f0fd1",
+      "updatedAt": "2026-08-17T16:12:19.122Z"
+    },
+    "ws.project.briefReadyBody": {
+      "text": "您的结果文档已可用",
+      "sourceHash": "6f9a4a136283",
+      "updatedAt": "2026-08-17T16:12:19.122Z"
+    },
+    "ws.project.workflowDone": {
+      "text": "您的工作流已完成，并已生成简报。",
+      "sourceHash": "6182fd41fcdb",
+      "updatedAt": "2026-08-17T16:12:19.122Z"
+    },
+    "ws.project.workflowFailed": {
+      "text": "工作流失败——请调整问题或数据源，然后重新运行。",
+      "sourceHash": "82ea50d7133a",
+      "updatedAt": "2026-08-17T16:12:19.122Z"
+    },
+    "ws.project.alreadyRunning": {
+      "text": "工作流已运行。",
+      "sourceHash": "5717f12dab7a",
+      "updatedAt": "2026-08-17T16:13:18.949Z"
+    },
+    "ws.project.workflowStarted": {
+      "text": "工作流已启动 — 代理正在运行。",
+      "sourceHash": "ba2f05f6a246",
+      "updatedAt": "2026-08-17T16:13:18.949Z"
+    },
+    "ws.project.needQuestion": {
+      "text": "在重新运行前添加一个策略问题（10+ 个字符）。",
+      "sourceHash": "c5855c7fedf6",
+      "updatedAt": "2026-08-17T16:13:18.949Z"
+    },
+    "ws.project.stuckRerun": {
+      "text": "上一次运行似乎卡住了 — 正在启动全新的工作流…",
+      "sourceHash": "7a06899218f0",
+      "updatedAt": "2026-08-17T16:13:18.949Z"
+    },
+    "ws.project.rerunningToast": {
+      "text": "正在重新运行代理工作流…",
+      "sourceHash": "2e84385a93af",
+      "updatedAt": "2026-08-17T16:13:18.949Z"
+    },
+    "ws.project.edit": {
+      "text": "编辑项目",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T16:13:18.949Z"
+    },
+    "ws.project.name": {
+      "text": "项目名称",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T16:13:18.949Z"
+    },
+    "ws.project.save": {
+      "text": "保存更改",
+      "sourceHash": "179359b39edb",
+      "updatedAt": "2026-08-17T16:13:18.949Z"
+    },
+    "ws.project.saving": {
+      "text": "保存中…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T16:13:25.499Z"
+    },
+    "ws.project.updated": {
+      "text": "项目已更新",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T16:13:25.499Z"
+    },
+    "ws.project.archived": {
+      "text": "项目已归档",
+      "sourceHash": "225209bf7dec",
+      "updatedAt": "2026-08-17T16:13:25.499Z"
+    },
+    "ws.project.restored": {
+      "text": "项目已恢复",
+      "sourceHash": "cd1b8386c131",
+      "updatedAt": "2026-08-17T16:13:25.499Z"
+    },
+    "ws.project.notFound": {
+      "text": "项目未找到",
+      "sourceHash": "3955a012ec3c",
+      "updatedAt": "2026-08-17T16:13:25.499Z"
+    },
+    "ws.project.loadFailed": {
+      "text": "加载失败",
+      "sourceHash": "af14db26285b",
+      "updatedAt": "2026-08-17T16:13:25.499Z"
+    },
+    "ws.project.closeSettings": {
+      "text": "关闭项目设置",
+      "sourceHash": "f24a1261f0cb",
+      "updatedAt": "2026-08-17T16:13:25.499Z"
+    },
+    "ws.project.restoreForAgents": {
+      "text": "恢复此项目以运行代理工作流。",
+      "sourceHash": "943965352a99",
+      "updatedAt": "2026-08-17T16:13:25.499Z"
+    },
+    "ws.project.restoreForDocs": {
+      "text": "Restore this project to add documents.",
+      "sourceHash": "76bb5e7cd3cd",
+      "updatedAt": "2026-08-17T16:13:26.545Z"
+    },
+    "ws.project.module.reset": {
+      "text": "Module layout reset",
+      "sourceHash": "43b548921a20",
+      "updatedAt": "2026-08-17T16:13:26.545Z"
+    },
+    "ws.project.liveAwaiting": {
+      "text": "Live · awaiting key",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T16:13:26.545Z"
+    },
+    "ws.project.module.question": {
+      "text": "Question",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T16:13:26.545Z"
+    },
+    "ws.project.module.documents": {
+      "text": "Documents",
+      "sourceHash": "687c82861c95",
+      "updatedAt": "2026-08-17T16:13:26.545Z"
+    },
+    "ws.project.module.monitors": {
+      "text": "Monitors",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T16:13:26.545Z"
+    },
+    "ws.project.module.agent": {
+      "text": "Agent",
+      "sourceHash": "5ce2e6f40299",
+      "updatedAt": "2026-08-17T16:13:26.545Z"
+    },
+    "ws.project.module.pulse": {
+      "text": "Pulse",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T16:13:26.545Z"
+    },
+    "ws.account.title": {
+      "text": "设置",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T16:13:28.930Z"
+    },
+    "ws.account.lede": {
+      "text": "个人资料、安全、在线状态、警报和会话控制。",
+      "sourceHash": "8a35cc38fbac",
+      "updatedAt": "2026-08-17T16:13:28.930Z"
+    },
+    "ws.account.loading": {
+      "text": "正在加载账户…",
+      "sourceHash": "c3ffe1ef49d0",
+      "updatedAt": "2026-08-17T16:13:28.930Z"
+    },
+    "ws.account.tab.profile": {
+      "text": "个人资料",
+      "sourceHash": "ff4fc0276e96",
+      "updatedAt": "2026-08-17T16:13:28.930Z"
+    },
+    "ws.account.tab.security": {
+      "text": "安全",
+      "sourceHash": "f25ce1b8a399",
+      "updatedAt": "2026-08-17T16:13:28.930Z"
+    },
+    "ws.account.tab.presence": {
+      "text": "在线状态",
+      "sourceHash": "89a8a335a746",
+      "updatedAt": "2026-08-17T16:13:28.930Z"
+    },
+    "ws.account.tab.alerts": {
+      "text": "警报",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T16:13:28.930Z"
+    },
+    "ws.account.tab.session": {
+      "text": "会话",
+      "sourceHash": "f7f1997c6cd1",
+      "updatedAt": "2026-08-17T16:13:28.930Z"
+    },
+    "ws.account.uploadPhoto": {
+      "text": "上传头像",
+      "sourceHash": "888d7bc45d2f",
+      "updatedAt": "2026-08-17T16:13:30.794Z"
+    },
+    "ws.account.remove": {
+      "text": "删除",
+      "sourceHash": "e963907dac5c",
+      "updatedAt": "2026-08-17T16:13:30.794Z"
+    },
+    "ws.account.displayName": {
+      "text": "显示名称",
+      "sourceHash": "c7874aaa0fab",
+      "updatedAt": "2026-08-17T16:13:30.794Z"
+    },
+    "ws.account.bio": {
+      "text": "关于 / 简介",
+      "sourceHash": "32b952c4847b",
+      "updatedAt": "2026-08-17T16:13:30.794Z"
+    },
+    "ws.account.saveProfile": {
+      "text": "保存个人资料",
+      "sourceHash": "f597c0e8201d",
+      "updatedAt": "2026-08-17T16:13:30.794Z"
+    },
+    "ws.account.password": {
+      "text": "密码",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T16:13:30.794Z"
+    },
+    "ws.account.currentPassword": {
+      "text": "当前密码",
+      "sourceHash": "19dff4dad0a7",
+      "updatedAt": "2026-08-17T16:13:30.794Z"
+    },
+    "ws.account.newPassword": {
+      "text": "新密码",
+      "sourceHash": "d850ee188c7c",
+      "updatedAt": "2026-08-17T16:13:30.794Z"
+    },
+    "ws.account.updatePassword": {
+      "text": "更新密码",
+      "sourceHash": "350c355e16e3",
+      "updatedAt": "2026-08-17T16:13:33.005Z"
+    },
+    "ws.account.signOut": {
+      "text": "注销",
+      "sourceHash": "dc1649a16c14",
+      "updatedAt": "2026-08-17T16:13:33.005Z"
+    },
+    "ws.account.presence": {
+      "text": "在线状态",
+      "sourceHash": "a02b358912bf",
+      "updatedAt": "2026-08-17T16:13:33.005Z"
+    },
+    "ws.account.profileSaved": {
+      "text": "个人资料已保存",
+      "sourceHash": "e9983dc9ac3f",
+      "updatedAt": "2026-08-17T16:13:33.005Z"
+    },
+    "ws.account.saveFailed": {
+      "text": "保存失败",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T16:13:33.005Z"
+    },
+    "ws.account.passwordUpdated": {
+      "text": "密码已更新",
+      "sourceHash": "1de6d0816c54",
+      "updatedAt": "2026-08-17T16:13:33.005Z"
+    },
+    "ws.account.passwordFailed": {
+      "text": "密码更新失败",
+      "sourceHash": "b651e6821043",
+      "updatedAt": "2026-08-17T16:13:33.005Z"
+    },
+    "ws.account.statusFailed": {
+      "text": "无法更新状态",
+      "sourceHash": "b1073af68cc9",
+      "updatedAt": "2026-08-17T16:13:33.005Z"
+    },
+    "ws.account.imageType": {
+      "text": "使用 JPEG、PNG 或 WebP",
+      "sourceHash": "64219c573743",
+      "updatedAt": "2026-08-17T16:13:44.933Z"
+    },
+    "ws.account.avatarUpdated": {
+      "text": "头像更新",
+      "sourceHash": "46e014bb0124",
+      "updatedAt": "2026-08-17T16:13:44.933Z"
+    },
+    "ws.account.uploadFailed": {
+      "text": "上传失败",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T16:13:44.933Z"
+    },
+    "ws.account.avatarRemoved": {
+      "text": "头像移除",
+      "sourceHash": "d9db37314bea",
+      "updatedAt": "2026-08-17T16:13:44.933Z"
+    },
+    "ws.account.removeFailed": {
+      "text": "移除失败",
+      "sourceHash": "debe01de259b",
+      "updatedAt": "2026-08-17T16:13:44.933Z"
+    },
+    "ws.account.signOutFailed": {
+      "text": "注销失败",
+      "sourceHash": "b1287a61ef81",
+      "updatedAt": "2026-08-17T16:13:44.933Z"
+    },
+    "ws.account.readImageFailed": {
+      "text": "无法读取图片",
+      "sourceHash": "68d60f7c8e85",
+      "updatedAt": "2026-08-17T16:13:44.933Z"
+    },
+    "ws.monitors.title": {
+      "text": "监控",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T16:13:44.933Z"
+    },
+    "ws.monitors.lede": {
+      "text": "持续关键词和司法管辖区的监控配置文件——当信号与您的范围匹配时，会触发警报。",
+      "sourceHash": "96c578a78d41",
+      "updatedAt": "2026-08-17T16:13:47.127Z"
+    },
+    "ws.monitors.name": {
+      "text": "监控名称",
+      "sourceHash": "8f3d2b89f0f7",
+      "updatedAt": "2026-08-17T16:13:47.127Z"
+    },
+    "ws.monitors.keywords": {
+      "text": "关键词（逗号分隔）",
+      "sourceHash": "4772c39c2fd8",
+      "updatedAt": "2026-08-17T16:13:47.127Z"
+    },
+    "ws.monitors.countries": {
+      "text": "国家（逗号分隔）",
+      "sourceHash": "a6644ccc36eb",
+      "updatedAt": "2026-08-17T16:13:47.127Z"
+    },
+    "ws.monitors.linkProject": {
+      "text": "关联项目（可选）",
+      "sourceHash": "b377c0bd90d9",
+      "updatedAt": "2026-08-17T16:13:47.127Z"
+    },
+    "ws.monitors.keywordsPlaceholder": {
+      "text": "EPA, petroleum",
+      "sourceHash": "b0441f183a91",
+      "updatedAt": "2026-08-17T16:13:47.127Z"
+    },
+    "ws.monitors.sort.lastAlert": {
+      "text": "排序：最后警报",
+      "sourceHash": "871e1671f3cc",
+      "updatedAt": "2026-08-17T16:13:47.127Z"
+    },
+    "ws.monitors.sort.alertCount": {
+      "text": "排序：警报数量",
+      "sourceHash": "30818550f03c",
+      "updatedAt": "2026-08-17T16:13:47.127Z"
+    },
+    "ws.monitors.sort.name": {
+      "text": "按名称排序",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T16:13:48.710Z"
+    },
+    "ws.monitors.sort.country": {
+      "text": "按国家排序",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T16:13:48.710Z"
+    },
+    "ws.monitors.kpi.watching": {
+      "text": "监控信号",
+      "sourceHash": "97cf17eaef54",
+      "updatedAt": "2026-08-17T16:13:48.710Z"
+    },
+    "ws.monitors.kpi.totalAlerts": {
+      "text": "总警报数",
+      "sourceHash": "fde0ecac2d4a",
+      "updatedAt": "2026-08-17T16:13:48.710Z"
+    },
+    "ws.monitors.kpi.withAlerts": {
+      "text": "有警报",
+      "sourceHash": "462e89938441",
+      "updatedAt": "2026-08-17T16:13:48.710Z"
+    },
+    "ws.monitors.search": {
+      "text": "搜索监控、关键词、国家…",
+      "sourceHash": "5ec1da77d398",
+      "updatedAt": "2026-08-17T16:13:48.710Z"
+    },
+    "ws.monitors.add": {
+      "text": "添加监控",
+      "sourceHash": "c7347370fdde",
+      "updatedAt": "2026-08-17T16:13:48.710Z"
+    },
+    "ws.monitors.adding": {
+      "text": "添加中…",
+      "sourceHash": "ffb2e628b0e9",
+      "updatedAt": "2026-08-17T16:13:48.710Z"
+    },
+    "ws.monitors.empty": {
+      "text": "暂无监控",
+      "sourceHash": "01356e674f83",
+      "updatedAt": "2026-08-17T16:14:01.677Z"
+    },
+    "ws.monitors.emptyHint": {
+      "text": "添加一个监控配置，用于跟踪您想要的关键词和国家，在简报周期之间。",
+      "sourceHash": "5e619550a5fb",
+      "updatedAt": "2026-08-17T16:14:01.677Z"
+    },
+    "ws.monitors.noMatches": {
+      "text": "无匹配项",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T16:14:01.677Z"
+    },
+    "ws.monitors.noMatchesHint": {
+      "text": "调整搜索或过滤器，或创建一个新的监控器。",
+      "sourceHash": "29c9f7839ead",
+      "updatedAt": "2026-08-17T16:14:01.677Z"
+    },
+    "ws.monitors.created": {
+      "text": "监控创建成功",
+      "sourceHash": "395dbfc3b9df",
+      "updatedAt": "2026-08-17T16:14:01.677Z"
+    },
+    "ws.monitors.createFailed": {
+      "text": "无法创建监控",
+      "sourceHash": "0e94667b5b74",
+      "updatedAt": "2026-08-17T16:14:01.677Z"
+    },
+    "ws.monitors.watchProfile": {
+      "text": "监控配置",
+      "sourceHash": "42032bba3d02",
+      "updatedAt": "2026-08-17T16:14:01.677Z"
+    },
+    "ws.monitors.lastAlert": {
+      "text": "最后警报",
+      "sourceHash": "6badefe08b70",
+      "updatedAt": "2026-08-17T16:14:01.677Z"
+    },
+    "ws.monitors.trackedTerms": {
+      "text": "监控关键词",
+      "sourceHash": "7c78071fa618",
+      "updatedAt": "2026-08-17T16:14:04.648Z"
+    },
+    "ws.monitors.liveFeed": {
+      "text": "实时预警流",
+      "sourceHash": "3997a0cdb184",
+      "updatedAt": "2026-08-17T16:14:04.648Z"
+    },
+    "ws.monitors.linkedProject": {
+      "text": "关联项目",
+      "sourceHash": "3998027f1c8f",
+      "updatedAt": "2026-08-17T16:14:04.648Z"
+    },
+    "ws.monitors.noProjectLinked": {
+      "text": "暂无关联项目",
+      "sourceHash": "777c518a716d",
+      "updatedAt": "2026-08-17T16:14:04.648Z"
+    },
+    "ws.monitors.noProject": {
+      "text": "无项目",
+      "sourceHash": "c326b75775bf",
+      "updatedAt": "2026-08-17T16:14:04.648Z"
+    },
+    "ws.monitors.quickLinks": {
+      "text": "快捷链接",
+      "sourceHash": "4b4e155ec7ba",
+      "updatedAt": "2026-08-17T16:14:04.648Z"
+    },
+    "ws.monitors.noAlerts": {
+      "text": "暂无预警记录",
+      "sourceHash": "d5dd400aa0b8",
+      "updatedAt": "2026-08-17T16:14:04.648Z"
+    },
+    "ws.monitors.loadFailed": {
+      "text": "监控加载失败",
+      "sourceHash": "e44ad0053813",
+      "updatedAt": "2026-08-17T16:14:04.648Z"
+    },
+    "ws.monitors.paused": {
+      "text": "监控已暂停",
+      "sourceHash": "34e761133c86",
+      "updatedAt": "2026-08-17T16:14:19.265Z"
+    },
+    "ws.monitors.resumed": {
+      "text": "监控已恢复",
+      "sourceHash": "a7f27044c65b",
+      "updatedAt": "2026-08-17T16:14:19.265Z"
+    },
+    "ws.monitors.updateFailed": {
+      "text": "无法更新监控",
+      "sourceHash": "ab01af3ab5c9",
+      "updatedAt": "2026-08-17T16:14:19.265Z"
+    },
+    "ws.monitors.linkUpdated": {
+      "text": "项目链接已更新",
+      "sourceHash": "ca3bc3b5862c",
+      "updatedAt": "2026-08-17T16:14:19.265Z"
+    },
+    "ws.monitors.linkFailed": {
+      "text": "无法更新链接",
+      "sourceHash": "9d74e05e8301",
+      "updatedAt": "2026-08-17T16:14:19.265Z"
+    },
+    "ws.monitors.notFound": {
+      "text": "未找到监控",
+      "sourceHash": "dbab2107fb75",
+      "updatedAt": "2026-08-17T16:14:19.265Z"
+    },
+    "ws.monitors.pause": {
+      "text": "暂停",
+      "sourceHash": "781961bc81c2",
+      "updatedAt": "2026-08-17T16:14:19.265Z"
+    },
+    "ws.monitors.resume": {
+      "text": "恢复",
+      "sourceHash": "b3bd0b5a7049",
+      "updatedAt": "2026-08-17T16:14:19.265Z"
+    },
+    "ws.briefs.title": {
+      "text": "决策简报",
+      "sourceHash": "11f32f8cf0c4",
+      "updatedAt": "2026-08-17T16:14:23.487Z"
+    },
+    "ws.briefs.lede": {
+      "text": "来自项目运行的证据支持包——审查判断、PSN 透镜和导出。",
+      "sourceHash": "f2467f9e4c8c",
+      "updatedAt": "2026-08-17T16:14:23.487Z"
+    },
+    "ws.briefs.empty": {
+      "text": "暂无简报",
+      "sourceHash": "b515f47278a5",
+      "updatedAt": "2026-08-17T16:14:23.487Z"
+    },
+    "ws.briefs.emptyHint": {
+      "text": "运行项目管道以生成您的第一个决策简报。",
+      "sourceHash": "9bf4c6c5c58e",
+      "updatedAt": "2026-08-17T16:14:23.487Z"
+    },
+    "ws.briefs.pendingReview": {
+      "text": "待审核",
+      "sourceHash": "6a80f44e3b2b",
+      "updatedAt": "2026-08-17T16:14:23.487Z"
+    },
+    "ws.briefs.approved": {
+      "text": "已批准",
+      "sourceHash": "41b81eb8db1b",
+      "updatedAt": "2026-08-17T16:14:23.487Z"
+    },
+    "ws.briefs.depthModes": {
+      "text": "深度模式",
+      "sourceHash": "68a8aded8a97",
+      "updatedAt": "2026-08-17T16:14:23.487Z"
+    },
+    "ws.briefs.openProjects": {
+      "text": "开放项目",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T16:14:23.487Z"
+    },
+    "ws.briefs.back": {
+      "text": "← 返回简报",
+      "sourceHash": "69ee29903a7e",
+      "updatedAt": "2026-08-17T16:14:25.567Z"
+    },
+    "ws.briefs.notFound": {
+      "text": "未找到简报",
+      "sourceHash": "87fb798c28c9",
+      "updatedAt": "2026-08-17T16:14:25.567Z"
+    },
+    "ws.briefs.browse": {
+      "text": "浏览简报",
+      "sourceHash": "f4d095dec924",
+      "updatedAt": "2026-08-17T16:14:25.567Z"
+    },
+    "ws.briefs.loadFailed": {
+      "text": "无法加载简报",
+      "sourceHash": "c7557e0c36a9",
+      "updatedAt": "2026-08-17T16:14:25.567Z"
+    },
+    "ws.briefs.noData": {
+      "text": "暂无简报数据。",
+      "sourceHash": "f1024a68f087",
+      "updatedAt": "2026-08-17T16:14:25.567Z"
+    },
+    "ws.briefs.reviewRecord": {
+      "text": "查看记录",
+      "sourceHash": "b018182d0769",
+      "updatedAt": "2026-08-17T16:14:25.567Z"
+    },
+    "ws.briefs.approvedToast": {
+      "text": "简报已批准",
+      "sourceHash": "8881ea2feac8",
+      "updatedAt": "2026-08-17T16:14:25.567Z"
+    },
+    "ws.briefs.reviewFailed": {
+      "text": "审核失败",
+      "sourceHash": "5522c937885e",
+      "updatedAt": "2026-08-17T16:14:25.567Z"
+    },
+    "ws.briefs.deepDive": {
+      "text": "深度探究",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T16:14:27.209Z"
+    },
+    "ws.briefs.approve": {
+      "text": "批准",
+      "sourceHash": "7b2c7f146aba",
+      "updatedAt": "2026-08-17T16:14:27.209Z"
+    },
+    "ws.briefs.needsRevision": {
+      "text": "需修订",
+      "sourceHash": "a75105d396fa",
+      "updatedAt": "2026-08-17T16:14:27.209Z"
+    },
+    "ws.briefs.reject": {
+      "text": "拒绝",
+      "sourceHash": "2b03b59293b6",
+      "updatedAt": "2026-08-17T16:14:27.209Z"
+    },
+    "ws.briefs.openProject": {
+      "text": "打开关联项目",
+      "sourceHash": "11bdb0dc219d",
+      "updatedAt": "2026-08-17T16:14:27.209Z"
+    },
+    "ws.briefs.confidence": {
+      "text": "置信度",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T16:14:27.209Z"
+    },
+    "ws.briefs.pagination": {
+      "text": "简报分页",
+      "sourceHash": "ca1f68feb387",
+      "updatedAt": "2026-08-17T16:14:27.209Z"
+    },
+    "ws.briefs.prevPage": {
+      "text": "上一页简报",
+      "sourceHash": "5f855ab42223",
+      "updatedAt": "2026-08-17T16:14:27.209Z"
+    },
+    "ws.briefs.nextPage": {
+      "text": "下一页简报",
+      "sourceHash": "12274555c7e6",
+      "updatedAt": "2026-08-17T16:14:29.181Z"
+    },
+    "ws.briefs.showing": {
+      "text": "显示 {from}–{to} of {total}",
+      "sourceHash": "d236a8e46b06",
+      "updatedAt": "2026-08-17T16:14:29.181Z"
+    },
+    "ws.sources.title": {
+      "text": "来源",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T16:14:29.181Z"
+    },
+    "ws.sources.lede": {
+      "text": "策划注册护照，为监控和法规运行提供燃料。",
+      "sourceHash": "34da3d01d122",
+      "updatedAt": "2026-08-17T16:14:29.181Z"
+    },
+    "ws.sources.search": {
+      "text": "名称、国家、标签…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T16:14:29.181Z"
+    },
+    "ws.sources.empty": {
+      "text": "无匹配来源",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T16:14:29.181Z"
+    },
+    "ws.sources.emptyHint": {
+      "text": "尝试不同的搜索或拖入 CSV 进行注册库导入。",
+      "sourceHash": "bf5f1c857903",
+      "updatedAt": "2026-08-17T16:14:29.181Z"
+    },
+    "ws.sources.pagination": {
+      "text": "来源分页",
+      "sourceHash": "50f66b346611",
+      "updatedAt": "2026-08-17T16:14:29.181Z"
+    },
+    "ws.usage.title": {
+      "text": "AI 使用",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T16:15:17.590Z"
+    },
+    "ws.usage.tokenAllowance": {
+      "text": "Token 配额",
+      "sourceHash": "178b070cb08a",
+      "updatedAt": "2026-08-17T16:15:17.590Z"
+    },
+    "ws.usage.activitySplit": {
+      "text": "活动分布",
+      "sourceHash": "1f236c8d7d6b",
+      "updatedAt": "2026-08-17T16:15:17.590Z"
+    },
+    "ws.usage.estimatedCost": {
+      "text": "预计费用",
+      "sourceHash": "516cbee26f0b",
+      "updatedAt": "2026-08-17T16:15:17.590Z"
+    },
+    "ws.packs.title": {
+      "text": "国家包",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T16:15:17.590Z"
+    },
+    "ws.packs.lede": {
+      "text": "由加勒比市场精选的情报套餐。",
+      "sourceHash": "a46f67498e2f",
+      "updatedAt": "2026-08-17T16:15:17.590Z"
+    },
+    "ws.packs.meta": {
+      "text": "来源 · 实体",
+      "sourceHash": "61f1da33e909",
+      "updatedAt": "2026-08-17T16:15:17.590Z"
+    },
+    "ws.stakeholders.cause": {
+      "text": "原因",
+      "sourceHash": "0cd812b85c20",
+      "updatedAt": "2026-08-17T16:15:17.590Z"
+    },
+    "ws.stakeholders.title": {
+      "text": "利益相关者",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T16:15:19.280Z"
+    },
+    "ws.stakeholders.lede": {
+      "text": "赋能并塑造加勒比决策工作的机构。",
+      "sourceHash": "f0330bbdd8c2",
+      "updatedAt": "2026-08-17T16:15:19.280Z"
+    },
+    "ws.toolbar.search": {
+      "text": "搜索…",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T16:15:19.280Z"
+    },
+    "ws.toolbar.sortBy": {
+      "text": "按筛选条件排序",
+      "sourceHash": "a2a5bdeca939",
+      "updatedAt": "2026-08-17T16:15:19.280Z"
+    },
+    "ws.toolbar.filter": {
+      "text": "筛选",
+      "sourceHash": "d7decf1aa22b",
+      "updatedAt": "2026-08-17T16:15:19.280Z"
+    },
+    "ws.loading.workspace": {
+      "text": "正在加载工作区…",
+      "sourceHash": "89f0dde329fa",
+      "updatedAt": "2026-08-17T16:15:19.280Z"
+    },
+    "ws.loading.overview": {
+      "text": "正在准备概览…",
+      "sourceHash": "f34393549cd4",
+      "updatedAt": "2026-08-17T16:15:19.280Z"
+    },
+    "ws.loading.operator": {
+      "text": "正在准备操作台…",
+      "sourceHash": "27a6688f18c0",
+      "updatedAt": "2026-08-17T16:15:19.280Z"
+    },
+    "ws.topics.title": {
+      "text": "加勒比海热点信号",
+      "sourceHash": "c02ae1c5f749",
+      "updatedAt": "2026-08-17T16:15:30.667Z"
+    },
+    "ws.topics.loading": {
+      "text": "正在加载主题模板…",
+      "sourceHash": "3a6c843fbbe8",
+      "updatedAt": "2026-08-17T16:15:30.667Z"
+    },
+    "ws.topics.tapPlay": {
+      "text": "轻点加载 · 播放运行",
+      "sourceHash": "bcd777dbdbbd",
+      "updatedAt": "2026-08-17T16:15:30.667Z"
+    },
+    "ws.topics.refresh": {
+      "text": "刷新信号",
+      "sourceHash": "4d77417615b4",
+      "updatedAt": "2026-08-17T16:15:30.667Z"
+    },
+    "ws.topics.runNow": {
+      "text": "立即运行",
+      "sourceHash": "2af00e23c480",
+      "updatedAt": "2026-08-17T16:15:30.667Z"
+    },
+    "ws.topics.starting": {
+      "text": "启动中…",
+      "sourceHash": "e5f58095ac29",
+      "updatedAt": "2026-08-17T16:15:30.667Z"
+    },
+    "ws.topics.scraping": {
+      "text": "爬取中…",
+      "sourceHash": "97355d74fde9",
+      "updatedAt": "2026-08-17T16:15:30.667Z"
+    },
+    "ws.topics.questionLoaded": {
+      "text": "问题已加载 — 点击运行代理工作流",
+      "sourceHash": "b57e028d16d6",
+      "updatedAt": "2026-08-17T16:15:30.667Z"
+    },
+    "ws.topics.pipelineStarted": {
+      "text": "Pipeline started",
+      "sourceHash": "f2d5ecf09040",
+      "updatedAt": "2026-08-17T16:15:32.420Z"
+    },
+    "ws.topics.projectReady": {
+      "text": "Project ready",
+      "sourceHash": "0e47cf96af8d",
+      "updatedAt": "2026-08-17T16:15:32.420Z"
+    },
+    "ws.topics.workflowRunning": {
+      "text": "The agent workflow is running.",
+      "sourceHash": "bde7d40c5be3",
+      "updatedAt": "2026-08-17T16:15:32.420Z"
+    },
+    "ws.topics.readyContinue": {
+      "text": "Your project is ready to continue.",
+      "sourceHash": "6e0428373274",
+      "updatedAt": "2026-08-17T16:15:32.420Z"
+    },
+    "ws.docs.clickUpload": {
+      "text": "Click to upload",
+      "sourceHash": "c77c363d22ab",
+      "updatedAt": "2026-08-17T16:15:32.420Z"
+    },
+    "ws.docs.orDrag": {
+      "text": "or drag & drop",
+      "sourceHash": "9ddf49cdc8ed",
+      "updatedAt": "2026-08-17T16:15:32.420Z"
+    },
+    "ws.docs.uploadFailed": {
+      "text": "Upload failed",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T16:15:32.420Z"
+    },
+    "ws.docs.noUploads": {
+      "text": "No uploads yet.",
+      "sourceHash": "11da33e0d997",
+      "updatedAt": "2026-08-17T16:15:32.420Z"
+    },
+    "ws.docs.readSummary": {
+      "text": "阅读摘要",
+      "sourceHash": "f7685ae9e39b",
+      "updatedAt": "2026-08-17T16:15:33.894Z"
+    },
+    "ws.docs.summarize": {
+      "text": "摘要内容",
+      "sourceHash": "365b99b5cffd",
+      "updatedAt": "2026-08-17T16:15:33.894Z"
+    },
+    "ws.docs.rework": {
+      "text": "重写摘要",
+      "sourceHash": "bad6aa15f0ee",
+      "updatedAt": "2026-08-17T16:15:33.894Z"
+    },
+    "ws.docs.openSummary": {
+      "text": "打开摘要",
+      "sourceHash": "cbb4c597aff6",
+      "updatedAt": "2026-08-17T16:15:33.894Z"
+    },
+    "ws.docs.summaryReady": {
+      "text": "摘要已就绪",
+      "sourceHash": "cedb562d4da5",
+      "updatedAt": "2026-08-17T16:15:33.894Z"
+    },
+    "ws.docs.reworkReady": {
+      "text": "重写摘要已就绪",
+      "sourceHash": "2f61dbbae128",
+      "updatedAt": "2026-08-17T16:15:33.894Z"
+    },
+    "ws.docs.deleteConfirm": {
+      "text": "删除此文档？",
+      "sourceHash": "1ce5593800b3",
+      "updatedAt": "2026-08-17T16:15:33.894Z"
+    },
+    "ws.docs.delete": {
+      "text": "删除文档",
+      "sourceHash": "e8df0b79020b",
+      "updatedAt": "2026-08-17T16:15:33.894Z"
+    },
+    "ws.docs.deleted": {
+      "text": "文档已删除",
+      "sourceHash": "e4db4d66b499",
+      "updatedAt": "2026-08-17T16:15:35.903Z"
+    },
+    "ws.docs.downloadFailed": {
+      "text": "下载失败",
+      "sourceHash": "01125e1be1f5",
+      "updatedAt": "2026-08-17T16:15:35.903Z"
+    },
+    "ws.docs.summary.pipeline": {
+      "text": "摘要管道",
+      "sourceHash": "b0647716ca0e",
+      "updatedAt": "2026-08-17T16:15:35.903Z"
+    },
+    "ws.docs.summary.extractHint": {
+      "text": "从上传的文档中提取决策相关文本（二进制文件仅使用元数据）",
+      "sourceHash": "74117cd5dd45",
+      "updatedAt": "2026-08-17T16:15:35.903Z"
+    },
+    "ws.docs.summary.reviewHint": {
+      "text": "打开只读简报 — 编辑功能故意被禁用",
+      "sourceHash": "683c57d5a83f",
+      "updatedAt": "2026-08-17T16:15:35.903Z"
+    },
+    "ws.docs.summary.disabled": {
+      "text": "文档摘要功能已由操作员禁用",
+      "sourceHash": "499a1a5ea2ff",
+      "updatedAt": "2026-08-17T16:15:35.903Z"
+    },
+    "ws.docs.summary.reworkDisabled": {
+      "text": "禁止重新处理。您仍可打开只读摘要",
+      "sourceHash": "66773a613619",
+      "updatedAt": "2026-08-17T16:15:35.903Z"
+    },
+    "ws.docs.summary.running": {
+      "text": "正在运行文档管道…",
+      "sourceHash": "0fe516637573",
+      "updatedAt": "2026-08-17T16:15:35.903Z"
+    },
+    "ws.docs.summary.keepOpen": {
+      "text": "提取 → 综合此剧场。保持此面板打开。",
+      "sourceHash": "b88686364225",
+      "updatedAt": "2026-08-17T16:15:37.729Z"
+    },
+    "ws.docs.summary.failed": {
+      "text": "上一轮运行失败。如有需要，调整焦点备注后再次尝试。",
+      "sourceHash": "ec3c5129064e",
+      "updatedAt": "2026-08-17T16:15:37.729Z"
+    },
+    "ws.docs.summary.none": {
+      "text": "无可用摘要文本。",
+      "sourceHash": "217d2512f8ca",
+      "updatedAt": "2026-08-17T16:15:37.729Z"
+    },
+    "ws.docs.summary.focusPlaceholder": {
+      "text": "例如 着重监管路径、资本合作伙伴以及这对决策问题意味着什么…",
+      "sourceHash": "4226d6321002",
+      "updatedAt": "2026-08-17T16:15:37.729Z"
+    },
+    "ws.docs.summary.relevance": {
+      "text": "决策相关性",
+      "sourceHash": "bded871bb02a",
+      "updatedAt": "2026-08-17T16:15:37.729Z"
+    },
+    "ws.docs.summary.keyPoints": {
+      "text": "关键点",
+      "sourceHash": "5d1855a1eaac",
+      "updatedAt": "2026-08-17T16:15:37.729Z"
+    },
+    "ws.docs.summary.gaps": {
+      "text": "证据缺口",
+      "sourceHash": "4285633d539c",
+      "updatedAt": "2026-08-17T16:15:37.729Z"
+    },
+    "ws.docs.summary.riskFlags": {
+      "text": "风险标记",
+      "sourceHash": "024790205e21",
+      "updatedAt": "2026-08-17T16:15:37.729Z"
+    },
+    "ws.docs.summary.reviewFlags": {
+      "text": "Review flags",
+      "sourceHash": "c637c236e807",
+      "updatedAt": "2026-08-17T16:15:38.915Z"
+    },
+    "ws.docs.summary.operatorFocus": {
+      "text": "Operator focus used",
+      "sourceHash": "541e0f17e21c",
+      "updatedAt": "2026-08-17T16:15:38.915Z"
+    },
+    "ws.docs.summary.generate": {
+      "text": "Generate summary",
+      "sourceHash": "edd0f4b8c42f",
+      "updatedAt": "2026-08-17T16:15:38.915Z"
+    },
+    "ws.docs.summary.regenerate": {
+      "text": "Regenerate summary",
+      "sourceHash": "a4be29f8457d",
+      "updatedAt": "2026-08-17T16:15:38.915Z"
+    },
+    "ws.voice.tap": {
+      "text": "Tap to speak",
+      "sourceHash": "4f4d692fb7a0",
+      "updatedAt": "2026-08-17T16:15:38.915Z"
+    },
+    "ws.voice.stop": {
+      "text": "Stop listening",
+      "sourceHash": "e134211eedf1",
+      "updatedAt": "2026-08-17T16:15:38.915Z"
+    },
+    "ws.voice.blocked": {
+      "text": "Microphone blocked",
+      "sourceHash": "7b63697f6dc7",
+      "updatedAt": "2026-08-17T16:15:38.915Z"
+    },
+    "ws.voice.allow": {
+      "text": "Allow microphone and speak",
+      "sourceHash": "f1132cb60ca8",
+      "updatedAt": "2026-08-17T16:15:38.915Z"
+    },
+    "ws.voice.startSpeaking": {
+      "text": "开始说话 — 您的文字会实时出现。",
+      "sourceHash": "99cd968419fe",
+      "updatedAt": "2026-08-17T16:15:41.084Z"
+    },
+    "ws.voice.tapThenSpeak": {
+      "text": "点击麦克风，然后说话 — 您的文字会实时出现。",
+      "sourceHash": "32cbf9c484b9",
+      "updatedAt": "2026-08-17T16:15:41.084Z"
+    },
+    "ws.voice.placeholder": {
+      "text": "您需要证据支持的战略决策是什么？",
+      "sourceHash": "cd88d0acf018",
+      "updatedAt": "2026-08-17T16:15:41.084Z"
+    },
+    "ws.voice.blockedToast": {
+      "text": "麦克风访问被阻止。允许本站的麦克风，然后重试。",
+      "sourceHash": "42117e1fcf00",
+      "updatedAt": "2026-08-17T16:15:41.084Z"
+    },
+    "ws.voice.unavailable": {
+      "text": "此浏览器不支持语音转文字 — 请改用键盘输入。",
+      "sourceHash": "4497fd5a6538",
+      "updatedAt": "2026-08-17T16:15:41.084Z"
+    },
+    "ws.voice.needsHttps": {
+      "text": "语音功能需要 HTTPS（或 localhost）。请打开安全站点 URL。",
+      "sourceHash": "b3b6c9c79cc8",
+      "updatedAt": "2026-08-17T16:15:41.084Z"
+    },
+    "ws.voice.settingsBlocked": {
+      "text": "浏览器中已阻止麦克风。点击锁形图标 → 站点设置 → 麦克风 → 允许。",
+      "sourceHash": "1b6c12cfa138",
+      "updatedAt": "2026-08-17T16:15:41.084Z"
+    },
+    "ws.pulse.title": {
+      "text": "工作区脉搏",
+      "sourceHash": "0d2a193b046d",
+      "updatedAt": "2026-08-17T16:15:41.084Z"
+    },
+    "ws.pulse.completedAgents": {
+      "text": "已完成的代理数",
+      "sourceHash": "8b06c1de3eb3",
+      "updatedAt": "2026-08-17T16:15:42.710Z"
+    },
+    "ws.pulse.awaitingRun": {
+      "text": "等待运行",
+      "sourceHash": "314aa3b51bbd",
+      "updatedAt": "2026-08-17T16:15:42.710Z"
+    },
+    "ws.pulse.onProject": {
+      "text": "项目中",
+      "sourceHash": "8d6e72e7313f",
+      "updatedAt": "2026-08-17T16:15:42.710Z"
+    },
+    "ws.pulse.noSpend": {
+      "text": "暂无支出",
+      "sourceHash": "18ad8a4907a5",
+      "updatedAt": "2026-08-17T16:15:42.710Z"
+    },
+    "ws.pulse.metric.stages": {
+      "text": "阶段",
+      "sourceHash": "c1d33ad534e8",
+      "updatedAt": "2026-08-17T16:15:42.710Z"
+    },
+    "ws.pulse.metric.progress": {
+      "text": "进度",
+      "sourceHash": "1b90271d66cf",
+      "updatedAt": "2026-08-17T16:15:42.710Z"
+    },
+    "ws.pulse.metric.tokens": {
+      "text": "Token 数",
+      "sourceHash": "c38c6c1f3a27",
+      "updatedAt": "2026-08-17T16:15:42.710Z"
+    },
+    "ws.pulse.onAgent": {
+      "text": "代理卡片上直播",
+      "sourceHash": "9e9662365193",
+      "updatedAt": "2026-08-17T16:15:42.710Z"
+    },
+    "ws.pulse.onAgentBody": {
+      "text": "阶段、进度、文档及支出现已出现在工作流的代理卡片上。",
+      "sourceHash": "0b1ec9b2b478",
+      "updatedAt": "2026-08-17T16:15:44.558Z"
+    },
+    "ws.pipeline.doctrine": {
+      "text": "Doctrine 工作流 v0.2",
+      "sourceHash": "aa4272292b41",
+      "updatedAt": "2026-08-17T16:15:44.558Z"
+    },
+    "ws.pipeline.demo": {
+      "text": "Agent 工作流 (演示)",
+      "sourceHash": "f8b8b59087a6",
+      "updatedAt": "2026-08-17T16:15:44.558Z"
+    },
+    "ws.pipeline.ready": {
+      "text": "随时准备就绪",
+      "sourceHash": "aec1322315e6",
+      "updatedAt": "2026-08-17T16:15:44.558Z"
+    },
+    "ws.tour.replay": {
+      "text": "重播工作区导览",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T16:15:44.558Z"
+    },
+    "ws.tour.tutorial": {
+      "text": "教程",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T16:15:44.558Z"
+    },
+    "ws.account.avatarRules": {
+      "text": "JPEG、PNG 或 WebP。最大尺寸由操作员设定。",
+      "sourceHash": "1ffab77f5756",
+      "updatedAt": "2026-08-17T16:15:44.558Z"
+    },
+    "ws.account.passwordMin": {
+      "text": "新密码至少需要 8 个字符。",
+      "sourceHash": "f36bc78e2e46",
+      "updatedAt": "2026-08-17T16:15:44.558Z"
+    },
+    "ws.account.signOutNote": {
+      "text": "结束此设备上的浏览器会话。",
+      "sourceHash": "798b10424390",
+      "updatedAt": "2026-08-17T16:15:46.095Z"
+    },
+    "ws.account.presence.available": {
+      "text": "可用",
+      "sourceHash": "7c62a1424469",
+      "updatedAt": "2026-08-17T16:15:46.095Z"
+    },
+    "ws.account.presence.availableHint": {
+      "text": "准备接待并处理支持工单",
+      "sourceHash": "f608d72be1eb",
+      "updatedAt": "2026-08-17T16:15:46.095Z"
+    },
+    "ws.account.presence.away": {
+      "text": "离开",
+      "sourceHash": "4fae89296662",
+      "updatedAt": "2026-08-17T16:15:46.095Z"
+    },
+    "ws.account.presence.awayHint": {
+      "text": "支持有限",
+      "sourceHash": "a2ae2ea4ecd3",
+      "updatedAt": "2026-08-17T16:15:46.095Z"
+    },
+    "ws.account.presence.busy": {
+      "text": "忙碌",
+      "sourceHash": "592a9d1678c2",
+      "updatedAt": "2026-08-17T16:15:46.095Z"
+    },
+    "ws.account.presence.busyHint": {
+      "text": "正在对话 — 新工单有限",
+      "sourceHash": "0e2a07ad911e",
+      "updatedAt": "2026-08-17T16:15:46.095Z"
+    },
+    "ws.account.presence.offline": {
+      "text": "离线",
+      "sourceHash": "e01fa717bacc",
+      "updatedAt": "2026-08-17T16:15:46.095Z"
+    },
+    "ws.account.presence.offlineHint": {
+      "text": "目前不处理支持",
+      "sourceHash": "5d54853ddb06",
+      "updatedAt": "2026-08-17T16:16:03.959Z"
+    },
+    "ws.account.presence.lede": {
+      "text": "您的状态对支持人员和工作区协作者可见。",
+      "sourceHash": "b9e64e6d941b",
+      "updatedAt": "2026-08-17T16:16:03.959Z"
+    },
+    "ws.usage.lede": {
+      "text": "代币、信用额度和估算的 OpenRouter 成本（您的工作区周期）。",
+      "sourceHash": "98bfd9f1db1f",
+      "updatedAt": "2026-08-17T16:16:03.959Z"
+    },
+    "ws.monitors.kpi.paused": {
+      "text": "已暂停",
+      "sourceHash": "c7dfb6f1d9c5",
+      "updatedAt": "2026-08-17T16:16:03.959Z"
+    },
+    "ws.monitors.new": {
+      "text": "新监控",
+      "sourceHash": "8bf83b0730ca",
+      "updatedAt": "2026-08-17T16:16:03.959Z"
+    },
+    "ws.topics.lede": {
+      "text": "将实时加勒比信号加载到项目剧院，然后运行代理。",
+      "sourceHash": "889a75409945",
+      "updatedAt": "2026-08-17T16:16:03.959Z"
+    },
+    "ws.topics.starters": {
+      "text": "起步",
+      "sourceHash": "7bfec88cf924",
+      "updatedAt": "2026-08-17T16:16:03.959Z"
+    },
+    "ws.topics.useHere": {
+      "text": "在此使用",
+      "sourceHash": "72c384afab37",
+      "updatedAt": "2026-08-17T16:16:03.959Z"
+    },
+    "ws.voice.listening": {
+      "text": "监听中…",
+      "sourceHash": "6c19a4761d7e",
+      "updatedAt": "2026-08-17T16:16:05.619Z"
+    },
+    "ws.voice.micBlockedShort": {
+      "text": "麦克风被阻止",
+      "sourceHash": "08f9ba43eef0",
+      "updatedAt": "2026-08-17T16:16:05.619Z"
+    },
+    "ws.voice.allowMicShort": {
+      "text": "允许麦克风",
+      "sourceHash": "43f5f6857d60",
+      "updatedAt": "2026-08-17T16:16:05.619Z"
+    },
+    "ws.voice.unavailableShort": {
+      "text": "语音不可用",
+      "sourceHash": "1aeefb24cc0d",
+      "updatedAt": "2026-08-17T16:16:05.619Z"
+    },
+    "ws.voice.spoken": {
+      "text": "已讲述",
+      "sourceHash": "77459e51c50c",
+      "updatedAt": "2026-08-17T16:16:05.619Z"
+    },
+    "ws.voice.deniedHint": {
+      "text": "请允许麦克风，然后重试。",
+      "sourceHash": "5b0bc80e09a9",
+      "updatedAt": "2026-08-17T16:16:05.619Z"
+    },
+    "ws.project.analysisDepth": {
+      "text": "分析深度",
+      "sourceHash": "903ec812ae6d",
+      "updatedAt": "2026-08-17T16:16:05.619Z"
+    },
+    "ws.project.paidModels": {
+      "text": "允许本次运行使用付费模型",
+      "sourceHash": "06cd26ce7c61",
+      "updatedAt": "2026-08-17T16:16:05.619Z"
+    },
+    "ws.project.stuckHint": {
+      "text": "如果代理看起来卡住，强制重新运行。",
+      "sourceHash": "02d66d9bd268",
+      "updatedAt": "2026-08-17T16:16:07.252Z"
+    },
+    "ws.project.resetLayout": {
+      "text": "重置布局",
+      "sourceHash": "5179087c02b4",
+      "updatedAt": "2026-08-17T16:16:07.252Z"
+    },
+    "ws.project.archive": {
+      "text": "归档",
+      "sourceHash": "2621c6fd51a5",
+      "updatedAt": "2026-08-17T16:16:07.252Z"
+    },
+    "ws.project.restore": {
+      "text": "恢复",
+      "sourceHash": "3cbe6d6b9a8d",
+      "updatedAt": "2026-08-17T16:16:07.252Z"
+    },
+    "ws.project.briefRevealBody": {
+      "text": "打开简要内容以审查判决和证据。",
+      "sourceHash": "fc1c1408e907",
+      "updatedAt": "2026-08-17T16:16:07.252Z"
+    },
+    "ws.docs.fileTypes": {
+      "text": "PDF、Word、文本和图片 · 30天保留",
+      "sourceHash": "c766e5559e6a",
+      "updatedAt": "2026-08-17T16:16:07.252Z"
+    },
+    "ws.docs.deleteShort": {
+      "text": "删除",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T16:16:07.252Z"
+    },
+    "ws.docs.downloadShort": {
+      "text": "下载",
+      "sourceHash": "a479c9c34e87",
+      "updatedAt": "2026-08-17T16:16:07.252Z"
+    },
+    "op.section.production": {
+      "text": "生产",
+      "sourceHash": "df70fc7991d3",
+      "updatedAt": "2026-08-17T16:16:08.734Z"
+    },
+    "op.brand": {
+      "text": "Octivate 操作员",
+      "sourceHash": "c083a340a671",
+      "updatedAt": "2026-08-17T16:16:08.734Z"
+    },
+    "op.title": {
+      "text": "操作员命令中心",
+      "sourceHash": "f1ae56b9207a",
+      "updatedAt": "2026-08-17T16:16:08.734Z"
+    },
+    "op.subtitle": {
+      "text": "实时管道指标、运营、控制平面、目录和定价——分屏模块，实时 API 数据。",
+      "sourceHash": "cb9be5c7af4d",
+      "updatedAt": "2026-08-17T16:16:08.734Z"
+    },
+    "op.refresh": {
+      "text": "刷新",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T16:16:08.734Z"
+    },
+    "op.tab.pulse": {
+      "text": "脉搏",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T16:16:08.734Z"
+    },
+    "op.tab.pulse.hint": {
+      "text": "平台健康与实时活动",
+      "sourceHash": "7158af122607",
+      "updatedAt": "2026-08-17T16:16:08.734Z"
+    },
+    "op.tab.operations": {
+      "text": "运营",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T16:16:08.734Z"
+    },
+    "op.tab.operations.hint": {
+      "text": "成本账本和运营操作",
+      "sourceHash": "828625ff637a",
+      "updatedAt": "2026-08-17T16:16:10.307Z"
+    },
+    "op.tab.control": {
+      "text": "控制",
+      "sourceHash": "ea1d3df298ca",
+      "updatedAt": "2026-08-17T16:16:10.307Z"
+    },
+    "op.tab.control.hint": {
+      "text": "限制、模型和平台控制",
+      "sourceHash": "7c76af9956eb",
+      "updatedAt": "2026-08-17T16:16:10.307Z"
+    },
+    "op.tab.catalog": {
+      "text": "目录",
+      "sourceHash": "4a88d27bbae1",
+      "updatedAt": "2026-08-17T16:16:10.307Z"
+    },
+    "op.tab.catalog.hint": {
+      "text": "源注册表和目录工具",
+      "sourceHash": "03e812eaa0b0",
+      "updatedAt": "2026-08-17T16:16:10.307Z"
+    },
+    "op.tab.support": {
+      "text": "客户支持",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T16:16:10.307Z"
+    },
+    "op.tab.support.hint": {
+      "text": "基于账户的收件箱和 moderation",
+      "sourceHash": "e935dc49fec9",
+      "updatedAt": "2026-08-17T16:16:10.307Z"
+    },
+    "op.tab.mail": {
+      "text": "邮件",
+      "sourceHash": "92379cbb8ecf",
+      "updatedAt": "2026-08-17T16:16:10.307Z"
+    },
+    "op.tab.mail.hint": {
+      "text": "运营商出站邮件和邮件列表",
+      "sourceHash": "89336a920d33",
+      "updatedAt": "2026-08-17T16:16:11.977Z"
+    },
+    "op.tab.users": {
+      "text": "用户",
+      "sourceHash": "57f2b181d0a5",
+      "updatedAt": "2026-08-17T16:16:11.977Z"
+    },
+    "op.tab.users.hint": {
+      "text": "成员账户和访问权限",
+      "sourceHash": "cdcf5d5c424f",
+      "updatedAt": "2026-08-17T16:16:11.977Z"
+    },
+    "op.tab.pricing": {
+      "text": "定价",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T16:16:11.977Z"
+    },
+    "op.tab.pricing.hint": {
+      "text": "计划和定价配置",
+      "sourceHash": "c56f16d3a8b8",
+      "updatedAt": "2026-08-17T16:16:11.977Z"
+    },
+    "op.tab.merchants": {
+      "text": "商户",
+      "sourceHash": "37633677209d",
+      "updatedAt": "2026-08-17T16:16:11.977Z"
+    },
+    "op.tab.merchants.hint": {
+      "text": "结算收银配置文件和购买提交",
+      "sourceHash": "f74180193a8c",
+      "updatedAt": "2026-08-17T16:16:11.977Z"
+    },
+    "op.tab.automation": {
+      "text": "自动化",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T16:16:11.977Z"
+    },
+    "op.tab.automation.hint": {
+      "text": "媒体爬取、下载和本地转录",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T16:16:14.113Z"
+    },
+    "op.tab.parliament": {
+      "text": "自动化",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T16:16:14.113Z"
+    },
+    "op.tab.parliament.hint": {
+      "text": "媒体爬取、下载和本地转录",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T16:16:14.113Z"
+    },
+    "op.tab.exports": {
+      "text": "导出",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T16:16:14.113Z"
+    },
+    "op.tab.exports.hint": {
+      "text": "导出作业和成果",
+      "sourceHash": "21dd275c3e12",
+      "updatedAt": "2026-08-17T16:16:14.113Z"
+    },
+    "op.tab.debug": {
+      "text": "调试",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T16:16:14.113Z"
+    },
+    "op.tab.debug.hint": {
+      "text": "Ops 事件流和诊断",
+      "sourceHash": "ad315fcae7e9",
+      "updatedAt": "2026-08-17T16:16:14.113Z"
+    },
+    "op.i18n.title": {
+      "text": "翻译词目",
+      "sourceHash": "e4dfce9a5e06",
+      "updatedAt": "2026-08-17T16:16:14.113Z"
+    },
+    "op.i18n.lede": {
+      "text": "预构建永久本地化目录 via OpenRouter。页面加载永不调用翻译。",
+      "sourceHash": "f41683cce4eb",
+      "updatedAt": "2026-08-17T16:16:15.946Z"
+    },
+    "op.i18n.sync": {
+      "text": "同步翻译",
+      "sourceHash": "0a40962f0248",
+      "updatedAt": "2026-08-17T16:16:15.946Z"
+    },
+    "op.i18n.syncing": {
+      "text": "正在同步…",
+      "sourceHash": "221ca63005ea",
+      "updatedAt": "2026-08-17T16:16:15.946Z"
+    },
+    "op.i18n.refresh": {
+      "text": "刷新状态",
+      "sourceHash": "ade15a52e213",
+      "updatedAt": "2026-08-17T16:16:15.946Z"
+    },
+    "op.modules.liveKpis": {
+      "text": "实时 KPI",
+      "sourceHash": "864cca8d77e4",
+      "updatedAt": "2026-08-17T16:16:15.946Z"
+    },
+    "op.modules.liveKpisHint": {
+      "text": "点击指标以打开其控制台视图",
+      "sourceHash": "d41d360e119d",
+      "updatedAt": "2026-08-17T16:16:15.946Z"
+    },
+    "op.modules.revisionQueue": {
+      "text": "修订队列",
+      "sourceHash": "0acf2dc1f773",
+      "updatedAt": "2026-08-17T16:16:15.946Z"
+    },
+    "op.modules.revisionHint": {
+      "text": "待处理的简报按源账户配对",
+      "sourceHash": "607fc44d0589",
+      "updatedAt": "2026-08-17T16:16:15.946Z"
+    },
+    "op.modules.noRevision": {
+      "text": "无待审阅简报。",
+      "sourceHash": "d6dfa3886a0e",
+      "updatedAt": "2026-08-17T16:16:17.322Z"
+    },
+    "op.modules.sessionMix": {
+      "text": "会话混合",
+      "sourceHash": "341919f517c9",
+      "updatedAt": "2026-08-17T16:16:17.322Z"
+    },
+    "op.modules.sessionHint": {
+      "text": "代理工作流状态作为活动栏",
+      "sourceHash": "c3f1f3eadcd5",
+      "updatedAt": "2026-08-17T16:16:17.322Z"
+    },
+    "op.modules.costByModel": {
+      "text": "按模型计费",
+      "sourceHash": "d281caa03bcc",
+      "updatedAt": "2026-08-17T16:16:17.322Z"
+    },
+    "op.modules.costHint": {
+      "text": "从成本账本显示为活动栏",
+      "sourceHash": "09f4a8a24cb9",
+      "updatedAt": "2026-08-17T16:16:17.322Z"
+    },
+    "op.modules.tokensConcurrency": {
+      "text": "Token 与并发",
+      "sourceHash": "fa26e388feb6",
+      "updatedAt": "2026-08-17T16:16:17.322Z"
+    },
+    "op.modules.tokenBudget": {
+      "text": "Token 预算与并发栏",
+      "sourceHash": "4e046c938df1",
+      "updatedAt": "2026-08-17T16:16:17.322Z"
+    },
+    "op.modules.liveSystem": {
+      "text": "实时系统状态 — 拖动以重新排列",
+      "sourceHash": "57e91bf745c5",
+      "updatedAt": "2026-08-17T16:16:17.322Z"
+    },
+    "op.modules.controlPlane": {
+      "text": "控制平面",
+      "sourceHash": "38f00e1ffa03",
+      "updatedAt": "2026-08-17T16:16:18.800Z"
+    },
+    "op.modules.controlHint": {
+      "text": "实时运行使用限制 — 拖动以重新排序",
+      "sourceHash": "f3fff5453ff9",
+      "updatedAt": "2026-08-17T16:16:18.800Z"
+    },
+    "op.modules.modelRouting": {
+      "text": "模型路由",
+      "sourceHash": "06a48dd13470",
+      "updatedAt": "2026-08-17T16:16:18.800Z"
+    },
+    "op.modules.evidencePipeline": {
+      "text": "证据管道",
+      "sourceHash": "c8f16d4ea829",
+      "updatedAt": "2026-08-17T16:16:18.800Z"
+    },
+    "op.modules.liveConcurrency": {
+      "text": "实时并发计数器",
+      "sourceHash": "e0709470392d",
+      "updatedAt": "2026-08-17T16:16:18.800Z"
+    },
+    "op.modules.probes": {
+      "text": "可用性探针与节拍 — 拖动以重新排序",
+      "sourceHash": "e645018146df",
+      "updatedAt": "2026-08-17T16:16:18.800Z"
+    },
+    "op.modules.sourceCapture": {
+      "text": "源捕获",
+      "sourceHash": "cd599f00b60c",
+      "updatedAt": "2026-08-17T16:16:18.800Z"
+    },
+    "op.modules.artifactQueue": {
+      "text": "艺术品队列与路径 — 拖动以重新排序",
+      "sourceHash": "2ae5335735e6",
+      "updatedAt": "2026-08-17T16:16:18.800Z"
+    },
+    "op.modules.liveRegistry": {
+      "text": "实时登记册 — 拖拽重排",
+      "sourceHash": "544cb1f76259",
+      "updatedAt": "2026-08-17T16:16:20.222Z"
+    },
+    "op.modules.signalTicker": {
+      "text": "信号滚动",
+      "sourceHash": "e0fa7496c8b3",
+      "updatedAt": "2026-08-17T16:16:20.222Z"
+    },
+    "op.modules.tickerHint": {
+      "text": "实时站点滚动 — 创建、预览、排队",
+      "sourceHash": "53c2b36d9e58",
+      "updatedAt": "2026-08-17T16:16:20.222Z"
+    },
+    "op.modules.unassigned": {
+      "text": "未分配 / 种子",
+      "sourceHash": "c15e034fd891",
+      "updatedAt": "2026-08-17T16:16:20.222Z"
+    },
+    "op.pulse.liveConsole": {
+      "text": "实时控制台",
+      "sourceHash": "99254e92d752",
+      "updatedAt": "2026-08-17T16:16:20.222Z"
+    },
+    "op.pulse.reload": {
+      "text": "重新加载所有运营商 API 面板",
+      "sourceHash": "d9fb2ba01854",
+      "updatedAt": "2026-08-17T16:16:20.222Z"
+    },
+    "op.pulse.periodCost": {
+      "text": "期间成本",
+      "sourceHash": "cb8a109f1f4b",
+      "updatedAt": "2026-08-17T16:16:20.222Z"
+    },
+    "op.pulse.periodCostHint": {
+      "text": "账本承诺期间支出 + 进行中流水线（实时）",
+      "sourceHash": "59084279a9c0",
+      "updatedAt": "2026-08-17T16:16:20.222Z"
+    },
+    "op.pulse.tokenBudget": {
+      "text": "Token budget",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T16:16:21.540Z"
+    },
+    "op.pulse.tokenBudgetHint": {
+      "text": "Tokens from cost ledger (synced) · live adds in-flight sessions",
+      "sourceHash": "2769bcf48179",
+      "updatedAt": "2026-08-17T16:16:21.540Z"
+    },
+    "op.pulse.liveAwaiting": {
+      "text": "Live · awaiting key",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T16:16:21.540Z"
+    },
+    "op.pulse.openOpsSessions": {
+      "text": "Open Operations · agent session queue",
+      "sourceHash": "c0f238a02a7d",
+      "updatedAt": "2026-08-17T16:16:21.540Z"
+    },
+    "op.pulse.openCatalog": {
+      "text": "Open Catalog · source registry & ticker",
+      "sourceHash": "a238e6ce5284",
+      "updatedAt": "2026-08-17T16:16:21.540Z"
+    },
+    "op.pulse.openPulseReviews": {
+      "text": "Open Pulse · pending brief reviews",
+      "sourceHash": "d2b934845eee",
+      "updatedAt": "2026-08-17T16:16:21.540Z"
+    },
+    "op.pulse.openOpsModeration": {
+      "text": "Open Operations · moderation inventory",
+      "sourceHash": "ae2238c4a37e",
+      "updatedAt": "2026-08-17T16:16:21.540Z"
+    },
+    "op.pulse.loadFailed": {
+      "text": "Failed to load operator console",
+      "sourceHash": "52090fbc038a",
+      "updatedAt": "2026-08-17T16:16:21.540Z"
+    },
+    "op.pulse.autosaveFailed": {
+      "text": "Failed to autosave limits",
+      "sourceHash": "874eeff8b691",
+      "updatedAt": "2026-08-17T16:16:23.114Z"
+    },
+    "op.pulse.refreshed": {
+      "text": "Console refreshed",
+      "sourceHash": "036e418d4072",
+      "updatedAt": "2026-08-17T16:16:23.114Z"
+    },
+    "op.pulse.refreshFailed": {
+      "text": "Refresh failed",
+      "sourceHash": "3d1f4a6759f4",
+      "updatedAt": "2026-08-17T16:16:23.114Z"
+    },
+    "op.pulse.clearReviews": {
+      "text": "Clear all pending reviews?",
+      "sourceHash": "6fdeaaa15241",
+      "updatedAt": "2026-08-17T16:16:23.114Z"
+    },
+    "op.pulse.clearStale": {
+      "text": "Clear stale seed reviews?",
+      "sourceHash": "df6187395702",
+      "updatedAt": "2026-08-17T16:16:23.114Z"
+    },
+    "op.pulse.clearReviewsHint": {
+      "text": "Marks every pending brief review as rejected and updates human-review records. Propagates live to operators.",
+      "sourceHash": "07afb627b450",
+      "updatedAt": "2026-08-17T16:16:23.114Z"
+    },
+    "op.pulse.clearStaleHint": {
+      "text": "Only clears pending reviews with no owning account (seed/orphan).",
+      "sourceHash": "63a7081f3fd6",
+      "updatedAt": "2026-08-17T16:16:23.114Z"
+    },
+    "op.pulse.clearAllReviews": {
+      "text": "Clear all reviews",
+      "sourceHash": "8aaf3beff76b",
+      "updatedAt": "2026-08-17T16:16:23.114Z"
+    },
+    "op.pulse.clearStaleBtn": {
+      "text": "清除过期",
+      "sourceHash": "c760db651884",
+      "updatedAt": "2026-08-17T16:16:24.506Z"
+    },
+    "op.pulse.nothingToClear": {
+      "text": "无需清理",
+      "sourceHash": "ec219a9ca961",
+      "updatedAt": "2026-08-17T16:16:24.506Z"
+    },
+    "op.pulse.clearFailed": {
+      "text": "清理失败",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T16:16:24.506Z"
+    },
+    "op.pulse.resetLedger": {
+      "text": "重置成本账本?",
+      "sourceHash": "34f8b9727821",
+      "updatedAt": "2026-08-17T16:16:24.506Z"
+    },
+    "op.pulse.resetLedgerHint": {
+      "text": "删除每一个 Supabase cost_ledger 行并将周期用量归零。进行中的会话会保留本地计数器，直到它们刷新。",
+      "sourceHash": "18f1d6f36043",
+      "updatedAt": "2026-08-17T16:16:24.506Z"
+    },
+    "op.pulse.clearLedger": {
+      "text": "清除账本",
+      "sourceHash": "fe2640defa59",
+      "updatedAt": "2026-08-17T16:16:24.506Z"
+    },
+    "op.pulse.ledgerClearFailed": {
+      "text": "清除账本失败",
+      "sourceHash": "df287f9b11ba",
+      "updatedAt": "2026-08-17T16:16:24.506Z"
+    },
+    "op.pulse.clearSessions": {
+      "text": "清除所有会话?",
+      "sourceHash": "17f0d287182d",
+      "updatedAt": "2026-08-17T16:16:24.506Z"
+    },
+    "op.pulse.clearSessionsHint": {
+      "text": "从 Supabase 和内存中清除所有代理会话。不删除成本账本（使用 Clear ledger）。",
+      "sourceHash": "295d68d41ceb",
+      "updatedAt": "2026-08-17T16:16:26.845Z"
+    },
+    "op.pulse.clearSessionsBtn": {
+      "text": "清除会话",
+      "sourceHash": "5d82a79211cc",
+      "updatedAt": "2026-08-17T16:16:26.845Z"
+    },
+    "op.pulse.sessionClearFailed": {
+      "text": "清除会话失败",
+      "sourceHash": "2d27d861520a",
+      "updatedAt": "2026-08-17T16:16:26.845Z"
+    },
+    "op.pulse.deleteConfirm": {
+      "text": "此操作永久删除所选记录。\n\n此操作无法撤销。",
+      "sourceHash": "0621d2ec0e04",
+      "updatedAt": "2026-08-17T16:16:26.845Z"
+    },
+    "op.pulse.deleteCancelled": {
+      "text": "删除已取消",
+      "sourceHash": "e10929fe22ea",
+      "updatedAt": "2026-08-17T16:16:26.845Z"
+    },
+    "op.pulse.deleteFailed": {
+      "text": "删除失败",
+      "sourceHash": "64513b47d460",
+      "updatedAt": "2026-08-17T16:16:26.845Z"
+    },
+    "op.control.limitsTitle": {
+      "text": "平台限制",
+      "sourceHash": "f81483fa3c52",
+      "updatedAt": "2026-08-17T16:16:26.845Z"
+    },
+    "op.control.limitsLede": {
+      "text": "计算上限、并发、上传保护和实时管道的模型策略。",
+      "sourceHash": "2173dff3c43f",
+      "updatedAt": "2026-08-17T16:16:26.845Z"
+    },
+    "op.control.compute": {
+      "text": "计算与吞吐量",
+      "sourceHash": "c547787d60e6",
+      "updatedAt": "2026-08-17T16:16:30.871Z"
+    },
+    "op.control.computeHint": {
+      "text": "每日 token 预算和并发代理容量。",
+      "sourceHash": "6abc96efeff9",
+      "updatedAt": "2026-08-17T16:16:30.871Z"
+    },
+    "op.control.uploadGuardrails": {
+      "text": "上传守卫",
+      "sourceHash": "195034829916",
+      "updatedAt": "2026-08-17T16:16:30.871Z"
+    },
+    "op.control.accountProfile": {
+      "text": "账户配置文件",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T16:16:30.871Z"
+    },
+    "op.control.signup": {
+      "text": "注册与账户配额",
+      "sourceHash": "ee7efccafaf3",
+      "updatedAt": "2026-08-17T16:16:30.871Z"
+    },
+    "op.control.modelPolicy": {
+      "text": "模型与合规政策",
+      "sourceHash": "81ab6ab50a50",
+      "updatedAt": "2026-08-17T16:16:30.871Z"
+    },
+    "op.control.tokensPerDay": {
+      "text": "每日 token",
+      "sourceHash": "9947717c245c",
+      "updatedAt": "2026-08-17T16:16:30.871Z"
+    },
+    "op.control.tokensPerDayHint": {
+      "text": "所有会话中模型消耗的 token 总上限。",
+      "sourceHash": "baaa97f25c29",
+      "updatedAt": "2026-08-17T16:16:30.871Z"
+    },
+    "op.control.concurrentAgents": {
+      "text": "并发代理",
+      "sourceHash": "66802c8476b0",
+      "updatedAt": "2026-08-17T16:17:27.736Z"
+    },
+    "op.control.concurrentHint": {
+      "text": "最大同时理论管道运行次数。",
+      "sourceHash": "5775a32b9fa6",
+      "updatedAt": "2026-08-17T16:17:27.736Z"
+    },
+    "op.control.uploadsPerProject": {
+      "text": "每项目上传次数",
+      "sourceHash": "f8fa8fd01015",
+      "updatedAt": "2026-08-17T16:17:27.736Z"
+    },
+    "op.control.uploadsHint": {
+      "text": "单个项目中源文档的最大数量。",
+      "sourceHash": "a9dabf17039d",
+      "updatedAt": "2026-08-17T16:17:27.736Z"
+    },
+    "op.control.maxFileSize": {
+      "text": "最大文件大小",
+      "sourceHash": "9568dad88fad",
+      "updatedAt": "2026-08-17T16:17:27.736Z"
+    },
+    "op.control.maxFileHint": {
+      "text": "每个上传文档的上限。",
+      "sourceHash": "abbd0701335a",
+      "updatedAt": "2026-08-17T16:17:27.736Z"
+    },
+    "op.control.docRetention": {
+      "text": "文档保留期",
+      "sourceHash": "a079e024e8b0",
+      "updatedAt": "2026-08-17T16:17:27.736Z"
+    },
+    "op.control.docRetentionHint": {
+      "text": "上传文件保留天数，过期后将被排入删除队列。更改此设置将重新计算每个文件的过期时间。",
+      "sourceHash": "cb4ebc4796b2",
+      "updatedAt": "2026-08-17T16:17:27.736Z"
+    },
+    "op.control.maxAvatar": {
+      "text": "最大头像尺寸",
+      "sourceHash": "e711d3b824bf",
+      "updatedAt": "2026-08-17T16:17:30.478Z"
+    },
+    "op.control.maxAvatarHint": {
+      "text": "JPEG / PNG / WebP 头像照片。默认 2 MB；运营商最大 10 MB。",
+      "sourceHash": "f5e78f1906f4",
+      "updatedAt": "2026-08-17T16:17:30.478Z"
+    },
+    "op.control.maxBio": {
+      "text": "最大简介长度",
+      "sourceHash": "a0b891ea0ece",
+      "updatedAt": "2026-08-17T16:17:30.478Z"
+    },
+    "op.control.maxBioHint": {
+      "text": "用于 BBCode 个人简介描述的字符上限。",
+      "sourceHash": "63b69d9c925e",
+      "updatedAt": "2026-08-17T16:17:30.478Z"
+    },
+    "op.control.autogenAccounts": {
+      "text": "自动生成账户",
+      "sourceHash": "ea2935b73e48",
+      "updatedAt": "2026-08-17T16:17:30.478Z"
+    },
+    "op.control.premiumModels": {
+      "text": "高级模型",
+      "sourceHash": "1db84bd8860a",
+      "updatedAt": "2026-08-17T16:17:30.478Z"
+    },
+    "op.control.premiumHint": {
+      "text": "在服务器配置了的情况下，允许 OpenRouter 高级模型路由。",
+      "sourceHash": "636f47dd34dc",
+      "updatedAt": "2026-08-17T16:17:30.478Z"
+    },
+    "op.control.requireReview": {
+      "text": "需要人工审核",
+      "sourceHash": "1a4321561031",
+      "updatedAt": "2026-08-17T16:17:30.478Z"
+    },
+    "op.control.requireReviewHint": {
+      "text": "实时简报保持审核状态，直到运营人员批准发布。",
+      "sourceHash": "a53e9fa17bed",
+      "updatedAt": "2026-08-17T16:18:51.863Z"
+    },
+    "op.control.tokenBudget": {
+      "text": "Token 配额",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T16:18:51.863Z"
+    },
+    "op.control.agentSlots": {
+      "text": "智能体槽位",
+      "sourceHash": "8c545cd72d5e",
+      "updatedAt": "2026-08-17T16:18:51.863Z"
+    },
+    "op.control.uploadsProject": {
+      "text": "上传 / 项目",
+      "sourceHash": "e603b0fdace5",
+      "updatedAt": "2026-08-17T16:18:51.863Z"
+    },
+    "op.control.maxDocs": {
+      "text": "每个工作区最大文档数",
+      "sourceHash": "ca966660897f",
+      "updatedAt": "2026-08-17T16:18:51.863Z"
+    },
+    "op.control.perUpload": {
+      "text": "每次上传限制",
+      "sourceHash": "763167a3bcf8",
+      "updatedAt": "2026-08-17T16:18:51.863Z"
+    },
+    "op.control.docRetentionLabel": {
+      "text": "文档保留",
+      "sourceHash": "137567a2e324",
+      "updatedAt": "2026-08-17T16:18:51.863Z"
+    },
+    "op.control.autoDelete": {
+      "text": "过期后自动删除",
+      "sourceHash": "601cc273b93c",
+      "updatedAt": "2026-08-17T16:18:51.863Z"
+    },
+    "op.control.avatarCap": {
+      "text": "头像上限",
+      "sourceHash": "74c765571762",
+      "updatedAt": "2026-08-17T16:18:53.358Z"
+    },
+    "op.control.profilePhoto": {
+      "text": "头像上传",
+      "sourceHash": "a2f3d60ff6b4",
+      "updatedAt": "2026-08-17T16:18:53.358Z"
+    },
+    "op.control.manualSignup": {
+      "text": "手动注册",
+      "sourceHash": "4e9637c91d0e",
+      "updatedAt": "2026-08-17T16:18:53.358Z"
+    },
+    "op.control.standardOnly": {
+      "text": "仅标准版",
+      "sourceHash": "aea090c61c44",
+      "updatedAt": "2026-08-17T16:18:53.358Z"
+    },
+    "op.control.loadingModels": {
+      "text": "加载模型中…",
+      "sourceHash": "d23f24f3751f",
+      "updatedAt": "2026-08-17T16:18:53.358Z"
+    },
+    "op.control.docsMode": {
+      "text": "文档模式",
+      "sourceHash": "3d8a8e32654b",
+      "updatedAt": "2026-08-17T16:18:53.358Z"
+    },
+    "op.control.docsModel": {
+      "text": "文档模型",
+      "sourceHash": "322636a90ca9",
+      "updatedAt": "2026-08-17T16:18:53.358Z"
+    },
+    "op.control.docsTokens": {
+      "text": "文档令牌",
+      "sourceHash": "924f8ba06123",
+      "updatedAt": "2026-08-17T16:18:53.358Z"
+    },
+    "op.control.doctrineTokens": {
+      "text": "道义令牌",
+      "sourceHash": "e9758cad685c",
+      "updatedAt": "2026-08-17T16:18:54.872Z"
+    },
+    "op.control.reasoningTokens": {
+      "text": "推理令牌",
+      "sourceHash": "6284e5999d12",
+      "updatedAt": "2026-08-17T16:18:54.872Z"
+    },
+    "op.control.reasoningBudget": {
+      "text": "推理预算",
+      "sourceHash": "4d7097470626",
+      "updatedAt": "2026-08-17T16:18:54.872Z"
+    },
+    "op.control.resetRouting": {
+      "text": "重置模型路由",
+      "sourceHash": "aecd569180f1",
+      "updatedAt": "2026-08-17T16:18:54.872Z"
+    },
+    "op.control.modelsFailed": {
+      "text": "加载模型失败",
+      "sourceHash": "4bef3a82f816",
+      "updatedAt": "2026-08-17T16:18:54.872Z"
+    },
+    "op.control.autosaveFailed": {
+      "text": "自动保存失败",
+      "sourceHash": "6d939c6e7ddd",
+      "updatedAt": "2026-08-17T16:18:54.872Z"
+    },
+    "op.control.recommendedRestored": {
+      "text": "推荐的模型已恢复",
+      "sourceHash": "ffbbb4d61f68",
+      "updatedAt": "2026-08-17T16:18:54.872Z"
+    },
+    "op.control.resetFailed": {
+      "text": "重置失败",
+      "sourceHash": "ca42c6fe10d0",
+      "updatedAt": "2026-08-17T16:18:54.872Z"
+    },
+    "op.operations.costLedger": {
+      "text": "成本账本",
+      "sourceHash": "7af91996d5c5",
+      "updatedAt": "2026-08-17T16:18:56.819Z"
+    },
+    "op.operations.inventoryHint": {
+      "text": "库存和政策操作 · 拖动以重新排序",
+      "sourceHash": "5012fe617ecf",
+      "updatedAt": "2026-08-17T16:18:56.819Z"
+    },
+    "op.operations.ledgerSummary": {
+      "text": "账本摘要",
+      "sourceHash": "7cd55cb04aa7",
+      "updatedAt": "2026-08-17T16:18:56.819Z"
+    },
+    "op.operations.noCost": {
+      "text": "暂无成本记录",
+      "sourceHash": "29e480e85bea",
+      "updatedAt": "2026-08-17T16:18:56.819Z"
+    },
+    "op.operations.noCostHint": {
+      "text": "当实时会话消耗 Token 时，行将出现。",
+      "sourceHash": "9dd655498920",
+      "updatedAt": "2026-08-17T16:18:56.819Z"
+    },
+    "op.operations.noSessions": {
+      "text": "无代理会话",
+      "sourceHash": "883776c0ff81",
+      "updatedAt": "2026-08-17T16:18:56.819Z"
+    },
+    "op.operations.noSessionsHint": {
+      "text": "从项目中运行一个问题以填充此日志。",
+      "sourceHash": "ec6e46dbc36f",
+      "updatedAt": "2026-08-17T16:18:56.819Z"
+    },
+    "op.operations.openProjects": {
+      "text": "打开的项目",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T16:18:56.819Z"
+    },
+    "op.operations.wipeLedger": {
+      "text": "清除 Supabase cost_ledger + period usage (实时推送至所有运营商)",
+      "sourceHash": "8669767d1260",
+      "updatedAt": "2026-08-17T16:20:37.762Z"
+    },
+    "op.operations.deleteLedgerRow": {
+      "text": "删除账本行",
+      "sourceHash": "d333e4b0a85f",
+      "updatedAt": "2026-08-17T16:20:37.762Z"
+    },
+    "op.operations.deleteAllSessions": {
+      "text": "删除所有代理会话（来自 Supabase + 内存）",
+      "sourceHash": "21052d012d71",
+      "updatedAt": "2026-08-17T16:20:37.762Z"
+    },
+    "op.operations.deleteSession": {
+      "text": "删除会话",
+      "sourceHash": "ca5747020239",
+      "updatedAt": "2026-08-17T16:20:37.762Z"
+    },
+    "op.catalog.sourceRegistry": {
+      "text": "源注册表",
+      "sourceHash": "941b018c3188",
+      "updatedAt": "2026-08-17T16:20:37.762Z"
+    },
+    "op.catalog.sourceLede": {
+      "text": "点击卡片以重新标记并更新 URL — 编辑会自动保存；从卡片中删除任何 CSV 行。",
+      "sourceHash": "7c8b080747dc",
+      "updatedAt": "2026-08-17T16:20:37.762Z"
+    },
+    "op.catalog.registrySummary": {
+      "text": "注册表摘要",
+      "sourceHash": "6011e3289ff5",
+      "updatedAt": "2026-08-17T16:20:37.762Z"
+    },
+    "op.catalog.search": {
+      "text": "名称、国家、标签…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T16:20:37.762Z"
+    },
+    "op.catalog.noMatches": {
+      "text": "无匹配来源",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T16:20:39.451Z"
+    },
+    "op.catalog.noMatchesHint": {
+      "text": "调整过滤器或上传 CSV 以合并来源到注册表。",
+      "sourceHash": "e82983fce0de",
+      "updatedAt": "2026-08-17T16:20:39.451Z"
+    },
+    "op.catalog.loadFailed": {
+      "text": "无法加载源注册表",
+      "sourceHash": "38cec25d4b3c",
+      "updatedAt": "2026-08-17T16:20:39.451Z"
+    },
+    "op.catalog.allCountries": {
+      "text": "所有国家",
+      "sourceHash": "b5fccc286fd7",
+      "updatedAt": "2026-08-17T16:20:39.451Z"
+    },
+    "op.catalog.allWatch": {
+      "text": "所有监控",
+      "sourceHash": "0ac44d5c86a1",
+      "updatedAt": "2026-08-17T16:20:39.451Z"
+    },
+    "op.catalog.allRetrieval": {
+      "text": "所有检索",
+      "sourceHash": "386ffc567692",
+      "updatedAt": "2026-08-17T16:20:39.451Z"
+    },
+    "op.catalog.allHealth": {
+      "text": "所有健康",
+      "sourceHash": "1520fa11da38",
+      "updatedAt": "2026-08-17T16:20:39.451Z"
+    },
+    "op.catalog.prevPage": {
+      "text": "上一页",
+      "sourceHash": "81f547195bef",
+      "updatedAt": "2026-08-17T16:20:39.451Z"
+    },
+    "op.catalog.nextPage": {
+      "text": "下一页",
+      "sourceHash": "4bfc194b68a3",
+      "updatedAt": "2026-08-17T16:20:40.815Z"
+    },
+    "op.mail.formats": {
+      "text": "CSV · TSV · TXT · JSON",
+      "sourceHash": "704a80b548fb",
+      "updatedAt": "2026-08-17T16:20:40.815Z"
+    },
+    "op.mail.sendFrom": {
+      "text": "发送自员工或 no-reply · 可选模板",
+      "sourceHash": "ebfea489306a",
+      "updatedAt": "2026-08-17T16:20:40.815Z"
+    },
+    "op.mail.mailingList": {
+      "text": "邮件列表",
+      "sourceHash": "d2a1123e6461",
+      "updatedAt": "2026-08-17T16:20:40.815Z"
+    },
+    "op.mail.emptyInbox": {
+      "text": "此邮箱暂无消息。",
+      "sourceHash": "f31d8f7896dc",
+      "updatedAt": "2026-08-17T16:20:40.815Z"
+    },
+    "op.mail.accountMix": {
+      "text": "账户组合",
+      "sourceHash": "82a81d957eee",
+      "updatedAt": "2026-08-17T16:20:40.815Z"
+    },
+    "op.mail.protectedFounder": {
+      "text": "受保护的创始人",
+      "sourceHash": "cde3151a6575",
+      "updatedAt": "2026-08-17T16:20:40.815Z"
+    },
+    "op.mail.subject": {
+      "text": "主题行",
+      "sourceHash": "26225393bc43",
+      "updatedAt": "2026-08-17T16:20:40.815Z"
+    },
+    "op.mail.body": {
+      "text": "纯文本 — 在启用 HTML 模板时包裹",
+      "sourceHash": "77bf9d220248",
+      "updatedAt": "2026-08-17T16:22:06.528Z"
+    },
+    "op.mail.searchUsers": {
+      "text": "搜索用户…",
+      "sourceHash": "71cd28d65523",
+      "updatedAt": "2026-08-17T16:22:06.528Z"
+    },
+    "op.mail.searchUsersBtn": {
+      "text": "搜索用户",
+      "sourceHash": "1bd6226dd199",
+      "updatedAt": "2026-08-17T16:22:06.528Z"
+    },
+    "op.mail.importFormats": {
+      "text": "使用 CSV、TSV、TXT 或 JSON",
+      "sourceHash": "5dcb9d06982e",
+      "updatedAt": "2026-08-17T16:22:06.528Z"
+    },
+    "op.mail.importFailed": {
+      "text": "导入失败",
+      "sourceHash": "fbae892997d9",
+      "updatedAt": "2026-08-17T16:22:06.528Z"
+    },
+    "op.mail.importing": {
+      "text": "导入中…",
+      "sourceHash": "820599da89a1",
+      "updatedAt": "2026-08-17T16:22:06.528Z"
+    },
+    "op.mail.dropList": {
+      "text": "拖放列表以添加",
+      "sourceHash": "29511565da37",
+      "updatedAt": "2026-08-17T16:22:06.528Z"
+    },
+    "op.mail.loadFailed": {
+      "text": "邮件加载失败",
+      "sourceHash": "2f3b7781aa67",
+      "updatedAt": "2026-08-17T16:22:06.528Z"
+    },
+    "op.mail.clearFailed": {
+      "text": "清理失败",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T16:22:12.911Z"
+    },
+    "op.mail.inboxUpdated": {
+      "text": "收件箱已更新",
+      "sourceHash": "8018e96574e3",
+      "updatedAt": "2026-08-17T16:22:12.911Z"
+    },
+    "op.mail.sendFirst": {
+      "text": "发送至第一个选中的收件人",
+      "sourceHash": "f16135d92e4d",
+      "updatedAt": "2026-08-17T16:22:12.911Z"
+    },
+    "op.mail.chooseFirst": {
+      "text": "先选择收件人、主题和正文",
+      "sourceHash": "6cd698326ff5",
+      "updatedAt": "2026-08-17T16:22:12.911Z"
+    },
+    "op.mail.sending": {
+      "text": "发送中…",
+      "sourceHash": "cf765512cc6d",
+      "updatedAt": "2026-08-17T16:22:12.911Z"
+    },
+    "op.mail.selectRecipients": {
+      "text": "选择一个或多个邮件列表收件人",
+      "sourceHash": "1123d3a102d6",
+      "updatedAt": "2026-08-17T16:22:12.911Z"
+    },
+    "op.mail.clearMailbox": {
+      "text": "清除此邮箱中的所有消息",
+      "sourceHash": "5bcd36e89277",
+      "updatedAt": "2026-08-17T16:22:12.911Z"
+    },
+    "op.mail.clearMessage": {
+      "text": "清除此消息",
+      "sourceHash": "7e381d95a625",
+      "updatedAt": "2026-08-17T16:22:12.911Z"
+    },
+    "op.mail.clearing": {
+      "text": "正在清理…",
+      "sourceHash": "bc7a2b58694e",
+      "updatedAt": "2026-08-17T16:23:05.726Z"
+    },
+    "op.mail.clearInboxConfirm": {
+      "text": "清空整个收件箱?",
+      "sourceHash": "28d19bf7ae0d",
+      "updatedAt": "2026-08-17T16:23:05.726Z"
+    },
+    "op.mail.clearMessageConfirm": {
+      "text": "清除此消息?",
+      "sourceHash": "2fe6e2fe7526",
+      "updatedAt": "2026-08-17T16:23:05.726Z"
+    },
+    "op.mail.clearAll": {
+      "text": "清除全部",
+      "sourceHash": "c043160a89ba",
+      "updatedAt": "2026-08-17T16:23:05.726Z"
+    },
+    "op.mail.clearMsg": {
+      "text": "清除消息",
+      "sourceHash": "0edf6a5099e5",
+      "updatedAt": "2026-08-17T16:23:05.726Z"
+    },
+    "op.mail.usersFailed": {
+      "text": "无法加载用户",
+      "sourceHash": "47dd74c0c423",
+      "updatedAt": "2026-08-17T16:23:05.726Z"
+    },
+    "op.mail.passwordCopied": {
+      "text": "新密码已复制到剪贴板",
+      "sourceHash": "c69fd69b1d86",
+      "updatedAt": "2026-08-17T16:23:05.726Z"
+    },
+    "op.mail.actionFailed": {
+      "text": "操作失败",
+      "sourceHash": "57af949595e3",
+      "updatedAt": "2026-08-17T16:23:05.726Z"
+    },
+    "op.mail.noUserMatch": {
+      "text": "没有匹配此搜索的用户。",
+      "sourceHash": "f0f3d70ce761",
+      "updatedAt": "2026-08-17T16:23:07.312Z"
+    },
+    "op.mail.noUsers": {
+      "text": "暂无用户。",
+      "sourceHash": "26930b5f7c6f",
+      "updatedAt": "2026-08-17T16:23:07.312Z"
+    },
+    "op.support.loading": {
+      "text": "加载中...",
+      "sourceHash": "251c89cee942",
+      "updatedAt": "2026-08-17T16:23:07.312Z"
+    },
+    "op.support.noThreads": {
+      "text": "此视图中没有账户线程。",
+      "sourceHash": "7af18f8ac894",
+      "updatedAt": "2026-08-17T16:23:07.312Z"
+    },
+    "op.support.selectThread": {
+      "text": "选择一个账户对话进行审核。",
+      "sourceHash": "e10ec1ca0116",
+      "updatedAt": "2026-08-17T16:23:07.312Z"
+    },
+    "op.support.filters": {
+      "text": "线程筛选",
+      "sourceHash": "37a1b6aef086",
+      "updatedAt": "2026-08-17T16:23:07.312Z"
+    },
+    "op.support.conversations": {
+      "text": "支持对话",
+      "sourceHash": "9f5c09b82d64",
+      "updatedAt": "2026-08-17T16:23:07.312Z"
+    },
+    "op.support.clientEnv": {
+      "text": "客户端环境",
+      "sourceHash": "cd3dc59a3a60",
+      "updatedAt": "2026-08-17T16:23:07.312Z"
+    },
+    "op.support.quickReplies": {
+      "text": "正式快捷回复",
+      "sourceHash": "95c4666d38c0",
+      "updatedAt": "2026-08-17T16:23:08.552Z"
+    },
+    "op.support.attach": {
+      "text": "附加图片",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T16:23:08.552Z"
+    },
+    "op.support.compose": {
+      "text": "起草回复…",
+      "sourceHash": "d50d154a1a48",
+      "updatedAt": "2026-08-17T16:23:08.552Z"
+    },
+    "op.support.awaiting": {
+      "text": "等待客户",
+      "sourceHash": "25e174a919de",
+      "updatedAt": "2026-08-17T16:23:08.552Z"
+    },
+    "op.support.loadFailed": {
+      "text": "无法加载收件箱",
+      "sourceHash": "23be3576fc7a",
+      "updatedAt": "2026-08-17T16:23:08.552Z"
+    },
+    "op.support.attachFailed": {
+      "text": "无法附加图片",
+      "sourceHash": "f9ce8a5e6365",
+      "updatedAt": "2026-08-17T16:23:08.552Z"
+    },
+    "op.support.quickSent": {
+      "text": "快捷回复已发送",
+      "sourceHash": "bec403be3dcf",
+      "updatedAt": "2026-08-17T16:23:08.552Z"
+    },
+    "op.support.replySent": {
+      "text": "回复已发送",
+      "sourceHash": "94295a73231c",
+      "updatedAt": "2026-08-17T16:23:08.552Z"
+    },
+    "op.support.sendFailed": {
+      "text": "发送失败",
+      "sourceHash": "07a7900ae8fa",
+      "updatedAt": "2026-08-17T16:23:10.056Z"
+    },
+    "op.support.resolved": {
+      "text": "已解决的线程",
+      "sourceHash": "b9d31bc63252",
+      "updatedAt": "2026-08-17T16:23:10.056Z"
+    },
+    "op.support.updateFailed": {
+      "text": "更新失败",
+      "sourceHash": "4de04cd91a3d",
+      "updatedAt": "2026-08-17T16:23:10.056Z"
+    },
+    "op.support.assigned": {
+      "text": "对话已分配给您",
+      "sourceHash": "787db9416277",
+      "updatedAt": "2026-08-17T16:23:10.056Z"
+    },
+    "op.support.assignFailed": {
+      "text": "分配失败",
+      "sourceHash": "bb279ac46030",
+      "updatedAt": "2026-08-17T16:23:10.056Z"
+    },
+    "op.support.archived": {
+      "text": "已解决的对话已归档",
+      "sourceHash": "7f2d0c81d33e",
+      "updatedAt": "2026-08-17T16:23:10.056Z"
+    },
+    "op.support.archiveFailed": {
+      "text": "归档失败",
+      "sourceHash": "fa2362f21035",
+      "updatedAt": "2026-08-17T16:23:10.056Z"
+    },
+    "op.support.noResolved": {
+      "text": "没有已解决的对话可归档",
+      "sourceHash": "5e23ade8e268",
+      "updatedAt": "2026-08-17T16:23:10.056Z"
+    },
+    "op.support.syncOn": {
+      "text": "邮箱同步始终开启",
+      "sourceHash": "5e01620f8932",
+      "updatedAt": "2026-08-17T16:23:11.457Z"
+    },
+    "op.support.reconnecting": {
+      "text": "正在重新连接 — 轮询直到流恢复",
+      "sourceHash": "5929cb0aabbf",
+      "updatedAt": "2026-08-17T16:23:11.457Z"
+    },
+    "op.support.sync": {
+      "text": "同步…",
+      "sourceHash": "9688745a86c2",
+      "updatedAt": "2026-08-17T16:23:11.457Z"
+    },
+    "op.support.archiveAll": {
+      "text": "从活动收件箱中归档所有已解决的对话",
+      "sourceHash": "c2f8e41d55c6",
+      "updatedAt": "2026-08-17T16:23:11.457Z"
+    },
+    "op.support.archiveOne": {
+      "text": "将此已解决的对话从收件箱中归档",
+      "sourceHash": "0a34b2f4d62b",
+      "updatedAt": "2026-08-17T16:23:11.457Z"
+    },
+    "op.support.assignYou": {
+      "text": "将此线程分配给您的员工配置文件",
+      "sourceHash": "1885e2da5885",
+      "updatedAt": "2026-08-17T16:23:11.457Z"
+    },
+    "op.support.markAwaiting": {
+      "text": "标记为等待客户回复",
+      "sourceHash": "926c16ea9910",
+      "updatedAt": "2026-08-17T16:23:11.457Z"
+    },
+    "op.support.resolve": {
+      "text": "解决并关闭此对话",
+      "sourceHash": "3c9880945867",
+      "updatedAt": "2026-08-17T16:23:11.457Z"
+    },
+    "op.support.reportedIp": {
+      "text": "最后联系时报告的客户端 IP",
+      "sourceHash": "8f1e7deadbe3",
+      "updatedAt": "2026-08-17T16:23:12.794Z"
+    },
+    "op.support.ipUnknown": {
+      "text": "IP 未知",
+      "sourceHash": "cf40c1ba981e",
+      "updatedAt": "2026-08-17T16:23:12.794Z"
+    },
+    "op.support.browserFamily": {
+      "text": "来自用户代理的浏览器系列",
+      "sourceHash": "bc49f40f1bed",
+      "updatedAt": "2026-08-17T16:23:12.794Z"
+    },
+    "op.support.browserUnknown": {
+      "text": "浏览器未知",
+      "sourceHash": "5476220afd31",
+      "updatedAt": "2026-08-17T16:23:12.794Z"
+    },
+    "op.support.uaMissing": {
+      "text": "未捕获用户代理",
+      "sourceHash": "e89923195485",
+      "updatedAt": "2026-08-17T16:23:12.794Z"
+    },
+    "op.support.attachHint": {
+      "text": "附加图片 (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T16:23:12.794Z"
+    },
+    "op.support.sendAssign": {
+      "text": "发送回复并将线程分配给您",
+      "sourceHash": "61eb025fb429",
+      "updatedAt": "2026-08-17T16:23:12.794Z"
+    },
+    "op.autosave.saved": {
+      "text": "所有更改已保存",
+      "sourceHash": "9595b7da9f61",
+      "updatedAt": "2026-08-17T16:23:12.794Z"
+    },
+    "op.autosave.writing": {
+      "text": "正在编写更改…",
+      "sourceHash": "ea499fa21dce",
+      "updatedAt": "2026-08-17T16:24:20.788Z"
+    },
+    "op.autosave.soon": {
+      "text": "即将保存",
+      "sourceHash": "dac9adeeec35",
+      "updatedAt": "2026-08-17T16:24:20.788Z"
+    },
+    "op.autosave.pending": {
+      "text": "编辑待保存 — 稍后自动保存",
+      "sourceHash": "310111dfce84",
+      "updatedAt": "2026-08-17T16:24:20.788Z"
+    },
+    "op.autosave.failed": {
+      "text": "保存失败",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T16:24:20.788Z"
+    },
+    "op.autosave.retry": {
+      "text": "上次保存失败 — 点击重试",
+      "sourceHash": "3ca55d67a41b",
+      "updatedAt": "2026-08-17T16:24:20.788Z"
+    },
+    "op.tour.replay": {
+      "text": "重播操作员巡回",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T16:24:20.788Z"
+    },
+    "op.tour.label": {
+      "text": "巡回",
+      "sourceHash": "cd9e8f38bcfe",
+      "updatedAt": "2026-08-17T16:24:20.788Z"
+    },
+    "op.modules.runtime": {
+      "text": "运行时",
+      "sourceHash": "c4740e4ca28c",
+      "updatedAt": "2026-08-17T16:24:20.788Z"
+    },
+    "op.modules.autoCheck": {
+      "text": "自动检查",
+      "sourceHash": "2e0f9b9f2e4f",
+      "updatedAt": "2026-08-17T16:24:48.358Z"
+    },
+    "op.pulse.reviews": {
+      "text": "评论",
+      "sourceHash": "b83c4cdafef5",
+      "updatedAt": "2026-08-17T16:24:48.358Z"
+    },
+    "op.pulse.stored": {
+      "text": "已存储",
+      "sourceHash": "b2b53ee4fc1a",
+      "updatedAt": "2026-08-17T16:24:48.358Z"
+    },
+    "support.chat.title": {
+      "text": "Octivate Support",
+      "sourceHash": "1b54a7b1a62f",
+      "updatedAt": "2026-08-17T16:24:48.358Z"
+    },
+    "support.chat.resolved": {
+      "text": "对话已解决",
+      "sourceHash": "25aaa3efa2f8",
+      "updatedAt": "2026-08-17T16:24:48.358Z"
+    },
+    "support.chat.resolvedClosed": {
+      "text": "已解决 · 消息已关闭",
+      "sourceHash": "afd5f6b66e03",
+      "updatedAt": "2026-08-17T16:24:48.358Z"
+    },
+    "support.chat.accountSupport": {
+      "text": "账户支持",
+      "sourceHash": "6bd44611563e",
+      "updatedAt": "2026-08-17T16:24:48.358Z"
+    },
+    "support.chat.accountSupportHint": {
+      "text": "账户支持 · 通常工作日内回复",
+      "sourceHash": "db80d629390b",
+      "updatedAt": "2026-08-17T16:24:48.358Z"
+    },
+    "support.chat.attach": {
+      "text": "附加图片",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T16:25:56.926Z"
+    },
+    "support.chat.placeholder": {
+      "text": "输入正式消息……",
+      "sourceHash": "08fc39b852ec",
+      "updatedAt": "2026-08-17T16:25:56.926Z"
+    },
+    "support.chat.open": {
+      "text": "打开支持",
+      "sourceHash": "3a80862045b7",
+      "updatedAt": "2026-08-17T16:25:56.926Z"
+    },
+    "support.chat.openAccount": {
+      "text": "打开账户支持聊天",
+      "sourceHash": "afa415115cd0",
+      "updatedAt": "2026-08-17T16:25:56.926Z"
+    },
+    "support.chat.minimize": {
+      "text": "最小化聊天",
+      "sourceHash": "f6068d8c1fcc",
+      "updatedAt": "2026-08-17T16:25:56.926Z"
+    },
+    "support.chat.close": {
+      "text": "关闭聊天",
+      "sourceHash": "eb376184348e",
+      "updatedAt": "2026-08-17T16:25:56.926Z"
+    },
+    "support.chat.send": {
+      "text": "发送消息",
+      "sourceHash": "c70a890d1411",
+      "updatedAt": "2026-08-17T16:25:56.926Z"
+    },
+    "support.chat.assignedStaff": {
+      "text": "指定 Octivate 工作人员",
+      "sourceHash": "e7a8f38cc9f1",
+      "updatedAt": "2026-08-17T16:25:56.926Z"
+    },
+    "support.chat.attachHint": {
+      "text": "附上图片 (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T16:26:08.724Z"
+    },
+    "support.chat.newReply": {
+      "text": "新的支持回复",
+      "sourceHash": "c8aad4b8dbca",
+      "updatedAt": "2026-08-17T16:26:08.724Z"
+    },
+    "support.chat.ready": {
+      "text": "新会话已准备 — 发送消息开始",
+      "sourceHash": "f8df923263c6",
+      "updatedAt": "2026-08-17T16:26:08.724Z"
+    },
+    "support.chat.signInRequired": {
+      "text": "联系支持需要登录",
+      "sourceHash": "4b61a483a26f",
+      "updatedAt": "2026-08-17T16:26:08.724Z"
+    },
+    "support.chat.resolvedContinue": {
+      "text": "此对话已解决。开始新对话以继续。",
+      "sourceHash": "99fbd68dd31b",
+      "updatedAt": "2026-08-17T16:26:08.724Z"
+    },
+    "support.chat.sendFailed": {
+      "text": "发送失败",
+      "sourceHash": "8b34d37599a8",
+      "updatedAt": "2026-08-17T16:26:08.724Z"
+    },
+    "support.chat.invalidImage": {
+      "text": "无效图片",
+      "sourceHash": "681014468ba7",
+      "updatedAt": "2026-08-17T16:26:08.724Z"
+    },
+    "support.chat.topic.access": {
+      "text": "访问",
+      "sourceHash": "2f81a22de0af",
+      "updatedAt": "2026-08-17T16:26:08.724Z"
+    },
+    "support.chat.topic.briefs": {
+      "text": "简报",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T16:26:10.563Z"
+    },
+    "support.chat.topic.projects": {
+      "text": "项目",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T16:26:10.563Z"
+    },
+    "support.chat.topic.plans": {
+      "text": "计划",
+      "sourceHash": "cf2e5f26fef8",
+      "updatedAt": "2026-08-17T16:26:10.563Z"
+    },
+    "support.chat.canned.access": {
+      "text": "我需要协助登录或访问我的工作区。",
+      "sourceHash": "6921c24ea727",
+      "updatedAt": "2026-08-17T16:26:10.563Z"
+    },
+    "support.chat.canned.briefs": {
+      "text": "我需要帮助审查或导出决策简报。",
+      "sourceHash": "0ee61394f841",
+      "updatedAt": "2026-08-17T16:26:10.563Z"
+    },
+    "support.chat.canned.projects": {
+      "text": "我有关于配置项目或运行工作流的问题。",
+      "sourceHash": "e400b004fbe8",
+      "updatedAt": "2026-08-17T16:26:10.563Z"
+    },
+    "support.chat.canned.plans": {
+      "text": "我希望获得关于组织计划和团队访问权限的指导。",
+      "sourceHash": "399700ef9ac7",
+      "updatedAt": "2026-08-17T16:26:10.563Z"
+    },
+    "support.page.needWorkspace": {
+      "text": "需要工作区？打开 Octivate 或访问 CENSII。",
+      "sourceHash": "dc42eadddae5",
+      "updatedAt": "2026-08-17T16:26:10.563Z"
+    },
+    "support.page.createAccount": {
+      "text": "创建账户",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T16:26:12.049Z"
+    },
+    "support.page.openWorkspace": {
+      "text": "打开工作区",
+      "sourceHash": "8b23311bbdc0",
+      "updatedAt": "2026-08-17T16:26:12.049Z"
+    },
+    "support.page.builtBy": {
+      "text": "由 CENSII 构建",
+      "sourceHash": "890270900ae3",
+      "updatedAt": "2026-08-17T16:26:12.049Z"
+    },
+    "support.page.role.founder": {
+      "text": "创始人 · 产品与领域",
+      "sourceHash": "4853fc7f81bc",
+      "updatedAt": "2026-08-17T16:26:12.049Z"
+    },
+    "support.page.role.founderDesc": {
+      "text": "产品愿景、加勒比地区使用案例以及 CENSII 决策方法论。",
+      "sourceHash": "90cd07f23dbe",
+      "updatedAt": "2026-08-17T16:26:12.049Z"
+    },
+    "support.page.role.ai": {
+      "text": "AI 工作流与验证",
+      "sourceHash": "12d701f87e36",
+      "updatedAt": "2026-08-17T16:26:12.049Z"
+    },
+    "support.page.role.aiDesc": {
+      "text": "智能体工作流设计、证据检查和演示评估。",
+      "sourceHash": "23e12290635b",
+      "updatedAt": "2026-08-17T16:26:12.049Z"
+    },
+    "support.page.role.tech": {
+      "text": "技术架构",
+      "sourceHash": "d6004963fc9a",
+      "updatedAt": "2026-08-17T16:26:12.049Z"
+    },
+    "support.page.role.techDesc": {
+      "text": "MVP 架构、原型交付与平台执行。",
+      "sourceHash": "20179b862557",
+      "updatedAt": "2026-08-17T16:26:13.589Z"
+    },
+    "support.chat.welcome": {
+      "text": "Hi — 您已连接至 Octivate 账户支持。选择主题或撰写正式消息。",
+      "sourceHash": "dbdb8c3ff845",
+      "updatedAt": "2026-08-17T16:26:13.589Z"
+    },
+    "support.chat.speakingWith": {
+      "text": "Speaking with",
+      "sourceHash": "1365c04cc97e",
+      "updatedAt": "2026-08-17T16:26:13.589Z"
+    },
+    "support.chat.startNew": {
+      "text": "Start new conversation",
+      "sourceHash": "bf79f47d3ac6",
+      "updatedAt": "2026-08-17T16:26:13.589Z"
+    },
+    "support.chat.you": {
+      "text": "You",
+      "sourceHash": "905cb326c779",
+      "updatedAt": "2026-08-17T16:26:13.589Z"
+    },
+    "support.chat.octivate": {
+      "text": "Octivate",
+      "sourceHash": "5076ec0702e6",
+      "updatedAt": "2026-08-17T16:26:13.589Z"
+    },
+    "support.chat.resolvedBody": {
+      "text": "This thread is closed. Start a new conversation if you still need help.",
+      "sourceHash": "04f13ea5232b",
+      "updatedAt": "2026-08-17T16:26:13.589Z"
+    },
+    "onboard.ui.workspaceTour": {
+      "text": "Workspace tour",
+      "sourceHash": "9edf55888973",
+      "updatedAt": "2026-08-17T16:26:13.589Z"
+    },
+    "onboard.ui.operatorTour": {
+      "text": "操作员巡览",
+      "sourceHash": "1538c47330f3",
+      "updatedAt": "2026-08-17T16:26:33.166Z"
+    },
+    "onboard.ui.closeTour": {
+      "text": "关闭巡览",
+      "sourceHash": "1aca7dc4d76a",
+      "updatedAt": "2026-08-17T16:26:33.166Z"
+    },
+    "onboard.ui.skip": {
+      "text": "跳过巡览",
+      "sourceHash": "57bc79e3c907",
+      "updatedAt": "2026-08-17T16:26:33.166Z"
+    },
+    "onboard.ui.back": {
+      "text": "返回",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T16:26:33.166Z"
+    },
+    "onboard.ui.next": {
+      "text": "下一步",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T16:26:33.166Z"
+    },
+    "onboard.ui.getStarted": {
+      "text": "开始使用",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T16:26:33.166Z"
+    },
+    "onboard.ui.stepOf": {
+      "text": "步骤 {n} of {total}",
+      "sourceHash": "78cee4b898d5",
+      "updatedAt": "2026-08-17T16:26:33.166Z"
+    },
+    "onboard.ui.tutorial": {
+      "text": "教程",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T16:26:33.166Z"
+    },
+    "onboard.ui.openTutorial": {
+      "text": "打开工作区教程",
+      "sourceHash": "e663ca7b5a5b",
+      "updatedAt": "2026-08-17T16:28:36.800Z"
+    },
+    "onboard.ui.replayWorkspace": {
+      "text": "重播工作区游览",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T16:28:36.800Z"
+    },
+    "onboard.ui.replayOperator": {
+      "text": "重播操作员游览",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T16:28:36.800Z"
+    },
+    "onboard.ws.1.kicker": {
+      "text": "步骤 1 · 概览",
+      "sourceHash": "9a4fd5299ca7",
+      "updatedAt": "2026-08-17T16:28:36.800Z"
+    },
+    "onboard.ws.1.title": {
+      "text": "从您的",
+      "sourceHash": "211f5f534912",
+      "updatedAt": "2026-08-17T16:28:36.800Z"
+    },
+    "onboard.ws.1.accent": {
+      "text": "工作区首页",
+      "sourceHash": "a471f82221dc",
+      "updatedAt": "2026-08-17T16:28:36.800Z"
+    },
+    "onboard.ws.1.tagline": {
+      "text": "简报、项目、覆盖和用法一站搞定。",
+      "sourceHash": "b68671724729",
+      "updatedAt": "2026-08-17T16:28:36.800Z"
+    },
+    "onboard.ws.1.desc": {
+      "text": "概览是加勒比决策工作的主场。使用侧边栏在 项目、简报、监控器 和 实时支持 之间切换—— 更有地区覆盖图以提供地理背景。",
+      "sourceHash": "4f772aad2485",
+      "updatedAt": "2026-08-17T16:28:36.800Z"
+    },
+    "onboard.ws.1.b1.lead": {
+      "text": "侧边栏",
+      "sourceHash": "f5171c931c5c",
+      "updatedAt": "2026-08-17T16:28:38.611Z"
+    },
+    "onboard.ws.1.b1": {
+      "text": "跳转概览、项目、简报和监控",
+      "sourceHash": "09c2c0b6bc3d",
+      "updatedAt": "2026-08-17T16:28:38.611Z"
+    },
+    "onboard.ws.1.b2.lead": {
+      "text": "提问",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T16:28:38.611Z"
+    },
+    "onboard.ws.1.b2": {
+      "text": "一键打开项目剧场",
+      "sourceHash": "c1d04d6cd14c",
+      "updatedAt": "2026-08-17T16:28:38.611Z"
+    },
+    "onboard.ws.1.b3.lead": {
+      "text": "重播",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T16:28:38.611Z"
+    },
+    "onboard.ws.1.b3": {
+      "text": "随时从工作区教程重播此游览",
+      "sourceHash": "c80024feee50",
+      "updatedAt": "2026-08-17T16:28:38.611Z"
+    },
+    "onboard.ws.2.kicker": {
+      "text": "第二步 · 剧场覆盖",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T16:28:38.611Z"
+    },
+    "onboard.ws.2.title": {
+      "text": "看见",
+      "sourceHash": "acc2c52c24a5",
+      "updatedAt": "2026-08-17T16:28:38.611Z"
+    },
+    "onboard.ws.2.accent": {
+      "text": "项目覆盖图",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T16:31:10.988Z"
+    },
+    "onboard.ws.2.tagline": {
+      "text": "实时加勒比项目地理在概览中。",
+      "sourceHash": "50820f6be866",
+      "updatedAt": "2026-08-17T16:31:10.988Z"
+    },
+    "onboard.ws.2.desc": {
+      "text": "项目覆盖图位于概览。热点显示项目位置；悬停查看计数，点击国家打开项目列表，且当工作区刷新时使用实时 / 更新中。",
+      "sourceHash": "f3d174ce0faa",
+      "updatedAt": "2026-08-17T16:31:10.988Z"
+    },
+    "onboard.ws.2.b1.lead": {
+      "text": "热点",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T16:31:10.988Z"
+    },
+    "onboard.ws.2.b1": {
+      "text": "按项目数量跨司法管辖区",
+      "sourceHash": "31d40c2d9d01",
+      "updatedAt": "2026-08-17T16:31:10.988Z"
+    },
+    "onboard.ws.2.b2.lead": {
+      "text": "点击",
+      "sourceHash": "79cbc5eb672a",
+      "updatedAt": "2026-08-17T16:31:10.988Z"
+    },
+    "onboard.ws.2.b2": {
+      "text": "打开该国家的项目弹窗",
+      "sourceHash": "88d6ba3584eb",
+      "updatedAt": "2026-08-17T16:31:10.988Z"
+    },
+    "onboard.ws.2.b3.lead": {
+      "text": "实时",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T16:31:10.988Z"
+    },
+    "onboard.ws.2.b3": {
+      "text": "当覆盖数据刷新时脉动",
+      "sourceHash": "dbb22d3bffab",
+      "updatedAt": "2026-08-17T16:31:13.401Z"
+    },
+    "onboard.ws.3.kicker": {
+      "text": "步骤 3 · 项目",
+      "sourceHash": "df1977d42ab9",
+      "updatedAt": "2026-08-17T16:31:13.401Z"
+    },
+    "onboard.ws.3.title": {
+      "text": "创建一个",
+      "sourceHash": "7d9043bfad91",
+      "updatedAt": "2026-08-17T16:31:13.401Z"
+    },
+    "onboard.ws.3.accent": {
+      "text": "决策剧场",
+      "sourceHash": "f45ac24f2d52",
+      "updatedAt": "2026-08-17T16:31:13.401Z"
+    },
+    "onboard.ws.3.tagline": {
+      "text": "一个项目 = 一条战略脉络。",
+      "sourceHash": "f3a2465015c7",
+      "updatedAt": "2026-08-17T16:31:13.401Z"
+    },
+    "onboard.ws.3.desc": {
+      "text": "打开项目并开启一个带有国家、行业和问题的新剧场。在运行代理前上传文档，以便在您拥有专有上下文时使用。",
+      "sourceHash": "4997ef5ee5aa",
+      "updatedAt": "2026-08-17T16:31:13.401Z"
+    },
+    "onboard.ws.3.b1.lead": {
+      "text": "新项目",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T16:31:13.401Z"
+    },
+    "onboard.ws.3.b1": {
+      "text": "打开创建流程",
+      "sourceHash": "aca548b6f759",
+      "updatedAt": "2026-08-17T16:31:13.401Z"
+    },
+    "onboard.ws.3.b2.lead": {
+      "text": "每个项目",
+      "sourceHash": "487ba03c31ee",
+      "updatedAt": "2026-08-17T16:32:54.718Z"
+    },
+    "onboard.ws.3.b2": {
+      "text": "保持自己的问题、文档和运行",
+      "sourceHash": "483a4a50f88f",
+      "updatedAt": "2026-08-17T16:32:54.718Z"
+    },
+    "onboard.ws.3.b3.lead": {
+      "text": "签入访客",
+      "sourceHash": "fefaa17e3676",
+      "updatedAt": "2026-08-17T16:32:54.718Z"
+    },
+    "onboard.ws.3.b3": {
+      "text": "可以在演示访问权限下自由探索工作区",
+      "sourceHash": "275de29aaeb9",
+      "updatedAt": "2026-08-17T16:32:54.718Z"
+    },
+    "onboard.ws.4.kicker": {
+      "text": "步骤 4 · 运行",
+      "sourceHash": "44733d3f28a9",
+      "updatedAt": "2026-08-17T16:32:54.718Z"
+    },
+    "onboard.ws.4.title": {
+      "text": "打开一个项目,",
+      "sourceHash": "c18dad9153ff",
+      "updatedAt": "2026-08-17T16:32:54.718Z"
+    },
+    "onboard.ws.4.accent": {
+      "text": "然后运行",
+      "sourceHash": "1c015e3e76ad",
+      "updatedAt": "2026-08-17T16:32:54.718Z"
+    },
+    "onboard.ws.4.tagline": {
+      "text": "先启动一个剧场 — 然后提问并运行。",
+      "sourceHash": "708f17ba529c",
+      "updatedAt": "2026-08-17T16:32:54.718Z"
+    },
+    "onboard.ws.4.desc": {
+      "text": "如果您还没有项目，请使用“开始新项目”。在现有剧院中，撰写战略问题并运行权力-系统-叙事管线。",
+      "sourceHash": "56e25027be02",
+      "updatedAt": "2026-08-17T16:32:57.113Z"
+    },
+    "onboard.ws.4.b1.lead": {
+      "text": "新项目",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T16:32:57.113Z"
+    },
+    "onboard.ws.4.b1": {
+      "text": "为这次巡演创建一个决策剧院",
+      "sourceHash": "0f82e9d50b72",
+      "updatedAt": "2026-08-17T16:32:57.113Z"
+    },
+    "onboard.ws.4.b2.lead": {
+      "text": "问题",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T16:32:57.113Z"
+    },
+    "onboard.ws.4.b2": {
+      "text": "加载启动词或您自己的提示",
+      "sourceHash": "a120c1682683",
+      "updatedAt": "2026-08-17T16:32:57.113Z"
+    },
+    "onboard.ws.4.b3.lead": {
+      "text": "运行",
+      "sourceHash": "b1b392607dea",
+      "updatedAt": "2026-08-17T16:32:57.113Z"
+    },
+    "onboard.ws.4.b3": {
+      "text": "启动实时 OpenRouter 管线",
+      "sourceHash": "a4f5d7412be6",
+      "updatedAt": "2026-08-17T16:32:57.113Z"
+    },
+    "onboard.ws.5.kicker": {
+      "text": "步骤 5 · 简报",
+      "sourceHash": "ab23c9919bc4",
+      "updatedAt": "2026-08-17T16:32:57.113Z"
+    },
+    "onboard.ws.5.title": {
+      "text": "Open the",
+      "sourceHash": "2d7eeba9f46c",
+      "updatedAt": "2026-08-17T16:32:58.650Z"
+    },
+    "onboard.ws.5.accent": {
+      "text": "decision brief",
+      "sourceHash": "9a4025f24b62",
+      "updatedAt": "2026-08-17T16:32:58.650Z"
+    },
+    "onboard.ws.5.tagline": {
+      "text": "Recommendations, evidence, and gaps.",
+      "sourceHash": "6063763a4ffb",
+      "updatedAt": "2026-08-17T16:32:58.650Z"
+    },
+    "onboard.ws.5.desc": {
+      "text": "Successful runs land in Briefs. Open a brief to review judgement, evidence, monitoring plans, and export a shareable pack for stakeholders.",
+      "sourceHash": "f07d8f13ae30",
+      "updatedAt": "2026-08-17T16:32:58.650Z"
+    },
+    "onboard.ws.5.b1.lead": {
+      "text": "Briefs nav",
+      "sourceHash": "e913003e38d3",
+      "updatedAt": "2026-08-17T16:32:58.650Z"
+    },
+    "onboard.ws.5.b1": {
+      "text": "lists every completed decision pack",
+      "sourceHash": "bea89fd9ef53",
+      "updatedAt": "2026-08-17T16:32:58.650Z"
+    },
+    "onboard.ws.5.b2.lead": {
+      "text": "Exports",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T16:32:58.650Z"
+    },
+    "onboard.ws.5.b2": {
+      "text": "produce branded Word / PDF for stakeholders",
+      "sourceHash": "c9bce8ccfa12",
+      "updatedAt": "2026-08-17T16:32:58.650Z"
+    },
+    "onboard.ws.5.b3.lead": {
+      "text": "样本简报",
+      "sourceHash": "24a56e96ac52",
+      "updatedAt": "2026-08-17T16:33:00.626Z"
+    },
+    "onboard.ws.5.b3": {
+      "text": "也从公共落地页链接",
+      "sourceHash": "459724e94bb1",
+      "updatedAt": "2026-08-17T16:33:00.626Z"
+    },
+    "onboard.ws.6.kicker": {
+      "text": "第 6 步 · 监控",
+      "sourceHash": "d168aae1315a",
+      "updatedAt": "2026-08-17T16:33:00.626Z"
+    },
+    "onboard.ws.6.title": {
+      "text": "观察信号",
+      "sourceHash": "1ac5be293e80",
+      "updatedAt": "2026-08-17T16:33:00.626Z"
+    },
+    "onboard.ws.6.accent": {
+      "text": "运行之间",
+      "sourceHash": "785d2df244cb",
+      "updatedAt": "2026-08-17T16:33:00.626Z"
+    },
+    "onboard.ws.6.tagline": {
+      "text": "关键词和管辖区监控。",
+      "sourceHash": "55bdd583833b",
+      "updatedAt": "2026-08-17T16:33:00.626Z"
+    },
+    "onboard.ws.6.desc": {
+      "text": "监控在您工作时关注加勒比管辖区的主题。从监控创建它们，并在简报周期之间检查警报。",
+      "sourceHash": "11e264bb858e",
+      "updatedAt": "2026-08-17T16:33:00.626Z"
+    },
+    "onboard.ws.6.b1.lead": {
+      "text": "创建",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T16:33:00.626Z"
+    },
+    "onboard.ws.6.b1": {
+      "text": "监控栏中的一个监控项",
+      "sourceHash": "0b2f9dadee88",
+      "updatedAt": "2026-08-17T16:34:03.226Z"
+    },
+    "onboard.ws.6.b2.lead": {
+      "text": "管辖区域",
+      "sourceHash": "f5c46b8a7a74",
+      "updatedAt": "2026-08-17T16:34:03.226Z"
+    },
+    "onboard.ws.6.b2": {
+      "text": "在公共站点镜像覆盖滚动条幅",
+      "sourceHash": "d875a1715457",
+      "updatedAt": "2026-08-17T16:34:03.226Z"
+    },
+    "onboard.ws.6.b3.lead": {
+      "text": "返回这里",
+      "sourceHash": "de5937ab71b9",
+      "updatedAt": "2026-08-17T16:34:03.226Z"
+    },
+    "onboard.ws.6.b3": {
+      "text": "当您需要再次运行完整分析时",
+      "sourceHash": "30f05e6db135",
+      "updatedAt": "2026-08-17T16:34:03.226Z"
+    },
+    "onboard.ws.7.kicker": {
+      "text": "步骤 7 · 翻译",
+      "sourceHash": "97ff8d3a52eb",
+      "updatedAt": "2026-08-17T16:34:03.226Z"
+    },
+    "onboard.ws.7.title": {
+      "text": "切换",
+      "sourceHash": "3e44c920427e",
+      "updatedAt": "2026-08-17T16:34:03.226Z"
+    },
+    "onboard.ws.7.accent": {
+      "text": "随时语言",
+      "sourceHash": "d29bfe062b1a",
+      "updatedAt": "2026-08-17T16:34:03.226Z"
+    },
+    "onboard.ws.7.tagline": {
+      "text": "实时目录来自站点语言控制。",
+      "sourceHash": "cca5a8c696b4",
+      "updatedAt": "2026-08-17T16:34:05.416Z"
+    },
+    "onboard.ws.7.desc": {
+      "text": "Octivate 使用永久 i18n 目录 — 从公共站点语言控制中选择一个区域，Chrome 即时更新。无第三方页面翻译小部件。",
+      "sourceHash": "e047844bf1ae",
+      "updatedAt": "2026-08-17T16:34:05.416Z"
+    },
+    "onboard.ws.7.b1.lead": {
+      "text": "语言",
+      "sourceHash": "db07be184479",
+      "updatedAt": "2026-08-17T16:34:05.416Z"
+    },
+    "onboard.ws.7.b1": {
+      "text": "覆盖加勒比和全球演示区域",
+      "sourceHash": "522d37e0e94c",
+      "updatedAt": "2026-08-17T16:34:05.416Z"
+    },
+    "onboard.ws.7.b2.lead": {
+      "text": "目录",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T16:34:05.416Z"
+    },
+    "onboard.ws.7.b2": {
+      "text": "从 OpenRouter 同步并缓存在服务器上",
+      "sourceHash": "106e3bc14187",
+      "updatedAt": "2026-08-17T16:34:05.416Z"
+    },
+    "onboard.ws.7.b3.lead": {
+      "text": "公共 Chrome",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T16:34:05.416Z"
+    },
+    "onboard.ws.7.b3": {
+      "text": "在营销页面上托管语言选择器",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T16:34:05.416Z"
+    },
+    "onboard.ws.8.kicker": {
+      "text": "步骤 8 · 灯光",
+      "sourceHash": "a80faf25b3ce",
+      "updatedAt": "2026-08-17T16:35:39.606Z"
+    },
+    "onboard.ws.8.title": {
+      "text": "设置您的",
+      "sourceHash": "277523aea813",
+      "updatedAt": "2026-08-17T16:35:39.606Z"
+    },
+    "onboard.ws.8.accent": {
+      "text": "灯光",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T16:35:39.606Z"
+    },
+    "onboard.ws.8.tagline": {
+      "text": "浅色或深色 — 相同的产品语言",
+      "sourceHash": "d9336b5e71e3",
+      "updatedAt": "2026-08-17T16:35:39.606Z"
+    },
+    "onboard.ws.8.desc": {
+      "text": "灯光在概览、项目和 chrome 中切换浅色和深色主题。在公共站点导航栏或页脚使用太阳/月亮控制——无论哪种能让地图和简报保持舒适。",
+      "sourceHash": "b9b3db1a1087",
+      "updatedAt": "2026-08-17T16:35:39.606Z"
+    },
+    "onboard.ws.8.b1.lead": {
+      "text": "切换",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T16:35:39.606Z"
+    },
+    "onboard.ws.8.b1": {
+      "text": "即时切换太阳/月亮灯光",
+      "sourceHash": "3731c411d0ff",
+      "updatedAt": "2026-08-17T16:35:39.606Z"
+    },
+    "onboard.ws.8.b2.lead": {
+      "text": "地图",
+      "sourceHash": "80071cd75107",
+      "updatedAt": "2026-08-17T16:35:39.606Z"
+    },
+    "onboard.ws.8.b2": {
+      "text": "遵循活动主题以保持瓷砖对比度",
+      "sourceHash": "52dd87360f0a",
+      "updatedAt": "2026-08-17T16:35:42.379Z"
+    },
+    "onboard.ws.8.b3.lead": {
+      "text": "偏好",
+      "sourceHash": "97d9b2888847",
+      "updatedAt": "2026-08-17T16:35:42.379Z"
+    },
+    "onboard.ws.8.b3": {
+      "text": "随浏览器会话保持",
+      "sourceHash": "e5feed566b0f",
+      "updatedAt": "2026-08-17T16:35:42.379Z"
+    },
+    "onboard.ws.9.kicker": {
+      "text": "第 9 步 · 支持提醒",
+      "sourceHash": "9a34fc8570e3",
+      "updatedAt": "2026-08-17T16:35:42.379Z"
+    },
+    "onboard.ws.9.title": {
+      "text": "需要帮助吗？",
+      "sourceHash": "864a198ed64a",
+      "updatedAt": "2026-08-17T16:35:42.379Z"
+    },
+    "onboard.ws.9.accent": {
+      "text": "帮助 + 提醒",
+      "sourceHash": "5de10bb7b38b",
+      "updatedAt": "2026-08-17T16:35:42.379Z"
+    },
+    "onboard.ws.9.tagline": {
+      "text": "实时会员支持配合回复提醒。",
+      "sourceHash": "1be68997ca1c",
+      "updatedAt": "2026-08-17T16:35:42.379Z"
+    },
+    "onboard.ws.9.desc": {
+      "text": "工作区成员使用悬浮帮助聊天 — 而不是运营商收件箱。当工作人员回复时，Octivate 可以显示支持提醒，以免您错过线程。运营商从客户支持进行回答。",
+      "sourceHash": "77b21b62e2b9",
+      "updatedAt": "2026-08-17T16:35:42.379Z"
+    },
+    "onboard.ws.9.b1.lead": {
+      "text": "帮助聊天",
+      "sourceHash": "7ba80729c84c",
+      "updatedAt": "2026-08-17T16:35:44.110Z"
+    },
+    "onboard.ws.9.b1": {
+      "text": "打开您的账户支持线程",
+      "sourceHash": "d9db0e6aba67",
+      "updatedAt": "2026-08-17T16:35:44.110Z"
+    },
+    "onboard.ws.9.b2.lead": {
+      "text": "提醒",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T16:35:44.110Z"
+    },
+    "onboard.ws.9.b2": {
+      "text": "在团队回复时通知您",
+      "sourceHash": "f3cbe9b57721",
+      "updatedAt": "2026-08-17T16:35:44.110Z"
+    },
+    "onboard.ws.9.b3.lead": {
+      "text": "快速主题",
+      "sourceHash": "df9701935ffd",
+      "updatedAt": "2026-08-17T16:35:44.110Z"
+    },
+    "onboard.ws.9.b3": {
+      "text": "涵盖简报、项目、演示和计划",
+      "sourceHash": "a00b3d05a891",
+      "updatedAt": "2026-08-17T16:35:44.110Z"
+    },
+    "onboard.ws.10.kicker": {
+      "text": "步骤 10 · 法律",
+      "sourceHash": "d35eeb64a72a",
+      "updatedAt": "2026-08-17T16:35:44.110Z"
+    },
+    "onboard.ws.10.title": {
+      "text": "隐私政策",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T16:35:44.110Z"
+    },
+    "onboard.ws.10.accent": {
+      "text": "& 服务条款",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T16:35:46.095Z"
+    },
+    "onboard.ws.10.tagline": {
+      "text": "在侧边栏页脚打开任意页面。",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T16:35:46.095Z"
+    },
+    "onboard.ws.10.desc": {
+      "text": "隐私政策和服务条款位于侧边栏页脚。点击任意链接随时打开完整的公开页面。",
+      "sourceHash": "5acee761c11a",
+      "updatedAt": "2026-08-17T16:35:46.095Z"
+    },
+    "onboard.ws.10.b1.lead": {
+      "text": "隐私政策",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T16:35:46.095Z"
+    },
+    "onboard.ws.10.b1": {
+      "text": "涵盖数据使用和 cookie 语境",
+      "sourceHash": "4ee048f7abbd",
+      "updatedAt": "2026-08-17T16:35:46.095Z"
+    },
+    "onboard.ws.10.b2.lead": {
+      "text": "服务条款",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T16:35:46.095Z"
+    },
+    "onboard.ws.10.b2": {
+      "text": "涵盖平台使用和账户",
+      "sourceHash": "8867a248339a",
+      "updatedAt": "2026-08-17T16:35:46.095Z"
+    },
+    "onboard.ws.10.b3.lead": {
+      "text": "侧边栏页脚",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T16:35:46.095Z"
+    },
+    "onboard.ws.10.b3": {
+      "text": "keeps both links one click away",
+      "sourceHash": "9e79f002da45",
+      "updatedAt": "2026-08-17T16:35:47.625Z"
+    },
+    "onboard.op.1.kicker": {
+      "text": "Step 1 · Pulse",
+      "sourceHash": "69e8ed5685c2",
+      "updatedAt": "2026-08-17T16:35:47.625Z"
+    },
+    "onboard.op.1.title": {
+      "text": "Start on",
+      "sourceHash": "f6702a1554c6",
+      "updatedAt": "2026-08-17T16:35:47.625Z"
+    },
+    "onboard.op.1.accent": {
+      "text": "Pulse",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T16:35:47.625Z"
+    },
+    "onboard.op.1.tagline": {
+      "text": "Live health of the production pipeline.",
+      "sourceHash": "60c7ce936d28",
+      "updatedAt": "2026-08-17T16:35:47.625Z"
+    },
+    "onboard.op.1.desc": {
+      "text": "Pulse is the operator home. Scan session health, token burn, and review queues before diving into deeper controls.",
+      "sourceHash": "a92cbe53d3c5",
+      "updatedAt": "2026-08-17T16:35:47.625Z"
+    },
+    "onboard.op.1.b1.lead": {
+      "text": "KPIs",
+      "sourceHash": "6911b88f3e2c",
+      "updatedAt": "2026-08-17T16:35:47.625Z"
+    },
+    "onboard.op.1.b1": {
+      "text": "show tokens, agents, and review load",
+      "sourceHash": "d85127f0f3b1",
+      "updatedAt": "2026-08-17T16:35:47.625Z"
+    },
+    "onboard.op.1.b2.lead": {
+      "text": "Hash tabs",
+      "sourceHash": "f235f2664aa1",
+      "updatedAt": "2026-08-17T16:35:49.463Z"
+    },
+    "onboard.op.1.b2": {
+      "text": "jump any console section instantly",
+      "sourceHash": "1ba380c39f19",
+      "updatedAt": "2026-08-17T16:35:49.463Z"
+    },
+    "onboard.op.2.kicker": {
+      "text": "Step 2 — Theatre coverage",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T16:35:49.463Z"
+    },
+    "onboard.op.2.title": {
+      "text": "Workspace ships a",
+      "sourceHash": "fb40fd293dbf",
+      "updatedAt": "2026-08-17T16:35:49.463Z"
+    },
+    "onboard.op.2.accent": {
+      "text": "Theatre coverage map",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T16:35:49.463Z"
+    },
+    "onboard.op.2.tagline": {
+      "text": "Indicate only — stays on the operator console.",
+      "sourceHash": "9b4f29cd12bd",
+      "updatedAt": "2026-08-17T16:35:49.463Z"
+    },
+    "onboard.op.2.desc": {
+      "text": "Members see a live Theatre coverage map on Workspace Overview (Leaflet hotspots by country). Operators keep working here; open Workspace mode when you want to inspect the map itself. This step only indicates the addition.",
+      "sourceHash": "d6d28a804b12",
+      "updatedAt": "2026-08-17T16:35:49.463Z"
+    },
+    "onboard.op.2.b1.lead": {
+      "text": "Overview map",
+      "sourceHash": "c7511c10a051",
+      "updatedAt": "2026-08-17T16:35:49.463Z"
+    },
+    "onboard.op.2.b1": {
+      "text": "生活在/仪表板中供会员使用",
+      "sourceHash": "1e1143c480cb",
+      "updatedAt": "2026-08-17T16:35:50.909Z"
+    },
+    "onboard.op.2.b2.lead": {
+      "text": "热点",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T16:35:50.909Z"
+    },
+    "onboard.op.2.b2": {
+      "text": "反映项目地理位置和数量",
+      "sourceHash": "76707569e685",
+      "updatedAt": "2026-08-17T16:35:50.909Z"
+    },
+    "onboard.op.2.b3.lead": {
+      "text": "无重定向",
+      "sourceHash": "37fe346e787e",
+      "updatedAt": "2026-08-17T16:35:50.909Z"
+    },
+    "onboard.op.2.b3": {
+      "text": "此巡览停留在操作员控制台",
+      "sourceHash": "0a35fadeb5cf",
+      "updatedAt": "2026-08-17T16:35:50.909Z"
+    },
+    "onboard.op.3.kicker": {
+      "text": "步骤 3 · 运营",
+      "sourceHash": "cdff61105edd",
+      "updatedAt": "2026-08-17T16:35:50.909Z"
+    },
+    "onboard.op.3.title": {
+      "text": "清晰且",
+      "sourceHash": "6667043443c3",
+      "updatedAt": "2026-08-17T16:35:50.909Z"
+    },
+    "onboard.op.3.accent": {
+      "text": "中等",
+      "sourceHash": "78cd1257c37f",
+      "updatedAt": "2026-08-17T16:35:50.909Z"
+    },
+    "onboard.op.3.tagline": {
+      "text": "Session cleanup, i18n sync, and logbook publish.",
+      "sourceHash": "3c858c894d26",
+      "updatedAt": "2026-08-17T16:35:52.517Z"
+    },
+    "onboard.op.3.desc": {
+      "text": "Operations covers maintenance — pruning stuck sessions, moderation queues, i18n catalog sync, and the Future Caribbean Logbook publisher.",
+      "sourceHash": "e8ffdad59fd2",
+      "updatedAt": "2026-08-17T16:35:52.517Z"
+    },
+    "onboard.op.3.b1.lead": {
+      "text": "Use sparingly",
+      "sourceHash": "2e4662c69cf1",
+      "updatedAt": "2026-08-17T16:35:52.517Z"
+    },
+    "onboard.op.3.b1": {
+      "text": "actions here affect live production state",
+      "sourceHash": "ebed7ca8f314",
+      "updatedAt": "2026-08-17T16:35:52.517Z"
+    },
+    "onboard.op.3.b2.lead": {
+      "text": "Audit",
+      "sourceHash": "fa1703dd78a0",
+      "updatedAt": "2026-08-17T16:35:52.517Z"
+    },
+    "onboard.op.3.b2": {
+      "text": "events land in Debug for forensics",
+      "sourceHash": "e2e5b567527e",
+      "updatedAt": "2026-08-17T16:35:52.517Z"
+    },
+    "onboard.op.4.kicker": {
+      "text": "Step 4 · Control",
+      "sourceHash": "cf409a59474c",
+      "updatedAt": "2026-08-17T16:35:52.517Z"
+    },
+    "onboard.op.4.title": {
+      "text": "Tune platform",
+      "sourceHash": "6c57929aaaff",
+      "updatedAt": "2026-08-17T16:35:52.517Z"
+    },
+    "onboard.op.4.accent": {
+      "text": "限制",
+      "sourceHash": "9523ccbcc4c5",
+      "updatedAt": "2026-08-17T16:38:55.512Z"
+    },
+    "onboard.op.4.tagline": {
+      "text": "令牌、上传、头像和审查政策。",
+      "sourceHash": "324ca1ebc063",
+      "updatedAt": "2026-08-17T16:38:55.512Z"
+    },
+    "onboard.op.4.desc": {
+      "text": "控制运行时限制：每日令牌、并发代理、上传大小、头像 KB、个人简介长度和人工审查政策。更改自动保存。",
+      "sourceHash": "89f1ae55703d",
+      "updatedAt": "2026-08-17T16:38:55.512Z"
+    },
+    "onboard.op.4.b1.lead": {
+      "text": "账户配置",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T16:38:55.512Z"
+    },
+    "onboard.op.4.b1": {
+      "text": "头像 KB + 个人简介字符 (会员)",
+      "sourceHash": "1b67c63a6796",
+      "updatedAt": "2026-08-17T16:38:55.512Z"
+    },
+    "onboard.op.4.b2.lead": {
+      "text": "策略开关",
+      "sourceHash": "f55fcb9621a8",
+      "updatedAt": "2026-08-17T16:38:55.512Z"
+    },
+    "onboard.op.4.b2": {
+      "text": "高级模型和必需审查",
+      "sourceHash": "040dad7e7738",
+      "updatedAt": "2026-08-17T16:38:55.512Z"
+    },
+    "onboard.op.5.kicker": {
+      "text": "步骤 5 · 目录",
+      "sourceHash": "5aa04e638450",
+      "updatedAt": "2026-08-17T16:38:55.512Z"
+    },
+    "onboard.op.5.title": {
+      "text": "来源和",
+      "sourceHash": "802bb75da6d8",
+      "updatedAt": "2026-08-17T16:40:45.711Z"
+    },
+    "onboard.op.5.accent": {
+      "text": "信号",
+      "sourceHash": "0ab56c376c0a",
+      "updatedAt": "2026-08-17T16:40:45.711Z"
+    },
+    "onboard.op.5.tagline": {
+      "text": "导入并策展证据输入。",
+      "sourceHash": "2a9d3f29bdd9",
+      "updatedAt": "2026-08-17T16:40:45.711Z"
+    },
+    "onboard.op.5.desc": {
+      "text": "目录管理源包和喂养监控的导入及教义运行。在简报发布前保持源头清洁。",
+      "sourceHash": "c33bc98d7906",
+      "updatedAt": "2026-08-17T16:40:45.711Z"
+    },
+    "onboard.op.5.b1.lead": {
+      "text": "导入",
+      "sourceHash": "d6fbc9d2bdd5",
+      "updatedAt": "2026-08-17T16:40:45.711Z"
+    },
+    "onboard.op.5.b1": {
+      "text": "添加策展区域来源",
+      "sourceHash": "172c6349570e",
+      "updatedAt": "2026-08-17T16:40:45.711Z"
+    },
+    "onboard.op.5.b2.lead": {
+      "text": "质量输入",
+      "sourceHash": "a4734cf2e252",
+      "updatedAt": "2026-08-17T16:40:45.711Z"
+    },
+    "onboard.op.5.b2": {
+      "text": "下游简报的质量输出",
+      "sourceHash": "0cb55e852c48",
+      "updatedAt": "2026-08-17T16:40:45.711Z"
+    },
+    "onboard.op.6.kicker": {
+      "text": "第 6 步 · 客户支持",
+      "sourceHash": "d3b5d83837c6",
+      "updatedAt": "2026-08-17T16:40:47.996Z"
+    },
+    "onboard.op.6.title": {
+      "text": "员工",
+      "sourceHash": "a4730a22cf49",
+      "updatedAt": "2026-08-17T16:40:47.996Z"
+    },
+    "onboard.op.6.accent": {
+      "text": "客户支持",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T16:40:47.996Z"
+    },
+    "onboard.op.6.tagline": {
+      "text": "安全预览的实时客户线程",
+      "sourceHash": "50716a3366e6",
+      "updatedAt": "2026-08-17T16:40:47.996Z"
+    },
+    "onboard.op.6.desc": {
+      "text": "客户支持是创始人收件箱。在线程内回复，预览附件在浏览器中，永远不要在本地下载不可信的文件。成员使用帮助聊天；您在此处回答。",
+      "sourceHash": "541eec4450ce",
+      "updatedAt": "2026-08-17T16:40:47.996Z"
+    },
+    "onboard.op.6.b1.lead": {
+      "text": "实时直播",
+      "sourceHash": "d65e4dee2e51",
+      "updatedAt": "2026-08-17T16:40:47.996Z"
+    },
+    "onboard.op.6.b1": {
+      "text": "在负载下保持线程更新",
+      "sourceHash": "4b1e8af493f7",
+      "updatedAt": "2026-08-17T16:40:47.996Z"
+    },
+    "onboard.op.6.b2.lead": {
+      "text": "头像",
+      "sourceHash": "fc022ebccbe9",
+      "updatedAt": "2026-08-17T16:40:47.996Z"
+    },
+    "onboard.op.6.b2": {
+      "text": "identify Shemuel, Nirvana, and Jaden",
+      "sourceHash": "48e873e8220f",
+      "updatedAt": "2026-08-17T16:40:49.512Z"
+    },
+    "onboard.op.7.kicker": {
+      "text": "Step 7 · Support alerts",
+      "sourceHash": "8372eb12faee",
+      "updatedAt": "2026-08-17T16:40:49.512Z"
+    },
+    "onboard.op.7.title": {
+      "text": "Never miss a",
+      "sourceHash": "696735ef48a9",
+      "updatedAt": "2026-08-17T16:40:49.512Z"
+    },
+    "onboard.op.7.accent": {
+      "text": "member reply",
+      "sourceHash": "5ecb45f06be4",
+      "updatedAt": "2026-08-17T16:40:49.512Z"
+    },
+    "onboard.op.7.tagline": {
+      "text": "Background alerts stay armed across console tabs.",
+      "sourceHash": "933fce9bc803",
+      "updatedAt": "2026-08-17T16:40:49.512Z"
+    },
+    "onboard.op.7.desc": {
+      "text": "Operator support alerts listen in the background. New member messages push toasts and deep-link into the Customer Support thread — even when you are on Pulse or Mail.",
+      "sourceHash": "8055b84f84f5",
+      "updatedAt": "2026-08-17T16:40:49.512Z"
+    },
+    "onboard.op.7.b1.lead": {
+      "text": "Toasts",
+      "sourceHash": "0b021d5f7dac",
+      "updatedAt": "2026-08-17T16:40:49.512Z"
+    },
+    "onboard.op.7.b1": {
+      "text": "surface new member messages immediately",
+      "sourceHash": "9aae82a3ea4b",
+      "updatedAt": "2026-08-17T16:40:49.512Z"
+    },
+    "onboard.op.7.b2.lead": {
+      "text": "Open thread",
+      "sourceHash": "9309e686d270",
+      "updatedAt": "2026-08-17T16:40:51.152Z"
+    },
+    "onboard.op.7.b2": {
+      "text": "jumps into Customer Support for that account",
+      "sourceHash": "cc8dadf92751",
+      "updatedAt": "2026-08-17T16:40:51.152Z"
+    },
+    "onboard.op.7.b3.lead": {
+      "text": "Always on",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T16:40:51.152Z"
+    },
+    "onboard.op.7.b3": {
+      "text": "SSE stays armed while you are signed in as operator",
+      "sourceHash": "2e8dba7c4567",
+      "updatedAt": "2026-08-17T16:40:51.152Z"
+    },
+    "onboard.op.8.kicker": {
+      "text": "Step 8 · Translation",
+      "sourceHash": "a025237b5a1e",
+      "updatedAt": "2026-08-17T16:40:51.152Z"
+    },
+    "onboard.op.8.title": {
+      "text": "Operator",
+      "sourceHash": "d0e687b079fb",
+      "updatedAt": "2026-08-17T16:40:51.152Z"
+    },
+    "onboard.op.8.accent": {
+      "text": "language control",
+      "sourceHash": "c834218d9e24",
+      "updatedAt": "2026-08-17T16:40:51.152Z"
+    },
+    "onboard.op.8.tagline": {
+      "text": "Same realtime catalogs as the public site.",
+      "sourceHash": "b9c781d8ef02",
+      "updatedAt": "2026-08-17T16:40:51.152Z"
+    },
+    "onboard.op.8.desc": {
+      "text": "本地化目录覆盖会员权限的界面与法律文案。预览公共站点语言控制；从运营同步完整目录。",
+      "sourceHash": "76e73ee68e58",
+      "updatedAt": "2026-08-17T16:46:06.555Z"
+    },
+    "onboard.op.8.b1.lead": {
+      "text": "公共界面",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T16:46:06.555Z"
+    },
+    "onboard.op.8.b1": {
+      "text": "在营销页面上托管语言选择器",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T16:46:06.555Z"
+    },
+    "onboard.op.8.b2.lead": {
+      "text": "目录",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T16:46:06.555Z"
+    },
+    "onboard.op.8.b2": {
+      "text": "与会员和落地页访客看到的保持一致",
+      "sourceHash": "0fbdcdc9ad6a",
+      "updatedAt": "2026-08-17T16:46:06.555Z"
+    },
+    "onboard.op.8.b3.lead": {
+      "text": "运营",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T16:46:06.555Z"
+    },
+    "onboard.op.8.b3": {
+      "text": "托管完整目录同步工具",
+      "sourceHash": "eb7aa3e340d4",
+      "updatedAt": "2026-08-17T16:46:06.555Z"
+    },
+    "onboard.op.9.kicker": {
+      "text": "步骤 9 · 照明",
+      "sourceHash": "7eafa4130147",
+      "updatedAt": "2026-08-17T16:46:06.555Z"
+    },
+    "onboard.op.9.title": {
+      "text": "设置控制台",
+      "sourceHash": "e3cf75e3a804",
+      "updatedAt": "2026-08-17T16:47:10.381Z"
+    },
+    "onboard.op.9.accent": {
+      "text": "灯光",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T16:47:10.381Z"
+    },
+    "onboard.op.9.tagline": {
+      "text": "长时操作的亮色或暗色模式",
+      "sourceHash": "96665289ffd6",
+      "updatedAt": "2026-08-17T16:47:10.381Z"
+    },
+    "onboard.op.9.desc": {
+      "text": "灯光可为操作控制台和工作区切换亮色和暗色主题。在公共站点导航栏或页脚使用太阳 / 月亮控制进行切换。",
+      "sourceHash": "191db2fb643b",
+      "updatedAt": "2026-08-17T16:47:10.381Z"
+    },
+    "onboard.op.9.b1.lead": {
+      "text": "切换",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T16:47:10.381Z"
+    },
+    "onboard.op.9.b1": {
+      "text": "位于营销区域，而非操作侧边栏",
+      "sourceHash": "414d448ecba7",
+      "updatedAt": "2026-08-17T16:47:10.381Z"
+    },
+    "onboard.op.9.b2.lead": {
+      "text": "共享",
+      "sourceHash": "50d0d8dd11a9",
+      "updatedAt": "2026-08-17T16:47:10.381Z"
+    },
+    "onboard.op.9.b2": {
+      "text": "主题偏好会随您进入工作区模式",
+      "sourceHash": "86985668defd",
+      "updatedAt": "2026-08-17T16:47:10.381Z"
+    },
+    "onboard.op.9.b3.lead": {
+      "text": "无障碍访问",
+      "sourceHash": "d660049bc1f2",
+      "updatedAt": "2026-08-17T16:47:12.854Z"
+    },
+    "onboard.op.9.b3": {
+      "text": "使用能减轻眼部疲劳的灯光",
+      "sourceHash": "5c3a02dac3e5",
+      "updatedAt": "2026-08-17T16:47:12.854Z"
+    },
+    "onboard.op.10.kicker": {
+      "text": "第 10 步 · 邮件",
+      "sourceHash": "191b38258aa7",
+      "updatedAt": "2026-08-17T16:47:12.854Z"
+    },
+    "onboard.op.10.title": {
+      "text": "从您的",
+      "sourceHash": "2a06a5d40f16",
+      "updatedAt": "2026-08-17T16:47:12.854Z"
+    },
+    "onboard.op.10.accent": {
+      "text": "账户",
+      "sourceHash": "ca20728d35f0",
+      "updatedAt": "2026-08-17T16:47:12.854Z"
+    },
+    "onboard.op.10.tagline": {
+      "text": "邮件列表 + Haraka 发送",
+      "sourceHash": "551cba57a6f5",
+      "updatedAt": "2026-08-17T16:47:12.854Z"
+    },
+    "onboard.op.10.desc": {
+      "text": "邮件使用默认 HTML 模板发送给订阅者。您已登录的地址是首选的发件人；列表收件人来自落地页邮件列表。",
+      "sourceHash": "424de746cee0",
+      "updatedAt": "2026-08-17T16:47:12.854Z"
+    },
+    "onboard.op.10.b1.lead": {
+      "text": "发件人",
+      "sourceHash": "3f66052a107e",
+      "updatedAt": "2026-08-17T16:47:12.854Z"
+    },
+    "onboard.op.10.b1": {
+      "text": "默认使用您的操作员邮箱",
+      "sourceHash": "edef1599b4ef",
+      "updatedAt": "2026-08-17T16:48:25.608Z"
+    },
+    "onboard.op.10.b2.lead": {
+      "text": "调试",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T16:48:25.608Z"
+    },
+    "onboard.op.10.b2": {
+      "text": "捕获 Haraka 警告和错误",
+      "sourceHash": "fea5242b81fb",
+      "updatedAt": "2026-08-17T16:48:25.608Z"
+    },
+    "onboard.op.11.kicker": {
+      "text": "步骤 11 · 用户",
+      "sourceHash": "ae43054a142a",
+      "updatedAt": "2026-08-17T16:48:25.608Z"
+    },
+    "onboard.op.11.title": {
+      "text": "查看成员",
+      "sourceHash": "962ea526bfbe",
+      "updatedAt": "2026-08-17T16:48:25.608Z"
+    },
+    "onboard.op.11.accent": {
+      "text": "和简介",
+      "sourceHash": "48e930db5788",
+      "updatedAt": "2026-08-17T16:48:25.608Z"
+    },
+    "onboard.op.11.tagline": {
+      "text": "计数、禁用和密码重置。",
+      "sourceHash": "d17f62313435",
+      "updatedAt": "2026-08-17T16:48:25.608Z"
+    },
+    "onboard.op.11.desc": {
+      "text": "用户显示注册混合情况、邮件活动、头像和描述。创始人运营人员受到此处禁用/重置的保护。",
+      "sourceHash": "119d0bd4415b",
+      "updatedAt": "2026-08-17T16:48:25.608Z"
+    },
+    "onboard.op.14.accent": {
+      "text": "& 服务条款",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T16:49:43.674Z"
+    },
+    "onboard.op.14.tagline": {
+      "text": "从侧边栏底部打开任一页面。",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T16:49:43.674Z"
+    },
+    "onboard.op.14.desc": {
+      "text": "会员在注册时接受隐私政策和服务条款。操作员可以随时从侧边栏底部链接打开任一公开页面。",
+      "sourceHash": "9ba7513c9ea9",
+      "updatedAt": "2026-08-17T16:49:43.674Z"
+    },
+    "onboard.op.14.b1.lead": {
+      "text": "隐私政策",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T16:49:43.674Z"
+    },
+    "onboard.op.14.b1": {
+      "text": "面向公众发布以建立信任",
+      "sourceHash": "45a08c67c9ae",
+      "updatedAt": "2026-08-17T16:49:43.674Z"
+    },
+    "onboard.op.14.b2.lead": {
+      "text": "服务条款",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T16:49:43.674Z"
+    },
+    "onboard.op.14.b2": {
+      "text": "管理账户和平台使用",
+      "sourceHash": "ad5b587dd979",
+      "updatedAt": "2026-08-17T16:49:43.674Z"
+    },
+    "onboard.op.14.b3.lead": {
+      "text": "侧边栏底部",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T16:49:43.674Z"
+    },
+    "onboard.op.14.b3": {
+      "text": "links navigate to the full legal pages",
+      "sourceHash": "9094e6b57be7",
+      "updatedAt": "2026-08-17T16:49:45.623Z"
+    },
+    "onboard.op.15.kicker": {
+      "text": "Step 15 • Debug",
+      "sourceHash": "c5bd8ede0640",
+      "updatedAt": "2026-08-17T16:49:45.623Z"
+    },
+    "onboard.op.15.title": {
+      "text": "Watch the",
+      "sourceHash": "a6490eb13812",
+      "updatedAt": "2026-08-17T16:49:45.623Z"
+    },
+    "onboard.op.15.accent": {
+      "text": "live console",
+      "sourceHash": "961a91cb4e0a",
+      "updatedAt": "2026-08-17T16:49:45.623Z"
+    },
+    "onboard.op.15.tagline": {
+      "text": "OpenRouter, pipeline, mail, and security events.",
+      "sourceHash": "4d26fcf22bcf",
+      "updatedAt": "2026-08-17T16:49:45.623Z"
+    },
+    "onboard.op.15.desc": {
+      "text": "Debug streams ops events. Filter by Mail when testing SMTP, or Security after password/avatar changes. Clear only when you mean it.",
+      "sourceHash": "9dc275e13749",
+      "updatedAt": "2026-08-17T16:49:45.623Z"
+    },
+    "onboard.op.15.b1.lead": {
+      "text": "Mail source",
+      "sourceHash": "2c1dfce6077b",
+      "updatedAt": "2026-08-17T16:49:45.623Z"
+    },
+    "onboard.op.15.b1": {
+      "text": "shows Haraka warn/error payloads",
+      "sourceHash": "95cd087c7f66",
+      "updatedAt": "2026-08-17T16:49:45.623Z"
+    },
+    "onboard.op.15.b2.lead": {
+      "text": "重播",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T16:52:27.255Z"
+    },
+    "onboard.op.15.b2": {
+      "text": "这趟巡回随时从操作员教程",
+      "sourceHash": "fe5d5215b04d",
+      "updatedAt": "2026-08-17T16:52:27.255Z"
+    },
+    "common.loading": {
+      "text": "加载…",
+      "sourceHash": "33ce417454bf",
+      "updatedAt": "2026-08-17T16:52:27.255Z"
+    },
+    "common.save": {
+      "text": "保存",
+      "sourceHash": "efc007a393f6",
+      "updatedAt": "2026-08-17T16:52:27.255Z"
+    },
+    "common.cancel": {
+      "text": "取消",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T16:52:27.255Z"
+    },
+    "common.close": {
+      "text": "关闭",
+      "sourceHash": "bbfa773e5a63",
+      "updatedAt": "2026-08-17T16:52:27.255Z"
+    },
+    "common.retry": {
+      "text": "重试",
+      "sourceHash": "9f5cd8a2e880",
+      "updatedAt": "2026-08-17T16:52:27.255Z"
+    },
+    "common.error": {
+      "text": "发生了错误",
+      "sourceHash": "8d886c0ba6f2",
+      "updatedAt": "2026-08-17T16:52:27.255Z"
+    },
+    "common.home": {
+      "text": "首页",
+      "sourceHash": "70f8bb9a8a53",
+      "updatedAt": "2026-08-17T16:52:33.822Z"
+    },
+    "common.all": {
+      "text": "全部",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T16:52:33.822Z"
+    },
+    "common.search": {
+      "text": "搜索…",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T16:52:33.822Z"
+    },
+    "common.create": {
+      "text": "创建",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T16:52:33.822Z"
+    },
+    "common.delete": {
+      "text": "删除",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T16:52:33.822Z"
+    },
+    "common.edit": {
+      "text": "编辑",
+      "sourceHash": "5301648dcf6b",
+      "updatedAt": "2026-08-17T16:52:33.822Z"
+    },
+    "common.back": {
+      "text": "返回",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T16:52:33.822Z"
+    },
+    "common.next": {
+      "text": "下一步",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T16:52:33.822Z"
+    },
+    "common.previous": {
+      "text": "上一步",
+      "sourceHash": "50f94286ba30",
+      "updatedAt": "2026-08-17T16:52:41.010Z"
+    },
+    "common.confirm": {
+      "text": "确认",
+      "sourceHash": "04a212215ef9",
+      "updatedAt": "2026-08-17T16:52:41.010Z"
+    },
+    "common.dismiss": {
+      "text": "关闭",
+      "sourceHash": "70afe9eff3f2",
+      "updatedAt": "2026-08-17T16:52:41.010Z"
+    },
+    "common.noMatches": {
+      "text": "无匹配项",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T16:52:41.010Z"
+    },
+    "common.viewAll": {
+      "text": "查看全部",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T16:52:41.010Z"
+    },
+    "common.open": {
+      "text": "打开",
+      "sourceHash": "cf9b77061f7b",
+      "updatedAt": "2026-08-17T16:52:41.010Z"
+    },
+    "common.refresh": {
+      "text": "刷新",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T16:52:41.010Z"
+    },
+    "pricing.eyebrow": {
+      "text": "定价",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T16:52:41.010Z"
+    },
+    "pricing.title": {
+      "text": "加勒比决策工作的方案",
+      "sourceHash": "037c126105d5",
+      "updatedAt": "2026-08-17T16:52:42.455Z"
+    },
+    "pricing.lede": {
+      "text": "先免费使用，当贵组织需要更多座位、深度和监控时即可规模化扩展。",
+      "sourceHash": "9166dc69b88d",
+      "updatedAt": "2026-08-17T16:52:42.455Z"
+    },
+    "pricing.monthly": {
+      "text": "月度",
+      "sourceHash": "d31edb7b8a94",
+      "updatedAt": "2026-08-17T16:52:42.455Z"
+    },
+    "pricing.annual": {
+      "text": "年度",
+      "sourceHash": "0930f3f8992c",
+      "updatedAt": "2026-08-17T16:52:42.455Z"
+    },
+    "pricing.cta": {
+      "text": "立即开始",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T16:52:42.455Z"
+    },
+    "pricing.contact": {
+      "text": "与我们联系",
+      "sourceHash": "90214883b63b",
+      "updatedAt": "2026-08-17T16:52:42.455Z"
+    },
+    "pricing.payments": {
+      "text": "接受的付款方式",
+      "sourceHash": "a5b32f6784e2",
+      "updatedAt": "2026-08-17T16:52:42.455Z"
+    },
+    "cookie.pillLabel": {
+      "text": "我们使用 Cookie。",
+      "sourceHash": "445cbc2a36bf",
+      "updatedAt": "2026-08-17T16:52:42.455Z"
+    },
+    "cookie.acceptAll": {
+      "text": "接受所有 cookies",
+      "sourceHash": "e3b35bb7daa5",
+      "updatedAt": "2026-08-17T16:52:44.311Z"
+    },
+    "cookie.settingsTitle": {
+      "text": "设置",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T16:52:44.311Z"
+    },
+    "cookie.close": {
+      "text": "关闭 cookie 设置",
+      "sourceHash": "90601d80d7e5",
+      "updatedAt": "2026-08-17T16:52:44.311Z"
+    },
+    "cookie.essential": {
+      "text": "必需的网站 cookies",
+      "sourceHash": "62a4222f6e4d",
+      "updatedAt": "2026-08-17T16:52:44.311Z"
+    },
+    "cookie.essentialHint": {
+      "text": "用于登录、安全、主题和语言。",
+      "sourceHash": "e667ce996fa5",
+      "updatedAt": "2026-08-17T16:52:44.311Z"
+    },
+    "cookie.alwaysOn": {
+      "text": "始终开启",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T16:52:44.311Z"
+    },
+    "cookie.analytics": {
+      "text": "分析 cookies",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T16:52:44.311Z"
+    },
+    "cookie.analyticsHint": {
+      "text": "帮助我们了解产品使用情况。除非您启用此项，否则不会加载任何跟踪器。",
+      "sourceHash": "b334ec855aab",
+      "updatedAt": "2026-08-17T16:52:44.311Z"
+    },
+    "cookie.marketing": {
+      "text": "营销 cookie",
+      "sourceHash": "c2c7a10bf1bf",
+      "updatedAt": "2026-08-17T16:52:46.133Z"
+    },
+    "cookie.marketingHint": {
+      "text": "仅在我们稍后开展活动时使用。默认关闭。",
+      "sourceHash": "e33b06c9570f",
+      "updatedAt": "2026-08-17T16:52:46.133Z"
+    },
+    "cookie.statement": {
+      "text": "我们的 Cookie 声明",
+      "sourceHash": "2d8cd77d9cf0",
+      "updatedAt": "2026-08-17T16:52:46.133Z"
+    },
+    "cookie.save": {
+      "text": "保存设置",
+      "sourceHash": "913aba9f96cf",
+      "updatedAt": "2026-08-17T16:52:46.133Z"
+    },
+    "cookie.openSettings": {
+      "text": "Cookie 设置",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T16:52:46.133Z"
+    },
+    "legal.lastUpdated": {
+      "text": "最近更新",
+      "sourceHash": "583c9e23574a",
+      "updatedAt": "2026-08-17T16:52:46.133Z"
+    },
+    "legal.kicker": {
+      "text": "Octivate · CENSII",
+      "sourceHash": "db72eb4d75f1",
+      "updatedAt": "2026-08-17T16:52:46.133Z"
+    },
+    "legal.privacyTitle": {
+      "text": "隐私政策",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T16:52:46.133Z"
+    },
+    "legal.termsTitle": {
+      "text": "服务条款",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T16:52:48.174Z"
+    },
+    "legal.cookiesTitle": {
+      "text": "Cookie 声明",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T16:52:48.174Z"
+    },
+    "legal.backHome": {
+      "text": "返回 Octivate",
+      "sourceHash": "c03f0805dd7d",
+      "updatedAt": "2026-08-17T16:52:48.174Z"
+    },
+    "legal.contact": {
+      "text": "联系我们",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T16:52:48.174Z"
+    },
+    "legal.updatedDate": {
+      "text": "2026年8月11日",
+      "sourceHash": "3632e92d3018",
+      "updatedAt": "2026-08-17T16:52:48.174Z"
+    },
+    "legal.privacy.cover.title": {
+      "text": "本隐私政策涵盖的内容",
+      "sourceHash": "ceca340c15f9",
+      "updatedAt": "2026-08-17T16:52:48.174Z"
+    },
+    "legal.privacy.cover.p1": {
+      "text": "本隐私政策解释了 CENSII（“我们”，“我们”）在您访问 octivate.io、创建 Octivate 账户、加入我们的邮件列表或使用 Octivate 工作区及相关服务时收集、使用和共享个人信息的方式。",
+      "sourceHash": "da0b35cddd1e",
+      "updatedAt": "2026-08-17T16:52:48.174Z"
+    },
+    "legal.privacy.cover.p2": {
+      "text": "Octivate 是一个针对加勒比地区经营环境的决策智能产品。由 CENSII 运营。如有疑问，请发送邮件至 info@octivate.co。",
+      "sourceHash": "a3ee0fedaecb",
+      "updatedAt": "2026-08-17T16:52:48.174Z"
+    },
+    "legal.privacy.collect.title": {
+      "text": "我们收集的信息",
+      "sourceHash": "ca195d50ca27",
+      "updatedAt": "2026-08-17T16:52:50.563Z"
+    },
+    "legal.privacy.collect.p1": {
+      "text": "我们直接收集您提供的信息以及使用服务时产生的信息：",
+      "sourceHash": "f01456bd7458",
+      "updatedAt": "2026-08-17T16:52:50.563Z"
+    },
+    "legal.privacy.collect.b1": {
+      "text": "账户详情，包括姓名、电子邮箱、组织机构以及认证凭据。",
+      "sourceHash": "af0ec8e327f2",
+      "updatedAt": "2026-08-17T16:52:50.563Z"
+    },
+    "legal.privacy.collect.b2": {
+      "text": "工作区内容（项目问题、文件、简报、监控器及相关分析成果）。",
+      "sourceHash": "5892431b22fd",
+      "updatedAt": "2026-08-17T16:52:50.563Z"
+    },
+    "legal.privacy.collect.b3": {
+      "text": "如果您选择加入，则为邮件列表详情（电子邮箱和可选的名字）。",
+      "sourceHash": "34eb00f7d54c",
+      "updatedAt": "2026-08-17T16:52:50.563Z"
+    },
+    "legal.privacy.collect.b4": {
+      "text": "运行服务所需的技术数据：会话 Cookie、安全日志、大致使用指标、浏览器区域设置以及本地存储的主题偏好。",
+      "sourceHash": "1cd7a6671dc5",
+      "updatedAt": "2026-08-17T16:52:50.563Z"
+    },
+    "legal.privacy.collect.b5": {
+      "text": "通过我们的支付处理器购买计划时的付款相关标识符（我们不在 Octivate 服务器上存储完整的卡号）。",
+      "sourceHash": "33e270085714",
+      "updatedAt": "2026-08-17T16:52:50.563Z"
+    },
+    "legal.privacy.use.title": {
+      "text": "我们如何使用信息",
+      "sourceHash": "98a72067ee54",
+      "updatedAt": "2026-08-17T16:52:50.563Z"
+    },
+    "legal.privacy.use.p1": {
+      "text": "我们使用个人信息：",
+      "sourceHash": "582e3b9752f3",
+      "updatedAt": "2026-08-17T16:52:56.715Z"
+    },
+    "legal.privacy.use.b1": {
+      "text": "提供、保障并改进 Octivate（认证、工作区功能、支持）。",
+      "sourceHash": "e1c1d704e9e8",
+      "updatedAt": "2026-08-17T16:52:56.715Z"
+    },
+    "legal.privacy.use.b2": {
+      "text": "运行您请求的分析工作流，包括向 OpenRouter 等模型提供商以及您选择的模型发送必要的提示和文档。",
+      "sourceHash": "b0f14789ce72",
+      "updatedAt": "2026-08-17T16:52:56.715Z"
+    },
+    "legal.privacy.use.b3": {
+      "text": "在您同意订阅邮件列表的情况下，发送产品更新。",
+      "sourceHash": "795947ef39af",
+      "updatedAt": "2026-08-17T16:52:56.715Z"
+    },
+    "legal.privacy.use.b4": {
+      "text": "满足法律、会计和安全义务。",
+      "sourceHash": "33e5b0f8726c",
+      "updatedAt": "2026-08-17T16:52:56.715Z"
+    },
+    "legal.privacy.cookies.title": {
+      "text": "Cookies 和类似技术",
+      "sourceHash": "f7b1e4ca11a4",
+      "updatedAt": "2026-08-17T16:52:56.715Z"
+    },
+    "legal.privacy.cookies.p1": {
+      "text": "必要的 cookies 和本地存储可让您保持登录状态、保护会话、记住主题（浅色/深色）和记住语言偏好。这些是网站正常运行所必需的。",
+      "sourceHash": "04cfe776b96d",
+      "updatedAt": "2026-08-17T16:52:56.715Z"
+    },
+    "legal.privacy.cookies.p2": {
+      "text": "分析和营销 cookies 默认关闭。如果您在 Cookie 设置中启用它们，我们可能会在未来用于了解产品使用情况或运行营销活动。今日，启用这些类别不会加载第三方广告跟踪器；您的选择会被存储，以便在集成添加时我们尊重该选择。请参阅我们的 Cookie Statement 了解详情。",
+      "sourceHash": "47a465df2959",
+      "updatedAt": "2026-08-17T16:52:56.715Z"
+    },
+    "legal.privacy.sharing.title": {
+      "text": "当我们共享信息时",
+      "sourceHash": "7a2ce00c7fd3",
+      "updatedAt": "2026-08-17T16:52:58.939Z"
+    },
+    "legal.privacy.sharing.p1": {
+      "text": "我们不出售个人信息。我们仅在适当协议下与帮助我们运营 Octivate 的处理器共享数据，例如：",
+      "sourceHash": "d2bf64f6c698",
+      "updatedAt": "2026-08-17T16:52:58.939Z"
+    },
+    "legal.privacy.sharing.b1": {
+      "text": "存储应用数据的基础设施和托管提供商。",
+      "sourceHash": "4d800473b32a",
+      "updatedAt": "2026-08-17T16:52:58.939Z"
+    },
+    "legal.privacy.sharing.b2": {
+      "text": "运行分析时的模型路由提供商（如 OpenRouter）及底层模型供应商。",
+      "sourceHash": "3ef2e101e0cb",
+      "updatedAt": "2026-08-17T16:52:58.939Z"
+    },
+    "legal.privacy.sharing.b3": {
+      "text": "在购买方案时的支付处理商（如 Stripe 或 PayPal）。",
+      "sourceHash": "afa78f66f0cb",
+      "updatedAt": "2026-08-17T16:52:58.939Z"
+    },
+    "legal.privacy.sharing.b4": {
+      "text": "用于发送您请求的事务性或邮件列表消息的电子邮件投递基础设施。",
+      "sourceHash": "fa83b06a582d",
+      "updatedAt": "2026-08-17T16:52:58.939Z"
+    },
+    "legal.privacy.sharing.b5": {
+      "text": "法律要求的专业顾问或当局。",
+      "sourceHash": "8f3a144729ae",
+      "updatedAt": "2026-08-17T16:52:58.939Z"
+    },
+    "legal.privacy.retention.title": {
+      "text": "保留期限",
+      "sourceHash": "c7199d9e9593",
+      "updatedAt": "2026-08-17T16:52:58.939Z"
+    },
+    "legal.privacy.retention.p1": {
+      "text": "我们在您的账户处于活动状态时以及随后合理的时期内，为备备份、纠纷解决和法律合规需要而保留账户和工作区数据。邮件列表记录将保留直到您退订或我们关闭名单。您可以按照下文所述申请删除。",
+      "sourceHash": "f0d4f4a09397",
+      "updatedAt": "2026-08-17T16:56:00.477Z"
+    },
+    "legal.privacy.rights.title": {
+      "text": "您的权利",
+      "sourceHash": "e71102d544b3",
+      "updatedAt": "2026-08-17T16:56:00.477Z"
+    },
+    "legal.privacy.rights.p1": {
+      "text": "根据您的所在地，您可能拥有访问、更正、删除或导出个人信息的权利，或对某些处理提出异议或限制的权利。对于欧盟/英国访问者，GDPR / UK GDPR 权利适用。对于在具有数据保护法律的加勒比司法管辖区的访问者（包括牙买加、特立尼达和托巴哥、巴巴多斯等），我们尊重适用的法定权利。",
+      "sourceHash": "d0eca93b39f0",
+      "updatedAt": "2026-08-17T16:56:00.477Z"
+    },
+    "legal.privacy.rights.p2": {
+      "text": "要提出请求，请发送电子邮件至 info@octivate.co 或 shemuel@censii.co，主题为“数据主体请求”。我们将在适用的法定期限内作出回复。",
+      "sourceHash": "5be87f549dc6",
+      "updatedAt": "2026-08-17T16:56:00.477Z"
+    },
+    "legal.privacy.children.title": {
+      "text": "儿童",
+      "sourceHash": "dcf75191c585",
+      "updatedAt": "2026-08-17T16:56:00.477Z"
+    },
+    "legal.privacy.children.p1": {
+      "text": "Octivate 专为专业和组织用途而设计。我们不主动收集16岁以下儿童的个人信息。",
+      "sourceHash": "07a14e4d629c",
+      "updatedAt": "2026-08-17T16:56:00.477Z"
+    },
+    "legal.privacy.changes.title": {
+      "text": "关于本隐私政策的变更",
+      "sourceHash": "615043a5515f",
+      "updatedAt": "2026-08-17T16:56:00.477Z"
+    },
+    "legal.privacy.changes.p1": {
+      "text": "我们可能会不时更新本隐私政策。“最后更新”日期将在我们更新时变更。重大变更将在本页面突出显示，或在适当的时候通过产品传达。",
+      "sourceHash": "476874f7f005",
+      "updatedAt": "2026-08-17T16:56:00.477Z"
+    },
+    "legal.privacy.contact.title": {
+      "text": "联系方式",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T16:56:03.574Z"
+    },
+    "legal.privacy.contact.p1": {
+      "text": "CENSII — Octivate 隐私咨询：info@octivate.co. 个人数据主体请求也可发送至 shemuel@censii.co. 关于 CENSII 的更多信息：https://censii.co.",
+      "sourceHash": "2a9de25118a0",
+      "updatedAt": "2026-08-17T16:56:03.574Z"
+    },
+    "legal.terms.agreement.title": {
+      "text": "协议",
+      "sourceHash": "c8fee8eabe07",
+      "updatedAt": "2026-08-17T16:56:03.574Z"
+    },
+    "legal.terms.agreement.p1": {
+      "text": "这些服务条款（“条款”）管辖对 Octivate（“服务”）的访问和使用，该服务由 CENSII（“CENSII”、“我们”、“我们”）运营。创建账户或使用服务即表示您同意这些条款。",
+      "sourceHash": "1920871854ab",
+      "updatedAt": "2026-08-17T16:56:03.574Z"
+    },
+    "legal.terms.agreement.p2": {
+      "text": "如果您代表组织使用 Octivate，您声明您有权约束该组织。",
+      "sourceHash": "f8297c380c9a",
+      "updatedAt": "2026-08-17T16:56:03.574Z"
+    },
+    "legal.terms.service.title": {
+      "text": "服务",
+      "sourceHash": "bc4a155b6578",
+      "updatedAt": "2026-08-17T16:56:03.574Z"
+    },
+    "legal.terms.service.p1": {
+      "text": "Octivate 帮助组织构建加勒比决策剧场，收集和测试证据，并生成决策就绪简报和监控。功能可能包括项目、简报、监控、源包、利益相关者地图及相关工作区工具。",
+      "sourceHash": "cafd042947e6",
+      "updatedAt": "2026-08-17T16:56:03.574Z"
+    },
+    "legal.terms.service.p2": {
+      "text": "分析输出是决策支持材料。它们不构成法律、财务、投资或监管建议。您有责任决定如何使用这些输出。",
+      "sourceHash": "c2714c09aad4",
+      "updatedAt": "2026-08-17T16:56:03.574Z"
+    },
+    "legal.terms.accounts.title": {
+      "text": "账户及可接受使用",
+      "sourceHash": "5d78eee41938",
+      "updatedAt": "2026-08-17T16:56:06.284Z"
+    },
+    "legal.terms.accounts.p1": {
+      "text": "您同意：",
+      "sourceHash": "ecad8570099e",
+      "updatedAt": "2026-08-17T16:56:06.284Z"
+    },
+    "legal.terms.accounts.b1": {
+      "text": "提供准确的账户信息并保护凭据安全。",
+      "sourceHash": "25e318d9c60c",
+      "updatedAt": "2026-08-17T16:56:06.284Z"
+    },
+    "legal.terms.accounts.b2": {
+      "text": "仅出于合法目的使用服务，并符合贵组织的政策。",
+      "sourceHash": "1792588ceba4",
+      "updatedAt": "2026-08-17T16:56:06.284Z"
+    },
+    "legal.terms.accounts.b3": {
+      "text": "不得尝试破坏、反向工程或误用服务，或访问其他客户的数据。",
+      "sourceHash": "d8cee3f610f2",
+      "updatedAt": "2026-08-17T16:56:06.284Z"
+    },
+    "legal.terms.accounts.b4": {
+      "text": "不得上传您无权处理的内容，或包含非法或有害内容的内容。",
+      "sourceHash": "68ea1009e1a7",
+      "updatedAt": "2026-08-17T16:56:06.284Z"
+    },
+    "legal.terms.ai.title": {
+      "text": "模型辅助分析",
+      "sourceHash": "f139b756fb2a",
+      "updatedAt": "2026-08-17T16:56:06.284Z"
+    },
+    "legal.terms.ai.p1": {
+      "text": "Octivate 的部分功能使用第三方模型提供商（例如通过 OpenRouter）来处理您提交的提示词和文档。输出可能不完整或不正确。在采取行动前，您应审查证据和建议。",
+      "sourceHash": "2249195c0061",
+      "updatedAt": "2026-08-17T16:56:06.284Z"
+    },
+    "legal.terms.plans.title": {
+      "text": "计划、试用和付款",
+      "sourceHash": "66eaef3bcd17",
+      "updatedAt": "2026-08-17T16:56:33.163Z"
+    },
+    "legal.terms.plans.p1": {
+      "text": "付费计划、试用和计费在定价页面和结算处描述。费用由Stripe或PayPal等支付服务商处理。除非法律要求，费用在计费周期开始后不可退款，除非我们书面另行说明。",
+      "sourceHash": "a74086033e27",
+      "updatedAt": "2026-08-17T16:56:33.163Z"
+    },
+    "legal.terms.ip.title": {
+      "text": "知识产权",
+      "sourceHash": "3e694b7e8d03",
+      "updatedAt": "2026-08-17T16:56:33.163Z"
+    },
+    "legal.terms.ip.p1": {
+      "text": "CENSII及其许可方拥有Octivate软件、品牌及站点内容。您保留上传内容的权利。您授予我们有限许可，仅为提供服务而托管和处理该内容。",
+      "sourceHash": "b14a3529c91c",
+      "updatedAt": "2026-08-17T16:56:33.163Z"
+    },
+    "legal.terms.ip.p2": {
+      "text": "样本简报和公开演示具有说明性，可能使用虚构或匿名化的场景。",
+      "sourceHash": "93fd6d9964e9",
+      "updatedAt": "2026-08-17T16:56:33.163Z"
+    },
+    "legal.terms.confidentiality.title": {
+      "text": "保密",
+      "sourceHash": "642e7d86380c",
+      "updatedAt": "2026-08-17T16:56:33.163Z"
+    },
+    "legal.terms.confidentiality.p1": {
+      "text": "我们将您的工作区内容视为机密，并根据我们的隐私政策进行处理。您同意不披露服务的非公开功能，除非需要用于内部评估。",
+      "sourceHash": "a68c21b965e4",
+      "updatedAt": "2026-08-17T16:56:33.163Z"
+    },
+    "legal.terms.disclaimer.title": {
+      "text": "免责声明",
+      "sourceHash": "4c4a2e80cc87",
+      "updatedAt": "2026-08-17T16:56:33.163Z"
+    },
+    "legal.terms.disclaimer.p1": {
+      "text": "服务按“原样”和“随时提供”。在法律允许的最大范围内，我们免除可商性、特定用途适销性以及非侵权性的担保。我们不保证服务不间断或无错误，也不保证输出将满足您的需求。",
+      "sourceHash": "d40ff71ccb41",
+      "updatedAt": "2026-08-17T16:56:37.405Z"
+    },
+    "legal.terms.liability.title": {
+      "text": "责任限制",
+      "sourceHash": "b1a6f886289a",
+      "updatedAt": "2026-08-17T16:56:37.405Z"
+    },
+    "legal.terms.liability.p1": {
+      "text": "在法律允许的最大范围内，CENSII及其关联公司不对间接的、附带的、特殊的、后果性的或惩罚性损害赔偿负责，也不对损失的利润、数据或商誉负责。就服务产生的责任累计金额不超过您在索赔前十二个月内支付给我们的服务费用。",
+      "sourceHash": "365dfc530ba0",
+      "updatedAt": "2026-08-17T16:56:37.405Z"
+    },
+    "legal.terms.termination.title": {
+      "text": "暂停和终止",
+      "sourceHash": "bd4963b1d885",
+      "updatedAt": "2026-08-17T16:56:37.405Z"
+    },
+    "legal.terms.termination.p1": {
+      "text": "若您违反这些条款或为保护服务或其他用户所需，我们可能会暂停或终止您的访问权限。您可以随时停止使用服务。按性质应存续的条款（包括知识产权、免责声明、责任和适用法律）将在终止后继续有效。",
+      "sourceHash": "566454aef6a7",
+      "updatedAt": "2026-08-17T16:56:37.405Z"
+    },
+    "legal.terms.law.title": {
+      "text": "适用法律",
+      "sourceHash": "4676ad8df95e",
+      "updatedAt": "2026-08-17T16:56:37.405Z"
+    },
+    "legal.terms.law.p1": {
+      "text": "这些条款受特立尼达和托巴哥法律管辖，不考虑冲突法规则，除非您司法管辖区的强制性消费者保护要求否则如此。特立尼达和托巴哥法院拥有专属管辖权，但须受那些强制性保护措施的限制。",
+      "sourceHash": "8625634a95dc",
+      "updatedAt": "2026-08-17T16:56:37.405Z"
+    },
+    "legal.terms.contact.title": {
+      "text": "联系方式",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T16:56:37.405Z"
+    },
+    "legal.terms.contact.p1": {
+      "text": "关于这些条款的疑问：info@octivate.co. 关于 CENSII: https://censii.co.",
+      "sourceHash": "baefec6a2022",
+      "updatedAt": "2026-08-17T17:00:26.488Z"
+    },
+    "legal.cookies.overview.title": {
+      "text": "概览",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T17:00:26.488Z"
+    },
+    "legal.cookies.overview.p1": {
+      "text": "本 Cookie 声明解释了 Octivate（由 CENSII 运营）如何在 octivate.io 上使用 cookies 和类似技术。您可以随时通过 Cookie 设置管理可选类别。",
+      "sourceHash": "4fe70d776df2",
+      "updatedAt": "2026-08-17T17:00:26.488Z"
+    },
+    "legal.cookies.essential.title": {
+      "text": "必要的 cookies",
+      "sourceHash": "e766aa84901b",
+      "updatedAt": "2026-08-17T17:00:26.488Z"
+    },
+    "legal.cookies.essential.p1": {
+      "text": "必要的 cookies 和本地存储是服务正常工作所必需的。它们包括会话认证、安全性、主题偏好（浅色/深色）和语言偏好。这些始终处于开启状态；如果不开启，服务将无法正确运行。",
+      "sourceHash": "3c529d19f95b",
+      "updatedAt": "2026-08-17T17:00:26.488Z"
+    },
+    "legal.cookies.analytics.title": {
+      "text": "分析 cookies",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T17:00:26.488Z"
+    },
+    "legal.cookies.analytics.p1": {
+      "text": "分析 cookies 有助于我们了解产品的使用情况。它们在您启用后方可用。我们目前不加载第三方分析 SDK；如果我们以后添加，仅在您的存储偏好允许分析的情况下才会加载。",
+      "sourceHash": "e87b8d7ae969",
+      "updatedAt": "2026-08-17T17:00:26.488Z"
+    },
+    "legal.cookies.marketing.p1": {
+      "text": "营销 Cookie 将在我们运行活动或再营销时支持相关营销。默认关闭，今日未启用。启用营销将保存您的偏好以备将来使用；这本身不会激活广告像素。",
+      "sourceHash": "86be873965c0",
+      "updatedAt": "2026-08-17T17:00:29.632Z"
+    },
+    "legal.cookies.manage.title": {
+      "text": "如何管理偏好",
+      "sourceHash": "fe104b22e6a2",
+      "updatedAt": "2026-08-17T17:00:29.632Z"
+    },
+    "legal.cookies.manage.p1": {
+      "text": "使用浮动的 Cookie 控制或从站页脚打开 Cookie 设置。选择“接受”将启用分析和营销偏好。选择“保存设置”将存储您选择的开关。清除浏览器中的站点数据将重置 banner。",
+      "sourceHash": "7afe22d445c8",
+      "updatedAt": "2026-08-17T17:00:29.632Z"
+    },
+    "legal.cookies.more.title": {
+      "text": "更多信息",
+      "sourceHash": "f925f9bea399",
+      "updatedAt": "2026-08-17T17:00:29.632Z"
+    },
+    "legal.cookies.more.p1": {
+      "text": "关于更广泛的数据实践，请阅读我们的隐私政策。问题：info@octivate.co.",
+      "sourceHash": "407b95384bff",
+      "updatedAt": "2026-08-17T17:00:29.632Z"
+    },
+    "dyn.marquee.mq_proc_ports.text": {
+      "text": "港口当局发布预资格公告 — 物流",
+      "sourceHash": "1a71672fedbc",
+      "updatedAt": "2026-08-17T17:00:29.632Z"
+    },
+    "dyn.marquee.mq_proc_ports.badge": {
+      "text": "采购",
+      "sourceHash": "08433110a671",
+      "updatedAt": "2026-08-17T17:00:29.632Z"
+    },
+    "dyn.marquee.mq_sys_grid.text": {
+      "text": "电网维护窗口延长；受影响的工业供电线路",
+      "sourceHash": "740cfd102e0c",
+      "updatedAt": "2026-08-17T17:00:29.632Z"
+    },
+    "dyn.marquee.mq_sys_grid.badge": {
+      "text": "系统",
+      "sourceHash": "e6caf1e7e33e",
+      "updatedAt": "2026-08-17T17:00:45.416Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.text": {
+      "text": "内阁改组预示能源组合优先事项的转变",
+      "sourceHash": "3b08d154b099",
+      "updatedAt": "2026-08-17T17:00:45.416Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.badge": {
+      "text": "电力",
+      "sourceHash": "c2b6b521a777",
+      "updatedAt": "2026-08-17T17:00:45.416Z"
+    },
+    "dyn.marquee.mq_narr_radio.text": {
+      "text": "本地内容情绪在谈话广播和WhatsApp中上升",
+      "sourceHash": "48213741cc6a",
+      "updatedAt": "2026-08-17T17:00:45.416Z"
+    },
+    "dyn.marquee.mq_narr_radio.badge": {
+      "text": "叙事",
+      "sourceHash": "3e3886da8fd5",
+      "updatedAt": "2026-08-17T17:00:45.416Z"
+    }
+  }
+}

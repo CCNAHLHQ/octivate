@@ -1,7 +1,7 @@
 {
   "locale": "ht",
-  "version": 125,
-  "updatedAt": "2026-08-17T13:54:19.965Z",
+  "version": 158,
+  "updatedAt": "2026-08-17T14:04:01.217Z",
   "entries": {
     "nav.product": {
       "text": "Prouit",
@@ -4947,6 +4947,1281 @@
       "text": "tou vwayaj sa a rete sou konsòl operatè a",
       "sourceHash": "0a35fadeb5cf",
       "updatedAt": "2026-08-17T13:54:19.965Z"
+    },
+    "onboard.op.3.kicker": {
+      "text": "Step 3 · Operasyon",
+      "sourceHash": "cdff61105edd",
+      "updatedAt": "2026-08-17T13:54:42.462Z"
+    },
+    "onboard.op.3.title": {
+      "text": "Klé ak",
+      "sourceHash": "6667043443c3",
+      "updatedAt": "2026-08-17T13:54:42.462Z"
+    },
+    "onboard.op.3.accent": {
+      "text": "Modéré",
+      "sourceHash": "78cd1257c37f",
+      "updatedAt": "2026-08-17T13:54:42.462Z"
+    },
+    "onboard.op.3.tagline": {
+      "text": "Nettoyaj sessi, i18n synk, ak publish liv-log.",
+      "sourceHash": "3c858c894d26",
+      "updatedAt": "2026-08-17T13:54:42.462Z"
+    },
+    "onboard.op.3.desc": {
+      "text": "Operasyon gen entènèn maintenan — coupe sessi coinc, file moderasyon, i18n katalog synk, ak publishè Futur Karayib Logbook.",
+      "sourceHash": "e8ffdad59fd2",
+      "updatedAt": "2026-08-17T13:54:42.462Z"
+    },
+    "onboard.op.3.b1.lead": {
+      "text": "Ezi ti",
+      "sourceHash": "2e4662c69cf1",
+      "updatedAt": "2026-08-17T13:54:42.462Z"
+    },
+    "onboard.op.3.b1": {
+      "text": "Aksyon ki an here effekte etat prdiksyon live.",
+      "sourceHash": "ebed7ca8f314",
+      "updatedAt": "2026-08-17T13:54:42.462Z"
+    },
+    "onboard.op.3.b2.lead": {
+      "text": "Evaluasyon",
+      "sourceHash": "fa1703dd78a0",
+      "updatedAt": "2026-08-17T13:54:42.462Z"
+    },
+    "onboard.op.3.b2": {
+      "text": "evenemen an landè nan Debug pou forenzik",
+      "sourceHash": "e2e5b567527e",
+      "updatedAt": "2026-08-17T13:55:13.233Z"
+    },
+    "onboard.op.4.kicker": {
+      "text": "Etape 4 · Kontròl",
+      "sourceHash": "cf409a59474c",
+      "updatedAt": "2026-08-17T13:55:13.233Z"
+    },
+    "onboard.op.4.title": {
+      "text": "Ajuste platform",
+      "sourceHash": "6c57929aaaff",
+      "updatedAt": "2026-08-17T13:55:13.233Z"
+    },
+    "onboard.op.4.accent": {
+      "text": "limitasyon",
+      "sourceHash": "9523ccbcc4c5",
+      "updatedAt": "2026-08-17T13:55:13.233Z"
+    },
+    "onboard.op.4.tagline": {
+      "text": "Tokens, uploads, avatars, and politik reviz.",
+      "sourceHash": "324ca1ebc063",
+      "updatedAt": "2026-08-17T13:55:13.233Z"
+    },
+    "onboard.op.4.desc": {
+      "text": "Kontròl sett limitation kapab: token jounen, agent konkurans, tailles upload, avatè KB, lengè biyo, and politik reviz uman. Chanje autosave.",
+      "sourceHash": "89f1ae55703d",
+      "updatedAt": "2026-08-17T13:55:13.233Z"
+    },
+    "onboard.op.4.b1.lead": {
+      "text": "Profile kont",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T13:55:13.233Z"
+    },
+    "onboard.op.4.b1": {
+      "text": "avatè KB + biyò caraktè pou moun",
+      "sourceHash": "1b67c63a6796",
+      "updatedAt": "2026-08-17T13:55:13.233Z"
+    },
+    "onboard.op.4.b2.lead": {
+      "text": "Policy toggles",
+      "sourceHash": "f55fcb9621a8",
+      "updatedAt": "2026-08-17T13:55:14.356Z"
+    },
+    "onboard.op.4.b2": {
+      "text": "premium models and required review",
+      "sourceHash": "040dad7e7738",
+      "updatedAt": "2026-08-17T13:55:14.356Z"
+    },
+    "onboard.op.5.kicker": {
+      "text": "Step 5 \\u2022 Catalog",
+      "sourceHash": "5aa04e638450",
+      "updatedAt": "2026-08-17T13:55:14.356Z"
+    },
+    "onboard.op.5.title": {
+      "text": "Sources and",
+      "sourceHash": "802bb75da6d8",
+      "updatedAt": "2026-08-17T13:55:14.356Z"
+    },
+    "onboard.op.5.accent": {
+      "text": "signals",
+      "sourceHash": "0ab56c376c0a",
+      "updatedAt": "2026-08-17T13:55:14.356Z"
+    },
+    "onboard.op.5.tagline": {
+      "text": "Import and curate evidence inputs.",
+      "sourceHash": "2a9d3f29bdd9",
+      "updatedAt": "2026-08-17T13:55:14.356Z"
+    },
+    "onboard.op.5.desc": {
+      "text": "Catalog manages source packs and imports that feed monitors and doctrine runs. Keep provenance clean before briefs ship.",
+      "sourceHash": "c33bc98d7906",
+      "updatedAt": "2026-08-17T13:55:14.356Z"
+    },
+    "onboard.op.5.b1.lead": {
+      "text": "Import",
+      "sourceHash": "d6fbc9d2bdd5",
+      "updatedAt": "2026-08-17T13:55:14.356Z"
+    },
+    "onboard.op.5.b1": {
+      "text": "ajoute des sources régionales sélectionnées",
+      "sourceHash": "172c6349570e",
+      "updatedAt": "2026-08-17T13:55:25.343Z"
+    },
+    "onboard.op.5.b2.lead": {
+      "text": "Qualité entè",
+      "sourceHash": "a4734cf2e252",
+      "updatedAt": "2026-08-17T13:55:25.343Z"
+    },
+    "onboard.op.5.b2": {
+      "text": "kwalite pou brefs en aval",
+      "sourceHash": "0cb55e852c48",
+      "updatedAt": "2026-08-17T13:55:25.343Z"
+    },
+    "onboard.op.6.kicker": {
+      "text": "Etape 6 · Soutènman kliente",
+      "sourceHash": "d3b5d83837c6",
+      "updatedAt": "2026-08-17T13:55:25.343Z"
+    },
+    "onboard.op.6.title": {
+      "text": "Pwofasyon",
+      "sourceHash": "a4730a22cf49",
+      "updatedAt": "2026-08-17T13:55:25.343Z"
+    },
+    "onboard.op.6.accent": {
+      "text": "Soutènman kliente",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T13:55:25.343Z"
+    },
+    "onboard.op.6.tagline": {
+      "text": "Trenn live kliente ak prevye safe.",
+      "sourceHash": "50716a3366e6",
+      "updatedAt": "2026-08-17T13:55:25.343Z"
+    },
+    "onboard.op.6.desc": {
+      "text": "Soutènman kliye se inbox-a fonadè. Répondre en fil, prevye fichye an navigatè, et toujou pa télécharg fichye non fiable lokal. Médisè use Aide chat; ou réponn la.",
+      "sourceHash": "541eec4450ce",
+      "updatedAt": "2026-08-17T13:55:25.343Z"
+    },
+    "onboard.op.6.b1.lead": {
+      "text": "Transmisyon live",
+      "sourceHash": "d65e4dee2e51",
+      "updatedAt": "2026-08-17T13:55:37.127Z"
+    },
+    "onboard.op.6.b1": {
+      "text": "Garante threads aktal sou chanje",
+      "sourceHash": "4b1e8af493f7",
+      "updatedAt": "2026-08-17T13:55:37.127Z"
+    },
+    "onboard.op.6.b2.lead": {
+      "text": "Avatè",
+      "sourceHash": "fc022ebccbe9",
+      "updatedAt": "2026-08-17T13:55:37.127Z"
+    },
+    "onboard.op.6.b2": {
+      "text": "Identifiye Shemuel, Nirvana, et Jaden",
+      "sourceHash": "48e873e8220f",
+      "updatedAt": "2026-08-17T13:55:37.127Z"
+    },
+    "onboard.op.7.kicker": {
+      "text": "Èpòt 7 · Alèrt soupsè",
+      "sourceHash": "8372eb12faee",
+      "updatedAt": "2026-08-17T13:55:37.127Z"
+    },
+    "onboard.op.7.title": {
+      "text": "Pa manke a",
+      "sourceHash": "696735ef48a9",
+      "updatedAt": "2026-08-17T13:55:37.127Z"
+    },
+    "onboard.op.7.accent": {
+      "text": "Réply moun",
+      "sourceHash": "5ecb45f06be4",
+      "updatedAt": "2026-08-17T13:55:37.127Z"
+    },
+    "onboard.op.7.tagline": {
+      "text": "Alèrt soupsè dosiyè resten armè nan tab konsol.",
+      "sourceHash": "933fce9bc803",
+      "updatedAt": "2026-08-17T13:55:37.127Z"
+    },
+    "onboard.op.7.desc": {
+      "text": "Alèts opsyon opsilèti tann an fòn. Mesaj mèdyan nouvo push notifikasyon ak lien profon ki dirige an fil Customer Support — même kay ou se sou Pulse ou Mail.",
+      "sourceHash": "8055b84f84f5",
+      "updatedAt": "2026-08-17T13:55:51.045Z"
+    },
+    "onboard.op.7.b1.lead": {
+      "text": "Notifikasyon",
+      "sourceHash": "0b021d5f7dac",
+      "updatedAt": "2026-08-17T13:55:51.045Z"
+    },
+    "onboard.op.7.b1": {
+      "text": "Affiche mesaj mèdyan nouvo instantanément",
+      "sourceHash": "9aae82a3ea4b",
+      "updatedAt": "2026-08-17T13:55:51.045Z"
+    },
+    "onboard.op.7.b2.lead": {
+      "text": "Ouvrir fil",
+      "sourceHash": "9309e686d270",
+      "updatedAt": "2026-08-17T13:55:51.045Z"
+    },
+    "onboard.op.7.b2": {
+      "text": "Dirige an Customer Support pou sa konte",
+      "sourceHash": "cc8dadf92751",
+      "updatedAt": "2026-08-17T13:55:51.045Z"
+    },
+    "onboard.op.7.b3.lead": {
+      "text": "Toujou aktiv",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T13:55:51.045Z"
+    },
+    "onboard.op.7.b3": {
+      "text": "SSE reste armè tant ou se sign in kay opsilèti",
+      "sourceHash": "2e8dba7c4567",
+      "updatedAt": "2026-08-17T13:55:51.045Z"
+    },
+    "onboard.op.8.kicker": {
+      "text": "Etape 8 · Tradwi",
+      "sourceHash": "a025237b5a1e",
+      "updatedAt": "2026-08-17T13:55:51.045Z"
+    },
+    "onboard.op.8.title": {
+      "text": "Opérateur",
+      "sourceHash": "d0e687b079fb",
+      "updatedAt": "2026-08-17T13:56:17.417Z"
+    },
+    "onboard.op.8.accent": {
+      "text": "Kontrol lang",
+      "sourceHash": "c834218d9e24",
+      "updatedAt": "2026-08-17T13:56:17.417Z"
+    },
+    "onboard.op.8.tagline": {
+      "text": "Katalòg an pareil nan temps reel ak sit publik.",
+      "sourceHash": "b9c781d8ef02",
+      "updatedAt": "2026-08-17T13:56:17.417Z"
+    },
+    "onboard.op.8.desc": {
+      "text": "Katalòg lokale ki pwòf chrome mèmbè ak kopi legal. Vizite langè from sit publik kontrol lang; syñk katalòg plen from Operasyon.",
+      "sourceHash": "76e73ee68e58",
+      "updatedAt": "2026-08-17T13:56:17.417Z"
+    },
+    "onboard.op.8.b1.lead": {
+      "text": "Chrome publik",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T13:56:17.417Z"
+    },
+    "onboard.op.8.b1": {
+      "text": "Ote piç language nan pejip marketing",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T13:56:17.417Z"
+    },
+    "onboard.op.8.b2.lead": {
+      "text": "Katalòg",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T13:56:17.417Z"
+    },
+    "onboard.op.8.b2": {
+      "text": "Kòrèspond sa ki wè mèmbè ak vizitè landing",
+      "sourceHash": "0fbdcdc9ad6a",
+      "updatedAt": "2026-08-17T13:56:17.417Z"
+    },
+    "onboard.op.8.b3.lead": {
+      "text": "Operasyon",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T13:56:18.735Z"
+    },
+    "onboard.op.8.b3": {
+      "text": "genere sye konsyans pou tout katalo",
+      "sourceHash": "eb7aa3e340d4",
+      "updatedAt": "2026-08-17T13:56:18.735Z"
+    },
+    "onboard.op.9.kicker": {
+      "text": "Etape 9 · Eclairage",
+      "sourceHash": "7eafa4130147",
+      "updatedAt": "2026-08-17T13:56:18.735Z"
+    },
+    "onboard.op.9.title": {
+      "text": "Paramètr konsol",
+      "sourceHash": "e3cf75e3a804",
+      "updatedAt": "2026-08-17T13:56:18.735Z"
+    },
+    "onboard.op.9.accent": {
+      "text": "Eclairage",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T13:56:18.735Z"
+    },
+    "onboard.op.9.tagline": {
+      "text": "Lègè ou klè ak lègè sòp pou sesyon opèratè lonj.",
+      "sourceHash": "96665289ffd6",
+      "updatedAt": "2026-08-17T13:56:18.735Z"
+    },
+    "onboard.op.9.desc": {
+      "text": "Switche lègè ak lègè sòp pou konsol opèratè ak espace travay. Utilize kontròl soleil / lune nan bar navè publi ak pièd sou.",
+      "sourceHash": "191db2fb643b",
+      "updatedAt": "2026-08-17T13:56:18.735Z"
+    },
+    "onboard.op.9.b1.lead": {
+      "text": "Bascule",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T13:56:18.735Z"
+    },
+    "onboard.op.9.b1": {
+      "text": "viv sou chrome mwa marketing, pa sou latè opsayib",
+      "sourceHash": "414d448ecba7",
+      "updatedAt": "2026-08-17T13:56:19.752Z"
+    },
+    "onboard.op.9.b2.lead": {
+      "text": "Partaj",
+      "sourceHash": "50d0d8dd11a9",
+      "updatedAt": "2026-08-17T13:56:19.752Z"
+    },
+    "onboard.op.9.b2": {
+      "text": "préfèksyon tematik wè w nan mode Workspace",
+      "sourceHash": "86985668defd",
+      "updatedAt": "2026-08-17T13:56:19.752Z"
+    },
+    "onboard.op.9.b3.lead": {
+      "text": "Accessibilite",
+      "sourceHash": "d660049bc1f2",
+      "updatedAt": "2026-08-17T13:56:19.752Z"
+    },
+    "onboard.op.9.b3": {
+      "text": "utilize kijan lòt reye reisi rezonnans",
+      "sourceHash": "5c3a02dac3e5",
+      "updatedAt": "2026-08-17T13:56:19.752Z"
+    },
+    "onboard.op.10.kicker": {
+      "text": "Etape 10 · Tanpri",
+      "sourceHash": "191b38258aa7",
+      "updatedAt": "2026-08-17T13:56:19.752Z"
+    },
+    "onboard.op.10.title": {
+      "text": "Envoye depuis w",
+      "sourceHash": "2a06a5d40f16",
+      "updatedAt": "2026-08-17T13:56:19.752Z"
+    },
+    "onboard.op.10.accent": {
+      "text": "kòmante",
+      "sourceHash": "ca20728d35f0",
+      "updatedAt": "2026-08-17T13:56:19.752Z"
+    },
+    "onboard.op.10.tagline": {
+      "text": "List mailing + Haraka outbound.",
+      "sourceHash": "551cba57a6f5",
+      "updatedAt": "2026-08-17T13:56:44.898Z"
+    },
+    "onboard.op.10.desc": {
+      "text": "Emails se fè pou abonnés ak template HTML par défaut. Adrès ou ki sign in est chwazi From; listè destinataire vini nan list mailing landing.",
+      "sourceHash": "424de746cee0",
+      "updatedAt": "2026-08-17T13:56:44.898Z"
+    },
+    "onboard.op.10.b1.lead": {
+      "text": "From",
+      "sourceHash": "3f66052a107e",
+      "updatedAt": "2026-08-17T13:56:44.898Z"
+    },
+    "onboard.op.10.b1": {
+      "text": "Default ak adres e-poste ou operatèr",
+      "sourceHash": "edef1599b4ef",
+      "updatedAt": "2026-08-17T13:56:44.898Z"
+    },
+    "onboard.op.10.b2.lead": {
+      "text": "Debug",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T13:56:44.898Z"
+    },
+    "onboard.op.10.b2": {
+      "text": "captures avertisement ak erèmistè Haraka",
+      "sourceHash": "fea5242b81fb",
+      "updatedAt": "2026-08-17T13:56:44.898Z"
+    },
+    "onboard.op.11.kicker": {
+      "text": "Etape 11 · Anviizè",
+      "sourceHash": "ae43054a142a",
+      "updatedAt": "2026-08-17T13:56:44.898Z"
+    },
+    "onboard.op.11.title": {
+      "text": "Vire anviizè",
+      "sourceHash": "962ea526bfbe",
+      "updatedAt": "2026-08-17T13:56:44.898Z"
+    },
+    "onboard.op.11.accent": {
+      "text": "et bwa",
+      "sourceHash": "48e930db5788",
+      "updatedAt": "2026-08-17T13:57:36.915Z"
+    },
+    "onboard.op.11.tagline": {
+      "text": "Konte, desabilye, ak remèt pwòz.",
+      "sourceHash": "d17f62313435",
+      "updatedAt": "2026-08-17T13:57:36.915Z"
+    },
+    "onboard.op.11.desc": {
+      "text": "Utilizè te registrasi miks, activite poiltè, avatè ak descripsyon. Fondè opsèstè protektif ak desabilye/reset soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti soti s",
+      "sourceHash": "119d0bd4415b",
+      "updatedAt": "2026-08-17T13:57:36.915Z"
+    },
+    "onboard.op.12.title": {
+      "text": "Edite plan",
+      "sourceHash": "2cdbc67066c5",
+      "updatedAt": "2026-08-17T13:57:48.084Z"
+    },
+    "onboard.op.12.accent": {
+      "text": "Kopi",
+      "sourceHash": "f84e2e2dadd8",
+      "updatedAt": "2026-08-17T13:57:48.084Z"
+    },
+    "onboard.op.12.tagline": {
+      "text": "Kartè pwisaj ak nòt publik.",
+      "sourceHash": "8ff7aaafc31b",
+      "updatedAt": "2026-08-17T13:57:48.084Z"
+    },
+    "onboard.op.12.desc": {
+      "text": "Mise à jour pwisaj met en ligne plan ki viv sou sit marketing. Konbye montan ak nòt karaktèrise akòse anvan pou pwoblè.",
+      "sourceHash": "82983571e556",
+      "updatedAt": "2026-08-17T13:57:48.084Z"
+    },
+    "onboard.op.12.b1.lead": {
+      "text": "Autosave",
+      "sourceHash": "ff6ad92011f3",
+      "updatedAt": "2026-08-17T13:57:48.084Z"
+    },
+    "onboard.op.12.b1": {
+      "text": "Ekri pou stokaj plan bwiling",
+      "sourceHash": "af7675c6dd25",
+      "updatedAt": "2026-08-17T13:57:48.084Z"
+    },
+    "onboard.op.12.b2.lead": {
+      "text": "Pwajit publik",
+      "sourceHash": "9e54993aed01",
+      "updatedAt": "2026-08-17T13:57:48.084Z"
+    },
+    "onboard.op.12.b2": {
+      "text": "Lis yon mòn ki mêm vèrité",
+      "sourceHash": "524d72da3a6b",
+      "updatedAt": "2026-08-17T13:57:48.084Z"
+    },
+    "onboard.op.13.kicker": {
+      "text": "Etape 13 · Exportasyon",
+      "sourceHash": "7eb4878ff011",
+      "updatedAt": "2026-08-17T13:58:18.654Z"
+    },
+    "onboard.op.13.title": {
+      "text": "Forme brief",
+      "sourceHash": "d926be00a71b",
+      "updatedAt": "2026-08-17T13:58:18.654Z"
+    },
+    "onboard.op.13.accent": {
+      "text": "Modele",
+      "sourceHash": "7981a4e7e9bd",
+      "updatedAt": "2026-08-17T13:58:18.654Z"
+    },
+    "onboard.op.13.tagline": {
+      "text": "Layouts HTML pou eksport pou aktè.",
+      "sourceHash": "ab0a7d1a6206",
+      "updatedAt": "2026-08-17T13:58:18.654Z"
+    },
+    "onboard.op.13.desc": {
+      "text": "Exportasyon tebriye ou desine, aperçu, y telechargemen model HTML ki utile lè brief ki sorti platforme ki pack.",
+      "sourceHash": "37e62096c9c6",
+      "updatedAt": "2026-08-17T13:58:18.654Z"
+    },
+    "onboard.op.13.b1.lead": {
+      "text": "Aperçu",
+      "sourceHash": "f1fbb2b43dca",
+      "updatedAt": "2026-08-17T13:58:18.654Z"
+    },
+    "onboard.op.13.b1": {
+      "text": "affiche kont yon brief échantillon",
+      "sourceHash": "34bf59f2f261",
+      "updatedAt": "2026-08-17T13:58:18.654Z"
+    },
+    "onboard.op.13.b2.lead": {
+      "text": "Telechargemen",
+      "sourceHash": "8bdf057f91e7",
+      "updatedAt": "2026-08-17T13:58:18.654Z"
+    },
+    "onboard.op.13.b2": {
+      "text": "akcepte pakèt HTML stylize",
+      "sourceHash": "54b4e5868afb",
+      "updatedAt": "2026-08-17T13:58:19.747Z"
+    },
+    "onboard.op.14.kicker": {
+      "text": "Etape 14 · Legal",
+      "sourceHash": "ae9396d21227",
+      "updatedAt": "2026-08-17T13:58:19.747Z"
+    },
+    "onboard.op.14.title": {
+      "text": "Politik Privatisite",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T13:58:19.747Z"
+    },
+    "onboard.op.14.accent": {
+      "text": "& Kontraòt",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T13:58:19.747Z"
+    },
+    "onboard.op.14.tagline": {
+      "text": "Ouvri yon lòt pwajit nan latènyèl latèral.",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T13:58:19.747Z"
+    },
+    "onboard.op.14.desc": {
+      "text": "Mèdè ak Politiken Privatisite ak Kontraòt nan signi. Operatè ka ouvri yon pwajit publik nan latènyèl latèral any ti anvan.",
+      "sourceHash": "9ba7513c9ea9",
+      "updatedAt": "2026-08-17T13:58:19.747Z"
+    },
+    "onboard.op.14.b1.lead": {
+      "text": "Politik Privatisite",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T13:58:19.747Z"
+    },
+    "onboard.op.14.b1": {
+      "text": "apati pou konfyans publik",
+      "sourceHash": "45a08c67c9ae",
+      "updatedAt": "2026-08-17T13:58:19.747Z"
+    },
+    "onboard.op.14.b2.lead": {
+      "text": "Terminòd Sèvis",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T13:58:41.531Z"
+    },
+    "onboard.op.14.b2": {
+      "text": "ki gouvènete akònt ak uso platfòm",
+      "sourceHash": "ad5b587dd979",
+      "updatedAt": "2026-08-17T13:58:41.531Z"
+    },
+    "onboard.op.14.b3.lead": {
+      "text": "Pied latèyal",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T13:58:41.531Z"
+    },
+    "onboard.op.14.b3": {
+      "text": "Liyen ki mennen ki gen pwòfè legāl tout",
+      "sourceHash": "9094e6b57be7",
+      "updatedAt": "2026-08-17T13:58:41.531Z"
+    },
+    "onboard.op.15.kicker": {
+      "text": "Ètape 15 · Debug",
+      "sourceHash": "c5bd8ede0640",
+      "updatedAt": "2026-08-17T13:58:41.531Z"
+    },
+    "onboard.op.15.title": {
+      "text": "Wè",
+      "sourceHash": "a6490eb13812",
+      "updatedAt": "2026-08-17T13:58:41.531Z"
+    },
+    "onboard.op.15.accent": {
+      "text": "Konsole live",
+      "sourceHash": "961a91cb4e0a",
+      "updatedAt": "2026-08-17T13:58:41.531Z"
+    },
+    "onboard.op.15.tagline": {
+      "text": "OpenRouter, pipelèn, isman, ak èven sekirite.",
+      "sourceHash": "4d26fcf22bcf",
+      "updatedAt": "2026-08-17T13:58:41.531Z"
+    },
+    "onboard.op.15.desc": {
+      "text": "Debug evenemen ops nan streim. Filtre nan Mail lè ou test SMTP, oswa Security aprè changements mot de passe/avatar. Effase yon bagay ou menan ou menan.",
+      "sourceHash": "9dc275e13749",
+      "updatedAt": "2026-08-17T13:59:01.995Z"
+    },
+    "onboard.op.15.b1.lead": {
+      "text": "Sòti Mail",
+      "sourceHash": "2c1dfce6077b",
+      "updatedAt": "2026-08-17T13:59:01.995Z"
+    },
+    "onboard.op.15.b1": {
+      "text": "Montre payloads warn/error Haraka",
+      "sourceHash": "95cd087c7f66",
+      "updatedAt": "2026-08-17T13:59:01.995Z"
+    },
+    "onboard.op.15.b2.lead": {
+      "text": "Reple",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T13:59:01.995Z"
+    },
+    "onboard.op.15.b2": {
+      "text": "Tour a anyon OPÉRATÈR TUTORIYAL",
+      "sourceHash": "fe5d5215b04d",
+      "updatedAt": "2026-08-17T13:59:01.995Z"
+    },
+    "common.loading": {
+      "text": "Chèchman…",
+      "sourceHash": "33ce417454bf",
+      "updatedAt": "2026-08-17T13:59:01.995Z"
+    },
+    "common.save": {
+      "text": "Sèvi",
+      "sourceHash": "efc007a393f6",
+      "updatedAt": "2026-08-17T13:59:01.995Z"
+    },
+    "common.cancel": {
+      "text": "Anlize",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T13:59:01.995Z"
+    },
+    "common.close": {
+      "text": "Fermer",
+      "sourceHash": "bbfa773e5a63",
+      "updatedAt": "2026-08-17T13:59:02.823Z"
+    },
+    "common.retry": {
+      "text": "Réessayer",
+      "sourceHash": "9f5cd8a2e880",
+      "updatedAt": "2026-08-17T13:59:02.823Z"
+    },
+    "common.error": {
+      "text": "Quelque chose s'est mal passé",
+      "sourceHash": "8d886c0ba6f2",
+      "updatedAt": "2026-08-17T13:59:02.823Z"
+    },
+    "common.home": {
+      "text": "Accueil",
+      "sourceHash": "70f8bb9a8a53",
+      "updatedAt": "2026-08-17T13:59:02.823Z"
+    },
+    "common.all": {
+      "text": "Tout",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T13:59:02.823Z"
+    },
+    "common.search": {
+      "text": "Rechercher…",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T13:59:02.823Z"
+    },
+    "common.create": {
+      "text": "Créer",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T13:59:02.823Z"
+    },
+    "common.delete": {
+      "text": "Supprimer",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T13:59:02.823Z"
+    },
+    "common.edit": {
+      "text": "Edite",
+      "sourceHash": "5301648dcf6b",
+      "updatedAt": "2026-08-17T13:59:08.007Z"
+    },
+    "common.back": {
+      "text": "Retour",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T13:59:08.007Z"
+    },
+    "common.next": {
+      "text": "Swiv",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T13:59:08.007Z"
+    },
+    "common.previous": {
+      "text": "Predan",
+      "sourceHash": "50f94286ba30",
+      "updatedAt": "2026-08-17T13:59:08.007Z"
+    },
+    "common.confirm": {
+      "text": "Konfirm",
+      "sourceHash": "04a212215ef9",
+      "updatedAt": "2026-08-17T13:59:08.007Z"
+    },
+    "common.dismiss": {
+      "text": "Renverse",
+      "sourceHash": "70afe9eff3f2",
+      "updatedAt": "2026-08-17T13:59:08.007Z"
+    },
+    "common.noMatches": {
+      "text": "Pa gen korespond",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T13:59:08.007Z"
+    },
+    "common.viewAll": {
+      "text": "Veye tout",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T13:59:08.007Z"
+    },
+    "common.open": {
+      "text": "Ouvri",
+      "sourceHash": "cf9b77061f7b",
+      "updatedAt": "2026-08-17T13:59:19.637Z"
+    },
+    "common.refresh": {
+      "text": "Rafraîchir",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T13:59:19.637Z"
+    },
+    "pricing.eyebrow": {
+      "text": "Prix",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T13:59:19.637Z"
+    },
+    "pricing.title": {
+      "text": "Plann pou travay decision Karayib",
+      "sourceHash": "037c126105d5",
+      "updatedAt": "2026-08-17T13:59:19.637Z"
+    },
+    "pricing.lede": {
+      "text": "Komanse gratuit, ak lè organisasyon ou bezwen plis siè, profòn ak surveillance.",
+      "sourceHash": "9166dc69b88d",
+      "updatedAt": "2026-08-17T13:59:19.637Z"
+    },
+    "pricing.monthly": {
+      "text": "Mwa",
+      "sourceHash": "d31edb7b8a94",
+      "updatedAt": "2026-08-17T13:59:19.637Z"
+    },
+    "pricing.annual": {
+      "text": "An",
+      "sourceHash": "0930f3f8992c",
+      "updatedAt": "2026-08-17T13:59:19.637Z"
+    },
+    "pricing.cta": {
+      "text": "Komanse",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T13:59:19.637Z"
+    },
+    "pricing.contact": {
+      "text": "Parle avèk nou",
+      "sourceHash": "90214883b63b",
+      "updatedAt": "2026-08-17T13:59:20.682Z"
+    },
+    "pricing.payments": {
+      "text": "Mètèd paye akseptan",
+      "sourceHash": "a5b32f6784e2",
+      "updatedAt": "2026-08-17T13:59:20.682Z"
+    },
+    "cookie.pillLabel": {
+      "text": "Nou anpilike cookies.",
+      "sourceHash": "445cbc2a36bf",
+      "updatedAt": "2026-08-17T13:59:20.682Z"
+    },
+    "cookie.acceptAll": {
+      "text": "Accept cookies",
+      "sourceHash": "e3b35bb7daa5",
+      "updatedAt": "2026-08-17T13:59:20.682Z"
+    },
+    "cookie.settingsTitle": {
+      "text": "Paramèt",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T13:59:20.682Z"
+    },
+    "cookie.close": {
+      "text": "Fermè paramèt cookies",
+      "sourceHash": "90601d80d7e5",
+      "updatedAt": "2026-08-17T13:59:20.682Z"
+    },
+    "cookie.essential": {
+      "text": "Cookies esansèl",
+      "sourceHash": "62a4222f6e4d",
+      "updatedAt": "2026-08-17T13:59:20.682Z"
+    },
+    "cookie.essentialHint": {
+      "text": "Nesesè pou sign-in, sèkè, tem, ak lang.",
+      "sourceHash": "e667ce996fa5",
+      "updatedAt": "2026-08-17T13:59:20.682Z"
+    },
+    "cookie.alwaysOn": {
+      "text": "Toujou aktif",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T13:59:21.697Z"
+    },
+    "cookie.analytics": {
+      "text": "Cookies analitik",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T13:59:21.697Z"
+    },
+    "cookie.analyticsHint": {
+      "text": "Aide nou pou comprend l'utilisation prodwi. Tracker an pa chèche nan avèk ou aktive sa.",
+      "sourceHash": "b334ec855aab",
+      "updatedAt": "2026-08-17T13:59:21.697Z"
+    },
+    "cookie.marketing": {
+      "text": "Cookies marketing",
+      "sourceHash": "c2c7a10bf1bf",
+      "updatedAt": "2026-08-17T13:59:21.697Z"
+    },
+    "cookie.marketingHint": {
+      "text": "Se unika ki pou kèmpein la. Desaktive par dèfaut.",
+      "sourceHash": "e33b06c9570f",
+      "updatedAt": "2026-08-17T13:59:21.697Z"
+    },
+    "cookie.statement": {
+      "text": "Lwa nou an cookies",
+      "sourceHash": "2d8cd77d9cf0",
+      "updatedAt": "2026-08-17T13:59:21.697Z"
+    },
+    "cookie.save": {
+      "text": "Enregistre",
+      "sourceHash": "913aba9f96cf",
+      "updatedAt": "2026-08-17T13:59:21.697Z"
+    },
+    "cookie.openSettings": {
+      "text": "Paramèt cookies",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T13:59:21.697Z"
+    },
+    "legal.lastUpdated": {
+      "text": "Dernyè mise à jour",
+      "sourceHash": "583c9e23574a",
+      "updatedAt": "2026-08-17T13:59:30.513Z"
+    },
+    "legal.kicker": {
+      "text": "Octivate · CENSII",
+      "sourceHash": "db72eb4d75f1",
+      "updatedAt": "2026-08-17T13:59:30.513Z"
+    },
+    "legal.privacyTitle": {
+      "text": "Politik privasipri",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T13:59:30.513Z"
+    },
+    "legal.termsTitle": {
+      "text": "Kondisyon pou servis",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T13:59:30.513Z"
+    },
+    "legal.cookiesTitle": {
+      "text": "Lè cookie",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T13:59:30.513Z"
+    },
+    "legal.backHome": {
+      "text": "Retour à Octivate",
+      "sourceHash": "c03f0805dd7d",
+      "updatedAt": "2026-08-17T13:59:30.513Z"
+    },
+    "legal.contact": {
+      "text": "Kontak",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T13:59:30.513Z"
+    },
+    "legal.updatedDate": {
+      "text": "11 Aout 2026",
+      "sourceHash": "3632e92d3018",
+      "updatedAt": "2026-08-17T13:59:30.513Z"
+    },
+    "legal.privacy.cover.title": {
+      "text": "Ki jan y Politiken Konfidalite a gen kovere",
+      "sourceHash": "ceca340c15f9",
+      "updatedAt": "2026-08-17T14:00:06.028Z"
+    },
+    "legal.privacy.cover.p1": {
+      "text": "Politiken Konfidalite a esplike koman CENSII (\"nou\", \"nou\") kolekt, use, ak share information personnèl lè ou vizite octivate.io, kreye yon compte Octivate, abone yon list mailing nou, osèy ou utilise yon espace travay Octivate ak sèvis reley.",
+      "sourceHash": "da0b35cddd1e",
+      "updatedAt": "2026-08-17T14:00:06.028Z"
+    },
+    "legal.privacy.cover.p2": {
+      "text": "Octivate yon produk decision-intelligence pou kontek opsèl Karayib. Li operé par CENSII. Si ou gen question, email info@octivate.co.",
+      "sourceHash": "a3ee0fedaecb",
+      "updatedAt": "2026-08-17T14:00:06.028Z"
+    },
+    "legal.privacy.collect.title": {
+      "text": "Information nou kolekt",
+      "sourceHash": "ca195d50ca27",
+      "updatedAt": "2026-08-17T14:00:06.028Z"
+    },
+    "legal.privacy.collect.p1": {
+      "text": "Nou kolekt information ou fourni direkta ak information ki kreye lè ou utilise yon servis:",
+      "sourceHash": "f01456bd7458",
+      "updatedAt": "2026-08-17T14:00:06.028Z"
+    },
+    "legal.privacy.collect.b1": {
+      "text": "Detail konte tann nom, adress email, organisasyon, ak credential autentifikasyon.",
+      "sourceHash": "af0ec8e327f2",
+      "updatedAt": "2026-08-17T14:00:06.028Z"
+    },
+    "legal.privacy.collect.b2": {
+      "text": "Konten eskwa ou soumèt (projèk anyen, dokiman, brief, monitor, ak analize reliye).",
+      "sourceHash": "5892431b22fd",
+      "updatedAt": "2026-08-17T14:00:06.028Z"
+    },
+    "legal.privacy.collect.b3": {
+      "text": "Detail list mailing si ou opt-in (email ak prénom optionèl).",
+      "sourceHash": "34eb00f7d54c",
+      "updatedAt": "2026-08-17T14:00:06.028Z"
+    },
+    "legal.privacy.collect.b4": {
+      "text": "Donnè teknoloji nesesèè pou fasilite sa: cookies sesyon, log sekirite, metrik uso aproximatif, prèfèrans locale navigatè, ak prèfèrans tematik stocké lokalman.",
+      "sourceHash": "1cd7a6671dc5",
+      "updatedAt": "2026-08-17T14:00:20.835Z"
+    },
+    "legal.privacy.collect.b5": {
+      "text": "Identifikasyon reli paiment lè ou achète yon plan nan processeur poumen nou (nou pa stocké nimewo karde poto mitan nan server Octivate).",
+      "sourceHash": "33e270085714",
+      "updatedAt": "2026-08-17T14:00:20.835Z"
+    },
+    "legal.privacy.use.title": {
+      "text": "Kijan nou uso informasyon",
+      "sourceHash": "98a72067ee54",
+      "updatedAt": "2026-08-17T14:00:20.835Z"
+    },
+    "legal.privacy.use.p1": {
+      "text": "Nouuso informasyon personal pou:",
+      "sourceHash": "582e3b9752f3",
+      "updatedAt": "2026-08-17T14:00:20.835Z"
+    },
+    "legal.privacy.use.b1": {
+      "text": "Fasilite, sekouri, ak améliore Octivate (authentifikasyon, karaktèris workspace, sòpòt).",
+      "sourceHash": "e1c1d704e9e8",
+      "updatedAt": "2026-08-17T14:00:20.835Z"
+    },
+    "legal.privacy.use.b2": {
+      "text": "Ekze yon flou analizasyon ou reqète, inkluye senvò pòmpt ak dokiman nesesèè nan providè mòdèl tankou OpenRouter ak mòdèl ou selekton.",
+      "sourceHash": "b0f14789ce72",
+      "updatedAt": "2026-08-17T14:00:20.835Z"
+    },
+    "legal.privacy.use.b3": {
+      "text": "Sente metidjan prodwi lè ou konsan nan listè posèt.",
+      "sourceHash": "795947ef39af",
+      "updatedAt": "2026-08-17T14:00:20.835Z"
+    },
+    "legal.privacy.use.b4": {
+      "text": "Respekte obligasyon legale, comptabilyite, ak sekirite.",
+      "sourceHash": "33e5b0f8726c",
+      "updatedAt": "2026-08-17T14:00:20.835Z"
+    },
+    "legal.privacy.cookies.title": {
+      "text": "Kuki ak teknoloji li kònpare",
+      "sourceHash": "f7b1e4ca11a4",
+      "updatedAt": "2026-08-17T14:00:50.152Z"
+    },
+    "legal.privacy.cookies.p1": {
+      "text": "Kuki esenèl ak storaj lokal te wèw w entri, proteje sesyon, memore tem (light/dark), ak memore prensip langwaz. Yo rekwiz pou sit an fiksipan.",
+      "sourceHash": "04cfe776b96d",
+      "updatedAt": "2026-08-17T14:00:50.152Z"
+    },
+    "legal.privacy.cookies.p2": {
+      "text": "Kuki analitik ak marketing te off par defa. Si w aktive yo nan paramèt kuki, nou kapab kontinye w komprann uso prodit ak ran kampan. Apresentemente, aktive katégori an pa charge trackè reklam ti-tyè; chwa w wèw stoke pou w ka honere lè intègrasyon an ajoute. Wèw Nota pou kuki an pou detalye.",
+      "sourceHash": "47a465df2959",
+      "updatedAt": "2026-08-17T14:00:50.152Z"
+    },
+    "legal.privacy.sharing.title": {
+      "text": "Lè nou partaj informasyon",
+      "sourceHash": "7a2ce00c7fd3",
+      "updatedAt": "2026-08-17T14:00:50.152Z"
+    },
+    "legal.privacy.sharing.p1": {
+      "text": "Nou pa vends informasyon personal. Nou partaj donn juste ak procesè ki fiksipan Octivate, nan konvenan apòpripri, pou exemplè:",
+      "sourceHash": "d2bf64f6c698",
+      "updatedAt": "2026-08-17T14:00:50.152Z"
+    },
+    "legal.privacy.sharing.b1": {
+      "text": "Provesè ak fò hosts ki stoje donn aplikasyon.",
+      "sourceHash": "4d800473b32a",
+      "updatedAt": "2026-08-17T14:00:50.152Z"
+    },
+    "legal.privacy.sharing.b2": {
+      "text": "Provesè routè model (touman OpenRouter) ak fournisseir model sou jaden lè w kontinye analitik.",
+      "sourceHash": "3ef2e101e0cb",
+      "updatedAt": "2026-08-17T14:00:50.152Z"
+    },
+    "legal.privacy.sharing.b3": {
+      "text": "Provesè pwèsman (touman Stripe ak PayPal) lè w achète yon plan.",
+      "sourceHash": "afa78f66f0cb",
+      "updatedAt": "2026-08-17T14:00:50.152Z"
+    },
+    "legal.privacy.sharing.b4": {
+      "text": "Infrazyèm pou acheminé tranzaksyonèl oswa letre mailing-list ou te deman.",
+      "sourceHash": "fa83b06a582d",
+      "updatedAt": "2026-08-17T14:01:10.718Z"
+    },
+    "legal.privacy.sharing.b5": {
+      "text": "Kounyeòl profesionel oswa autorite lè requis par la loi.",
+      "sourceHash": "8f3a144729ae",
+      "updatedAt": "2026-08-17T14:01:10.718Z"
+    },
+    "legal.privacy.retention.title": {
+      "text": "Tenan",
+      "sourceHash": "c7199d9e9593",
+      "updatedAt": "2026-08-17T14:01:10.718Z"
+    },
+    "legal.privacy.retention.p1": {
+      "text": "Nou tenan don ak dòn workspace tan ou kay aktyif oswa pou rayson raisonnable aprè, pou bakaž, rèzòlis difisil, oswa conformité legale. Enregistman list mailing-list te tenan jusques ou désabone oswa nou ferm list. Ou ka demande suprèsion kòmanse sou dwòb sa a.",
+      "sourceHash": "f0d4f4a09397",
+      "updatedAt": "2026-08-17T14:01:10.718Z"
+    },
+    "legal.privacy.rights.title": {
+      "text": "Dwa ou",
+      "sourceHash": "e71102d544b3",
+      "updatedAt": "2026-08-17T14:01:10.718Z"
+    },
+    "legal.privacy.rights.p1": {
+      "text": "Depandans ki ou rete, ou ka have dwa pou aksè, korèk, suprèson, oswa eksport dòn personal, oswa pou objèk oswa restriki traiteman ki certain. Pou vizitè EU/UK, dwa GDPR / UK GDPR ap aplike. Pou vizitè nan jouridik Caribbean ki gen lòt loi proteksyon dòn (including Jamaica, Trinidad and Tobago, Barbados, oswa an), nou honore dwa legi applicable.",
+      "sourceHash": "d0eca93b39f0",
+      "updatedAt": "2026-08-17T14:01:10.718Z"
+    },
+    "legal.privacy.rights.p2": {
+      "text": "Pou fè yon deman, tanse info@octivate.co oswa shemuel@censii.co avèk subjet \"Data subject request\". Nou pour respondan nan fenêt legi applicable.",
+      "sourceHash": "5be87f549dc6",
+      "updatedAt": "2026-08-17T14:01:10.718Z"
+    },
+    "legal.privacy.children.title": {
+      "text": "Enfants",
+      "sourceHash": "dcf75191c585",
+      "updatedAt": "2026-08-17T14:01:10.718Z"
+    },
+    "legal.privacy.children.p1": {
+      "text": "Octivate ayisiye pou utilizasyon profesyonel ak organisasyon. Nou pa konnansè kole informasyon personal nan pitit anba 16 ans.",
+      "sourceHash": "07a14e4d629c",
+      "updatedAt": "2026-08-17T14:01:30.342Z"
+    },
+    "legal.privacy.changes.title": {
+      "text": "Chanjman pou Politik Privasi",
+      "sourceHash": "615043a5515f",
+      "updatedAt": "2026-08-17T14:01:30.342Z"
+    },
+    "legal.privacy.changes.p1": {
+      "text": "Nou kapab mete Politik Privasi a nan tems la. Dat “Dernyè Mise à Jour” sou le pwofiltè a pou chanje anvan nou mete chanjman. Chanjman matèiel pou meten en avant sou le pwofiltè a oswa kommunike a gen apri pou prodwi a.",
+      "sourceHash": "476874f7f005",
+      "updatedAt": "2026-08-17T14:01:30.342Z"
+    },
+    "legal.privacy.contact.title": {
+      "text": "Kontakt",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T14:01:30.342Z"
+    },
+    "legal.privacy.contact.p1": {
+      "text": "CENSII — Octivate demande privasi: info@octivate.co. Demande sujet de données kapab aussi envoye nan shemuel@censii.co. Plis sou CENSII: https://censii.co.",
+      "sourceHash": "2a9de25118a0",
+      "updatedAt": "2026-08-17T14:01:30.342Z"
+    },
+    "legal.terms.service.title": {
+      "text": "Yon Sèvis",
+      "sourceHash": "bc4a155b6578",
+      "updatedAt": "2026-08-17T14:01:44.270Z"
+    },
+    "legal.terms.service.p1": {
+      "text": "Octivate aident organizasyon karib struktur teatwar decision, kole ak eskòt testé, ak prodwi breef prêt pou decision ak monitoring. Fonksyon ki incluye projèk, breef, mònitè, pak sou sourç, karte stakeholder, ak outil workspace reli.",
+      "sourceHash": "cafd042947e6",
+      "updatedAt": "2026-08-17T14:01:44.270Z"
+    },
+    "legal.terms.service.p2": {
+      "text": "Sòlda anlizis se matyè soutèn decision. Yo pa konseil jurièl, finansye, investisyon, oswa règlamentè. Ou resanble pou ou utilise yo.",
+      "sourceHash": "c2714c09aad4",
+      "updatedAt": "2026-08-17T14:01:44.270Z"
+    },
+    "legal.terms.accounts.title": {
+      "text": "Konton ak uso akseptab",
+      "sourceHash": "5d78eee41938",
+      "updatedAt": "2026-08-17T14:01:44.270Z"
+    },
+    "legal.terms.accounts.b1": {
+      "text": "Donn enfòmasyon akurat sou kont akòd ak gard kòd anpil.",
+      "sourceHash": "25e318d9c60c",
+      "updatedAt": "2026-08-17T14:01:44.270Z"
+    },
+    "legal.terms.accounts.b2": {
+      "text": "Etape yon Sèvis sèlman pou lpòz legilè ak konform ak polisyè organisasyon ou.",
+      "sourceHash": "1792588ceba4",
+      "updatedAt": "2026-08-17T14:01:44.270Z"
+    },
+    "legal.terms.accounts.b3": {
+      "text": "Pa coba casse, ingine revanch, ou mal uso yon Sèvis, oswa pou ou aksè dati anòtrè kòmante.",
+      "sourceHash": "d8cee3f610f2",
+      "updatedAt": "2026-08-17T14:01:44.270Z"
+    },
+    "legal.terms.accounts.b4": {
+      "text": "Pa télécharge konten ou pa gen droit pou traita, oswa konten ki anòlèg oswa nègèsif.",
+      "sourceHash": "68ea1009e1a7",
+      "updatedAt": "2026-08-17T14:02:14.132Z"
+    },
+    "legal.terms.ai.title": {
+      "text": "Analiz ki asiste av modèl",
+      "sourceHash": "f139b756fb2a",
+      "updatedAt": "2026-08-17T14:02:14.132Z"
+    },
+    "legal.terms.ai.p1": {
+      "text": "Parèt nan Octivate genni fournisseur modèl tiye (eksamplè viâ OpenRouter) pou traita prompty oswa dokiman ou soumèt. Sòti ka anplen oswa pwòf. Ou dwe revèviz prosèv ak recomandasyon anvan ou agi.",
+      "sourceHash": "2249195c0061",
+      "updatedAt": "2026-08-17T14:02:14.132Z"
+    },
+    "legal.terms.plans.title": {
+      "text": "Plan, éplim, ak bay",
+      "sourceHash": "66eaef3bcd17",
+      "updatedAt": "2026-08-17T14:02:14.132Z"
+    },
+    "legal.terms.plans.p1": {
+      "text": "Plan, éplim, ak bayè dèkriye sou pejipis Pricing ak la kòshò. Feè tretman traita par fournisseur bay ak Stripe oswa PayPal. Sòti anleviz ley, feè anrefundab lè peryòd bay ewòk commence, siz ou ta dwe an ekri.",
+      "sourceHash": "a74086033e27",
+      "updatedAt": "2026-08-17T14:02:14.132Z"
+    },
+    "legal.terms.ip.title": {
+      "text": "Propriété intelektuel",
+      "sourceHash": "3e694b7e8d03",
+      "updatedAt": "2026-08-17T14:02:14.132Z"
+    },
+    "legal.terms.ip.p1": {
+      "text": "CENSII ak so licansè proprietè Octivate softwaè, bannè, ak konten sit. Ou retejè drwa nan konten ou soumèt. Ou donn nòs lisans limitè pou tanpri ak traita kontan sa a sèlman pou bayi Servis.",
+      "sourceHash": "b14a3529c91c",
+      "updatedAt": "2026-08-17T14:02:14.132Z"
+    },
+    "legal.terms.ip.p2": {
+      "text": "Eksampl brief ak dèmos publik ilistratif ka gen sènan fiksionalisè oswa anonimisè.",
+      "sourceHash": "93fd6d9964e9",
+      "updatedAt": "2026-08-17T14:02:14.132Z"
+    },
+    "legal.terms.confidentiality.title": {
+      "text": "Konfidansiyalite",
+      "sourceHash": "642e7d86380c",
+      "updatedAt": "2026-08-17T14:03:02.298Z"
+    },
+    "legal.terms.confidentiality.p1": {
+      "text": "Nou traita konten wòb ou tankou konfidansiyal ak proces lan sou Politik Konfidansiyal ou. Ou konsente non difèmeni karaktèrisi non-piblik karaktèrisi nan Sèvis ki pral nesesè pou évaluation ou antènè.",
+      "sourceHash": "a68c21b965e4",
+      "updatedAt": "2026-08-17T14:03:02.298Z"
+    },
+    "legal.terms.disclaimer.title": {
+      "text": "Diklasman",
+      "sourceHash": "4c4a2e80cc87",
+      "updatedAt": "2026-08-17T14:03:02.298Z"
+    },
+    "legal.terms.disclaimer.p1": {
+      "text": "Sèvis a prenen “AS IS” ET “AS AVAILABLE”. Pou limite negi grandi pou loi, no diklem garanti marchandabilite, pour kondisipartekilè, et non-infringman. NOU FÈ PAS GARANTI FÒ OPSIPASYON KONTINYE AK FÈ SANS ÈRÈ, OSWA KE SÒTI A PRAL RENMEN WÒBYEN OU.",
+      "sourceHash": "d40ff71ccb41",
+      "updatedAt": "2026-08-17T14:03:02.298Z"
+    },
+    "legal.terms.liability.title": {
+      "text": "Limite respònabilté",
+      "sourceHash": "b1a6f886289a",
+      "updatedAt": "2026-08-17T14:03:02.298Z"
+    },
+    "legal.terms.liability.p1": {
+      "text": "Pou limite negi grandi pou loi, CENSII ak so afilye pa pral responabilté pou damajj indirekt, incidentèl, espesyal, konsequansyal, oswa punitif, oswa pou profitas perdus, données, oswa bon vilè. Respònabilté agregat a nan Sèvis a pa depase yon montan ki corrisponn 12 mois depandan yon klèm.",
+      "sourceHash": "365dfc530ba0",
+      "updatedAt": "2026-08-17T14:03:02.298Z"
+    },
+    "legal.terms.termination.title": {
+      "text": "Sosipanz ak teminò",
+      "sourceHash": "bd4963b1d885",
+      "updatedAt": "2026-08-17T14:03:02.298Z"
+    },
+    "legal.terms.termination.p1": {
+      "text": "Nou kapab sosipanz ak teminò acces ou si ou breche yon Terms oswa si nesesè pou proteje Sèvis oswa antyèz users. Ou kapab stop using Sèvis nan lòd any. Provisions ki par natirèl devra sosay (including IP, diklasman, respònabilté, oswa loi gouvernan) pral sosay teminò.",
+      "sourceHash": "566454aef6a7",
+      "updatedAt": "2026-08-17T14:03:02.298Z"
+    },
+    "legal.terms.law.title": {
+      "text": "Loi applicable",
+      "sourceHash": "4676ad8df95e",
+      "updatedAt": "2026-08-17T14:03:25.833Z"
+    },
+    "legal.terms.law.p1": {
+      "text": "Ces Kondisyons sont régies par les lois de Trinidad et Tobago, sans tenir compte des règles de conflit de lois, sauf si des protections obligatoires pour les consommateurs dans votre juridiction exigent autrement. Les tribunaux de Trinidad et Tobago ont juridiction exclusive, sous réserve de ces protections obligatoires.",
+      "sourceHash": "8625634a95dc",
+      "updatedAt": "2026-08-17T14:03:25.833Z"
+    },
+    "legal.terms.contact.title": {
+      "text": "Kontak",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T14:03:25.833Z"
+    },
+    "legal.terms.contact.p1": {
+      "text": "Pyèsidè sou ses Kondisyons: info@octivate.co. Sou CENSII: https://censii.co.",
+      "sourceHash": "baefec6a2022",
+      "updatedAt": "2026-08-17T14:03:25.833Z"
+    },
+    "legal.cookies.overview.title": {
+      "text": "Aperçu",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T14:03:25.833Z"
+    },
+    "legal.cookies.overview.p1": {
+      "text": "Cette Déclaration de cookies explique comment Octivate (exploité par CENSII) utilise les cookies et technologies similaires sur octivate.io. Vous pouvez gérer les catégories optionnelles à tout moment via Cookie settings.",
+      "sourceHash": "4fe70d776df2",
+      "updatedAt": "2026-08-17T14:03:25.833Z"
+    },
+    "legal.cookies.essential.title": {
+      "text": "Cookies essentiels",
+      "sourceHash": "e766aa84901b",
+      "updatedAt": "2026-08-17T14:03:25.833Z"
+    },
+    "legal.cookies.essential.p1": {
+      "text": "Les cookies essentiels et le stockage local sont requis pour que le Sèvis fonctionne. Ils comprennent l'authentification de session, la sécurité, la préférence de thème (light/dark), et la préférence de langue. Ils restent activés ; le Sèvis ne peut pas fonctionner correctement sans eux.",
+      "sourceHash": "3c529d19f95b",
+      "updatedAt": "2026-08-17T14:03:25.833Z"
+    },
+    "legal.cookies.analytics.title": {
+      "text": "Kuki analitik",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T14:03:27.414Z"
+    },
+    "legal.cookies.analytics.p1": {
+      "text": "Kuki analitik a nou aidez pou ka konprann ki sa ou prodwi ak prodwi. Yo ofisyèl anvan ou aktive yo. Nou pa kontinye charge SDK-analitik ti-tè a. Si nou jwenn yo anpil, nou pral fè sa a lè preferans ou stocké permi Analitik.",
+      "sourceHash": "e87b8d7ae969",
+      "updatedAt": "2026-08-17T14:03:27.414Z"
+    },
+    "legal.cookies.marketing.title": {
+      "text": "Kuki marketing",
+      "sourceHash": "c2c7a10bf1bf",
+      "updatedAt": "2026-08-17T14:03:27.414Z"
+    },
+    "legal.cookies.marketing.p1": {
+      "text": "Kuki marketing pral soutenn kampan ou rekòmante si nou fè yo. Yo ofisyèl anvan ak non aktif an. Aktive Kuki marketing stoke preferans ou pou fòy fò; li pa aktive pixely reklam an sou pati li.",
+      "sourceHash": "86be873965c0",
+      "updatedAt": "2026-08-17T14:03:27.414Z"
+    },
+    "legal.cookies.manage.title": {
+      "text": "Kijan ou ka géré preferans",
+      "sourceHash": "fe104b22e6a2",
+      "updatedAt": "2026-08-17T14:03:27.414Z"
+    },
+    "legal.cookies.manage.p1": {
+      "text": "Utilize kontòl flotan ou oswa ope Paramèt kuki nan pièd sou sit. Chwazi Accept pou aktive preferans Analitik ak Marketing. Chwazi Save settings pou stoke toggle ou seleksyon. Effase donn nan navigatè ou resete bannè.",
+      "sourceHash": "7afe22d445c8",
+      "updatedAt": "2026-08-17T14:03:27.414Z"
+    },
+    "legal.cookies.more.title": {
+      "text": "Mèsi anpil",
+      "sourceHash": "f925f9bea399",
+      "updatedAt": "2026-08-17T14:03:27.414Z"
+    },
+    "legal.cookies.more.p1": {
+      "text": "Pou pratik dat anpil, li bòlèt Politiks Privatisite ou. Pwoblèm: info@octivate.co.",
+      "sourceHash": "407b95384bff",
+      "updatedAt": "2026-08-17T14:03:27.414Z"
+    },
+    "dyn.marquee.mq_proc_ports.text": {
+      "text": "Autorité du port publie avis de préqualification — logistik",
+      "sourceHash": "1a71672fedbc",
+      "updatedAt": "2026-08-17T14:04:01.180Z"
+    },
+    "dyn.marquee.mq_proc_ports.badge": {
+      "text": "ACHATS",
+      "sourceHash": "08433110a671",
+      "updatedAt": "2026-08-17T14:04:01.180Z"
+    },
+    "dyn.marquee.mq_sys_grid.text": {
+      "text": "Fenêtre de maintenance du réseau étendue ; alimentations industrielles affectées",
+      "sourceHash": "740cfd102e0c",
+      "updatedAt": "2026-08-17T14:04:01.180Z"
+    },
+    "dyn.marquee.mq_sys_grid.badge": {
+      "text": "SISTÈM",
+      "sourceHash": "e6caf1e7e33e",
+      "updatedAt": "2026-08-17T14:04:01.180Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.text": {
+      "text": "Remaniement du cabinet signale un changement dans les priorités du portefeuille énergétique",
+      "sourceHash": "3b08d154b099",
+      "updatedAt": "2026-08-17T14:04:01.180Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.badge": {
+      "text": "POWÈR",
+      "sourceHash": "c2b6b521a777",
+      "updatedAt": "2026-08-17T14:04:01.180Z"
+    },
+    "dyn.marquee.mq_narr_radio.text": {
+      "text": "Senmante kont lokal grangou nan radio kreyòl ak WhatsApp",
+      "sourceHash": "48213741cc6a",
+      "updatedAt": "2026-08-17T14:04:01.180Z"
+    },
+    "dyn.marquee.mq_narr_radio.badge": {
+      "text": "NARRATIF",
+      "sourceHash": "3e3886da8fd5",
+      "updatedAt": "2026-08-17T14:04:01.180Z"
     }
   }
 }

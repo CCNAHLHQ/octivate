@@ -1,0 +1,4072 @@
+{
+  "locale": "ar",
+  "version": 104,
+  "updatedAt": "2026-08-17T17:58:43.066Z",
+  "entries": {
+    "nav.product": {
+      "text": "منتج",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T17:00:54.460Z"
+    },
+    "nav.why": {
+      "text": "لماذا Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T17:00:54.460Z"
+    },
+    "nav.how": {
+      "text": "كيف يعمل",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T17:00:54.460Z"
+    },
+    "nav.pricing": {
+      "text": "التسعير",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T17:00:54.460Z"
+    },
+    "nav.team": {
+      "text": "الفريق",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T17:00:54.460Z"
+    },
+    "nav.about": {
+      "text": "من نحن",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T17:00:54.460Z"
+    },
+    "nav.signIn": {
+      "text": "تسجيل الدخول",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T17:00:54.460Z"
+    },
+    "nav.requestDemo": {
+      "text": "ابدأ",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T17:00:54.460Z"
+    },
+    "nav.returnWorkspace": {
+      "text": "العودة إلى مساحة العمل",
+      "sourceHash": "74f11e0defca",
+      "updatedAt": "2026-08-17T17:01:05.277Z"
+    },
+    "nav.operatorDashboard": {
+      "text": "لوحة قيادة المشغل",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T17:01:05.277Z"
+    },
+    "nav.askQuestion": {
+      "text": "اطرح سؤالاً",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T17:01:05.277Z"
+    },
+    "nav.askQuestionLong": {
+      "text": "اسأل سؤالاً",
+      "sourceHash": "cf94bdf39103",
+      "updatedAt": "2026-08-17T17:01:05.277Z"
+    },
+    "nav.skip": {
+      "text": "تخطي إلى المحتوى",
+      "sourceHash": "0a4470d64e9d",
+      "updatedAt": "2026-08-17T17:01:05.277Z"
+    },
+    "nav.explore": {
+      "text": "استكشاف",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T17:01:05.277Z"
+    },
+    "nav.openMenu": {
+      "text": "فتح القائمة",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T17:01:05.277Z"
+    },
+    "nav.closeMenu": {
+      "text": "إغلاق القائمة",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T17:01:05.277Z"
+    },
+    "nav.translate": {
+      "text": "ترجمة",
+      "sourceHash": "2be17aa181d8",
+      "updatedAt": "2026-08-17T17:01:08.426Z"
+    },
+    "nav.translateHint": {
+      "text": "مخزن مؤقت على الخادم · Octivate i18n",
+      "sourceHash": "16abeab228fd",
+      "updatedAt": "2026-08-17T17:01:08.426Z"
+    },
+    "nav.primary": {
+      "text": "Primary",
+      "sourceHash": "a9a96ec01949",
+      "updatedAt": "2026-08-17T17:01:08.426Z"
+    },
+    "nav.mobile": {
+      "text": "Mobile",
+      "sourceHash": "b1d702459399",
+      "updatedAt": "2026-08-17T17:01:08.426Z"
+    },
+    "mailing.eyebrow": {
+      "text": "ابقَ على اتصال",
+      "sourceHash": "c1abb6630b0e",
+      "updatedAt": "2026-08-17T17:01:08.426Z"
+    },
+    "mailing.title": {
+      "text": "ابقَ على اتصال بما نبنيه.",
+      "sourceHash": "e415b8d83f68",
+      "updatedAt": "2026-08-17T17:01:08.426Z"
+    },
+    "mailing.lede": {
+      "text": "تحديثات دورية حول Octivate، القدرات التحليلية الجديدة، رؤى سياق التشغيل الكاريبي، وفرص اختبار المنصة.",
+      "sourceHash": "afa148dcdaae",
+      "updatedAt": "2026-08-17T17:01:08.426Z"
+    },
+    "mailing.benefit.updates": {
+      "text": "تحديثات المنتج والقدرات الجديدة.",
+      "sourceHash": "45397ac51acf",
+      "updatedAt": "2026-08-17T17:01:08.426Z"
+    },
+    "mailing.benefit.notes": {
+      "text": "ملاحظات سياق التشغيل في الكاريبي المختارة.",
+      "sourceHash": "8ced50f6a103",
+      "updatedAt": "2026-08-17T17:01:10.586Z"
+    },
+    "mailing.benefit.unsubscribe": {
+      "text": "الوصول المبكر إلى pilots، briefs وفرص الاختبار.",
+      "sourceHash": "e6df0dd5f574",
+      "updatedAt": "2026-08-17T17:01:10.586Z"
+    },
+    "mailing.email": {
+      "text": "عنوان البريد الإلكتروني",
+      "sourceHash": "c94d3175a656",
+      "updatedAt": "2026-08-17T17:01:10.586Z"
+    },
+    "mailing.name": {
+      "text": "الاسم الأول",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T17:01:10.586Z"
+    },
+    "mailing.nameOptional": {
+      "text": "(اختياري)",
+      "sourceHash": "b16c7ac6faff",
+      "updatedAt": "2026-08-17T17:01:10.586Z"
+    },
+    "mailing.emailPlaceholder": {
+      "text": "you@organisation.org",
+      "sourceHash": "2210623ebf8b",
+      "updatedAt": "2026-08-17T17:01:10.586Z"
+    },
+    "mailing.namePlaceholder": {
+      "text": "الاسم الأول",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T17:01:10.586Z"
+    },
+    "mailing.consent": {
+      "text": "أوافق على تلقي رسائل بريد إلكتروني دورية من Octivate. يمكنني إلغاء الاشتراك في أي وقت.",
+      "sourceHash": "251b640d0e70",
+      "updatedAt": "2026-08-17T17:01:10.586Z"
+    },
+    "mailing.join": {
+      "text": "انضم إلى القائمة",
+      "sourceHash": "04707f33d156",
+      "updatedAt": "2026-08-17T17:01:12.679Z"
+    },
+    "mailing.saving": {
+      "text": "جاري الحفظ…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T17:01:12.679Z"
+    },
+    "mailing.optOut": {
+      "text": "إلغاء الاشتراك",
+      "sourceHash": "39eb4312f1ff",
+      "updatedAt": "2026-08-17T17:01:12.679Z"
+    },
+    "mailing.fine": {
+      "text": "تُخزَّن تفاصيلك لهذه القائمة البريدية الخاصة بـ Octivate فقط ولا تُباع. راجع سياسة الخصوصية الخاصة بنا لمعرفة كيفية معالجة البريد الإلكتروني.",
+      "sourceHash": "45f14a872fda",
+      "updatedAt": "2026-08-17T17:01:12.679Z"
+    },
+    "mailing.consentRequired": {
+      "text": "يُرجى تأكيد رغبتك في تلقي تحديثات المنتج.",
+      "sourceHash": "0bd437fefded",
+      "updatedAt": "2026-08-17T17:01:12.679Z"
+    },
+    "mailing.success": {
+      "text": "لقد انضممت إلى القائمة — ملاحظات المنتج فقط من وقت لآخر.",
+      "sourceHash": "fefa7875f49b",
+      "updatedAt": "2026-08-17T17:01:12.679Z"
+    },
+    "mailing.unsubscribed": {
+      "text": "لقد ألغيت الاشتراك. يمكنك الانضمام في أي وقت.",
+      "sourceHash": "15eae8c5d42e",
+      "updatedAt": "2026-08-17T17:01:12.679Z"
+    },
+    "mailing.networkError": {
+      "text": "خطأ في الشبكة. تحقق من اتصالك وحاول مرة أخرى.",
+      "sourceHash": "916c8a25c301",
+      "updatedAt": "2026-08-17T17:01:12.679Z"
+    },
+    "mailing.genericError": {
+      "text": "حدث خطأ ما. حاول مرة أخرى.",
+      "sourceHash": "4244e822a06c",
+      "updatedAt": "2026-08-17T17:01:14.878Z"
+    },
+    "land.hero.title": {
+      "text": "وضوح للقرارات التي تشكل الكاريبي.",
+      "sourceHash": "c977ff7e2f70",
+      "updatedAt": "2026-08-17T17:01:14.878Z"
+    },
+    "land.hero.body": {
+      "text": "في منطقة تغمرها إشارات متنافسة، الجزء الصعب هو معرفة ما يعنيه ذلك معاً. Octivate يربط المعلومات الإقليمية المتناثرة، ويختبر ما يمكن الوثوق به، ويحولها إلى أحكام استناد إلى الأدلة للقرارات التي لا يمكنها الانتظار.",
+      "sourceHash": "e219cf53254c",
+      "updatedAt": "2026-08-17T17:01:14.878Z"
+    },
+    "land.hero.ctaPrimary": {
+      "text": "ابدأ الآن",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T17:01:14.878Z"
+    },
+    "land.hero.ctaSample": {
+      "text": "اطلع على نموذج مختصر",
+      "sourceHash": "bdf4ce16698a",
+      "updatedAt": "2026-08-17T17:01:14.878Z"
+    },
+    "land.why.eyebrow": {
+      "text": "لماذا Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T17:01:14.878Z"
+    },
+    "land.why.title": {
+      "text": "مبني لطريقة تدفق المعلومات الفعلية في الكاريبي.",
+      "sourceHash": "f2f24843f23e",
+      "updatedAt": "2026-08-17T17:01:14.878Z"
+    },
+    "land.why.1": {
+      "text": "المصادر الإقليمية مجزأة عبر المؤسسات والاختصاصات.",
+      "sourceHash": "6a2168b0edc0",
+      "updatedAt": "2026-08-17T17:01:14.878Z"
+    },
+    "land.why.2": {
+      "text": "السياق المهم غالباً ما يظهر خارج مجموعات البيانات الرسمية.",
+      "sourceHash": "f24b4dfd9981",
+      "updatedAt": "2026-08-17T17:01:16.993Z"
+    },
+    "land.why.3": {
+      "text": "يمكن لعلاقات 규모 الصغيرة أن تجعل الإجراءات الفردية غير عادية مؤثرة.",
+      "sourceHash": "aa7f3c1348b3",
+      "updatedAt": "2026-08-17T17:01:16.993Z"
+    },
+    "land.why.4": {
+      "text": "تتكدس الديناميات الإقليمية والدولية والداخلية غالباً.",
+      "sourceHash": "7d7279cd7d5b",
+      "updatedAt": "2026-08-17T17:01:16.993Z"
+    },
+    "land.why.close": {
+      "text": "تم تصميم Octivate حول هذه الواقعية التشغيلية بدلاً من تعديل منتج ذكاء عالمي عام للمنطقة afterwards.",
+      "sourceHash": "316ad433f656",
+      "updatedAt": "2026-08-17T17:01:16.993Z"
+    },
+    "land.lenses.title": {
+      "text": "كيف تقرأ Octivate الكاريبي",
+      "sourceHash": "f2b8e64c1256",
+      "updatedAt": "2026-08-17T17:01:16.993Z"
+    },
+    "land.lenses.lede": {
+      "text": "تقوم Octivate بفحص كل سؤال من خلال ثلاث عدسات متصلة، ثم تنظر إلى كيفية تداخلها.",
+      "sourceHash": "700e2367b157",
+      "updatedAt": "2026-08-17T17:01:16.993Z"
+    },
+    "land.lenses.power": {
+      "text": "سلطة",
+      "sourceHash": "7548ab52c3d1",
+      "updatedAt": "2026-08-17T17:01:16.993Z"
+    },
+    "land.lenses.power.q": {
+      "text": "من يمكنه تشكيل النتيجة؟",
+      "sourceHash": "0b0288ef46ce",
+      "updatedAt": "2026-08-17T17:01:16.993Z"
+    },
+    "land.lenses.power.body": {
+      "text": "Authority, influence, incentives, coalitions and relationships that affect decisions.",
+      "sourceHash": "34c4c47d1bce",
+      "updatedAt": "2026-08-17T17:01:19.090Z"
+    },
+    "land.lenses.systems": {
+      "text": "Systems",
+      "sourceHash": "e26dfc1f8d96",
+      "updatedAt": "2026-08-17T17:01:19.090Z"
+    },
+    "land.lenses.systems.q": {
+      "text": "What enables or constrains action?",
+      "sourceHash": "2c1c0efa8537",
+      "updatedAt": "2026-08-17T17:01:19.090Z"
+    },
+    "land.lenses.systems.body": {
+      "text": "Institutions, regulation, infrastructure, capacity and implementation.",
+      "sourceHash": "f38b6e3ee324",
+      "updatedAt": "2026-08-17T17:01:19.090Z"
+    },
+    "land.lenses.narratives": {
+      "text": "Narratives",
+      "sourceHash": "1c26c2b8063a",
+      "updatedAt": "2026-08-17T17:01:19.090Z"
+    },
+    "land.lenses.narratives.q": {
+      "text": "How is the issue understood?",
+      "sourceHash": "af380e3bacdb",
+      "updatedAt": "2026-08-17T17:01:19.090Z"
+    },
+    "land.lenses.narratives.body": {
+      "text": "Framing, legitimacy, public sentiment and the stories shaping perception and behaviour.",
+      "sourceHash": "4ad73376c397",
+      "updatedAt": "2026-08-17T17:01:19.090Z"
+    },
+    "land.how.eyebrow": {
+      "text": "How Octivate works",
+      "sourceHash": "fd1649f0e29c",
+      "updatedAt": "2026-08-17T17:01:19.090Z"
+    },
+    "land.how.title": {
+      "text": "من سياق تشغيلي صعب إلى حكم قرار جاهز.",
+      "sourceHash": "e2a54852c40d",
+      "updatedAt": "2026-08-17T17:01:21.737Z"
+    },
+    "land.how.01.title": {
+      "text": "إطار القرار",
+      "sourceHash": "c7c7bf44e724",
+      "updatedAt": "2026-08-17T17:01:21.737Z"
+    },
+    "land.how.01.body": {
+      "text": "ماذا يحتاج أن يُقرر، ومتى، وما هي الأدلة التي ستغير الإجابة.",
+      "sourceHash": "607c39bf28f6",
+      "updatedAt": "2026-08-17T17:01:21.737Z"
+    },
+    "land.how.02.title": {
+      "text": "العثور على الأدلة واختبارها",
+      "sourceHash": "427c8a624037",
+      "updatedAt": "2026-08-17T17:01:21.737Z"
+    },
+    "land.how.02.body": {
+      "text": "اجمع المصادر ذات الصلة، وقارن الادعاءات، وحدد التناقضات، وأبرز عدم اليقين.",
+      "sourceHash": "1ab2f5a019c7",
+      "updatedAt": "2026-08-17T17:01:21.737Z"
+    },
+    "land.how.03.title": {
+      "text": "تقديم حكم قرار جاهز",
+      "sourceHash": "df73304ba4ed",
+      "updatedAt": "2026-08-17T17:01:21.737Z"
+    },
+    "land.how.03.body": {
+      "text": "حول الأدلة إلى خيارات، تنازلات، اعتبارات أصحاب المصلحة، فجوات الأدلة، والإشارات للمراقبة.",
+      "sourceHash": "4680e62424c4",
+      "updatedAt": "2026-08-17T17:01:21.737Z"
+    },
+    "land.how.ctaSample": {
+      "text": "عرض عينة brief",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T17:01:21.737Z"
+    },
+    "land.disc.eyebrow": {
+      "text": "ستة تخصصات متكاملة",
+      "sourceHash": "5758b703370e",
+      "updatedAt": "2026-08-17T17:01:26.810Z"
+    },
+    "land.disc.title": {
+      "text": "تخصصات ستة. حكم متكامل.",
+      "sourceHash": "ded00ef93dd7",
+      "updatedAt": "2026-08-17T17:01:26.810Z"
+    },
+    "land.disc.lede": {
+      "text": "تساهم كل تخصص بجزء مختلف من التحليل. معًا، تحول الأدلة المجزأة إلى رؤية أوضح لما يهم، وما قد يحدث وكيف تستجيب.",
+      "sourceHash": "05bd7f63cdb4",
+      "updatedAt": "2026-08-17T17:01:26.810Z"
+    },
+    "land.disc.1.title": {
+      "text": "تحليل الاقتصاد السياسي والجيو-سياسي",
+      "sourceHash": "dd28e1937d74",
+      "updatedAt": "2026-08-17T17:01:26.810Z"
+    },
+    "land.disc.1.body": {
+      "text": "كيف تشكل السلطة، المصالح الاقتصادية والضغوط الخارجية القرارات والنتائج المتوقعة.",
+      "sourceHash": "8afd68a3d3ef",
+      "updatedAt": "2026-08-17T17:01:26.810Z"
+    },
+    "land.disc.2.title": {
+      "text": "تحليل الأنظمة والتنبؤي",
+      "sourceHash": "253865fba412",
+      "updatedAt": "2026-08-17T17:01:26.810Z"
+    },
+    "land.disc.2.body": {
+      "text": "كيف تشكل المؤسسات، البنية التحتية، القواعد والتبعيات ما هو ممكن وما قد يحدث لاحقًا.",
+      "sourceHash": "a4b68fecad0c",
+      "updatedAt": "2026-08-17T17:01:26.810Z"
+    },
+    "land.disc.3.title": {
+      "text": "تحليل أصحاب المصلحة والمشاركة",
+      "sourceHash": "fc1ee57068cc",
+      "updatedAt": "2026-08-17T17:01:26.810Z"
+    },
+    "land.disc.3.body": {
+      "text": "من يمكنه التأثير، إعاقة أو شرعنة قرار، وكيف يجب إدارة هذه العلاقات.",
+      "sourceHash": "e4fa7ce7e339",
+      "updatedAt": "2026-08-17T17:01:29.370Z"
+    },
+    "land.disc.4.title": {
+      "text": "المتابعة الاستراتيجية للرواية والاتصال",
+      "sourceHash": "67e865e68529",
+      "updatedAt": "2026-08-17T17:01:29.370Z"
+    },
+    "land.disc.4.body": {
+      "text": "كيف تؤثر الإطارات، والشرعية، والتفسير العام على السلوك والتنفيذ والاستجابة.",
+      "sourceHash": "98cb45abf1e1",
+      "updatedAt": "2026-08-17T17:01:29.370Z"
+    },
+    "land.disc.5.title": {
+      "text": "الاستخبارات مفتوحة المصدر والتحقق",
+      "sourceHash": "35756d94e827",
+      "updatedAt": "2026-08-17T17:01:29.370Z"
+    },
+    "land.disc.5.body": {
+      "text": "جمع، التحقق ومقارنة الأدلة لاختبار الادعاءات، وتحديد التناقضات وتقييم سلطة المصدر.",
+      "sourceHash": "42f7468221bb",
+      "updatedAt": "2026-08-17T17:01:29.370Z"
+    },
+    "land.disc.6.title": {
+      "text": "التحليل واتخاذ القرار",
+      "sourceHash": "cc06adf088e1",
+      "updatedAt": "2026-08-17T17:01:29.370Z"
+    },
+    "land.disc.6.body": {
+      "text": "جمع الأدلة للمقارنة بين الخيارات، واختبار الافتراضات، وتقييم التنازلات، وتحديد الإشارات التي يجب متابعتها.",
+      "sourceHash": "7108d1316127",
+      "updatedAt": "2026-08-17T17:01:29.370Z"
+    },
+    "land.cta.eyebrow": {
+      "text": "ابدأ الآن",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T17:01:29.370Z"
+    },
+    "land.cta.title": {
+      "text": "ما القرار الذي تحاول اتخاذه؟",
+      "sourceHash": "2ce1ab5a8081",
+      "updatedAt": "2026-08-17T17:01:31.966Z"
+    },
+    "land.cta.body": {
+      "text": "أنشئ حسابًا لتوفير سياق تشغيلي حقيقي لـ Octivate، وتحديد الأدلة ذات الصلة وتحويلها إلى تحليل جاهز للقرار.",
+      "sourceHash": "11f71cd06f74",
+      "updatedAt": "2026-08-17T17:01:31.966Z"
+    },
+    "land.cta.create": {
+      "text": "إنشاء حساب",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T17:01:31.966Z"
+    },
+    "land.cta.sample": {
+      "text": "عرض ملخص تجريبي",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T17:01:31.966Z"
+    },
+    "land.cta.emailPrefix": {
+      "text": "أو البريد الإلكتروني",
+      "sourceHash": "921d0ad714dc",
+      "updatedAt": "2026-08-17T17:01:31.966Z"
+    },
+    "land.about.body": {
+      "text": "ذكاء قرارات oriented toward action لبيئات التشغيل المعقدة في الكاريبي. تم تطويره من قبل CENSII، ويجمع Octivate الأدلة المتناثرة في الكاريبي في عرض منظم لرؤية أوضح للقرارات.",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T17:01:31.966Z"
+    },
+    "land.about.censii": {
+      "text": "حول CENSII",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T17:01:31.966Z"
+    },
+    "land.about.team": {
+      "text": "الفريق",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T17:01:31.966Z"
+    },
+    "land.mail.fab": {
+      "text": "Join the mailing list",
+      "sourceHash": "dc46f4e0b25c",
+      "updatedAt": "2026-08-17T17:01:33.554Z"
+    },
+    "land.tech.heading": {
+      "text": "Technologies",
+      "sourceHash": "1310a448775a",
+      "updatedAt": "2026-08-17T17:01:33.554Z"
+    },
+    "land.tech.lede": {
+      "text": "Model routing and assistants for analysis — plus payment rails for plans.",
+      "sourceHash": "d150c5578dfd",
+      "updatedAt": "2026-08-17T17:01:33.554Z"
+    },
+    "land.tech.demoCta": {
+      "text": "Watch a 1-minute demo",
+      "sourceHash": "db9b420f3fdb",
+      "updatedAt": "2026-08-17T17:01:33.554Z"
+    },
+    "land.tech.demoKicker": {
+      "text": "Product walkthrough",
+      "sourceHash": "76b995c4422a",
+      "updatedAt": "2026-08-17T17:01:33.554Z"
+    },
+    "land.tech.demoTitle": {
+      "text": "See Octivate in one minute",
+      "sourceHash": "20abdfb8380b",
+      "updatedAt": "2026-08-17T17:01:33.554Z"
+    },
+    "land.tech.demoBody": {
+      "text": "A short walkthrough of framing a Caribbean decision theatre, validating evidence, and opening a decision-ready brief.",
+      "sourceHash": "a9418180a664",
+      "updatedAt": "2026-08-17T17:01:33.554Z"
+    },
+    "land.tech.demoSample": {
+      "text": "Open sample brief",
+      "sourceHash": "5ed6e8105a32",
+      "updatedAt": "2026-08-17T17:01:33.554Z"
+    },
+    "land.tech.demoSignup": {
+      "text": "إنشاء حساب",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T17:01:39.521Z"
+    },
+    "land.tech.demoClose": {
+      "text": "إغلاق",
+      "sourceHash": "629a741a5ebc",
+      "updatedAt": "2026-08-17T17:01:39.521Z"
+    },
+    "land.ws.eyebrow": {
+      "text": "داخل مساحة العمل",
+      "sourceHash": "2b4c8c6a7bc7",
+      "updatedAt": "2026-08-17T17:01:39.521Z"
+    },
+    "land.ws.title": {
+      "text": "سطح مباشر للمنتج — استكشف دون تسجيل دخول.",
+      "sourceHash": "37fc4592ccec",
+      "updatedAt": "2026-08-17T17:01:39.521Z"
+    },
+    "land.ws.lede": {
+      "text": "مرر المؤشر على المخططات، وتبديل التبويبات، وانقر على المسارح على الخريطة. يستخدم هذا العرض التجريبي بيانات الكاريبي العينة ويعكس أسلوب العرض العام — لا إجراءات حساب.",
+      "sourceHash": "e46ccd61513d",
+      "updatedAt": "2026-08-17T17:01:39.521Z"
+    },
+    "land.ws.chromeLabel": {
+      "text": "Octivate · نظرة عامة",
+      "sourceHash": "af30e9554fe0",
+      "updatedAt": "2026-08-17T17:01:39.521Z"
+    },
+    "land.ws.tabsLabel": {
+      "text": "أشرطة عمل العرض التجريبي",
+      "sourceHash": "4dfeacdbd87c",
+      "updatedAt": "2026-08-17T17:01:39.521Z"
+    },
+    "land.ws.tabInsights": {
+      "text": "ملاحظات",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T17:01:39.521Z"
+    },
+    "land.ws.tabCoverage": {
+      "text": "Coverage",
+      "sourceHash": "80e13549b47a",
+      "updatedAt": "2026-08-17T17:01:42.765Z"
+    },
+    "land.ws.riskMix": {
+      "text": "Risk mix",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T17:01:42.765Z"
+    },
+    "land.ws.avgConfidence": {
+      "text": "Avg confidence",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T17:01:42.765Z"
+    },
+    "land.ws.briefs": {
+      "text": "Briefs",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T17:01:42.765Z"
+    },
+    "land.ws.briefsFinal": {
+      "text": "Final",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T17:01:42.765Z"
+    },
+    "land.ws.briefsDraft": {
+      "text": "Draft",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T17:01:42.765Z"
+    },
+    "land.ws.trends": {
+      "text": "Latest trends",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T17:01:42.765Z"
+    },
+    "land.ws.recentBriefs": {
+      "text": "Recent briefs",
+      "sourceHash": "157c46a63c49",
+      "updatedAt": "2026-08-17T17:01:42.765Z"
+    },
+    "land.ws.colBrief": {
+      "text": "Brief",
+      "sourceHash": "230e0f8d137e",
+      "updatedAt": "2026-08-17T17:01:44.445Z"
+    },
+    "land.ws.colCountry": {
+      "text": "Country",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T17:01:44.445Z"
+    },
+    "land.ws.colRisk": {
+      "text": "Risk",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T17:01:44.445Z"
+    },
+    "land.ws.colConfidence": {
+      "text": "Confidence",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T17:01:44.445Z"
+    },
+    "land.ws.coverageSide": {
+      "text": "Selected theatre",
+      "sourceHash": "1f2f630d6e6c",
+      "updatedAt": "2026-08-17T17:01:44.445Z"
+    },
+    "land.ws.coverageHint": {
+      "text": "Click a country marker to list sample projects.",
+      "sourceHash": "75953108dd09",
+      "updatedAt": "2026-08-17T17:01:44.445Z"
+    },
+    "land.ws.coverageStats": {
+      "text": "{n} projects · {active} active",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T17:01:44.445Z"
+    },
+    "land.ws.ctaSample": {
+      "text": "Explore a sample brief",
+      "sourceHash": "72048fd54a2e",
+      "updatedAt": "2026-08-17T17:01:44.445Z"
+    },
+    "footer.blurb": {
+      "text": "ذكاء قرارات موجه نحو العمل للبيئات التشغيلية المعقدة في الكاريبي. تم تطويره من قبل CENSII, Octivate يجمع أدلة الكاريبي المتناثرة في عرض منظم لقرارات أوضح.",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T17:02:04.034Z"
+    },
+    "footer.explore": {
+      "text": "استكشاف",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T17:02:04.034Z"
+    },
+    "footer.product": {
+      "text": "المنتج",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T17:02:04.034Z"
+    },
+    "footer.why": {
+      "text": "لماذا Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T17:02:04.034Z"
+    },
+    "footer.how": {
+      "text": "كيف يعمل",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T17:02:04.034Z"
+    },
+    "footer.disciplines": {
+      "text": "ستة تخصصات",
+      "sourceHash": "926d0eec2cb3",
+      "updatedAt": "2026-08-17T17:02:04.034Z"
+    },
+    "footer.sample": {
+      "text": "ملخص تجريبي",
+      "sourceHash": "8ad8c7f36656",
+      "updatedAt": "2026-08-17T17:02:04.034Z"
+    },
+    "footer.takeAction": {
+      "text": "اتخاذ إجراء",
+      "sourceHash": "5ed99cd0b91e",
+      "updatedAt": "2026-08-17T17:02:04.034Z"
+    },
+    "footer.getStarted": {
+      "text": "ابدأ الآن",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T17:02:29.532Z"
+    },
+    "footer.signIn": {
+      "text": "تسجيل الدخول",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T17:02:29.532Z"
+    },
+    "footer.pricing": {
+      "text": "الأسعار",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T17:02:29.532Z"
+    },
+    "footer.contact": {
+      "text": "تواصل معنا",
+      "sourceHash": "4832e45812a2",
+      "updatedAt": "2026-08-17T17:02:29.532Z"
+    },
+    "footer.about": {
+      "text": "من نحن",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T17:02:29.532Z"
+    },
+    "footer.aboutCensii": {
+      "text": "حول CENSII",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T17:02:29.532Z"
+    },
+    "footer.team": {
+      "text": "الفريق",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T17:02:29.532Z"
+    },
+    "footer.legal": {
+      "text": "قانوني",
+      "sourceHash": "902c91d94e0f",
+      "updatedAt": "2026-08-17T17:02:29.532Z"
+    },
+    "footer.privacy": {
+      "text": "سياسة الخصوصية",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T17:05:08.360Z"
+    },
+    "footer.terms": {
+      "text": "شروط الخدمة",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T17:05:08.360Z"
+    },
+    "footer.cookies": {
+      "text": "بيان ملفات الارتباط",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T17:05:08.360Z"
+    },
+    "footer.cookieSettings": {
+      "text": "إعدادات ملفات الارتباط",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T17:05:08.360Z"
+    },
+    "footer.seo": {
+      "text": "Octivate by CENSII delivers Caribbean decision intelligence: Power–Systems–Narratives analysis, evidence validation, options assessment and monitoring for organisations operating across Trinidad and Tobago, Jamaica, Barbados, Guyana, Suriname, the OECS and the wider region.",
+      "sourceHash": "0e3cd5403e35",
+      "updatedAt": "2026-08-17T17:05:08.360Z"
+    },
+    "footer.backToTop": {
+      "text": "إلى الأعلى",
+      "sourceHash": "d9c883a90573",
+      "updatedAt": "2026-08-17T17:05:08.360Z"
+    },
+    "footer.copyright": {
+      "text": "© 2026 CENSII · Octivate · octivate.io",
+      "sourceHash": "134a51892744",
+      "updatedAt": "2026-08-17T17:05:08.360Z"
+    },
+    "auth.signin.kicker": {
+      "text": "وصول إلى مساحة العمل",
+      "sourceHash": "9973694cce2b",
+      "updatedAt": "2026-08-17T17:05:08.360Z"
+    },
+    "auth.signin.title": {
+      "text": "تسجيل الدخول إلى Octivate",
+      "sourceHash": "dd0e28bb0b7b",
+      "updatedAt": "2026-08-17T17:05:11.778Z"
+    },
+    "auth.signin.lede": {
+      "text": "استخدم بريدك الإلكتروني Octivate أو اسم المستخدم وكلمة المرور لفتح مساحة عمل الذكاء القراري.",
+      "sourceHash": "24e55d4e1216",
+      "updatedAt": "2026-08-17T17:05:11.778Z"
+    },
+    "auth.signin.submit": {
+      "text": "تسجيل الدخول",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T17:05:11.778Z"
+    },
+    "auth.signin.switchText": {
+      "text": "لا تملك حساباً؟",
+      "sourceHash": "f838dc11db15",
+      "updatedAt": "2026-08-17T17:05:11.778Z"
+    },
+    "auth.signin.switchLabel": {
+      "text": "اشترك",
+      "sourceHash": "0b81497c8589",
+      "updatedAt": "2026-08-17T17:05:11.778Z"
+    },
+    "auth.signin.visualTitle": {
+      "text": "وضوح لاتخاذ قرارات في الكاريبي",
+      "sourceHash": "1294b968f5da",
+      "updatedAt": "2026-08-17T17:05:11.778Z"
+    },
+    "auth.signin.visualBody": {
+      "text": "ربط الإشارات الإقليمية المتناثرة، واختبر ما يمكن الوثوق به، وتحرك بحكم استند إلى الأدلة.",
+      "sourceHash": "8847c4995d52",
+      "updatedAt": "2026-08-17T17:05:11.778Z"
+    },
+    "auth.signup.kicker": {
+      "text": "مستوى مجاني",
+      "sourceHash": "5305bc7bfd0f",
+      "updatedAt": "2026-08-17T17:05:11.778Z"
+    },
+    "auth.signup.title": {
+      "text": "Create your Octivate access",
+      "sourceHash": "46146191c6b9",
+      "updatedAt": "2026-08-17T17:05:14.102Z"
+    },
+    "auth.signup.lede": {
+      "text": "Use the same email/username and password fields as sign-in, or generate secure credentials when enabled.",
+      "sourceHash": "4188f5813dcf",
+      "updatedAt": "2026-08-17T17:05:14.102Z"
+    },
+    "auth.signup.submit": {
+      "text": "Create account",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T17:05:14.102Z"
+    },
+    "auth.signup.switchText": {
+      "text": "Already have an account?",
+      "sourceHash": "8559034a07c9",
+      "updatedAt": "2026-08-17T17:05:14.102Z"
+    },
+    "auth.signup.switchLabel": {
+      "text": "Sign in",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T17:05:14.102Z"
+    },
+    "auth.signup.visualTitle": {
+      "text": "Decision intelligence, ready to run",
+      "sourceHash": "7428fa4a3e6b",
+      "updatedAt": "2026-08-17T17:05:14.102Z"
+    },
+    "auth.signup.visualBody": {
+      "text": "Structure the question, assemble evidence across Power–Systems–Narratives, and leave with options you can act on.",
+      "sourceHash": "6ce5101d86c9",
+      "updatedAt": "2026-08-17T17:05:14.102Z"
+    },
+    "auth.email": {
+      "text": "Email or username",
+      "sourceHash": "094f6a59348a",
+      "updatedAt": "2026-08-17T17:05:14.102Z"
+    },
+    "auth.password": {
+      "text": "كلمة المرور",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T17:05:16.493Z"
+    },
+    "auth.forgot": {
+      "text": "هل نسيت كلمة المرور؟",
+      "sourceHash": "4c29f7f03358",
+      "updatedAt": "2026-08-17T17:05:16.493Z"
+    },
+    "auth.showPassword": {
+      "text": "اظهار كلمة المرور",
+      "sourceHash": "044b852f30b6",
+      "updatedAt": "2026-08-17T17:05:16.493Z"
+    },
+    "auth.hidePassword": {
+      "text": "إخفاء كلمة المرور",
+      "sourceHash": "e40123b4e787",
+      "updatedAt": "2026-08-17T17:05:16.493Z"
+    },
+    "auth.back": {
+      "text": "عودة",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T17:05:16.493Z"
+    },
+    "auth.busy": {
+      "text": "الرجاء الانتظار…",
+      "sourceHash": "5afeca73bef6",
+      "updatedAt": "2026-08-17T17:05:16.493Z"
+    },
+    "ws.section.workspace": {
+      "text": "مساحة العمل",
+      "sourceHash": "4ca0a75c2b7f",
+      "updatedAt": "2026-08-17T17:05:16.493Z"
+    },
+    "ws.section.intelligence": {
+      "text": "الاستخبارات",
+      "sourceHash": "c698f940a03e",
+      "updatedAt": "2026-08-17T17:05:16.493Z"
+    },
+    "ws.section.analysis": {
+      "text": "تحليل",
+      "sourceHash": "62c7fcf46e27",
+      "updatedAt": "2026-08-17T17:05:19.376Z"
+    },
+    "ws.nav.overview": {
+      "text": "نظرة عامة",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T17:05:19.376Z"
+    },
+    "ws.nav.projects": {
+      "text": "المشاريع",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T17:05:19.376Z"
+    },
+    "ws.nav.monitors": {
+      "text": "المراقبون",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T17:05:19.376Z"
+    },
+    "ws.nav.sources": {
+      "text": "المصادر",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T17:05:19.376Z"
+    },
+    "ws.nav.briefs": {
+      "text": "الملخصات",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T17:05:19.376Z"
+    },
+    "ws.nav.stakeholders": {
+      "text": "المساهمين",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T17:05:19.376Z"
+    },
+    "ws.mode.workspace": {
+      "text": "وضع العمل",
+      "sourceHash": "8ce322f49b05",
+      "updatedAt": "2026-08-17T17:05:19.376Z"
+    },
+    "ws.mode.operator": {
+      "text": "وضع المشغل",
+      "sourceHash": "594a7f797f7d",
+      "updatedAt": "2026-08-17T17:05:25.052Z"
+    },
+    "ws.askStrategic": {
+      "text": "طرح سؤال استراتيجي",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T17:05:25.052Z"
+    },
+    "ws.operatorDashboard": {
+      "text": "لوحة تحكم المشغل",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T17:05:25.052Z"
+    },
+    "ws.collapseSidebar": {
+      "text": "طي الشريط الجانبي",
+      "sourceHash": "9e6876286e45",
+      "updatedAt": "2026-08-17T17:05:25.052Z"
+    },
+    "ws.expandSidebar": {
+      "text": "توسيع الشريط الجانبي",
+      "sourceHash": "f462e889fd88",
+      "updatedAt": "2026-08-17T17:05:25.052Z"
+    },
+    "ws.openMenu": {
+      "text": "فتح القائمة",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T17:05:25.052Z"
+    },
+    "ws.closeMenu": {
+      "text": "إغلاق القائمة",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T17:05:25.052Z"
+    },
+    "ws.overview.title": {
+      "text": "نظرة عامة",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T17:05:25.052Z"
+    },
+    "ws.overview.lede": {
+      "text": "Caribbean intelligence workspace — trends, projects, briefs, packs, and usage.",
+      "sourceHash": "f89a3516e147",
+      "updatedAt": "2026-08-17T17:05:27.918Z"
+    },
+    "ws.overview.newAnalysis": {
+      "text": "New analysis",
+      "sourceHash": "3874bbceddf5",
+      "updatedAt": "2026-08-17T17:05:27.918Z"
+    },
+    "ws.overview.tab.insights": {
+      "text": "Insights",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T17:05:27.918Z"
+    },
+    "ws.overview.tab.pipeline": {
+      "text": "Pipeline",
+      "sourceHash": "32b1d5a78493",
+      "updatedAt": "2026-08-17T17:05:27.918Z"
+    },
+    "ws.overview.riskMix": {
+      "text": "Risk mix",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T17:05:27.918Z"
+    },
+    "ws.overview.riskMixSub": {
+      "text": "Briefs by risk level",
+      "sourceHash": "ec9ed226c4fa",
+      "updatedAt": "2026-08-17T17:05:27.918Z"
+    },
+    "ws.overview.latestTrends": {
+      "text": "Latest trends",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T17:05:27.918Z"
+    },
+    "ws.overview.avgConfidence": {
+      "text": "Avg confidence",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T17:05:27.918Z"
+    },
+    "ws.overview.briefs": {
+      "text": "ملخصات",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T17:05:30.286Z"
+    },
+    "ws.overview.briefsTotal": {
+      "text": "{n} إجمالي",
+      "sourceHash": "aeb6ea7ac893",
+      "updatedAt": "2026-08-17T17:05:30.286Z"
+    },
+    "ws.overview.final": {
+      "text": "نهائي",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T17:05:30.286Z"
+    },
+    "ws.overview.draft": {
+      "text": "مسودة",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T17:05:30.286Z"
+    },
+    "ws.overview.countryPacks": {
+      "text": "حزم الدول",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T17:05:30.286Z"
+    },
+    "ws.overview.caribbeanMarkets": {
+      "text": "{n} أسواق الكاريبي",
+      "sourceHash": "9f1512466503",
+      "updatedAt": "2026-08-17T17:05:30.286Z"
+    },
+    "ws.overview.aiUsage": {
+      "text": "استخدام الذكاء الاصطناعي",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T17:05:30.286Z"
+    },
+    "ws.overview.tokens": {
+      "text": "رموز",
+      "sourceHash": "3391436a4e72",
+      "updatedAt": "2026-08-17T17:05:30.286Z"
+    },
+    "ws.overview.estCost": {
+      "text": "التكلفة المقدرة ${amount}",
+      "sourceHash": "f9dc4ad795a4",
+      "updatedAt": "2026-08-17T17:05:50.375Z"
+    },
+    "ws.overview.agenticPipeline": {
+      "text": "مسار الوكلاء",
+      "sourceHash": "a8b4a909f8ce",
+      "updatedAt": "2026-08-17T17:05:50.375Z"
+    },
+    "ws.overview.agenticLede": {
+      "text": "ثمانية وكلاء متخصصين ينظمون الاستلام → الأدلة → PSN التحليل → ملخص القرار.",
+      "sourceHash": "d5d084c354a2",
+      "updatedAt": "2026-08-17T17:05:50.375Z"
+    },
+    "ws.overview.startWorkflow": {
+      "text": "ابدأ سير العمل",
+      "sourceHash": "5d07bdb74e62",
+      "updatedAt": "2026-08-17T17:05:50.375Z"
+    },
+    "ws.overview.latestBriefs": {
+      "text": "آخر الملخصات",
+      "sourceHash": "52ce1d088ad9",
+      "updatedAt": "2026-08-17T17:05:50.375Z"
+    },
+    "ws.overview.viewAll": {
+      "text": "عرض الكل",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T17:05:50.375Z"
+    },
+    "ws.overview.col.title": {
+      "text": "العنوان",
+      "sourceHash": "768e0c1c6957",
+      "updatedAt": "2026-08-17T17:05:50.375Z"
+    },
+    "ws.overview.col.country": {
+      "text": "الدولة",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T17:05:50.375Z"
+    },
+    "ws.overview.col.risk": {
+      "text": "Risk",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T17:05:52.608Z"
+    },
+    "ws.overview.col.confidence": {
+      "text": "Confidence",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T17:05:52.608Z"
+    },
+    "ws.overview.activeProjects": {
+      "text": "Active projects",
+      "sourceHash": "f361946445f2",
+      "updatedAt": "2026-08-17T17:05:52.608Z"
+    },
+    "ws.overview.monitoring": {
+      "text": "Monitoring",
+      "sourceHash": "a81434589757",
+      "updatedAt": "2026-08-17T17:05:52.608Z"
+    },
+    "ws.overview.briefsLabel": {
+      "text": "briefs",
+      "sourceHash": "81aad378d8e5",
+      "updatedAt": "2026-08-17T17:05:52.608Z"
+    },
+    "ws.overview.sourcesLabel": {
+      "text": "sources",
+      "sourceHash": "bce16dd02608",
+      "updatedAt": "2026-08-17T17:05:52.608Z"
+    },
+    "ws.overview.runsLabel": {
+      "text": "runs",
+      "sourceHash": "71b3f0bbe7d5",
+      "updatedAt": "2026-08-17T17:05:52.608Z"
+    },
+    "ws.overview.sessions": {
+      "text": "Sessions",
+      "sourceHash": "e11e37a9253b",
+      "updatedAt": "2026-08-17T17:05:52.608Z"
+    },
+    "ws.overview.total": {
+      "text": "total",
+      "sourceHash": "5a537e209151",
+      "updatedAt": "2026-08-17T17:05:53.991Z"
+    },
+    "ws.overview.map.title": {
+      "text": "Theatre coverage",
+      "sourceHash": "597b741ee58c",
+      "updatedAt": "2026-08-17T17:05:53.991Z"
+    },
+    "ws.overview.map.lede": {
+      "text": "Live map of project theatres by country — hover for counts, click to open the project list.",
+      "sourceHash": "50dd24fff5fe",
+      "updatedAt": "2026-08-17T17:05:53.991Z"
+    },
+    "ws.overview.map.summary": {
+      "text": "{countries} countries · {projects} projects",
+      "sourceHash": "e09cdd8b4569",
+      "updatedAt": "2026-08-17T17:05:53.991Z"
+    },
+    "ws.overview.map.live": {
+      "text": "Live",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T17:05:53.991Z"
+    },
+    "ws.overview.map.liveHint": {
+      "text": "Updates from workspace lightning refresh and soft poll",
+      "sourceHash": "de35b65a98de",
+      "updatedAt": "2026-08-17T17:05:53.991Z"
+    },
+    "ws.overview.map.updating": {
+      "text": "Updating",
+      "sourceHash": "ec6952e09b9c",
+      "updatedAt": "2026-08-17T17:05:53.991Z"
+    },
+    "ws.overview.map.updatingHint": {
+      "text": "Refreshing theatre coverage",
+      "sourceHash": "64415f399cc6",
+      "updatedAt": "2026-08-17T17:05:53.991Z"
+    },
+    "ws.overview.map.reset": {
+      "text": "الكاريبي",
+      "sourceHash": "4a2e3865acb4",
+      "updatedAt": "2026-08-17T17:05:55.840Z"
+    },
+    "ws.overview.map.resetHint": {
+      "text": "إعادة تعيين تركيز الخريطة إلى الكاريبي",
+      "sourceHash": "7d81dd21b898",
+      "updatedAt": "2026-08-17T17:05:55.840Z"
+    },
+    "ws.overview.map.hoverStats": {
+      "text": "{n} مشاريع · {active} نشط",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T17:05:55.840Z"
+    },
+    "ws.overview.map.clickHint": {
+      "text": "انقر لعرض المشاريع",
+      "sourceHash": "daaaa430f8b1",
+      "updatedAt": "2026-08-17T17:05:55.840Z"
+    },
+    "ws.overview.map.empty": {
+      "text": "أنشئ مشروعًا لإضاءة الخريطة.",
+      "sourceHash": "40ee077e9f45",
+      "updatedAt": "2026-08-17T17:05:55.840Z"
+    },
+    "ws.overview.map.emptyCountry": {
+      "text": "لا توجد مشاريع في هذا البلد حتى الآن.",
+      "sourceHash": "561147a5f7cd",
+      "updatedAt": "2026-08-17T17:05:55.840Z"
+    },
+    "ws.overview.map.modalKicker": {
+      "text": "مسرحيات الدول",
+      "sourceHash": "93a542767481",
+      "updatedAt": "2026-08-17T17:05:55.840Z"
+    },
+    "ws.overview.map.projectCount": {
+      "text": "{n} مشاريع · {active} نشط",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T17:05:55.840Z"
+    },
+    "ws.overview.map.close": {
+      "text": "Close country projects",
+      "sourceHash": "9dcfebb87cf3",
+      "updatedAt": "2026-08-17T17:05:59.260Z"
+    },
+    "ws.overview.map.projectsWord": {
+      "text": "projects",
+      "sourceHash": "b37b5674e3d0",
+      "updatedAt": "2026-08-17T17:05:59.260Z"
+    },
+    "ws.projects.title": {
+      "text": "Projects",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T17:05:59.260Z"
+    },
+    "ws.projects.lede": {
+      "text": "Scope a decision theatre by country and sector, then run the agent workflow to produce a brief.",
+      "sourceHash": "89564efb1fce",
+      "updatedAt": "2026-08-17T17:05:59.260Z"
+    },
+    "ws.projects.sort.updated": {
+      "text": "Sort: Recently updated",
+      "sourceHash": "92e532b2ba41",
+      "updatedAt": "2026-08-17T17:05:59.260Z"
+    },
+    "ws.projects.sort.name": {
+      "text": "Sort: Name",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T17:05:59.260Z"
+    },
+    "ws.projects.sort.country": {
+      "text": "Sort: Country",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T17:05:59.260Z"
+    },
+    "ws.projects.kpi.projects": {
+      "text": "Projects",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T17:05:59.260Z"
+    },
+    "ws.projects.kpi.active": {
+      "text": "نشط",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T17:06:03.088Z"
+    },
+    "ws.projects.kpi.activeHint": {
+      "text": "قيد التقدم",
+      "sourceHash": "b6bd42e4e730",
+      "updatedAt": "2026-08-17T17:06:03.088Z"
+    },
+    "ws.projects.kpi.withQuestion": {
+      "text": "بمعنى السؤال",
+      "sourceHash": "adfd7bee4031",
+      "updatedAt": "2026-08-17T17:06:03.088Z"
+    },
+    "ws.projects.kpi.withQuestionHint": {
+      "text": "جاهز للوكالات",
+      "sourceHash": "1bace2d9eaed",
+      "updatedAt": "2026-08-17T17:06:03.088Z"
+    },
+    "ws.projects.kpi.countries": {
+      "text": "الدول",
+      "sourceHash": "8467c0d99c79",
+      "updatedAt": "2026-08-17T17:06:03.088Z"
+    },
+    "ws.projects.filter.all": {
+      "text": "الكل",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T17:06:03.088Z"
+    },
+    "ws.projects.filter.active": {
+      "text": "نشط",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T17:06:03.088Z"
+    },
+    "ws.projects.filter.needsQuestion": {
+      "text": "يحتاج سؤال",
+      "sourceHash": "d47967177def",
+      "updatedAt": "2026-08-17T17:06:03.088Z"
+    },
+    "ws.projects.filter.archived": {
+      "text": "محفوظات",
+      "sourceHash": "eddc813f35b1",
+      "updatedAt": "2026-08-17T17:06:05.217Z"
+    },
+    "ws.projects.search": {
+      "text": "بحث في المشاريع، الدول، القطاعات…",
+      "sourceHash": "277b594595b9",
+      "updatedAt": "2026-08-17T17:06:05.217Z"
+    },
+    "ws.projects.new": {
+      "text": "مشروع جديد",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T17:06:05.217Z"
+    },
+    "ws.projects.newHint": {
+      "text": "فتح مسرح استراتيجي",
+      "sourceHash": "08c180ad8a2b",
+      "updatedAt": "2026-08-17T17:06:05.217Z"
+    },
+    "ws.projects.newInvite": {
+      "text": "ابدأ من هنا",
+      "sourceHash": "54acc2806d4d",
+      "updatedAt": "2026-08-17T17:06:05.217Z"
+    },
+    "ws.projects.newClose": {
+      "text": "إغلاق المحرر",
+      "sourceHash": "49f1b7e9f2a5",
+      "updatedAt": "2026-08-17T17:06:05.217Z"
+    },
+    "ws.projects.newPanelLede": {
+      "text": "اسم المسرح، حدد البلد والقطاع، ثم أنشئ — يمكنك طرح السؤال الاستراتيجي بعد ذلك.",
+      "sourceHash": "8d7dc359b19a",
+      "updatedAt": "2026-08-17T17:06:05.217Z"
+    },
+    "ws.projects.name": {
+      "text": "اسم المشروع",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T17:06:05.217Z"
+    },
+    "ws.projects.namePlaceholder": {
+      "text": "e.g. Guyana energy readiness",
+      "sourceHash": "6cc1d1132f94",
+      "updatedAt": "2026-08-17T17:06:07.329Z"
+    },
+    "ws.projects.country": {
+      "text": "Country",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T17:06:07.329Z"
+    },
+    "ws.projects.sector": {
+      "text": "Sector",
+      "sourceHash": "39fd2070d41b",
+      "updatedAt": "2026-08-17T17:06:07.329Z"
+    },
+    "ws.projects.cancel": {
+      "text": "Cancel",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T17:06:07.329Z"
+    },
+    "ws.projects.create": {
+      "text": "Create project",
+      "sourceHash": "a8d8ff51e4c8",
+      "updatedAt": "2026-08-17T17:06:07.329Z"
+    },
+    "ws.projects.creating": {
+      "text": "Creating…",
+      "sourceHash": "94d7d8ee473f",
+      "updatedAt": "2026-08-17T17:06:07.329Z"
+    },
+    "ws.projects.empty": {
+      "text": "No projects yet",
+      "sourceHash": "cac330d7f9c7",
+      "updatedAt": "2026-08-17T17:06:07.329Z"
+    },
+    "ws.projects.emptyHint": {
+      "text": "Create a project to define country, sector, and the strategic question your team needs answered.",
+      "sourceHash": "e44e10633ff5",
+      "updatedAt": "2026-08-17T17:06:07.329Z"
+    },
+    "ws.projects.noMatches": {
+      "text": "لا توجد نتائج",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T17:06:10.511Z"
+    },
+    "ws.projects.noMatchesHint": {
+      "text": "جرب بحثًا مختلفًا أو تصفية — أو أنشئ مشروعًا جديدًا.",
+      "sourceHash": "42a5a4c7b0f8",
+      "updatedAt": "2026-08-17T17:06:10.511Z"
+    },
+    "ws.projects.createdTitle": {
+      "text": "تم إنشاء المشروع",
+      "sourceHash": "76556f09a383",
+      "updatedAt": "2026-08-17T17:06:10.511Z"
+    },
+    "ws.projects.createdBody": {
+      "text": "مسرح اتخاذ القرار الجديد جاهز.",
+      "sourceHash": "37fcd61e8ade",
+      "updatedAt": "2026-08-17T17:06:10.511Z"
+    },
+    "ws.projects.createFailed": {
+      "text": "لا يمكن إنشاء المشروع",
+      "sourceHash": "373981fcc313",
+      "updatedAt": "2026-08-17T17:06:10.511Z"
+    },
+    "ws.projects.edit": {
+      "text": "تعديل المشروع",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T17:06:10.511Z"
+    },
+    "ws.projects.delete": {
+      "text": "حذف المشروع",
+      "sourceHash": "af1456f256eb",
+      "updatedAt": "2026-08-17T17:06:10.511Z"
+    },
+    "ws.projects.deleted": {
+      "text": "تم حذف المشروع",
+      "sourceHash": "6b17c222a23a",
+      "updatedAt": "2026-08-17T17:06:10.511Z"
+    },
+    "ws.projects.updated": {
+      "text": "Project updated",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T17:06:11.973Z"
+    },
+    "ws.projects.deleteConfirmTitle": {
+      "text": "Delete this project?",
+      "sourceHash": "346956aef203",
+      "updatedAt": "2026-08-17T17:06:11.973Z"
+    },
+    "ws.projects.deleteConfirmBody": {
+      "text": "Briefs, workflow sessions, and uploaded documents for this project will also be deleted. This cannot be undone.",
+      "sourceHash": "82d71fd44e99",
+      "updatedAt": "2026-08-17T17:06:11.973Z"
+    },
+    "ws.project.askStrategic": {
+      "text": "Ask strategic question",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T17:06:11.973Z"
+    },
+    "ws.project.depth.rapid": {
+      "text": "Rapid — verify before acting",
+      "sourceHash": "6b189c5ab71d",
+      "updatedAt": "2026-08-17T17:06:11.973Z"
+    },
+    "ws.project.depth.standard": {
+      "text": "Standard — balanced draft",
+      "sourceHash": "49d0af9134ee",
+      "updatedAt": "2026-08-17T17:06:11.973Z"
+    },
+    "ws.project.depth.deep": {
+      "text": "Deep dive — broader scenarios",
+      "sourceHash": "ed533d1558c6",
+      "updatedAt": "2026-08-17T17:06:11.973Z"
+    },
+    "ws.project.depth.rapidShort": {
+      "text": "Rapid",
+      "sourceHash": "9a6ee6647c4c",
+      "updatedAt": "2026-08-17T17:06:11.973Z"
+    },
+    "ws.project.depth.standardShort": {
+      "text": "قياسي",
+      "sourceHash": "2dfa66079d9b",
+      "updatedAt": "2026-08-17T17:06:16.764Z"
+    },
+    "ws.project.depth.deepShort": {
+      "text": "تحقيق عميق",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T17:06:16.764Z"
+    },
+    "ws.project.depth.rapidHint": {
+      "text": "نتائج سريعة للتوجيه؛ لا يزال يتطلب مراجعة بشرية.",
+      "sourceHash": "5a5cdba724e2",
+      "updatedAt": "2026-08-17T17:06:16.764Z"
+    },
+    "ws.project.depth.standardHint": {
+      "text": "مسودة PSN متوازنة في انتظار المراجعة البشرية.",
+      "sourceHash": "15aa10c6c242",
+      "updatedAt": "2026-08-17T17:06:16.764Z"
+    },
+    "ws.project.depth.deepHint": {
+      "text": "سيناريوهات أوسع؛ لا يتم إنهاؤها تلقائياً دون مراجعة.",
+      "sourceHash": "bb30efc3d878",
+      "updatedAt": "2026-08-17T17:06:16.764Z"
+    },
+    "ws.project.run": {
+      "text": "تشغيل سير عمل الوكيل",
+      "sourceHash": "7dd6527ed98b",
+      "updatedAt": "2026-08-17T17:06:16.764Z"
+    },
+    "ws.project.agentsRunning": {
+      "text": "جاري تشغيل الوكلاء…",
+      "sourceHash": "e072b895cb8b",
+      "updatedAt": "2026-08-17T17:06:16.764Z"
+    },
+    "ws.project.rerunning": {
+      "text": "جاري إعادة التشغيل…",
+      "sourceHash": "53920a3e9816",
+      "updatedAt": "2026-08-17T17:06:16.764Z"
+    },
+    "ws.project.rerun": {
+      "text": "إعادة تشغيل العمل",
+      "sourceHash": "7792e8052528",
+      "updatedAt": "2026-08-17T17:06:20.067Z"
+    },
+    "ws.project.forceRerun": {
+      "text": "إعادة تشغيل القوة (متوقف)",
+      "sourceHash": "26a80611d4e0",
+      "updatedAt": "2026-08-17T17:06:20.067Z"
+    },
+    "ws.project.linkedMonitors": {
+      "text": "مراقبون مرتبطون",
+      "sourceHash": "2788d1641b22",
+      "updatedAt": "2026-08-17T17:06:20.067Z"
+    },
+    "ws.project.noMonitors": {
+      "text": "لا توجد مراقبات مرتبطة حتى الآن.",
+      "sourceHash": "b202f7c531ac",
+      "updatedAt": "2026-08-17T17:06:20.067Z"
+    },
+    "ws.project.briefReady": {
+      "text": "قرار جاهز",
+      "sourceHash": "f94bed6f0fd1",
+      "updatedAt": "2026-08-17T17:06:20.067Z"
+    },
+    "ws.project.briefReadyBody": {
+      "text": "وثيقة النتيجة متاحة",
+      "sourceHash": "6f9a4a136283",
+      "updatedAt": "2026-08-17T17:06:20.067Z"
+    },
+    "ws.project.workflowDone": {
+      "text": "انتهى العمل وتمت توفر ملخص",
+      "sourceHash": "6182fd41fcdb",
+      "updatedAt": "2026-08-17T17:06:20.067Z"
+    },
+    "ws.project.workflowFailed": {
+      "text": "فشل العمل — قم بتعديل السؤال أو المصادر، ثم أعد التشغيل.",
+      "sourceHash": "82ea50d7133a",
+      "updatedAt": "2026-08-17T17:06:20.067Z"
+    },
+    "ws.project.alreadyRunning": {
+      "text": "A workflow is already running.",
+      "sourceHash": "5717f12dab7a",
+      "updatedAt": "2026-08-17T17:06:23.875Z"
+    },
+    "ws.project.workflowStarted": {
+      "text": "Workflow started — agents are running.",
+      "sourceHash": "ba2f05f6a246",
+      "updatedAt": "2026-08-17T17:06:23.875Z"
+    },
+    "ws.project.needQuestion": {
+      "text": "Add a strategic question (10+ characters) before rerunning.",
+      "sourceHash": "c5855c7fedf6",
+      "updatedAt": "2026-08-17T17:06:23.875Z"
+    },
+    "ws.project.stuckRerun": {
+      "text": "Previous run looked stuck — starting a fresh workflow…",
+      "sourceHash": "7a06899218f0",
+      "updatedAt": "2026-08-17T17:06:23.875Z"
+    },
+    "ws.project.rerunningToast": {
+      "text": "Rerunning the agent workflow…",
+      "sourceHash": "2e84385a93af",
+      "updatedAt": "2026-08-17T17:06:23.875Z"
+    },
+    "ws.project.edit": {
+      "text": "Edit project",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T17:06:23.875Z"
+    },
+    "ws.project.name": {
+      "text": "Project name",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T17:06:23.875Z"
+    },
+    "ws.project.save": {
+      "text": "Save changes",
+      "sourceHash": "179359b39edb",
+      "updatedAt": "2026-08-17T17:06:23.875Z"
+    },
+    "ws.account.uploadPhoto": {
+      "text": "رفع صورة الملف الشخصي",
+      "sourceHash": "888d7bc45d2f",
+      "updatedAt": "2026-08-17T17:06:30.905Z"
+    },
+    "ws.account.remove": {
+      "text": "إزالة",
+      "sourceHash": "e963907dac5c",
+      "updatedAt": "2026-08-17T17:06:30.905Z"
+    },
+    "ws.account.displayName": {
+      "text": "اسم العرض",
+      "sourceHash": "c7874aaa0fab",
+      "updatedAt": "2026-08-17T17:06:30.905Z"
+    },
+    "ws.account.bio": {
+      "text": "حول / السيرة الذاتية",
+      "sourceHash": "32b952c4847b",
+      "updatedAt": "2026-08-17T17:06:30.905Z"
+    },
+    "ws.account.saveProfile": {
+      "text": "حفظ الملف الشخصي",
+      "sourceHash": "f597c0e8201d",
+      "updatedAt": "2026-08-17T17:06:30.905Z"
+    },
+    "ws.account.password": {
+      "text": "كلمة المرور",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T17:06:30.905Z"
+    },
+    "ws.account.currentPassword": {
+      "text": "كلمة المرور الحالية",
+      "sourceHash": "19dff4dad0a7",
+      "updatedAt": "2026-08-17T17:06:30.905Z"
+    },
+    "ws.account.newPassword": {
+      "text": "كلمة المرور الجديدة",
+      "sourceHash": "d850ee188c7c",
+      "updatedAt": "2026-08-17T17:06:30.905Z"
+    },
+    "ws.monitors.lede": {
+      "text": "Continuous watch profiles for keywords and jurisdictions — alerts surface when signals match your brief scope.",
+      "sourceHash": "96c578a78d41",
+      "updatedAt": "2026-08-17T17:06:32.957Z"
+    },
+    "ws.monitors.name": {
+      "text": "Monitor name",
+      "sourceHash": "8f3d2b89f0f7",
+      "updatedAt": "2026-08-17T17:06:32.957Z"
+    },
+    "ws.monitors.keywords": {
+      "text": "Keywords (comma-separated)",
+      "sourceHash": "4772c39c2fd8",
+      "updatedAt": "2026-08-17T17:06:32.957Z"
+    },
+    "ws.monitors.countries": {
+      "text": "Countries (comma-separated)",
+      "sourceHash": "a6644ccc36eb",
+      "updatedAt": "2026-08-17T17:06:32.957Z"
+    },
+    "ws.monitors.linkProject": {
+      "text": "Link to project (optional)",
+      "sourceHash": "b377c0bd90d9",
+      "updatedAt": "2026-08-17T17:06:32.957Z"
+    },
+    "ws.monitors.keywordsPlaceholder": {
+      "text": "EPA, petroleum",
+      "sourceHash": "b0441f183a91",
+      "updatedAt": "2026-08-17T17:06:32.957Z"
+    },
+    "ws.monitors.sort.lastAlert": {
+      "text": "Sort: Last alert",
+      "sourceHash": "871e1671f3cc",
+      "updatedAt": "2026-08-17T17:06:32.957Z"
+    },
+    "ws.monitors.sort.alertCount": {
+      "text": "Sort: Alert count",
+      "sourceHash": "30818550f03c",
+      "updatedAt": "2026-08-17T17:06:32.957Z"
+    },
+    "ws.monitors.sort.name": {
+      "text": "Sort: Name",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T17:06:35.254Z"
+    },
+    "ws.monitors.sort.country": {
+      "text": "Sort: Country",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T17:06:35.254Z"
+    },
+    "ws.monitors.kpi.watching": {
+      "text": "Watching signals",
+      "sourceHash": "97cf17eaef54",
+      "updatedAt": "2026-08-17T17:06:35.254Z"
+    },
+    "ws.monitors.kpi.totalAlerts": {
+      "text": "Total alerts",
+      "sourceHash": "fde0ecac2d4a",
+      "updatedAt": "2026-08-17T17:06:35.254Z"
+    },
+    "ws.monitors.kpi.withAlerts": {
+      "text": "With alerts",
+      "sourceHash": "462e89938441",
+      "updatedAt": "2026-08-17T17:06:35.254Z"
+    },
+    "ws.monitors.search": {
+      "text": "Search monitors, keywords, countries…",
+      "sourceHash": "5ec1da77d398",
+      "updatedAt": "2026-08-17T17:06:35.254Z"
+    },
+    "ws.monitors.add": {
+      "text": "Add monitor",
+      "sourceHash": "c7347370fdde",
+      "updatedAt": "2026-08-17T17:06:35.254Z"
+    },
+    "ws.monitors.adding": {
+      "text": "Adding…",
+      "sourceHash": "ffb2e628b0e9",
+      "updatedAt": "2026-08-17T17:06:35.254Z"
+    },
+    "ws.monitors.empty": {
+      "text": "لا توجد مراقبة بعد",
+      "sourceHash": "01356e674f83",
+      "updatedAt": "2026-08-17T17:07:19.848Z"
+    },
+    "ws.monitors.emptyHint": {
+      "text": "أضف ملف تعقب لكلمات مفتاحية ودول تريد تتبعها بين الدورات القصيرة.",
+      "sourceHash": "5e619550a5fb",
+      "updatedAt": "2026-08-17T17:07:19.848Z"
+    },
+    "ws.monitors.noMatches": {
+      "text": "لا توجد مطابقات",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T17:07:19.848Z"
+    },
+    "ws.monitors.noMatchesHint": {
+      "text": "اضبط البحث أو الفلاتر، أو أنشئ مراقبًا جديدًا.",
+      "sourceHash": "29c9f7839ead",
+      "updatedAt": "2026-08-17T17:07:19.848Z"
+    },
+    "ws.monitors.created": {
+      "text": "تم إنشاء مراقب",
+      "sourceHash": "395dbfc3b9df",
+      "updatedAt": "2026-08-17T17:07:19.848Z"
+    },
+    "ws.monitors.createFailed": {
+      "text": "لا يمكن إنشاء مراقب",
+      "sourceHash": "0e94667b5b74",
+      "updatedAt": "2026-08-17T17:07:19.848Z"
+    },
+    "ws.monitors.watchProfile": {
+      "text": "ملف تعقب",
+      "sourceHash": "42032bba3d02",
+      "updatedAt": "2026-08-17T17:07:19.848Z"
+    },
+    "ws.monitors.lastAlert": {
+      "text": "أحدث تنبيه",
+      "sourceHash": "6badefe08b70",
+      "updatedAt": "2026-08-17T17:07:19.848Z"
+    },
+    "ws.monitors.trackedTerms": {
+      "text": "المصطلحات المتابعة",
+      "sourceHash": "7c78071fa618",
+      "updatedAt": "2026-08-17T17:07:29.812Z"
+    },
+    "ws.monitors.liveFeed": {
+      "text": "خلاصة التنبيهات المباشرة",
+      "sourceHash": "3997a0cdb184",
+      "updatedAt": "2026-08-17T17:07:29.812Z"
+    },
+    "ws.monitors.linkedProject": {
+      "text": "مشروع مرتبط",
+      "sourceHash": "3998027f1c8f",
+      "updatedAt": "2026-08-17T17:07:29.812Z"
+    },
+    "ws.monitors.noProjectLinked": {
+      "text": "لا يوجد مشروع مرتبط حتى الآن.",
+      "sourceHash": "777c518a716d",
+      "updatedAt": "2026-08-17T17:07:29.812Z"
+    },
+    "ws.monitors.noProject": {
+      "text": "لا يوجد مشروع",
+      "sourceHash": "c326b75775bf",
+      "updatedAt": "2026-08-17T17:07:29.812Z"
+    },
+    "ws.monitors.quickLinks": {
+      "text": "روابط سريعة",
+      "sourceHash": "4b4e155ec7ba",
+      "updatedAt": "2026-08-17T17:07:29.812Z"
+    },
+    "ws.monitors.noAlerts": {
+      "text": "لا توجد تنبيهات مسجلة حتى الآن",
+      "sourceHash": "d5dd400aa0b8",
+      "updatedAt": "2026-08-17T17:07:29.812Z"
+    },
+    "ws.monitors.loadFailed": {
+      "text": "فشل في تحميل المراقب",
+      "sourceHash": "e44ad0053813",
+      "updatedAt": "2026-08-17T17:07:29.812Z"
+    },
+    "ws.stakeholders.title": {
+      "text": "Stakeholders",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T17:07:35.715Z"
+    },
+    "ws.stakeholders.lede": {
+      "text": "Institutions that sponsor and shape Caribbean decision work.",
+      "sourceHash": "f0330bbdd8c2",
+      "updatedAt": "2026-08-17T17:07:35.715Z"
+    },
+    "ws.toolbar.search": {
+      "text": "Search…",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T17:07:35.715Z"
+    },
+    "ws.toolbar.sortBy": {
+      "text": "Sort by",
+      "sourceHash": "a2a5bdeca939",
+      "updatedAt": "2026-08-17T17:07:35.715Z"
+    },
+    "ws.toolbar.filter": {
+      "text": "Filter",
+      "sourceHash": "d7decf1aa22b",
+      "updatedAt": "2026-08-17T17:07:35.715Z"
+    },
+    "ws.loading.workspace": {
+      "text": "Loading workspace…",
+      "sourceHash": "89f0dde329fa",
+      "updatedAt": "2026-08-17T17:07:35.715Z"
+    },
+    "ws.loading.overview": {
+      "text": "Preparing overview…",
+      "sourceHash": "f34393549cd4",
+      "updatedAt": "2026-08-17T17:07:35.715Z"
+    },
+    "ws.loading.operator": {
+      "text": "Preparing operator console…",
+      "sourceHash": "27a6688f18c0",
+      "updatedAt": "2026-08-17T17:07:35.715Z"
+    },
+    "ws.topics.pipelineStarted": {
+      "text": "تم بدء التشغيل",
+      "sourceHash": "f2d5ecf09040",
+      "updatedAt": "2026-08-17T17:07:51.779Z"
+    },
+    "ws.topics.projectReady": {
+      "text": "المشروع جاهز",
+      "sourceHash": "0e47cf96af8d",
+      "updatedAt": "2026-08-17T17:07:51.779Z"
+    },
+    "ws.topics.workflowRunning": {
+      "text": "جاري تشغيل تدفق الوكيل.",
+      "sourceHash": "bde7d40c5be3",
+      "updatedAt": "2026-08-17T17:07:51.779Z"
+    },
+    "ws.topics.readyContinue": {
+      "text": "مشروعك جاهز للمتابعة.",
+      "sourceHash": "6e0428373274",
+      "updatedAt": "2026-08-17T17:07:51.779Z"
+    },
+    "ws.docs.clickUpload": {
+      "text": "انقر لتحميل",
+      "sourceHash": "c77c363d22ab",
+      "updatedAt": "2026-08-17T17:07:51.779Z"
+    },
+    "ws.docs.orDrag": {
+      "text": "أو اسحب وأفلات",
+      "sourceHash": "9ddf49cdc8ed",
+      "updatedAt": "2026-08-17T17:07:51.779Z"
+    },
+    "ws.docs.uploadFailed": {
+      "text": "فشل التحميل",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T17:07:51.779Z"
+    },
+    "ws.docs.noUploads": {
+      "text": "لا توجد تحميلات بعد.",
+      "sourceHash": "11da33e0d997",
+      "updatedAt": "2026-08-17T17:07:51.779Z"
+    },
+    "ws.docs.summary.reviewFlags": {
+      "text": "مراجعة الأعلام",
+      "sourceHash": "c637c236e807",
+      "updatedAt": "2026-08-17T17:33:52.249Z"
+    },
+    "ws.docs.summary.operatorFocus": {
+      "text": "تركيز المشغل المستخدم",
+      "sourceHash": "541e0f17e21c",
+      "updatedAt": "2026-08-17T17:33:52.249Z"
+    },
+    "ws.docs.summary.generate": {
+      "text": "إنشاء ملخص",
+      "sourceHash": "edd0f4b8c42f",
+      "updatedAt": "2026-08-17T17:33:52.249Z"
+    },
+    "ws.docs.summary.regenerate": {
+      "text": "إعادة إنشاء الملخص",
+      "sourceHash": "a4be29f8457d",
+      "updatedAt": "2026-08-17T17:33:52.249Z"
+    },
+    "ws.voice.tap": {
+      "text": "الضغط للتحدث",
+      "sourceHash": "4f4d692fb7a0",
+      "updatedAt": "2026-08-17T17:33:52.249Z"
+    },
+    "ws.voice.stop": {
+      "text": "إيقاف الاستماع",
+      "sourceHash": "e134211eedf1",
+      "updatedAt": "2026-08-17T17:33:52.249Z"
+    },
+    "ws.voice.blocked": {
+      "text": "الميكروفون مقفل",
+      "sourceHash": "7b63697f6dc7",
+      "updatedAt": "2026-08-17T17:33:52.249Z"
+    },
+    "ws.voice.allow": {
+      "text": "تفعيل الميكروفون والتحدث",
+      "sourceHash": "f1132cb60ca8",
+      "updatedAt": "2026-08-17T17:33:52.249Z"
+    },
+    "ws.voice.startSpeaking": {
+      "text": "ابدأ التحدث — تظهر كلماتك هنا مباشرة.",
+      "sourceHash": "99cd968419fe",
+      "updatedAt": "2026-08-17T17:33:55.295Z"
+    },
+    "ws.voice.tapThenSpeak": {
+      "text": "اضغط على الميكروفون، ثم تحدث — تظهر الكلمات هنا مباشرة.",
+      "sourceHash": "32cbf9c484b9",
+      "updatedAt": "2026-08-17T17:33:55.295Z"
+    },
+    "ws.voice.placeholder": {
+      "text": "ما هي القرارات الاستراتيجية التي تحتاج إلى حكم استناد إلى الأدلة؟",
+      "sourceHash": "cd88d0acf018",
+      "updatedAt": "2026-08-17T17:33:55.295Z"
+    },
+    "ws.voice.blockedToast": {
+      "text": "تم حظر الوصول للميكروفون. اسمح للميكروفون لهذا الموقع، ثم جرب مرة أخرى.",
+      "sourceHash": "42117e1fcf00",
+      "updatedAt": "2026-08-17T17:33:55.295Z"
+    },
+    "ws.voice.unavailable": {
+      "text": "لا تتوفر تدوين صوتي في هذا المتصفح — اكتب بدلاً من ذلك.",
+      "sourceHash": "4497fd5a6538",
+      "updatedAt": "2026-08-17T17:33:55.295Z"
+    },
+    "ws.voice.needsHttps": {
+      "text": "يحتاج التحدث إلى HTTPS (أو localhost). افتح عنوان الموقع الآمن.",
+      "sourceHash": "b3b6c9c79cc8",
+      "updatedAt": "2026-08-17T17:33:55.295Z"
+    },
+    "ws.voice.settingsBlocked": {
+      "text": "الميكروفون محجوب في إعدادات المتصفح. اضغط على أيقونة القفل → إعدادات الموقع → ميكروفون → السماح.",
+      "sourceHash": "1b6c12cfa138",
+      "updatedAt": "2026-08-17T17:33:55.295Z"
+    },
+    "ws.pulse.title": {
+      "text": "نبض مساحة العمل",
+      "sourceHash": "0d2a193b046d",
+      "updatedAt": "2026-08-17T17:33:55.295Z"
+    },
+    "ws.account.signOutNote": {
+      "text": "ينتهي هذا الجلسة في المتصفح على هذا الجهاز.",
+      "sourceHash": "798b10424390",
+      "updatedAt": "2026-08-17T17:33:58.603Z"
+    },
+    "ws.account.presence.available": {
+      "text": "متاح",
+      "sourceHash": "7c62a1424469",
+      "updatedAt": "2026-08-17T17:33:58.603Z"
+    },
+    "ws.account.presence.availableHint": {
+      "text": "جاهز لاستلام ومعالجة تذاكر الدعم",
+      "sourceHash": "f608d72be1eb",
+      "updatedAt": "2026-08-17T17:33:58.603Z"
+    },
+    "ws.account.presence.away": {
+      "text": "متغيب",
+      "sourceHash": "4fae89296662",
+      "updatedAt": "2026-08-17T17:33:58.603Z"
+    },
+    "ws.account.presence.awayHint": {
+      "text": "توافر محدود للدعم",
+      "sourceHash": "a2ae2ea4ecd3",
+      "updatedAt": "2026-08-17T17:33:58.603Z"
+    },
+    "ws.account.presence.busy": {
+      "text": "مشغول",
+      "sourceHash": "592a9d1678c2",
+      "updatedAt": "2026-08-17T17:33:58.603Z"
+    },
+    "ws.account.presence.busyHint": {
+      "text": "في محادثة — مطالبات جديدة محدودة",
+      "sourceHash": "0e2a07ad911e",
+      "updatedAt": "2026-08-17T17:33:58.603Z"
+    },
+    "ws.account.presence.offline": {
+      "text": "غير متصل",
+      "sourceHash": "e01fa717bacc",
+      "updatedAt": "2026-08-17T17:33:58.603Z"
+    },
+    "ws.account.presence.offlineHint": {
+      "text": "Not handling support right now",
+      "sourceHash": "5d54853ddb06",
+      "updatedAt": "2026-08-17T17:34:00.465Z"
+    },
+    "ws.account.presence.lede": {
+      "text": "Your status is visible to support staff and workspace collaborators.",
+      "sourceHash": "b9e64e6d941b",
+      "updatedAt": "2026-08-17T17:34:00.465Z"
+    },
+    "ws.usage.lede": {
+      "text": "Tokens, credits, and estimated OpenRouter cost for your workspace period.",
+      "sourceHash": "98bfd9f1db1f",
+      "updatedAt": "2026-08-17T17:34:00.465Z"
+    },
+    "ws.monitors.kpi.paused": {
+      "text": "Paused",
+      "sourceHash": "c7dfb6f1d9c5",
+      "updatedAt": "2026-08-17T17:34:00.465Z"
+    },
+    "ws.monitors.new": {
+      "text": "New monitor",
+      "sourceHash": "8bf83b0730ca",
+      "updatedAt": "2026-08-17T17:34:00.465Z"
+    },
+    "ws.topics.lede": {
+      "text": "Load a live Caribbean signal into a project theatre, then run agents.",
+      "sourceHash": "889a75409945",
+      "updatedAt": "2026-08-17T17:34:00.465Z"
+    },
+    "ws.topics.starters": {
+      "text": "Starters",
+      "sourceHash": "7bfec88cf924",
+      "updatedAt": "2026-08-17T17:34:00.465Z"
+    },
+    "ws.topics.useHere": {
+      "text": "Use here",
+      "sourceHash": "72c384afab37",
+      "updatedAt": "2026-08-17T17:34:00.465Z"
+    },
+    "ws.voice.listening": {
+      "text": "استماع…",
+      "sourceHash": "6c19a4761d7e",
+      "updatedAt": "2026-08-17T17:34:02.970Z"
+    },
+    "ws.voice.micBlockedShort": {
+      "text": "ميكروفون محجوب",
+      "sourceHash": "08f9ba43eef0",
+      "updatedAt": "2026-08-17T17:34:02.970Z"
+    },
+    "ws.voice.allowMicShort": {
+      "text": "سماح بالميكروفون",
+      "sourceHash": "43f5f6857d60",
+      "updatedAt": "2026-08-17T17:34:02.970Z"
+    },
+    "ws.voice.unavailableShort": {
+      "text": "الصوت غير متاح",
+      "sourceHash": "1aeefb24cc0d",
+      "updatedAt": "2026-08-17T17:34:02.970Z"
+    },
+    "ws.voice.spoken": {
+      "text": "مسموع",
+      "sourceHash": "77459e51c50c",
+      "updatedAt": "2026-08-17T17:34:02.970Z"
+    },
+    "ws.voice.deniedHint": {
+      "text": "سماح للميكروفون، ثم حاول مرة أخرى.",
+      "sourceHash": "5b0bc80e09a9",
+      "updatedAt": "2026-08-17T17:34:02.970Z"
+    },
+    "ws.project.analysisDepth": {
+      "text": "عمق التحليل",
+      "sourceHash": "903ec812ae6d",
+      "updatedAt": "2026-08-17T17:34:02.970Z"
+    },
+    "ws.project.paidModels": {
+      "text": "تمكين النماذج المدفوعة لهذا التشغيل",
+      "sourceHash": "06cd26ce7c61",
+      "updatedAt": "2026-08-17T17:34:02.970Z"
+    },
+    "op.section.production": {
+      "text": "Production",
+      "sourceHash": "df70fc7991d3",
+      "updatedAt": "2026-08-17T17:34:08.451Z"
+    },
+    "op.brand": {
+      "text": "Octivate Operator",
+      "sourceHash": "c083a340a671",
+      "updatedAt": "2026-08-17T17:34:08.451Z"
+    },
+    "op.title": {
+      "text": "Operator command center",
+      "sourceHash": "f1ae56b9207a",
+      "updatedAt": "2026-08-17T17:34:08.451Z"
+    },
+    "op.subtitle": {
+      "text": "Live pipeline metrics, operations, control plane, catalogue, and pricing — split-view modules, real API numbers.",
+      "sourceHash": "cb9be5c7af4d",
+      "updatedAt": "2026-08-17T17:34:08.451Z"
+    },
+    "op.refresh": {
+      "text": "Refresh",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T17:34:08.451Z"
+    },
+    "op.tab.pulse": {
+      "text": "Pulse",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T17:34:08.451Z"
+    },
+    "op.tab.pulse.hint": {
+      "text": "Platform health and live activity",
+      "sourceHash": "7158af122607",
+      "updatedAt": "2026-08-17T17:34:08.451Z"
+    },
+    "op.tab.operations": {
+      "text": "Operations",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T17:34:08.451Z"
+    },
+    "op.tab.automation.hint": {
+      "text": "Media crawl, download, and local transcription",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T17:34:10.461Z"
+    },
+    "op.tab.parliament": {
+      "text": "Automation",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T17:34:10.461Z"
+    },
+    "op.tab.parliament.hint": {
+      "text": "Media crawl, download, and local transcription",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T17:34:10.461Z"
+    },
+    "op.tab.exports": {
+      "text": "Exports",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T17:34:10.461Z"
+    },
+    "op.tab.exports.hint": {
+      "text": "Export jobs and artifacts",
+      "sourceHash": "21dd275c3e12",
+      "updatedAt": "2026-08-17T17:34:10.461Z"
+    },
+    "op.tab.debug": {
+      "text": "Debug",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T17:34:10.461Z"
+    },
+    "op.tab.debug.hint": {
+      "text": "Ops event stream and diagnostics",
+      "sourceHash": "ad315fcae7e9",
+      "updatedAt": "2026-08-17T17:34:10.461Z"
+    },
+    "op.i18n.title": {
+      "text": "Translation catalogs",
+      "sourceHash": "e4dfce9a5e06",
+      "updatedAt": "2026-08-17T17:34:10.461Z"
+    },
+    "op.modules.controlPlane": {
+      "text": "لوحة التحكم",
+      "sourceHash": "38f00e1ffa03",
+      "updatedAt": "2026-08-17T17:34:51.696Z"
+    },
+    "op.modules.controlHint": {
+      "text": "حدود الاستخدام للتشغيل المباشر — اسحب لإعادة الترتيب",
+      "sourceHash": "f3fff5453ff9",
+      "updatedAt": "2026-08-17T17:34:51.696Z"
+    },
+    "op.modules.modelRouting": {
+      "text": "توجيه النموذج",
+      "sourceHash": "06a48dd13470",
+      "updatedAt": "2026-08-17T17:34:51.696Z"
+    },
+    "op.modules.evidencePipeline": {
+      "text": "أنبوب الأدلة",
+      "sourceHash": "c8f16d4ea829",
+      "updatedAt": "2026-08-17T17:34:51.696Z"
+    },
+    "op.modules.liveConcurrency": {
+      "text": "عدادات التوازي المباشر",
+      "sourceHash": "e0709470392d",
+      "updatedAt": "2026-08-17T17:34:51.696Z"
+    },
+    "op.modules.probes": {
+      "text": "مسبارات التوافر & الإيقاع — اسحب لإعادة الترتيب",
+      "sourceHash": "e645018146df",
+      "updatedAt": "2026-08-17T17:34:51.696Z"
+    },
+    "op.modules.sourceCapture": {
+      "text": "التقاط المصدر",
+      "sourceHash": "cd599f00b60c",
+      "updatedAt": "2026-08-17T17:34:51.696Z"
+    },
+    "op.modules.artifactQueue": {
+      "text": "طابور الآثار & المسار — اسحب لإعادة الترتيب",
+      "sourceHash": "2ae5335735e6",
+      "updatedAt": "2026-08-17T17:34:51.696Z"
+    },
+    "op.modules.liveRegistry": {
+      "text": "السجل المباشر — اسحب لإعادة الترتيب",
+      "sourceHash": "544cb1f76259",
+      "updatedAt": "2026-08-17T17:36:20.452Z"
+    },
+    "op.modules.signalTicker": {
+      "text": "مؤشر الإشارات",
+      "sourceHash": "e0fa7496c8b3",
+      "updatedAt": "2026-08-17T17:36:20.452Z"
+    },
+    "op.modules.tickerHint": {
+      "text": "شريط العرض الحي — تأليف، معاينة، إدراج",
+      "sourceHash": "53c2b36d9e58",
+      "updatedAt": "2026-08-17T17:36:20.452Z"
+    },
+    "op.modules.unassigned": {
+      "text": "غير مُعيّن / بذرة",
+      "sourceHash": "c15e034fd891",
+      "updatedAt": "2026-08-17T17:36:20.452Z"
+    },
+    "op.pulse.liveConsole": {
+      "text": "لوحة التحكم الحية",
+      "sourceHash": "99254e92d752",
+      "updatedAt": "2026-08-17T17:36:20.452Z"
+    },
+    "op.pulse.reload": {
+      "text": "إعادة تحميل جميع لوحات مشغلي API",
+      "sourceHash": "d9fb2ba01854",
+      "updatedAt": "2026-08-17T17:36:20.452Z"
+    },
+    "op.pulse.periodCost": {
+      "text": "تكلفة الفترة",
+      "sourceHash": "cb8a109f1f4b",
+      "updatedAt": "2026-08-17T17:36:20.452Z"
+    },
+    "op.pulse.periodCostHint": {
+      "text": "صرف الفترة المُلتزمة في الدفتر + أنبوب في الطيران (حية)",
+      "sourceHash": "59084279a9c0",
+      "updatedAt": "2026-08-17T17:36:20.452Z"
+    },
+    "op.pulse.tokenBudget": {
+      "text": "ميزانية الرموز",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T17:36:23.185Z"
+    },
+    "op.pulse.tokenBudgetHint": {
+      "text": "رموز من دفتر التكاليف (متزامنة) · جلسات في انتظار الإضافة في الوقت الفعلي",
+      "sourceHash": "2769bcf48179",
+      "updatedAt": "2026-08-17T17:36:23.185Z"
+    },
+    "op.pulse.liveAwaiting": {
+      "text": "باشر · في انتظار المفتاح",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T17:36:23.185Z"
+    },
+    "op.pulse.openOpsSessions": {
+      "text": "عمليات مفتوحة · قائمة انتظار جلسة الوكيل",
+      "sourceHash": "c0f238a02a7d",
+      "updatedAt": "2026-08-17T17:36:23.185Z"
+    },
+    "op.pulse.openCatalog": {
+      "text": "مفتوح الكتالوج · سجل المصدر والعداد",
+      "sourceHash": "a238e6ce5284",
+      "updatedAt": "2026-08-17T17:36:23.185Z"
+    },
+    "op.pulse.openPulseReviews": {
+      "text": "بادئ مسار النبض · مراجعات انتظار موجزة",
+      "sourceHash": "d2b934845eee",
+      "updatedAt": "2026-08-17T17:36:23.185Z"
+    },
+    "op.pulse.openOpsModeration": {
+      "text": "عمليات مفتوحة · مخزون المراقبة",
+      "sourceHash": "ae2238c4a37e",
+      "updatedAt": "2026-08-17T17:36:23.185Z"
+    },
+    "op.pulse.loadFailed": {
+      "text": "فشل تحميل لوحة تحكم المشغل",
+      "sourceHash": "52090fbc038a",
+      "updatedAt": "2026-08-17T17:36:23.185Z"
+    },
+    "op.pulse.clearStaleBtn": {
+      "text": "مسح البيانات القديمة",
+      "sourceHash": "c760db651884",
+      "updatedAt": "2026-08-17T17:36:25.855Z"
+    },
+    "op.pulse.nothingToClear": {
+      "text": "لا شيء لمسحه",
+      "sourceHash": "ec219a9ca961",
+      "updatedAt": "2026-08-17T17:36:25.855Z"
+    },
+    "op.pulse.clearFailed": {
+      "text": "فشل المسح",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T17:36:25.855Z"
+    },
+    "op.pulse.resetLedger": {
+      "text": "إعادة تعيين سجل التكاليف؟",
+      "sourceHash": "34f8b9727821",
+      "updatedAt": "2026-08-17T17:36:25.855Z"
+    },
+    "op.pulse.resetLedgerHint": {
+      "text": "يحذف كل صفوف سجل التكاليف في Supabase ويضع استهلاك الفترة إلى صفر. تظل جلسات التشغيل النشطة تحتفظ بمؤشرات محلية حتى تتم مزامنتها.",
+      "sourceHash": "18f1d6f36043",
+      "updatedAt": "2026-08-17T17:36:25.855Z"
+    },
+    "op.pulse.clearLedger": {
+      "text": "مسح السجل",
+      "sourceHash": "fe2640defa59",
+      "updatedAt": "2026-08-17T17:36:25.855Z"
+    },
+    "op.pulse.ledgerClearFailed": {
+      "text": "فشل مسح السجل",
+      "sourceHash": "df287f9b11ba",
+      "updatedAt": "2026-08-17T17:36:25.855Z"
+    },
+    "op.pulse.clearSessions": {
+      "text": "مسح جميع الجلسات؟",
+      "sourceHash": "17f0d287182d",
+      "updatedAt": "2026-08-17T17:36:25.855Z"
+    },
+    "op.pulse.clearSessionsHint": {
+      "text": "Removes every agent session from Supabase and memory. Does not delete the cost ledger (use Clear ledger)",
+      "sourceHash": "295d68d41ceb",
+      "updatedAt": "2026-08-17T17:36:28.294Z"
+    },
+    "op.pulse.clearSessionsBtn": {
+      "text": "Clear sessions",
+      "sourceHash": "5d82a79211cc",
+      "updatedAt": "2026-08-17T17:36:28.294Z"
+    },
+    "op.pulse.sessionClearFailed": {
+      "text": "Session clear failed",
+      "sourceHash": "2d27d861520a",
+      "updatedAt": "2026-08-17T17:36:28.294Z"
+    },
+    "op.pulse.deleteConfirm": {
+      "text": "This permanently removes the selected record.\n\nThis cannot be undone.",
+      "sourceHash": "0621d2ec0e04",
+      "updatedAt": "2026-08-17T17:36:28.294Z"
+    },
+    "op.pulse.deleteCancelled": {
+      "text": "Deletion cancelled",
+      "sourceHash": "e10929fe22ea",
+      "updatedAt": "2026-08-17T17:36:28.294Z"
+    },
+    "op.pulse.deleteFailed": {
+      "text": "Delete failed",
+      "sourceHash": "64513b47d460",
+      "updatedAt": "2026-08-17T17:36:28.294Z"
+    },
+    "op.control.limitsTitle": {
+      "text": "Platform limits",
+      "sourceHash": "f81483fa3c52",
+      "updatedAt": "2026-08-17T17:36:28.294Z"
+    },
+    "op.control.limitsLede": {
+      "text": "Compute caps, concurrency, upload guardrails, and model policy for the live pipeline.",
+      "sourceHash": "2173dff3c43f",
+      "updatedAt": "2026-08-17T17:36:28.294Z"
+    },
+    "op.control.compute": {
+      "text": "الحساب والعرض",
+      "sourceHash": "c547787d60e6",
+      "updatedAt": "2026-08-17T17:36:29.969Z"
+    },
+    "op.control.computeHint": {
+      "text": "الميزانية اليومية من الرموز والسعة المتزامنة للوكلاء.",
+      "sourceHash": "6abc96efeff9",
+      "updatedAt": "2026-08-17T17:36:29.969Z"
+    },
+    "op.control.uploadGuardrails": {
+      "text": "حماية الرفع",
+      "sourceHash": "195034829916",
+      "updatedAt": "2026-08-17T17:36:29.969Z"
+    },
+    "op.control.accountProfile": {
+      "text": "ملف التعريف الحسابي",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T17:36:29.969Z"
+    },
+    "op.control.signup": {
+      "text": "التسجيل وإنشاء الحساب",
+      "sourceHash": "ee7efccafaf3",
+      "updatedAt": "2026-08-17T17:36:29.969Z"
+    },
+    "op.control.modelPolicy": {
+      "text": "سياسة النموذج والامتثال",
+      "sourceHash": "81ab6ab50a50",
+      "updatedAt": "2026-08-17T17:36:29.969Z"
+    },
+    "op.control.tokensPerDay": {
+      "text": "الرموز يومياً",
+      "sourceHash": "9947717c245c",
+      "updatedAt": "2026-08-17T17:36:29.969Z"
+    },
+    "op.control.tokensPerDayHint": {
+      "text": "سقف صارم على الرموز الاستهلاكة من قبل النماذج across all sessions.",
+      "sourceHash": "baaa97f25c29",
+      "updatedAt": "2026-08-17T17:36:29.969Z"
+    },
+    "op.control.concurrentAgents": {
+      "text": "وكلاء متزامنين",
+      "sourceHash": "66802c8476b0",
+      "updatedAt": "2026-08-17T17:36:33.340Z"
+    },
+    "op.control.concurrentHint": {
+      "text": "عمليات أنبوب العقيدة المتزامنة القصوى.",
+      "sourceHash": "5775a32b9fa6",
+      "updatedAt": "2026-08-17T17:36:33.340Z"
+    },
+    "op.control.uploadsPerProject": {
+      "text": "تحميلات لكل مشروع",
+      "sourceHash": "f8fa8fd01015",
+      "updatedAt": "2026-08-17T17:36:33.340Z"
+    },
+    "op.control.uploadsHint": {
+      "text": "أقصى عدد من المستندات المصدر المرفقة بمشروع واحد.",
+      "sourceHash": "a9dabf17039d",
+      "updatedAt": "2026-08-17T17:36:33.340Z"
+    },
+    "op.control.maxFileSize": {
+      "text": "حجم الملف الأقصى",
+      "sourceHash": "9568dad88fad",
+      "updatedAt": "2026-08-17T17:36:33.340Z"
+    },
+    "op.control.maxFileHint": {
+      "text": "حد أقصى لكل مستند تم تحميله.",
+      "sourceHash": "abbd0701335a",
+      "updatedAt": "2026-08-17T17:36:33.340Z"
+    },
+    "op.control.docRetention": {
+      "text": "احتفاظ المستندات",
+      "sourceHash": "a079e024e8b0",
+      "updatedAt": "2026-08-17T17:36:33.340Z"
+    },
+    "op.control.docRetentionHint": {
+      "text": "أيام حتى تنتهي صلاحية التحميلات وتُدرَّج للحذف. يؤدي تغيير هذا الإعداد إلى إعادة حساب تاريخ انتهاء الصلاحية لكل ملف.",
+      "sourceHash": "cb4ebc4796b2",
+      "updatedAt": "2026-08-17T17:36:33.340Z"
+    },
+    "op.control.maxAvatar": {
+      "text": "حجم صورة الملف الشخصي الأقصى",
+      "sourceHash": "e711d3b824bf",
+      "updatedAt": "2026-08-17T17:36:36.562Z"
+    },
+    "op.control.maxAvatarHint": {
+      "text": "صور الملف الشخصي JPEG / PNG / WebP. الحد الافتراضي 2 ميجابايت؛ الحد الأقصى للمشغل 10 ميجابايت.",
+      "sourceHash": "f5e78f1906f4",
+      "updatedAt": "2026-08-17T17:36:36.562Z"
+    },
+    "op.control.maxBio": {
+      "text": "طول السيرة الذاتية الأقصى",
+      "sourceHash": "a0b891ea0ece",
+      "updatedAt": "2026-08-17T17:36:36.562Z"
+    },
+    "op.control.maxBioHint": {
+      "text": "حد الأحرف لوصف الملف الشخصي بتنسيق BBCode.",
+      "sourceHash": "63b69d9c925e",
+      "updatedAt": "2026-08-17T17:36:36.562Z"
+    },
+    "op.control.autogenAccounts": {
+      "text": "إنشاء الحسابات تلقائياً",
+      "sourceHash": "ea2935b73e48",
+      "updatedAt": "2026-08-17T17:36:36.562Z"
+    },
+    "op.control.premiumModels": {
+      "text": "نماذج مميزة",
+      "sourceHash": "1db84bd8860a",
+      "updatedAt": "2026-08-17T17:36:36.562Z"
+    },
+    "op.control.premiumHint": {
+      "text": "تمكين توجيه نماذج OpenRouter المميزة عند تكوينها على الخادم.",
+      "sourceHash": "636f47dd34dc",
+      "updatedAt": "2026-08-17T17:36:36.562Z"
+    },
+    "op.control.requireReview": {
+      "text": "مراجعة بشرية مطلوبة",
+      "sourceHash": "1a4321561031",
+      "updatedAt": "2026-08-17T17:36:36.562Z"
+    },
+    "op.catalog.noMatches": {
+      "text": "لا توجد مصادر مطابقة",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T17:36:40.052Z"
+    },
+    "op.catalog.noMatchesHint": {
+      "text": "عدل الفلاتر أو اسحب ملف CSV فوقه لدمج المصادر في السجل.",
+      "sourceHash": "e82983fce0de",
+      "updatedAt": "2026-08-17T17:36:40.052Z"
+    },
+    "op.catalog.loadFailed": {
+      "text": "لا يمكن تحميل سجل المصادر",
+      "sourceHash": "38cec25d4b3c",
+      "updatedAt": "2026-08-17T17:36:40.052Z"
+    },
+    "op.catalog.allCountries": {
+      "text": "جميع الدول",
+      "sourceHash": "b5fccc286fd7",
+      "updatedAt": "2026-08-17T17:36:40.052Z"
+    },
+    "op.catalog.allWatch": {
+      "text": "جميع المشاهدات",
+      "sourceHash": "0ac44d5c86a1",
+      "updatedAt": "2026-08-17T17:36:40.052Z"
+    },
+    "op.catalog.allRetrieval": {
+      "text": "جميع عمليات الاسترجاع",
+      "sourceHash": "386ffc567692",
+      "updatedAt": "2026-08-17T17:36:40.052Z"
+    },
+    "op.catalog.allHealth": {
+      "text": "جميع الصحة",
+      "sourceHash": "1520fa11da38",
+      "updatedAt": "2026-08-17T17:36:40.052Z"
+    },
+    "op.catalog.prevPage": {
+      "text": "صفحة سابقة",
+      "sourceHash": "81f547195bef",
+      "updatedAt": "2026-08-17T17:36:40.052Z"
+    },
+    "op.mail.body": {
+      "text": "نص عادي — ملفوف في قالب HTML عند التفعيل",
+      "sourceHash": "77bf9d220248",
+      "updatedAt": "2026-08-17T17:36:42.669Z"
+    },
+    "op.mail.searchUsers": {
+      "text": "بحث عن المستخدمين…",
+      "sourceHash": "71cd28d65523",
+      "updatedAt": "2026-08-17T17:36:42.669Z"
+    },
+    "op.mail.searchUsersBtn": {
+      "text": "بحث عن المستخدمين",
+      "sourceHash": "1bd6226dd199",
+      "updatedAt": "2026-08-17T17:36:42.669Z"
+    },
+    "op.mail.importFormats": {
+      "text": "استخدم CSV، TSV، TXT، أو JSON",
+      "sourceHash": "5dcb9d06982e",
+      "updatedAt": "2026-08-17T17:36:42.669Z"
+    },
+    "op.mail.importFailed": {
+      "text": "فشل الاستيراد",
+      "sourceHash": "fbae892997d9",
+      "updatedAt": "2026-08-17T17:36:42.669Z"
+    },
+    "op.mail.importing": {
+      "text": "جاري الاستيراد…",
+      "sourceHash": "820599da89a1",
+      "updatedAt": "2026-08-17T17:36:42.669Z"
+    },
+    "op.mail.dropList": {
+      "text": "اسحب وأفلته لإضافته",
+      "sourceHash": "29511565da37",
+      "updatedAt": "2026-08-17T17:36:42.669Z"
+    },
+    "op.mail.loadFailed": {
+      "text": "فشل تحميل البريد",
+      "sourceHash": "2f3b7781aa67",
+      "updatedAt": "2026-08-17T17:36:42.669Z"
+    },
+    "op.mail.clearing": {
+      "text": "Clearing…",
+      "sourceHash": "bc7a2b58694e",
+      "updatedAt": "2026-08-17T17:36:44.543Z"
+    },
+    "op.mail.clearInboxConfirm": {
+      "text": "Clear entire inbox?",
+      "sourceHash": "28d19bf7ae0d",
+      "updatedAt": "2026-08-17T17:36:44.543Z"
+    },
+    "op.mail.clearMessageConfirm": {
+      "text": "Clear this message?",
+      "sourceHash": "2fe6e2fe7526",
+      "updatedAt": "2026-08-17T17:36:44.543Z"
+    },
+    "op.mail.clearAll": {
+      "text": "Clear all",
+      "sourceHash": "c043160a89ba",
+      "updatedAt": "2026-08-17T17:36:44.543Z"
+    },
+    "op.mail.clearMsg": {
+      "text": "Clear message",
+      "sourceHash": "0edf6a5099e5",
+      "updatedAt": "2026-08-17T17:36:44.543Z"
+    },
+    "op.mail.usersFailed": {
+      "text": "Could not load users",
+      "sourceHash": "47dd74c0c423",
+      "updatedAt": "2026-08-17T17:36:44.543Z"
+    },
+    "op.mail.passwordCopied": {
+      "text": "New password copied to clipboard",
+      "sourceHash": "c69fd69b1d86",
+      "updatedAt": "2026-08-17T17:36:44.543Z"
+    },
+    "op.mail.actionFailed": {
+      "text": "Action failed",
+      "sourceHash": "57af949595e3",
+      "updatedAt": "2026-08-17T17:36:44.543Z"
+    },
+    "op.mail.noUserMatch": {
+      "text": "لا يوجد مستخدمون يطابقون هذا البحث.",
+      "sourceHash": "f0f3d70ce761",
+      "updatedAt": "2026-08-17T17:37:29.875Z"
+    },
+    "op.mail.noUsers": {
+      "text": "لا مستخدمين حتى الآن.",
+      "sourceHash": "26930b5f7c6f",
+      "updatedAt": "2026-08-17T17:37:29.875Z"
+    },
+    "op.support.loading": {
+      "text": "جاري تحميل صندوق الدعم…",
+      "sourceHash": "251c89cee942",
+      "updatedAt": "2026-08-17T17:37:29.875Z"
+    },
+    "op.support.noThreads": {
+      "text": "لا خيوط حسابات في هذا العرض.",
+      "sourceHash": "7af18f8ac894",
+      "updatedAt": "2026-08-17T17:37:29.875Z"
+    },
+    "op.support.selectThread": {
+      "text": "حدد محادثة حساب للإشراف.",
+      "sourceHash": "e10ec1ca0116",
+      "updatedAt": "2026-08-17T17:37:29.875Z"
+    },
+    "op.support.filters": {
+      "text": "فلاتر الخيوط",
+      "sourceHash": "37a1b6aef086",
+      "updatedAt": "2026-08-17T17:37:29.875Z"
+    },
+    "op.support.conversations": {
+      "text": "محادثات الدعم",
+      "sourceHash": "9f5c09b82d64",
+      "updatedAt": "2026-08-17T17:37:29.875Z"
+    },
+    "op.support.clientEnv": {
+      "text": "بيئة العميل",
+      "sourceHash": "cd3dc59a3a60",
+      "updatedAt": "2026-08-17T17:37:29.875Z"
+    },
+    "op.support.quickReplies": {
+      "text": "ردود سريعة رسمية",
+      "sourceHash": "95c4666d38c0",
+      "updatedAt": "2026-08-17T17:37:46.823Z"
+    },
+    "op.support.attach": {
+      "text": "إرفاق صورة",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T17:37:46.823Z"
+    },
+    "op.support.compose": {
+      "text": "اكتب ردًا…",
+      "sourceHash": "d50d154a1a48",
+      "updatedAt": "2026-08-17T17:37:46.823Z"
+    },
+    "op.support.awaiting": {
+      "text": "في انتظار العميل",
+      "sourceHash": "25e174a919de",
+      "updatedAt": "2026-08-17T17:37:46.823Z"
+    },
+    "op.support.loadFailed": {
+      "text": "فشل في تحميل الوارد",
+      "sourceHash": "23be3576fc7a",
+      "updatedAt": "2026-08-17T17:37:46.823Z"
+    },
+    "op.support.attachFailed": {
+      "text": "تعذر إرفاق صورة",
+      "sourceHash": "f9ce8a5e6365",
+      "updatedAt": "2026-08-17T17:37:46.823Z"
+    },
+    "op.support.quickSent": {
+      "text": "تم إرسال رد سريع",
+      "sourceHash": "bec403be3dcf",
+      "updatedAt": "2026-08-17T17:37:46.823Z"
+    },
+    "op.support.syncOn": {
+      "text": "Inbox sync is always on",
+      "sourceHash": "5e01620f8932",
+      "updatedAt": "2026-08-17T17:37:49.330Z"
+    },
+    "op.support.reconnecting": {
+      "text": "Reconnecting — polling until stream recovers",
+      "sourceHash": "5929cb0aabbf",
+      "updatedAt": "2026-08-17T17:37:49.330Z"
+    },
+    "op.support.sync": {
+      "text": "Sync…",
+      "sourceHash": "9688745a86c2",
+      "updatedAt": "2026-08-17T17:37:49.330Z"
+    },
+    "op.support.archiveAll": {
+      "text": "Archive all resolved conversations from the active inbox",
+      "sourceHash": "c2f8e41d55c6",
+      "updatedAt": "2026-08-17T17:37:49.330Z"
+    },
+    "op.support.archiveOne": {
+      "text": "Archive this resolved conversation out of the inbox",
+      "sourceHash": "0a34b2f4d62b",
+      "updatedAt": "2026-08-17T17:37:49.330Z"
+    },
+    "op.support.assignYou": {
+      "text": "Assign this thread to your staff profile",
+      "sourceHash": "1885e2da5885",
+      "updatedAt": "2026-08-17T17:37:49.330Z"
+    },
+    "op.support.markAwaiting": {
+      "text": "Mark as awaiting customer reply",
+      "sourceHash": "926c16ea9910",
+      "updatedAt": "2026-08-17T17:37:49.330Z"
+    },
+    "op.support.resolve": {
+      "text": "Resolve and close this conversation",
+      "sourceHash": "3c9880945867",
+      "updatedAt": "2026-08-17T17:37:49.330Z"
+    },
+    "op.support.reportedIp": {
+      "text": "IP العميل المسجل في آخر اتصال",
+      "sourceHash": "8f1e7deadbe3",
+      "updatedAt": "2026-08-17T17:37:51.305Z"
+    },
+    "op.support.ipUnknown": {
+      "text": "IP غير معروف",
+      "sourceHash": "cf40c1ba981e",
+      "updatedAt": "2026-08-17T17:37:51.305Z"
+    },
+    "op.support.browserFamily": {
+      "text": "عائلة المتصفح من User Agent",
+      "sourceHash": "bc49f40f1bed",
+      "updatedAt": "2026-08-17T17:37:51.305Z"
+    },
+    "op.support.browserUnknown": {
+      "text": "المتصفح غير معروف",
+      "sourceHash": "5476220afd31",
+      "updatedAt": "2026-08-17T17:37:51.305Z"
+    },
+    "op.support.uaMissing": {
+      "text": "لم يتم التقاط User Agent",
+      "sourceHash": "e89923195485",
+      "updatedAt": "2026-08-17T17:37:51.305Z"
+    },
+    "op.support.attachHint": {
+      "text": "أرفق صورة (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T17:37:51.305Z"
+    },
+    "op.support.sendAssign": {
+      "text": "أرسل الرد واطوِّر الخيط إلى حسابك",
+      "sourceHash": "61eb025fb429",
+      "updatedAt": "2026-08-17T17:37:51.305Z"
+    },
+    "op.autosave.saved": {
+      "text": "تم حفظ جميع التغييرات",
+      "sourceHash": "9595b7da9f61",
+      "updatedAt": "2026-08-17T17:37:51.305Z"
+    },
+    "op.autosave.writing": {
+      "text": "كتابة التغييرات…",
+      "sourceHash": "ea499fa21dce",
+      "updatedAt": "2026-08-17T17:37:53.046Z"
+    },
+    "op.autosave.soon": {
+      "text": "حفظ قريباً",
+      "sourceHash": "dac9adeeec35",
+      "updatedAt": "2026-08-17T17:37:53.046Z"
+    },
+    "op.autosave.pending": {
+      "text": "التغييرات pending — سيتم الحفظ قريباً",
+      "sourceHash": "310111dfce84",
+      "updatedAt": "2026-08-17T17:37:53.046Z"
+    },
+    "op.autosave.failed": {
+      "text": "فشل الحفظ",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T17:37:53.046Z"
+    },
+    "op.autosave.retry": {
+      "text": "فشل الحفظ الأخير — اضغط لإعادة المحاولة",
+      "sourceHash": "3ca55d67a41b",
+      "updatedAt": "2026-08-17T17:37:53.046Z"
+    },
+    "op.tour.replay": {
+      "text": "إعادة تشغيل جولة المشغل",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T17:37:53.046Z"
+    },
+    "op.tour.label": {
+      "text": "جولة",
+      "sourceHash": "cd9e8f38bcfe",
+      "updatedAt": "2026-08-17T17:37:53.046Z"
+    },
+    "op.modules.runtime": {
+      "text": "وقت التشغيل",
+      "sourceHash": "c4740e4ca28c",
+      "updatedAt": "2026-08-17T17:37:53.046Z"
+    },
+    "op.modules.autoCheck": {
+      "text": "التحقق التلقائي",
+      "sourceHash": "2e0f9b9f2e4f",
+      "updatedAt": "2026-08-17T17:38:00.057Z"
+    },
+    "op.pulse.reviews": {
+      "text": "التقييمات",
+      "sourceHash": "b83c4cdafef5",
+      "updatedAt": "2026-08-17T17:38:00.057Z"
+    },
+    "op.pulse.stored": {
+      "text": "مخزن",
+      "sourceHash": "b2b53ee4fc1a",
+      "updatedAt": "2026-08-17T17:38:00.057Z"
+    },
+    "support.chat.title": {
+      "text": "دعم Octivate",
+      "sourceHash": "1b54a7b1a62f",
+      "updatedAt": "2026-08-17T17:38:00.057Z"
+    },
+    "support.chat.resolved": {
+      "text": "تم حل المحادثة",
+      "sourceHash": "25aaa3efa2f8",
+      "updatedAt": "2026-08-17T17:38:00.057Z"
+    },
+    "support.chat.resolvedClosed": {
+      "text": "تم الحفظ · إغلاق المحادثة",
+      "sourceHash": "afd5f6b66e03",
+      "updatedAt": "2026-08-17T17:38:00.057Z"
+    },
+    "support.chat.accountSupport": {
+      "text": "دعم الحساب",
+      "sourceHash": "6bd44611563e",
+      "updatedAt": "2026-08-17T17:38:00.057Z"
+    },
+    "support.chat.accountSupportHint": {
+      "text": "دعم الحساب · عادة ما يرد خلال يوم عمل",
+      "sourceHash": "db80d629390b",
+      "updatedAt": "2026-08-17T17:38:00.057Z"
+    },
+    "support.chat.attach": {
+      "text": "Attach image",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T17:38:01.420Z"
+    },
+    "support.chat.placeholder": {
+      "text": "Write a formal message…",
+      "sourceHash": "08fc39b852ec",
+      "updatedAt": "2026-08-17T17:38:01.420Z"
+    },
+    "support.chat.open": {
+      "text": "Open support",
+      "sourceHash": "3a80862045b7",
+      "updatedAt": "2026-08-17T17:38:01.420Z"
+    },
+    "support.chat.openAccount": {
+      "text": "Open account support chat",
+      "sourceHash": "afa415115cd0",
+      "updatedAt": "2026-08-17T17:38:01.420Z"
+    },
+    "support.chat.minimize": {
+      "text": "Minimize chat",
+      "sourceHash": "f6068d8c1fcc",
+      "updatedAt": "2026-08-17T17:38:01.420Z"
+    },
+    "support.chat.close": {
+      "text": "Close chat",
+      "sourceHash": "eb376184348e",
+      "updatedAt": "2026-08-17T17:38:01.420Z"
+    },
+    "support.chat.send": {
+      "text": "Send message",
+      "sourceHash": "c70a890d1411",
+      "updatedAt": "2026-08-17T17:38:01.420Z"
+    },
+    "support.chat.assignedStaff": {
+      "text": "Assigned Octivate staff member",
+      "sourceHash": "e7a8f38cc9f1",
+      "updatedAt": "2026-08-17T17:38:01.420Z"
+    },
+    "onboard.ui.openTutorial": {
+      "text": "فتح دليل العمل",
+      "sourceHash": "e663ca7b5a5b",
+      "updatedAt": "2026-08-17T17:38:05.214Z"
+    },
+    "onboard.ui.replayWorkspace": {
+      "text": "إعادة تشغيل جولة العمل",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T17:38:05.214Z"
+    },
+    "onboard.ui.replayOperator": {
+      "text": "إعادة تشغيل جولة المشغل",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T17:38:05.214Z"
+    },
+    "onboard.ws.1.kicker": {
+      "text": "الخطوة 1 · نظرة عامة",
+      "sourceHash": "9a4fd5299ca7",
+      "updatedAt": "2026-08-17T17:38:05.214Z"
+    },
+    "onboard.ws.1.title": {
+      "text": "ابدأ من",
+      "sourceHash": "211f5f534912",
+      "updatedAt": "2026-08-17T17:38:05.214Z"
+    },
+    "onboard.ws.1.accent": {
+      "text": "منزل العمل",
+      "sourceHash": "a471f82221dc",
+      "updatedAt": "2026-08-17T17:38:05.214Z"
+    },
+    "onboard.ws.1.tagline": {
+      "text": "ملخصات، مشاريع، تغطية، واستخدام في مكان واحد.",
+      "sourceHash": "b68671724729",
+      "updatedAt": "2026-08-17T17:38:05.214Z"
+    },
+    "onboard.ws.1.desc": {
+      "text": "نظرة عامة هي المقر الرئيسي للعمل القراري في الكاريبي. استخدم الشريط الجانبي للانتقال بين المشاريع، والملخصات، والمراقبة، والدعم المباشر — بالإضافة إلى خريطة تغطية المسرح للسياق الجغرافي.",
+      "sourceHash": "4f772aad2485",
+      "updatedAt": "2026-08-17T17:38:05.214Z"
+    },
+    "onboard.ws.1.b1.lead": {
+      "text": "الشريط الجانبي",
+      "sourceHash": "f5171c931c5c",
+      "updatedAt": "2026-08-17T17:38:21.522Z"
+    },
+    "onboard.ws.1.b1": {
+      "text": "نظرة عامة على القفزات، مشاريع، ملخصات، ومراقبين",
+      "sourceHash": "09c2c0b6bc3d",
+      "updatedAt": "2026-08-17T17:38:21.522Z"
+    },
+    "onboard.ws.1.b2.lead": {
+      "text": "اطرح سؤالاً",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T17:38:21.522Z"
+    },
+    "onboard.ws.1.b2": {
+      "text": "يفتح مسرح مشروع بضغطة واحدة",
+      "sourceHash": "c1d04d6cd14c",
+      "updatedAt": "2026-08-17T17:38:21.522Z"
+    },
+    "onboard.ws.1.b3.lead": {
+      "text": "إعادة التشغيل",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T17:38:21.522Z"
+    },
+    "onboard.ws.1.b3": {
+      "text": "هذه الجولة في أي وقت من دليل العمل",
+      "sourceHash": "c80024feee50",
+      "updatedAt": "2026-08-17T17:38:21.522Z"
+    },
+    "onboard.ws.2.kicker": {
+      "text": "الخطوة 2 · تغطية المسرح",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T17:38:21.522Z"
+    },
+    "onboard.ws.2.title": {
+      "text": "شاهد",
+      "sourceHash": "acc2c52c24a5",
+      "updatedAt": "2026-08-17T17:38:21.522Z"
+    },
+    "onboard.ws.2.accent": {
+      "text": "خريطة تغطية المسرح",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T17:39:02.227Z"
+    },
+    "onboard.ws.2.tagline": {
+      "text": "جغرافيا المشاريع الكاريبيحة الحية على Overview.",
+      "sourceHash": "50820f6be866",
+      "updatedAt": "2026-08-17T17:39:02.227Z"
+    },
+    "onboard.ws.2.desc": {
+      "text": "تقع خريطة تغطية المسرح على Overview. تظهر نقاط الساخنة مواقع المشاريع؛ التحويم لعرض العدادات، والنقر على دولة لفتح قائمة المشاريع، واستخدام Live / تحديث عند تحديث مساحة العمل.",
+      "sourceHash": "f3d174ce0faa",
+      "updatedAt": "2026-08-17T17:39:02.227Z"
+    },
+    "onboard.ws.2.b1.lead": {
+      "text": "نقاط ساخنة",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T17:39:02.227Z"
+    },
+    "onboard.ws.2.b1": {
+      "text": "حجم حسب عدد المشاريع عبر السلطات القضائية",
+      "sourceHash": "31d40c2d9d01",
+      "updatedAt": "2026-08-17T17:39:02.227Z"
+    },
+    "onboard.ws.2.b2.lead": {
+      "text": "النقر",
+      "sourceHash": "79cbc5eb672a",
+      "updatedAt": "2026-08-17T17:39:02.227Z"
+    },
+    "onboard.ws.2.b2": {
+      "text": "يفتح نافذة منبثقة من المشاريع لهذه الدولة",
+      "sourceHash": "88d6ba3584eb",
+      "updatedAt": "2026-08-17T17:39:02.227Z"
+    },
+    "onboard.ws.2.b3.lead": {
+      "text": "حية",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T17:39:02.227Z"
+    },
+    "onboard.ws.2.b3": {
+      "text": "pulses when coverage data refreshes",
+      "sourceHash": "dbb22d3bffab",
+      "updatedAt": "2026-08-17T17:39:04.631Z"
+    },
+    "onboard.ws.3.kicker": {
+      "text": "Step 3 · Projects",
+      "sourceHash": "df1977d42ab9",
+      "updatedAt": "2026-08-17T17:39:04.631Z"
+    },
+    "onboard.ws.3.title": {
+      "text": "Create a",
+      "sourceHash": "7d9043bfad91",
+      "updatedAt": "2026-08-17T17:39:04.631Z"
+    },
+    "onboard.ws.3.accent": {
+      "text": "decision theatre",
+      "sourceHash": "f45ac24f2d52",
+      "updatedAt": "2026-08-17T17:39:04.631Z"
+    },
+    "onboard.ws.3.tagline": {
+      "text": "One project = one strategic thread.",
+      "sourceHash": "f3a2465015c7",
+      "updatedAt": "2026-08-17T17:39:04.631Z"
+    },
+    "onboard.ws.3.desc": {
+      "text": "Open Projects and start a new theatre with country, sector, and a question. Upload documents before you run agents when you have proprietary context.",
+      "sourceHash": "4997ef5ee5aa",
+      "updatedAt": "2026-08-17T17:39:04.631Z"
+    },
+    "onboard.ws.3.b1.lead": {
+      "text": "New project",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T17:39:04.631Z"
+    },
+    "onboard.ws.3.b1": {
+      "text": "opens the create flow",
+      "sourceHash": "aca548b6f759",
+      "updatedAt": "2026-08-17T17:39:04.631Z"
+    },
+    "onboard.ws.3.b2.lead": {
+      "text": "Each project",
+      "sourceHash": "487ba03c31ee",
+      "updatedAt": "2026-08-17T17:39:10.243Z"
+    },
+    "onboard.ws.3.b2": {
+      "text": "keeps its own question, docs, and runs",
+      "sourceHash": "483a4a50f88f",
+      "updatedAt": "2026-08-17T17:39:10.243Z"
+    },
+    "onboard.ws.3.b3.lead": {
+      "text": "Sign-in guests",
+      "sourceHash": "fefaa17e3676",
+      "updatedAt": "2026-08-17T17:39:10.243Z"
+    },
+    "onboard.ws.3.b3": {
+      "text": "can explore the workspace freely on demo access",
+      "sourceHash": "275de29aaeb9",
+      "updatedAt": "2026-08-17T17:39:10.243Z"
+    },
+    "onboard.ws.4.kicker": {
+      "text": "Step 4 · Run",
+      "sourceHash": "44733d3f28a9",
+      "updatedAt": "2026-08-17T17:39:10.243Z"
+    },
+    "onboard.ws.4.title": {
+      "text": "Open a project,",
+      "sourceHash": "c18dad9153ff",
+      "updatedAt": "2026-08-17T17:39:10.243Z"
+    },
+    "onboard.ws.4.accent": {
+      "text": "then run",
+      "sourceHash": "1c015e3e76ad",
+      "updatedAt": "2026-08-17T17:39:10.243Z"
+    },
+    "onboard.ws.4.tagline": {
+      "text": "Start a theatre first — then ask and run.",
+      "sourceHash": "708f17ba529c",
+      "updatedAt": "2026-08-17T17:39:10.243Z"
+    },
+    "onboard.ws.4.desc": {
+      "text": "إذا لم يكن لديك مشروع بعد، ابدأ مشروعًا جديدًا. داخل مسرح موجود، اكتب سؤالًا استراتيجيًا وشغل أنبوب Power–Systems–Narratives.",
+      "sourceHash": "56e25027be02",
+      "updatedAt": "2026-08-17T17:39:46.965Z"
+    },
+    "onboard.ws.4.b1.lead": {
+      "text": "مشروع جديد",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T17:39:46.965Z"
+    },
+    "onboard.ws.4.b1": {
+      "text": "ينشئ مسرحًا للقرارات لجولة هذا",
+      "sourceHash": "0f82e9d50b72",
+      "updatedAt": "2026-08-17T17:39:46.965Z"
+    },
+    "onboard.ws.4.b2.lead": {
+      "text": "سؤال",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T17:39:46.965Z"
+    },
+    "onboard.ws.4.b2": {
+      "text": "يحمّل مقدمات أو مطالبتك الخاصة",
+      "sourceHash": "a120c1682683",
+      "updatedAt": "2026-08-17T17:39:46.965Z"
+    },
+    "onboard.ws.4.b3.lead": {
+      "text": "شغل",
+      "sourceHash": "b1b392607dea",
+      "updatedAt": "2026-08-17T17:39:46.965Z"
+    },
+    "onboard.ws.4.b3": {
+      "text": "يبدأ أنبوب OpenRouter المباشر",
+      "sourceHash": "a4f5d7412be6",
+      "updatedAt": "2026-08-17T17:39:46.965Z"
+    },
+    "onboard.ws.5.kicker": {
+      "text": "الخطوة 5 · ملخصات",
+      "sourceHash": "ab23c9919bc4",
+      "updatedAt": "2026-08-17T17:39:46.965Z"
+    },
+    "onboard.ws.5.title": {
+      "text": "فتح",
+      "sourceHash": "2d7eeba9f46c",
+      "updatedAt": "2026-08-17T17:40:14.244Z"
+    },
+    "onboard.ws.5.accent": {
+      "text": "ملخص القرار",
+      "sourceHash": "9a4025f24b62",
+      "updatedAt": "2026-08-17T17:40:14.244Z"
+    },
+    "onboard.ws.5.tagline": {
+      "text": "التوصيات، والأدلة، والفجوات.",
+      "sourceHash": "6063763a4ffb",
+      "updatedAt": "2026-08-17T17:40:14.244Z"
+    },
+    "onboard.ws.5.desc": {
+      "text": "تنجح الجولات في الملخصات. افتح الملخص لمراجعة الحكم، والأدلة، وخطط المراقبة، وتصدير حزمة قابلة للمشاركة للجهات المعنية.",
+      "sourceHash": "f07d8f13ae30",
+      "updatedAt": "2026-08-17T17:40:14.244Z"
+    },
+    "onboard.ws.5.b1.lead": {
+      "text": "ملخصات",
+      "sourceHash": "e913003e38d3",
+      "updatedAt": "2026-08-17T17:40:14.244Z"
+    },
+    "onboard.ws.5.b1": {
+      "text": "تعرض كل حزم قرارات مكتملة",
+      "sourceHash": "bea89fd9ef53",
+      "updatedAt": "2026-08-17T17:40:14.244Z"
+    },
+    "onboard.ws.5.b2.lead": {
+      "text": "التصدير",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T17:40:14.244Z"
+    },
+    "onboard.ws.5.b2": {
+      "text": "إنشاء Word / PDF مخصص للجهات المعنية",
+      "sourceHash": "c9bce8ccfa12",
+      "updatedAt": "2026-08-17T17:40:14.244Z"
+    },
+    "onboard.op.7.b2.lead": {
+      "text": "خيط مناقشة مفتوح",
+      "sourceHash": "9309e686d270",
+      "updatedAt": "2026-08-17T17:42:34.782Z"
+    },
+    "onboard.op.7.b2": {
+      "text": "ينتقل إلى دعم العملاء لهذا الحساب",
+      "sourceHash": "cc8dadf92751",
+      "updatedAt": "2026-08-17T17:42:34.782Z"
+    },
+    "onboard.op.7.b3.lead": {
+      "text": "مفعل دائماً",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T17:42:34.782Z"
+    },
+    "onboard.op.7.b3": {
+      "text": "SSE يبقى فعالاً أثناء دخولك كمشغل",
+      "sourceHash": "2e8dba7c4567",
+      "updatedAt": "2026-08-17T17:42:34.782Z"
+    },
+    "onboard.op.8.kicker": {
+      "text": "الخطوة 8 · ترجمة",
+      "sourceHash": "a025237b5a1e",
+      "updatedAt": "2026-08-17T17:42:34.782Z"
+    },
+    "onboard.op.8.title": {
+      "text": "مشغل",
+      "sourceHash": "d0e687b079fb",
+      "updatedAt": "2026-08-17T17:42:34.782Z"
+    },
+    "onboard.op.8.accent": {
+      "text": "تحكم في اللغة",
+      "sourceHash": "c834218d9e24",
+      "updatedAt": "2026-08-17T17:42:34.782Z"
+    },
+    "onboard.op.8.tagline": {
+      "text": "كتالوجات حقيقية الوقت نفسها كما في الموقع العام.",
+      "sourceHash": "b9c781d8ef02",
+      "updatedAt": "2026-08-17T17:42:34.782Z"
+    },
+    "onboard.op.8.desc": {
+      "text": "قوائم اللغات تُظهر chrome الأعضاء والقانوني. معاينة لغات من تحكم لغة الموقع العام; مزامنة قوائم كاملة من عمليات.",
+      "sourceHash": "76e73ee68e58",
+      "updatedAt": "2026-08-17T17:42:38.010Z"
+    },
+    "onboard.op.8.b1.lead": {
+      "text": "chrome العام",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T17:42:38.010Z"
+    },
+    "onboard.op.8.b1": {
+      "text": "يستضيف محدد اللغة في صفحات التسويق",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T17:42:38.010Z"
+    },
+    "onboard.op.8.b2.lead": {
+      "text": "قوائم",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T17:42:38.010Z"
+    },
+    "onboard.op.8.b2": {
+      "text": "تتطابق ما يراه الأعضاء وزوار صفحات الهبوط",
+      "sourceHash": "0fbdcdc9ad6a",
+      "updatedAt": "2026-08-17T17:42:38.010Z"
+    },
+    "onboard.op.8.b3.lead": {
+      "text": "عمليات",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T17:42:38.010Z"
+    },
+    "onboard.op.8.b3": {
+      "text": "يستضيف أدوات مزامنة القوائم الكاملة",
+      "sourceHash": "eb7aa3e340d4",
+      "updatedAt": "2026-08-17T17:42:38.010Z"
+    },
+    "onboard.op.9.kicker": {
+      "text": "الخطوة 9 · إنارة",
+      "sourceHash": "7eafa4130147",
+      "updatedAt": "2026-08-17T17:42:38.010Z"
+    },
+    "onboard.op.9.b3.lead": {
+      "text": "الوصول",
+      "sourceHash": "d660049bc1f2",
+      "updatedAt": "2026-08-17T17:43:15.286Z"
+    },
+    "onboard.op.9.b3": {
+      "text": "استخدم الإضاءة التي تقلل من إجهاد العين",
+      "sourceHash": "5c3a02dac3e5",
+      "updatedAt": "2026-08-17T17:43:15.286Z"
+    },
+    "onboard.op.10.kicker": {
+      "text": "الخطوة 10 · البريد",
+      "sourceHash": "191b38258aa7",
+      "updatedAt": "2026-08-17T17:43:15.286Z"
+    },
+    "onboard.op.10.title": {
+      "text": "إرسال من حسابك",
+      "sourceHash": "2a06a5d40f16",
+      "updatedAt": "2026-08-17T17:43:15.286Z"
+    },
+    "onboard.op.10.accent": {
+      "text": "الحساب",
+      "sourceHash": "ca20728d35f0",
+      "updatedAt": "2026-08-17T17:43:15.286Z"
+    },
+    "onboard.op.10.tagline": {
+      "text": "قائمة بريد + Haraka الصادر.",
+      "sourceHash": "551cba57a6f5",
+      "updatedAt": "2026-08-17T17:43:15.286Z"
+    },
+    "onboard.op.10.desc": {
+      "text": "يتم إرسال البريد إلى المشتركين باستخدام قالب HTML الافتراضي. عنوانك المسجل دخول هو العنوان المفضل من; يأتي مستلمو القائمة من قائمة الهبوط البريدية.",
+      "sourceHash": "424de746cee0",
+      "updatedAt": "2026-08-17T17:43:15.286Z"
+    },
+    "onboard.op.10.b1.lead": {
+      "text": "من",
+      "sourceHash": "3f66052a107e",
+      "updatedAt": "2026-08-17T17:43:15.286Z"
+    },
+    "onboard.op.12.desc": {
+      "text": "Pricing updates the live plans shown on the marketing site. Keep amounts and feature notes accurate before publishing.",
+      "sourceHash": "82983571e556",
+      "updatedAt": "2026-08-17T17:56:22.823Z"
+    },
+    "onboard.op.12.b1.lead": {
+      "text": "Autosave",
+      "sourceHash": "ff6ad92011f3",
+      "updatedAt": "2026-08-17T17:56:22.823Z"
+    },
+    "onboard.op.12.b1": {
+      "text": "writes to billing plans storage",
+      "sourceHash": "af7675c6dd25",
+      "updatedAt": "2026-08-17T17:56:22.823Z"
+    },
+    "onboard.op.12.b2.lead": {
+      "text": "Public page",
+      "sourceHash": "9e54993aed01",
+      "updatedAt": "2026-08-17T17:56:22.823Z"
+    },
+    "onboard.op.12.b2": {
+      "text": "reads the same source of truth",
+      "sourceHash": "524d72da3a6b",
+      "updatedAt": "2026-08-17T17:56:22.823Z"
+    },
+    "onboard.op.13.kicker": {
+      "text": "Step 13 · Exports",
+      "sourceHash": "7eb4878ff011",
+      "updatedAt": "2026-08-17T17:56:22.823Z"
+    },
+    "onboard.op.13.title": {
+      "text": "Shape brief",
+      "sourceHash": "d926be00a71b",
+      "updatedAt": "2026-08-17T17:56:22.823Z"
+    },
+    "onboard.op.13.accent": {
+      "text": "templates",
+      "sourceHash": "7981a4e7e9bd",
+      "updatedAt": "2026-08-17T17:56:22.823Z"
+    },
+    "onboard.op.13.tagline": {
+      "text": "تصديرlayouts HTML للمستثمرين.",
+      "sourceHash": "ab0a7d1a6206",
+      "updatedAt": "2026-08-17T17:56:26.527Z"
+    },
+    "onboard.op.13.desc": {
+      "text": "التصدير يتيح لك تصميم، معاينة، ورفع قوالب HTML المستخدمة عند خروج الملخصات من المنصة كحزم.",
+      "sourceHash": "37e62096c9c6",
+      "updatedAt": "2026-08-17T17:56:26.527Z"
+    },
+    "onboard.op.13.b1.lead": {
+      "text": "معاينة",
+      "sourceHash": "f1fbb2b43dca",
+      "updatedAt": "2026-08-17T17:56:26.527Z"
+    },
+    "onboard.op.13.b1": {
+      "text": "يعرض ضد ملخص تجريبي",
+      "sourceHash": "34bf59f2f261",
+      "updatedAt": "2026-08-17T17:56:26.527Z"
+    },
+    "onboard.op.13.b2.lead": {
+      "text": "رفع",
+      "sourceHash": "8bdf057f91e7",
+      "updatedAt": "2026-08-17T17:56:26.527Z"
+    },
+    "onboard.op.13.b2": {
+      "text": "يقبل حزم HTML المصممة",
+      "sourceHash": "54b4e5868afb",
+      "updatedAt": "2026-08-17T17:56:26.527Z"
+    },
+    "onboard.op.14.kicker": {
+      "text": "الخطوة 14 · قانوني",
+      "sourceHash": "ae9396d21227",
+      "updatedAt": "2026-08-17T17:56:26.527Z"
+    },
+    "onboard.op.14.title": {
+      "text": "سياسة الخصوصية",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T17:56:26.527Z"
+    },
+    "onboard.op.14.accent": {
+      "text": "شروط الخدمة",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T17:56:29.967Z"
+    },
+    "onboard.op.14.tagline": {
+      "text": "افتح أي صفحة من القائمة الجانبية السفلى.",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T17:56:29.967Z"
+    },
+    "onboard.op.14.desc": {
+      "text": "يقبل الأعضاء سياسة الخصوصية وشروط الخدمة عند التسجيل. يمكن للمشغلين فتح أي صفحة عامة من روابط القائمة الجانبية السفلى في أي وقت.",
+      "sourceHash": "9ba7513c9ea9",
+      "updatedAt": "2026-08-17T17:56:29.967Z"
+    },
+    "onboard.op.14.b1.lead": {
+      "text": "سياسة الخصوصية",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T17:56:29.967Z"
+    },
+    "onboard.op.14.b1": {
+      "text": "نشرت للثقة العامة",
+      "sourceHash": "45a08c67c9ae",
+      "updatedAt": "2026-08-17T17:56:29.967Z"
+    },
+    "onboard.op.14.b2.lead": {
+      "text": "شروط الخدمة",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T17:56:29.967Z"
+    },
+    "onboard.op.14.b2": {
+      "text": "تنظم حسابات واستخدام المنصة",
+      "sourceHash": "ad5b587dd979",
+      "updatedAt": "2026-08-17T17:56:29.967Z"
+    },
+    "onboard.op.14.b3.lead": {
+      "text": "القائمة الجانبية السفلى",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T17:56:29.967Z"
+    },
+    "onboard.op.14.b3": {
+      "text": "links navigate to the full legal pages",
+      "sourceHash": "9094e6b57be7",
+      "updatedAt": "2026-08-17T17:56:31.986Z"
+    },
+    "onboard.op.15.kicker": {
+      "text": "Step 15 • Debug",
+      "sourceHash": "c5bd8ede0640",
+      "updatedAt": "2026-08-17T17:56:31.986Z"
+    },
+    "onboard.op.15.title": {
+      "text": "Watch the",
+      "sourceHash": "a6490eb13812",
+      "updatedAt": "2026-08-17T17:56:31.986Z"
+    },
+    "onboard.op.15.accent": {
+      "text": "live console",
+      "sourceHash": "961a91cb4e0a",
+      "updatedAt": "2026-08-17T17:56:31.986Z"
+    },
+    "onboard.op.15.tagline": {
+      "text": "OpenRouter, pipeline, mail, and security events.",
+      "sourceHash": "4d26fcf22bcf",
+      "updatedAt": "2026-08-17T17:56:31.986Z"
+    },
+    "onboard.op.15.desc": {
+      "text": "Debug streams ops events. Filter by Mail when testing SMTP, or Security after password/avatar changes. Clear only when you mean it.",
+      "sourceHash": "9dc275e13749",
+      "updatedAt": "2026-08-17T17:56:31.986Z"
+    },
+    "onboard.op.15.b1.lead": {
+      "text": "Mail source",
+      "sourceHash": "2c1dfce6077b",
+      "updatedAt": "2026-08-17T17:56:31.986Z"
+    },
+    "onboard.op.15.b1": {
+      "text": "shows Haraka warn/error payloads",
+      "sourceHash": "95cd087c7f66",
+      "updatedAt": "2026-08-17T17:56:31.986Z"
+    },
+    "onboard.op.15.b2.lead": {
+      "text": "Replay",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T17:56:34.307Z"
+    },
+    "onboard.op.15.b2": {
+      "text": "this tour anytime from Operator Tutorial",
+      "sourceHash": "fe5d5215b04d",
+      "updatedAt": "2026-08-17T17:56:34.307Z"
+    },
+    "common.loading": {
+      "text": "Loading…",
+      "sourceHash": "33ce417454bf",
+      "updatedAt": "2026-08-17T17:56:34.307Z"
+    },
+    "common.save": {
+      "text": "Save",
+      "sourceHash": "efc007a393f6",
+      "updatedAt": "2026-08-17T17:56:34.307Z"
+    },
+    "common.cancel": {
+      "text": "Cancel",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T17:56:34.307Z"
+    },
+    "common.close": {
+      "text": "Close",
+      "sourceHash": "bbfa773e5a63",
+      "updatedAt": "2026-08-17T17:56:34.307Z"
+    },
+    "common.retry": {
+      "text": "Retry",
+      "sourceHash": "9f5cd8a2e880",
+      "updatedAt": "2026-08-17T17:56:34.307Z"
+    },
+    "common.error": {
+      "text": "Something went wrong",
+      "sourceHash": "8d886c0ba6f2",
+      "updatedAt": "2026-08-17T17:56:34.307Z"
+    },
+    "common.home": {
+      "text": "الرئيسية",
+      "sourceHash": "70f8bb9a8a53",
+      "updatedAt": "2026-08-17T17:56:35.598Z"
+    },
+    "common.all": {
+      "text": "الكل",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T17:56:35.598Z"
+    },
+    "common.search": {
+      "text": "بحث…",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T17:56:35.598Z"
+    },
+    "common.create": {
+      "text": "إنشاء",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T17:56:35.598Z"
+    },
+    "common.delete": {
+      "text": "حذف",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T17:56:35.598Z"
+    },
+    "common.edit": {
+      "text": "تعديل",
+      "sourceHash": "5301648dcf6b",
+      "updatedAt": "2026-08-17T17:56:35.598Z"
+    },
+    "common.back": {
+      "text": "عودة",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T17:56:35.598Z"
+    },
+    "common.next": {
+      "text": "التالي",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T17:56:35.598Z"
+    },
+    "common.previous": {
+      "text": "Previous",
+      "sourceHash": "50f94286ba30",
+      "updatedAt": "2026-08-17T17:56:37.286Z"
+    },
+    "common.confirm": {
+      "text": "Confirm",
+      "sourceHash": "04a212215ef9",
+      "updatedAt": "2026-08-17T17:56:37.286Z"
+    },
+    "common.dismiss": {
+      "text": "Dismiss",
+      "sourceHash": "70afe9eff3f2",
+      "updatedAt": "2026-08-17T17:56:37.286Z"
+    },
+    "common.noMatches": {
+      "text": "No matches",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T17:56:37.286Z"
+    },
+    "common.viewAll": {
+      "text": "View all",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T17:56:37.286Z"
+    },
+    "common.open": {
+      "text": "Open",
+      "sourceHash": "cf9b77061f7b",
+      "updatedAt": "2026-08-17T17:56:37.286Z"
+    },
+    "common.refresh": {
+      "text": "Refresh",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T17:56:37.286Z"
+    },
+    "pricing.eyebrow": {
+      "text": "Pricing",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T17:56:37.286Z"
+    },
+    "pricing.title": {
+      "text": "Plans for Caribbean decision work",
+      "sourceHash": "037c126105d5",
+      "updatedAt": "2026-08-17T17:56:39.113Z"
+    },
+    "pricing.lede": {
+      "text": "Start free, then scale when your organisation needs more seats, depth, and monitoring.",
+      "sourceHash": "9166dc69b88d",
+      "updatedAt": "2026-08-17T17:56:39.113Z"
+    },
+    "pricing.monthly": {
+      "text": "Monthly",
+      "sourceHash": "d31edb7b8a94",
+      "updatedAt": "2026-08-17T17:56:39.113Z"
+    },
+    "pricing.annual": {
+      "text": "Annual",
+      "sourceHash": "0930f3f8992c",
+      "updatedAt": "2026-08-17T17:56:39.113Z"
+    },
+    "pricing.cta": {
+      "text": "Get started",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T17:56:39.113Z"
+    },
+    "pricing.contact": {
+      "text": "Talk to us",
+      "sourceHash": "90214883b63b",
+      "updatedAt": "2026-08-17T17:56:39.113Z"
+    },
+    "pricing.payments": {
+      "text": "Accepted payment methods",
+      "sourceHash": "a5b32f6784e2",
+      "updatedAt": "2026-08-17T17:56:39.113Z"
+    },
+    "cookie.pillLabel": {
+      "text": "We use cookies.",
+      "sourceHash": "445cbc2a36bf",
+      "updatedAt": "2026-08-17T17:56:39.113Z"
+    },
+    "cookie.acceptAll": {
+      "text": "قبول جميع ملفات تعريف الارتباط",
+      "sourceHash": "e3b35bb7daa5",
+      "updatedAt": "2026-08-17T17:56:42.448Z"
+    },
+    "cookie.settingsTitle": {
+      "text": "الإعدادات",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T17:56:42.448Z"
+    },
+    "cookie.close": {
+      "text": "إغلاق",
+      "sourceHash": "90601d80d7e5",
+      "updatedAt": "2026-08-17T17:56:42.448Z"
+    },
+    "cookie.essential": {
+      "text": "ملفات تعريف الارتباط الأساسية",
+      "sourceHash": "62a4222f6e4d",
+      "updatedAt": "2026-08-17T17:56:42.448Z"
+    },
+    "cookie.essentialHint": {
+      "text": "ضرورية لتسجيل الدخول، الأمان، الثيم، واللغة.",
+      "sourceHash": "e667ce996fa5",
+      "updatedAt": "2026-08-17T17:56:42.448Z"
+    },
+    "cookie.alwaysOn": {
+      "text": "مفعلة دائماً",
+      "sourceHash": "531e4565609f",
+      "updatedAt": "2026-08-17T17:56:42.448Z"
+    },
+    "cookie.analytics": {
+      "text": "ملفات تعريف الارتباط التحليلية",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T17:56:42.448Z"
+    },
+    "cookie.analyticsHint": {
+      "text": "تساعدنا على فهم استخدام المنتج. لا يتم تحميل أي مُتتبِّعات حتى تُفعِّل هذا الخيار.",
+      "sourceHash": "b334ec855aab",
+      "updatedAt": "2026-08-17T17:56:42.448Z"
+    },
+    "cookie.marketing": {
+      "text": "ملفات تعريف الارتباط التسويقية",
+      "sourceHash": "c2c7a10bf1bf",
+      "updatedAt": "2026-08-17T17:56:44.357Z"
+    },
+    "cookie.marketingHint": {
+      "text": "تُستخدم فقط إذا قمنا بحملات تسويقية في وقت لاحق. معطلة افتراضياً.",
+      "sourceHash": "e33b06c9570f",
+      "updatedAt": "2026-08-17T17:56:44.357Z"
+    },
+    "cookie.statement": {
+      "text": "بيان ملفات تعريف الارتباط",
+      "sourceHash": "2d8cd77d9cf0",
+      "updatedAt": "2026-08-17T17:56:44.357Z"
+    },
+    "cookie.save": {
+      "text": "حفظ الإعدادات",
+      "sourceHash": "913aba9f96cf",
+      "updatedAt": "2026-08-17T17:56:44.357Z"
+    },
+    "cookie.openSettings": {
+      "text": "إعدادات ملفات تعريف الارتباط",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T17:56:44.357Z"
+    },
+    "legal.lastUpdated": {
+      "text": "آخر تحديث",
+      "sourceHash": "583c9e23574a",
+      "updatedAt": "2026-08-17T17:56:44.357Z"
+    },
+    "legal.kicker": {
+      "text": "Octivate · CENSII",
+      "sourceHash": "db72eb4d75f1",
+      "updatedAt": "2026-08-17T17:56:44.357Z"
+    },
+    "legal.privacyTitle": {
+      "text": "سياسة الخصوصية",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T17:56:44.357Z"
+    },
+    "legal.termsTitle": {
+      "text": "بنود الخدمة",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T17:56:46.855Z"
+    },
+    "legal.cookiesTitle": {
+      "text": "بيان ملفات تعريف الارتباط",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T17:56:46.855Z"
+    },
+    "legal.backHome": {
+      "text": "عودة إلى Octivate",
+      "sourceHash": "c03f0805dd7d",
+      "updatedAt": "2026-08-17T17:56:46.855Z"
+    },
+    "legal.contact": {
+      "text": "تواصل معنا",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T17:56:46.855Z"
+    },
+    "legal.updatedDate": {
+      "text": "11 أغسطس 2026",
+      "sourceHash": "3632e92d3018",
+      "updatedAt": "2026-08-17T17:56:46.855Z"
+    },
+    "legal.privacy.cover.title": {
+      "text": "ماذا تغطي سياسة الخصوصية هذه",
+      "sourceHash": "ceca340c15f9",
+      "updatedAt": "2026-08-17T17:56:46.855Z"
+    },
+    "legal.privacy.cover.p1": {
+      "text": "تشرح سياسة الخصوصية هذه كيف تجمع CENSII (\"نحن\"، \"نحن\") وتستخدم وتكشف المعلومات الشخصية عند زيارة octivate.io، وإنشاء حساب Octivate، الاشتراك في قائمتنا البريدية، أو استخدام مساحة عمل Octivate والخدمات ذات الصلة.",
+      "sourceHash": "da0b35cddd1e",
+      "updatedAt": "2026-08-17T17:56:46.855Z"
+    },
+    "legal.privacy.cover.p2": {
+      "text": "Octivate هو منتج لاتخاذ قرارات استخباراتية للسياقات التشغيلية في منطقة البحر الكاريبي. تديره CENSII. إذا كان لديك استفسارات، أرسل بريدًا إلكترونيًا إلى info@octivate.co.",
+      "sourceHash": "a3ee0fedaecb",
+      "updatedAt": "2026-08-17T17:56:46.855Z"
+    },
+    "legal.privacy.collect.title": {
+      "text": "المعلومات التي نجمعها",
+      "sourceHash": "ca195d50ca27",
+      "updatedAt": "2026-08-17T17:56:50.245Z"
+    },
+    "legal.privacy.collect.p1": {
+      "text": "نقوم بجمع المعلومات التي تقدمها مباشرة والمعلومات التي تُنشأ عند استخدام الخدمة:",
+      "sourceHash": "f01456bd7458",
+      "updatedAt": "2026-08-17T17:56:50.245Z"
+    },
+    "legal.privacy.collect.b1": {
+      "text": "تفاصيل الحساب مثل الاسم، وعنوان البريد الإلكتروني، والمنظمة، وبيانات الاعتماد الخاصة بالتحقق من الهوية.",
+      "sourceHash": "af0ec8e327f2",
+      "updatedAt": "2026-08-17T17:56:50.245Z"
+    },
+    "legal.privacy.collect.b2": {
+      "text": "محتوى العمل الذي تقدمه (أسئلة المشروع، المستندات، العروض، المراقبين، وأعمال التحليل ذات الصلة).",
+      "sourceHash": "5892431b22fd",
+      "updatedAt": "2026-08-17T17:56:50.245Z"
+    },
+    "legal.privacy.collect.b3": {
+      "text": "تفاصيل قائمة المراسلة إذا قمت بالاشتراك (البريد الإلكتروني واسمك الأول الاختياري).",
+      "sourceHash": "34eb00f7d54c",
+      "updatedAt": "2026-08-17T17:56:50.245Z"
+    },
+    "legal.privacy.collect.b4": {
+      "text": "البيانات التقنية اللازمة لتشغيل الخدمة: ملفات تعريف ارتباط الجلسة، سجلات الأمان، المقاييس التقريبية للاستخدام، تفضيل locale المتصفح، وتفضيل الثيم المخزن محلياً.",
+      "sourceHash": "1cd7a6671dc5",
+      "updatedAt": "2026-08-17T17:56:50.245Z"
+    },
+    "legal.privacy.collect.b5": {
+      "text": "معرّفات الدفع عند شراء خطة من خلال معالجات الدفع لدينا (لا نخزن أرقام البطاقات الكاملة على خوادم Octivate).",
+      "sourceHash": "33e270085714",
+      "updatedAt": "2026-08-17T17:56:50.245Z"
+    },
+    "legal.privacy.use.title": {
+      "text": "كيفية استخدام المعلومات",
+      "sourceHash": "98a72067ee54",
+      "updatedAt": "2026-08-17T17:56:50.245Z"
+    },
+    "legal.privacy.use.p1": {
+      "text": "نستخدم المعلومات الشخصية لـ:",
+      "sourceHash": "582e3b9752f3",
+      "updatedAt": "2026-08-17T17:56:54.567Z"
+    },
+    "legal.privacy.use.b1": {
+      "text": "تقديم، تأمين، وتحسين Octivate (المصادقة، ميزات العمل، الدعم).",
+      "sourceHash": "e1c1d704e9e8",
+      "updatedAt": "2026-08-17T17:56:54.567Z"
+    },
+    "legal.privacy.use.b2": {
+      "text": "تشغيل سير عمل التحليلات التي تطلبها، بما في ذلك إرسال المطوَّب والمستندات اللازمة إلى مقدمي النماذج مثل OpenRouter والنماذج التي تختارها.",
+      "sourceHash": "b0f14789ce72",
+      "updatedAt": "2026-08-17T17:56:54.567Z"
+    },
+    "legal.privacy.use.b3": {
+      "text": "إرسال تحديثات المنتج عندما تكون قد وافقت على الاشتراك في القائمة البريدية.",
+      "sourceHash": "795947ef39af",
+      "updatedAt": "2026-08-17T17:56:54.567Z"
+    },
+    "legal.privacy.use.b4": {
+      "text": "الامتثال للالتزامات القانونية والمحاسبية والأمنية.",
+      "sourceHash": "33e5b0f8726c",
+      "updatedAt": "2026-08-17T17:56:54.567Z"
+    },
+    "legal.privacy.cookies.title": {
+      "text": "ملفات تعريف الارتباط والتقنيات المشابهة",
+      "sourceHash": "f7b1e4ca11a4",
+      "updatedAt": "2026-08-17T17:56:54.567Z"
+    },
+    "legal.privacy.cookies.p1": {
+      "text": "تُحافظ ملفات تعريف الارتباط الأساسية والتخزين المحلي على تسجيل دخولك، وتحمي الجلسات، وتذكر thème (فاتح/داكن)، وتذكر تفضيل اللغة. وهي ضرورية لعمل الموقع.",
+      "sourceHash": "04cfe776b96d",
+      "updatedAt": "2026-08-17T17:56:54.567Z"
+    },
+    "legal.privacy.cookies.p2": {
+      "text": "ملفات تعريف الارتباط الخاصة بالتحليلات والتسويق معطلة افتراضياً. إذا قمت بتفعيلها في إعدادات ملفات تعريف الارتباط، فقد نستخدمها في المستقبل لفهم استخدام المنتج أو تشغيل حملات تسويقية. اليوم، لا يؤدي تفعيل هذه الفئات إلى تحميل مُتتبِّعات إعلانات من أطراف ثالثة؛ ويتم تخزين اختيارك بحيث نتمكّن من احترامها عند إضافة التكاملات. راجع بيان ملفات تعريف الارتباط للمزيد من التفاصيل.",
+      "sourceHash": "47a465df2959",
+      "updatedAt": "2026-08-17T17:56:54.567Z"
+    },
+    "legal.privacy.sharing.title": {
+      "text": "عندما نشارك المعلومات",
+      "sourceHash": "7a2ce00c7fd3",
+      "updatedAt": "2026-08-17T17:56:57.557Z"
+    },
+    "legal.privacy.sharing.p1": {
+      "text": "لا نبيع المعلومات الشخصية. نشارك البيانات فقط مع المعالجين الذين يساعدوننا في تشغيل Octivate، بموجب اتفاقيات مناسبة، على سبيل المثال:",
+      "sourceHash": "d2bf64f6c698",
+      "updatedAt": "2026-08-17T17:56:57.557Z"
+    },
+    "legal.privacy.sharing.b1": {
+      "text": "مزودو البنية الأساسية والاستضافة الذين يخزنون بيانات التطبيق.",
+      "sourceHash": "4d800473b32a",
+      "updatedAt": "2026-08-17T17:56:57.557Z"
+    },
+    "legal.privacy.sharing.b2": {
+      "text": "موفرو توجيه النماذج (مثل OpenRouter) وموردي النماذج الأساسية عند تشغيل التحليل.",
+      "sourceHash": "3ef2e101e0cb",
+      "updatedAt": "2026-08-17T17:56:57.557Z"
+    },
+    "legal.privacy.sharing.b3": {
+      "text": "معالجو الدفع (مثل Stripe أو PayPal) عند شراء خطة.",
+      "sourceHash": "afa78f66f0cb",
+      "updatedAt": "2026-08-17T17:56:57.557Z"
+    },
+    "legal.privacy.sharing.b4": {
+      "text": "بنية إرسال البريد الإلكتروني المستخدمة لإرسال رسائل المعاملات أو رسائل القائمة البريدية التي طلبتها.",
+      "sourceHash": "fa83b06a582d",
+      "updatedAt": "2026-08-17T17:56:57.557Z"
+    },
+    "legal.privacy.sharing.b5": {
+      "text": "المستشارون المهنيون أو السلطات عند اللزوم بموجب القانون.",
+      "sourceHash": "8f3a144729ae",
+      "updatedAt": "2026-08-17T17:56:57.557Z"
+    },
+    "legal.privacy.retention.title": {
+      "text": "الحفظ",
+      "sourceHash": "c7199d9e9593",
+      "updatedAt": "2026-08-17T17:56:57.557Z"
+    },
+    "legal.privacy.retention.p1": {
+      "text": "نحتفظ ببيانات الحساب ومساحات العمل أثناء نشاط حسابك ولمدة معقولة afterward كما هو مطلوب للنسخ الاحتياطي، وحل النزاعات، والامتثال القانوني. يتم الاحتفاظ بسجلات قائمة البريد حتى إلغاء الاشتراك أو إغلاق القائمة. يمكنك طلب الحذف كما هو موضح أدناه.",
+      "sourceHash": "f0d4f4a09397",
+      "updatedAt": "2026-08-17T17:57:01.604Z"
+    },
+    "legal.privacy.rights.title": {
+      "text": "حقوقك",
+      "sourceHash": "e71102d544b3",
+      "updatedAt": "2026-08-17T17:57:01.604Z"
+    },
+    "legal.privacy.rights.p1": {
+      "text": "اعتمادًا على مكان إقامتك، قد يكون لديك حقوق للوصول، والتصحيح، والحذف، أو تصدير المعلومات الشخصية، أو الاعتراض أو restring certain processing. بالنسبة لزوار الاتحاد الأوروبي/المملكة المتحدة، تنطبق حقوق GDPR / UK GDPR. بالنسبة لزوار ولايات قضائية في الكاريبي ذات قوانين حماية البيانات (بما في ذلك جامايكا، وتوباغو Trinidad، وبربادوس، وغيرها)، ن respect الحقوق القانونية السارية.",
+      "sourceHash": "d0eca93b39f0",
+      "updatedAt": "2026-08-17T17:57:01.604Z"
+    },
+    "legal.privacy.rights.p2": {
+      "text": "لإرسال طلب، أرسل بريدًا إلكترونيًا إلى info@octivate.co أو shemuel@censii.co بعنوان \"Data subject request\". سنرد خلال النافذة القانونية المعمول بها.",
+      "sourceHash": "5be87f549dc6",
+      "updatedAt": "2026-08-17T17:57:01.604Z"
+    },
+    "legal.privacy.children.title": {
+      "text": "أطفال",
+      "sourceHash": "dcf75191c585",
+      "updatedAt": "2026-08-17T17:57:01.604Z"
+    },
+    "legal.privacy.children.p1": {
+      "text": "مخصص Octivate للاستخدام المهني والتنظيمي. لا نقوم بجمع المعلومات الشخصية من الأطفال تحت 16 عامًاknowingly.",
+      "sourceHash": "07a14e4d629c",
+      "updatedAt": "2026-08-17T17:57:01.604Z"
+    },
+    "legal.privacy.changes.title": {
+      "text": "تغييرات هذه السياسة",
+      "sourceHash": "615043a5515f",
+      "updatedAt": "2026-08-17T17:57:01.604Z"
+    },
+    "legal.privacy.changes.p1": {
+      "text": "قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. ستتاريخ \"Last updated\" في الأعلى سيتغير عند حدوث ذلك. ستتم الإشارة إلى التغييرات الجوهرية على هذه الصفحة أو من خلال المنتج حسب الاقتضاء.",
+      "sourceHash": "476874f7f005",
+      "updatedAt": "2026-08-17T17:57:01.604Z"
+    },
+    "legal.privacy.contact.title": {
+      "text": "اتصال",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T17:57:07.771Z"
+    },
+    "legal.privacy.contact.p1": {
+      "text": "CENSII — Octivate استفسارات الخصوصية: info@octivate.co. يمكن إرسال طلبات موضوع البيانات إلى shemuel@censii.co. لمزيد من المعلومات عن CENSII: https://censii.co.",
+      "sourceHash": "2a9de25118a0",
+      "updatedAt": "2026-08-17T17:57:07.771Z"
+    },
+    "legal.terms.agreement.title": {
+      "text": "اتفاقية",
+      "sourceHash": "c8fee8eabe07",
+      "updatedAt": "2026-08-17T17:57:07.771Z"
+    },
+    "legal.terms.agreement.p1": {
+      "text": "ت governing الوصول إلى واستخدام Octivate (خدمة “الخدمة”)، منتج اتخاذ القرار الذي تديره CENSII (“CENSII”، “نحن”، “نحن”). من خلال إنشاء حساب أو استخدام الخدمة، توافق على هذه الشروط.",
+      "sourceHash": "1920871854ab",
+      "updatedAt": "2026-08-17T17:57:07.771Z"
+    },
+    "legal.terms.agreement.p2": {
+      "text": "إذا كنت تستخدم Octivate نيابة عن منظمة، فأنت تمثل أنك تملك authority to bind that organisation.",
+      "sourceHash": "f8297c380c9a",
+      "updatedAt": "2026-08-17T17:57:07.771Z"
+    },
+    "legal.terms.service.title": {
+      "text": "الخدمة",
+      "sourceHash": "bc4a155b6578",
+      "updatedAt": "2026-08-17T17:57:07.771Z"
+    },
+    "legal.terms.service.p1": {
+      "text": "Octivate يساعد المنظمات على هيكلة مسرحيات اتخاذ القرار في البحر الكاريبي، وجمع واختبار الأدلة، وإنتاج قرارات جاهزة للمراقبة. قد تتضمن الميزات مشاريع، قرارات، مراقبة، حزم المصادر، خرائط أصحاب المصلحة، وأدوات مساحة العمل ذات الصلة.",
+      "sourceHash": "cafd042947e6",
+      "updatedAt": "2026-08-17T17:57:07.771Z"
+    },
+    "legal.terms.service.p2": {
+      "text": "مخرجات التحليل هي مواد دعم لاتخاذ القرارات. إنها ليست مشورة قانونية، مالية، استثمارية، أو تنظيمية. أنت مسؤول عن كيفية استخدام المخرجات.",
+      "sourceHash": "c2714c09aad4",
+      "updatedAt": "2026-08-17T17:57:07.771Z"
+    },
+    "legal.terms.accounts.title": {
+      "text": "حسابات الاستخدام المقبول",
+      "sourceHash": "5d78eee41938",
+      "updatedAt": "2026-08-17T17:57:10.962Z"
+    },
+    "legal.terms.accounts.p1": {
+      "text": "أنت توافق على:",
+      "sourceHash": "ecad8570099e",
+      "updatedAt": "2026-08-17T17:57:10.962Z"
+    },
+    "legal.terms.accounts.b1": {
+      "text": "تقديم معلومات حساب دقيقة والحفاظ على سرية بيانات الدخول.",
+      "sourceHash": "25e318d9c60c",
+      "updatedAt": "2026-08-17T17:57:10.962Z"
+    },
+    "legal.terms.accounts.b2": {
+      "text": "استخدام الخدمة للأغراض القانونية فقط ووفقاً لسياسات مؤسستك.",
+      "sourceHash": "1792588ceba4",
+      "updatedAt": "2026-08-17T17:57:10.962Z"
+    },
+    "legal.terms.accounts.b3": {
+      "text": "عدم محاولة تعطيل الخدمة أو هندستها العكسية أو إساءة استخدامها، أو الوصول إلى بيانات عملاء آخرين.",
+      "sourceHash": "d8cee3f610f2",
+      "updatedAt": "2026-08-17T17:57:10.962Z"
+    },
+    "legal.terms.accounts.b4": {
+      "text": "عدم رفع محتوى لا تملك حقوقاً في معالجته، أو محتوى غير قانوني أو ضار.",
+      "sourceHash": "68ea1009e1a7",
+      "updatedAt": "2026-08-17T17:57:10.962Z"
+    },
+    "legal.terms.ai.title": {
+      "text": "التحليل المعزز بالنماذج",
+      "sourceHash": "f139b756fb2a",
+      "updatedAt": "2026-08-17T17:57:10.962Z"
+    },
+    "legal.terms.ai.p1": {
+      "text": "تستخدم أجزاء من Octivate مقدمين من جهات خارجية للنماذج (على سبيل المثال عبر OpenRouter) لمعالجة الطلبات والمستندات التي تقدمها. قد تكون النتائج ناقصة أو غير دقيقة. يجب عليك مراجعة الأدلة والتوصيات قبل اتخاذ أي إجراء.",
+      "sourceHash": "2249195c0061",
+      "updatedAt": "2026-08-17T17:57:10.962Z"
+    },
+    "legal.terms.plans.title": {
+      "text": "الخطط، التجارب، والمدفوعات",
+      "sourceHash": "66eaef3bcd17",
+      "updatedAt": "2026-08-17T17:57:14.657Z"
+    },
+    "legal.terms.plans.p1": {
+      "text": "تُوصف الخطط المدفوعة، والتجارب، والفوترة في صفحة الأسعار وفي عملية الدفع. يتم معالجة الرسوم من قبل مزودي دفع مثل Stripe أو PayPal. ما لم يلزم القانون، الرسوم غير قابلة للاسترداد بمجرد بدء فترة الفوترة، باستثناء ما نذكره كتابةً خلاف ذلك.",
+      "sourceHash": "a74086033e27",
+      "updatedAt": "2026-08-17T17:57:14.657Z"
+    },
+    "legal.terms.ip.title": {
+      "text": "الملكية الفكرية",
+      "sourceHash": "3e694b7e8d03",
+      "updatedAt": "2026-08-17T17:57:14.657Z"
+    },
+    "legal.terms.ip.p1": {
+      "text": "يمتلك CENSII وبراؤه Octivate البرمجي، والهوية التجارية، ومحتوى الموقع. تحتفظ بحقوق المحتوى الذي ترفعه. تمنحنا ترخيصاً محدوداً لاستضافة ومعالجة هذا المحتوى فقط لتوفير الخدمة.",
+      "sourceHash": "b14a3529c91c",
+      "updatedAt": "2026-08-17T17:57:14.657Z"
+    },
+    "legal.terms.ip.p2": {
+      "text": "العروض التوضيحية والعروض العامة illustrative and may use fictionalised or anonymised scenarios. (Kept as is since it's a descriptive clause, but translate fully:",
+      "sourceHash": "93fd6d9964e9",
+      "updatedAt": "2026-08-17T17:57:14.657Z"
+    },
+    "legal.terms.confidentiality.title": {
+      "text": "السرية",
+      "sourceHash": "642e7d86380c",
+      "updatedAt": "2026-08-17T17:57:14.657Z"
+    },
+    "legal.terms.confidentiality.p1": {
+      "text": "نعتبر محتوى مساحة عملك سريةً ونعالجه بموجب سياسة الخصوصية الخاصة بنا. وتوافق على عدم الكشف عن الميزات غير العامة للخدمة إلا كما هو ضروري لتقييمك الداخلي.",
+      "sourceHash": "a68c21b965e4",
+      "updatedAt": "2026-08-17T17:57:14.657Z"
+    },
+    "legal.terms.disclaimer.title": {
+      "text": "تنصل",
+      "sourceHash": "4c4a2e80cc87",
+      "updatedAt": "2026-08-17T17:57:14.657Z"
+    },
+    "legal.terms.disclaimer.p1": {
+      "text": "يُ提供 الخدمة",
+      "sourceHash": "d40ff71ccb41",
+      "updatedAt": "2026-08-17T17:57:15.716Z"
+    },
+    "legal.terms.contact.p1": {
+      "text": "أسئلة حول هذه الشروط: info@octivate.co. حول CENSII: https://censii.co.",
+      "sourceHash": "baefec6a2022",
+      "updatedAt": "2026-08-17T17:57:19.392Z"
+    },
+    "legal.cookies.overview.title": {
+      "text": "نظرة عامة",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T17:57:19.392Z"
+    },
+    "legal.cookies.overview.p1": {
+      "text": "يشرح هذا البيان كيفية استخدام Octivate (التي تديرها CENSII) للكوكيز والتقنيات المشابهة على octivate.io. يمكنك إدارة الفئات الاختيارية في أي وقت عبر إعدادات الكوكيز.",
+      "sourceHash": "4fe70d776df2",
+      "updatedAt": "2026-08-17T17:57:19.392Z"
+    },
+    "legal.cookies.essential.title": {
+      "text": "الكوكيز الأساسية",
+      "sourceHash": "e766aa84901b",
+      "updatedAt": "2026-08-17T17:57:19.392Z"
+    },
+    "legal.cookies.essential.p1": {
+      "text": "الكوكيز الأساسية وتخزين المحلي مطلوبان لعمل الخدمة. تشمل هذه الكوكيز المصادقة على الجلسة، والأمان، وتفضيل الثيم (فاتح/داكن)، وتفضيل اللغة. تظل نشطة؛ لا يمكن للخدمة العمل بشكل صحيح بدونها.",
+      "sourceHash": "3c529d19f95b",
+      "updatedAt": "2026-08-17T17:57:19.392Z"
+    },
+    "legal.cookies.analytics.title": {
+      "text": "كوكيز التحليل",
+      "sourceHash": "b8bb66ea761c",
+      "updatedAt": "2026-08-17T17:57:19.392Z"
+    },
+    "legal.cookies.analytics.p1": {
+      "text": "كوكيز التحليل تساعدنا على فهم كيفية استخدام المنتج. يتم تعطيلها حتى تمكينها. لا نحمّل حالياً برامج تطوير برامج تحليل من أطراف ثالثة؛ إذا أضفناها لاحقاً، فسنقوم بذلك فقط عندما يسمح تفضيلك المخزن بتفعيل التحليل.",
+      "sourceHash": "e87b8d7ae969",
+      "updatedAt": "2026-08-17T17:57:19.392Z"
+    },
+    "legal.cookies.marketing.title": {
+      "text": "كوكيز التسويق",
+      "sourceHash": "c2c7a10bf1bf",
+      "updatedAt": "2026-08-17T17:57:19.392Z"
+    },
+    "legal.cookies.marketing.p1": {
+      "text": "ستدعم ملفات تعريف الارتباط التسويقية الحملات أو إعادة الاستهداف إذا تم تشغيلها. وهي معطلة افتراضياً وغير مستخدمة اليوم. عند تمكين التسويق، يتم تخزين تفضيلك للاستخدام المستقبلي؛ ولا يتم تفعيل بكسلات الإعلانات الخاصة بها تلقائياً.",
+      "sourceHash": "86be873965c0",
+      "updatedAt": "2026-08-17T17:57:25.454Z"
+    },
+    "legal.cookies.manage.title": {
+      "text": "كيفية إدارة التفضيلات",
+      "sourceHash": "fe104b22e6a2",
+      "updatedAt": "2026-08-17T17:57:25.454Z"
+    },
+    "legal.cookies.manage.p1": {
+      "text": "استخدم شريط التحكم العائم أو افتح إعدادات ملفات تعريف الارتباط من تذييل الموقع. يؤدي النقر على قبول إلى تمكين تفضيلات التحليلات والتسويقية. يؤدي اختيار حفظ الإعدادات إلى تخزين الت toggles التي اخترتها. يؤدي مسح بيانات الموقع في المتصفح إلى إعادة تعيينbanner.",
+      "sourceHash": "7afe22d445c8",
+      "updatedAt": "2026-08-17T17:57:25.454Z"
+    },
+    "legal.cookies.more.title": {
+      "text": "مزيد من المعلومات",
+      "sourceHash": "f925f9bea399",
+      "updatedAt": "2026-08-17T17:57:25.454Z"
+    },
+    "legal.cookies.more.p1": {
+      "text": "للممارسات البيانات الأوسع، اقرأ سياسة الخصوصية الخاصة بنا. أسئلة: info@octivate.co.",
+      "sourceHash": "407b95384bff",
+      "updatedAt": "2026-08-17T17:57:25.454Z"
+    },
+    "dyn.marquee.mq_proc_ports.text": {
+      "text": "نشر notice تأهيل مسبق من قبل当局 الميناء — لوجستيات",
+      "sourceHash": "1a71672fedbc",
+      "updatedAt": "2026-08-17T17:57:25.454Z"
+    },
+    "dyn.marquee.mq_proc_ports.badge": {
+      "text": "الاستحواذ",
+      "sourceHash": "08433110a671",
+      "updatedAt": "2026-08-17T17:57:25.454Z"
+    },
+    "dyn.marquee.mq_sys_grid.text": {
+      "text": "تم تمديد نافذة صيانة الشبكة؛ خطوط الصناعية المتأثرة",
+      "sourceHash": "740cfd102e0c",
+      "updatedAt": "2026-08-17T17:57:25.454Z"
+    },
+    "dyn.marquee.mq_sys_grid.badge": {
+      "text": "أنظمة",
+      "sourceHash": "e6caf1e7e33e",
+      "updatedAt": "2026-08-17T17:58:43.055Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.text": {
+      "text": "حركة تغيير الحكومة تُظهر تحولاً في أولويات محفظة الطاقة",
+      "sourceHash": "3b08d154b099",
+      "updatedAt": "2026-08-17T17:58:43.055Z"
+    },
+    "dyn.marquee.mq_pwr_cabinet.badge": {
+      "text": "طاقة",
+      "sourceHash": "c2b6b521a777",
+      "updatedAt": "2026-08-17T17:58:43.055Z"
+    },
+    "dyn.marquee.mq_narr_radio.text": {
+      "text": "تتزايد اتجاهات المحتوى المحلي عبر الراديو الحواري وواتساب",
+      "sourceHash": "48213741cc6a",
+      "updatedAt": "2026-08-17T17:58:43.055Z"
+    },
+    "dyn.marquee.mq_narr_radio.badge": {
+      "text": "القصة",
+      "sourceHash": "3e3886da8fd5",
+      "updatedAt": "2026-08-17T17:58:43.055Z"
+    }
+  }
+}
