@@ -97,9 +97,32 @@ export async function readLocaleFile(locale: string): Promise<LocaleFile> {
 export async function writeLocaleFile(file: LocaleFile): Promise<void> {
   await enqueueWrite(async () => {
     await ensureDirs();
-    const tmp = `${localePath(file.locale)}.${process.pid}.tmp`;
+    const dest = localePath(file.locale);
+    const tmp = `${dest}.${process.pid}.${Date.now()}.tmp`;
     await fs.writeFile(tmp, JSON.stringify(file, null, 2), "utf8");
-    await fs.rename(tmp, localePath(file.locale));
+    let lastErr: unknown;
+    for (let attempt = 0; attempt < 8; attempt++) {
+      try {
+        await fs.rename(tmp, dest);
+        return;
+      } catch (err) {
+        lastErr = err;
+        const code = (err as NodeJS.ErrnoException)?.code;
+        // Windows often returns EPERM/EACCES/EBUSY when another reader holds the file.
+        if (code === "EPERM" || code === "EACCES" || code === "EBUSY") {
+          try {
+            await fs.copyFile(tmp, dest);
+            await fs.unlink(tmp).catch(() => undefined);
+            return;
+          } catch {
+            await new Promise((r) => setTimeout(r, 80 * (attempt + 1)));
+            continue;
+          }
+        }
+        throw err;
+      }
+    }
+    throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
   });
 }
 

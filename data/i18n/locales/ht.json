@@ -1,0 +1,4952 @@
+{
+  "locale": "ht",
+  "version": 125,
+  "updatedAt": "2026-08-17T13:54:19.965Z",
+  "entries": {
+    "nav.product": {
+      "text": "Prouit",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T13:20:46.393Z"
+    },
+    "nav.why": {
+      "text": "Poukisa Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T13:20:46.393Z"
+    },
+    "nav.how": {
+      "text": "Kijan wòk",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T13:20:46.393Z"
+    },
+    "nav.pricing": {
+      "text": "Prikès",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T13:20:46.393Z"
+    },
+    "nav.team": {
+      "text": "Tim",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T13:20:46.393Z"
+    },
+    "nav.about": {
+      "text": "abòt",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T13:20:46.393Z"
+    },
+    "nav.signIn": {
+      "text": "Signa",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T13:20:46.393Z"
+    },
+    "nav.requestDemo": {
+      "text": "Koman w debute",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T13:20:46.393Z"
+    },
+    "nav.returnWorkspace": {
+      "text": "Retourn nan espas travè",
+      "sourceHash": "74f11e0defca",
+      "updatedAt": "2026-08-17T13:20:53.110Z"
+    },
+    "nav.operatorDashboard": {
+      "text": "Dashboard opsyon",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T13:20:53.110Z"
+    },
+    "nav.askQuestion": {
+      "text": "Posè yon kesyon",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T13:20:53.110Z"
+    },
+    "nav.askQuestionLong": {
+      "text": "Posè yon kesyon",
+      "sourceHash": "cf94bdf39103",
+      "updatedAt": "2026-08-17T13:20:53.110Z"
+    },
+    "nav.skip": {
+      "text": "Sòti kontèn",
+      "sourceHash": "0a4470d64e9d",
+      "updatedAt": "2026-08-17T13:20:53.110Z"
+    },
+    "nav.explore": {
+      "text": "Découvri",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T13:20:53.110Z"
+    },
+    "nav.openMenu": {
+      "text": "Ouvri men",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T13:20:53.110Z"
+    },
+    "nav.closeMenu": {
+      "text": "Fermè men",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T13:20:53.110Z"
+    },
+    "nav.translate": {
+      "text": "Tradwi",
+      "sourceHash": "2be17aa181d8",
+      "updatedAt": "2026-08-17T13:20:54.318Z"
+    },
+    "nav.translateHint": {
+      "text": "Cache sou server · Octivate i18n",
+      "sourceHash": "16abeab228fd",
+      "updatedAt": "2026-08-17T13:20:54.318Z"
+    },
+    "nav.primary": {
+      "text": "Priò",
+      "sourceHash": "a9a96ec01949",
+      "updatedAt": "2026-08-17T13:20:54.318Z"
+    },
+    "nav.mobile": {
+      "text": "Mobayil",
+      "sourceHash": "b1d702459399",
+      "updatedAt": "2026-08-17T13:20:54.318Z"
+    },
+    "mailing.eyebrow": {
+      "text": "Reste kontak",
+      "sourceHash": "c1abb6630b0e",
+      "updatedAt": "2026-08-17T13:20:54.318Z"
+    },
+    "mailing.title": {
+      "text": "Reste kontak ki gen bati.",
+      "sourceHash": "e415b8d83f68",
+      "updatedAt": "2026-08-17T13:20:54.318Z"
+    },
+    "mailing.lede": {
+      "text": "Mise à jour occasional sou Octivate, nouvèl kapab analitik, insight kontekst opèrasyonèl Karibik ak chans pou test platform.",
+      "sourceHash": "afa148dcdaae",
+      "updatedAt": "2026-08-17T13:20:54.318Z"
+    },
+    "mailing.benefit.updates": {
+      "text": "Mise à jour prodit ak nouvèl kapabilté.",
+      "sourceHash": "45397ac51acf",
+      "updatedAt": "2026-08-17T13:20:54.318Z"
+    },
+    "mailing.benefit.notes": {
+      "text": "Insights karayibik selezman pou kontek opsèl.",
+      "sourceHash": "8ced50f6a103",
+      "updatedAt": "2026-08-17T13:20:55.281Z"
+    },
+    "mailing.benefit.unsubscribe": {
+      "text": "Aksès antè piye, breef ak testman test nan piye.",
+      "sourceHash": "e6df0dd5f574",
+      "updatedAt": "2026-08-17T13:20:55.281Z"
+    },
+    "mailing.email": {
+      "text": "Adrès e-posta",
+      "sourceHash": "c94d3175a656",
+      "updatedAt": "2026-08-17T13:20:55.281Z"
+    },
+    "mailing.name": {
+      "text": "Prénom",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T13:20:55.281Z"
+    },
+    "mailing.nameOptional": {
+      "text": "(optionèl)",
+      "sourceHash": "b16c7ac6faff",
+      "updatedAt": "2026-08-17T13:20:55.281Z"
+    },
+    "mailing.emailPlaceholder": {
+      "text": "you@organisation.org",
+      "sourceHash": "2210623ebf8b",
+      "updatedAt": "2026-08-17T13:20:55.281Z"
+    },
+    "mailing.namePlaceholder": {
+      "text": "First name",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T13:20:55.281Z"
+    },
+    "mailing.consent": {
+      "text": "Mwen konsanse pou reçevi emailyèl occasional nan Octivate. Mwen ka opte out nan ti moun.",
+      "sourceHash": "251b640d0e70",
+      "updatedAt": "2026-08-17T13:20:55.281Z"
+    },
+    "mailing.join": {
+      "text": "Epit nan list",
+      "sourceHash": "04707f33d156",
+      "updatedAt": "2026-08-17T13:21:12.939Z"
+    },
+    "mailing.saving": {
+      "text": "Enregistre…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T13:21:12.939Z"
+    },
+    "mailing.optOut": {
+      "text": "Decline",
+      "sourceHash": "39eb4312f1ff",
+      "updatedAt": "2026-08-17T13:21:12.939Z"
+    },
+    "mailing.fine": {
+      "text": "Nouvo ou stoke pou list mailing Octivate seulman ak pa vends. Wè Politik Privatè nou pou kijan ou traite email.",
+      "sourceHash": "45f14a872fda",
+      "updatedAt": "2026-08-17T13:21:12.939Z"
+    },
+    "mailing.consentRequired": {
+      "text": "Confirme ou vle mise à jour prodit.",
+      "sourceHash": "0bd437fefded",
+      "updatedAt": "2026-08-17T13:21:12.939Z"
+    },
+    "mailing.success": {
+      "text": "Ou sou list — notis prodit occasionalman.",
+      "sourceHash": "fefa7875f49b",
+      "updatedAt": "2026-08-17T13:21:12.939Z"
+    },
+    "mailing.unsubscribed": {
+      "text": "Ou pa sou list. Ou ka rejoin n'importe koman.",
+      "sourceHash": "15eae8c5d42e",
+      "updatedAt": "2026-08-17T13:21:12.939Z"
+    },
+    "mailing.networkError": {
+      "text": "Erè reseau. Kontrol koneksyon ou ak reèse anyen.",
+      "sourceHash": "916c8a25c301",
+      "updatedAt": "2026-08-17T13:21:12.939Z"
+    },
+    "mailing.genericError": {
+      "text": "Ebagay gen miskann. Provize ankò.",
+      "sourceHash": "4244e822a06c",
+      "updatedAt": "2026-08-17T13:21:33.620Z"
+    },
+    "land.hero.title": {
+      "text": "Klarite pou desizyon ki kriye Karibik.",
+      "sourceHash": "c977ff7e2f70",
+      "updatedAt": "2026-08-17T13:21:33.620Z"
+    },
+    "land.hero.body": {
+      "text": "An yon regi ki déborde avèk sesyon konkòman, difisil sa se konn ki sens yo tout ensemble. Octivate konekte informasyon regional difisil, test ki ta fwasit, et konvèti li en jugemen respè evidans pou desizyon ki pa ka wèti.",
+      "sourceHash": "e219cf53254c",
+      "updatedAt": "2026-08-17T13:21:33.620Z"
+    },
+    "land.hero.ctaPrimary": {
+      "text": "Komanse",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T13:21:33.620Z"
+    },
+    "land.hero.ctaSample": {
+      "text": "Vè yon échantillon brief",
+      "sourceHash": "bdf4ce16698a",
+      "updatedAt": "2026-08-17T13:21:33.620Z"
+    },
+    "land.why.eyebrow": {
+      "text": "Poukisa Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T13:21:33.620Z"
+    },
+    "land.why.title": {
+      "text": "Konstrui pou ki informasyon relean move an Karibik.",
+      "sourceHash": "f2f24843f23e",
+      "updatedAt": "2026-08-17T13:21:33.620Z"
+    },
+    "land.why.1": {
+      "text": "Sòti regional an sépare ak institisyon ak jurisdiksyon.",
+      "sourceHash": "6a2168b0edc0",
+      "updatedAt": "2026-08-17T13:21:33.620Z"
+    },
+    "land.why.2": {
+      "text": "Kontex important an fòk ap parèt dèyò nan dataset formal.",
+      "sourceHash": "f24b4dfd9981",
+      "updatedAt": "2026-08-17T13:22:02.422Z"
+    },
+    "land.why.3": {
+      "text": "Relasyon ti grangou kapab fè aksyon indiwidual an konsequan anormal.",
+      "sourceHash": "aa7f3c1348b3",
+      "updatedAt": "2026-08-17T13:22:02.422Z"
+    },
+    "land.why.4": {
+      "text": "Dynamik reyonal, antinasyonal ak domestic freqwannen overlap.",
+      "sourceHash": "7d7279cd7d5b",
+      "updatedAt": "2026-08-17T13:22:02.422Z"
+    },
+    "land.why.close": {
+      "text": "Octivate konfigye ak realite opsion anèsmè pase adapte yon prodwi genisè intelligence global pou reyon aprè.",
+      "sourceHash": "316ad433f656",
+      "updatedAt": "2026-08-17T13:22:02.422Z"
+    },
+    "land.lenses.title": {
+      "text": "Koman Octivate konprann Karib",
+      "sourceHash": "f2b8e64c1256",
+      "updatedAt": "2026-08-17T13:22:02.422Z"
+    },
+    "land.lenses.lede": {
+      "text": "Octivate egzamine chak kesyon gen twa lensa konektan, aprè se fè li konprann ki intersecte.",
+      "sourceHash": "700e2367b157",
+      "updatedAt": "2026-08-17T13:22:02.422Z"
+    },
+    "land.lenses.power": {
+      "text": "Pwof",
+      "sourceHash": "7548ab52c3d1",
+      "updatedAt": "2026-08-17T13:22:02.422Z"
+    },
+    "land.lenses.power.q": {
+      "text": "Ki moun kapab fè yon kesyon gen rezulta?",
+      "sourceHash": "0b0288ef46ce",
+      "updatedAt": "2026-08-17T13:22:02.422Z"
+    },
+    "land.lenses.power.body": {
+      "text": "Autorite, inflans, ansèm, koalisyòn ak relasyon ki afèkise desizyon.",
+      "sourceHash": "34c4c47d1bce",
+      "updatedAt": "2026-08-17T13:22:18.596Z"
+    },
+    "land.lenses.systems": {
+      "text": "Sistèm",
+      "sourceHash": "e26dfc1f8d96",
+      "updatedAt": "2026-08-17T13:22:18.596Z"
+    },
+    "land.lenses.systems.q": {
+      "text": "Ki jan yon akti ka fasil oswa kontra?",
+      "sourceHash": "2c1c0efa8537",
+      "updatedAt": "2026-08-17T13:22:18.596Z"
+    },
+    "land.lenses.systems.body": {
+      "text": "Institisyon, regulasyon, enfrastraktyè, kapasite ak implimantasyon.",
+      "sourceHash": "f38b6e3ee324",
+      "updatedAt": "2026-08-17T13:22:18.596Z"
+    },
+    "land.lenses.narratives": {
+      "text": "Narativ",
+      "sourceHash": "1c26c2b8063a",
+      "updatedAt": "2026-08-17T13:22:18.596Z"
+    },
+    "land.lenses.narratives.q": {
+      "text": "Ki koman yon sitwasyon ka komprann?",
+      "sourceHash": "af380e3bacdb",
+      "updatedAt": "2026-08-17T13:22:18.596Z"
+    },
+    "land.lenses.narratives.body": {
+      "text": "Framing, legitiman, senmante publik ak rakonte ki shape percepsyon ak comportman.",
+      "sourceHash": "4ad73376c397",
+      "updatedAt": "2026-08-17T13:22:18.596Z"
+    },
+    "land.how.eyebrow": {
+      "text": "Kijan Octivate marche",
+      "sourceHash": "fd1649f0e29c",
+      "updatedAt": "2026-08-17T13:22:18.596Z"
+    },
+    "land.how.title": {
+      "text": "Ditòbil yè yon kesyon konteks opsenasyon difisil pou jugement prêt pou dècisyon.",
+      "sourceHash": "e2a54852c40d",
+      "updatedAt": "2026-08-17T13:22:38.339Z"
+    },
+    "land.how.01.title": {
+      "text": "Kadre yon dècisyon",
+      "sourceHash": "c7c7bf44e724",
+      "updatedAt": "2026-08-17T13:22:38.339Z"
+    },
+    "land.how.01.body": {
+      "text": "Ki kisa ap dècide, ki lòmi, ak kòman evidansye ka chanje repons.",
+      "sourceHash": "607c39bf28f6",
+      "updatedAt": "2026-08-17T13:22:38.339Z"
+    },
+    "land.how.02.title": {
+      "text": "Trouve ak test evidansye",
+      "sourceHash": "427c8a624037",
+      "updatedAt": "2026-08-17T13:22:38.339Z"
+    },
+    "land.how.02.body": {
+      "text": "Rèdige yon sourç pertinent, compare klèm, identifik contradiksyon ak surfase insèkertè.",
+      "sourceHash": "1ab2f5a019c7",
+      "updatedAt": "2026-08-17T13:22:38.339Z"
+    },
+    "land.how.03.title": {
+      "text": "Fò yon jugement prêt pou dècisyon",
+      "sourceHash": "df73304ba4ed",
+      "updatedAt": "2026-08-17T13:22:38.339Z"
+    },
+    "land.how.03.body": {
+      "text": "Konvèti evidansye an pou opisyòn, compromis, konsiderasyon stakeholder, gap evidansye ak signal pou monitor.",
+      "sourceHash": "4680e62424c4",
+      "updatedAt": "2026-08-17T13:22:38.339Z"
+    },
+    "land.how.ctaSample": {
+      "text": "Viye yon Sample Brief",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T13:22:38.339Z"
+    },
+    "land.disc.eyebrow": {
+      "text": "Sèdis Intègre 6",
+      "sourceHash": "5758b703370e",
+      "updatedAt": "2026-08-17T13:22:40.014Z"
+    },
+    "land.disc.title": {
+      "text": "Sèdis 6. Yon dèyèj intègri.",
+      "sourceHash": "ded00ef93dd7",
+      "updatedAt": "2026-08-17T13:22:40.014Z"
+    },
+    "land.disc.lede": {
+      "text": "Chak disiplin aportye yon pati difèrènt nan analize. Ensemble, yo tranforme pwofè fenmen nan yon vizyal klè a bon. Yo montre ki kisa ki mato, ki ka sevi, ak kijan repons.",
+      "sourceHash": "05bd7f63cdb4",
+      "updatedAt": "2026-08-17T13:22:40.014Z"
+    },
+    "land.disc.1.title": {
+      "text": "Analiz politik-ekonomik ak gopolitik",
+      "sourceHash": "dd28e1937d74",
+      "updatedAt": "2026-08-17T13:22:40.014Z"
+    },
+    "land.disc.1.body": {
+      "text": "Ki kòman poto mitan, interes ekonomik ak presyon eksterèl shape desision ak resilta probabl.",
+      "sourceHash": "8afd68a3d3ef",
+      "updatedAt": "2026-08-17T13:22:40.014Z"
+    },
+    "land.disc.2.title": {
+      "text": "Analiz Sistèm ak Antisipasyon",
+      "sourceHash": "253865fba412",
+      "updatedAt": "2026-08-17T13:22:40.014Z"
+    },
+    "land.disc.2.body": {
+      "text": "Ki kòman intitisyòn, infrastriktir, rès ak dòpandans shape ki ka sevi ak ki ka sevi.",
+      "sourceHash": "a4b68fecad0c",
+      "updatedAt": "2026-08-17T13:22:40.014Z"
+    },
+    "land.disc.3.title": {
+      "text": "Analiz Stakeholder ak Engajman",
+      "sourceHash": "fc1ee57068cc",
+      "updatedAt": "2026-08-17T13:22:40.014Z"
+    },
+    "land.disc.3.body": {
+      "text": "Who can influence, obstruct or legitimise a decision, and how these relationships should be managed.",
+      "sourceHash": "e4fa7ce7e339",
+      "updatedAt": "2026-08-17T13:23:42.152Z"
+    },
+    "land.disc.4.title": {
+      "text": "Narrative monitoring and strategic communication",
+      "sourceHash": "67e865e68529",
+      "updatedAt": "2026-08-17T13:23:42.152Z"
+    },
+    "land.disc.4.body": {
+      "text": "How framing, legitimacy and public interpretation influence behaviour, implementation and response.",
+      "sourceHash": "98cb45abf1e1",
+      "updatedAt": "2026-08-17T13:23:42.152Z"
+    },
+    "land.disc.5.title": {
+      "text": "Open-source intelligence and validation",
+      "sourceHash": "35756d94e827",
+      "updatedAt": "2026-08-17T13:23:42.152Z"
+    },
+    "land.disc.5.body": {
+      "text": "Collecting, verifying and comparing evidence to test claims, identify contradictions and assess source authority.",
+      "sourceHash": "42f7468221bb",
+      "updatedAt": "2026-08-17T13:23:42.152Z"
+    },
+    "land.disc.6.title": {
+      "text": "Decision analysis and options assessment",
+      "sourceHash": "cc06adf088e1",
+      "updatedAt": "2026-08-17T13:23:42.152Z"
+    },
+    "land.disc.6.body": {
+      "text": "Bringing the evidence together to compare options, test assumptions, assess trade-offs and identify signals to monitor.",
+      "sourceHash": "7108d1316127",
+      "updatedAt": "2026-08-17T13:23:42.152Z"
+    },
+    "land.cta.eyebrow": {
+      "text": "Get Started",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T13:23:42.152Z"
+    },
+    "land.cta.title": {
+      "text": "Ki decizion ou ta fè?",
+      "sourceHash": "2ce1ab5a8081",
+      "updatedAt": "2026-08-17T13:24:17.937Z"
+    },
+    "land.cta.body": {
+      "text": "Criye konto pou ou amende yon konte yisite reel opsionèl ak Octivate, identifiye evidans ki matenè, ak chanje li nan analyse prèt fè deciziyon.",
+      "sourceHash": "11f71cd06f74",
+      "updatedAt": "2026-08-17T13:24:17.937Z"
+    },
+    "land.cta.create": {
+      "text": "Criye konto",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T13:24:17.937Z"
+    },
+    "land.cta.sample": {
+      "text": "Vizite yon bref échantillon",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T13:24:17.937Z"
+    },
+    "land.cta.emailPrefix": {
+      "text": "Ou ka email",
+      "sourceHash": "921d0ad714dc",
+      "updatedAt": "2026-08-17T13:24:17.937Z"
+    },
+    "land.about.body": {
+      "text": "Intelijans deciziyon aktionè pou environnè karibè kompleks. Developpé par CENSII, Octivate ramène evidans karibè fragmenté nan yon vizyon struktye pou deciziyon klere.",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T13:24:17.937Z"
+    },
+    "land.about.censii": {
+      "text": "Enstiti CENSII",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T13:24:17.937Z"
+    },
+    "land.about.team": {
+      "text": "Tim",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T13:24:17.937Z"
+    },
+    "land.mail.fab": {
+      "text": "Abone sou list",
+      "sourceHash": "dc46f4e0b25c",
+      "updatedAt": "2026-08-17T13:24:42.526Z"
+    },
+    "land.tech.heading": {
+      "text": "Teknoloji",
+      "sourceHash": "1310a448775a",
+      "updatedAt": "2026-08-17T13:24:42.526Z"
+    },
+    "land.tech.lede": {
+      "text": "Model routaj ak asistan pou analize —ès pou rail paye pou plan.",
+      "sourceHash": "d150c5578dfd",
+      "updatedAt": "2026-08-17T13:24:42.526Z"
+    },
+    "land.tech.demoCta": {
+      "text": "Deye yi 1-minute demo",
+      "sourceHash": "db9b420f3fdb",
+      "updatedAt": "2026-08-17T13:24:42.526Z"
+    },
+    "land.tech.demoKicker": {
+      "text": "Tour pwogram",
+      "sourceHash": "76b995c4422a",
+      "updatedAt": "2026-08-17T13:24:42.526Z"
+    },
+    "land.tech.demoTitle": {
+      "text": "Kontakte Octivate an 1 minute",
+      "sourceHash": "20abdfb8380b",
+      "updatedAt": "2026-08-17T13:24:42.526Z"
+    },
+    "land.tech.demoBody": {
+      "text": "Ykès tour pou cadrage teatre desid Karibey, validasyon evidans, ak oubri breef prèt pou desid.",
+      "sourceHash": "a9418180a664",
+      "updatedAt": "2026-08-17T13:24:42.526Z"
+    },
+    "land.tech.demoSample": {
+      "text": "Ouvri breef échantillon",
+      "sourceHash": "5ed6e8105a32",
+      "updatedAt": "2026-08-17T13:24:42.526Z"
+    },
+    "land.tech.demoSignup": {
+      "text": "Kriye kont",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T13:25:11.071Z"
+    },
+    "land.tech.demoClose": {
+      "text": "Fermye demò",
+      "sourceHash": "629a741a5ebc",
+      "updatedAt": "2026-08-17T13:25:11.071Z"
+    },
+    "land.ws.eyebrow": {
+      "text": "Dedans espas Travay",
+      "sourceHash": "2b4c8c6a7bc7",
+      "updatedAt": "2026-08-17T13:25:11.071Z"
+    },
+    "land.ws.title": {
+      "text": "Surfaces prodit live — explore sans sinsi.",
+      "sourceHash": "37fc4592ccec",
+      "updatedAt": "2026-08-17T13:25:11.071Z"
+    },
+    "land.ws.lede": {
+      "text": "Charte hover, change tab, and klik zon sou karte. Demo sa utilise données karibik échantillon ak reflète stylis Vèdan — sans aksyon kont.",
+      "sourceHash": "e46ccd61513d",
+      "updatedAt": "2026-08-17T13:25:11.071Z"
+    },
+    "land.ws.chromeLabel": {
+      "text": "Octivate · Vèdan",
+      "sourceHash": "af30e9554fe0",
+      "updatedAt": "2026-08-17T13:25:11.071Z"
+    },
+    "land.ws.tabsLabel": {
+      "text": "Tabs demò espas Travay",
+      "sourceHash": "4dfeacdbd87c",
+      "updatedAt": "2026-08-17T13:25:11.071Z"
+    },
+    "land.ws.tabInsights": {
+      "text": "Sòtès",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T13:25:11.071Z"
+    },
+    "land.ws.tabCoverage": {
+      "text": "Kovèridaj",
+      "sourceHash": "80e13549b47a",
+      "updatedAt": "2026-08-17T13:25:17.366Z"
+    },
+    "land.ws.riskMix": {
+      "text": "Mix aksir",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T13:25:17.366Z"
+    },
+    "land.ws.avgConfidence": {
+      "text": "Konfiyans mwayen",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T13:25:17.366Z"
+    },
+    "land.ws.briefs": {
+      "text": "Brif",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T13:25:17.366Z"
+    },
+    "land.ws.briefsFinal": {
+      "text": "Fini",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T13:25:17.366Z"
+    },
+    "land.ws.briefsDraft": {
+      "text": "Drat",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T13:25:17.366Z"
+    },
+    "land.ws.trends": {
+      "text": "Trenn dernyè",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T13:25:17.366Z"
+    },
+    "land.ws.recentBriefs": {
+      "text": "Brif dernyè",
+      "sourceHash": "157c46a63c49",
+      "updatedAt": "2026-08-17T13:25:17.366Z"
+    },
+    "land.ws.colBrief": {
+      "text": "Resòmye",
+      "sourceHash": "230e0f8d137e",
+      "updatedAt": "2026-08-17T13:25:28.901Z"
+    },
+    "land.ws.colCountry": {
+      "text": "Pays",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T13:25:28.901Z"
+    },
+    "land.ws.colRisk": {
+      "text": "Riski",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T13:25:28.901Z"
+    },
+    "land.ws.colConfidence": {
+      "text": "Konfans",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T13:25:28.901Z"
+    },
+    "land.ws.coverageSide": {
+      "text": "Teatè seleksyon",
+      "sourceHash": "1f2f630d6e6c",
+      "updatedAt": "2026-08-17T13:25:28.901Z"
+    },
+    "land.ws.coverageHint": {
+      "text": "Klikize yon mònè pays pou listye projèkt prèzantasyon.",
+      "sourceHash": "75953108dd09",
+      "updatedAt": "2026-08-17T13:25:28.901Z"
+    },
+    "land.ws.coverageStats": {
+      "text": "{n} projèkt · {active} actif",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T13:25:28.901Z"
+    },
+    "land.ws.ctaSample": {
+      "text": "Explore yon resòmye sampel",
+      "sourceHash": "72048fd54a2e",
+      "updatedAt": "2026-08-17T13:25:28.901Z"
+    },
+    "footer.blurb": {
+      "text": "Orienté akksyon intelijans desision pou environman dwekan Karayib kompleks. Developpé par CENSII, Octivate an frägmanté Karayib evidans nan yon vizye struktye pou desision klere.",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T13:25:49.369Z"
+    },
+    "footer.explore": {
+      "text": "Explò",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T13:25:49.369Z"
+    },
+    "footer.product": {
+      "text": "Prodwi",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T13:25:49.369Z"
+    },
+    "footer.why": {
+      "text": "Pourquoi Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T13:25:49.369Z"
+    },
+    "footer.how": {
+      "text": "Kijan ou fè",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T13:25:49.369Z"
+    },
+    "footer.disciplines": {
+      "text": "Six disiplin",
+      "sourceHash": "926d0eec2cb3",
+      "updatedAt": "2026-08-17T13:25:49.369Z"
+    },
+    "footer.sample": {
+      "text": "Ejèm Brif",
+      "sourceHash": "8ad8c7f36656",
+      "updatedAt": "2026-08-17T13:25:49.369Z"
+    },
+    "footer.takeAction": {
+      "text": "Fè aksyon",
+      "sourceHash": "5ed99cd0b91e",
+      "updatedAt": "2026-08-17T13:25:49.369Z"
+    },
+    "footer.getStarted": {
+      "text": "Koman ou pral fè",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T13:26:06.012Z"
+    },
+    "footer.signIn": {
+      "text": "Sign in",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T13:26:06.012Z"
+    },
+    "footer.pricing": {
+      "text": "Pran pwòfis",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T13:26:06.012Z"
+    },
+    "footer.contact": {
+      "text": "Kontakte nou",
+      "sourceHash": "4832e45812a2",
+      "updatedAt": "2026-08-17T13:26:06.012Z"
+    },
+    "footer.about": {
+      "text": "Enn ogmante",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T13:26:06.012Z"
+    },
+    "footer.aboutCensii": {
+      "text": "Enn ogmante CENSII",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T13:26:06.012Z"
+    },
+    "footer.team": {
+      "text": "Tim",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T13:26:06.012Z"
+    },
+    "footer.legal": {
+      "text": "Dwa legale",
+      "sourceHash": "902c91d94e0f",
+      "updatedAt": "2026-08-17T13:26:06.012Z"
+    },
+    "footer.privacy": {
+      "text": "Polisi Privè",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T13:26:29.150Z"
+    },
+    "footer.terms": {
+      "text": "Kondisyon pou Servis",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T13:26:29.150Z"
+    },
+    "footer.cookies": {
+      "text": "Déklareman Cooki",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T13:26:29.150Z"
+    },
+    "footer.cookieSettings": {
+      "text": "Paramèt Cooki",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T13:26:29.150Z"
+    },
+    "footer.seo": {
+      "text": "Octivate by CENSII fournis intèlizasyon dekarisyon karib: analyz Power–Systems–Narratives, validasyon evidans, eksamen opsyon ak surveyans pou organisasyon ki opere nan Trinidad and Tobago, Jamaica, Barbados, Guyana, Suriname, OECS ak la région plus large.",
+      "sourceHash": "0e3cd5403e35",
+      "updatedAt": "2026-08-17T13:26:29.150Z"
+    },
+    "footer.backToTop": {
+      "text": "Retounen sou",
+      "sourceHash": "d9c883a90573",
+      "updatedAt": "2026-08-17T13:26:29.150Z"
+    },
+    "footer.copyright": {
+      "text": "© 2026 CENSII · Octivate · octivate.io",
+      "sourceHash": "134a51892744",
+      "updatedAt": "2026-08-17T13:26:29.150Z"
+    },
+    "auth.signin.kicker": {
+      "text": "Aksès espas",
+      "sourceHash": "9973694cce2b",
+      "updatedAt": "2026-08-17T13:26:29.150Z"
+    },
+    "auth.signin.title": {
+      "text": "Ewige pou Octivate",
+      "sourceHash": "dd0e28bb0b7b",
+      "updatedAt": "2026-08-17T13:26:49.361Z"
+    },
+    "auth.signin.lede": {
+      "text": "Utilize wou email Octivate òd nom d'utilisè ak pwòde pou ouvri yizwè decision-intelligence.",
+      "sourceHash": "24e55d4e1216",
+      "updatedAt": "2026-08-17T13:26:49.361Z"
+    },
+    "auth.signin.submit": {
+      "text": "Ewige",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T13:26:49.361Z"
+    },
+    "auth.signin.switchText": {
+      "text": "Nou pa gen kont?",
+      "sourceHash": "f838dc11db15",
+      "updatedAt": "2026-08-17T13:26:49.361Z"
+    },
+    "auth.signin.switchLabel": {
+      "text": "Ewige an",
+      "sourceHash": "0b81497c8589",
+      "updatedAt": "2026-08-17T13:26:49.361Z"
+    },
+    "auth.signin.visualTitle": {
+      "text": "Klarite pou decisyon Karibay",
+      "sourceHash": "1294b968f5da",
+      "updatedAt": "2026-08-17T13:26:49.361Z"
+    },
+    "auth.signin.visualBody": {
+      "text": "Konnekte signa regional dispersé, testé kisa ka fwasit, ak pase ak jugemen bazè evidans.",
+      "sourceHash": "8847c4995d52",
+      "updatedAt": "2026-08-17T13:26:49.361Z"
+    },
+    "auth.signup.kicker": {
+      "text": "Nivè gratis",
+      "sourceHash": "5305bc7bfd0f",
+      "updatedAt": "2026-08-17T13:26:49.361Z"
+    },
+    "auth.signup.title": {
+      "text": "Kri yon aksès pou Octivate",
+      "sourceHash": "46146191c6b9",
+      "updatedAt": "2026-08-17T13:27:07.759Z"
+    },
+    "auth.signup.lede": {
+      "text": "Ewe yw champ entèpòt/nom d'utilisè ak pwòt entènn, oswa genere kredi anpil sekirite lè aktivè.",
+      "sourceHash": "4188f5813dcf",
+      "updatedAt": "2026-08-17T13:27:07.759Z"
+    },
+    "auth.signup.submit": {
+      "text": "Kri compte",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T13:27:07.759Z"
+    },
+    "auth.signup.switchText": {
+      "text": "Ou gen déja konto?",
+      "sourceHash": "8559034a07c9",
+      "updatedAt": "2026-08-17T13:27:07.759Z"
+    },
+    "auth.signup.switchLabel": {
+      "text": "Entènn",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T13:27:07.759Z"
+    },
+    "auth.signup.visualTitle": {
+      "text": "Intelijans decision, prèt à fè chak",
+      "sourceHash": "7428fa4a3e6b",
+      "updatedAt": "2026-08-17T13:27:07.759Z"
+    },
+    "auth.signup.visualBody": {
+      "text": "Strukture tanpri, assamble evidans akòs Power–Systems–Narratives, akòy avèk opsyon ou ka fè.",
+      "sourceHash": "6ce5101d86c9",
+      "updatedAt": "2026-08-17T13:27:07.759Z"
+    },
+    "auth.email": {
+      "text": "Entèpòt oswa nom d'utilisè",
+      "sourceHash": "094f6a59348a",
+      "updatedAt": "2026-08-17T13:27:07.759Z"
+    },
+    "auth.password": {
+      "text": "Mot de passe",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T13:27:15.577Z"
+    },
+    "auth.forgot": {
+      "text": "Mot de passe oublié?",
+      "sourceHash": "4c29f7f03358",
+      "updatedAt": "2026-08-17T13:27:15.577Z"
+    },
+    "auth.showPassword": {
+      "text": "Montre mot de passe",
+      "sourceHash": "044b852f30b6",
+      "updatedAt": "2026-08-17T13:27:15.577Z"
+    },
+    "auth.hidePassword": {
+      "text": "Cache mot de passe",
+      "sourceHash": "e40123b4e787",
+      "updatedAt": "2026-08-17T13:27:15.577Z"
+    },
+    "auth.back": {
+      "text": "Retour",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T13:27:15.577Z"
+    },
+    "auth.busy": {
+      "text": "Tanpri patiente…",
+      "sourceHash": "5afeca73bef6",
+      "updatedAt": "2026-08-17T13:27:15.577Z"
+    },
+    "ws.section.workspace": {
+      "text": "Espace de travail",
+      "sourceHash": "4ca0a75c2b7f",
+      "updatedAt": "2026-08-17T13:27:15.577Z"
+    },
+    "ws.section.intelligence": {
+      "text": "Intelijans",
+      "sourceHash": "c698f940a03e",
+      "updatedAt": "2026-08-17T13:27:15.577Z"
+    },
+    "ws.section.analysis": {
+      "text": "Analiz",
+      "sourceHash": "62c7fcf46e27",
+      "updatedAt": "2026-08-17T13:27:19.676Z"
+    },
+    "ws.nav.overview": {
+      "text": "Ovè",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T13:27:19.676Z"
+    },
+    "ws.nav.projects": {
+      "text": "Projekt",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T13:27:19.676Z"
+    },
+    "ws.nav.monitors": {
+      "text": "Mònitè",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T13:27:19.676Z"
+    },
+    "ws.nav.sources": {
+      "text": "Swasè",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T13:27:19.676Z"
+    },
+    "ws.nav.briefs": {
+      "text": "Brif",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T13:27:19.676Z"
+    },
+    "ws.nav.stakeholders": {
+      "text": "Stakeletè",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T13:27:19.676Z"
+    },
+    "ws.mode.workspace": {
+      "text": "Mode espas",
+      "sourceHash": "8ce322f49b05",
+      "updatedAt": "2026-08-17T13:27:19.676Z"
+    },
+    "ws.mode.operator": {
+      "text": "Mode opsyon",
+      "sourceHash": "594a7f797f7d",
+      "updatedAt": "2026-08-17T13:27:20.863Z"
+    },
+    "ws.askStrategic": {
+      "text": "Pos yon pwoblèm strategik",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T13:27:20.863Z"
+    },
+    "ws.operatorDashboard": {
+      "text": "Dashboard opsyon",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T13:27:20.863Z"
+    },
+    "ws.collapseSidebar": {
+      "text": "Refèch lajan",
+      "sourceHash": "9e6876286e45",
+      "updatedAt": "2026-08-17T13:27:20.863Z"
+    },
+    "ws.expandSidebar": {
+      "text": "Ouvri lajan",
+      "sourceHash": "f462e889fd88",
+      "updatedAt": "2026-08-17T13:27:20.863Z"
+    },
+    "ws.openMenu": {
+      "text": "Ouvri men",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T13:27:20.863Z"
+    },
+    "ws.closeMenu": {
+      "text": "Fermè men",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T13:27:20.863Z"
+    },
+    "ws.overview.title": {
+      "text": "Povwa",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T13:27:20.863Z"
+    },
+    "ws.overview.lede": {
+      "text": "Eskwa intéligans Karib — tendans, projèkt, brefs, pak ak uso.",
+      "sourceHash": "f89a3516e147",
+      "updatedAt": "2026-08-17T13:27:35.552Z"
+    },
+    "ws.overview.newAnalysis": {
+      "text": "Nouvo analyzis",
+      "sourceHash": "3874bbceddf5",
+      "updatedAt": "2026-08-17T13:27:35.552Z"
+    },
+    "ws.overview.tab.insights": {
+      "text": "Konesans",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T13:27:35.552Z"
+    },
+    "ws.overview.tab.pipeline": {
+      "text": "Sèyè",
+      "sourceHash": "32b1d5a78493",
+      "updatedAt": "2026-08-17T13:27:35.552Z"
+    },
+    "ws.overview.riskMix": {
+      "text": "Risik miks",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T13:27:35.552Z"
+    },
+    "ws.overview.riskMixSub": {
+      "text": "Brefs an nivè risik",
+      "sourceHash": "ec9ed226c4fa",
+      "updatedAt": "2026-08-17T13:27:35.552Z"
+    },
+    "ws.overview.latestTrends": {
+      "text": "Nouvo tendans",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T13:27:35.552Z"
+    },
+    "ws.overview.avgConfidence": {
+      "text": "Moyenn konfiyans",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T13:27:35.552Z"
+    },
+    "ws.overview.briefs": {
+      "text": "Brif",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T13:27:46.227Z"
+    },
+    "ws.overview.briefsTotal": {
+      "text": "{n} total",
+      "sourceHash": "aeb6ea7ac893",
+      "updatedAt": "2026-08-17T13:27:46.227Z"
+    },
+    "ws.overview.final": {
+      "text": "Fini",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T13:27:46.227Z"
+    },
+    "ws.overview.draft": {
+      "text": "Dwat",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T13:27:46.227Z"
+    },
+    "ws.overview.countryPacks": {
+      "text": "Pakèt kountry",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T13:27:46.227Z"
+    },
+    "ws.overview.caribbeanMarkets": {
+      "text": "{n} Marché Karayib",
+      "sourceHash": "9f1512466503",
+      "updatedAt": "2026-08-17T13:27:46.227Z"
+    },
+    "ws.overview.aiUsage": {
+      "text": "Epanse AI",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T13:27:46.227Z"
+    },
+    "ws.overview.tokens": {
+      "text": "Token",
+      "sourceHash": "3391436a4e72",
+      "updatedAt": "2026-08-17T13:27:46.227Z"
+    },
+    "ws.overview.estCost": {
+      "text": "Est. kost ${amount}",
+      "sourceHash": "f9dc4ad795a4",
+      "updatedAt": "2026-08-17T13:28:00.475Z"
+    },
+    "ws.overview.agenticPipeline": {
+      "text": "Pipeline agentik",
+      "sourceHash": "a8b4a909f8ce",
+      "updatedAt": "2026-08-17T13:28:00.475Z"
+    },
+    "ws.overview.agenticLede": {
+      "text": "Atizèm 8 spesalize struktye entree →èvidan → PSN analyz → rapò decizyon.",
+      "sourceHash": "d5d084c354a2",
+      "updatedAt": "2026-08-17T13:28:00.475Z"
+    },
+    "ws.overview.startWorkflow": {
+      "text": "Komante workflow",
+      "sourceHash": "5d07bdb74e62",
+      "updatedAt": "2026-08-17T13:28:00.475Z"
+    },
+    "ws.overview.latestBriefs": {
+      "text": "Nouvo rapò decizyon",
+      "sourceHash": "52ce1d088ad9",
+      "updatedAt": "2026-08-17T13:28:00.475Z"
+    },
+    "ws.overview.viewAll": {
+      "text": "Veye tout",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T13:28:00.475Z"
+    },
+    "ws.overview.col.title": {
+      "text": "Titl",
+      "sourceHash": "768e0c1c6957",
+      "updatedAt": "2026-08-17T13:28:00.475Z"
+    },
+    "ws.overview.col.country": {
+      "text": "Pays",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T13:28:00.475Z"
+    },
+    "ws.overview.col.risk": {
+      "text": "Risik",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T13:28:09.210Z"
+    },
+    "ws.overview.col.confidence": {
+      "text": "Konfans",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T13:28:09.210Z"
+    },
+    "ws.overview.activeProjects": {
+      "text": "Proje aktif",
+      "sourceHash": "f361946445f2",
+      "updatedAt": "2026-08-17T13:28:09.210Z"
+    },
+    "ws.overview.monitoring": {
+      "text": "Moni",
+      "sourceHash": "a81434589757",
+      "updatedAt": "2026-08-17T13:28:09.210Z"
+    },
+    "ws.overview.briefsLabel": {
+      "text": "Brif",
+      "sourceHash": "81aad378d8e5",
+      "updatedAt": "2026-08-17T13:28:09.210Z"
+    },
+    "ws.overview.sourcesLabel": {
+      "text": "Sòz",
+      "sourceHash": "bce16dd02608",
+      "updatedAt": "2026-08-17T13:28:09.210Z"
+    },
+    "ws.overview.runsLabel": {
+      "text": "Eksenasyon",
+      "sourceHash": "71b3f0bbe7d5",
+      "updatedAt": "2026-08-17T13:28:09.210Z"
+    },
+    "ws.overview.sessions": {
+      "text": "Sési",
+      "sourceHash": "e11e37a9253b",
+      "updatedAt": "2026-08-17T13:28:09.210Z"
+    },
+    "ws.overview.total": {
+      "text": "total",
+      "sourceHash": "5a537e209151",
+      "updatedAt": "2026-08-17T13:28:31.020Z"
+    },
+    "ws.overview.map.title": {
+      "text": "Couverture teatri",
+      "sourceHash": "597b741ee58c",
+      "updatedAt": "2026-08-17T13:28:31.020Z"
+    },
+    "ws.overview.map.lede": {
+      "text": "Map viv teatri projèk par kountrè — sourize pou kounte, klik pou ouvri list projèkt.",
+      "sourceHash": "50dd24fff5fe",
+      "updatedAt": "2026-08-17T13:28:31.020Z"
+    },
+    "ws.overview.map.summary": {
+      "text": "{countries} kountrè · {projects} projèkt",
+      "sourceHash": "e09cdd8b4569",
+      "updatedAt": "2026-08-17T13:28:31.020Z"
+    },
+    "ws.overview.map.live": {
+      "text": "Viv",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T13:28:31.020Z"
+    },
+    "ws.overview.map.liveHint": {
+      "text": "Mise à jour nan workspace lightning refresh et poll mou",
+      "sourceHash": "de35b65a98de",
+      "updatedAt": "2026-08-17T13:28:31.020Z"
+    },
+    "ws.overview.map.updating": {
+      "text": "Mise à jour",
+      "sourceHash": "ec6952e09b9c",
+      "updatedAt": "2026-08-17T13:28:31.020Z"
+    },
+    "ws.overview.map.updatingHint": {
+      "text": "Rafraîchissement de la couverture teatri",
+      "sourceHash": "64415f399cc6",
+      "updatedAt": "2026-08-17T13:28:31.020Z"
+    },
+    "ws.overview.map.reset": {
+      "text": "Karib",
+      "sourceHash": "4a2e3865acb4",
+      "updatedAt": "2026-08-17T13:28:32.312Z"
+    },
+    "ws.overview.map.resetHint": {
+      "text": "Remèt fòs karabin nan Karibik",
+      "sourceHash": "7d81dd21b898",
+      "updatedAt": "2026-08-17T13:28:32.312Z"
+    },
+    "ws.overview.map.hoverStats": {
+      "text": "{n} projèk · {active} actif",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T13:28:32.312Z"
+    },
+    "ws.overview.map.clickHint": {
+      "text": "Klik pou wè projèk",
+      "sourceHash": "daaaa430f8b1",
+      "updatedAt": "2026-08-17T13:28:32.312Z"
+    },
+    "ws.overview.map.empty": {
+      "text": "Kreye yon projèk pou ilimite karabin.",
+      "sourceHash": "40ee077e9f45",
+      "updatedAt": "2026-08-17T13:28:32.312Z"
+    },
+    "ws.overview.map.emptyCountry": {
+      "text": "Pa gen projèk nan peyi sa a ankò.",
+      "sourceHash": "561147a5f7cd",
+      "updatedAt": "2026-08-17T13:28:32.312Z"
+    },
+    "ws.overview.map.modalKicker": {
+      "text": "Teatè peyi",
+      "sourceHash": "93a542767481",
+      "updatedAt": "2026-08-17T13:28:32.312Z"
+    },
+    "ws.overview.map.projectCount": {
+      "text": "{n} projèk · {active} actif",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T13:28:32.312Z"
+    },
+    "ws.overview.map.close": {
+      "text": "Fermé projèk peyi",
+      "sourceHash": "9dcfebb87cf3",
+      "updatedAt": "2026-08-17T13:28:42.784Z"
+    },
+    "ws.overview.map.projectsWord": {
+      "text": "projèk",
+      "sourceHash": "b37b5674e3d0",
+      "updatedAt": "2026-08-17T13:28:42.784Z"
+    },
+    "ws.projects.title": {
+      "text": "projèk",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T13:28:42.784Z"
+    },
+    "ws.projects.lede": {
+      "text": "Defini yon teatre decision ak peyi ak sektèr, apèsé egzike yon flè an agent pou fè yon résumé.",
+      "sourceHash": "89564efb1fce",
+      "updatedAt": "2026-08-17T13:28:42.784Z"
+    },
+    "ws.projects.sort.updated": {
+      "text": "Tri: Mise à jour récente",
+      "sourceHash": "92e532b2ba41",
+      "updatedAt": "2026-08-17T13:28:42.784Z"
+    },
+    "ws.projects.sort.name": {
+      "text": "Tri: Nòm",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T13:28:42.784Z"
+    },
+    "ws.projects.sort.country": {
+      "text": "Tri: Peyi",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T13:28:42.784Z"
+    },
+    "ws.projects.kpi.projects": {
+      "text": "projèk",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T13:28:42.784Z"
+    },
+    "ws.projects.kpi.active": {
+      "text": "Aktiw",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T13:28:43.625Z"
+    },
+    "ws.projects.kpi.activeHint": {
+      "text": "An progres",
+      "sourceHash": "b6bd42e4e730",
+      "updatedAt": "2026-08-17T13:28:43.625Z"
+    },
+    "ws.projects.kpi.withQuestion": {
+      "text": "Ak pitit",
+      "sourceHash": "adfd7bee4031",
+      "updatedAt": "2026-08-17T13:28:43.625Z"
+    },
+    "ws.projects.kpi.withQuestionHint": {
+      "text": "Prèt pou anjè",
+      "sourceHash": "1bace2d9eaed",
+      "updatedAt": "2026-08-17T13:28:43.625Z"
+    },
+    "ws.projects.kpi.countries": {
+      "text": "Pays",
+      "sourceHash": "8467c0d99c79",
+      "updatedAt": "2026-08-17T13:28:43.625Z"
+    },
+    "ws.projects.filter.all": {
+      "text": "Tout",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T13:28:43.625Z"
+    },
+    "ws.projects.filter.active": {
+      "text": "Aktiw",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T13:28:43.625Z"
+    },
+    "ws.projects.filter.needsQuestion": {
+      "text": "Bezon pitit",
+      "sourceHash": "d47967177def",
+      "updatedAt": "2026-08-17T13:28:43.625Z"
+    },
+    "ws.projects.filter.archived": {
+      "text": "Arkive",
+      "sourceHash": "eddc813f35b1",
+      "updatedAt": "2026-08-17T13:28:57.067Z"
+    },
+    "ws.projects.search": {
+      "text": "Rechèch projèkt, peisò, sektè…",
+      "sourceHash": "277b594595b9",
+      "updatedAt": "2026-08-17T13:28:57.067Z"
+    },
+    "ws.projects.new": {
+      "text": "Nouvo projèkt",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T13:28:57.067Z"
+    },
+    "ws.projects.newHint": {
+      "text": "Ouvri yon teatre strategik",
+      "sourceHash": "08c180ad8a2b",
+      "updatedAt": "2026-08-17T13:28:57.067Z"
+    },
+    "ws.projects.newInvite": {
+      "text": "Debut",
+      "sourceHash": "54acc2806d4d",
+      "updatedAt": "2026-08-17T13:28:57.067Z"
+    },
+    "ws.projects.newClose": {
+      "text": "Fermet kompozè",
+      "sourceHash": "49f1b7e9f2a5",
+      "updatedAt": "2026-08-17T13:28:57.067Z"
+    },
+    "ws.projects.newPanelLede": {
+      "text": "Donn yon nom teatre, paramèt peisò ak sektè, ete create — ou ka pose yon kesyon strategik aprez.",
+      "sourceHash": "8d7dc359b19a",
+      "updatedAt": "2026-08-17T13:28:57.067Z"
+    },
+    "ws.projects.name": {
+      "text": "Non projèkt",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T13:28:57.067Z"
+    },
+    "ws.projects.namePlaceholder": {
+      "text": "sòti. Redayibilté energiy Guyana",
+      "sourceHash": "6cc1d1132f94",
+      "updatedAt": "2026-08-17T13:29:07.762Z"
+    },
+    "ws.projects.country": {
+      "text": "Pays",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T13:29:07.762Z"
+    },
+    "ws.projects.sector": {
+      "text": "Sèktèr",
+      "sourceHash": "39fd2070d41b",
+      "updatedAt": "2026-08-17T13:29:07.762Z"
+    },
+    "ws.projects.cancel": {
+      "text": "Anil",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T13:29:07.762Z"
+    },
+    "ws.projects.create": {
+      "text": "Fè projèkt",
+      "sourceHash": "a8d8ff51e4c8",
+      "updatedAt": "2026-08-17T13:29:07.762Z"
+    },
+    "ws.projects.creating": {
+      "text": "Fè projèkt…",
+      "sourceHash": "94d7d8ee473f",
+      "updatedAt": "2026-08-17T13:29:07.762Z"
+    },
+    "ws.projects.empty": {
+      "text": "Pa gen projèkt",
+      "sourceHash": "cac330d7f9c7",
+      "updatedAt": "2026-08-17T13:29:07.762Z"
+    },
+    "ws.projects.emptyHint": {
+      "text": "Fè yon projèkt pou defini pays, sèktèr ak question strategik ki bezwen repon ak tim ou.",
+      "sourceHash": "e44e10633ff5",
+      "updatedAt": "2026-08-17T13:29:07.762Z"
+    },
+    "ws.projects.noMatches": {
+      "text": "Pa gen correspondance",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T13:29:24.238Z"
+    },
+    "ws.projects.noMatchesHint": {
+      "text": "Ewite yon rechèch differan oswa filtre — oswa kreye yon projèk nouvo.",
+      "sourceHash": "42a5a4c7b0f8",
+      "updatedAt": "2026-08-17T13:29:24.238Z"
+    },
+    "ws.projects.createdTitle": {
+      "text": "Projèk kreye",
+      "sourceHash": "76556f09a383",
+      "updatedAt": "2026-08-17T13:29:24.238Z"
+    },
+    "ws.projects.createdBody": {
+      "text": "Teatre desidè ou nouvo prèt.",
+      "sourceHash": "37fcd61e8ade",
+      "updatedAt": "2026-08-17T13:29:24.238Z"
+    },
+    "ws.projects.createFailed": {
+      "text": "Pa kapab kreye projèk.",
+      "sourceHash": "373981fcc313",
+      "updatedAt": "2026-08-17T13:29:24.238Z"
+    },
+    "ws.projects.edit": {
+      "text": "Modifiye projèk.",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T13:29:24.238Z"
+    },
+    "ws.projects.delete": {
+      "text": "Supime projèk.",
+      "sourceHash": "af1456f256eb",
+      "updatedAt": "2026-08-17T13:29:24.238Z"
+    },
+    "ws.projects.deleted": {
+      "text": "Projèk supime.",
+      "sourceHash": "6b17c222a23a",
+      "updatedAt": "2026-08-17T13:29:24.238Z"
+    },
+    "ws.projects.updated": {
+      "text": "Projet aktyalize",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T13:29:36.912Z"
+    },
+    "ws.projects.deleteConfirmTitle": {
+      "text": "Supri y projèkt?",
+      "sourceHash": "346956aef203",
+      "updatedAt": "2026-08-17T13:29:36.912Z"
+    },
+    "ws.projects.deleteConfirmBody": {
+      "text": "Brif, sesyon travay, ak dokiman telechargé pou y projèkt égalè pou supri. Sa pa ka wèchwi.",
+      "sourceHash": "82d71fd44e99",
+      "updatedAt": "2026-08-17T13:29:36.912Z"
+    },
+    "ws.project.askStrategic": {
+      "text": "Demandè stratégik",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T13:29:36.912Z"
+    },
+    "ws.project.depth.rapid": {
+      "text": "Rapid — vérifiye akòse",
+      "sourceHash": "6b189c5ab71d",
+      "updatedAt": "2026-08-17T13:29:36.912Z"
+    },
+    "ws.project.depth.standard": {
+      "text": "Standard — draf ekilibre",
+      "sourceHash": "49d0af9134ee",
+      "updatedAt": "2026-08-17T13:29:36.912Z"
+    },
+    "ws.project.depth.deep": {
+      "text": "Analiz fòs — senkòt senaryo",
+      "sourceHash": "ed533d1558c6",
+      "updatedAt": "2026-08-17T13:29:36.912Z"
+    },
+    "ws.project.depth.rapidShort": {
+      "text": "Rapid",
+      "sourceHash": "9a6ee6647c4c",
+      "updatedAt": "2026-08-17T13:29:36.912Z"
+    },
+    "ws.project.depth.standardShort": {
+      "text": "Standard",
+      "sourceHash": "2dfa66079d9b",
+      "updatedAt": "2026-08-17T13:29:38.041Z"
+    },
+    "ws.project.depth.deepShort": {
+      "text": "Deep dive",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T13:29:38.041Z"
+    },
+    "ws.project.depth.rapidHint": {
+      "text": "Narrow findings for orientation; still needs human review.",
+      "sourceHash": "5a5cdba724e2",
+      "updatedAt": "2026-08-17T13:29:38.041Z"
+    },
+    "ws.project.depth.standardHint": {
+      "text": "Balanced PSN draft pending human review.",
+      "sourceHash": "15aa10c6c242",
+      "updatedAt": "2026-08-17T13:29:38.041Z"
+    },
+    "ws.project.depth.deepHint": {
+      "text": "Broader scenarios; never auto-final without review.",
+      "sourceHash": "bb30efc3d878",
+      "updatedAt": "2026-08-17T13:29:38.041Z"
+    },
+    "ws.project.run": {
+      "text": "Run agent workflow",
+      "sourceHash": "7dd6527ed98b",
+      "updatedAt": "2026-08-17T13:29:38.041Z"
+    },
+    "ws.project.agentsRunning": {
+      "text": "Agents running…",
+      "sourceHash": "e072b895cb8b",
+      "updatedAt": "2026-08-17T13:29:38.041Z"
+    },
+    "ws.project.rerunning": {
+      "text": "Rerunning…",
+      "sourceHash": "53920a3e9816",
+      "updatedAt": "2026-08-17T13:29:38.041Z"
+    },
+    "ws.project.rerun": {
+      "text": "Rejweye flou",
+      "sourceHash": "7792e8052528",
+      "updatedAt": "2026-08-17T13:29:48.716Z"
+    },
+    "ws.project.forceRerun": {
+      "text": "Forcè rejweye (kolè)",
+      "sourceHash": "26a80611d4e0",
+      "updatedAt": "2026-08-17T13:29:48.716Z"
+    },
+    "ws.project.linkedMonitors": {
+      "text": "Monitè liyen",
+      "sourceHash": "2788d1641b22",
+      "updatedAt": "2026-08-17T13:29:48.716Z"
+    },
+    "ws.project.noMonitors": {
+      "text": "Aranjman liyer pa genenn ankò.",
+      "sourceHash": "b202f7c531ac",
+      "updatedAt": "2026-08-17T13:29:48.716Z"
+    },
+    "ws.project.briefReady": {
+      "text": "Brif dekesion prèt",
+      "sourceHash": "f94bed6f0fd1",
+      "updatedAt": "2026-08-17T13:29:48.716Z"
+    },
+    "ws.project.briefReadyBody": {
+      "text": "Dokiman resilt ou disponib",
+      "sourceHash": "6f9a4a136283",
+      "updatedAt": "2026-08-17T13:29:48.716Z"
+    },
+    "ws.project.workflowDone": {
+      "text": "Wofò lan fini ak brif disponib.",
+      "sourceHash": "6182fd41fcdb",
+      "updatedAt": "2026-08-17T13:29:48.716Z"
+    },
+    "ws.project.workflowFailed": {
+      "text": "Wofò a panse — chanje yon kesyon ou oswa source, akò rejweye.",
+      "sourceHash": "82ea50d7133a",
+      "updatedAt": "2026-08-17T13:29:48.716Z"
+    },
+    "ws.project.alreadyRunning": {
+      "text": "Yon flò kay déja en cours.",
+      "sourceHash": "5717f12dab7a",
+      "updatedAt": "2026-08-17T13:29:58.350Z"
+    },
+    "ws.project.workflowStarted": {
+      "text": "Flò kay te komanse — anjè a te en cours.",
+      "sourceHash": "ba2f05f6a246",
+      "updatedAt": "2026-08-17T13:29:58.350Z"
+    },
+    "ws.project.needQuestion": {
+      "text": "Antèd yon question stratégik (10+ karaktè) avandans renouvèlman.",
+      "sourceHash": "c5855c7fedf6",
+      "updatedAt": "2026-08-17T13:29:58.350Z"
+    },
+    "ws.project.stuckRerun": {
+      "text": "Renmenman kay te koule — te komanse yon flò kay nwèl…",
+      "sourceHash": "7a06899218f0",
+      "updatedAt": "2026-08-17T13:29:58.350Z"
+    },
+    "ws.project.rerunningToast": {
+      "text": "Renouvèlman yon flò kay agènt…",
+      "sourceHash": "2e84385a93af",
+      "updatedAt": "2026-08-17T13:29:58.350Z"
+    },
+    "ws.project.edit": {
+      "text": "Edite projèkt",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T13:29:58.350Z"
+    },
+    "ws.project.name": {
+      "text": "Nòm projèkt",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T13:29:58.350Z"
+    },
+    "ws.project.save": {
+      "text": "Sove chanje",
+      "sourceHash": "179359b39edb",
+      "updatedAt": "2026-08-17T13:29:58.350Z"
+    },
+    "ws.project.saving": {
+      "text": "Enregistre…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T13:30:05.907Z"
+    },
+    "ws.project.updated": {
+      "text": "Projet aktualize",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T13:30:05.907Z"
+    },
+    "ws.project.archived": {
+      "text": "Projet archiv",
+      "sourceHash": "225209bf7dec",
+      "updatedAt": "2026-08-17T13:30:05.907Z"
+    },
+    "ws.project.restored": {
+      "text": "Projet restaurasyon",
+      "sourceHash": "cd1b8386c131",
+      "updatedAt": "2026-08-17T13:30:05.907Z"
+    },
+    "ws.project.notFound": {
+      "text": "Projet introuvable",
+      "sourceHash": "3955a012ec3c",
+      "updatedAt": "2026-08-17T13:30:05.907Z"
+    },
+    "ws.project.loadFailed": {
+      "text": "Pa kapab chaje",
+      "sourceHash": "af14db26285b",
+      "updatedAt": "2026-08-17T13:30:05.907Z"
+    },
+    "ws.project.closeSettings": {
+      "text": "Fermye parametre projè",
+      "sourceHash": "f24a1261f0cb",
+      "updatedAt": "2026-08-17T13:30:05.907Z"
+    },
+    "ws.project.restoreForAgents": {
+      "text": "Restaure projè pou kontinye flèw ajans.",
+      "sourceHash": "943965352a99",
+      "updatedAt": "2026-08-17T13:30:05.907Z"
+    },
+    "ws.project.restoreForDocs": {
+      "text": "Restaure yon projèkt pou ajoute dwat.",
+      "sourceHash": "76bb5e7cd3cd",
+      "updatedAt": "2026-08-17T13:30:29.691Z"
+    },
+    "ws.project.module.reset": {
+      "text": "Réinitialisation mise en page module",
+      "sourceHash": "43b548921a20",
+      "updatedAt": "2026-08-17T13:30:29.691Z"
+    },
+    "ws.project.liveAwaiting": {
+      "text": "En direct · atèntan kè",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T13:30:29.691Z"
+    },
+    "ws.project.module.question": {
+      "text": "Pyèsion",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T13:30:29.691Z"
+    },
+    "ws.project.module.documents": {
+      "text": "Dwat",
+      "sourceHash": "687c82861c95",
+      "updatedAt": "2026-08-17T13:30:29.691Z"
+    },
+    "ws.project.module.monitors": {
+      "text": "Monitè",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T13:30:29.691Z"
+    },
+    "ws.project.module.agent": {
+      "text": "Ajan",
+      "sourceHash": "5ce2e6f40299",
+      "updatedAt": "2026-08-17T13:30:29.691Z"
+    },
+    "ws.project.module.pulse": {
+      "text": "Pwòl",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T13:30:29.691Z"
+    },
+    "ws.account.title": {
+      "text": "Paramèt",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T13:30:40.267Z"
+    },
+    "ws.account.lede": {
+      "text": "Profayl, sekirite,présans, avertis, et sesyon kontròl.",
+      "sourceHash": "8a35cc38fbac",
+      "updatedAt": "2026-08-17T13:30:40.267Z"
+    },
+    "ws.account.loading": {
+      "text": "Chargement konto…",
+      "sourceHash": "c3ffe1ef49d0",
+      "updatedAt": "2026-08-17T13:30:40.267Z"
+    },
+    "ws.account.tab.profile": {
+      "text": "Profayl",
+      "sourceHash": "ff4fc0276e96",
+      "updatedAt": "2026-08-17T13:30:40.267Z"
+    },
+    "ws.account.tab.security": {
+      "text": "Sekirite",
+      "sourceHash": "f25ce1b8a399",
+      "updatedAt": "2026-08-17T13:30:40.267Z"
+    },
+    "ws.account.tab.presence": {
+      "text": "Présans",
+      "sourceHash": "89a8a335a746",
+      "updatedAt": "2026-08-17T13:30:40.267Z"
+    },
+    "ws.account.tab.alerts": {
+      "text": "Avertis",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T13:30:40.267Z"
+    },
+    "ws.account.tab.session": {
+      "text": "Sesyon",
+      "sourceHash": "f7f1997c6cd1",
+      "updatedAt": "2026-08-17T13:30:40.267Z"
+    },
+    "ws.account.uploadPhoto": {
+      "text": "Telecharger foto profil",
+      "sourceHash": "888d7bc45d2f",
+      "updatedAt": "2026-08-17T13:30:45.756Z"
+    },
+    "ws.account.remove": {
+      "text": "Enlev",
+      "sourceHash": "e963907dac5c",
+      "updatedAt": "2026-08-17T13:30:45.756Z"
+    },
+    "ws.account.displayName": {
+      "text": "Non afiche",
+      "sourceHash": "c7874aaa0fab",
+      "updatedAt": "2026-08-17T13:30:45.756Z"
+    },
+    "ws.account.bio": {
+      "text": "Enbow / bio",
+      "sourceHash": "32b952c4847b",
+      "updatedAt": "2026-08-17T13:30:45.756Z"
+    },
+    "ws.account.saveProfile": {
+      "text": "Enregistre profil",
+      "sourceHash": "f597c0e8201d",
+      "updatedAt": "2026-08-17T13:30:45.756Z"
+    },
+    "ws.account.password": {
+      "text": "Mot de passe",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T13:30:45.756Z"
+    },
+    "ws.account.currentPassword": {
+      "text": "Mot de passe aktuel",
+      "sourceHash": "19dff4dad0a7",
+      "updatedAt": "2026-08-17T13:30:45.756Z"
+    },
+    "ws.account.newPassword": {
+      "text": "Nouvo mot de passe",
+      "sourceHash": "d850ee188c7c",
+      "updatedAt": "2026-08-17T13:30:45.756Z"
+    },
+    "ws.account.updatePassword": {
+      "text": "Mise à jour mot de passe",
+      "sourceHash": "350c355e16e3",
+      "updatedAt": "2026-08-17T13:30:54.736Z"
+    },
+    "ws.account.signOut": {
+      "text": "Deconneksyon",
+      "sourceHash": "dc1649a16c14",
+      "updatedAt": "2026-08-17T13:30:54.736Z"
+    },
+    "ws.account.presence": {
+      "text": "Status prensans",
+      "sourceHash": "a02b358912bf",
+      "updatedAt": "2026-08-17T13:30:54.736Z"
+    },
+    "ws.account.profileSaved": {
+      "text": "Profile sabvé",
+      "sourceHash": "e9983dc9ac3f",
+      "updatedAt": "2026-08-17T13:30:54.736Z"
+    },
+    "ws.account.saveFailed": {
+      "text": "Non sabvé",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T13:30:54.736Z"
+    },
+    "ws.account.passwordUpdated": {
+      "text": "Mot de passe mis à jour",
+      "sourceHash": "1de6d0816c54",
+      "updatedAt": "2026-08-17T13:30:54.736Z"
+    },
+    "ws.account.passwordFailed": {
+      "text": "Échec mise à jour mot de passe",
+      "sourceHash": "b651e6821043",
+      "updatedAt": "2026-08-17T13:30:54.736Z"
+    },
+    "ws.account.statusFailed": {
+      "text": "Pa pwòfè mete status",
+      "sourceHash": "b1073af68cc9",
+      "updatedAt": "2026-08-17T13:30:54.736Z"
+    },
+    "ws.account.imageType": {
+      "text": "Utilisez JPEG, PNG, ou WebP",
+      "sourceHash": "64219c573743",
+      "updatedAt": "2026-08-17T13:31:04.514Z"
+    },
+    "ws.account.avatarUpdated": {
+      "text": "Avatar mis à jour",
+      "sourceHash": "46e014bb0124",
+      "updatedAt": "2026-08-17T13:31:04.514Z"
+    },
+    "ws.account.uploadFailed": {
+      "text": "Téléversement a échoué",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T13:31:04.514Z"
+    },
+    "ws.account.avatarRemoved": {
+      "text": "Avatar retiré",
+      "sourceHash": "d9db37314bea",
+      "updatedAt": "2026-08-17T13:31:04.514Z"
+    },
+    "ws.account.removeFailed": {
+      "text": "Retrait a échoué",
+      "sourceHash": "debe01de259b",
+      "updatedAt": "2026-08-17T13:31:04.514Z"
+    },
+    "ws.account.signOutFailed": {
+      "text": "Déconnexion a échoué",
+      "sourceHash": "b1287a61ef81",
+      "updatedAt": "2026-08-17T13:31:04.514Z"
+    },
+    "ws.account.readImageFailed": {
+      "text": "Impossible de lire l'image",
+      "sourceHash": "68d60f7c8e85",
+      "updatedAt": "2026-08-17T13:31:04.514Z"
+    },
+    "ws.monitors.title": {
+      "text": "Moniteurs",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T13:31:04.514Z"
+    },
+    "ws.monitors.lede": {
+      "text": "Profils de surveillance continue pou mots-clé ak jurisdiksyon — alerte ap aparennan lè signaux match la portée de yòw brief.",
+      "sourceHash": "96c578a78d41",
+      "updatedAt": "2026-08-17T13:31:15.979Z"
+    },
+    "ws.monitors.name": {
+      "text": "Nom du monitè",
+      "sourceHash": "8f3d2b89f0f7",
+      "updatedAt": "2026-08-17T13:31:15.979Z"
+    },
+    "ws.monitors.keywords": {
+      "text": "Mots-clé (séparé par virgule)",
+      "sourceHash": "4772c39c2fd8",
+      "updatedAt": "2026-08-17T13:31:15.979Z"
+    },
+    "ws.monitors.countries": {
+      "text": "Pays (séparé par virgule)",
+      "sourceHash": "a6644ccc36eb",
+      "updatedAt": "2026-08-17T13:31:15.979Z"
+    },
+    "ws.monitors.linkProject": {
+      "text": "Lian projèkt (optionèl)",
+      "sourceHash": "b377c0bd90d9",
+      "updatedAt": "2026-08-17T13:31:15.979Z"
+    },
+    "ws.monitors.keywordsPlaceholder": {
+      "text": "EPA, pétrole",
+      "sourceHash": "b0441f183a91",
+      "updatedAt": "2026-08-17T13:31:15.979Z"
+    },
+    "ws.monitors.sort.lastAlert": {
+      "text": "Trier : Dernyè alerte",
+      "sourceHash": "871e1671f3cc",
+      "updatedAt": "2026-08-17T13:31:15.979Z"
+    },
+    "ws.monitors.sort.alertCount": {
+      "text": "Trier : Nombè alerte",
+      "sourceHash": "30818550f03c",
+      "updatedAt": "2026-08-17T13:31:15.979Z"
+    },
+    "ws.monitors.sort.name": {
+      "text": "Trie: Nòm",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T13:31:23.613Z"
+    },
+    "ws.monitors.sort.country": {
+      "text": "Trie: Payis",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T13:31:23.613Z"
+    },
+    "ws.monitors.kpi.watching": {
+      "text": "Kontakte signal",
+      "sourceHash": "97cf17eaef54",
+      "updatedAt": "2026-08-17T13:31:23.613Z"
+    },
+    "ws.monitors.kpi.totalAlerts": {
+      "text": "Total alerte",
+      "sourceHash": "fde0ecac2d4a",
+      "updatedAt": "2026-08-17T13:31:23.613Z"
+    },
+    "ws.monitors.kpi.withAlerts": {
+      "text": "Avek alerte",
+      "sourceHash": "462e89938441",
+      "updatedAt": "2026-08-17T13:31:23.613Z"
+    },
+    "ws.monitors.search": {
+      "text": "Rechèch monitè, motè klé, pays…",
+      "sourceHash": "5ec1da77d398",
+      "updatedAt": "2026-08-17T13:31:23.613Z"
+    },
+    "ws.monitors.add": {
+      "text": "Ajout monitè",
+      "sourceHash": "c7347370fdde",
+      "updatedAt": "2026-08-17T13:31:23.613Z"
+    },
+    "ws.monitors.adding": {
+      "text": "Ajoutan…",
+      "sourceHash": "ffb2e628b0e9",
+      "updatedAt": "2026-08-17T13:31:23.613Z"
+    },
+    "ws.monitors.empty": {
+      "text": "Pa gen monitè ankò",
+      "sourceHash": "01356e674f83",
+      "updatedAt": "2026-08-17T13:31:36.676Z"
+    },
+    "ws.monitors.emptyHint": {
+      "text": "Ajoute yon profil surveyans pou mot-kè ak peisilwè a w antre ki w vle suivi antèy cykle bref.",
+      "sourceHash": "5e619550a5fb",
+      "updatedAt": "2026-08-17T13:31:36.676Z"
+    },
+    "ws.monitors.noMatches": {
+      "text": "Pa gen match",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T13:31:36.676Z"
+    },
+    "ws.monitors.noMatchesHint": {
+      "text": "Ajuste rechèch ak filtres, oswa kriye yon monitè nouvo.",
+      "sourceHash": "29c9f7839ead",
+      "updatedAt": "2026-08-17T13:31:36.676Z"
+    },
+    "ws.monitors.created": {
+      "text": "Monitè kreye",
+      "sourceHash": "395dbfc3b9df",
+      "updatedAt": "2026-08-17T13:31:36.676Z"
+    },
+    "ws.monitors.createFailed": {
+      "text": "Pa te kapab kreye monitè",
+      "sourceHash": "0e94667b5b74",
+      "updatedAt": "2026-08-17T13:31:36.676Z"
+    },
+    "ws.monitors.watchProfile": {
+      "text": "Profil surveyans",
+      "sourceHash": "42032bba3d02",
+      "updatedAt": "2026-08-17T13:31:36.676Z"
+    },
+    "ws.monitors.lastAlert": {
+      "text": "Alèrt deryè",
+      "sourceHash": "6badefe08b70",
+      "updatedAt": "2026-08-17T13:31:36.676Z"
+    },
+    "ws.monitors.trackedTerms": {
+      "text": "Termen seguis",
+      "sourceHash": "7c78071fa618",
+      "updatedAt": "2026-08-17T13:31:48.579Z"
+    },
+    "ws.monitors.liveFeed": {
+      "text": "Feed alerte en direct",
+      "sourceHash": "3997a0cdb184",
+      "updatedAt": "2026-08-17T13:31:48.579Z"
+    },
+    "ws.monitors.linkedProject": {
+      "text": "Projet liyen",
+      "sourceHash": "3998027f1c8f",
+      "updatedAt": "2026-08-17T13:31:48.579Z"
+    },
+    "ws.monitors.noProjectLinked": {
+      "text": "Pa gen projet liyen.",
+      "sourceHash": "777c518a716d",
+      "updatedAt": "2026-08-17T13:31:48.579Z"
+    },
+    "ws.monitors.noProject": {
+      "text": "Pa gen projet",
+      "sourceHash": "c326b75775bf",
+      "updatedAt": "2026-08-17T13:31:48.579Z"
+    },
+    "ws.monitors.quickLinks": {
+      "text": "Liyen rapide",
+      "sourceHash": "4b4e155ec7ba",
+      "updatedAt": "2026-08-17T13:31:48.579Z"
+    },
+    "ws.monitors.noAlerts": {
+      "text": "Pa gen alerte teregistre",
+      "sourceHash": "d5dd400aa0b8",
+      "updatedAt": "2026-08-17T13:31:48.579Z"
+    },
+    "ws.monitors.loadFailed": {
+      "text": "Pannen chargman monitè",
+      "sourceHash": "e44ad0053813",
+      "updatedAt": "2026-08-17T13:31:48.579Z"
+    },
+    "ws.monitors.paused": {
+      "text": "Monitè paus",
+      "sourceHash": "34e761133c86",
+      "updatedAt": "2026-08-17T13:31:55.312Z"
+    },
+    "ws.monitors.resumed": {
+      "text": "Monitè rezwè",
+      "sourceHash": "a7f27044c65b",
+      "updatedAt": "2026-08-17T13:31:55.312Z"
+    },
+    "ws.monitors.updateFailed": {
+      "text": "Pa ka meti monitè",
+      "sourceHash": "ab01af3ab5c9",
+      "updatedAt": "2026-08-17T13:31:55.312Z"
+    },
+    "ws.monitors.linkUpdated": {
+      "text": "Liank projèk meti",
+      "sourceHash": "ca3bc3b5862c",
+      "updatedAt": "2026-08-17T13:31:55.312Z"
+    },
+    "ws.monitors.linkFailed": {
+      "text": "Pa ka meti liank",
+      "sourceHash": "9d74e05e8301",
+      "updatedAt": "2026-08-17T13:31:55.312Z"
+    },
+    "ws.monitors.notFound": {
+      "text": "Monitè pa trovè",
+      "sourceHash": "dbab2107fb75",
+      "updatedAt": "2026-08-17T13:31:55.312Z"
+    },
+    "ws.monitors.pause": {
+      "text": "Pauz",
+      "sourceHash": "781961bc81c2",
+      "updatedAt": "2026-08-17T13:31:55.312Z"
+    },
+    "ws.monitors.resume": {
+      "text": "Rezwè",
+      "sourceHash": "b3bd0b5a7049",
+      "updatedAt": "2026-08-17T13:31:55.312Z"
+    },
+    "ws.briefs.title": {
+      "text": "Brefis de décision",
+      "sourceHash": "11f32f8cf0c4",
+      "updatedAt": "2026-08-17T13:32:10.539Z"
+    },
+    "ws.briefs.lede": {
+      "text": "Pokorans evidans pak dèpòt ou projèkt — revè jugman, PSN lenz, ak eksport.",
+      "sourceHash": "f2467f9e4c8c",
+      "updatedAt": "2026-08-17T13:32:10.539Z"
+    },
+    "ws.briefs.empty": {
+      "text": "Pa gen brefis ankò",
+      "sourceHash": "b515f47278a5",
+      "updatedAt": "2026-08-17T13:32:10.539Z"
+    },
+    "ws.briefs.emptyHint": {
+      "text": "Fè yon patenòti projèkt pou gene y premier briefis de décision.",
+      "sourceHash": "9bf4c6c5c58e",
+      "updatedAt": "2026-08-17T13:32:10.539Z"
+    },
+    "ws.briefs.pendingReview": {
+      "text": "An revè",
+      "sourceHash": "6a80f44e3b2b",
+      "updatedAt": "2026-08-17T13:32:10.539Z"
+    },
+    "ws.briefs.approved": {
+      "text": "Approuvé",
+      "sourceHash": "41b81eb8db1b",
+      "updatedAt": "2026-08-17T13:32:10.539Z"
+    },
+    "ws.briefs.depthModes": {
+      "text": "Modes dwat",
+      "sourceHash": "68a8aded8a97",
+      "updatedAt": "2026-08-17T13:32:10.539Z"
+    },
+    "ws.briefs.openProjects": {
+      "text": "Projèkt ope",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T13:32:10.539Z"
+    },
+    "ws.briefs.back": {
+      "text": "← Retounen nan briefs",
+      "sourceHash": "69ee29903a7e",
+      "updatedAt": "2026-08-17T13:32:20.149Z"
+    },
+    "ws.briefs.notFound": {
+      "text": "Brief pa found",
+      "sourceHash": "87fb798c28c9",
+      "updatedAt": "2026-08-17T13:32:20.149Z"
+    },
+    "ws.briefs.browse": {
+      "text": "Navigue briefs",
+      "sourceHash": "f4d095dec924",
+      "updatedAt": "2026-08-17T13:32:20.149Z"
+    },
+    "ws.briefs.loadFailed": {
+      "text": "Pa ka charge brief",
+      "sourceHash": "c7557e0c36a9",
+      "updatedAt": "2026-08-17T13:32:20.149Z"
+    },
+    "ws.briefs.noData": {
+      "text": "Pa gen don brief disponible.",
+      "sourceHash": "f1024a68f087",
+      "updatedAt": "2026-08-17T13:32:20.149Z"
+    },
+    "ws.briefs.reviewRecord": {
+      "text": "Evalue rekòd",
+      "sourceHash": "b018182d0769",
+      "updatedAt": "2026-08-17T13:32:20.149Z"
+    },
+    "ws.briefs.approvedToast": {
+      "text": "Brief aprèvèd",
+      "sourceHash": "8881ea2feac8",
+      "updatedAt": "2026-08-17T13:32:20.149Z"
+    },
+    "ws.briefs.reviewFailed": {
+      "text": "Evalue non reus",
+      "sourceHash": "5522c937885e",
+      "updatedAt": "2026-08-17T13:32:20.149Z"
+    },
+    "ws.briefs.deepDive": {
+      "text": "Enfòmasyon detay",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T13:32:24.763Z"
+    },
+    "ws.briefs.approve": {
+      "text": "Approuv",
+      "sourceHash": "7b2c7f146aba",
+      "updatedAt": "2026-08-17T13:32:24.763Z"
+    },
+    "ws.briefs.needsRevision": {
+      "text": "Bezwen revizyon",
+      "sourceHash": "a75105d396fa",
+      "updatedAt": "2026-08-17T13:32:24.763Z"
+    },
+    "ws.briefs.reject": {
+      "text": "Refize",
+      "sourceHash": "2b03b59293b6",
+      "updatedAt": "2026-08-17T13:32:24.763Z"
+    },
+    "ws.briefs.openProject": {
+      "text": "Ouvri projèk relye",
+      "sourceHash": "11bdb0dc219d",
+      "updatedAt": "2026-08-17T13:32:24.763Z"
+    },
+    "ws.briefs.confidence": {
+      "text": "Konfans",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T13:32:24.763Z"
+    },
+    "ws.briefs.pagination": {
+      "text": "Pajinas brief",
+      "sourceHash": "ca1f68feb387",
+      "updatedAt": "2026-08-17T13:32:24.763Z"
+    },
+    "ws.briefs.prevPage": {
+      "text": "Pajina prèvijè brief",
+      "sourceHash": "5f855ab42223",
+      "updatedAt": "2026-08-17T13:32:24.763Z"
+    },
+    "ws.briefs.nextPage": {
+      "text": "Paj bwief nouvo",
+      "sourceHash": "12274555c7e6",
+      "updatedAt": "2026-08-17T13:32:33.919Z"
+    },
+    "ws.briefs.showing": {
+      "text": "Afiche {from}–{to} nan {total}",
+      "sourceHash": "d236a8e46b06",
+      "updatedAt": "2026-08-17T13:32:33.919Z"
+    },
+    "ws.sources.title": {
+      "text": "Sòti",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T13:32:33.919Z"
+    },
+    "ws.sources.lede": {
+      "text": "Kuratè pasaport regristè ki alimente mònitè ak doktrin.",
+      "sourceHash": "34da3d01d122",
+      "updatedAt": "2026-08-17T13:32:33.919Z"
+    },
+    "ws.sources.search": {
+      "text": "Nòm, peis, baliz…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T13:32:33.919Z"
+    },
+    "ws.sources.empty": {
+      "text": "Pa gen sòti ki match",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T13:32:33.919Z"
+    },
+    "ws.sources.emptyHint": {
+      "text": "Ebate yon rechèch differan ou drop yon CSV pou import regristè.",
+      "sourceHash": "bf5f1c857903",
+      "updatedAt": "2026-08-17T13:32:33.919Z"
+    },
+    "ws.sources.pagination": {
+      "text": "Paginasyon sòti",
+      "sourceHash": "50f66b346611",
+      "updatedAt": "2026-08-17T13:32:33.919Z"
+    },
+    "ws.usage.title": {
+      "text": "Utilisasyon AI",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T13:32:45.364Z"
+    },
+    "ws.usage.tokenAllowance": {
+      "text": "Awaseman token",
+      "sourceHash": "178b070cb08a",
+      "updatedAt": "2026-08-17T13:32:45.364Z"
+    },
+    "ws.usage.activitySplit": {
+      "text": "Fènèt aktivite",
+      "sourceHash": "1f236c8d7d6b",
+      "updatedAt": "2026-08-17T13:32:45.364Z"
+    },
+    "ws.usage.estimatedCost": {
+      "text": "Kout estimé",
+      "sourceHash": "516cbee26f0b",
+      "updatedAt": "2026-08-17T13:32:45.364Z"
+    },
+    "ws.packs.title": {
+      "text": "Pakèt peyi",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T13:32:45.364Z"
+    },
+    "ws.packs.lede": {
+      "text": "Pakèt intelijans seleksyonné pase Karayib.",
+      "sourceHash": "a46f67498e2f",
+      "updatedAt": "2026-08-17T13:32:45.364Z"
+    },
+    "ws.packs.meta": {
+      "text": "sòrs · entite",
+      "sourceHash": "61f1da33e909",
+      "updatedAt": "2026-08-17T13:32:45.364Z"
+    },
+    "ws.stakeholders.cause": {
+      "text": "Lakòt",
+      "sourceHash": "0cd812b85c20",
+      "updatedAt": "2026-08-17T13:32:45.364Z"
+    },
+    "ws.stakeholders.title": {
+      "text": "Partenè",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T13:32:47.159Z"
+    },
+    "ws.stakeholders.lede": {
+      "text": "Institisyon ki sponsòr ak chèf akònbit karayib.",
+      "sourceHash": "f0330bbdd8c2",
+      "updatedAt": "2026-08-17T13:32:47.159Z"
+    },
+    "ws.toolbar.search": {
+      "text": "Cherche…",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T13:32:47.159Z"
+    },
+    "ws.toolbar.sortBy": {
+      "text": "Trianse par",
+      "sourceHash": "a2a5bdeca939",
+      "updatedAt": "2026-08-17T13:32:47.159Z"
+    },
+    "ws.toolbar.filter": {
+      "text": "Filtre",
+      "sourceHash": "d7decf1aa22b",
+      "updatedAt": "2026-08-17T13:32:47.159Z"
+    },
+    "ws.loading.workspace": {
+      "text": "Chargman espas…",
+      "sourceHash": "89f0dde329fa",
+      "updatedAt": "2026-08-17T13:32:47.159Z"
+    },
+    "ws.loading.overview": {
+      "text": "Preparman aprezan…",
+      "sourceHash": "f34393549cd4",
+      "updatedAt": "2026-08-17T13:32:47.159Z"
+    },
+    "ws.loading.operator": {
+      "text": "Preparman konsòl opèratè…",
+      "sourceHash": "27a6688f18c0",
+      "updatedAt": "2026-08-17T13:32:47.159Z"
+    },
+    "ws.topics.title": {
+      "text": "Signaux Caribéens Popilè",
+      "sourceHash": "c02ae1c5f749",
+      "updatedAt": "2026-08-17T13:33:12.666Z"
+    },
+    "ws.topics.loading": {
+      "text": "Chèch modèl templete…",
+      "sourceHash": "3a6c843fbbe8",
+      "updatedAt": "2026-08-17T13:33:12.666Z"
+    },
+    "ws.topics.tapPlay": {
+      "text": "Tap pou chèch · chwazi pou ran",
+      "sourceHash": "bcd777dbdbbd",
+      "updatedAt": "2026-08-17T13:33:12.666Z"
+    },
+    "ws.topics.refresh": {
+      "text": "Rafraîchir signa",
+      "sourceHash": "4d77417615b4",
+      "updatedAt": "2026-08-17T13:33:12.666Z"
+    },
+    "ws.topics.runNow": {
+      "text": "Chèche nw",
+      "sourceHash": "2af00e23c480",
+      "updatedAt": "2026-08-17T13:33:12.666Z"
+    },
+    "ws.topics.starting": {
+      "text": "Komanse…",
+      "sourceHash": "e5f58095ac29",
+      "updatedAt": "2026-08-17T13:33:12.666Z"
+    },
+    "ws.topics.scraping": {
+      "text": "Ekstrèksyon…",
+      "sourceHash": "97355d74fde9",
+      "updatedAt": "2026-08-17T13:33:12.666Z"
+    },
+    "ws.topics.questionLoaded": {
+      "text": "Question chèché — klik Chèche flou agent",
+      "sourceHash": "b57e028d16d6",
+      "updatedAt": "2026-08-17T13:33:12.666Z"
+    },
+    "ws.topics.pipelineStarted": {
+      "text": "Pipeline te commence",
+      "sourceHash": "f2d5ecf09040",
+      "updatedAt": "2026-08-17T13:33:19.874Z"
+    },
+    "ws.topics.projectReady": {
+      "text": "Projet prêt",
+      "sourceHash": "0e47cf96af8d",
+      "updatedAt": "2026-08-17T13:33:19.874Z"
+    },
+    "ws.topics.workflowRunning": {
+      "text": "Travay aganman ki te en marche.",
+      "sourceHash": "bde7d40c5be3",
+      "updatedAt": "2026-08-17T13:33:19.874Z"
+    },
+    "ws.topics.readyContinue": {
+      "text": "Projet ou prêt pou kontinye.",
+      "sourceHash": "6e0428373274",
+      "updatedAt": "2026-08-17T13:33:19.874Z"
+    },
+    "ws.docs.clickUpload": {
+      "text": "Klik pou uploade",
+      "sourceHash": "c77c363d22ab",
+      "updatedAt": "2026-08-17T13:33:19.874Z"
+    },
+    "ws.docs.orDrag": {
+      "text": "òd glisse & drop",
+      "sourceHash": "9ddf49cdc8ed",
+      "updatedAt": "2026-08-17T13:33:19.874Z"
+    },
+    "ws.docs.uploadFailed": {
+      "text": "Uploade a te fèch",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T13:33:19.874Z"
+    },
+    "ws.docs.noUploads": {
+      "text": "Pas uploade ankò.",
+      "sourceHash": "11da33e0d997",
+      "updatedAt": "2026-08-17T13:33:19.874Z"
+    },
+    "ws.docs.readSummary": {
+      "text": "Leglize reswòt",
+      "sourceHash": "f7685ae9e39b",
+      "updatedAt": "2026-08-17T13:33:27.070Z"
+    },
+    "ws.docs.summarize": {
+      "text": "Fè reswòt konte",
+      "sourceHash": "365b99b5cffd",
+      "updatedAt": "2026-08-17T13:33:27.070Z"
+    },
+    "ws.docs.rework": {
+      "text": "Rewòk reswòt",
+      "sourceHash": "bad6aa15f0ee",
+      "updatedAt": "2026-08-17T13:33:27.070Z"
+    },
+    "ws.docs.openSummary": {
+      "text": "Ouvri reswòt",
+      "sourceHash": "cbb4c597aff6",
+      "updatedAt": "2026-08-17T13:33:27.070Z"
+    },
+    "ws.docs.summaryReady": {
+      "text": "Reswòt prêt",
+      "sourceHash": "cedb562d4da5",
+      "updatedAt": "2026-08-17T13:33:27.070Z"
+    },
+    "ws.docs.reworkReady": {
+      "text": "Reswòt rewòk prêt",
+      "sourceHash": "2f61dbbae128",
+      "updatedAt": "2026-08-17T13:33:27.070Z"
+    },
+    "ws.docs.deleteConfirm": {
+      "text": "Supri sa dokiman?",
+      "sourceHash": "1ce5593800b3",
+      "updatedAt": "2026-08-17T13:33:27.070Z"
+    },
+    "ws.docs.delete": {
+      "text": "Supri dokiman",
+      "sourceHash": "e8df0b79020b",
+      "updatedAt": "2026-08-17T13:33:27.070Z"
+    },
+    "ws.docs.deleted": {
+      "text": "Document deleted",
+      "sourceHash": "e4db4d66b499",
+      "updatedAt": "2026-08-17T13:34:29.377Z"
+    },
+    "ws.docs.downloadFailed": {
+      "text": "Download failed",
+      "sourceHash": "01125e1be1f5",
+      "updatedAt": "2026-08-17T13:34:29.377Z"
+    },
+    "ws.docs.summary.pipeline": {
+      "text": "Summary pipeline",
+      "sourceHash": "b0647716ca0e",
+      "updatedAt": "2026-08-17T13:34:29.377Z"
+    },
+    "ws.docs.summary.extractHint": {
+      "text": "Pull decision-relevant text from the upload (binary files use metadata only).",
+      "sourceHash": "74117cd5dd45",
+      "updatedAt": "2026-08-17T13:34:29.377Z"
+    },
+    "ws.docs.summary.reviewHint": {
+      "text": "Open the read-only brief — editing is intentionally disabled.",
+      "sourceHash": "683c57d5a83f",
+      "updatedAt": "2026-08-17T13:34:29.377Z"
+    },
+    "ws.docs.summary.disabled": {
+      "text": "Document summarization is disabled by the operator.",
+      "sourceHash": "499a1a5ea2ff",
+      "updatedAt": "2026-08-17T13:34:29.377Z"
+    },
+    "ws.docs.summary.reworkDisabled": {
+      "text": "Rework is disabled. You can still open the read-only summary.",
+      "sourceHash": "66773a613619",
+      "updatedAt": "2026-08-17T13:34:29.377Z"
+    },
+    "ws.docs.summary.running": {
+      "text": "Running document pipeline…",
+      "sourceHash": "0fe516637573",
+      "updatedAt": "2026-08-17T13:34:29.377Z"
+    },
+    "ws.docs.summary.keepOpen": {
+      "text": "Ekstrò → Sintèzis pou tèat sa a. Konbye pannèl sa a kay.",
+      "sourceHash": "b88686364225",
+      "updatedAt": "2026-08-17T13:34:46.787Z"
+    },
+    "ws.docs.summary.failed": {
+      "text": "Dernyè fè a ka fè. Ajuste fòkus an si nèf, apèti ankò.",
+      "sourceHash": "ec3c5129064e",
+      "updatedAt": "2026-08-17T13:34:46.787Z"
+    },
+    "ws.docs.summary.none": {
+      "text": "Pa anyen tekst resiman disponib.",
+      "sourceHash": "217d2512f8ca",
+      "updatedAt": "2026-08-17T13:34:46.787Z"
+    },
+    "ws.docs.summary.focusPlaceholder": {
+      "text": "e.g. Fòse chemen reglemente, partenè kapital, e kijan sa a pou kesyon deci…",
+      "sourceHash": "4226d6321002",
+      "updatedAt": "2026-08-17T13:34:46.787Z"
+    },
+    "ws.docs.summary.relevance": {
+      "text": "Relevans deci.",
+      "sourceHash": "bded871bb02a",
+      "updatedAt": "2026-08-17T13:34:46.787Z"
+    },
+    "ws.docs.summary.keyPoints": {
+      "text": "Poin ki esenèl.",
+      "sourceHash": "5d1855a1eaac",
+      "updatedAt": "2026-08-17T13:34:46.787Z"
+    },
+    "ws.docs.summary.gaps": {
+      "text": "Espas evidans.",
+      "sourceHash": "4285633d539c",
+      "updatedAt": "2026-08-17T13:34:46.787Z"
+    },
+    "ws.docs.summary.riskFlags": {
+      "text": "Drapo risik.",
+      "sourceHash": "024790205e21",
+      "updatedAt": "2026-08-17T13:34:46.787Z"
+    },
+    "ws.docs.summary.reviewFlags": {
+      "text": "Fòg drapo",
+      "sourceHash": "c637c236e807",
+      "updatedAt": "2026-08-17T13:34:52.215Z"
+    },
+    "ws.docs.summary.operatorFocus": {
+      "text": "Fokous opsè te bwè",
+      "sourceHash": "541e0f17e21c",
+      "updatedAt": "2026-08-17T13:34:52.215Z"
+    },
+    "ws.docs.summary.generate": {
+      "text": "Génere réziman",
+      "sourceHash": "edd0f4b8c42f",
+      "updatedAt": "2026-08-17T13:34:52.215Z"
+    },
+    "ws.docs.summary.regenerate": {
+      "text": "Regénere réziman",
+      "sourceHash": "a4be29f8457d",
+      "updatedAt": "2026-08-17T13:34:52.215Z"
+    },
+    "ws.voice.tap": {
+      "text": "Tap pou pale",
+      "sourceHash": "4f4d692fb7a0",
+      "updatedAt": "2026-08-17T13:34:52.215Z"
+    },
+    "ws.voice.stop": {
+      "text": "Stop koute",
+      "sourceHash": "e134211eedf1",
+      "updatedAt": "2026-08-17T13:34:52.215Z"
+    },
+    "ws.voice.blocked": {
+      "text": "Mikrofòn bloqué",
+      "sourceHash": "7b63697f6dc7",
+      "updatedAt": "2026-08-17T13:34:52.215Z"
+    },
+    "ws.voice.allow": {
+      "text": "Autorize mikrofòn ak pale",
+      "sourceHash": "f1132cb60ca8",
+      "updatedAt": "2026-08-17T13:34:52.215Z"
+    },
+    "ws.voice.startSpeaking": {
+      "text": "Start speaking — wòd ap apari anpil.",
+      "sourceHash": "99cd968419fe",
+      "updatedAt": "2026-08-17T13:34:53.360Z"
+    },
+    "ws.voice.tapThenSpeak": {
+      "text": "Tap the mic, then speak — wòd ap apari anpil.",
+      "sourceHash": "32cbf9c484b9",
+      "updatedAt": "2026-08-17T13:34:53.360Z"
+    },
+    "ws.voice.placeholder": {
+      "text": "What strategic decision do you need evidence-backed judgment on?",
+      "sourceHash": "cd88d0acf018",
+      "updatedAt": "2026-08-17T13:34:53.360Z"
+    },
+    "ws.voice.blockedToast": {
+      "text": "Microphone access was blocked. Allow the mic for this site, then try again.",
+      "sourceHash": "42117e1fcf00",
+      "updatedAt": "2026-08-17T13:34:53.360Z"
+    },
+    "ws.voice.unavailable": {
+      "text": "Voice dictation isn’t available in this browser — type instead.",
+      "sourceHash": "4497fd5a6538",
+      "updatedAt": "2026-08-17T13:34:53.360Z"
+    },
+    "ws.voice.needsHttps": {
+      "text": "Voice needs HTTPS (or localhost). Open the secure site URL.",
+      "sourceHash": "b3b6c9c79cc8",
+      "updatedAt": "2026-08-17T13:34:53.360Z"
+    },
+    "ws.voice.settingsBlocked": {
+      "text": "Mic is blocked in browser settings. Click the lock icon → Site settings → Microphone → Allow.",
+      "sourceHash": "1b6c12cfa138",
+      "updatedAt": "2026-08-17T13:34:53.360Z"
+    },
+    "ws.pulse.title": {
+      "text": "Workspace pulse",
+      "sourceHash": "0d2a193b046d",
+      "updatedAt": "2026-08-17T13:34:53.360Z"
+    },
+    "ws.pulse.completedAgents": {
+      "text": "Ajan complèt",
+      "sourceHash": "8b06c1de3eb3",
+      "updatedAt": "2026-08-17T13:34:54.396Z"
+    },
+    "ws.pulse.awaitingRun": {
+      "text": "En attente d'exécution",
+      "sourceHash": "314aa3b51bbd",
+      "updatedAt": "2026-08-17T13:34:54.396Z"
+    },
+    "ws.pulse.onProject": {
+      "text": "Sur projet",
+      "sourceHash": "8d6e72e7313f",
+      "updatedAt": "2026-08-17T13:34:54.396Z"
+    },
+    "ws.pulse.noSpend": {
+      "text": "Pas encore de dépenses",
+      "sourceHash": "18ad8a4907a5",
+      "updatedAt": "2026-08-17T13:34:54.396Z"
+    },
+    "ws.pulse.metric.stages": {
+      "text": "Étapes",
+      "sourceHash": "c1d33ad534e8",
+      "updatedAt": "2026-08-17T13:34:54.396Z"
+    },
+    "ws.pulse.metric.progress": {
+      "text": "Progression",
+      "sourceHash": "1b90271d66cf",
+      "updatedAt": "2026-08-17T13:34:54.396Z"
+    },
+    "ws.pulse.metric.tokens": {
+      "text": "Jetons",
+      "sourceHash": "c38c6c1f3a27",
+      "updatedAt": "2026-08-17T13:34:54.396Z"
+    },
+    "ws.pulse.onAgent": {
+      "text": "En direct sur la carte Agent",
+      "sourceHash": "9e9662365193",
+      "updatedAt": "2026-08-17T13:34:54.396Z"
+    },
+    "ws.pulse.onAgentBody": {
+      "text": "Stajè, progres, dokumentè ak dépansan n ap sou karte Agent ak flèwyè.",
+      "sourceHash": "0b1ec9b2b478",
+      "updatedAt": "2026-08-17T13:35:23.263Z"
+    },
+    "ws.pipeline.doctrine": {
+      "text": "Doctrine flèwyè v0.2",
+      "sourceHash": "aa4272292b41",
+      "updatedAt": "2026-08-17T13:35:23.263Z"
+    },
+    "ws.pipeline.demo": {
+      "text": "Agent flèwyè (demo)",
+      "sourceHash": "f8b8b59087a6",
+      "updatedAt": "2026-08-17T13:35:23.263Z"
+    },
+    "ws.pipeline.ready": {
+      "text": "Prèt lè ou ye",
+      "sourceHash": "aec1322315e6",
+      "updatedAt": "2026-08-17T13:35:23.263Z"
+    },
+    "ws.tour.replay": {
+      "text": "Reple turèn espas travay",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T13:35:23.263Z"
+    },
+    "ws.tour.tutorial": {
+      "text": "Lekòl",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T13:35:23.263Z"
+    },
+    "ws.account.avatarRules": {
+      "text": "JPEG, PNG, osè WebP. Maksè sitis ap paramèt opèyatè.",
+      "sourceHash": "1ffab77f5756",
+      "updatedAt": "2026-08-17T13:35:23.263Z"
+    },
+    "ws.account.passwordMin": {
+      "text": "Nouvo password ap bezwen al moin 8 karaktèr.",
+      "sourceHash": "f36bc78e2e46",
+      "updatedAt": "2026-08-17T13:35:23.263Z"
+    },
+    "ws.account.signOutNote": {
+      "text": "Finis sa session navigatè sou sa device-a.",
+      "sourceHash": "798b10424390",
+      "updatedAt": "2026-08-17T13:35:24.426Z"
+    },
+    "ws.account.presence.available": {
+      "text": "Dispòzib",
+      "sourceHash": "7c62a1424469",
+      "updatedAt": "2026-08-17T13:35:24.426Z"
+    },
+    "ws.account.presence.availableHint": {
+      "text": "Prèt pou reclama ak gère fil pou dwe",
+      "sourceHash": "f608d72be1eb",
+      "updatedAt": "2026-08-17T13:35:24.426Z"
+    },
+    "ws.account.presence.away": {
+      "text": "Absan",
+      "sourceHash": "4fae89296662",
+      "updatedAt": "2026-08-17T13:35:24.426Z"
+    },
+    "ws.account.presence.awayHint": {
+      "text": "Disponibilté limitè pou dwe santi",
+      "sourceHash": "a2ae2ea4ecd3",
+      "updatedAt": "2026-08-17T13:35:24.426Z"
+    },
+    "ws.account.presence.busy": {
+      "text": "Ospedye",
+      "sourceHash": "592a9d1678c2",
+      "updatedAt": "2026-08-17T13:35:24.426Z"
+    },
+    "ws.account.presence.busyHint": {
+      "text": "An konvèsasyon — reclama limitè nwèl",
+      "sourceHash": "0e2a07ad911e",
+      "updatedAt": "2026-08-17T13:35:24.426Z"
+    },
+    "ws.account.presence.offline": {
+      "text": "Of-layn",
+      "sourceHash": "e01fa717bacc",
+      "updatedAt": "2026-08-17T13:35:24.426Z"
+    },
+    "ws.account.presence.offlineHint": {
+      "text": "Pa mwen ede pou soutènman anwo",
+      "sourceHash": "5d54853ddb06",
+      "updatedAt": "2026-08-17T13:35:54.520Z"
+    },
+    "ws.account.presence.lede": {
+      "text": "Status ou se vizibòl pou staff soutènman ak kolaboratèrs apatiw.",
+      "sourceHash": "b9e64e6d941b",
+      "updatedAt": "2026-08-17T13:35:54.520Z"
+    },
+    "ws.usage.lede": {
+      "text": "Token, kreditas, ak kout estimè OpenRouter pou periòd ou workspace.",
+      "sourceHash": "98bfd9f1db1f",
+      "updatedAt": "2026-08-17T13:35:54.520Z"
+    },
+    "ws.monitors.kpi.paused": {
+      "text": "Sispann",
+      "sourceHash": "c7dfb6f1d9c5",
+      "updatedAt": "2026-08-17T13:35:54.520Z"
+    },
+    "ws.monitors.new": {
+      "text": "Nouvo monitè",
+      "sourceHash": "8bf83b0730ca",
+      "updatedAt": "2026-08-17T13:35:54.520Z"
+    },
+    "ws.topics.lede": {
+      "text": "Chanje yon signal karayib live nan teat projèkt, akòk eksèkute ajans.",
+      "sourceHash": "889a75409945",
+      "updatedAt": "2026-08-17T13:35:54.520Z"
+    },
+    "ws.topics.starters": {
+      "text": "Sistèm anitye",
+      "sourceHash": "7bfec88cf924",
+      "updatedAt": "2026-08-17T13:35:54.520Z"
+    },
+    "ws.topics.useHere": {
+      "text": "Utilize dezyèm",
+      "sourceHash": "72c384afab37",
+      "updatedAt": "2026-08-17T13:35:54.520Z"
+    },
+    "ws.voice.listening": {
+      "text": "Ekwizisyon…",
+      "sourceHash": "6c19a4761d7e",
+      "updatedAt": "2026-08-17T13:35:59.625Z"
+    },
+    "ws.voice.micBlockedShort": {
+      "text": "Mik bloqué",
+      "sourceHash": "08f9ba43eef0",
+      "updatedAt": "2026-08-17T13:35:59.625Z"
+    },
+    "ws.voice.allowMicShort": {
+      "text": "Ati mik",
+      "sourceHash": "43f5f6857d60",
+      "updatedAt": "2026-08-17T13:35:59.625Z"
+    },
+    "ws.voice.unavailableShort": {
+      "text": "Vois non disponible",
+      "sourceHash": "1aeefb24cc0d",
+      "updatedAt": "2026-08-17T13:35:59.625Z"
+    },
+    "ws.voice.spoken": {
+      "text": "Diskolé",
+      "sourceHash": "77459e51c50c",
+      "updatedAt": "2026-08-17T13:35:59.625Z"
+    },
+    "ws.voice.deniedHint": {
+      "text": "Ati mik, après tchew ansanm.",
+      "sourceHash": "5b0bc80e09a9",
+      "updatedAt": "2026-08-17T13:35:59.625Z"
+    },
+    "ws.project.analysisDepth": {
+      "text": "Profondeur analize",
+      "sourceHash": "903ec812ae6d",
+      "updatedAt": "2026-08-17T13:35:59.625Z"
+    },
+    "ws.project.paidModels": {
+      "text": "Ati modele payant pou yon lanmòans",
+      "sourceHash": "06cd26ce7c61",
+      "updatedAt": "2026-08-17T13:35:59.625Z"
+    },
+    "ws.project.stuckHint": {
+      "text": "Si anpil ajans se bloqué, forçé yon reprizman nouvo.",
+      "sourceHash": "02d66d9bd268",
+      "updatedAt": "2026-08-17T13:36:00.857Z"
+    },
+    "ws.project.resetLayout": {
+      "text": "Remèt la mise en page",
+      "sourceHash": "5179087c02b4",
+      "updatedAt": "2026-08-17T13:36:00.857Z"
+    },
+    "ws.project.archive": {
+      "text": "Arkive",
+      "sourceHash": "2621c6fd51a5",
+      "updatedAt": "2026-08-17T13:36:00.857Z"
+    },
+    "ws.project.restore": {
+      "text": "Restawe",
+      "sourceHash": "3cbe6d6b9a8d",
+      "updatedAt": "2026-08-17T13:36:00.857Z"
+    },
+    "ws.project.briefRevealBody": {
+      "text": "Ouvri le breef pou revè yon jugemen ak pwofè.",
+      "sourceHash": "fc1c1408e907",
+      "updatedAt": "2026-08-17T13:36:00.857Z"
+    },
+    "ws.docs.fileTypes": {
+      "text": "PDF, Word, tekst ak images · retenè 30 jou",
+      "sourceHash": "c766e5559e6a",
+      "updatedAt": "2026-08-17T13:36:00.857Z"
+    },
+    "ws.docs.deleteShort": {
+      "text": "Supri",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T13:36:00.857Z"
+    },
+    "ws.docs.downloadShort": {
+      "text": "Télécharger",
+      "sourceHash": "a479c9c34e87",
+      "updatedAt": "2026-08-17T13:36:00.857Z"
+    },
+    "op.section.production": {
+      "text": "Produksyon",
+      "sourceHash": "df70fc7991d3",
+      "updatedAt": "2026-08-17T13:36:19.554Z"
+    },
+    "op.brand": {
+      "text": "Octivate Operatè",
+      "sourceHash": "c083a340a671",
+      "updatedAt": "2026-08-17T13:36:19.554Z"
+    },
+    "op.title": {
+      "text": "Sentè Operatè",
+      "sourceHash": "f1ae56b9207a",
+      "updatedAt": "2026-08-17T13:36:19.554Z"
+    },
+    "op.subtitle": {
+      "text": "Metrikès pipleen live, operasyon, plèn kontrol, kataloq, és prix — modèls split-view, nèmè API réèl.",
+      "sourceHash": "cb9be5c7af4d",
+      "updatedAt": "2026-08-17T13:36:19.554Z"
+    },
+    "op.refresh": {
+      "text": "Renouvèl",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T13:36:19.554Z"
+    },
+    "op.tab.pulse": {
+      "text": "Pulse",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T13:36:19.554Z"
+    },
+    "op.tab.pulse.hint": {
+      "text": "Santé platform ak aktivite en live",
+      "sourceHash": "7158af122607",
+      "updatedAt": "2026-08-17T13:36:19.554Z"
+    },
+    "op.tab.operations": {
+      "text": "Operasyon",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T13:36:19.554Z"
+    },
+    "op.tab.operations.hint": {
+      "text": "Lòdje kos ak asyon opsenasyon",
+      "sourceHash": "828625ff637a",
+      "updatedAt": "2026-08-17T13:36:34.264Z"
+    },
+    "op.tab.control": {
+      "text": "Kontrol",
+      "sourceHash": "ea1d3df298ca",
+      "updatedAt": "2026-08-17T13:36:34.264Z"
+    },
+    "op.tab.control.hint": {
+      "text": "Limites, modèl, ak Kontrol platfòm",
+      "sourceHash": "7c76af9956eb",
+      "updatedAt": "2026-08-17T13:36:34.264Z"
+    },
+    "op.tab.catalog": {
+      "text": "Katalòg",
+      "sourceHash": "4a88d27bbae1",
+      "updatedAt": "2026-08-17T13:36:34.264Z"
+    },
+    "op.tab.catalog.hint": {
+      "text": "Rèjestwa sourç ak Katalòg dòtè",
+      "sourceHash": "03e812eaa0b0",
+      "updatedAt": "2026-08-17T13:36:34.264Z"
+    },
+    "op.tab.support": {
+      "text": "Soutènman kliente",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T13:36:34.264Z"
+    },
+    "op.tab.support.hint": {
+      "text": "Antrepo soutènman bazè akònt ak modération",
+      "sourceHash": "e935dc49fec9",
+      "updatedAt": "2026-08-17T13:36:34.264Z"
+    },
+    "op.tab.mail": {
+      "text": "Letè",
+      "sourceHash": "92379cbb8ecf",
+      "updatedAt": "2026-08-17T13:36:34.264Z"
+    },
+    "op.tab.mail.hint": {
+      "text": "Opèrasyon po departisèl mèl ak list mèl",
+      "sourceHash": "89336a920d33",
+      "updatedAt": "2026-08-17T13:36:35.357Z"
+    },
+    "op.tab.users": {
+      "text": "Anviwòn",
+      "sourceHash": "57f2b181d0a5",
+      "updatedAt": "2026-08-17T13:36:35.357Z"
+    },
+    "op.tab.users.hint": {
+      "text": "Kont pou anviwòn ak aksès",
+      "sourceHash": "cdcf5d5c424f",
+      "updatedAt": "2026-08-17T13:36:35.357Z"
+    },
+    "op.tab.pricing": {
+      "text": "Prikis",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T13:36:35.357Z"
+    },
+    "op.tab.pricing.hint": {
+      "text": "Konfigrasyon plan ak prikis",
+      "sourceHash": "c56f16d3a8b8",
+      "updatedAt": "2026-08-17T13:36:35.357Z"
+    },
+    "op.tab.merchants": {
+      "text": "Marchan",
+      "sourceHash": "37633677209d",
+      "updatedAt": "2026-08-17T13:36:35.357Z"
+    },
+    "op.tab.merchants.hint": {
+      "text": "Prowfil bay chèkout ak soumèt achat",
+      "sourceHash": "f74180193a8c",
+      "updatedAt": "2026-08-17T13:36:35.357Z"
+    },
+    "op.tab.automation": {
+      "text": "Automatisaj",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T13:36:35.357Z"
+    },
+    "op.tab.automation.hint": {
+      "text": "Krawl mèdya, download, ak transkripsyon lokal",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T13:36:43.159Z"
+    },
+    "op.tab.parliament": {
+      "text": "Automatisasyon",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T13:36:43.159Z"
+    },
+    "op.tab.parliament.hint": {
+      "text": "Krawl mèdya, download, ak transkripsyon lokal",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T13:36:43.159Z"
+    },
+    "op.tab.exports": {
+      "text": "Ekspò",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T13:36:43.159Z"
+    },
+    "op.tab.exports.hint": {
+      "text": "Ekspò travay ak artefakt",
+      "sourceHash": "21dd275c3e12",
+      "updatedAt": "2026-08-17T13:36:43.159Z"
+    },
+    "op.tab.debug": {
+      "text": "Débog",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T13:36:43.159Z"
+    },
+    "op.tab.debug.hint": {
+      "text": "Flè opsèy ak diagnostik",
+      "sourceHash": "ad315fcae7e9",
+      "updatedAt": "2026-08-17T13:36:43.159Z"
+    },
+    "op.i18n.title": {
+      "text": "Katalog tradiksyon",
+      "sourceHash": "e4dfce9a5e06",
+      "updatedAt": "2026-08-17T13:36:43.159Z"
+    },
+    "op.i18n.lede": {
+      "text": "Prebuild permanent locale catalogs via OpenRouter. Page loads never call the translator.",
+      "sourceHash": "f41683cce4eb",
+      "updatedAt": "2026-08-17T13:36:44.189Z"
+    },
+    "op.i18n.sync": {
+      "text": "Sync translations",
+      "sourceHash": "0a40962f0248",
+      "updatedAt": "2026-08-17T13:36:44.189Z"
+    },
+    "op.i18n.syncing": {
+      "text": "Syncing…",
+      "sourceHash": "221ca63005ea",
+      "updatedAt": "2026-08-17T13:36:44.189Z"
+    },
+    "op.i18n.refresh": {
+      "text": "Refresh status",
+      "sourceHash": "ade15a52e213",
+      "updatedAt": "2026-08-17T13:36:44.189Z"
+    },
+    "op.modules.liveKpis": {
+      "text": "Live KPIs",
+      "sourceHash": "864cca8d77e4",
+      "updatedAt": "2026-08-17T13:36:44.189Z"
+    },
+    "op.modules.liveKpisHint": {
+      "text": "Click a metric to open its console view",
+      "sourceHash": "d41d360e119d",
+      "updatedAt": "2026-08-17T13:36:44.189Z"
+    },
+    "op.modules.revisionQueue": {
+      "text": "Revision queue",
+      "sourceHash": "0acf2dc1f773",
+      "updatedAt": "2026-08-17T13:36:44.189Z"
+    },
+    "op.modules.revisionHint": {
+      "text": "Pending briefs paired by origin account",
+      "sourceHash": "607fc44d0589",
+      "updatedAt": "2026-08-17T13:36:44.189Z"
+    },
+    "op.modules.noRevision": {
+      "text": "Aucun brief en attente de révision.",
+      "sourceHash": "d6dfa3886a0e",
+      "updatedAt": "2026-08-17T13:36:45.242Z"
+    },
+    "op.modules.sessionMix": {
+      "text": "Mix de session",
+      "sourceHash": "341919f517c9",
+      "updatedAt": "2026-08-17T13:36:45.242Z"
+    },
+    "op.modules.sessionHint": {
+      "text": "États de flux de l'agent en barres d'activité",
+      "sourceHash": "c3f1f3eadcd5",
+      "updatedAt": "2026-08-17T13:36:45.242Z"
+    },
+    "op.modules.costByModel": {
+      "text": "Coût par modèle",
+      "sourceHash": "d281caa03bcc",
+      "updatedAt": "2026-08-17T13:36:45.242Z"
+    },
+    "op.modules.costHint": {
+      "text": "Dépenses depuis le ledger de coûts en barres d'activité",
+      "sourceHash": "09f4a8a24cb9",
+      "updatedAt": "2026-08-17T13:36:45.242Z"
+    },
+    "op.modules.tokensConcurrency": {
+      "text": "Tokens et concurrence",
+      "sourceHash": "fa26e388feb6",
+      "updatedAt": "2026-08-17T13:36:45.242Z"
+    },
+    "op.modules.tokenBudget": {
+      "text": "Budget de tokens et barres de concurrence",
+      "sourceHash": "4e046c938df1",
+      "updatedAt": "2026-08-17T13:36:45.242Z"
+    },
+    "op.modules.liveSystem": {
+      "text": "Statut du système en direct — glissez pour réorganiser",
+      "sourceHash": "57e91bf745c5",
+      "updatedAt": "2026-08-17T13:36:45.242Z"
+    },
+    "op.modules.controlPlane": {
+      "text": "Plèn",
+      "sourceHash": "38f00e1ffa03",
+      "updatedAt": "2026-08-17T13:36:46.263Z"
+    },
+    "op.modules.controlHint": {
+      "text": "Limites d'utilisation pou lè runs en direct — glisse pou rearanje",
+      "sourceHash": "f3fff5453ff9",
+      "updatedAt": "2026-08-17T13:36:46.263Z"
+    },
+    "op.modules.modelRouting": {
+      "text": "Routaj model",
+      "sourceHash": "06a48dd13470",
+      "updatedAt": "2026-08-17T13:36:46.263Z"
+    },
+    "op.modules.evidencePipeline": {
+      "text": "Pipelinèvèdan",
+      "sourceHash": "c8f16d4ea829",
+      "updatedAt": "2026-08-17T13:36:46.263Z"
+    },
+    "op.modules.liveConcurrency": {
+      "text": "Mètè konkurans en direct",
+      "sourceHash": "e0709470392d",
+      "updatedAt": "2026-08-17T13:36:46.263Z"
+    },
+    "op.modules.probes": {
+      "text": "Probes disponibilté & cadans — glisse pou rearanje",
+      "sourceHash": "e645018146df",
+      "updatedAt": "2026-08-17T13:36:46.263Z"
+    },
+    "op.modules.sourceCapture": {
+      "text": "Kaptir sou",
+      "sourceHash": "cd599f00b60c",
+      "updatedAt": "2026-08-17T13:36:46.263Z"
+    },
+    "op.modules.artifactQueue": {
+      "text": "File d'attente d'artifacts — glisse pou rearanje",
+      "sourceHash": "2ae5335735e6",
+      "updatedAt": "2026-08-17T13:36:46.263Z"
+    },
+    "op.modules.liveRegistry": {
+      "text": "Registè direct — glisse pou reorganize",
+      "sourceHash": "544cb1f76259",
+      "updatedAt": "2026-08-17T13:36:56.557Z"
+    },
+    "op.modules.signalTicker": {
+      "text": "Tikè signal",
+      "sourceHash": "e0fa7496c8b3",
+      "updatedAt": "2026-08-17T13:36:56.557Z"
+    },
+    "op.modules.tickerHint": {
+      "text": "Marquè sit live — kómpose, prévisualizasyon, file",
+      "sourceHash": "53c2b36d9e58",
+      "updatedAt": "2026-08-17T13:36:56.557Z"
+    },
+    "op.modules.unassigned": {
+      "text": "Non affecte / graine",
+      "sourceHash": "c15e034fd891",
+      "updatedAt": "2026-08-17T13:36:56.557Z"
+    },
+    "op.pulse.liveConsole": {
+      "text": "Konsole live",
+      "sourceHash": "99254e92d752",
+      "updatedAt": "2026-08-17T13:36:56.557Z"
+    },
+    "op.pulse.reload": {
+      "text": "Rechargè tout panél API opérateur",
+      "sourceHash": "d9fb2ba01854",
+      "updatedAt": "2026-08-17T13:36:56.557Z"
+    },
+    "op.pulse.periodCost": {
+      "text": "Kost perèd",
+      "sourceHash": "cb8a109f1f4b",
+      "updatedAt": "2026-08-17T13:36:56.557Z"
+    },
+    "op.pulse.periodCostHint": {
+      "text": "Dépense perèd engagée dans le ledger + pipeline en cours (direct)",
+      "sourceHash": "59084279a9c0",
+      "updatedAt": "2026-08-17T13:36:56.557Z"
+    },
+    "op.pulse.tokenBudget": {
+      "text": "Budjet token",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T13:37:11.803Z"
+    },
+    "op.pulse.tokenBudgetHint": {
+      "text": "Token an ledè kost (synced) · live ajoute sesyon an flè",
+      "sourceHash": "2769bcf48179",
+      "updatedAt": "2026-08-17T13:37:11.803Z"
+    },
+    "op.pulse.liveAwaiting": {
+      "text": "Live · atè key",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T13:37:11.803Z"
+    },
+    "op.pulse.openOpsSessions": {
+      "text": "Ope Opsyon · file sesyon an agent",
+      "sourceHash": "c0f238a02a7d",
+      "updatedAt": "2026-08-17T13:37:11.803Z"
+    },
+    "op.pulse.openCatalog": {
+      "text": "Ope Katalòg · registè sourç & tikè",
+      "sourceHash": "a238e6ce5284",
+      "updatedAt": "2026-08-17T13:37:11.803Z"
+    },
+    "op.pulse.openPulseReviews": {
+      "text": "Ope Pulse · revèw brièf anmòmi",
+      "sourceHash": "d2b934845eee",
+      "updatedAt": "2026-08-17T13:37:11.803Z"
+    },
+    "op.pulse.openOpsModeration": {
+      "text": "Ope Opsyon · inventè modération",
+      "sourceHash": "ae2238c4a37e",
+      "updatedAt": "2026-08-17T13:37:11.803Z"
+    },
+    "op.pulse.loadFailed": {
+      "text": "Echec pou chargé konsole opsyon",
+      "sourceHash": "52090fbc038a",
+      "updatedAt": "2026-08-17T13:37:11.803Z"
+    },
+    "op.pulse.autosaveFailed": {
+      "text": "Echec pou sauvegarde automatik limityè",
+      "sourceHash": "874eeff8b691",
+      "updatedAt": "2026-08-17T13:37:40.316Z"
+    },
+    "op.pulse.refreshed": {
+      "text": "Konsole rafraîchi",
+      "sourceHash": "036e418d4072",
+      "updatedAt": "2026-08-17T13:37:40.316Z"
+    },
+    "op.pulse.refreshFailed": {
+      "text": "Échec rafraîchi",
+      "sourceHash": "3d1f4a6759f4",
+      "updatedAt": "2026-08-17T13:37:40.316Z"
+    },
+    "op.pulse.clearReviews": {
+      "text": "Efface tout reviyw pending?",
+      "sourceHash": "6fdeaaa15241",
+      "updatedAt": "2026-08-17T13:37:40.316Z"
+    },
+    "op.pulse.clearStale": {
+      "text": "Efface reviyw vye seed?",
+      "sourceHash": "df6187395702",
+      "updatedAt": "2026-08-17T13:37:40.316Z"
+    },
+    "op.pulse.clearReviewsHint": {
+      "text": "Marke tout reviyw pending kòmanse ak rejete a ak met à jour rekòd rekòt uman. Propagasyon live opsè.",
+      "sourceHash": "07afb627b450",
+      "updatedAt": "2026-08-17T13:37:40.316Z"
+    },
+    "op.pulse.clearStaleHint": {
+      "text": "Seulement efface reviyw pending ki pa gen anvi proprietè (seed/orphan).",
+      "sourceHash": "63a7081f3fd6",
+      "updatedAt": "2026-08-17T13:37:40.316Z"
+    },
+    "op.pulse.clearAllReviews": {
+      "text": "Efface tout reviyw",
+      "sourceHash": "8aaf3beff76b",
+      "updatedAt": "2026-08-17T13:37:40.316Z"
+    },
+    "op.pulse.clearStaleBtn": {
+      "text": "Effase vye",
+      "sourceHash": "c760db651884",
+      "updatedAt": "2026-08-17T13:37:41.420Z"
+    },
+    "op.pulse.nothingToClear": {
+      "text": "Nenm bagay pou effase",
+      "sourceHash": "ec219a9ca961",
+      "updatedAt": "2026-08-17T13:37:41.420Z"
+    },
+    "op.pulse.clearFailed": {
+      "text": "Effase a ka chwazi",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T13:37:41.420Z"
+    },
+    "op.pulse.resetLedger": {
+      "text": "Remèt fòd kost?",
+      "sourceHash": "34f8b9727821",
+      "updatedAt": "2026-08-17T13:37:41.420Z"
+    },
+    "op.pulse.resetLedgerHint": {
+      "text": "Effase chak linye Supabase cost_ledger ak nule akize yon pati anbwatman. Sesyon ki ap fè ansanm nan rete lokal yo gardè nan tankou komptèr anjil yo pou yo flè.",
+      "sourceHash": "18f1d6f36043",
+      "updatedAt": "2026-08-17T13:37:41.420Z"
+    },
+    "op.pulse.clearLedger": {
+      "text": "Effase fòd",
+      "sourceHash": "fe2640defa59",
+      "updatedAt": "2026-08-17T13:37:41.420Z"
+    },
+    "op.pulse.ledgerClearFailed": {
+      "text": "Effase fòd ka chwazi",
+      "sourceHash": "df287f9b11ba",
+      "updatedAt": "2026-08-17T13:37:41.420Z"
+    },
+    "op.pulse.clearSessions": {
+      "text": "Effase tout sesyon?",
+      "sourceHash": "17f0d287182d",
+      "updatedAt": "2026-08-17T13:37:41.420Z"
+    },
+    "op.pulse.clearSessionsHint": {
+      "text": "Efface tout sesyon d'agent nan Supabase ak memori. Non efface ledger kòst (use Clear ledger).",
+      "sourceHash": "295d68d41ceb",
+      "updatedAt": "2026-08-17T13:37:58.577Z"
+    },
+    "op.pulse.clearSessionsBtn": {
+      "text": "Efface sesyon",
+      "sourceHash": "5d82a79211cc",
+      "updatedAt": "2026-08-17T13:37:58.577Z"
+    },
+    "op.pulse.sessionClearFailed": {
+      "text": "Sesyon a klè fè.",
+      "sourceHash": "2d27d861520a",
+      "updatedAt": "2026-08-17T13:37:58.577Z"
+    },
+    "op.pulse.deleteConfirm": {
+      "text": "Sa fè effase permanentèl rekòd selekta.\n\nNon ka annulè.",
+      "sourceHash": "0621d2ec0e04",
+      "updatedAt": "2026-08-17T13:37:58.577Z"
+    },
+    "op.pulse.deleteCancelled": {
+      "text": "Effasaj anulant",
+      "sourceHash": "e10929fe22ea",
+      "updatedAt": "2026-08-17T13:37:58.577Z"
+    },
+    "op.pulse.deleteFailed": {
+      "text": "Fè effase.",
+      "sourceHash": "64513b47d460",
+      "updatedAt": "2026-08-17T13:37:58.577Z"
+    },
+    "op.control.limitsTitle": {
+      "text": "Limityat platform",
+      "sourceHash": "f81483fa3c52",
+      "updatedAt": "2026-08-17T13:37:58.577Z"
+    },
+    "op.control.limitsLede": {
+      "text": "Kapab kalkile, konkurans, gardènèt upload, ak politik model pou pipelin live.",
+      "sourceHash": "2173dff3c43f",
+      "updatedAt": "2026-08-17T13:37:58.577Z"
+    },
+    "op.control.compute": {
+      "text": "Komputasyon ak flou",
+      "sourceHash": "c547787d60e6",
+      "updatedAt": "2026-08-17T13:37:59.516Z"
+    },
+    "op.control.computeHint": {
+      "text": "Banjèt token jou ak kapasite akzese konkèr.",
+      "sourceHash": "6abc96efeff9",
+      "updatedAt": "2026-08-17T13:37:59.516Z"
+    },
+    "op.control.uploadGuardrails": {
+      "text": "Gard-ranjòl uploade",
+      "sourceHash": "195034829916",
+      "updatedAt": "2026-08-17T13:37:59.516Z"
+    },
+    "op.control.accountProfile": {
+      "text": "Pwofil akònt",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T13:37:59.516Z"
+    },
+    "op.control.signup": {
+      "text": "Signip ak provisionnen akònt",
+      "sourceHash": "ee7efccafaf3",
+      "updatedAt": "2026-08-17T13:37:59.516Z"
+    },
+    "op.control.modelPolicy": {
+      "text": "Politik mode ak konpliyans",
+      "sourceHash": "81ab6ab50a50",
+      "updatedAt": "2026-08-17T13:37:59.516Z"
+    },
+    "op.control.tokensPerDay": {
+      "text": "Token par jou",
+      "sourceHash": "9947717c245c",
+      "updatedAt": "2026-08-17T13:37:59.516Z"
+    },
+    "op.control.tokensPerDayHint": {
+      "text": "Kap limit dur dur sou token konsan konsan touto tous sesyon.",
+      "sourceHash": "baaa97f25c29",
+      "updatedAt": "2026-08-17T13:37:59.516Z"
+    },
+    "op.control.concurrentAgents": {
+      "text": "Agens konkanse",
+      "sourceHash": "66802c8476b0",
+      "updatedAt": "2026-08-17T13:38:23.745Z"
+    },
+    "op.control.concurrentHint": {
+      "text": "Maximum chansèl simultané deksèten doctrinèl.",
+      "sourceHash": "5775a32b9fa6",
+      "updatedAt": "2026-08-17T13:38:23.745Z"
+    },
+    "op.control.uploadsPerProject": {
+      "text": "Uploads pou projèkt",
+      "sourceHash": "f8fa8fd01015",
+      "updatedAt": "2026-08-17T13:38:23.745Z"
+    },
+    "op.control.uploadsHint": {
+      "text": "Maximum dokumentasyon souyè konektan pou yon projèkt unika.",
+      "sourceHash": "a9dabf17039d",
+      "updatedAt": "2026-08-17T13:38:23.745Z"
+    },
+    "op.control.maxFileSize": {
+      "text": "Max taill fay",
+      "sourceHash": "9568dad88fad",
+      "updatedAt": "2026-08-17T13:38:23.745Z"
+    },
+    "op.control.maxFileHint": {
+      "text": "Bò supèriye pou chaqu fay telechargé.",
+      "sourceHash": "abbd0701335a",
+      "updatedAt": "2026-08-17T13:38:23.745Z"
+    },
+    "op.control.docRetention": {
+      "text": "Retenès dokiman",
+      "sourceHash": "a079e024e8b0",
+      "updatedAt": "2026-08-17T13:38:23.745Z"
+    },
+    "op.control.docRetentionHint": {
+      "text": "Jours jusquesque upload expire ak kayenn pou supri. Chanjman sa recompute date expiry pou chaqu fay.",
+      "sourceHash": "cb4ebc4796b2",
+      "updatedAt": "2026-08-17T13:38:23.745Z"
+    },
+    "op.control.maxAvatar": {
+      "text": "Taille maximale d'avatar",
+      "sourceHash": "e711d3b824bf",
+      "updatedAt": "2026-08-17T13:38:39.209Z"
+    },
+    "op.control.maxAvatarHint": {
+      "text": "Photos profil JPEG / PNG / WebP. Par défaut 2 MB; maximum pour les opérateurs 10 MB.",
+      "sourceHash": "f5e78f1906f4",
+      "updatedAt": "2026-08-17T13:38:39.209Z"
+    },
+    "op.control.maxBio": {
+      "text": "Longueur maximale de la bio",
+      "sourceHash": "a0b891ea0ece",
+      "updatedAt": "2026-08-17T13:38:39.209Z"
+    },
+    "op.control.maxBioHint": {
+      "text": "Limite de caractères pour les descriptions de profil BBCode.",
+      "sourceHash": "63b69d9c925e",
+      "updatedAt": "2026-08-17T13:38:39.209Z"
+    },
+    "op.control.autogenAccounts": {
+      "text": "Générer automatiquement des comptes",
+      "sourceHash": "ea2935b73e48",
+      "updatedAt": "2026-08-17T13:38:39.209Z"
+    },
+    "op.control.premiumModels": {
+      "text": "Modèles Premium",
+      "sourceHash": "1db84bd8860a",
+      "updatedAt": "2026-08-17T13:38:39.209Z"
+    },
+    "op.control.premiumHint": {
+      "text": "Autoriser le routage des modèles premium OpenRouter lorsqu'ils sont configurés sur le serveur.",
+      "sourceHash": "636f47dd34dc",
+      "updatedAt": "2026-08-17T13:38:39.209Z"
+    },
+    "op.control.requireReview": {
+      "text": "Exiger une revue humaine",
+      "sourceHash": "1a4321561031",
+      "updatedAt": "2026-08-17T13:38:39.209Z"
+    },
+    "op.control.requireReviewHint": {
+      "text": "Rapò viv an aprete an revye a, sèlman lè opsèyè approuvè publisyon.",
+      "sourceHash": "a53e9fa17bed",
+      "updatedAt": "2026-08-17T13:40:20.672Z"
+    },
+    "op.control.tokenBudget": {
+      "text": "Jetòn budjet",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T13:40:20.672Z"
+    },
+    "op.control.agentSlots": {
+      "text": "Agènt slot",
+      "sourceHash": "8c545cd72d5e",
+      "updatedAt": "2026-08-17T13:40:20.672Z"
+    },
+    "op.control.uploadsProject": {
+      "text": "Uploads / projèkt",
+      "sourceHash": "e603b0fdace5",
+      "updatedAt": "2026-08-17T13:40:20.672Z"
+    },
+    "op.control.maxDocs": {
+      "text": "Max dokiman par espace travay",
+      "sourceHash": "ca966660897f",
+      "updatedAt": "2026-08-17T13:40:20.672Z"
+    },
+    "op.control.perUpload": {
+      "text": "Limite par upload",
+      "sourceHash": "763167a3bcf8",
+      "updatedAt": "2026-08-17T13:40:20.672Z"
+    },
+    "op.control.docRetentionLabel": {
+      "text": "Retènman dokiman",
+      "sourceHash": "137567a2e324",
+      "updatedAt": "2026-08-17T13:40:20.672Z"
+    },
+    "op.control.autoDelete": {
+      "text": "Auto-delete après expirasyon",
+      "sourceHash": "601cc273b93c",
+      "updatedAt": "2026-08-17T13:40:20.672Z"
+    },
+    "op.control.avatarCap": {
+      "text": "Kap avatè",
+      "sourceHash": "74c765571762",
+      "updatedAt": "2026-08-17T13:40:31.945Z"
+    },
+    "op.control.profilePhoto": {
+      "text": "Telechajman foto profil",
+      "sourceHash": "a2f3d60ff6b4",
+      "updatedAt": "2026-08-17T13:40:31.945Z"
+    },
+    "op.control.manualSignup": {
+      "text": "Signup manuel",
+      "sourceHash": "4e9637c91d0e",
+      "updatedAt": "2026-08-17T13:40:31.945Z"
+    },
+    "op.control.standardOnly": {
+      "text": "Standard unika",
+      "sourceHash": "aea090c61c44",
+      "updatedAt": "2026-08-17T13:40:31.945Z"
+    },
+    "op.control.loadingModels": {
+      "text": "Chajman modèl…",
+      "sourceHash": "d23f24f3751f",
+      "updatedAt": "2026-08-17T13:40:31.945Z"
+    },
+    "op.control.docsMode": {
+      "text": "Mode docs",
+      "sourceHash": "3d8a8e32654b",
+      "updatedAt": "2026-08-17T13:40:31.945Z"
+    },
+    "op.control.docsModel": {
+      "text": "Modèl docs",
+      "sourceHash": "322636a90ca9",
+      "updatedAt": "2026-08-17T13:40:31.945Z"
+    },
+    "op.control.docsTokens": {
+      "text": "Token docs",
+      "sourceHash": "924f8ba06123",
+      "updatedAt": "2026-08-17T13:40:31.945Z"
+    },
+    "op.control.doctrineTokens": {
+      "text": "Tokens doctrin",
+      "sourceHash": "e9758cad685c",
+      "updatedAt": "2026-08-17T13:40:51.376Z"
+    },
+    "op.control.reasoningTokens": {
+      "text": "Tokens rekòman",
+      "sourceHash": "6284e5999d12",
+      "updatedAt": "2026-08-17T13:40:51.376Z"
+    },
+    "op.control.reasoningBudget": {
+      "text": "Budjet rekòman",
+      "sourceHash": "4d7097470626",
+      "updatedAt": "2026-08-17T13:40:51.376Z"
+    },
+    "op.control.resetRouting": {
+      "text": "Réini chemè modèl",
+      "sourceHash": "aecd569180f1",
+      "updatedAt": "2026-08-17T13:40:51.376Z"
+    },
+    "op.control.modelsFailed": {
+      "text": "Modèl pa te chaje",
+      "sourceHash": "4bef3a82f816",
+      "updatedAt": "2026-08-17T13:40:51.376Z"
+    },
+    "op.control.autosaveFailed": {
+      "text": "Autosave pa fè",
+      "sourceHash": "6d939c6e7ddd",
+      "updatedAt": "2026-08-17T13:40:51.376Z"
+    },
+    "op.control.recommendedRestored": {
+      "text": "Modèl recomandé restauré",
+      "sourceHash": "ffbbb4d61f68",
+      "updatedAt": "2026-08-17T13:40:51.376Z"
+    },
+    "op.control.resetFailed": {
+      "text": "Réini pa reusite",
+      "sourceHash": "ca42c6fe10d0",
+      "updatedAt": "2026-08-17T13:40:51.376Z"
+    },
+    "op.operations.costLedger": {
+      "text": "Ledyè kost",
+      "sourceHash": "7af91996d5c5",
+      "updatedAt": "2026-08-17T13:41:03.724Z"
+    },
+    "op.operations.inventoryHint": {
+      "text": "Inventè ak aksyon pou politik · glis pou reorganizye",
+      "sourceHash": "5012fe617ecf",
+      "updatedAt": "2026-08-17T13:41:03.724Z"
+    },
+    "op.operations.ledgerSummary": {
+      "text": "Ledi rézime",
+      "sourceHash": "7cd55cb04aa7",
+      "updatedAt": "2026-08-17T13:41:03.724Z"
+    },
+    "op.operations.noCost": {
+      "text": "Pa gen entry kost an",
+      "sourceHash": "29e480e85bea",
+      "updatedAt": "2026-08-17T13:41:03.724Z"
+    },
+    "op.operations.noCostHint": {
+      "text": "Ligne apare lè sesyon live konsom token.",
+      "sourceHash": "9dd655498920",
+      "updatedAt": "2026-08-17T13:41:03.724Z"
+    },
+    "op.operations.noSessions": {
+      "text": "Pa gen sesyon agent",
+      "sourceHash": "883776c0ff81",
+      "updatedAt": "2026-08-17T13:41:03.724Z"
+    },
+    "op.operations.noSessionsHint": {
+      "text": "Eksplike yon kesyon dèpi yon projèkt pou plen log an.",
+      "sourceHash": "ec6e46dbc36f",
+      "updatedAt": "2026-08-17T13:41:03.724Z"
+    },
+    "op.operations.openProjects": {
+      "text": "Projèkt apriye",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T13:41:03.724Z"
+    },
+    "op.operations.wipeLedger": {
+      "text": "Fè wip Supabase cost_ledger + utilisation période (directement à tout opérateur)",
+      "sourceHash": "8669767d1260",
+      "updatedAt": "2026-08-17T13:41:43.962Z"
+    },
+    "op.operations.deleteLedgerRow": {
+      "text": "Supprime rangée ledger",
+      "sourceHash": "d333e4b0a85f",
+      "updatedAt": "2026-08-17T13:41:43.962Z"
+    },
+    "op.operations.deleteAllSessions": {
+      "text": "Supprime tout session agent nan Supabase + memwa",
+      "sourceHash": "21052d012d71",
+      "updatedAt": "2026-08-17T13:41:43.962Z"
+    },
+    "op.operations.deleteSession": {
+      "text": "Supprime session",
+      "sourceHash": "ca5747020239",
+      "updatedAt": "2026-08-17T13:41:43.962Z"
+    },
+    "op.catalog.sourceRegistry": {
+      "text": "Registè sourç",
+      "sourceHash": "941b018c3188",
+      "updatedAt": "2026-08-17T13:41:43.962Z"
+    },
+    "op.catalog.sourceLede": {
+      "text": "Klik yon karad pou retag ak maj URL — edite autosave; supprime any CSV row yon karad.",
+      "sourceHash": "7c8b080747dc",
+      "updatedAt": "2026-08-17T13:41:43.962Z"
+    },
+    "op.catalog.registrySummary": {
+      "text": "Resimè registè",
+      "sourceHash": "6011e3289ff5",
+      "updatedAt": "2026-08-17T13:41:43.962Z"
+    },
+    "op.catalog.search": {
+      "text": "Nòm, peisèl, tags…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T13:41:43.962Z"
+    },
+    "op.catalog.noMatches": {
+      "text": "Pa gen anyen ki match",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T13:42:27.722Z"
+    },
+    "op.catalog.noMatchesHint": {
+      "text": "Ajuste filtres oswa depose yiz CSV an sou pou kombine souche an nan registè.",
+      "sourceHash": "e82983fce0de",
+      "updatedAt": "2026-08-17T13:42:27.722Z"
+    },
+    "op.catalog.loadFailed": {
+      "text": "Pa ka charge registè souche",
+      "sourceHash": "38cec25d4b3c",
+      "updatedAt": "2026-08-17T13:42:27.722Z"
+    },
+    "op.catalog.allCountries": {
+      "text": "Tout pays",
+      "sourceHash": "b5fccc286fd7",
+      "updatedAt": "2026-08-17T13:42:27.722Z"
+    },
+    "op.catalog.allWatch": {
+      "text": "Tout montres",
+      "sourceHash": "0ac44d5c86a1",
+      "updatedAt": "2026-08-17T13:42:27.722Z"
+    },
+    "op.catalog.allRetrieval": {
+      "text": "Tout retrèvè",
+      "sourceHash": "386ffc567692",
+      "updatedAt": "2026-08-17T13:42:27.722Z"
+    },
+    "op.catalog.allHealth": {
+      "text": "Tout sant",
+      "sourceHash": "1520fa11da38",
+      "updatedAt": "2026-08-17T13:42:27.722Z"
+    },
+    "op.catalog.prevPage": {
+      "text": "Pwajèt prèèdant",
+      "sourceHash": "81f547195bef",
+      "updatedAt": "2026-08-17T13:42:27.722Z"
+    },
+    "op.catalog.nextPage": {
+      "text": "Nouvo pye",
+      "sourceHash": "4bfc194b68a3",
+      "updatedAt": "2026-08-17T13:42:42.925Z"
+    },
+    "op.mail.formats": {
+      "text": "CSV · TSV · TXT · JSON",
+      "sourceHash": "704a80b548fb",
+      "updatedAt": "2026-08-17T13:42:42.925Z"
+    },
+    "op.mail.sendFrom": {
+      "text": "Envwa nan staff oswa no-reply · template optionèl",
+      "sourceHash": "ebfea489306a",
+      "updatedAt": "2026-08-17T13:42:42.925Z"
+    },
+    "op.mail.mailingList": {
+      "text": "List mail",
+      "sourceHash": "d2a1123e6461",
+      "updatedAt": "2026-08-17T13:42:42.925Z"
+    },
+    "op.mail.emptyInbox": {
+      "text": "Pa gen mesaj anbòks an yet.",
+      "sourceHash": "f31d8f7896dc",
+      "updatedAt": "2026-08-17T13:42:42.925Z"
+    },
+    "op.mail.accountMix": {
+      "text": "Mix akònt",
+      "sourceHash": "82a81d957eee",
+      "updatedAt": "2026-08-17T13:42:42.925Z"
+    },
+    "op.mail.protectedFounder": {
+      "text": "Fondè protekt",
+      "sourceHash": "cde3151a6575",
+      "updatedAt": "2026-08-17T13:42:42.925Z"
+    },
+    "op.mail.subject": {
+      "text": "Lig subject",
+      "sourceHash": "26225393bc43",
+      "updatedAt": "2026-08-17T13:42:42.925Z"
+    },
+    "op.mail.body": {
+      "text": "Texte plat — enveloppé dans le template HTML quand activé",
+      "sourceHash": "77bf9d220248",
+      "updatedAt": "2026-08-17T13:43:03.072Z"
+    },
+    "op.mail.searchUsers": {
+      "text": "Rechèch utilisatèr…",
+      "sourceHash": "71cd28d65523",
+      "updatedAt": "2026-08-17T13:43:03.072Z"
+    },
+    "op.mail.searchUsersBtn": {
+      "text": "Rechèch utilisatèr",
+      "sourceHash": "1bd6226dd199",
+      "updatedAt": "2026-08-17T13:43:03.072Z"
+    },
+    "op.mail.importFormats": {
+      "text": "E CSV, TSV, TXT, ou JSON",
+      "sourceHash": "5dcb9d06982e",
+      "updatedAt": "2026-08-17T13:43:03.072Z"
+    },
+    "op.mail.importFailed": {
+      "text": "Importasyon fèk",
+      "sourceHash": "fbae892997d9",
+      "updatedAt": "2026-08-17T13:43:03.072Z"
+    },
+    "op.mail.importing": {
+      "text": "Importasyon…",
+      "sourceHash": "820599da89a1",
+      "updatedAt": "2026-08-17T13:43:03.072Z"
+    },
+    "op.mail.dropList": {
+      "text": "Listwa pou ajoute",
+      "sourceHash": "29511565da37",
+      "updatedAt": "2026-08-17T13:43:03.072Z"
+    },
+    "op.mail.loadFailed": {
+      "text": "Letè chargè fèk",
+      "sourceHash": "2f3b7781aa67",
+      "updatedAt": "2026-08-17T13:43:03.072Z"
+    },
+    "op.mail.clearFailed": {
+      "text": "Klir fèfè",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T13:43:44.173Z"
+    },
+    "op.mail.inboxUpdated": {
+      "text": "Bòit ptèt mise à jour",
+      "sourceHash": "8018e96574e3",
+      "updatedAt": "2026-08-17T13:43:44.173Z"
+    },
+    "op.mail.sendFirst": {
+      "text": "Envoie yon destinataire sélèk premye",
+      "sourceHash": "f16135d92e4d",
+      "updatedAt": "2026-08-17T13:43:44.173Z"
+    },
+    "op.mail.chooseFirst": {
+      "text": "Sélèk destinataires, sujet, ak bod an avènt",
+      "sourceHash": "6cd698326ff5",
+      "updatedAt": "2026-08-17T13:43:44.173Z"
+    },
+    "op.mail.sending": {
+      "text": "Envoi…",
+      "sourceHash": "cf765512cc6d",
+      "updatedAt": "2026-08-17T13:43:44.173Z"
+    },
+    "op.mail.selectRecipients": {
+      "text": "Sélèk yon ou plis destinataire nan list posdwi",
+      "sourceHash": "1123d3a102d6",
+      "updatedAt": "2026-08-17T13:43:44.173Z"
+    },
+    "op.mail.clearMailbox": {
+      "text": "Klir tout mesaj an sa bòit ptèt",
+      "sourceHash": "5bcd36e89277",
+      "updatedAt": "2026-08-17T13:43:44.173Z"
+    },
+    "op.mail.clearMessage": {
+      "text": "Klir mesaj sa",
+      "sourceHash": "7e381d95a625",
+      "updatedAt": "2026-08-17T13:43:44.173Z"
+    },
+    "op.mail.clearing": {
+      "text": "Nettoyaj…",
+      "sourceHash": "bc7a2b58694e",
+      "updatedAt": "2026-08-17T13:44:36.118Z"
+    },
+    "op.mail.clearInboxConfirm": {
+      "text": "Vide tout la boîte de réception ?",
+      "sourceHash": "28d19bf7ae0d",
+      "updatedAt": "2026-08-17T13:44:36.118Z"
+    },
+    "op.mail.clearMessageConfirm": {
+      "text": "Vide sa mesaj ?",
+      "sourceHash": "2fe6e2fe7526",
+      "updatedAt": "2026-08-17T13:44:36.118Z"
+    },
+    "op.mail.clearAll": {
+      "text": "Vide tout",
+      "sourceHash": "c043160a89ba",
+      "updatedAt": "2026-08-17T13:44:36.118Z"
+    },
+    "op.mail.clearMsg": {
+      "text": "Vide sa mesaj",
+      "sourceHash": "0edf6a5099e5",
+      "updatedAt": "2026-08-17T13:44:36.118Z"
+    },
+    "op.mail.usersFailed": {
+      "text": "Pa te chèche pwodwi",
+      "sourceHash": "47dd74c0c423",
+      "updatedAt": "2026-08-17T13:44:36.118Z"
+    },
+    "op.mail.passwordCopied": {
+      "text": "Nouvo mot de passe kopiyè nan klipbòd",
+      "sourceHash": "c69fd69b1d86",
+      "updatedAt": "2026-08-17T13:44:36.118Z"
+    },
+    "op.mail.actionFailed": {
+      "text": "Aksyon ka fè",
+      "sourceHash": "57af949595e3",
+      "updatedAt": "2026-08-17T13:44:36.118Z"
+    },
+    "op.mail.noUserMatch": {
+      "text": "Pa gen correspondance ki match avèk chèche.",
+      "sourceHash": "f0f3d70ce761",
+      "updatedAt": "2026-08-17T13:45:12.562Z"
+    },
+    "op.mail.noUsers": {
+      "text": "Pa gen utilizè yenn.",
+      "sourceHash": "26930b5f7c6f",
+      "updatedAt": "2026-08-17T13:45:12.562Z"
+    },
+    "op.support.loading": {
+      "text": "Chargman inbòk sopò…",
+      "sourceHash": "251c89cee942",
+      "updatedAt": "2026-08-17T13:45:12.562Z"
+    },
+    "op.support.noThreads": {
+      "text": "Pa gen trenn konpòt nan vizè sa a.",
+      "sourceHash": "7af18f8ac894",
+      "updatedAt": "2026-08-17T13:45:12.562Z"
+    },
+    "op.support.selectThread": {
+      "text": "Chwazi yon conversasyon konpòt pou modéré.",
+      "sourceHash": "e10ec1ca0116",
+      "updatedAt": "2026-08-17T13:45:12.562Z"
+    },
+    "op.support.filters": {
+      "text": "Filtè trenn",
+      "sourceHash": "37a1b6aef086",
+      "updatedAt": "2026-08-17T13:45:12.562Z"
+    },
+    "op.support.conversations": {
+      "text": "Conversasyon sopò",
+      "sourceHash": "9f5c09b82d64",
+      "updatedAt": "2026-08-17T13:45:12.562Z"
+    },
+    "op.support.clientEnv": {
+      "text": "Environman klaynt",
+      "sourceHash": "cd3dc59a3a60",
+      "updatedAt": "2026-08-17T13:45:12.562Z"
+    },
+    "op.support.quickReplies": {
+      "text": "Rèplye formèl rapide",
+      "sourceHash": "95c4666d38c0",
+      "updatedAt": "2026-08-17T13:45:50.962Z"
+    },
+    "op.support.attach": {
+      "text": "Anchò image",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T13:45:50.962Z"
+    },
+    "op.support.compose": {
+      "text": "Kompose yon réply…",
+      "sourceHash": "d50d154a1a48",
+      "updatedAt": "2026-08-17T13:45:50.962Z"
+    },
+    "op.support.awaiting": {
+      "text": "Atènt moun",
+      "sourceHash": "25e174a919de",
+      "updatedAt": "2026-08-17T13:45:50.962Z"
+    },
+    "op.support.loadFailed": {
+      "text": "Échec du chargement de la boîte de réception",
+      "sourceHash": "23be3576fc7a",
+      "updatedAt": "2026-08-17T13:45:50.962Z"
+    },
+    "op.support.attachFailed": {
+      "text": "Pouvè pa kapab anchò image",
+      "sourceHash": "f9ce8a5e6365",
+      "updatedAt": "2026-08-17T13:45:50.962Z"
+    },
+    "op.support.quickSent": {
+      "text": "Rèplye rapide envoyè",
+      "sourceHash": "bec403be3dcf",
+      "updatedAt": "2026-08-17T13:45:50.962Z"
+    },
+    "op.support.replySent": {
+      "text": "Rèplye envoyè",
+      "sourceHash": "94295a73231c",
+      "updatedAt": "2026-08-17T13:45:50.962Z"
+    },
+    "op.support.sendFailed": {
+      "text": "Envoi échoué",
+      "sourceHash": "07a7900ae8fa",
+      "updatedAt": "2026-08-17T13:45:52.161Z"
+    },
+    "op.support.resolved": {
+      "text": "Fil de discussion résolu",
+      "sourceHash": "b9d31bc63252",
+      "updatedAt": "2026-08-17T13:45:52.161Z"
+    },
+    "op.support.updateFailed": {
+      "text": "Mise à jour échouée",
+      "sourceHash": "4de04cd91a3d",
+      "updatedAt": "2026-08-17T13:45:52.161Z"
+    },
+    "op.support.assigned": {
+      "text": "Conversation assignée à vous",
+      "sourceHash": "787db9416277",
+      "updatedAt": "2026-08-17T13:45:52.161Z"
+    },
+    "op.support.assignFailed": {
+      "text": "Échec de l'assignation",
+      "sourceHash": "bb279ac46030",
+      "updatedAt": "2026-08-17T13:45:52.161Z"
+    },
+    "op.support.archived": {
+      "text": "Conversation résolue archivée",
+      "sourceHash": "7f2d0c81d33e",
+      "updatedAt": "2026-08-17T13:45:52.161Z"
+    },
+    "op.support.archiveFailed": {
+      "text": "Échec de l'archivage",
+      "sourceHash": "fa2362f21035",
+      "updatedAt": "2026-08-17T13:45:52.161Z"
+    },
+    "op.support.noResolved": {
+      "text": "Aucune conversation résolue à archiver",
+      "sourceHash": "5e23ade8e268",
+      "updatedAt": "2026-08-17T13:45:52.161Z"
+    },
+    "op.support.syncOn": {
+      "text": "Synchronizasyon anbòks toujou aktif",
+      "sourceHash": "5e01620f8932",
+      "updatedAt": "2026-08-17T13:46:31.785Z"
+    },
+    "op.support.reconnecting": {
+      "text": "Reconnecté — polenj jusq' an flò revit",
+      "sourceHash": "5929cb0aabbf",
+      "updatedAt": "2026-08-17T13:46:31.785Z"
+    },
+    "op.support.sync": {
+      "text": "Synchronizasyon…",
+      "sourceHash": "9688745a86c2",
+      "updatedAt": "2026-08-17T13:46:31.785Z"
+    },
+    "op.support.archiveAll": {
+      "text": "Arkive tout konsivasyon resolvye de anbòks anpòtif",
+      "sourceHash": "c2f8e41d55c6",
+      "updatedAt": "2026-08-17T13:46:31.785Z"
+    },
+    "op.support.archiveOne": {
+      "text": "Arkive konsivasyon resolvye dehors anbòks",
+      "sourceHash": "0a34b2f4d62b",
+      "updatedAt": "2026-08-17T13:46:31.785Z"
+    },
+    "op.support.assignYou": {
+      "text": "Asignè konsèy sa a pou profil anviwòstè yw",
+      "sourceHash": "1885e2da5885",
+      "updatedAt": "2026-08-17T13:46:31.785Z"
+    },
+    "op.support.resolve": {
+      "text": "Resolvè ak klòzè konsèy sa a",
+      "sourceHash": "3c9880945867",
+      "updatedAt": "2026-08-17T13:46:31.785Z"
+    },
+    "op.support.reportedIp": {
+      "text": "IP klaymansyon ki te raporte aprè derye kontak",
+      "sourceHash": "8f1e7deadbe3",
+      "updatedAt": "2026-08-17T13:47:14.624Z"
+    },
+    "op.support.ipUnknown": {
+      "text": "IP pa konn",
+      "sourceHash": "cf40c1ba981e",
+      "updatedAt": "2026-08-17T13:47:14.624Z"
+    },
+    "op.support.browserFamily": {
+      "text": "Familiyèl browsè dèpi user agent",
+      "sourceHash": "bc49f40f1bed",
+      "updatedAt": "2026-08-17T13:47:14.624Z"
+    },
+    "op.support.browserUnknown": {
+      "text": "Browsè pa konn",
+      "sourceHash": "5476220afd31",
+      "updatedAt": "2026-08-17T13:47:14.624Z"
+    },
+    "op.support.uaMissing": {
+      "text": "Agant moun pa capture",
+      "sourceHash": "e89923195485",
+      "updatedAt": "2026-08-17T13:47:14.624Z"
+    },
+    "op.support.attachHint": {
+      "text": "Atachiman yon imaj (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T13:47:14.624Z"
+    },
+    "op.support.sendAssign": {
+      "text": "Envoie répons ak assignasyon trenn ou",
+      "sourceHash": "61eb025fb429",
+      "updatedAt": "2026-08-17T13:47:14.624Z"
+    },
+    "op.autosave.saved": {
+      "text": "Tout chanjman te sauvé",
+      "sourceHash": "9595b7da9f61",
+      "updatedAt": "2026-08-17T13:47:14.624Z"
+    },
+    "op.autosave.writing": {
+      "text": "Ekripsyon chanjman…",
+      "sourceHash": "ea499fa21dce",
+      "updatedAt": "2026-08-17T13:47:57.267Z"
+    },
+    "op.autosave.soon": {
+      "text": "Sauvè anksiz",
+      "sourceHash": "dac9adeeec35",
+      "updatedAt": "2026-08-17T13:47:57.267Z"
+    },
+    "op.autosave.pending": {
+      "text": "Editye pendan — auto-save anvi",
+      "sourceHash": "310111dfce84",
+      "updatedAt": "2026-08-17T13:47:57.267Z"
+    },
+    "op.autosave.failed": {
+      "text": "Sèv te fè",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T13:47:57.267Z"
+    },
+    "op.autosave.retry": {
+      "text": "Sèv te fè deryè — klik pou reèse",
+      "sourceHash": "3ca55d67a41b",
+      "updatedAt": "2026-08-17T13:47:57.267Z"
+    },
+    "op.tour.replay": {
+      "text": "Rejoue tour opsyon",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T13:47:57.267Z"
+    },
+    "op.tour.label": {
+      "text": "Tour",
+      "sourceHash": "cd9e8f38bcfe",
+      "updatedAt": "2026-08-17T13:47:57.267Z"
+    },
+    "op.modules.runtime": {
+      "text": "Ran-taym",
+      "sourceHash": "c4740e4ca28c",
+      "updatedAt": "2026-08-17T13:47:57.267Z"
+    },
+    "op.modules.autoCheck": {
+      "text": "Vérification automatique",
+      "sourceHash": "2e0f9b9f2e4f",
+      "updatedAt": "2026-08-17T13:48:18.160Z"
+    },
+    "op.pulse.reviews": {
+      "text": "Revizyon",
+      "sourceHash": "b83c4cdafef5",
+      "updatedAt": "2026-08-17T13:48:18.160Z"
+    },
+    "op.pulse.stored": {
+      "text": "Stocké",
+      "sourceHash": "b2b53ee4fc1a",
+      "updatedAt": "2026-08-17T13:48:18.160Z"
+    },
+    "support.chat.title": {
+      "text": "Octivate Aide",
+      "sourceHash": "1b54a7b1a62f",
+      "updatedAt": "2026-08-17T13:48:18.160Z"
+    },
+    "support.chat.resolved": {
+      "text": "Konvèzyon résolu",
+      "sourceHash": "25aaa3efa2f8",
+      "updatedAt": "2026-08-17T13:48:18.160Z"
+    },
+    "support.chat.resolvedClosed": {
+      "text": "Résolu · messagerie fermée",
+      "sourceHash": "afd5f6b66e03",
+      "updatedAt": "2026-08-17T13:48:18.160Z"
+    },
+    "support.chat.accountSupport": {
+      "text": "Soutèn kont",
+      "sourceHash": "6bd44611563e",
+      "updatedAt": "2026-08-17T13:48:18.160Z"
+    },
+    "support.chat.accountSupportHint": {
+      "text": "Soutèn kont · soumente réponnans an yon jour travay",
+      "sourceHash": "db80d629390b",
+      "updatedAt": "2026-08-17T13:48:18.160Z"
+    },
+    "support.chat.attach": {
+      "text": "Atache image",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T13:48:19.028Z"
+    },
+    "support.chat.placeholder": {
+      "text": "Ekri yon mèsaj formal…",
+      "sourceHash": "08fc39b852ec",
+      "updatedAt": "2026-08-17T13:48:19.028Z"
+    },
+    "support.chat.open": {
+      "text": "Ope asistance",
+      "sourceHash": "3a80862045b7",
+      "updatedAt": "2026-08-17T13:48:19.028Z"
+    },
+    "support.chat.openAccount": {
+      "text": "Ope chat asistance konto",
+      "sourceHash": "afa415115cd0",
+      "updatedAt": "2026-08-17T13:48:19.028Z"
+    },
+    "support.chat.minimize": {
+      "text": "Minime chat",
+      "sourceHash": "f6068d8c1fcc",
+      "updatedAt": "2026-08-17T13:48:19.028Z"
+    },
+    "support.chat.close": {
+      "text": "Ferm chat",
+      "sourceHash": "eb376184348e",
+      "updatedAt": "2026-08-17T13:48:19.028Z"
+    },
+    "support.chat.send": {
+      "text": "Envoie mèsaj",
+      "sourceHash": "c70a890d1411",
+      "updatedAt": "2026-08-17T13:48:19.028Z"
+    },
+    "support.chat.assignedStaff": {
+      "text": "Staff assigné Octivate",
+      "sourceHash": "e7a8f38cc9f1",
+      "updatedAt": "2026-08-17T13:48:19.028Z"
+    },
+    "support.chat.attachHint": {
+      "text": "Atachiman yon image (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T13:48:40.938Z"
+    },
+    "support.chat.newReply": {
+      "text": "Nouvo répons soudè",
+      "sourceHash": "c8aad4b8dbca",
+      "updatedAt": "2026-08-17T13:48:40.938Z"
+    },
+    "support.chat.ready": {
+      "text": "Konvèsasyon nouvo prèt — anviye yon mèsaj pou komanse",
+      "sourceHash": "f8df923263c6",
+      "updatedAt": "2026-08-17T13:48:40.938Z"
+    },
+    "support.chat.signInRequired": {
+      "text": "Anrejistre rekwizit pou kontakte soudè",
+      "sourceHash": "4b61a483a26f",
+      "updatedAt": "2026-08-17T13:48:40.938Z"
+    },
+    "support.chat.resolvedContinue": {
+      "text": "Konvèsasyon an disolved. Komanse yon konvèsasyon nouvo pou kontinye.",
+      "sourceHash": "99fbd68dd31b",
+      "updatedAt": "2026-08-17T13:48:40.938Z"
+    },
+    "support.chat.topic.access": {
+      "text": "Aksès",
+      "sourceHash": "2f81a22de0af",
+      "updatedAt": "2026-08-17T13:48:40.938Z"
+    },
+    "support.chat.topic.briefs": {
+      "text": "Brif",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T13:49:12.429Z"
+    },
+    "support.chat.topic.projects": {
+      "text": "Proyèkt",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T13:49:12.429Z"
+    },
+    "support.chat.topic.plans": {
+      "text": "Plàn",
+      "sourceHash": "cf2e5f26fef8",
+      "updatedAt": "2026-08-17T13:49:12.429Z"
+    },
+    "support.chat.canned.access": {
+      "text": "Mwen bezwen èd a pou sign in oswa aksè mwa espas travay.",
+      "sourceHash": "6921c24ea727",
+      "updatedAt": "2026-08-17T13:49:12.429Z"
+    },
+    "support.chat.canned.briefs": {
+      "text": "Mwen bezwen èd a pou revye oswa eksportè yon brif de décision.",
+      "sourceHash": "0ee61394f841",
+      "updatedAt": "2026-08-17T13:49:12.429Z"
+    },
+    "support.chat.canned.projects": {
+      "text": "Mwen gen yon swalèt sou konfigurasyon yon proyèkt oswa running yon workflow.",
+      "sourceHash": "e400b004fbe8",
+      "updatedAt": "2026-08-17T13:49:12.429Z"
+    },
+    "support.chat.canned.plans": {
+      "text": "Mwen vle èd sou plàn oswa aksè Tim pou organizasyon mwen.",
+      "sourceHash": "399700ef9ac7",
+      "updatedAt": "2026-08-17T13:49:12.429Z"
+    },
+    "support.page.needWorkspace": {
+      "text": "Bezwen espas travay? Ouvè Octivate oswa vizite CENSII.",
+      "sourceHash": "dc42eadddae5",
+      "updatedAt": "2026-08-17T13:49:12.429Z"
+    },
+    "support.page.createAccount": {
+      "text": "Kri yon konto",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T13:49:26.257Z"
+    },
+    "support.page.openWorkspace": {
+      "text": "Ouvri espas",
+      "sourceHash": "8b23311bbdc0",
+      "updatedAt": "2026-08-17T13:49:26.257Z"
+    },
+    "support.page.builtBy": {
+      "text": "Konstrui nan CENSII",
+      "sourceHash": "890270900ae3",
+      "updatedAt": "2026-08-17T13:49:26.257Z"
+    },
+    "support.page.role.founder": {
+      "text": "Fondateur · Produk & Domèn",
+      "sourceHash": "4853fc7f81bc",
+      "updatedAt": "2026-08-17T13:49:26.257Z"
+    },
+    "support.page.role.founderDesc": {
+      "text": "Visyon prodüt, kazye Karayib, ak metodoloji dechesion CENSII.",
+      "sourceHash": "90cd07f23dbe",
+      "updatedAt": "2026-08-17T13:49:26.257Z"
+    },
+    "support.page.role.ai": {
+      "text": "Flò AI & Validasyon",
+      "sourceHash": "12d701f87e36",
+      "updatedAt": "2026-08-17T13:49:26.257Z"
+    },
+    "support.page.role.aiDesc": {
+      "text": "Visyon prodüt, kazye Karayib, ak metodoloji dechesion CENSII.",
+      "sourceHash": "23e12290635b",
+      "updatedAt": "2026-08-17T13:49:26.257Z"
+    },
+    "support.page.role.tech": {
+      "text": "Arkitech teknikal",
+      "sourceHash": "d6004963fc9a",
+      "updatedAt": "2026-08-17T13:49:26.257Z"
+    },
+    "support.page.role.techDesc": {
+      "text": "MVP architecture, prototype delivery, and platform execution.",
+      "sourceHash": "20179b862557",
+      "updatedAt": "2026-08-17T13:49:27.414Z"
+    },
+    "support.chat.welcome": {
+      "text": "Hi — you’re connected to Octivate account support. Choose a topic or write a formal message.",
+      "sourceHash": "dbdb8c3ff845",
+      "updatedAt": "2026-08-17T13:49:27.414Z"
+    },
+    "support.chat.speakingWith": {
+      "text": "Speaking with",
+      "sourceHash": "1365c04cc97e",
+      "updatedAt": "2026-08-17T13:49:27.414Z"
+    },
+    "support.chat.startNew": {
+      "text": "Start new conversation",
+      "sourceHash": "bf79f47d3ac6",
+      "updatedAt": "2026-08-17T13:49:27.414Z"
+    },
+    "support.chat.you": {
+      "text": "You",
+      "sourceHash": "905cb326c779",
+      "updatedAt": "2026-08-17T13:49:27.414Z"
+    },
+    "support.chat.octivate": {
+      "text": "Octivate",
+      "sourceHash": "5076ec0702e6",
+      "updatedAt": "2026-08-17T13:49:27.414Z"
+    },
+    "support.chat.resolvedBody": {
+      "text": "This thread is closed. Start a new conversation if you still need help.",
+      "sourceHash": "04f13ea5232b",
+      "updatedAt": "2026-08-17T13:49:27.414Z"
+    },
+    "onboard.ui.workspaceTour": {
+      "text": "Workspace tour",
+      "sourceHash": "9edf55888973",
+      "updatedAt": "2026-08-17T13:49:27.414Z"
+    },
+    "onboard.ui.operatorTour": {
+      "text": "Tour opèratè",
+      "sourceHash": "1538c47330f3",
+      "updatedAt": "2026-08-17T13:49:28.301Z"
+    },
+    "onboard.ui.closeTour": {
+      "text": "Fermer la tournée",
+      "sourceHash": "1aca7dc4d76a",
+      "updatedAt": "2026-08-17T13:49:28.301Z"
+    },
+    "onboard.ui.skip": {
+      "text": "Sauter la tournée",
+      "sourceHash": "57bc79e3c907",
+      "updatedAt": "2026-08-17T13:49:28.301Z"
+    },
+    "onboard.ui.back": {
+      "text": "Retour",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T13:49:28.301Z"
+    },
+    "onboard.ui.next": {
+      "text": "Suivant",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T13:49:28.301Z"
+    },
+    "onboard.ui.getStarted": {
+      "text": "Commencer",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T13:49:28.301Z"
+    },
+    "onboard.ui.stepOf": {
+      "text": "Étape {n} sur {total}",
+      "sourceHash": "78cee4b898d5",
+      "updatedAt": "2026-08-17T13:49:28.301Z"
+    },
+    "onboard.ui.tutorial": {
+      "text": "Tutoriel",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T13:49:28.301Z"
+    },
+    "onboard.ui.openTutorial": {
+      "text": "Ouvrir le tutoriel de l'espace de travail",
+      "sourceHash": "e663ca7b5a5b",
+      "updatedAt": "2026-08-17T13:49:29.424Z"
+    },
+    "onboard.ui.replayWorkspace": {
+      "text": "Rejouer le tour de l'espace de travail",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T13:49:29.424Z"
+    },
+    "onboard.ui.replayOperator": {
+      "text": "Rejouer le tour de l'opérateur",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T13:49:29.424Z"
+    },
+    "onboard.ws.1.kicker": {
+      "text": "Étape 1 · Aperçu",
+      "sourceHash": "9a4fd5299ca7",
+      "updatedAt": "2026-08-17T13:49:29.424Z"
+    },
+    "onboard.ws.1.title": {
+      "text": "Commencer depuis ton",
+      "sourceHash": "211f5f534912",
+      "updatedAt": "2026-08-17T13:49:29.424Z"
+    },
+    "onboard.ws.1.accent": {
+      "text": "maison de travail",
+      "sourceHash": "a471f82221dc",
+      "updatedAt": "2026-08-17T13:49:29.424Z"
+    },
+    "onboard.ws.1.tagline": {
+      "text": "Briefs, projets, couverture et utilisation en un seul endroit.",
+      "sourceHash": "b68671724729",
+      "updatedAt": "2026-08-17T13:49:29.424Z"
+    },
+    "onboard.ws.1.desc": {
+      "text": "L'aperçu est la base de travail pour les décisions caribéennes. Utilise la barre latérale pour passer entre Projets, Briefs, Moniteurs et Support en direct — ainsi que la carte de couverture Théâtre pour le contexte géographique.",
+      "sourceHash": "4f772aad2485",
+      "updatedAt": "2026-08-17T13:49:29.424Z"
+    },
+    "onboard.ws.1.b1.lead": {
+      "text": "Bwatir",
+      "sourceHash": "f5171c931c5c",
+      "updatedAt": "2026-08-17T13:49:42.115Z"
+    },
+    "onboard.ws.1.b1": {
+      "text": "Soti Aperatif, Projekt, Bref, et Mònitè",
+      "sourceHash": "09c2c0b6bc3d",
+      "updatedAt": "2026-08-17T13:49:42.115Z"
+    },
+    "onboard.ws.1.b2.lead": {
+      "text": "Poset yon kesyon",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T13:49:42.115Z"
+    },
+    "onboard.ws.1.b2": {
+      "text": "Ouvri yon teatè projèkt yonn clik",
+      "sourceHash": "c1d04d6cd14c",
+      "updatedAt": "2026-08-17T13:49:42.115Z"
+    },
+    "onboard.ws.1.b3.lead": {
+      "text": "Repal",
+      "sourceHash": "c0f85d667973",
+      "updatedAt": "2026-08-17T13:49:42.115Z"
+    },
+    "onboard.ws.1.b3": {
+      "text": "Wi tour an anyen an depi Espas Travay Tutorial",
+      "sourceHash": "c80024feee50",
+      "updatedAt": "2026-08-17T13:49:42.115Z"
+    },
+    "onboard.ws.2.kicker": {
+      "text": "Etape 2 · Kovertaj teatè",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T13:49:42.115Z"
+    },
+    "onboard.ws.2.title": {
+      "text": "Wè y",
+      "sourceHash": "acc2c52c24a5",
+      "updatedAt": "2026-08-17T13:49:42.115Z"
+    },
+    "onboard.ws.2.accent": {
+      "text": "Kart covèj teatwar",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T13:50:16.542Z"
+    },
+    "onboard.ws.2.tagline": {
+      "text": "Géografi projèkt Karayib sou Aperçu.",
+      "sourceHash": "50820f6be866",
+      "updatedAt": "2026-08-17T13:50:16.542Z"
+    },
+    "onboard.ws.2.desc": {
+      "text": "Kart covèj teatwar resit sou Aperçu. Pwen montre ki projèk ap viv; plivè pou count, klike yon peis pououvri list projèk, et use En direct / Mise à jour lè espas trav rafraîchi.",
+      "sourceHash": "f3d174ce0faa",
+      "updatedAt": "2026-08-17T13:50:16.542Z"
+    },
+    "onboard.ws.2.b1.lead": {
+      "text": "Pwen",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T13:50:16.542Z"
+    },
+    "onboard.ws.2.b1": {
+      "text": "Taille projèk kountè nan jurisdiksyon",
+      "sourceHash": "31d40c2d9d01",
+      "updatedAt": "2026-08-17T13:50:16.542Z"
+    },
+    "onboard.ws.2.b2.lead": {
+      "text": "Klike",
+      "sourceHash": "79cbc5eb672a",
+      "updatedAt": "2026-08-17T13:50:16.542Z"
+    },
+    "onboard.ws.2.b2": {
+      "text": "Ouvri yon modal projèk pou yon peis",
+      "sourceHash": "88d6ba3584eb",
+      "updatedAt": "2026-08-17T13:50:16.542Z"
+    },
+    "onboard.ws.2.b3.lead": {
+      "text": "En direct",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T13:50:16.542Z"
+    },
+    "onboard.ws.2.b3": {
+      "text": "pulse lè donnè couvèraj rafraîchi",
+      "sourceHash": "dbb22d3bffab",
+      "updatedAt": "2026-08-17T13:51:38.246Z"
+    },
+    "onboard.ws.3.kicker": {
+      "text": "Ètape 3 · Projets",
+      "sourceHash": "df1977d42ab9",
+      "updatedAt": "2026-08-17T13:51:38.246Z"
+    },
+    "onboard.ws.3.title": {
+      "text": "Fè yon",
+      "sourceHash": "7d9043bfad91",
+      "updatedAt": "2026-08-17T13:51:38.246Z"
+    },
+    "onboard.ws.3.accent": {
+      "text": "teatè dékizyon",
+      "sourceHash": "f45ac24f2d52",
+      "updatedAt": "2026-08-17T13:51:38.246Z"
+    },
+    "onboard.ws.3.tagline": {
+      "text": "Yon projèkt = yon fil strategik.",
+      "sourceHash": "f3a2465015c7",
+      "updatedAt": "2026-08-17T13:51:38.246Z"
+    },
+    "onboard.ws.3.desc": {
+      "text": "Ouvri Projets ak star yon teatè nouvo ak peis, sektè ak yon kesyon. Tchargè dokiman anvan ou ran agents lè ou gen kontekst proprie.",
+      "sourceHash": "4997ef5ee5aa",
+      "updatedAt": "2026-08-17T13:51:38.246Z"
+    },
+    "onboard.ws.3.b1.lead": {
+      "text": "Nouvo projèkt",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T13:51:38.246Z"
+    },
+    "onboard.ws.3.b1": {
+      "text": "ouvri flou kreyasyon",
+      "sourceHash": "aca548b6f759",
+      "updatedAt": "2026-08-17T13:51:38.246Z"
+    },
+    "onboard.ws.3.b2.lead": {
+      "text": "Each project",
+      "sourceHash": "487ba03c31ee",
+      "updatedAt": "2026-08-17T13:51:39.303Z"
+    },
+    "onboard.ws.3.b2": {
+      "text": "keeps its own question, docs, and runs",
+      "sourceHash": "483a4a50f88f",
+      "updatedAt": "2026-08-17T13:51:39.303Z"
+    },
+    "onboard.ws.3.b3.lead": {
+      "text": "Sign-in guests",
+      "sourceHash": "fefaa17e3676",
+      "updatedAt": "2026-08-17T13:51:39.303Z"
+    },
+    "onboard.ws.3.b3": {
+      "text": "can explore the workspace freely on demo access",
+      "sourceHash": "275de29aaeb9",
+      "updatedAt": "2026-08-17T13:51:39.303Z"
+    },
+    "onboard.ws.4.kicker": {
+      "text": "Step 4 · Run",
+      "sourceHash": "44733d3f28a9",
+      "updatedAt": "2026-08-17T13:51:39.303Z"
+    },
+    "onboard.ws.4.title": {
+      "text": "Open a project,",
+      "sourceHash": "c18dad9153ff",
+      "updatedAt": "2026-08-17T13:51:39.303Z"
+    },
+    "onboard.ws.4.accent": {
+      "text": "then run",
+      "sourceHash": "1c015e3e76ad",
+      "updatedAt": "2026-08-17T13:51:39.303Z"
+    },
+    "onboard.ws.4.tagline": {
+      "text": "Start a theatre first — then ask and run.",
+      "sourceHash": "708f17ba529c",
+      "updatedAt": "2026-08-17T13:51:39.303Z"
+    },
+    "onboard.ws.4.desc": {
+      "text": "If you do not have a project yet, use Start a new project. Inside an existing theatre, write a strategic question and run the Power–Systems–Narratives pipeline.",
+      "sourceHash": "56e25027be02",
+      "updatedAt": "2026-08-17T13:51:40.859Z"
+    },
+    "onboard.ws.4.b1.lead": {
+      "text": "New project",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T13:51:40.859Z"
+    },
+    "onboard.ws.4.b1": {
+      "text": "creates a decision theatre for this tour",
+      "sourceHash": "0f82e9d50b72",
+      "updatedAt": "2026-08-17T13:51:40.859Z"
+    },
+    "onboard.ws.4.b2.lead": {
+      "text": "Question",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T13:51:40.859Z"
+    },
+    "onboard.ws.4.b2": {
+      "text": "loads starters or your own prompt",
+      "sourceHash": "a120c1682683",
+      "updatedAt": "2026-08-17T13:51:40.859Z"
+    },
+    "onboard.ws.4.b3.lead": {
+      "text": "Run",
+      "sourceHash": "b1b392607dea",
+      "updatedAt": "2026-08-17T13:51:40.859Z"
+    },
+    "onboard.ws.4.b3": {
+      "text": "starts the live OpenRouter pipeline",
+      "sourceHash": "a4f5d7412be6",
+      "updatedAt": "2026-08-17T13:51:40.859Z"
+    },
+    "onboard.ws.5.kicker": {
+      "text": "Step 5 · Briefs",
+      "sourceHash": "ab23c9919bc4",
+      "updatedAt": "2026-08-17T13:51:40.859Z"
+    },
+    "onboard.ws.5.title": {
+      "text": "Ouvri",
+      "sourceHash": "2d7eeba9f46c",
+      "updatedAt": "2026-08-17T13:51:42.151Z"
+    },
+    "onboard.ws.5.accent": {
+      "text": "bref de d&eacute;cision",
+      "sourceHash": "9a4025f24b62",
+      "updatedAt": "2026-08-17T13:51:42.151Z"
+    },
+    "onboard.ws.5.tagline": {
+      "text": "Recommandations, &eacute;vidence, et lacunes.",
+      "sourceHash": "6063763a4ffb",
+      "updatedAt": "2026-08-17T13:51:42.151Z"
+    },
+    "onboard.ws.5.desc": {
+      "text": "Les r&eacute;ussites s&eacute;rieuses aboutissent &agrave; des Brefs. Ouvrir un bref pour examiner le jugement, les preuves, les plans de suivi, et exporter un pack partageable pour les parties prenantes.",
+      "sourceHash": "f07d8f13ae30",
+      "updatedAt": "2026-08-17T13:51:42.151Z"
+    },
+    "onboard.ws.5.b1.lead": {
+      "text": "Navigateur de Brefs",
+      "sourceHash": "e913003e38d3",
+      "updatedAt": "2026-08-17T13:51:42.151Z"
+    },
+    "onboard.ws.5.b1": {
+      "text": "liste chaque pack de d&eacute;cision termin&eacute;",
+      "sourceHash": "bea89fd9ef53",
+      "updatedAt": "2026-08-17T13:51:42.151Z"
+    },
+    "onboard.ws.5.b2.lead": {
+      "text": "Exportations",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T13:51:42.151Z"
+    },
+    "onboard.ws.5.b2": {
+      "text": "produire Word / PDF marqu&eacute; pour les parties prenantes",
+      "sourceHash": "c9bce8ccfa12",
+      "updatedAt": "2026-08-17T13:51:42.151Z"
+    },
+    "onboard.ws.5.b3.lead": {
+      "text": "Eksam rapò",
+      "sourceHash": "24a56e96ac52",
+      "updatedAt": "2026-08-17T13:52:23.768Z"
+    },
+    "onboard.ws.5.b3": {
+      "text": "Li also linked from the public landing page",
+      "sourceHash": "459724e94bb1",
+      "updatedAt": "2026-08-17T13:52:23.768Z"
+    },
+    "onboard.ws.6.kicker": {
+      "text": "Etape 6 · Monitè",
+      "sourceHash": "d168aae1315a",
+      "updatedAt": "2026-08-17T13:52:23.768Z"
+    },
+    "onboard.ws.6.title": {
+      "text": "Watche signal",
+      "sourceHash": "1ac5be293e80",
+      "updatedAt": "2026-08-17T13:52:23.768Z"
+    },
+    "onboard.ws.6.accent": {
+      "text": "Antè couri",
+      "sourceHash": "785d2df244cb",
+      "updatedAt": "2026-08-17T13:52:23.768Z"
+    },
+    "onboard.ws.6.tagline": {
+      "text": "Mòti et juridiksyon surveye.",
+      "sourceHash": "55bdd583833b",
+      "updatedAt": "2026-08-17T13:52:23.768Z"
+    },
+    "onboard.ws.6.desc": {
+      "text": "Monitè te aneye sou tematik an antè juridiksyon Karayib tan ou travay. Créye them from Monitè et check alèrt antè cykli rapò.",
+      "sourceHash": "11e264bb858e",
+      "updatedAt": "2026-08-17T13:52:23.768Z"
+    },
+    "onboard.ws.6.b1.lead": {
+      "text": "Créye",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T13:52:23.768Z"
+    },
+    "onboard.ws.6.b1": {
+      "text": "yon vizye sou la toolbar Monitè",
+      "sourceHash": "0b2f9dadee88",
+      "updatedAt": "2026-08-17T13:52:41.824Z"
+    },
+    "onboard.ws.6.b2.lead": {
+      "text": "Jurisidiksyon",
+      "sourceHash": "f5c46b8a7a74",
+      "updatedAt": "2026-08-17T13:52:41.824Z"
+    },
+    "onboard.ws.6.b2": {
+      "text": "reflechi marche couvert sou sit publik",
+      "sourceHash": "d875a1715457",
+      "updatedAt": "2026-08-17T13:52:41.824Z"
+    },
+    "onboard.ws.6.b3.lead": {
+      "text": "Retounen an",
+      "sourceHash": "de5937ab71b9",
+      "updatedAt": "2026-08-17T13:52:41.824Z"
+    },
+    "onboard.ws.6.b3": {
+      "text": "lè ou bezwen yon analyz complet refè",
+      "sourceHash": "30f05e6db135",
+      "updatedAt": "2026-08-17T13:52:41.824Z"
+    },
+    "onboard.ws.7.kicker": {
+      "text": "Etape 7 · Tradwi",
+      "sourceHash": "97ff8d3a52eb",
+      "updatedAt": "2026-08-17T13:52:41.824Z"
+    },
+    "onboard.ws.7.title": {
+      "text": "Chanjman",
+      "sourceHash": "3e44c920427e",
+      "updatedAt": "2026-08-17T13:52:41.824Z"
+    },
+    "onboard.ws.7.accent": {
+      "text": "lang ankò tan",
+      "sourceHash": "d29bfe062b1a",
+      "updatedAt": "2026-08-17T13:52:41.824Z"
+    },
+    "onboard.ws.7.tagline": {
+      "text": "Realtime catalogs from the site language control.",
+      "sourceHash": "cca5a8c696b4",
+      "updatedAt": "2026-08-17T13:52:43.067Z"
+    },
+    "onboard.ws.7.desc": {
+      "text": "Octivate uses permanent i18n catalogs — pick a locale from the public site language control and chrome updates immediately. No third-party page-translation widget.",
+      "sourceHash": "e047844bf1ae",
+      "updatedAt": "2026-08-17T13:52:43.067Z"
+    },
+    "onboard.ws.7.b1.lead": {
+      "text": "Languages",
+      "sourceHash": "db07be184479",
+      "updatedAt": "2026-08-17T13:52:43.067Z"
+    },
+    "onboard.ws.7.b1": {
+      "text": "cover Caribbean and global demo locales",
+      "sourceHash": "522d37e0e94c",
+      "updatedAt": "2026-08-17T13:52:43.067Z"
+    },
+    "onboard.ws.7.b2.lead": {
+      "text": "Catalogs",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T13:52:43.067Z"
+    },
+    "onboard.ws.7.b2": {
+      "text": "sync from OpenRouter and cache on the server",
+      "sourceHash": "106e3bc14187",
+      "updatedAt": "2026-08-17T13:52:43.067Z"
+    },
+    "onboard.ws.7.b3.lead": {
+      "text": "Public chrome",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T13:52:43.067Z"
+    },
+    "onboard.ws.7.b3": {
+      "text": "hosts the language picker on marketing pages",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T13:52:43.067Z"
+    },
+    "onboard.ws.8.kicker": {
+      "text": "Step 8 · Lighting",
+      "sourceHash": "a80faf25b3ce",
+      "updatedAt": "2026-08-17T13:52:44.110Z"
+    },
+    "onboard.ws.8.title": {
+      "text": "Set your",
+      "sourceHash": "277523aea813",
+      "updatedAt": "2026-08-17T13:52:44.110Z"
+    },
+    "onboard.ws.8.accent": {
+      "text": "lighting",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T13:52:44.110Z"
+    },
+    "onboard.ws.8.tagline": {
+      "text": "Light or dark — same product language.",
+      "sourceHash": "d9336b5e71e3",
+      "updatedAt": "2026-08-17T13:52:44.110Z"
+    },
+    "onboard.ws.8.desc": {
+      "text": "Lighting toggles light and dark themes across Overview, projects, and chrome. Use the sun / moon control on the public site navbar or footer — whichever keeps maps and briefs comfortable.",
+      "sourceHash": "b9b3db1a1087",
+      "updatedAt": "2026-08-17T13:52:44.110Z"
+    },
+    "onboard.ws.8.b1.lead": {
+      "text": "Toggle",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T13:52:44.110Z"
+    },
+    "onboard.ws.8.b1": {
+      "text": "switches sun / moon lighting instantly",
+      "sourceHash": "3731c411d0ff",
+      "updatedAt": "2026-08-17T13:52:44.110Z"
+    },
+    "onboard.ws.8.b2.lead": {
+      "text": "Maps",
+      "sourceHash": "80071cd75107",
+      "updatedAt": "2026-08-17T13:52:44.110Z"
+    },
+    "onboard.ws.8.b2": {
+      "text": "Sotiwò yon tematik aktif pou kontras carreau",
+      "sourceHash": "52dd87360f0a",
+      "updatedAt": "2026-08-17T13:53:07.808Z"
+    },
+    "onboard.ws.8.b3.lead": {
+      "text": "Prefè",
+      "sourceHash": "97d9b2888847",
+      "updatedAt": "2026-08-17T13:53:07.808Z"
+    },
+    "onboard.ws.8.b3": {
+      "text": "Reste ak yon session navigateur",
+      "sourceHash": "e5feed566b0f",
+      "updatedAt": "2026-08-17T13:53:07.808Z"
+    },
+    "onboard.ws.9.kicker": {
+      "text": "Etape 9 · Alèrt dòmi",
+      "sourceHash": "9a34fc8570e3",
+      "updatedAt": "2026-08-17T13:53:07.808Z"
+    },
+    "onboard.ws.9.title": {
+      "text": "Bezwen men?",
+      "sourceHash": "864a198ed64a",
+      "updatedAt": "2026-08-17T13:53:07.808Z"
+    },
+    "onboard.ws.9.accent": {
+      "text": "Aide + Alèrt",
+      "sourceHash": "5de10bb7b38b",
+      "updatedAt": "2026-08-17T13:53:07.808Z"
+    },
+    "onboard.ws.9.tagline": {
+      "text": "Aide moun viv ak alèrtès répons.",
+      "sourceHash": "1be68997ca1c",
+      "updatedAt": "2026-08-17T13:53:07.808Z"
+    },
+    "onboard.ws.9.desc": {
+      "text": "Moun wòkspace sotiwò yon chat dòmi alevidye — pa yon inbox opsèyat. Koulye staff repon, Octivate ka sotiwò alèrtès dòmi pou ou pa manke trèd. Opsèyat repon dèpi Spt Customer.",
+      "sourceHash": "77b21b62e2b9",
+      "updatedAt": "2026-08-17T13:53:07.808Z"
+    },
+    "onboard.ws.9.b1.lead": {
+      "text": "Aide chati",
+      "sourceHash": "7ba80729c84c",
+      "updatedAt": "2026-08-17T13:53:09.026Z"
+    },
+    "onboard.ws.9.b1": {
+      "text": "ouvre votre fil de support de compte",
+      "sourceHash": "d9db0e6aba67",
+      "updatedAt": "2026-08-17T13:53:09.026Z"
+    },
+    "onboard.ws.9.b2.lead": {
+      "text": "Alertes",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T13:53:09.026Z"
+    },
+    "onboard.ws.9.b2": {
+      "text": "vous notifie quand l''équipe répond",
+      "sourceHash": "f3cbe9b57721",
+      "updatedAt": "2026-08-17T13:53:09.026Z"
+    },
+    "onboard.ws.9.b3.lead": {
+      "text": "Sujets rapides",
+      "sourceHash": "df9701935ffd",
+      "updatedAt": "2026-08-17T13:53:09.026Z"
+    },
+    "onboard.ws.9.b3": {
+      "text": "couvrent les brîves, projets, démos et les plans",
+      "sourceHash": "a00b3d05a891",
+      "updatedAt": "2026-08-17T13:53:09.026Z"
+    },
+    "onboard.ws.10.kicker": {
+      "text": "étape 10 À jour juridique",
+      "sourceHash": "d35eeb64a72a",
+      "updatedAt": "2026-08-17T13:53:09.026Z"
+    },
+    "onboard.ws.10.title": {
+      "text": "Politique de confidentialité",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T13:53:09.026Z"
+    },
+    "onboard.ws.10.accent": {
+      "text": "& Konstitisyòn Sèvis",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T13:53:10.148Z"
+    },
+    "onboard.ws.10.tagline": {
+      "text": "Ouvè yon panyen nan bò latè sidbè.",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T13:53:10.148Z"
+    },
+    "onboard.ws.10.desc": {
+      "text": "Politik Konfidansiyèl ak Konstitisyòn Sèvis an viv nan bò latè sidbè. Klik yon lèk n'importe kouraj pou ouvè panyen piblik anpil.",
+      "sourceHash": "5acee761c11a",
+      "updatedAt": "2026-08-17T13:53:10.148Z"
+    },
+    "onboard.ws.10.b1.lead": {
+      "text": "Politik Konfidansiyèl",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T13:53:10.148Z"
+    },
+    "onboard.ws.10.b1": {
+      "text": "kouvert fòmasyon sou fòmasyon an data ak cookies",
+      "sourceHash": "4ee048f7abbd",
+      "updatedAt": "2026-08-17T13:53:10.148Z"
+    },
+    "onboard.ws.10.b2.lead": {
+      "text": "Konstitisyòn Sèvis",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T13:53:10.148Z"
+    },
+    "onboard.ws.10.b2": {
+      "text": "kouvert fòmasyon sou fòmasyon an ak kont",
+      "sourceHash": "8867a248339a",
+      "updatedAt": "2026-08-17T13:53:10.148Z"
+    },
+    "onboard.ws.10.b3.lead": {
+      "text": "Bò latè sidbè",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T13:53:10.148Z"
+    },
+    "onboard.ws.10.b3": {
+      "text": "konbindan dwa yon klik dwa a",
+      "sourceHash": "9e79f002da45",
+      "updatedAt": "2026-08-17T13:53:11.409Z"
+    },
+    "onboard.op.1.kicker": {
+      "text": "Etape 1 · Pulse",
+      "sourceHash": "69e8ed5685c2",
+      "updatedAt": "2026-08-17T13:53:11.409Z"
+    },
+    "onboard.op.1.title": {
+      "text": "Pale sou",
+      "sourceHash": "f6702a1554c6",
+      "updatedAt": "2026-08-17T13:53:11.409Z"
+    },
+    "onboard.op.1.accent": {
+      "text": "Pulse",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T13:53:11.409Z"
+    },
+    "onboard.op.1.tagline": {
+      "text": "Vivant sant la pipleen prodiksyon.",
+      "sourceHash": "60c7ce936d28",
+      "updatedAt": "2026-08-17T13:53:11.409Z"
+    },
+    "onboard.op.1.desc": {
+      "text": "Pulse se kay opsyon. Skann sant sesyon, brul token, ak rekòd pou antre nan kontol derekò.",
+      "sourceHash": "a92cbe53d3c5",
+      "updatedAt": "2026-08-17T13:53:11.409Z"
+    },
+    "onboard.op.1.b1.lead": {
+      "text": "KPI",
+      "sourceHash": "6911b88f3e2c",
+      "updatedAt": "2026-08-17T13:53:11.409Z"
+    },
+    "onboard.op.1.b1": {
+      "text": "afiche token, agan, ak charge rekòd",
+      "sourceHash": "d85127f0f3b1",
+      "updatedAt": "2026-08-17T13:53:11.409Z"
+    },
+    "onboard.op.1.b2.lead": {
+      "text": "Hash tabs",
+      "sourceHash": "f235f2664aa1",
+      "updatedAt": "2026-08-17T13:53:12.620Z"
+    },
+    "onboard.op.1.b2": {
+      "text": "soti any console section instantanman",
+      "sourceHash": "1ba380c39f19",
+      "updatedAt": "2026-08-17T13:53:12.620Z"
+    },
+    "onboard.op.2.kicker": {
+      "text": "Ètape 2 · Couvètyè theatral",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T13:53:12.620Z"
+    },
+    "onboard.op.2.title": {
+      "text": "Workspace chanje",
+      "sourceHash": "fb40fd293dbf",
+      "updatedAt": "2026-08-17T13:53:12.620Z"
+    },
+    "onboard.op.2.accent": {
+      "text": "Kart covètyè theatral",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T13:53:12.620Z"
+    },
+    "onboard.op.2.tagline": {
+      "text": "Indikate se yon -- ap restè konsòl opèratè.",
+      "sourceHash": "9b4f29cd12bd",
+      "updatedAt": "2026-08-17T13:53:12.620Z"
+    },
+    "onboard.op.2.desc": {
+      "text": "Mèmb li vè yon kart covètyè theatral vivan sou Workspace Overview (Leaflet hotspots par pays). Opèratè kontinye travay sou; otè Workspace mode lè ou vle inspekte kart sa moun. Ètape sa se yon indikasyon sèlman.",
+      "sourceHash": "d6d28a804b12",
+      "updatedAt": "2026-08-17T13:53:12.620Z"
+    },
+    "onboard.op.2.b1.lead": {
+      "text": "Kart ovwa",
+      "sourceHash": "c7511c10a051",
+      "updatedAt": "2026-08-17T13:53:12.620Z"
+    },
+    "op.support.markAwaiting": {
+      "text": "Make kòm ap tann repons kliyan",
+      "sourceHash": "926c16ea9910",
+      "updatedAt": "2026-08-17T13:54:19.965Z"
+    },
+    "support.chat.sendFailed": {
+      "text": "Pa t kapab voye",
+      "sourceHash": "8b34d37599a8",
+      "updatedAt": "2026-08-17T13:54:19.965Z"
+    },
+    "support.chat.invalidImage": {
+      "text": "Imaj valab",
+      "sourceHash": "681014468ba7",
+      "updatedAt": "2026-08-17T13:54:19.965Z"
+    },
+    "onboard.op.2.b1": {
+      "text": "viv sou /dashboard pou manm",
+      "sourceHash": "1e1143c480cb",
+      "updatedAt": "2026-08-17T13:54:19.965Z"
+    },
+    "onboard.op.2.b2.lead": {
+      "text": "Hotspots",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T13:54:19.965Z"
+    },
+    "onboard.op.2.b2": {
+      "text": "reflete jewografi pwojè ak konte",
+      "sourceHash": "76707569e685",
+      "updatedAt": "2026-08-17T13:54:19.965Z"
+    },
+    "onboard.op.2.b3.lead": {
+      "text": "Pa gen redireksyon",
+      "sourceHash": "37fe346e787e",
+      "updatedAt": "2026-08-17T13:54:19.965Z"
+    },
+    "onboard.op.2.b3": {
+      "text": "tou vwayaj sa a rete sou konsòl operatè a",
+      "sourceHash": "0a35fadeb5cf",
+      "updatedAt": "2026-08-17T13:54:19.965Z"
+    }
+  }
+}
