@@ -1,7 +1,7 @@
 {
   "locale": "hi",
-  "version": 118,
-  "updatedAt": "2026-08-17T20:57:26.729Z",
+  "version": 159,
+  "updatedAt": "2026-08-17T22:39:57.116Z",
   "entries": {
     "mailing.benefit.notes": {
       "text": "Selected Caribbean operating context insights.",
@@ -4642,6 +4642,1631 @@
       "text": "कहानी",
       "sourceHash": "3e3886da8fd5",
       "updatedAt": "2026-08-17T20:57:26.721Z"
+    },
+    "nav.product": {
+      "text": "उत्पाद",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T22:28:49.918Z"
+    },
+    "nav.why": {
+      "text": "Octivate क्यों",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T22:28:49.918Z"
+    },
+    "nav.how": {
+      "text": "कैसे काम करता है",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T22:28:49.918Z"
+    },
+    "nav.pricing": {
+      "text": "कीमत",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T22:28:49.918Z"
+    },
+    "nav.team": {
+      "text": "टीम",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T22:28:49.918Z"
+    },
+    "nav.about": {
+      "text": "बारे में",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T22:28:49.918Z"
+    },
+    "nav.signIn": {
+      "text": "लॉग इन",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T22:28:49.918Z"
+    },
+    "nav.requestDemo": {
+      "text": "शुरू करें",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T22:28:49.918Z"
+    },
+    "nav.returnWorkspace": {
+      "text": "वर्कस्पेस में वापस जाएँ",
+      "sourceHash": "74f11e0defca",
+      "updatedAt": "2026-08-17T22:28:51.029Z"
+    },
+    "nav.operatorDashboard": {
+      "text": "ऑपरेटर डैशबोर्ड",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T22:28:51.029Z"
+    },
+    "nav.askQuestion": {
+      "text": "एक प्रश्न पूछें",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T22:28:51.029Z"
+    },
+    "nav.askQuestionLong": {
+      "text": "एक प्रश्न पूछें",
+      "sourceHash": "cf94bdf39103",
+      "updatedAt": "2026-08-17T22:28:51.029Z"
+    },
+    "nav.skip": {
+      "text": "सामग्री को छोड़ें",
+      "sourceHash": "0a4470d64e9d",
+      "updatedAt": "2026-08-17T22:28:51.029Z"
+    },
+    "nav.explore": {
+      "text": "खोजें",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T22:28:51.029Z"
+    },
+    "nav.openMenu": {
+      "text": "मेराॅनू खोलें",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T22:28:51.029Z"
+    },
+    "nav.closeMenu": {
+      "text": "मेराॅनू बंद करें",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T22:28:51.029Z"
+    },
+    "nav.translate": {
+      "text": "अनुवाद",
+      "sourceHash": "2be17aa181d8",
+      "updatedAt": "2026-08-17T22:29:08.892Z"
+    },
+    "nav.translateHint": {
+      "text": "सर्वर पर कैश किया गया · Octivate i18n",
+      "sourceHash": "16abeab228fd",
+      "updatedAt": "2026-08-17T22:29:08.892Z"
+    },
+    "nav.primary": {
+      "text": "प्राथमिक",
+      "sourceHash": "a9a96ec01949",
+      "updatedAt": "2026-08-17T22:29:08.892Z"
+    },
+    "nav.mobile": {
+      "text": "मोबाइल",
+      "sourceHash": "b1d702459399",
+      "updatedAt": "2026-08-17T22:29:08.892Z"
+    },
+    "mailing.eyebrow": {
+      "text": "साथ बने रहें",
+      "sourceHash": "c1abb6630b0e",
+      "updatedAt": "2026-08-17T22:29:08.892Z"
+    },
+    "mailing.title": {
+      "text": "साथ बने रहें जो हम बना रहे हैं।",
+      "sourceHash": "e415b8d83f68",
+      "updatedAt": "2026-08-17T22:29:08.892Z"
+    },
+    "mailing.lede": {
+      "text": "Octivate पर अवसराधीन अपडेट, नए विश्लेषणात्मक क्षमताएं, कैरिबियाई ऑपरेटिंग संदर्भ अंतर्दृष्टि और प्लेटफ़ॉर्म का परीक्षण करने के अवसर।",
+      "sourceHash": "afa148dcdaae",
+      "updatedAt": "2026-08-17T22:29:08.892Z"
+    },
+    "mailing.benefit.updates": {
+      "text": "उत्पाद अपडेट और नई क्षमताएं।",
+      "sourceHash": "45397ac51acf",
+      "updatedAt": "2026-08-17T22:29:08.892Z"
+    },
+    "land.lenses.power.body": {
+      "text": "प्राधिकरण, प्रभाव, प्रोत्साहन, गठबंधन और संबंध जो निर्णयों को प्रभावित करते हैं.",
+      "sourceHash": "34c4c47d1bce",
+      "updatedAt": "2026-08-17T22:29:31.781Z"
+    },
+    "land.lenses.systems": {
+      "text": "प्रणाली",
+      "sourceHash": "e26dfc1f8d96",
+      "updatedAt": "2026-08-17T22:29:31.781Z"
+    },
+    "land.lenses.systems.q": {
+      "text": "क्या कार्रवाई को सक्षम बनाता है या बाधित करता है?",
+      "sourceHash": "2c1c0efa8537",
+      "updatedAt": "2026-08-17T22:29:31.781Z"
+    },
+    "land.lenses.systems.body": {
+      "text": "संस्थाएं, नियमन, क्षमता और कार्यान्वयन.",
+      "sourceHash": "f38b6e3ee324",
+      "updatedAt": "2026-08-17T22:29:31.781Z"
+    },
+    "land.lenses.narratives": {
+      "text": "कथाएं",
+      "sourceHash": "1c26c2b8063a",
+      "updatedAt": "2026-08-17T22:29:31.781Z"
+    },
+    "land.lenses.narratives.q": {
+      "text": "मुद्दे को कैसे समझा जाता है?",
+      "sourceHash": "af380e3bacdb",
+      "updatedAt": "2026-08-17T22:29:31.781Z"
+    },
+    "land.lenses.narratives.body": {
+      "text": "फ्रेमिंग, वैधता, जन-समर्थन और धारणा और व्यवहार को आकार देने वाली कहानियां.",
+      "sourceHash": "4ad73376c397",
+      "updatedAt": "2026-08-17T22:29:31.781Z"
+    },
+    "land.how.eyebrow": {
+      "text": "Octivate कैसे काम करता है",
+      "sourceHash": "fd1649f0e29c",
+      "updatedAt": "2026-08-17T22:29:31.781Z"
+    },
+    "auth.signin.title": {
+      "text": "Octivate में साइन इन करें",
+      "sourceHash": "dd0e28bb0b7b",
+      "updatedAt": "2026-08-17T22:29:42.211Z"
+    },
+    "auth.signin.lede": {
+      "text": "अपना Octivate ईमेल या उपयोगकर्ता नाम और पासवर्ड का उपयोग करके निर्णय-बुद्धि कार्यक्षेत्र खोलें।",
+      "sourceHash": "24e55d4e1216",
+      "updatedAt": "2026-08-17T22:29:42.211Z"
+    },
+    "auth.signin.submit": {
+      "text": "साइन इन करें",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T22:29:42.211Z"
+    },
+    "auth.signin.switchText": {
+      "text": "खाता नहीं है?",
+      "sourceHash": "f838dc11db15",
+      "updatedAt": "2026-08-17T22:29:42.211Z"
+    },
+    "auth.signin.switchLabel": {
+      "text": "साइन अप करें",
+      "sourceHash": "0b81497c8589",
+      "updatedAt": "2026-08-17T22:29:42.211Z"
+    },
+    "auth.signin.visualTitle": {
+      "text": "कैरेबियन निर्णय के लिए स्पष्टता",
+      "sourceHash": "1294b968f5da",
+      "updatedAt": "2026-08-17T22:29:42.211Z"
+    },
+    "auth.signin.visualBody": {
+      "text": "बिखरे हुए क्षेत्रीय संकेतों को जोड़ें, जिसे विश्वास किया जा सकता है उसका परीक्षण करें, और साक्ष्य-आधारित निर्णय के साथ आगे बढ़ें।",
+      "sourceHash": "8847c4995d52",
+      "updatedAt": "2026-08-17T22:29:42.211Z"
+    },
+    "auth.signup.kicker": {
+      "text": "निःशुल्क tier",
+      "sourceHash": "5305bc7bfd0f",
+      "updatedAt": "2026-08-17T22:29:42.211Z"
+    },
+    "auth.signup.title": {
+      "text": "अपने Octivate एक्सेस बनाएं",
+      "sourceHash": "46146191c6b9",
+      "updatedAt": "2026-08-17T22:29:43.462Z"
+    },
+    "auth.signup.lede": {
+      "text": "साइन-इन के समान ईमेल/उपयोगकर्ता नाम और पासवर्ड फ़ील्ड का उपयोग करें, या सुरक्षित क्रेडेंशियल जनरेट करने के लिए सक्षम होने पर।",
+      "sourceHash": "4188f5813dcf",
+      "updatedAt": "2026-08-17T22:29:43.462Z"
+    },
+    "auth.signup.submit": {
+      "text": "खाता बनाएं",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T22:29:43.462Z"
+    },
+    "auth.signup.switchText": {
+      "text": "पहले से ही एक खाता है?",
+      "sourceHash": "8559034a07c9",
+      "updatedAt": "2026-08-17T22:29:43.462Z"
+    },
+    "auth.signup.switchLabel": {
+      "text": "साइन इन करें",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T22:29:43.462Z"
+    },
+    "auth.signup.visualTitle": {
+      "text": "डिसीजन इंटेलिजेंस, चलाने के लिए तैयार",
+      "sourceHash": "7428fa4a3e6b",
+      "updatedAt": "2026-08-17T22:29:43.462Z"
+    },
+    "auth.signup.visualBody": {
+      "text": "सवाल को構造 करें, पावर-सिस्टम्स-नैरेटिव्स के पार साक्ष्य इकट्ठा करें, और उन विकल्पों के साथ छोड़ें जिन्हें आप कार्य कर सकते हैं।",
+      "sourceHash": "6ce5101d86c9",
+      "updatedAt": "2026-08-17T22:29:43.462Z"
+    },
+    "auth.email": {
+      "text": "ईमेल या उपयोगकर्ता नाम",
+      "sourceHash": "094f6a59348a",
+      "updatedAt": "2026-08-17T22:29:43.462Z"
+    },
+    "auth.password": {
+      "text": "पासवर्ड",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T22:29:49.517Z"
+    },
+    "auth.forgot": {
+      "text": "पासवर्ड भूल गए?",
+      "sourceHash": "4c29f7f03358",
+      "updatedAt": "2026-08-17T22:29:49.517Z"
+    },
+    "auth.showPassword": {
+      "text": "पासवर्ड दिखाएं",
+      "sourceHash": "044b852f30b6",
+      "updatedAt": "2026-08-17T22:29:49.517Z"
+    },
+    "auth.hidePassword": {
+      "text": "पासवर्ड छिपाएं",
+      "sourceHash": "e40123b4e787",
+      "updatedAt": "2026-08-17T22:29:49.517Z"
+    },
+    "auth.back": {
+      "text": "वापस",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T22:29:49.517Z"
+    },
+    "auth.busy": {
+      "text": "कृपया प्रतीक्षा करें...",
+      "sourceHash": "5afeca73bef6",
+      "updatedAt": "2026-08-17T22:29:49.517Z"
+    },
+    "ws.section.workspace": {
+      "text": "कार्यक्षेत्र",
+      "sourceHash": "4ca0a75c2b7f",
+      "updatedAt": "2026-08-17T22:29:49.517Z"
+    },
+    "ws.section.intelligence": {
+      "text": "बुद्धिमत्ता",
+      "sourceHash": "c698f940a03e",
+      "updatedAt": "2026-08-17T22:29:49.517Z"
+    },
+    "ws.section.analysis": {
+      "text": "विश्लेषण",
+      "sourceHash": "62c7fcf46e27",
+      "updatedAt": "2026-08-17T22:29:50.961Z"
+    },
+    "ws.nav.overview": {
+      "text": "अवलोकन",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T22:29:50.961Z"
+    },
+    "ws.nav.projects": {
+      "text": "परियोजनाएँ",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T22:29:50.961Z"
+    },
+    "ws.nav.monitors": {
+      "text": "निगरानी",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T22:29:50.961Z"
+    },
+    "ws.nav.sources": {
+      "text": "स्रोत",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T22:29:50.961Z"
+    },
+    "ws.nav.briefs": {
+      "text": "संक्षिप्त",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T22:29:50.961Z"
+    },
+    "ws.nav.stakeholders": {
+      "text": "हितधारक",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T22:29:50.961Z"
+    },
+    "ws.mode.workspace": {
+      "text": "कार्यक्षेत्र मोड",
+      "sourceHash": "8ce322f49b05",
+      "updatedAt": "2026-08-17T22:29:50.961Z"
+    },
+    "ws.overview.col.risk": {
+      "text": "जोखिम",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T22:29:58.186Z"
+    },
+    "ws.overview.col.confidence": {
+      "text": "विश्वास",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T22:29:58.186Z"
+    },
+    "ws.overview.activeProjects": {
+      "text": "क्रियाशील परियोजनाएं",
+      "sourceHash": "f361946445f2",
+      "updatedAt": "2026-08-17T22:29:58.186Z"
+    },
+    "ws.overview.monitoring": {
+      "text": "निगरानी",
+      "sourceHash": "a81434589757",
+      "updatedAt": "2026-08-17T22:29:58.186Z"
+    },
+    "ws.overview.briefsLabel": {
+      "text": "संक्षिप्त",
+      "sourceHash": "81aad378d8e5",
+      "updatedAt": "2026-08-17T22:29:58.186Z"
+    },
+    "ws.overview.sourcesLabel": {
+      "text": "स्रोत",
+      "sourceHash": "bce16dd02608",
+      "updatedAt": "2026-08-17T22:29:58.186Z"
+    },
+    "ws.overview.runsLabel": {
+      "text": "चलन",
+      "sourceHash": "71b3f0bbe7d5",
+      "updatedAt": "2026-08-17T22:29:58.186Z"
+    },
+    "ws.overview.sessions": {
+      "text": "सत्र",
+      "sourceHash": "e11e37a9253b",
+      "updatedAt": "2026-08-17T22:29:58.186Z"
+    },
+    "ws.overview.map.close": {
+      "text": "बंद करें",
+      "sourceHash": "9dcfebb87cf3",
+      "updatedAt": "2026-08-17T22:29:59.654Z"
+    },
+    "ws.overview.map.projectsWord": {
+      "text": "परियोजनाएँ",
+      "sourceHash": "b37b5674e3d0",
+      "updatedAt": "2026-08-17T22:29:59.654Z"
+    },
+    "ws.projects.title": {
+      "text": "परियोजनाएँ",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T22:29:59.654Z"
+    },
+    "ws.projects.lede": {
+      "text": "देश और क्षेत्र द्वारा निर्णय थिएटर को परिभाषित करें, फिर एजेंट वर्कफ़्लो चलाकर एक ब्रिफ़ उत्पन्न करें।",
+      "sourceHash": "89564efb1fce",
+      "updatedAt": "2026-08-17T22:29:59.654Z"
+    },
+    "ws.projects.sort.updated": {
+      "text": "अद्यतन के अनुसार क्रमबद्ध करें",
+      "sourceHash": "92e532b2ba41",
+      "updatedAt": "2026-08-17T22:29:59.654Z"
+    },
+    "ws.projects.sort.name": {
+      "text": "नाम के अनुसार क्रमबद्ध करें",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T22:29:59.654Z"
+    },
+    "ws.projects.sort.country": {
+      "text": "देश के अनुसार क्रमबद्ध करें",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T22:29:59.654Z"
+    },
+    "ws.projects.kpi.projects": {
+      "text": "परियोजनाएँ",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T22:29:59.654Z"
+    },
+    "ws.projects.kpi.active": {
+      "text": "सक्रिय",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T22:30:09.046Z"
+    },
+    "ws.projects.kpi.activeHint": {
+      "text": "प्रगति में",
+      "sourceHash": "b6bd42e4e730",
+      "updatedAt": "2026-08-17T22:30:09.046Z"
+    },
+    "ws.projects.kpi.withQuestion": {
+      "text": "प्रश्न के साथ",
+      "sourceHash": "adfd7bee4031",
+      "updatedAt": "2026-08-17T22:30:09.046Z"
+    },
+    "ws.projects.kpi.withQuestionHint": {
+      "text": "एजेंट के लिए तैयार",
+      "sourceHash": "1bace2d9eaed",
+      "updatedAt": "2026-08-17T22:30:09.046Z"
+    },
+    "ws.projects.kpi.countries": {
+      "text": "देश",
+      "sourceHash": "8467c0d99c79",
+      "updatedAt": "2026-08-17T22:30:09.046Z"
+    },
+    "ws.projects.filter.all": {
+      "text": "सभी",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T22:30:09.046Z"
+    },
+    "ws.projects.filter.active": {
+      "text": "सक्रिय",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T22:30:09.046Z"
+    },
+    "ws.projects.filter.needsQuestion": {
+      "text": "प्रश्न की आवश्यकता है",
+      "sourceHash": "d47967177def",
+      "updatedAt": "2026-08-17T22:30:09.046Z"
+    },
+    "ws.project.rerun": {
+      "text": "वर्कफ़्लो दोहराएं",
+      "sourceHash": "7792e8052528",
+      "updatedAt": "2026-08-17T22:30:18.200Z"
+    },
+    "ws.project.forceRerun": {
+      "text": "बलपूर्वक वर्कफ़्लो दोहराएं (फंसा हुआ)",
+      "sourceHash": "26a80611d4e0",
+      "updatedAt": "2026-08-17T22:30:18.200Z"
+    },
+    "ws.project.linkedMonitors": {
+      "text": "जुड़े हुए मॉनिटर",
+      "sourceHash": "2788d1641b22",
+      "updatedAt": "2026-08-17T22:30:18.200Z"
+    },
+    "ws.project.noMonitors": {
+      "text": "अभी तक कोई मॉनिटर जुड़ा नहीं है।",
+      "sourceHash": "b202f7c531ac",
+      "updatedAt": "2026-08-17T22:30:18.200Z"
+    },
+    "ws.project.briefReady": {
+      "text": "निर्णय संक्षिप्त तैयार है",
+      "sourceHash": "f94bed6f0fd1",
+      "updatedAt": "2026-08-17T22:30:18.200Z"
+    },
+    "ws.project.briefReadyBody": {
+      "text": "आपका परिणाम दस्तावेज़ उपलब्ध है",
+      "sourceHash": "6f9a4a136283",
+      "updatedAt": "2026-08-17T22:30:18.200Z"
+    },
+    "ws.project.workflowDone": {
+      "text": "आपका वर्कफ़्लॉ पूरा हो गया है और एक निर्णय संक्षिप्त उपलब्ध है।",
+      "sourceHash": "6182fd41fcdb",
+      "updatedAt": "2026-08-17T22:30:18.200Z"
+    },
+    "ws.project.workflowFailed": {
+      "text": "वर्कफ़्लॉ विफल — प्रश्न या स्रोतों में समायोजन करें, फिर दोहराएं।",
+      "sourceHash": "82ea50d7133a",
+      "updatedAt": "2026-08-17T22:30:18.200Z"
+    },
+    "ws.account.imageType": {
+      "text": "JPEG, PNG, या WebP का उपयोग करें",
+      "sourceHash": "64219c573743",
+      "updatedAt": "2026-08-17T22:30:19.296Z"
+    },
+    "ws.account.avatarUpdated": {
+      "text": "अवतार अपडेट किया गया",
+      "sourceHash": "46e014bb0124",
+      "updatedAt": "2026-08-17T22:30:19.296Z"
+    },
+    "ws.account.uploadFailed": {
+      "text": "अपलोड विफल",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T22:30:19.296Z"
+    },
+    "ws.account.avatarRemoved": {
+      "text": "अवतार हटाया गया",
+      "sourceHash": "d9db37314bea",
+      "updatedAt": "2026-08-17T22:30:19.296Z"
+    },
+    "ws.account.removeFailed": {
+      "text": "हटाने में विफल",
+      "sourceHash": "debe01de259b",
+      "updatedAt": "2026-08-17T22:30:19.296Z"
+    },
+    "ws.account.signOutFailed": {
+      "text": "साइन आउट विफल",
+      "sourceHash": "b1287a61ef81",
+      "updatedAt": "2026-08-17T22:30:19.296Z"
+    },
+    "ws.account.readImageFailed": {
+      "text": "छवि नहीं पढ़ सका",
+      "sourceHash": "68d60f7c8e85",
+      "updatedAt": "2026-08-17T22:30:19.296Z"
+    },
+    "ws.monitors.title": {
+      "text": "निगरानी",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T22:30:19.296Z"
+    },
+    "ws.monitors.sort.name": {
+      "text": "क्रम: नाम",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T22:30:20.304Z"
+    },
+    "ws.monitors.sort.country": {
+      "text": "क्रम: देश",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T22:30:20.304Z"
+    },
+    "ws.monitors.kpi.watching": {
+      "text": "सिग्नल देख रहे हैं",
+      "sourceHash": "97cf17eaef54",
+      "updatedAt": "2026-08-17T22:30:20.304Z"
+    },
+    "ws.monitors.kpi.totalAlerts": {
+      "text": "कुल चेतावनियाँ",
+      "sourceHash": "fde0ecac2d4a",
+      "updatedAt": "2026-08-17T22:30:20.304Z"
+    },
+    "ws.monitors.kpi.withAlerts": {
+      "text": "चेतावनियों वाले",
+      "sourceHash": "462e89938441",
+      "updatedAt": "2026-08-17T22:30:20.304Z"
+    },
+    "ws.monitors.search": {
+      "text": "निगरानी, कीवर्ड, देश… खोजें",
+      "sourceHash": "5ec1da77d398",
+      "updatedAt": "2026-08-17T22:30:20.304Z"
+    },
+    "ws.monitors.add": {
+      "text": "निगरानी जोड़ें",
+      "sourceHash": "c7347370fdde",
+      "updatedAt": "2026-08-17T22:30:20.304Z"
+    },
+    "ws.monitors.adding": {
+      "text": "जोड़ रहे हैं…",
+      "sourceHash": "ffb2e628b0e9",
+      "updatedAt": "2026-08-17T22:30:20.304Z"
+    },
+    "ws.monitors.trackedTerms": {
+      "text": "ट्रैक किए गए शब्द",
+      "sourceHash": "7c78071fa618",
+      "updatedAt": "2026-08-17T22:30:32.433Z"
+    },
+    "ws.monitors.liveFeed": {
+      "text": "लाइव अलर्ट फीड",
+      "sourceHash": "3997a0cdb184",
+      "updatedAt": "2026-08-17T22:30:32.433Z"
+    },
+    "ws.monitors.linkedProject": {
+      "text": "जुड़ा हुआ प्रोजेक्ट",
+      "sourceHash": "3998027f1c8f",
+      "updatedAt": "2026-08-17T22:30:32.433Z"
+    },
+    "ws.monitors.noProjectLinked": {
+      "text": "अभी तक कोई परियोजना जुड़ी नहीं है।",
+      "sourceHash": "777c518a716d",
+      "updatedAt": "2026-08-17T22:30:32.433Z"
+    },
+    "ws.monitors.noProject": {
+      "text": "कोई परियोजना नहीं",
+      "sourceHash": "c326b75775bf",
+      "updatedAt": "2026-08-17T22:30:32.433Z"
+    },
+    "ws.monitors.quickLinks": {
+      "text": "त्वरित लिंक",
+      "sourceHash": "4b4e155ec7ba",
+      "updatedAt": "2026-08-17T22:30:32.433Z"
+    },
+    "ws.monitors.noAlerts": {
+      "text": "अब तक कोई अलर्ट दर्ज नहीं किया गया है",
+      "sourceHash": "d5dd400aa0b8",
+      "updatedAt": "2026-08-17T22:30:32.433Z"
+    },
+    "ws.monitors.loadFailed": {
+      "text": "मॉनिटर लोड करने में विफल",
+      "sourceHash": "e44ad0053813",
+      "updatedAt": "2026-08-17T22:30:32.433Z"
+    },
+    "ws.monitors.paused": {
+      "text": "मॉनिटर रोक दिया गया",
+      "sourceHash": "34e761133c86",
+      "updatedAt": "2026-08-17T22:30:33.564Z"
+    },
+    "ws.monitors.resumed": {
+      "text": "मॉनिटर पुनः आरंभ किया गया",
+      "sourceHash": "a7f27044c65b",
+      "updatedAt": "2026-08-17T22:30:33.564Z"
+    },
+    "ws.monitors.updateFailed": {
+      "text": "मॉनिटर अपडेट नहीं किया जा सका",
+      "sourceHash": "ab01af3ab5c9",
+      "updatedAt": "2026-08-17T22:30:33.564Z"
+    },
+    "ws.monitors.linkUpdated": {
+      "text": "परियोजना लिंक अपडेट किया गया",
+      "sourceHash": "ca3bc3b5862c",
+      "updatedAt": "2026-08-17T22:30:33.564Z"
+    },
+    "ws.monitors.linkFailed": {
+      "text": "लिंक अपडेट नहीं किया जा सका",
+      "sourceHash": "9d74e05e8301",
+      "updatedAt": "2026-08-17T22:30:33.564Z"
+    },
+    "ws.monitors.notFound": {
+      "text": "मॉनिटर नहीं मिला",
+      "sourceHash": "dbab2107fb75",
+      "updatedAt": "2026-08-17T22:30:33.564Z"
+    },
+    "ws.monitors.pause": {
+      "text": "रोकें",
+      "sourceHash": "781961bc81c2",
+      "updatedAt": "2026-08-17T22:30:33.564Z"
+    },
+    "ws.monitors.resume": {
+      "text": "पुनः आरंभ करें",
+      "sourceHash": "b3bd0b5a7049",
+      "updatedAt": "2026-08-17T22:30:33.564Z"
+    },
+    "ws.briefs.title": {
+      "text": "निर्णय संक्षिप्त",
+      "sourceHash": "11f32f8cf0c4",
+      "updatedAt": "2026-08-17T22:30:49.661Z"
+    },
+    "ws.briefs.lede": {
+      "text": "साक्ष्य-आधारित पैक आपके प्रोजेक्ट रन से — निर्णय की समीक्षा, PSN लेंस, और निर्यात।",
+      "sourceHash": "f2467f9e4c8c",
+      "updatedAt": "2026-08-17T22:30:49.661Z"
+    },
+    "ws.briefs.empty": {
+      "text": "नहीं, अभी तक कोई संक्षिप्त नहीं",
+      "sourceHash": "b515f47278a5",
+      "updatedAt": "2026-08-17T22:30:49.661Z"
+    },
+    "ws.briefs.emptyHint": {
+      "text": "एक प्रोजेक्ट पाइपलाइन चलाकर अपना पहला निर्णय संक्षिप्त उत्पन्न करें।",
+      "sourceHash": "9bf4c6c5c58e",
+      "updatedAt": "2026-08-17T22:30:49.661Z"
+    },
+    "ws.briefs.pendingReview": {
+      "text": "समीक्षा के लिए प्रतीक्षारत",
+      "sourceHash": "6a80f44e3b2b",
+      "updatedAt": "2026-08-17T22:30:49.661Z"
+    },
+    "ws.briefs.approved": {
+      "text": "स्वीकृत",
+      "sourceHash": "41b81eb8db1b",
+      "updatedAt": "2026-08-17T22:30:49.661Z"
+    },
+    "ws.briefs.depthModes": {
+      "text": "गहराई के मोड",
+      "sourceHash": "68a8aded8a97",
+      "updatedAt": "2026-08-17T22:30:49.661Z"
+    },
+    "ws.briefs.openProjects": {
+      "text": "खुले प्रोजेक्ट",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T22:30:49.661Z"
+    },
+    "ws.briefs.back": {
+      "text": "← ब्रीफ्स पर वापस",
+      "sourceHash": "69ee29903a7e",
+      "updatedAt": "2026-08-17T22:31:04.554Z"
+    },
+    "ws.briefs.notFound": {
+      "text": "ब्रीफ नहीं मिला",
+      "sourceHash": "87fb798c28c9",
+      "updatedAt": "2026-08-17T22:31:04.554Z"
+    },
+    "ws.briefs.browse": {
+      "text": "ब्रीफ्स ब्राउज़ करें",
+      "sourceHash": "f4d095dec924",
+      "updatedAt": "2026-08-17T22:31:04.554Z"
+    },
+    "ws.briefs.loadFailed": {
+      "text": "ब्रीफ लोड नहीं हो सका",
+      "sourceHash": "c7557e0c36a9",
+      "updatedAt": "2026-08-17T22:31:04.554Z"
+    },
+    "ws.briefs.noData": {
+      "text": "कोई ब्रीफ डेटा उपलब्ध नहीं.",
+      "sourceHash": "f1024a68f087",
+      "updatedAt": "2026-08-17T22:31:04.554Z"
+    },
+    "ws.briefs.reviewRecord": {
+      "text": "रिकॉर्ड की समीक्षा",
+      "sourceHash": "b018182d0769",
+      "updatedAt": "2026-08-17T22:31:04.554Z"
+    },
+    "ws.briefs.approvedToast": {
+      "text": "ब्रीफ स्वीकृत",
+      "sourceHash": "8881ea2feac8",
+      "updatedAt": "2026-08-17T22:31:04.554Z"
+    },
+    "ws.briefs.reviewFailed": {
+      "text": "समीक्षा विफल",
+      "sourceHash": "5522c937885e",
+      "updatedAt": "2026-08-17T22:31:04.554Z"
+    },
+    "ws.usage.title": {
+      "text": "AI उपयोग",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T22:31:15.941Z"
+    },
+    "ws.usage.tokenAllowance": {
+      "text": "टोकन अलाउंस",
+      "sourceHash": "178b070cb08a",
+      "updatedAt": "2026-08-17T22:31:15.941Z"
+    },
+    "ws.usage.activitySplit": {
+      "text": "गतिविधि विभाजन",
+      "sourceHash": "1f236c8d7d6b",
+      "updatedAt": "2026-08-17T22:31:15.941Z"
+    },
+    "ws.usage.estimatedCost": {
+      "text": "अनुमानित लागत",
+      "sourceHash": "516cbee26f0b",
+      "updatedAt": "2026-08-17T22:31:15.941Z"
+    },
+    "ws.packs.title": {
+      "text": "देश पैक",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T22:31:15.941Z"
+    },
+    "ws.packs.lede": {
+      "text": "कैरिबियाई बाज़ार द्वारा चयनित बुद्धि पैक।",
+      "sourceHash": "a46f67498e2f",
+      "updatedAt": "2026-08-17T22:31:15.941Z"
+    },
+    "ws.packs.meta": {
+      "text": "स्रोत · एनिटीज़",
+      "sourceHash": "61f1da33e909",
+      "updatedAt": "2026-08-17T22:31:15.941Z"
+    },
+    "ws.stakeholders.cause": {
+      "text": "कारण",
+      "sourceHash": "0cd812b85c20",
+      "updatedAt": "2026-08-17T22:31:15.941Z"
+    },
+    "ws.stakeholders.title": {
+      "text": "हितधारक",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T22:31:16.996Z"
+    },
+    "ws.stakeholders.lede": {
+      "text": "कारिबियाई निर्णय कार्य को प्रायोजित करने और आकार देने वाले संस्थान।",
+      "sourceHash": "f0330bbdd8c2",
+      "updatedAt": "2026-08-17T22:31:16.996Z"
+    },
+    "ws.toolbar.search": {
+      "text": "खोज…",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T22:31:16.996Z"
+    },
+    "ws.toolbar.sortBy": {
+      "text": "क्रम द्वारा",
+      "sourceHash": "a2a5bdeca939",
+      "updatedAt": "2026-08-17T22:31:16.996Z"
+    },
+    "ws.toolbar.filter": {
+      "text": "फ़िल्टर",
+      "sourceHash": "d7decf1aa22b",
+      "updatedAt": "2026-08-17T22:31:16.996Z"
+    },
+    "ws.loading.workspace": {
+      "text": "वर्कस्पेस लोड हो रहा है…",
+      "sourceHash": "89f0dde329fa",
+      "updatedAt": "2026-08-17T22:31:16.996Z"
+    },
+    "ws.loading.overview": {
+      "text": "अवलोकन तैयार किया जा रहा है…",
+      "sourceHash": "f34393549cd4",
+      "updatedAt": "2026-08-17T22:31:16.996Z"
+    },
+    "ws.loading.operator": {
+      "text": "ऑपरेटर कंसोल तैयार किया जा रहा है…",
+      "sourceHash": "27a6688f18c0",
+      "updatedAt": "2026-08-17T22:31:16.996Z"
+    },
+    "ws.topics.title": {
+      "text": "Hottest Caribbean signals",
+      "sourceHash": "c02ae1c5f749",
+      "updatedAt": "2026-08-17T22:36:26.739Z"
+    },
+    "ws.topics.loading": {
+      "text": "Loading topic templates…",
+      "sourceHash": "3a6c843fbbe8",
+      "updatedAt": "2026-08-17T22:36:26.739Z"
+    },
+    "ws.topics.tapPlay": {
+      "text": "Tap to load · play to run",
+      "sourceHash": "bcd777dbdbbd",
+      "updatedAt": "2026-08-17T22:36:26.739Z"
+    },
+    "ws.topics.refresh": {
+      "text": "Refresh signals",
+      "sourceHash": "4d77417615b4",
+      "updatedAt": "2026-08-17T22:36:26.739Z"
+    },
+    "ws.topics.runNow": {
+      "text": "Run now",
+      "sourceHash": "2af00e23c480",
+      "updatedAt": "2026-08-17T22:36:26.739Z"
+    },
+    "ws.topics.starting": {
+      "text": "Starting…",
+      "sourceHash": "e5f58095ac29",
+      "updatedAt": "2026-08-17T22:36:26.739Z"
+    },
+    "ws.topics.scraping": {
+      "text": "Scraping…",
+      "sourceHash": "97355d74fde9",
+      "updatedAt": "2026-08-17T22:36:26.739Z"
+    },
+    "ws.topics.questionLoaded": {
+      "text": "Question loaded — click Run agent workflow",
+      "sourceHash": "b57e028d16d6",
+      "updatedAt": "2026-08-17T22:36:26.739Z"
+    },
+    "op.tab.operations.hint": {
+      "text": "लेखा लागत और संचालनात्मक क्रियाएँ",
+      "sourceHash": "828625ff637a",
+      "updatedAt": "2026-08-17T22:36:42.863Z"
+    },
+    "op.tab.control": {
+      "text": "नियंत्रण",
+      "sourceHash": "ea1d3df298ca",
+      "updatedAt": "2026-08-17T22:36:42.863Z"
+    },
+    "op.tab.control.hint": {
+      "text": "सीमाएं, मॉडल और प्लेटफ़ॉर्म नियंत्रण",
+      "sourceHash": "7c76af9956eb",
+      "updatedAt": "2026-08-17T22:36:42.863Z"
+    },
+    "op.tab.catalog": {
+      "text": "कैटलॉग",
+      "sourceHash": "4a88d27bbae1",
+      "updatedAt": "2026-08-17T22:36:42.863Z"
+    },
+    "op.tab.catalog.hint": {
+      "text": "स्रोत रजिस्ट्री और कैटलॉग टूल्स",
+      "sourceHash": "03e812eaa0b0",
+      "updatedAt": "2026-08-17T22:36:42.863Z"
+    },
+    "op.tab.support": {
+      "text": "ग्राहक सहायता",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T22:36:42.863Z"
+    },
+    "op.tab.support.hint": {
+      "text": "खाता-आधारित सहायता इनबॉक्स और मॉडरेशन",
+      "sourceHash": "e935dc49fec9",
+      "updatedAt": "2026-08-17T22:36:42.863Z"
+    },
+    "op.tab.mail": {
+      "text": "डाक",
+      "sourceHash": "92379cbb8ecf",
+      "updatedAt": "2026-08-17T22:36:42.863Z"
+    },
+    "op.tab.automation.hint": {
+      "text": "मीडिया क्रॉल, डाउनलोड और स्थानीय ट्रांसक्रिप्शन",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T22:36:44.091Z"
+    },
+    "op.tab.parliament": {
+      "text": "स्वचालन",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T22:36:44.091Z"
+    },
+    "op.tab.parliament.hint": {
+      "text": "मीडिया क्रॉल, डाउनलोड और स्थानीय ट्रांसक्रिप्शन",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T22:36:44.091Z"
+    },
+    "op.tab.exports": {
+      "text": "निर्यात",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T22:36:44.091Z"
+    },
+    "op.tab.exports.hint": {
+      "text": "निर्यात कार्यों और कलाकृतियाँ",
+      "sourceHash": "21dd275c3e12",
+      "updatedAt": "2026-08-17T22:36:44.091Z"
+    },
+    "op.tab.debug": {
+      "text": "डिबग",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T22:36:44.091Z"
+    },
+    "op.tab.debug.hint": {
+      "text": "ऑपरेशन घटना स्ट्रीम और निदान",
+      "sourceHash": "ad315fcae7e9",
+      "updatedAt": "2026-08-17T22:36:44.091Z"
+    },
+    "op.i18n.title": {
+      "text": "अनुवाद कैटलॉग",
+      "sourceHash": "e4dfce9a5e06",
+      "updatedAt": "2026-08-17T22:36:44.091Z"
+    },
+    "op.modules.controlPlane": {
+      "text": "नियंत्रण केंद्र",
+      "sourceHash": "38f00e1ffa03",
+      "updatedAt": "2026-08-17T22:36:57.753Z"
+    },
+    "op.modules.controlHint": {
+      "text": "लाइव चलाने के लिए उपयोग सीमा — पुनर्व्यवस्थित करने के लिए खींचें",
+      "sourceHash": "f3fff5453ff9",
+      "updatedAt": "2026-08-17T22:36:57.753Z"
+    },
+    "op.modules.modelRouting": {
+      "text": "मॉडल रूटिंग",
+      "sourceHash": "06a48dd13470",
+      "updatedAt": "2026-08-17T22:36:57.753Z"
+    },
+    "op.modules.evidencePipeline": {
+      "text": "साक्ष्य पाइपलाइन",
+      "sourceHash": "c8f16d4ea829",
+      "updatedAt": "2026-08-17T22:36:57.753Z"
+    },
+    "op.modules.liveConcurrency": {
+      "text": "लाइव समानांतरता मीटर",
+      "sourceHash": "e0709470392d",
+      "updatedAt": "2026-08-17T22:36:57.753Z"
+    },
+    "op.modules.probes": {
+      "text": "उपलब्धता जांच & गति — पुनर्व्यवस्थित करने के लिए खींचें",
+      "sourceHash": "e645018146df",
+      "updatedAt": "2026-08-17T22:36:57.753Z"
+    },
+    "op.modules.sourceCapture": {
+      "text": "स्रोत कैप्चर",
+      "sourceHash": "cd599f00b60c",
+      "updatedAt": "2026-08-17T22:36:57.753Z"
+    },
+    "op.modules.artifactQueue": {
+      "text": "कलाकृति कतार & पथ — पुनर्व्यवस्थित करने के लिए खींचें",
+      "sourceHash": "2ae5335735e6",
+      "updatedAt": "2026-08-17T22:36:57.753Z"
+    },
+    "op.control.compute": {
+      "text": "गणना & प्रवाह",
+      "sourceHash": "c547787d60e6",
+      "updatedAt": "2026-08-17T22:37:14.204Z"
+    },
+    "op.control.computeHint": {
+      "text": "दिन भर के टोकन बजट और समानांतर एजेंट क्षमता.",
+      "sourceHash": "6abc96efeff9",
+      "updatedAt": "2026-08-17T22:37:14.204Z"
+    },
+    "op.control.uploadGuardrails": {
+      "text": "अपलोड गार्डराइल्स",
+      "sourceHash": "195034829916",
+      "updatedAt": "2026-08-17T22:37:14.204Z"
+    },
+    "op.control.accountProfile": {
+      "text": "खाता प्रोफ़ाइल",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T22:37:14.204Z"
+    },
+    "op.control.signup": {
+      "text": "पंजीकरण & खाता प्रावधान",
+      "sourceHash": "ee7efccafaf3",
+      "updatedAt": "2026-08-17T22:37:14.204Z"
+    },
+    "op.control.modelPolicy": {
+      "text": "मॉडल & अनुपालन नीति",
+      "sourceHash": "81ab6ab50a50",
+      "updatedAt": "2026-08-17T22:37:14.204Z"
+    },
+    "op.control.tokensPerDay": {
+      "text": "दिन में टोकन",
+      "sourceHash": "9947717c245c",
+      "updatedAt": "2026-08-17T22:37:14.204Z"
+    },
+    "op.control.tokensPerDayHint": {
+      "text": "सभी सत्रों में मॉडल टोकनों की कठोर सीमा.",
+      "sourceHash": "baaa97f25c29",
+      "updatedAt": "2026-08-17T22:37:14.204Z"
+    },
+    "op.control.requireReviewHint": {
+      "text": "लाइव ब्रिफ़्स समीक्षा में रहते हैं जब तक ऑपरेटर प्रकाशन को मंज़ूरी नहीं देते।",
+      "sourceHash": "a53e9fa17bed",
+      "updatedAt": "2026-08-17T22:37:24.277Z"
+    },
+    "op.control.tokenBudget": {
+      "text": "टोकन बजट",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T22:37:24.277Z"
+    },
+    "op.control.agentSlots": {
+      "text": "एजेंट स्लॉट",
+      "sourceHash": "8c545cd72d5e",
+      "updatedAt": "2026-08-17T22:37:24.277Z"
+    },
+    "op.control.uploadsProject": {
+      "text": "अपलोड / प्रोजेक्ट",
+      "sourceHash": "e603b0fdace5",
+      "updatedAt": "2026-08-17T22:37:24.277Z"
+    },
+    "op.control.maxDocs": {
+      "text": "अधिकतम दस्तावेज़ प्रति वर्कस्पेस",
+      "sourceHash": "ca966660897f",
+      "updatedAt": "2026-08-17T22:37:24.277Z"
+    },
+    "op.control.perUpload": {
+      "text": "प्रति अपलोड सीमा",
+      "sourceHash": "763167a3bcf8",
+      "updatedAt": "2026-08-17T22:37:24.277Z"
+    },
+    "op.control.docRetentionLabel": {
+      "text": "दस्तावेज़ प्रतिधारण",
+      "sourceHash": "137567a2e324",
+      "updatedAt": "2026-08-17T22:37:24.277Z"
+    },
+    "op.control.autoDelete": {
+      "text": "समाप्ति के बाद स्वचालित हटाना",
+      "sourceHash": "601cc273b93c",
+      "updatedAt": "2026-08-17T22:37:24.277Z"
+    },
+    "op.control.avatarCap": {
+      "text": "अवतार कैप",
+      "sourceHash": "74c765571762",
+      "updatedAt": "2026-08-17T22:37:25.427Z"
+    },
+    "op.control.profilePhoto": {
+      "text": "प्रोफ़ाइल फ़ोटो अपलोड",
+      "sourceHash": "a2f3d60ff6b4",
+      "updatedAt": "2026-08-17T22:37:25.427Z"
+    },
+    "op.control.manualSignup": {
+      "text": "मैन्युअल साइनअप",
+      "sourceHash": "4e9637c91d0e",
+      "updatedAt": "2026-08-17T22:37:25.427Z"
+    },
+    "op.control.standardOnly": {
+      "text": "मानक केवल",
+      "sourceHash": "aea090c61c44",
+      "updatedAt": "2026-08-17T22:37:25.427Z"
+    },
+    "op.control.loadingModels": {
+      "text": "मॉडल लोडिंग…",
+      "sourceHash": "d23f24f3751f",
+      "updatedAt": "2026-08-17T22:37:25.427Z"
+    },
+    "op.control.docsMode": {
+      "text": "डॉक्स मोड",
+      "sourceHash": "3d8a8e32654b",
+      "updatedAt": "2026-08-17T22:37:25.427Z"
+    },
+    "op.control.docsModel": {
+      "text": "डॉक्स मॉडल",
+      "sourceHash": "322636a90ca9",
+      "updatedAt": "2026-08-17T22:37:25.427Z"
+    },
+    "op.control.docsTokens": {
+      "text": "डॉक्स टोकन",
+      "sourceHash": "924f8ba06123",
+      "updatedAt": "2026-08-17T22:37:25.427Z"
+    },
+    "op.control.doctrineTokens": {
+      "text": "डॉक्ट्रिन टोकन",
+      "sourceHash": "e9758cad685c",
+      "updatedAt": "2026-08-17T22:37:32.552Z"
+    },
+    "op.control.reasoningTokens": {
+      "text": "तर्क टोकन",
+      "sourceHash": "6284e5999d12",
+      "updatedAt": "2026-08-17T22:37:32.552Z"
+    },
+    "op.control.reasoningBudget": {
+      "text": "तर्क बजट",
+      "sourceHash": "4d7097470626",
+      "updatedAt": "2026-08-17T22:37:32.552Z"
+    },
+    "op.control.resetRouting": {
+      "text": "मॉडल रूटिंग रीसेट",
+      "sourceHash": "aecd569180f1",
+      "updatedAt": "2026-08-17T22:37:32.552Z"
+    },
+    "op.control.modelsFailed": {
+      "text": "मॉडल लोड विफल",
+      "sourceHash": "4bef3a82f816",
+      "updatedAt": "2026-08-17T22:37:32.552Z"
+    },
+    "op.control.autosaveFailed": {
+      "text": "ऑटोसेव विफल",
+      "sourceHash": "6d939c6e7ddd",
+      "updatedAt": "2026-08-17T22:37:32.552Z"
+    },
+    "op.control.recommendedRestored": {
+      "text": "सुझाए गए मॉडल पुनर्स्थापित",
+      "sourceHash": "ffbbb4d61f68",
+      "updatedAt": "2026-08-17T22:37:32.552Z"
+    },
+    "op.control.resetFailed": {
+      "text": "रीसेट विफल",
+      "sourceHash": "ca42c6fe10d0",
+      "updatedAt": "2026-08-17T22:37:32.552Z"
+    },
+    "op.catalog.noMatches": {
+      "text": "कोई मिलान स्रोत नहीं",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T22:37:34.010Z"
+    },
+    "op.catalog.noMatchesHint": {
+      "text": "फ़िल्टर समायोजित करें या ऊपर CSV डालें ताकि स्रोतों को रजिस्ट्री में मिलाया जा सके।",
+      "sourceHash": "e82983fce0de",
+      "updatedAt": "2026-08-17T22:37:34.010Z"
+    },
+    "op.catalog.loadFailed": {
+      "text": "स्रोत रजिस्ट्री लोड नहीं हो सका",
+      "sourceHash": "38cec25d4b3c",
+      "updatedAt": "2026-08-17T22:37:34.010Z"
+    },
+    "op.catalog.allCountries": {
+      "text": "सभी देश",
+      "sourceHash": "b5fccc286fd7",
+      "updatedAt": "2026-08-17T22:37:34.010Z"
+    },
+    "op.catalog.allWatch": {
+      "text": "सभी देखें",
+      "sourceHash": "0ac44d5c86a1",
+      "updatedAt": "2026-08-17T22:37:34.010Z"
+    },
+    "op.catalog.allRetrieval": {
+      "text": "सभी पुनर्प्राप्ति",
+      "sourceHash": "386ffc567692",
+      "updatedAt": "2026-08-17T22:37:34.010Z"
+    },
+    "op.catalog.allHealth": {
+      "text": "सभी स्वास्थ्य",
+      "sourceHash": "1520fa11da38",
+      "updatedAt": "2026-08-17T22:37:34.010Z"
+    },
+    "op.catalog.prevPage": {
+      "text": "पिछला पृष्ठ",
+      "sourceHash": "81f547195bef",
+      "updatedAt": "2026-08-17T22:37:34.010Z"
+    },
+    "op.catalog.nextPage": {
+      "text": "अगला पृष्ठ",
+      "sourceHash": "4bfc194b68a3",
+      "updatedAt": "2026-08-17T22:38:10.875Z"
+    },
+    "op.mail.formats": {
+      "text": "CSV · TSV · TXT · JSON",
+      "sourceHash": "704a80b548fb",
+      "updatedAt": "2026-08-17T22:38:10.875Z"
+    },
+    "op.mail.sendFrom": {
+      "text": "स्टाफ से भेजें या no-reply · template optional",
+      "sourceHash": "ebfea489306a",
+      "updatedAt": "2026-08-17T22:38:10.875Z"
+    },
+    "op.mail.mailingList": {
+      "text": "मेलिंग सूची",
+      "sourceHash": "d2a1123e6461",
+      "updatedAt": "2026-08-17T22:38:10.875Z"
+    },
+    "op.mail.emptyInbox": {
+      "text": "इस मेलबॉक्स में कोई संदेश नहीं है।",
+      "sourceHash": "f31d8f7896dc",
+      "updatedAt": "2026-08-17T22:38:10.875Z"
+    },
+    "op.mail.accountMix": {
+      "text": "खाता मिश्रण",
+      "sourceHash": "82a81d957eee",
+      "updatedAt": "2026-08-17T22:38:10.875Z"
+    },
+    "op.mail.protectedFounder": {
+      "text": "सुरक्षित संस्थापक",
+      "sourceHash": "cde3151a6575",
+      "updatedAt": "2026-08-17T22:38:10.875Z"
+    },
+    "op.mail.subject": {
+      "text": "विषय रेखा",
+      "sourceHash": "26225393bc43",
+      "updatedAt": "2026-08-17T22:38:10.875Z"
+    },
+    "op.mail.body": {
+      "text": "सादा पाठ — जब सक्षम हो तो HTML टेम्पलेट में लपेटा गया",
+      "sourceHash": "77bf9d220248",
+      "updatedAt": "2026-08-17T22:38:22.777Z"
+    },
+    "op.mail.searchUsers": {
+      "text": "उपयोगकर्ताओं की खोज…",
+      "sourceHash": "71cd28d65523",
+      "updatedAt": "2026-08-17T22:38:22.777Z"
+    },
+    "op.mail.searchUsersBtn": {
+      "text": "उपयोगकर्ताओं की खोज",
+      "sourceHash": "1bd6226dd199",
+      "updatedAt": "2026-08-17T22:38:22.777Z"
+    },
+    "op.mail.importFormats": {
+      "text": "CSV, TSV, TXT, या JSON का उपयोग करें",
+      "sourceHash": "5dcb9d06982e",
+      "updatedAt": "2026-08-17T22:38:22.777Z"
+    },
+    "op.mail.importFailed": {
+      "text": "आयात विफल",
+      "sourceHash": "fbae892997d9",
+      "updatedAt": "2026-08-17T22:38:22.777Z"
+    },
+    "op.mail.importing": {
+      "text": "आयात…",
+      "sourceHash": "820599da89a1",
+      "updatedAt": "2026-08-17T22:38:22.777Z"
+    },
+    "op.mail.dropList": {
+      "text": "जोड़ने के लिए सूची",
+      "sourceHash": "29511565da37",
+      "updatedAt": "2026-08-17T22:38:22.777Z"
+    },
+    "op.mail.loadFailed": {
+      "text": "ईमेल लोड विफल",
+      "sourceHash": "2f3b7781aa67",
+      "updatedAt": "2026-08-17T22:38:22.777Z"
+    },
+    "op.mail.clearFailed": {
+      "text": "विफल",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T22:38:34.004Z"
+    },
+    "op.mail.inboxUpdated": {
+      "text": "इनबॉक्स अपडेट किया गया",
+      "sourceHash": "8018e96574e3",
+      "updatedAt": "2026-08-17T22:38:34.004Z"
+    },
+    "op.mail.sendFirst": {
+      "text": "पहले चयनित प्राप्तकर्ता को भेजें",
+      "sourceHash": "f16135d92e4d",
+      "updatedAt": "2026-08-17T22:38:34.004Z"
+    },
+    "op.mail.chooseFirst": {
+      "text": "सबसे पहले प्राप्तकर्ता, विषय और शरीर चुनें",
+      "sourceHash": "6cd698326ff5",
+      "updatedAt": "2026-08-17T22:38:34.004Z"
+    },
+    "op.mail.sending": {
+      "text": "भेज रहा है…",
+      "sourceHash": "cf765512cc6d",
+      "updatedAt": "2026-08-17T22:38:34.004Z"
+    },
+    "op.mail.selectRecipients": {
+      "text": "एक या अधिक मेलिंग-सूची के प्राप्तकर्ताओं का चयन करें",
+      "sourceHash": "1123d3a102d6",
+      "updatedAt": "2026-08-17T22:38:34.004Z"
+    },
+    "op.mail.clearMailbox": {
+      "text": "इस मेलबॉक्स में सभी संदेश साफ़ करें",
+      "sourceHash": "5bcd36e89277",
+      "updatedAt": "2026-08-17T22:38:34.004Z"
+    },
+    "op.mail.clearMessage": {
+      "text": "इस संदेश को साफ़ करें",
+      "sourceHash": "7e381d95a625",
+      "updatedAt": "2026-08-17T22:38:34.004Z"
+    },
+    "op.mail.clearing": {
+      "text": "साफ़ करना…",
+      "sourceHash": "bc7a2b58694e",
+      "updatedAt": "2026-08-17T22:38:35.537Z"
+    },
+    "op.mail.clearInboxConfirm": {
+      "text": "पूरा इनबॉक्स साफ़ करें?",
+      "sourceHash": "28d19bf7ae0d",
+      "updatedAt": "2026-08-17T22:38:35.537Z"
+    },
+    "op.mail.clearMessageConfirm": {
+      "text": "यह संदेश साफ़ करें?",
+      "sourceHash": "2fe6e2fe7526",
+      "updatedAt": "2026-08-17T22:38:35.537Z"
+    },
+    "op.mail.clearAll": {
+      "text": "सभी साफ़ करें",
+      "sourceHash": "c043160a89ba",
+      "updatedAt": "2026-08-17T22:38:35.537Z"
+    },
+    "op.mail.clearMsg": {
+      "text": "संदेश साफ़ करें",
+      "sourceHash": "0edf6a5099e5",
+      "updatedAt": "2026-08-17T22:38:35.537Z"
+    },
+    "op.mail.usersFailed": {
+      "text": "उपयोगकर्ताओं को लोड नहीं कर सका",
+      "sourceHash": "47dd74c0c423",
+      "updatedAt": "2026-08-17T22:38:35.537Z"
+    },
+    "op.mail.passwordCopied": {
+      "text": "नया पासवर्ड क्लिपबोर्ड में कॉपी किया गया",
+      "sourceHash": "c69fd69b1d86",
+      "updatedAt": "2026-08-17T22:38:35.537Z"
+    },
+    "op.mail.actionFailed": {
+      "text": "कार्रवाई विफल",
+      "sourceHash": "57af949595e3",
+      "updatedAt": "2026-08-17T22:38:35.537Z"
+    },
+    "op.mail.noUserMatch": {
+      "text": "इस खोज से कोई उपयोगकर्ता मैच नहीं करता.",
+      "sourceHash": "f0f3d70ce761",
+      "updatedAt": "2026-08-17T22:38:52.370Z"
+    },
+    "op.mail.noUsers": {
+      "text": "अभी कोई उपयोगकर्ता नहीं.",
+      "sourceHash": "26930b5f7c6f",
+      "updatedAt": "2026-08-17T22:38:52.370Z"
+    },
+    "op.support.loading": {
+      "text": "समर्थन इनबॉक्स लोड हो रहा है…",
+      "sourceHash": "251c89cee942",
+      "updatedAt": "2026-08-17T22:38:52.370Z"
+    },
+    "op.support.noThreads": {
+      "text": "इस दृश्य में कोई खाता वार्तालाप नहीं.",
+      "sourceHash": "7af18f8ac894",
+      "updatedAt": "2026-08-17T22:38:52.370Z"
+    },
+    "op.support.selectThread": {
+      "text": "एक खाता वार्तालाप चुनें जिसे मॉडरेट करें.",
+      "sourceHash": "e10ec1ca0116",
+      "updatedAt": "2026-08-17T22:38:52.370Z"
+    },
+    "op.support.filters": {
+      "text": "Thread फ़िल्टर",
+      "sourceHash": "37a1b6aef086",
+      "updatedAt": "2026-08-17T22:38:52.370Z"
+    },
+    "op.support.conversations": {
+      "text": "समर्थन वार्तालाप",
+      "sourceHash": "9f5c09b82d64",
+      "updatedAt": "2026-08-17T22:38:52.370Z"
+    },
+    "op.support.clientEnv": {
+      "text": "क्लाइंट पर्यावरण",
+      "sourceHash": "cd3dc59a3a60",
+      "updatedAt": "2026-08-17T22:38:52.370Z"
+    },
+    "op.support.quickReplies": {
+      "text": "औपचारिक त्वरित उत्तर",
+      "sourceHash": "95c4666d38c0",
+      "updatedAt": "2026-08-17T22:38:57.321Z"
+    },
+    "op.support.attach": {
+      "text": "छवि संलग्न करें",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T22:38:57.321Z"
+    },
+    "op.support.compose": {
+      "text": "उत्तर लिखें…",
+      "sourceHash": "d50d154a1a48",
+      "updatedAt": "2026-08-17T22:38:57.321Z"
+    },
+    "op.support.awaiting": {
+      "text": "ग्राहक का इंतजार कर रहा है",
+      "sourceHash": "25e174a919de",
+      "updatedAt": "2026-08-17T22:38:57.321Z"
+    },
+    "op.support.loadFailed": {
+      "text": "इनबॉक्स लोड नहीं हो सका",
+      "sourceHash": "23be3576fc7a",
+      "updatedAt": "2026-08-17T22:38:57.321Z"
+    },
+    "op.support.attachFailed": {
+      "text": "छवि संलग्न नहीं कर सका",
+      "sourceHash": "f9ce8a5e6365",
+      "updatedAt": "2026-08-17T22:38:57.321Z"
+    },
+    "op.support.quickSent": {
+      "text": "त्वरित उत्तर भेजा गया",
+      "sourceHash": "bec403be3dcf",
+      "updatedAt": "2026-08-17T22:38:57.321Z"
+    },
+    "op.support.replySent": {
+      "text": "उत्तर भेजा गया",
+      "sourceHash": "94295a73231c",
+      "updatedAt": "2026-08-17T22:38:57.321Z"
+    },
+    "op.support.sendFailed": {
+      "text": "भेजना विफल",
+      "sourceHash": "07a7900ae8fa",
+      "updatedAt": "2026-08-17T22:38:58.590Z"
+    },
+    "op.support.resolved": {
+      "text": "थ्रेड हल",
+      "sourceHash": "b9d31bc63252",
+      "updatedAt": "2026-08-17T22:38:58.590Z"
+    },
+    "op.support.updateFailed": {
+      "text": "अद्यतन विफल",
+      "sourceHash": "4de04cd91a3d",
+      "updatedAt": "2026-08-17T22:38:58.590Z"
+    },
+    "op.support.assigned": {
+      "text": "आपको बातचीत सौंपी गई",
+      "sourceHash": "787db9416277",
+      "updatedAt": "2026-08-17T22:38:58.590Z"
+    },
+    "op.support.assignFailed": {
+      "text": "आवंटन विफल",
+      "sourceHash": "bb279ac46030",
+      "updatedAt": "2026-08-17T22:38:58.590Z"
+    },
+    "op.support.archived": {
+      "text": "समाप्त बातचीत अभिलेखागार में",
+      "sourceHash": "7f2d0c81d33e",
+      "updatedAt": "2026-08-17T22:38:58.590Z"
+    },
+    "op.support.archiveFailed": {
+      "text": "अभिलेखागार विफल",
+      "sourceHash": "fa2362f21035",
+      "updatedAt": "2026-08-17T22:38:58.590Z"
+    },
+    "op.support.noResolved": {
+      "text": "आर्काइव करने के लिए कोई समाप्त बातचीत नहीं",
+      "sourceHash": "5e23ade8e268",
+      "updatedAt": "2026-08-17T22:38:58.590Z"
+    },
+    "op.support.reportedIp": {
+      "text": "पिछले संपर्क पर रिपोर्ट किया गया ग्राहक आईपी",
+      "sourceHash": "8f1e7deadbe3",
+      "updatedAt": "2026-08-17T22:39:16.813Z"
+    },
+    "op.support.ipUnknown": {
+      "text": "आईपी अज्ञात",
+      "sourceHash": "cf40c1ba981e",
+      "updatedAt": "2026-08-17T22:39:16.813Z"
+    },
+    "op.support.browserFamily": {
+      "text": "उपयोगकर्ता एजेंट से ब्राउज़र परिवार",
+      "sourceHash": "bc49f40f1bed",
+      "updatedAt": "2026-08-17T22:39:16.813Z"
+    },
+    "op.support.browserUnknown": {
+      "text": "ब्राउज़र अज्ञात",
+      "sourceHash": "5476220afd31",
+      "updatedAt": "2026-08-17T22:39:16.813Z"
+    },
+    "op.support.uaMissing": {
+      "text": "उपयोगकर्ता एजेंट कैप्चर नहीं किया गया",
+      "sourceHash": "e89923195485",
+      "updatedAt": "2026-08-17T22:39:16.813Z"
+    },
+    "op.support.attachHint": {
+      "text": "एक छवि संलग्न करें (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T22:39:16.813Z"
+    },
+    "op.support.sendAssign": {
+      "text": "उत्तर भेजें और वार्ता को आपको असाइन करें",
+      "sourceHash": "61eb025fb429",
+      "updatedAt": "2026-08-17T22:39:16.813Z"
+    },
+    "op.autosave.saved": {
+      "text": "सभी परिवर्तन सहेजे गए",
+      "sourceHash": "9595b7da9f61",
+      "updatedAt": "2026-08-17T22:39:16.813Z"
+    },
+    "op.autosave.writing": {
+      "text": "लिख रहे हैं…",
+      "sourceHash": "ea499fa21dce",
+      "updatedAt": "2026-08-17T22:39:18.108Z"
+    },
+    "op.autosave.soon": {
+      "text": "कुछ देर में बचाया जाएगा",
+      "sourceHash": "dac9adeeec35",
+      "updatedAt": "2026-08-17T22:39:18.108Z"
+    },
+    "op.autosave.pending": {
+      "text": "संपादन लंबित — जल्द होगी ऑटो-सेव",
+      "sourceHash": "310111dfce84",
+      "updatedAt": "2026-08-17T22:39:18.108Z"
+    },
+    "op.autosave.failed": {
+      "text": "सेव failed",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T22:39:18.108Z"
+    },
+    "op.autosave.retry": {
+      "text": "पिछली सेव failed — पुनः प्रयास के लिए क्लिक करें",
+      "sourceHash": "3ca55d67a41b",
+      "updatedAt": "2026-08-17T22:39:18.108Z"
+    },
+    "op.tour.replay": {
+      "text": "ऑपरेटर दौरा दोहराएं",
+      "sourceHash": "65d81509c386",
+      "updatedAt": "2026-08-17T22:39:18.108Z"
+    },
+    "op.tour.label": {
+      "text": "दौरा",
+      "sourceHash": "cd9e8f38bcfe",
+      "updatedAt": "2026-08-17T22:39:18.108Z"
+    },
+    "op.modules.runtime": {
+      "text": "रनटाइम",
+      "sourceHash": "c4740e4ca28c",
+      "updatedAt": "2026-08-17T22:39:18.108Z"
+    },
+    "op.modules.autoCheck": {
+      "text": "ऑटो-जांच",
+      "sourceHash": "2e0f9b9f2e4f",
+      "updatedAt": "2026-08-17T22:39:32.943Z"
+    },
+    "op.pulse.reviews": {
+      "text": "समीक्षाएं",
+      "sourceHash": "b83c4cdafef5",
+      "updatedAt": "2026-08-17T22:39:32.943Z"
+    },
+    "op.pulse.stored": {
+      "text": "संग्रहीत",
+      "sourceHash": "b2b53ee4fc1a",
+      "updatedAt": "2026-08-17T22:39:32.943Z"
+    },
+    "support.chat.title": {
+      "text": "Octivate समर्थन",
+      "sourceHash": "1b54a7b1a62f",
+      "updatedAt": "2026-08-17T22:39:32.943Z"
+    },
+    "support.chat.resolved": {
+      "text": "वार्तालाप हल किया गया",
+      "sourceHash": "25aaa3efa2f8",
+      "updatedAt": "2026-08-17T22:39:32.943Z"
+    },
+    "support.chat.resolvedClosed": {
+      "text": "हल किया गया · संदेश बंद",
+      "sourceHash": "afd5f6b66e03",
+      "updatedAt": "2026-08-17T22:39:32.943Z"
+    },
+    "support.chat.accountSupport": {
+      "text": "खाता समर्थन",
+      "sourceHash": "6bd44611563e",
+      "updatedAt": "2026-08-17T22:39:32.943Z"
+    },
+    "support.chat.accountSupportHint": {
+      "text": "खाता समर्थन · आमतौर पर एक व्यावसायिक दिन के भीतर उत्तर देता है",
+      "sourceHash": "db80d629390b",
+      "updatedAt": "2026-08-17T22:39:32.943Z"
+    },
+    "support.chat.attach": {
+      "text": "छवि संलग्न करें",
+      "sourceHash": "92c6d9016973",
+      "updatedAt": "2026-08-17T22:39:42.229Z"
+    },
+    "support.chat.placeholder": {
+      "text": "एक औपचारिक संदेश लिखें…",
+      "sourceHash": "08fc39b852ec",
+      "updatedAt": "2026-08-17T22:39:42.229Z"
+    },
+    "support.chat.open": {
+      "text": "समर्थन खोलें",
+      "sourceHash": "3a80862045b7",
+      "updatedAt": "2026-08-17T22:39:42.229Z"
+    },
+    "support.chat.openAccount": {
+      "text": "खाता समर्थन चैट खोलें",
+      "sourceHash": "afa415115cd0",
+      "updatedAt": "2026-08-17T22:39:42.229Z"
+    },
+    "support.chat.minimize": {
+      "text": "चैट कम करें",
+      "sourceHash": "f6068d8c1fcc",
+      "updatedAt": "2026-08-17T22:39:42.229Z"
+    },
+    "support.chat.close": {
+      "text": "चैट बंद करें",
+      "sourceHash": "eb376184348e",
+      "updatedAt": "2026-08-17T22:39:42.229Z"
+    },
+    "support.chat.send": {
+      "text": "संदेश भेजें",
+      "sourceHash": "c70a890d1411",
+      "updatedAt": "2026-08-17T22:39:42.229Z"
+    },
+    "support.chat.assignedStaff": {
+      "text": "Octivate के नियुक्त स्टाफ सदस्य",
+      "sourceHash": "e7a8f38cc9f1",
+      "updatedAt": "2026-08-17T22:39:42.229Z"
+    },
+    "onboard.op.3.b1": {
+      "text": "यहां की कार्रवाइयां लाइव उत्पादन अवस्था को प्रभावित करती हैं",
+      "sourceHash": "ebed7ca8f314",
+      "updatedAt": "2026-08-17T22:39:57.088Z"
+    },
+    "onboard.op.11.b2.lead": {
+      "text": "संस्थापक",
+      "sourceHash": "9a7fd749d2d3",
+      "updatedAt": "2026-08-17T22:39:57.088Z"
+    },
+    "onboard.op.11.b2": {
+      "text": "इस पैनल में इसे मॉडरेट नहीं किया जा सकता",
+      "sourceHash": "d220867e9a43",
+      "updatedAt": "2026-08-17T22:39:57.088Z"
+    },
+    "onboard.op.12.accent": {
+      "text": "कॉपी",
+      "sourceHash": "f84e2e2dadd8",
+      "updatedAt": "2026-08-17T22:39:57.088Z"
+    },
+    "legal.terms.agreement.p2": {
+      "text": "यदि आप Octivate पर किसी संगठन की ओर से कार्य कर रहे हैं, तो आप प्रतिनिधित्व करते हैं कि आपके पास उस संगठन को बाध्य करने की शक्ति है।",
+      "sourceHash": "f8297c380c9a",
+      "updatedAt": "2026-08-17T22:39:57.088Z"
     }
   }
 }

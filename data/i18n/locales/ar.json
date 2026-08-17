@@ -1,7 +1,7 @@
 {
   "locale": "ar",
-  "version": 104,
-  "updatedAt": "2026-08-17T17:58:43.066Z",
+  "version": 159,
+  "updatedAt": "2026-08-17T22:28:42.825Z",
   "entries": {
     "nav.product": {
       "text": "منتج",
@@ -4067,6 +4067,2201 @@
       "text": "القصة",
       "sourceHash": "3e3886da8fd5",
       "updatedAt": "2026-08-17T17:58:43.055Z"
+    },
+    "ws.project.saving": {
+      "text": "جارٍ الحفظ…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T20:58:43.437Z"
+    },
+    "ws.project.updated": {
+      "text": "تم تحديث المشروع",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T20:58:43.437Z"
+    },
+    "ws.project.archived": {
+      "text": "تم أرشفة المشروع",
+      "sourceHash": "225209bf7dec",
+      "updatedAt": "2026-08-17T20:58:43.437Z"
+    },
+    "ws.project.restored": {
+      "text": "تم استعادة المشروع",
+      "sourceHash": "cd1b8386c131",
+      "updatedAt": "2026-08-17T20:58:43.437Z"
+    },
+    "ws.project.notFound": {
+      "text": "لم يتم العثور على المشروع",
+      "sourceHash": "3955a012ec3c",
+      "updatedAt": "2026-08-17T20:58:43.437Z"
+    },
+    "ws.project.loadFailed": {
+      "text": "فشل التحميل",
+      "sourceHash": "af14db26285b",
+      "updatedAt": "2026-08-17T20:58:43.437Z"
+    },
+    "ws.project.closeSettings": {
+      "text": "إغلاق إعدادات المشروع",
+      "sourceHash": "f24a1261f0cb",
+      "updatedAt": "2026-08-17T20:58:43.437Z"
+    },
+    "ws.project.restoreForAgents": {
+      "text": "استعادة هذا المشروع لتشغيل سير عمل الوكيل.",
+      "sourceHash": "943965352a99",
+      "updatedAt": "2026-08-17T20:58:43.437Z"
+    },
+    "ws.project.restoreForDocs": {
+      "text": "استعادة هذا المشروع لإضافة المستندات.",
+      "sourceHash": "76bb5e7cd3cd",
+      "updatedAt": "2026-08-17T20:58:58.751Z"
+    },
+    "ws.project.module.reset": {
+      "text": "إعادة تعيين disposition",
+      "sourceHash": "43b548921a20",
+      "updatedAt": "2026-08-17T20:58:58.751Z"
+    },
+    "ws.project.liveAwaiting": {
+      "text": "مباشر · في انتظار المفتاح",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T20:58:58.751Z"
+    },
+    "ws.project.module.question": {
+      "text": "سؤال",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T20:58:58.751Z"
+    },
+    "ws.project.module.documents": {
+      "text": "مستندات",
+      "sourceHash": "687c82861c95",
+      "updatedAt": "2026-08-17T20:58:58.751Z"
+    },
+    "ws.project.module.monitors": {
+      "text": "مراقبات",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T20:58:58.751Z"
+    },
+    "ws.project.module.agent": {
+      "text": "وكيل",
+      "sourceHash": "5ce2e6f40299",
+      "updatedAt": "2026-08-17T20:58:58.751Z"
+    },
+    "ws.project.module.pulse": {
+      "text": "نبض",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T20:58:58.751Z"
+    },
+    "ws.account.title": {
+      "text": "إعدادات",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T20:59:04.871Z"
+    },
+    "ws.account.lede": {
+      "text": "الملف الشخصي، الأمان، الحضور، التنبيهات، والتحكم في الجلسات.",
+      "sourceHash": "8a35cc38fbac",
+      "updatedAt": "2026-08-17T20:59:04.871Z"
+    },
+    "ws.account.loading": {
+      "text": "جاري تحميل الحساب…",
+      "sourceHash": "c3ffe1ef49d0",
+      "updatedAt": "2026-08-17T20:59:04.871Z"
+    },
+    "ws.account.tab.profile": {
+      "text": "الملف الشخصي",
+      "sourceHash": "ff4fc0276e96",
+      "updatedAt": "2026-08-17T20:59:04.871Z"
+    },
+    "ws.account.tab.security": {
+      "text": "الأمان",
+      "sourceHash": "f25ce1b8a399",
+      "updatedAt": "2026-08-17T20:59:04.871Z"
+    },
+    "ws.account.tab.presence": {
+      "text": "الحضور",
+      "sourceHash": "89a8a335a746",
+      "updatedAt": "2026-08-17T20:59:04.871Z"
+    },
+    "ws.account.tab.alerts": {
+      "text": "التنبيهات",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T20:59:04.871Z"
+    },
+    "ws.account.tab.session": {
+      "text": "الجلسات",
+      "sourceHash": "f7f1997c6cd1",
+      "updatedAt": "2026-08-17T20:59:04.871Z"
+    },
+    "ws.account.updatePassword": {
+      "text": "تحديث كلمة المرور",
+      "sourceHash": "350c355e16e3",
+      "updatedAt": "2026-08-17T20:59:12.110Z"
+    },
+    "ws.account.signOut": {
+      "text": "تسجيل الخروج",
+      "sourceHash": "dc1649a16c14",
+      "updatedAt": "2026-08-17T20:59:12.110Z"
+    },
+    "ws.account.presence": {
+      "text": "حالة الحضور",
+      "sourceHash": "a02b358912bf",
+      "updatedAt": "2026-08-17T20:59:12.110Z"
+    },
+    "ws.account.profileSaved": {
+      "text": "تم حفظ الملف الشخصي",
+      "sourceHash": "e9983dc9ac3f",
+      "updatedAt": "2026-08-17T20:59:12.110Z"
+    },
+    "ws.account.saveFailed": {
+      "text": "فشل الحفظ",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T20:59:12.110Z"
+    },
+    "ws.account.passwordUpdated": {
+      "text": "تم تحديث كلمة المرور",
+      "sourceHash": "1de6d0816c54",
+      "updatedAt": "2026-08-17T20:59:12.110Z"
+    },
+    "ws.account.passwordFailed": {
+      "text": "فشل تحديث كلمة المرور",
+      "sourceHash": "b651e6821043",
+      "updatedAt": "2026-08-17T20:59:12.110Z"
+    },
+    "ws.account.statusFailed": {
+      "text": "تعذر تحديث الحالة",
+      "sourceHash": "b1073af68cc9",
+      "updatedAt": "2026-08-17T20:59:12.110Z"
+    },
+    "ws.account.imageType": {
+      "text": "استخدم JPEG, PNG, أو WebP",
+      "sourceHash": "64219c573743",
+      "updatedAt": "2026-08-17T20:59:23.614Z"
+    },
+    "ws.account.avatarUpdated": {
+      "text": "تم تحديث الصورة الرمزية",
+      "sourceHash": "46e014bb0124",
+      "updatedAt": "2026-08-17T20:59:23.614Z"
+    },
+    "ws.account.uploadFailed": {
+      "text": "فشل الرفع",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T20:59:23.614Z"
+    },
+    "ws.account.avatarRemoved": {
+      "text": "تم إزالة الصورة الرمزية",
+      "sourceHash": "d9db37314bea",
+      "updatedAt": "2026-08-17T20:59:23.614Z"
+    },
+    "ws.account.removeFailed": {
+      "text": "فشل الإزالة",
+      "sourceHash": "debe01de259b",
+      "updatedAt": "2026-08-17T20:59:23.614Z"
+    },
+    "ws.account.signOutFailed": {
+      "text": "فشل تسجيل الخروج",
+      "sourceHash": "b1287a61ef81",
+      "updatedAt": "2026-08-17T20:59:23.614Z"
+    },
+    "ws.account.readImageFailed": {
+      "text": "تعذر قراءة الصورة",
+      "sourceHash": "68d60f7c8e85",
+      "updatedAt": "2026-08-17T20:59:23.614Z"
+    },
+    "ws.monitors.title": {
+      "text": "مراقبة",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T20:59:23.614Z"
+    },
+    "ws.monitors.paused": {
+      "text": "مراقبة موقوفة",
+      "sourceHash": "34e761133c86",
+      "updatedAt": "2026-08-17T21:00:27.664Z"
+    },
+    "ws.monitors.resumed": {
+      "text": "مراقبة مستأنفة",
+      "sourceHash": "a7f27044c65b",
+      "updatedAt": "2026-08-17T21:00:27.664Z"
+    },
+    "ws.monitors.updateFailed": {
+      "text": "لا يمكن تحديث المراقبة",
+      "sourceHash": "ab01af3ab5c9",
+      "updatedAt": "2026-08-17T21:00:27.664Z"
+    },
+    "ws.monitors.linkUpdated": {
+      "text": "تم تحديث رابط المشروع",
+      "sourceHash": "ca3bc3b5862c",
+      "updatedAt": "2026-08-17T21:00:27.664Z"
+    },
+    "ws.monitors.linkFailed": {
+      "text": "لا يمكن تحديث الرابط",
+      "sourceHash": "9d74e05e8301",
+      "updatedAt": "2026-08-17T21:00:27.664Z"
+    },
+    "ws.monitors.notFound": {
+      "text": "مراقبة غير موجودة",
+      "sourceHash": "dbab2107fb75",
+      "updatedAt": "2026-08-17T21:00:27.664Z"
+    },
+    "ws.monitors.pause": {
+      "text": "إيقاف",
+      "sourceHash": "781961bc81c2",
+      "updatedAt": "2026-08-17T21:00:27.664Z"
+    },
+    "ws.monitors.resume": {
+      "text": "استئناف",
+      "sourceHash": "b3bd0b5a7049",
+      "updatedAt": "2026-08-17T21:00:27.664Z"
+    },
+    "ws.briefs.title": {
+      "text": "ملخصات القرار",
+      "sourceHash": "11f32f8cf0c4",
+      "updatedAt": "2026-08-17T21:04:32.847Z"
+    },
+    "ws.briefs.lede": {
+      "text": "حزم مدعومة بالأدلة من عمليات مشروعك — مراجعة حكم، PSN lenses، وتصديرات.",
+      "sourceHash": "f2467f9e4c8c",
+      "updatedAt": "2026-08-17T21:04:32.847Z"
+    },
+    "ws.briefs.empty": {
+      "text": "لا توجد ملخصات قرار بعد",
+      "sourceHash": "b515f47278a5",
+      "updatedAt": "2026-08-17T21:04:32.847Z"
+    },
+    "ws.briefs.emptyHint": {
+      "text": "قم بتشغيل خط أنابيب المشروع لإنشاء أول ملخص قرار لك.",
+      "sourceHash": "9bf4c6c5c58e",
+      "updatedAt": "2026-08-17T21:04:32.847Z"
+    },
+    "ws.briefs.pendingReview": {
+      "text": "في انتظار المراجعة",
+      "sourceHash": "6a80f44e3b2b",
+      "updatedAt": "2026-08-17T21:04:32.847Z"
+    },
+    "ws.briefs.approved": {
+      "text": "معتمد",
+      "sourceHash": "41b81eb8db1b",
+      "updatedAt": "2026-08-17T21:04:32.847Z"
+    },
+    "ws.briefs.depthModes": {
+      "text": "أوضاع العمق",
+      "sourceHash": "68a8aded8a97",
+      "updatedAt": "2026-08-17T21:04:32.847Z"
+    },
+    "ws.briefs.openProjects": {
+      "text": "مشروعات مفتوحة",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T21:04:32.847Z"
+    },
+    "ws.briefs.back": {
+      "text": "← عودة إلى الملخصات",
+      "sourceHash": "69ee29903a7e",
+      "updatedAt": "2026-08-17T21:06:38.901Z"
+    },
+    "ws.briefs.notFound": {
+      "text": "لم يتم العثور على الملخص",
+      "sourceHash": "87fb798c28c9",
+      "updatedAt": "2026-08-17T21:06:38.901Z"
+    },
+    "ws.briefs.browse": {
+      "text": "تصفح الملخصات",
+      "sourceHash": "f4d095dec924",
+      "updatedAt": "2026-08-17T21:06:38.901Z"
+    },
+    "ws.briefs.loadFailed": {
+      "text": "تعذر تحميل الملخص",
+      "sourceHash": "c7557e0c36a9",
+      "updatedAt": "2026-08-17T21:06:38.901Z"
+    },
+    "ws.briefs.noData": {
+      "text": "لا توجد بيانات ملخص متاحة.",
+      "sourceHash": "f1024a68f087",
+      "updatedAt": "2026-08-17T21:06:38.901Z"
+    },
+    "ws.briefs.reviewRecord": {
+      "text": "مراجعة السجل",
+      "sourceHash": "b018182d0769",
+      "updatedAt": "2026-08-17T21:06:38.901Z"
+    },
+    "ws.briefs.approvedToast": {
+      "text": "تمت الموافقة على الملخص",
+      "sourceHash": "8881ea2feac8",
+      "updatedAt": "2026-08-17T21:06:38.901Z"
+    },
+    "ws.briefs.reviewFailed": {
+      "text": "فشل المراجعة",
+      "sourceHash": "5522c937885e",
+      "updatedAt": "2026-08-17T21:06:38.901Z"
+    },
+    "ws.briefs.deepDive": {
+      "text": "تحليل عميق",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T21:08:48.162Z"
+    },
+    "ws.briefs.approve": {
+      "text": "افق",
+      "sourceHash": "7b2c7f146aba",
+      "updatedAt": "2026-08-17T21:08:48.162Z"
+    },
+    "ws.briefs.needsRevision": {
+      "text": "يحتاج إلى تعديل",
+      "sourceHash": "a75105d396fa",
+      "updatedAt": "2026-08-17T21:08:48.162Z"
+    },
+    "ws.briefs.reject": {
+      "text": "رفض",
+      "sourceHash": "2b03b59293b6",
+      "updatedAt": "2026-08-17T21:08:48.162Z"
+    },
+    "ws.briefs.openProject": {
+      "text": "فتح المشروع المرتبط",
+      "sourceHash": "11bdb0dc219d",
+      "updatedAt": "2026-08-17T21:08:48.162Z"
+    },
+    "ws.briefs.confidence": {
+      "text": "ثقة",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T21:08:48.162Z"
+    },
+    "ws.briefs.pagination": {
+      "text": "تنقل الملخصات",
+      "sourceHash": "ca1f68feb387",
+      "updatedAt": "2026-08-17T21:08:48.162Z"
+    },
+    "ws.briefs.prevPage": {
+      "text": "الصفحة السابقة للملخصات",
+      "sourceHash": "5f855ab42223",
+      "updatedAt": "2026-08-17T21:08:48.162Z"
+    },
+    "ws.briefs.nextPage": {
+      "text": "الصفحة التالية",
+      "sourceHash": "12274555c7e6",
+      "updatedAt": "2026-08-17T21:15:27.301Z"
+    },
+    "ws.briefs.showing": {
+      "text": "يعرض {from}–{to} من {total}",
+      "sourceHash": "d236a8e46b06",
+      "updatedAt": "2026-08-17T21:15:27.301Z"
+    },
+    "ws.sources.title": {
+      "text": "المصادر",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T21:15:27.301Z"
+    },
+    "ws.sources.lede": {
+      "text": "يرتب جوازات السجل التي تغذي المراقبين وتشغيل النظرية",
+      "sourceHash": "34da3d01d122",
+      "updatedAt": "2026-08-17T21:15:27.301Z"
+    },
+    "ws.sources.search": {
+      "text": "اسم، الدولة، الوسوم…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T21:15:27.301Z"
+    },
+    "ws.sources.empty": {
+      "text": "لا مصادر مطابقة",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T21:15:27.301Z"
+    },
+    "ws.sources.emptyHint": {
+      "text": "جرب بحثًا آخر أو اسحب CSV لاستيراد السجل.",
+      "sourceHash": "bf5f1c857903",
+      "updatedAt": "2026-08-17T21:15:27.301Z"
+    },
+    "ws.sources.pagination": {
+      "text": "تنقل المصادر",
+      "sourceHash": "50f66b346611",
+      "updatedAt": "2026-08-17T21:15:27.301Z"
+    },
+    "ws.usage.title": {
+      "text": "استخدام الذكاء الاصطناعي",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T21:15:28.415Z"
+    },
+    "ws.usage.tokenAllowance": {
+      "text": "ميزانية الرموز",
+      "sourceHash": "178b070cb08a",
+      "updatedAt": "2026-08-17T21:15:28.415Z"
+    },
+    "ws.usage.activitySplit": {
+      "text": "تقسيم النشاط",
+      "sourceHash": "1f236c8d7d6b",
+      "updatedAt": "2026-08-17T21:15:28.415Z"
+    },
+    "ws.usage.estimatedCost": {
+      "text": "التكلفة المقدرة",
+      "sourceHash": "516cbee26f0b",
+      "updatedAt": "2026-08-17T21:15:28.415Z"
+    },
+    "ws.packs.title": {
+      "text": "حزم الدول",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T21:15:28.415Z"
+    },
+    "ws.packs.lede": {
+      "text": "حزم استخبارات مُختارة حسب سوق الكاريبي.",
+      "sourceHash": "a46f67498e2f",
+      "updatedAt": "2026-08-17T21:15:28.415Z"
+    },
+    "ws.packs.meta": {
+      "text": "المصادر · الكيانات",
+      "sourceHash": "61f1da33e909",
+      "updatedAt": "2026-08-17T21:15:28.415Z"
+    },
+    "ws.stakeholders.cause": {
+      "text": "السبب",
+      "sourceHash": "0cd812b85c20",
+      "updatedAt": "2026-08-17T21:15:28.415Z"
+    },
+    "ws.topics.title": {
+      "text": "أكثر إشارات كاريبية سخونة",
+      "sourceHash": "c02ae1c5f749",
+      "updatedAt": "2026-08-17T21:18:07.138Z"
+    },
+    "ws.topics.loading": {
+      "text": "جاري تحميل قوالب المواضيع…",
+      "sourceHash": "3a6c843fbbe8",
+      "updatedAt": "2026-08-17T21:18:07.138Z"
+    },
+    "ws.topics.tapPlay": {
+      "text": "اضغط لتحميل · للتشغيل",
+      "sourceHash": "bcd777dbdbbd",
+      "updatedAt": "2026-08-17T21:18:07.138Z"
+    },
+    "ws.topics.refresh": {
+      "text": "تحديث الإشارات",
+      "sourceHash": "4d77417615b4",
+      "updatedAt": "2026-08-17T21:18:07.138Z"
+    },
+    "ws.topics.runNow": {
+      "text": "تشغيل الآن",
+      "sourceHash": "2af00e23c480",
+      "updatedAt": "2026-08-17T21:18:07.138Z"
+    },
+    "ws.topics.starting": {
+      "text": "جاري البدء…",
+      "sourceHash": "e5f58095ac29",
+      "updatedAt": "2026-08-17T21:18:07.138Z"
+    },
+    "ws.topics.scraping": {
+      "text": "جاري الاستخراج…",
+      "sourceHash": "97355d74fde9",
+      "updatedAt": "2026-08-17T21:18:07.138Z"
+    },
+    "ws.topics.questionLoaded": {
+      "text": "تم تحميل السؤال — اضغط لتشغيل مسار وكيل العمل",
+      "sourceHash": "b57e028d16d6",
+      "updatedAt": "2026-08-17T21:18:07.138Z"
+    },
+    "ws.docs.readSummary": {
+      "text": "اقرأ الملخص",
+      "sourceHash": "f7685ae9e39b",
+      "updatedAt": "2026-08-17T21:18:08.393Z"
+    },
+    "ws.docs.summarize": {
+      "text": "تلخيص المحتوى",
+      "sourceHash": "365b99b5cffd",
+      "updatedAt": "2026-08-17T21:18:08.393Z"
+    },
+    "ws.docs.rework": {
+      "text": "إعادة صياغة الملخص",
+      "sourceHash": "bad6aa15f0ee",
+      "updatedAt": "2026-08-17T21:18:08.393Z"
+    },
+    "ws.docs.openSummary": {
+      "text": "فتح الملخص",
+      "sourceHash": "cbb4c597aff6",
+      "updatedAt": "2026-08-17T21:18:08.393Z"
+    },
+    "ws.docs.summaryReady": {
+      "text": "الملخص جاهز",
+      "sourceHash": "cedb562d4da5",
+      "updatedAt": "2026-08-17T21:18:08.393Z"
+    },
+    "ws.docs.reworkReady": {
+      "text": "الملخص المعاد صياغته جاهز",
+      "sourceHash": "2f61dbbae128",
+      "updatedAt": "2026-08-17T21:18:08.393Z"
+    },
+    "ws.docs.deleteConfirm": {
+      "text": "هل تريد حذف هذا المستند؟",
+      "sourceHash": "1ce5593800b3",
+      "updatedAt": "2026-08-17T21:18:08.393Z"
+    },
+    "ws.docs.delete": {
+      "text": "حذف المستند",
+      "sourceHash": "e8df0b79020b",
+      "updatedAt": "2026-08-17T21:18:08.393Z"
+    },
+    "ws.docs.deleted": {
+      "text": "تم حذف المستند",
+      "sourceHash": "e4db4d66b499",
+      "updatedAt": "2026-08-17T21:19:26.300Z"
+    },
+    "ws.docs.downloadFailed": {
+      "text": "فشل التنزيل",
+      "sourceHash": "01125e1be1f5",
+      "updatedAt": "2026-08-17T21:19:26.300Z"
+    },
+    "ws.docs.summary.pipeline": {
+      "text": "مسار الملخص",
+      "sourceHash": "b0647716ca0e",
+      "updatedAt": "2026-08-17T21:19:26.300Z"
+    },
+    "ws.docs.summary.extractHint": {
+      "text": "استخراج نص ذي صلة بالقرار من الرفع (تستخدم ملفات الثنائية البيانات الوصفية فقط).",
+      "sourceHash": "74117cd5dd45",
+      "updatedAt": "2026-08-17T21:19:26.300Z"
+    },
+    "ws.docs.summary.reviewHint": {
+      "text": "افتح الملخص المقروء — يتم تعطيل التحرير قصدياً.",
+      "sourceHash": "683c57d5a83f",
+      "updatedAt": "2026-08-17T21:19:26.300Z"
+    },
+    "ws.docs.summary.disabled": {
+      "text": "تم تعطيل تلخيص المستند من قبل المشغل.",
+      "sourceHash": "499a1a5ea2ff",
+      "updatedAt": "2026-08-17T21:19:26.300Z"
+    },
+    "ws.docs.summary.reworkDisabled": {
+      "text": "تم تعطيل إعادة العمل. يمكنك فتح الملخص المقروء.",
+      "sourceHash": "66773a613619",
+      "updatedAt": "2026-08-17T21:19:26.300Z"
+    },
+    "ws.docs.summary.running": {
+      "text": "جاري تشغيل أنبوب المستندات…",
+      "sourceHash": "0fe516637573",
+      "updatedAt": "2026-08-17T21:19:26.300Z"
+    },
+    "ws.docs.summary.keepOpen": {
+      "text": "استخراج → تلخيص لهذا المسرح. احتفظ بهذا اللوحة مفتوحة.",
+      "sourceHash": "b88686364225",
+      "updatedAt": "2026-08-17T21:19:27.613Z"
+    },
+    "ws.docs.summary.failed": {
+      "text": "فشل آخر تشغيل. قم بضبط ملاحظات التركيز إذا لزم الأمر، ثم حاول مرة أخرى.",
+      "sourceHash": "ec3c5129064e",
+      "updatedAt": "2026-08-17T21:19:27.613Z"
+    },
+    "ws.docs.summary.none": {
+      "text": "لا يوجد نص ملخص متاح.",
+      "sourceHash": "217d2512f8ca",
+      "updatedAt": "2026-08-17T21:19:27.613Z"
+    },
+    "ws.docs.summary.focusPlaceholder": {
+      "text": "مثال. أبرز المسار التنظيمي، شركاء رأس المال، وما يعنيه ذلك لسؤال القرار…",
+      "sourceHash": "4226d6321002",
+      "updatedAt": "2026-08-17T21:19:27.613Z"
+    },
+    "ws.docs.summary.relevance": {
+      "text": "صلة القرار",
+      "sourceHash": "bded871bb02a",
+      "updatedAt": "2026-08-17T21:19:27.613Z"
+    },
+    "ws.docs.summary.keyPoints": {
+      "text": "النقاط الرئيسية",
+      "sourceHash": "5d1855a1eaac",
+      "updatedAt": "2026-08-17T21:19:27.613Z"
+    },
+    "ws.docs.summary.gaps": {
+      "text": "فجوات الأدلة",
+      "sourceHash": "4285633d539c",
+      "updatedAt": "2026-08-17T21:19:27.613Z"
+    },
+    "ws.docs.summary.riskFlags": {
+      "text": "أعلام الخطر",
+      "sourceHash": "024790205e21",
+      "updatedAt": "2026-08-17T21:19:27.613Z"
+    },
+    "ws.pulse.completedAgents": {
+      "text": "الوكلاء المكتملون",
+      "sourceHash": "8b06c1de3eb3",
+      "updatedAt": "2026-08-17T21:20:18.858Z"
+    },
+    "ws.pulse.awaitingRun": {
+      "text": "في انتظار التشغيل",
+      "sourceHash": "314aa3b51bbd",
+      "updatedAt": "2026-08-17T21:20:18.858Z"
+    },
+    "ws.pulse.onProject": {
+      "text": "على المشروع",
+      "sourceHash": "8d6e72e7313f",
+      "updatedAt": "2026-08-17T21:20:18.858Z"
+    },
+    "ws.pulse.noSpend": {
+      "text": "لا إنفاق حتى الآن",
+      "sourceHash": "18ad8a4907a5",
+      "updatedAt": "2026-08-17T21:20:18.858Z"
+    },
+    "ws.pulse.metric.stages": {
+      "text": "المراحل",
+      "sourceHash": "c1d33ad534e8",
+      "updatedAt": "2026-08-17T21:20:18.858Z"
+    },
+    "ws.pulse.metric.progress": {
+      "text": "التقدم",
+      "sourceHash": "1b90271d66cf",
+      "updatedAt": "2026-08-17T21:20:18.858Z"
+    },
+    "ws.pulse.metric.tokens": {
+      "text": "الرموز",
+      "sourceHash": "c38c6c1f3a27",
+      "updatedAt": "2026-08-17T21:20:18.858Z"
+    },
+    "ws.pulse.onAgent": {
+      "text": "مباشر على بطاقة الوكيل",
+      "sourceHash": "9e9662365193",
+      "updatedAt": "2026-08-17T21:20:18.858Z"
+    },
+    "ws.pulse.onAgentBody": {
+      "text": "المراحل، التقدم، المستندات، والمصاريف الآن على بطاقة الوكيل مع سير العمل.",
+      "sourceHash": "0b1ec9b2b478",
+      "updatedAt": "2026-08-17T21:24:55.636Z"
+    },
+    "ws.pipeline.doctrine": {
+      "text": "Doctrine سير العمل v0.2",
+      "sourceHash": "aa4272292b41",
+      "updatedAt": "2026-08-17T21:24:55.636Z"
+    },
+    "ws.pipeline.demo": {
+      "text": "سير عمل الوكيل (عرض تجريبي)",
+      "sourceHash": "f8b8b59087a6",
+      "updatedAt": "2026-08-17T21:24:55.636Z"
+    },
+    "ws.pipeline.ready": {
+      "text": "جاهز عندما تكون",
+      "sourceHash": "aec1322315e6",
+      "updatedAt": "2026-08-17T21:24:55.636Z"
+    },
+    "ws.tour.replay": {
+      "text": "إعادة تشغيل جولة مساحة العمل",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T21:24:55.636Z"
+    },
+    "ws.tour.tutorial": {
+      "text": "دليل الاستخدام",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T21:24:55.636Z"
+    },
+    "ws.account.avatarRules": {
+      "text": "JPEG, PNG، أو WebP. الحد الأقصى للحجم محدد من قبل المشغل.",
+      "sourceHash": "1ffab77f5756",
+      "updatedAt": "2026-08-17T21:24:55.636Z"
+    },
+    "ws.account.passwordMin": {
+      "text": "كلمة المرور الجديدة يجب أن تكون على الأقل 8 أحرف.",
+      "sourceHash": "f36bc78e2e46",
+      "updatedAt": "2026-08-17T21:24:55.636Z"
+    },
+    "ws.project.stuckHint": {
+      "text": "إذا بدت الوكلاء عالقة، قم بإعادة تشغيل جديدة.",
+      "sourceHash": "02d66d9bd268",
+      "updatedAt": "2026-08-17T21:27:49.460Z"
+    },
+    "ws.project.resetLayout": {
+      "text": "إعادة تعيين التخطيط",
+      "sourceHash": "5179087c02b4",
+      "updatedAt": "2026-08-17T21:27:49.460Z"
+    },
+    "ws.project.archive": {
+      "text": "أرشيف",
+      "sourceHash": "2621c6fd51a5",
+      "updatedAt": "2026-08-17T21:27:49.460Z"
+    },
+    "ws.project.restore": {
+      "text": "استعادة",
+      "sourceHash": "3cbe6d6b9a8d",
+      "updatedAt": "2026-08-17T21:27:49.460Z"
+    },
+    "ws.project.briefRevealBody": {
+      "text": "افتح الملخص لمراجعة الحكم والأدلة.",
+      "sourceHash": "fc1c1408e907",
+      "updatedAt": "2026-08-17T21:27:49.460Z"
+    },
+    "ws.docs.fileTypes": {
+      "text": "PDF، Word، نص، وصور · احتفاظ لمدة 30 يوماً",
+      "sourceHash": "c766e5559e6a",
+      "updatedAt": "2026-08-17T21:27:49.460Z"
+    },
+    "ws.docs.deleteShort": {
+      "text": "حذف",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T21:27:49.460Z"
+    },
+    "ws.docs.downloadShort": {
+      "text": "تحميل",
+      "sourceHash": "a479c9c34e87",
+      "updatedAt": "2026-08-17T21:27:49.460Z"
+    },
+    "op.tab.operations.hint": {
+      "text": "سجل التكاليف والإجراءات التشغيلية",
+      "sourceHash": "828625ff637a",
+      "updatedAt": "2026-08-17T21:28:19.976Z"
+    },
+    "op.tab.control": {
+      "text": "التحكم",
+      "sourceHash": "ea1d3df298ca",
+      "updatedAt": "2026-08-17T21:28:19.976Z"
+    },
+    "op.tab.control.hint": {
+      "text": "الحدود، النماذج، والتحكم بالمنصة",
+      "sourceHash": "7c76af9956eb",
+      "updatedAt": "2026-08-17T21:28:19.976Z"
+    },
+    "op.tab.catalog": {
+      "text": "القائمة",
+      "sourceHash": "4a88d27bbae1",
+      "updatedAt": "2026-08-17T21:28:19.976Z"
+    },
+    "op.tab.catalog.hint": {
+      "text": "أدوات التسجيل وسجل المصادر",
+      "sourceHash": "03e812eaa0b0",
+      "updatedAt": "2026-08-17T21:28:19.976Z"
+    },
+    "op.tab.support": {
+      "text": "الدعم العملاء",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T21:28:19.976Z"
+    },
+    "op.tab.support.hint": {
+      "text": "صندوق الوارد للدعم القائم على الحساب والإشراف",
+      "sourceHash": "e935dc49fec9",
+      "updatedAt": "2026-08-17T21:28:19.976Z"
+    },
+    "op.tab.mail": {
+      "text": "البريد",
+      "sourceHash": "92379cbb8ecf",
+      "updatedAt": "2026-08-17T21:28:19.976Z"
+    },
+    "op.tab.mail.hint": {
+      "text": "بريد المشغل الصادر والقائمة البريدية",
+      "sourceHash": "89336a920d33",
+      "updatedAt": "2026-08-17T21:30:39.396Z"
+    },
+    "op.tab.users": {
+      "text": "المستخدمون",
+      "sourceHash": "57f2b181d0a5",
+      "updatedAt": "2026-08-17T21:30:39.396Z"
+    },
+    "op.tab.users.hint": {
+      "text": "حسابات الأعضاء والوصول",
+      "sourceHash": "cdcf5d5c424f",
+      "updatedAt": "2026-08-17T21:30:39.396Z"
+    },
+    "op.tab.pricing": {
+      "text": "التسعير",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T21:30:39.396Z"
+    },
+    "op.tab.pricing.hint": {
+      "text": "تكوين خطة التسعير",
+      "sourceHash": "c56f16d3a8b8",
+      "updatedAt": "2026-08-17T21:30:39.396Z"
+    },
+    "op.tab.merchants": {
+      "text": "التجار",
+      "sourceHash": "37633677209d",
+      "updatedAt": "2026-08-17T21:30:39.396Z"
+    },
+    "op.tab.merchants.hint": {
+      "text": "ملفات تعريف الفوترة عند الدفع وتقديم المشتريات",
+      "sourceHash": "f74180193a8c",
+      "updatedAt": "2026-08-17T21:30:39.396Z"
+    },
+    "op.tab.automation": {
+      "text": "الأتمتة",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T21:30:39.396Z"
+    },
+    "op.i18n.lede": {
+      "text": "قوائم إقليمية دائمة الإنشاء عبر OpenRouter. لا تُستدعى الترجمة أبدًا أثناء تحميل الصفحة.",
+      "sourceHash": "f41683cce4eb",
+      "updatedAt": "2026-08-17T21:34:54.354Z"
+    },
+    "op.i18n.sync": {
+      "text": "تزامن الترجمات",
+      "sourceHash": "0a40962f0248",
+      "updatedAt": "2026-08-17T21:34:54.354Z"
+    },
+    "op.i18n.syncing": {
+      "text": "تزامن…",
+      "sourceHash": "221ca63005ea",
+      "updatedAt": "2026-08-17T21:34:54.354Z"
+    },
+    "op.i18n.refresh": {
+      "text": "تحديث الحالة",
+      "sourceHash": "ade15a52e213",
+      "updatedAt": "2026-08-17T21:34:54.354Z"
+    },
+    "op.modules.liveKpis": {
+      "text": "مؤشرات أداء حية",
+      "sourceHash": "864cca8d77e4",
+      "updatedAt": "2026-08-17T21:34:54.354Z"
+    },
+    "op.modules.liveKpisHint": {
+      "text": "اضغط على مؤشر لفتح عرض الكونسول",
+      "sourceHash": "d41d360e119d",
+      "updatedAt": "2026-08-17T21:34:54.354Z"
+    },
+    "op.modules.revisionQueue": {
+      "text": "قائمة المراجعات",
+      "sourceHash": "0acf2dc1f773",
+      "updatedAt": "2026-08-17T21:34:54.354Z"
+    },
+    "op.modules.revisionHint": {
+      "text": "طلبات Pending paired بحساب المنشأ",
+      "sourceHash": "607fc44d0589",
+      "updatedAt": "2026-08-17T21:34:54.354Z"
+    },
+    "op.modules.noRevision": {
+      "text": "لا توجد ملاحظات بانتظار المراجعة.",
+      "sourceHash": "d6dfa3886a0e",
+      "updatedAt": "2026-08-17T21:34:57.860Z"
+    },
+    "op.modules.sessionMix": {
+      "text": "خلط الجلسة",
+      "sourceHash": "341919f517c9",
+      "updatedAt": "2026-08-17T21:34:57.860Z"
+    },
+    "op.modules.sessionHint": {
+      "text": "أشرطة نشاط حالات عمل الوكيل",
+      "sourceHash": "c3f1f3eadcd5",
+      "updatedAt": "2026-08-17T21:34:57.860Z"
+    },
+    "op.modules.costByModel": {
+      "text": "التكلفة حسب النموذج",
+      "sourceHash": "d281caa03bcc",
+      "updatedAt": "2026-08-17T21:34:57.860Z"
+    },
+    "op.modules.costHint": {
+      "text": "أشرطة نشاط من دفتر التكاليف",
+      "sourceHash": "09f4a8a24cb9",
+      "updatedAt": "2026-08-17T21:34:57.860Z"
+    },
+    "op.modules.tokensConcurrency": {
+      "text": "الرموز & التوافر",
+      "sourceHash": "fa26e388feb6",
+      "updatedAt": "2026-08-17T21:34:57.860Z"
+    },
+    "op.modules.tokenBudget": {
+      "text": "ميزانية الرموز وأشرطة التوافر",
+      "sourceHash": "4e046c938df1",
+      "updatedAt": "2026-08-17T21:34:57.860Z"
+    },
+    "op.modules.liveSystem": {
+      "text": "حالة النظام المباشر — اسحب لإعادة الترتيب",
+      "sourceHash": "57e91bf745c5",
+      "updatedAt": "2026-08-17T21:34:57.860Z"
+    },
+    "op.pulse.autosaveFailed": {
+      "text": "فشل الحفظ التلقائي للحدود",
+      "sourceHash": "874eeff8b691",
+      "updatedAt": "2026-08-17T21:34:59.515Z"
+    },
+    "op.pulse.refreshed": {
+      "text": "تم تحديث لوحة التحكم",
+      "sourceHash": "036e418d4072",
+      "updatedAt": "2026-08-17T21:34:59.515Z"
+    },
+    "op.pulse.refreshFailed": {
+      "text": "فشل التحديث",
+      "sourceHash": "3d1f4a6759f4",
+      "updatedAt": "2026-08-17T21:34:59.515Z"
+    },
+    "op.pulse.clearReviews": {
+      "text": "مسح كل المراجعات المعلقة؟",
+      "sourceHash": "6fdeaaa15241",
+      "updatedAt": "2026-08-17T21:34:59.515Z"
+    },
+    "op.pulse.clearStale": {
+      "text": "مسح مراجعات البذور القديمة؟",
+      "sourceHash": "df6187395702",
+      "updatedAt": "2026-08-17T21:34:59.515Z"
+    },
+    "op.pulse.clearReviewsHint": {
+      "text": "يتم وضع كل مراجعة مؤقتة pending على أنها مرفوضة وتحديث سجلات المراجعة البشرية. تنتقل التغييرات مباشرة إلى المشغلين.",
+      "sourceHash": "07afb627b450",
+      "updatedAt": "2026-08-17T21:34:59.515Z"
+    },
+    "op.pulse.clearStaleHint": {
+      "text": "يحذف فقط المراجعات المعلقة التي ليس لها حساب مالك (بذور/orphan).",
+      "sourceHash": "63a7081f3fd6",
+      "updatedAt": "2026-08-17T21:34:59.515Z"
+    },
+    "op.pulse.clearAllReviews": {
+      "text": "مسح كل المراجعات",
+      "sourceHash": "8aaf3beff76b",
+      "updatedAt": "2026-08-17T21:34:59.515Z"
+    },
+    "op.control.requireReviewHint": {
+      "text": "تبقى الملخصات الحية في المراجعة حتى يوافق المشغل على النشر.",
+      "sourceHash": "a53e9fa17bed",
+      "updatedAt": "2026-08-17T21:37:18.035Z"
+    },
+    "op.control.tokenBudget": {
+      "text": "رصيد الرموز",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T21:37:18.035Z"
+    },
+    "op.control.agentSlots": {
+      "text": "أماكن الوكيل",
+      "sourceHash": "8c545cd72d5e",
+      "updatedAt": "2026-08-17T21:37:18.035Z"
+    },
+    "op.control.uploadsProject": {
+      "text": "رفع الملفات / المشروع",
+      "sourceHash": "e603b0fdace5",
+      "updatedAt": "2026-08-17T21:37:18.035Z"
+    },
+    "op.control.maxDocs": {
+      "text": "الحد الأقصى للمستندات لكل مساحة عمل",
+      "sourceHash": "ca966660897f",
+      "updatedAt": "2026-08-17T21:37:18.035Z"
+    },
+    "op.control.perUpload": {
+      "text": "حد الرفع لكل تحميل",
+      "sourceHash": "763167a3bcf8",
+      "updatedAt": "2026-08-17T21:37:18.035Z"
+    },
+    "op.control.docRetentionLabel": {
+      "text": "مدة الاحتفاظ بالمستندات",
+      "sourceHash": "137567a2e324",
+      "updatedAt": "2026-08-17T21:37:18.035Z"
+    },
+    "op.control.autoDelete": {
+      "text": "الحذف التلقائي بعد انتهاء الصلاحية",
+      "sourceHash": "601cc273b93c",
+      "updatedAt": "2026-08-17T21:37:18.035Z"
+    },
+    "op.control.avatarCap": {
+      "text": "حد الأفاتار",
+      "sourceHash": "74c765571762",
+      "updatedAt": "2026-08-17T21:39:56.176Z"
+    },
+    "op.control.profilePhoto": {
+      "text": "رفع صورة الملف الشخصي",
+      "sourceHash": "a2f3d60ff6b4",
+      "updatedAt": "2026-08-17T21:39:56.176Z"
+    },
+    "op.control.manualSignup": {
+      "text": "التسجيل اليدوي",
+      "sourceHash": "4e9637c91d0e",
+      "updatedAt": "2026-08-17T21:39:56.176Z"
+    },
+    "op.control.standardOnly": {
+      "text": "قياسي فقط",
+      "sourceHash": "aea090c61c44",
+      "updatedAt": "2026-08-17T21:39:56.176Z"
+    },
+    "op.control.loadingModels": {
+      "text": "جاري تحميل النماذج…",
+      "sourceHash": "d23f24f3751f",
+      "updatedAt": "2026-08-17T21:39:56.176Z"
+    },
+    "op.control.docsMode": {
+      "text": "وضع المستندات",
+      "sourceHash": "3d8a8e32654b",
+      "updatedAt": "2026-08-17T21:39:56.176Z"
+    },
+    "op.control.docsModel": {
+      "text": "نموذج المستندات",
+      "sourceHash": "322636a90ca9",
+      "updatedAt": "2026-08-17T21:39:56.176Z"
+    },
+    "op.control.docsTokens": {
+      "text": "رموز المستندات",
+      "sourceHash": "924f8ba06123",
+      "updatedAt": "2026-08-17T21:39:56.176Z"
+    },
+    "op.control.doctrineTokens": {
+      "text": "رموز العقيدة",
+      "sourceHash": "e9758cad685c",
+      "updatedAt": "2026-08-17T21:40:03.879Z"
+    },
+    "op.control.reasoningTokens": {
+      "text": "رموز الاستدلال",
+      "sourceHash": "6284e5999d12",
+      "updatedAt": "2026-08-17T21:40:03.879Z"
+    },
+    "op.control.reasoningBudget": {
+      "text": "ميزانية الاستدلال",
+      "sourceHash": "4d7097470626",
+      "updatedAt": "2026-08-17T21:40:03.879Z"
+    },
+    "op.control.resetRouting": {
+      "text": "إعادة تعيين توجيه النموذج",
+      "sourceHash": "aecd569180f1",
+      "updatedAt": "2026-08-17T21:40:03.879Z"
+    },
+    "op.control.modelsFailed": {
+      "text": "فشل تحميل النماذج",
+      "sourceHash": "4bef3a82f816",
+      "updatedAt": "2026-08-17T21:40:03.879Z"
+    },
+    "op.control.autosaveFailed": {
+      "text": "فشل الحفظ التلقائي",
+      "sourceHash": "6d939c6e7ddd",
+      "updatedAt": "2026-08-17T21:40:03.879Z"
+    },
+    "op.control.recommendedRestored": {
+      "text": "تم استعادة النماذج الموصى بها",
+      "sourceHash": "ffbbb4d61f68",
+      "updatedAt": "2026-08-17T21:40:03.879Z"
+    },
+    "op.control.resetFailed": {
+      "text": "فشل إعادة التعيين",
+      "sourceHash": "ca42c6fe10d0",
+      "updatedAt": "2026-08-17T21:40:03.879Z"
+    },
+    "op.operations.costLedger": {
+      "text": "دفتر التكاليف",
+      "sourceHash": "7af91996d5c5",
+      "updatedAt": "2026-08-17T21:43:04.296Z"
+    },
+    "op.operations.inventoryHint": {
+      "text": "إجراءات المخزون والسياسات · اسحب لإعادة الترتيب",
+      "sourceHash": "5012fe617ecf",
+      "updatedAt": "2026-08-17T21:43:04.296Z"
+    },
+    "op.operations.ledgerSummary": {
+      "text": "ملخص التكاليف",
+      "sourceHash": "7cd55cb04aa7",
+      "updatedAt": "2026-08-17T21:43:04.296Z"
+    },
+    "op.operations.noCost": {
+      "text": "لا توجد مدخلات تكاليف بعد",
+      "sourceHash": "29e480e85bea",
+      "updatedAt": "2026-08-17T21:43:04.296Z"
+    },
+    "op.operations.noCostHint": {
+      "text": "تظهر الصفوف عند استهلاك الجلسات الحية للرموز.",
+      "sourceHash": "9dd655498920",
+      "updatedAt": "2026-08-17T21:43:04.296Z"
+    },
+    "op.operations.noSessions": {
+      "text": "لا توجد جلسات وكيل",
+      "sourceHash": "883776c0ff81",
+      "updatedAt": "2026-08-17T21:43:04.296Z"
+    },
+    "op.operations.noSessionsHint": {
+      "text": "اطرح سؤالاً من مشروع لتعبئة هذا السجل.",
+      "sourceHash": "ec6e46dbc36f",
+      "updatedAt": "2026-08-17T21:43:04.296Z"
+    },
+    "op.operations.openProjects": {
+      "text": "مشروعات مفتوحة",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T21:43:04.296Z"
+    },
+    "op.operations.wipeLedger": {
+      "text": "مسح cost_ledger + بيانات الفترة (بث مباشر لجميع المشغلين)",
+      "sourceHash": "8669767d1260",
+      "updatedAt": "2026-08-17T21:43:05.616Z"
+    },
+    "op.operations.deleteLedgerRow": {
+      "text": "حذف صف من السجل",
+      "sourceHash": "d333e4b0a85f",
+      "updatedAt": "2026-08-17T21:43:05.616Z"
+    },
+    "op.operations.deleteAllSessions": {
+      "text": "حذف كل جلسات الوكيل من Supabase + الذاكرة",
+      "sourceHash": "21052d012d71",
+      "updatedAt": "2026-08-17T21:43:05.616Z"
+    },
+    "op.operations.deleteSession": {
+      "text": "حذف الجلسة",
+      "sourceHash": "ca5747020239",
+      "updatedAt": "2026-08-17T21:43:05.616Z"
+    },
+    "op.catalog.sourceRegistry": {
+      "text": "قائمة المصادر",
+      "sourceHash": "941b018c3188",
+      "updatedAt": "2026-08-17T21:43:05.616Z"
+    },
+    "op.catalog.sourceLede": {
+      "text": "انقر على البطاقة لإعادة التسمية وتحديث الروابط — يتم الحفظ تلقائياً؛ احذف أي صف CSV من البطاقة.",
+      "sourceHash": "7c8b080747dc",
+      "updatedAt": "2026-08-17T21:43:05.616Z"
+    },
+    "op.catalog.registrySummary": {
+      "text": "ملخص القائمة",
+      "sourceHash": "6011e3289ff5",
+      "updatedAt": "2026-08-17T21:43:05.616Z"
+    },
+    "op.catalog.search": {
+      "text": "اسم، بلد، علامات…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T21:43:05.616Z"
+    },
+    "op.catalog.nextPage": {
+      "text": "الصفحة التالية",
+      "sourceHash": "4bfc194b68a3",
+      "updatedAt": "2026-08-17T21:49:26.578Z"
+    },
+    "op.mail.formats": {
+      "text": "CSV · TSV · TXT · JSON",
+      "sourceHash": "704a80b548fb",
+      "updatedAt": "2026-08-17T21:49:26.578Z"
+    },
+    "op.mail.sendFrom": {
+      "text": "من الفريق أو no-reply · قالب اختياري",
+      "sourceHash": "ebfea489306a",
+      "updatedAt": "2026-08-17T21:49:26.578Z"
+    },
+    "op.mail.mailingList": {
+      "text": "قائمة بريدية",
+      "sourceHash": "d2a1123e6461",
+      "updatedAt": "2026-08-17T21:49:26.578Z"
+    },
+    "op.mail.emptyInbox": {
+      "text": "لا توجد رسائل في هذا الصندوق الوارد حتى الآن.",
+      "sourceHash": "f31d8f7896dc",
+      "updatedAt": "2026-08-17T21:49:26.578Z"
+    },
+    "op.mail.accountMix": {
+      "text": "مزيج الحسابات",
+      "sourceHash": "82a81d957eee",
+      "updatedAt": "2026-08-17T21:49:26.578Z"
+    },
+    "op.mail.protectedFounder": {
+      "text": "المؤسس المحمي",
+      "sourceHash": "cde3151a6575",
+      "updatedAt": "2026-08-17T21:49:26.578Z"
+    },
+    "op.mail.subject": {
+      "text": "عنوان الرسالة",
+      "sourceHash": "26225393bc43",
+      "updatedAt": "2026-08-17T21:49:26.578Z"
+    },
+    "op.mail.clearFailed": {
+      "text": "Clear failed",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T21:49:27.459Z"
+    },
+    "op.mail.inboxUpdated": {
+      "text": "Inbox updated",
+      "sourceHash": "8018e96574e3",
+      "updatedAt": "2026-08-17T21:49:27.459Z"
+    },
+    "op.mail.sendFirst": {
+      "text": "Send to the first selected recipient",
+      "sourceHash": "f16135d92e4d",
+      "updatedAt": "2026-08-17T21:49:27.459Z"
+    },
+    "op.mail.chooseFirst": {
+      "text": "Choose recipients, subject, and body first",
+      "sourceHash": "6cd698326ff5",
+      "updatedAt": "2026-08-17T21:49:27.459Z"
+    },
+    "op.mail.sending": {
+      "text": "Sending…",
+      "sourceHash": "cf765512cc6d",
+      "updatedAt": "2026-08-17T21:49:27.459Z"
+    },
+    "op.mail.selectRecipients": {
+      "text": "Select one or more mailing-list recipients",
+      "sourceHash": "1123d3a102d6",
+      "updatedAt": "2026-08-17T21:49:27.459Z"
+    },
+    "op.mail.clearMailbox": {
+      "text": "Clear every message in this mailbox",
+      "sourceHash": "5bcd36e89277",
+      "updatedAt": "2026-08-17T21:49:27.459Z"
+    },
+    "op.mail.clearMessage": {
+      "text": "Clear this message",
+      "sourceHash": "7e381d95a625",
+      "updatedAt": "2026-08-17T21:49:27.459Z"
+    },
+    "op.support.replySent": {
+      "text": "تم الإرسال",
+      "sourceHash": "94295a73231c",
+      "updatedAt": "2026-08-17T21:50:56.613Z"
+    },
+    "op.support.sendFailed": {
+      "text": "فشل الإرسال",
+      "sourceHash": "07a7900ae8fa",
+      "updatedAt": "2026-08-17T21:50:56.613Z"
+    },
+    "op.support.resolved": {
+      "text": "تم الحل",
+      "sourceHash": "b9d31bc63252",
+      "updatedAt": "2026-08-17T21:50:56.613Z"
+    },
+    "op.support.updateFailed": {
+      "text": "فشل التحديث",
+      "sourceHash": "4de04cd91a3d",
+      "updatedAt": "2026-08-17T21:50:56.613Z"
+    },
+    "op.support.assigned": {
+      "text": "تم تعيين المحادثة لك",
+      "sourceHash": "787db9416277",
+      "updatedAt": "2026-08-17T21:50:56.613Z"
+    },
+    "op.support.assignFailed": {
+      "text": "فشل التعيين",
+      "sourceHash": "bb279ac46030",
+      "updatedAt": "2026-08-17T21:50:56.613Z"
+    },
+    "op.support.archived": {
+      "text": "تم أرشفة المحادثة المحلولة",
+      "sourceHash": "7f2d0c81d33e",
+      "updatedAt": "2026-08-17T21:50:56.613Z"
+    },
+    "op.support.archiveFailed": {
+      "text": "فشل الأرشفة",
+      "sourceHash": "fa2362f21035",
+      "updatedAt": "2026-08-17T21:50:56.613Z"
+    },
+    "op.support.noResolved": {
+      "text": "لا توجد محادثات已解决 لتخزينها",
+      "sourceHash": "5e23ade8e268",
+      "updatedAt": "2026-08-17T21:50:58.036Z"
+    },
+    "support.chat.attachHint": {
+      "text": "أرفق صورة (PNG, JPEG, WebP, GIF · 1.5 MB)",
+      "sourceHash": "e2496de6e1bf",
+      "updatedAt": "2026-08-17T21:50:58.036Z"
+    },
+    "support.chat.newReply": {
+      "text": "رد دعم جديد",
+      "sourceHash": "c8aad4b8dbca",
+      "updatedAt": "2026-08-17T21:50:58.036Z"
+    },
+    "support.chat.ready": {
+      "text": "محادثة جديدة جاهزة — أرسل رسالة للبدء",
+      "sourceHash": "f8df923263c6",
+      "updatedAt": "2026-08-17T21:50:58.036Z"
+    },
+    "support.chat.signInRequired": {
+      "text": "يجب تسجيل الدخول للتواصل مع الدعم",
+      "sourceHash": "4b61a483a26f",
+      "updatedAt": "2026-08-17T21:50:58.036Z"
+    },
+    "support.chat.resolvedContinue": {
+      "text": "تم حل هذه المحادثة. ابدأ محادثة جديدة للمتابعة.",
+      "sourceHash": "99fbd68dd31b",
+      "updatedAt": "2026-08-17T21:50:58.036Z"
+    },
+    "support.chat.sendFailed": {
+      "text": "لا يمكن الإرسال",
+      "sourceHash": "8b34d37599a8",
+      "updatedAt": "2026-08-17T21:50:58.036Z"
+    },
+    "support.chat.invalidImage": {
+      "text": "صورة غير صالحة",
+      "sourceHash": "681014468ba7",
+      "updatedAt": "2026-08-17T21:50:58.036Z"
+    },
+    "support.chat.topic.access": {
+      "text": "الوصول",
+      "sourceHash": "2f81a22de0af",
+      "updatedAt": "2026-08-17T21:53:39.592Z"
+    },
+    "support.chat.topic.briefs": {
+      "text": "ملخصات",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T21:53:39.592Z"
+    },
+    "support.chat.topic.projects": {
+      "text": "مشاريع",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T21:53:39.592Z"
+    },
+    "support.chat.topic.plans": {
+      "text": "خطط",
+      "sourceHash": "cf2e5f26fef8",
+      "updatedAt": "2026-08-17T21:53:39.592Z"
+    },
+    "support.chat.canned.access": {
+      "text": "أنا بحاجة إلى مساعدة في تسجيل الدخول أو الوصول إلى مساحة العمل الخاصة بي.",
+      "sourceHash": "6921c24ea727",
+      "updatedAt": "2026-08-17T21:53:39.592Z"
+    },
+    "support.chat.canned.briefs": {
+      "text": "أنا بحاجة إلى مساعدة في مراجعة أو تصدير ملخص قرار.",
+      "sourceHash": "0ee61394f841",
+      "updatedAt": "2026-08-17T21:53:39.592Z"
+    },
+    "support.chat.canned.projects": {
+      "text": "أنا لدي سؤال حول تكوين مشروع أو تشغيل سير العمل.",
+      "sourceHash": "e400b004fbe8",
+      "updatedAt": "2026-08-17T21:53:39.592Z"
+    },
+    "support.chat.canned.plans": {
+      "text": "أنا أرغب في الإرشاد بشأن الخطط ووصول الفريق لمنظمتي.",
+      "sourceHash": "399700ef9ac7",
+      "updatedAt": "2026-08-17T21:53:39.592Z"
+    },
+    "support.page.needWorkspace": {
+      "text": "هل تحتاج مساحة عمل؟ افتح Octivate أو زور CENSII.",
+      "sourceHash": "dc42eadddae5",
+      "updatedAt": "2026-08-17T22:04:49.323Z"
+    },
+    "support.page.createAccount": {
+      "text": "إنشاء حساب",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T22:04:49.323Z"
+    },
+    "support.page.openWorkspace": {
+      "text": "فتح مساحة عمل",
+      "sourceHash": "8b23311bbdc0",
+      "updatedAt": "2026-08-17T22:04:49.323Z"
+    },
+    "support.page.builtBy": {
+      "text": "مبني من قبل CENSII",
+      "sourceHash": "890270900ae3",
+      "updatedAt": "2026-08-17T22:04:49.323Z"
+    },
+    "support.page.role.founder": {
+      "text": "مؤسس · منتج & مجال",
+      "sourceHash": "4853fc7f81bc",
+      "updatedAt": "2026-08-17T22:04:49.323Z"
+    },
+    "support.page.role.founderDesc": {
+      "text": "رؤية المنتج، حالات استخدام الكاريبي، والمنهجية القرار CENSII.",
+      "sourceHash": "90cd07f23dbe",
+      "updatedAt": "2026-08-17T22:04:49.323Z"
+    },
+    "support.page.role.ai": {
+      "text": "عملية سير الذكاء الاصطناعي & التحقق",
+      "sourceHash": "12d701f87e36",
+      "updatedAt": "2026-08-17T22:04:49.323Z"
+    },
+    "support.page.role.aiDesc": {
+      "text": "تصميم عملية سير الوكيل، فحوصات الأدلة، وتقييم العرض التجريبي.",
+      "sourceHash": "23e12290635b",
+      "updatedAt": "2026-08-17T22:04:49.323Z"
+    },
+    "support.page.role.tech": {
+      "text": "البنية التقنية",
+      "sourceHash": "d6004963fc9a",
+      "updatedAt": "2026-08-17T22:05:05.710Z"
+    },
+    "support.page.role.techDesc": {
+      "text": "بنية MVP، تسليم نموذج أولي، وتشغيل المنصة.",
+      "sourceHash": "20179b862557",
+      "updatedAt": "2026-08-17T22:05:05.710Z"
+    },
+    "support.chat.welcome": {
+      "text": "مرحباً — أنت متصل بدعم حساب Octivate. اختر موضوعًا أو اكتب رسالة رسمية.",
+      "sourceHash": "dbdb8c3ff845",
+      "updatedAt": "2026-08-17T22:05:05.710Z"
+    },
+    "support.chat.speakingWith": {
+      "text": "متحدث مع",
+      "sourceHash": "1365c04cc97e",
+      "updatedAt": "2026-08-17T22:05:05.710Z"
+    },
+    "support.chat.startNew": {
+      "text": "ابدأ محادثة جديدة",
+      "sourceHash": "bf79f47d3ac6",
+      "updatedAt": "2026-08-17T22:05:05.710Z"
+    },
+    "support.chat.you": {
+      "text": "أنت",
+      "sourceHash": "905cb326c779",
+      "updatedAt": "2026-08-17T22:05:05.710Z"
+    },
+    "support.chat.octivate": {
+      "text": "Octivate",
+      "sourceHash": "5076ec0702e6",
+      "updatedAt": "2026-08-17T22:05:05.710Z"
+    },
+    "support.chat.resolvedBody": {
+      "text": "تم إغلاق هذه المحادثة. ابدأ محادثة جديدة إذا كنت لا تزال بحاجة للمساعدة.",
+      "sourceHash": "04f13ea5232b",
+      "updatedAt": "2026-08-17T22:05:05.710Z"
+    },
+    "onboard.ui.workspaceTour": {
+      "text": "جولة workspace",
+      "sourceHash": "9edf55888973",
+      "updatedAt": "2026-08-17T22:05:06.776Z"
+    },
+    "onboard.ui.operatorTour": {
+      "text": "جولة المشغل",
+      "sourceHash": "1538c47330f3",
+      "updatedAt": "2026-08-17T22:05:06.776Z"
+    },
+    "onboard.ui.closeTour": {
+      "text": "إغلاق الجولة",
+      "sourceHash": "1aca7dc4d76a",
+      "updatedAt": "2026-08-17T22:05:06.776Z"
+    },
+    "onboard.ui.skip": {
+      "text": "تخطي الجولة",
+      "sourceHash": "57bc79e3c907",
+      "updatedAt": "2026-08-17T22:05:06.776Z"
+    },
+    "onboard.ui.back": {
+      "text": "رجوع",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T22:05:06.776Z"
+    },
+    "onboard.ui.next": {
+      "text": "التالي",
+      "sourceHash": "bc981983e7f5",
+      "updatedAt": "2026-08-17T22:05:06.776Z"
+    },
+    "onboard.ui.getStarted": {
+      "text": "ابدأ الآن",
+      "sourceHash": "90e40d504340",
+      "updatedAt": "2026-08-17T22:05:06.776Z"
+    },
+    "onboard.ui.stepOf": {
+      "text": "الخطوة {n} من {total}",
+      "sourceHash": "78cee4b898d5",
+      "updatedAt": "2026-08-17T22:05:06.776Z"
+    },
+    "onboard.ui.tutorial": {
+      "text": "دليل",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T22:05:27.114Z"
+    },
+    "onboard.ws.5.b3.lead": {
+      "text": "ملخص تجريبي",
+      "sourceHash": "24a56e96ac52",
+      "updatedAt": "2026-08-17T22:05:27.114Z"
+    },
+    "onboard.ws.5.b3": {
+      "text": "كما أنه مرتبط أيضًا من صفحة الهبوط العامة",
+      "sourceHash": "459724e94bb1",
+      "updatedAt": "2026-08-17T22:05:27.114Z"
+    },
+    "onboard.ws.6.kicker": {
+      "text": "الخطوة 6 · مُراقبات",
+      "sourceHash": "d168aae1315a",
+      "updatedAt": "2026-08-17T22:05:27.114Z"
+    },
+    "onboard.ws.6.title": {
+      "text": "مشاهدة الإشارات",
+      "sourceHash": "1ac5be293e80",
+      "updatedAt": "2026-08-17T22:05:27.114Z"
+    },
+    "onboard.ws.6.accent": {
+      "text": "بين الجولات",
+      "sourceHash": "785d2df244cb",
+      "updatedAt": "2026-08-17T22:05:27.114Z"
+    },
+    "onboard.ws.6.tagline": {
+      "text": "مراقبة الكلمات المفتاحية والمناطق القضائية.",
+      "sourceHash": "55bdd583833b",
+      "updatedAt": "2026-08-17T22:05:27.114Z"
+    },
+    "onboard.ws.6.desc": {
+      "text": "تُراقب المُراقبات المواضيع عبر الولايات القضائية في الكاريبي أثناء عملك. أنشئها من المُراقبات وتحقق من التنبيهات بين دورات الملخص.",
+      "sourceHash": "11e264bb858e",
+      "updatedAt": "2026-08-17T22:05:27.114Z"
+    },
+    "onboard.ws.6.b1.lead": {
+      "text": "إنشاء",
+      "sourceHash": "6e157c5da441",
+      "updatedAt": "2026-08-17T22:05:36.177Z"
+    },
+    "onboard.ws.6.b1": {
+      "text": "عنصر من شريط المراقبين",
+      "sourceHash": "0b2f9dadee88",
+      "updatedAt": "2026-08-17T22:05:36.177Z"
+    },
+    "onboard.ws.6.b2.lead": {
+      "text": "الولايات القضائية",
+      "sourceHash": "f5c46b8a7a74",
+      "updatedAt": "2026-08-17T22:05:36.177Z"
+    },
+    "onboard.ws.6.b2": {
+      "text": "مرآة شارة التغطية على الموقع العام",
+      "sourceHash": "d875a1715457",
+      "updatedAt": "2026-08-17T22:05:36.177Z"
+    },
+    "onboard.ws.6.b3.lead": {
+      "text": "العودة هنا",
+      "sourceHash": "de5937ab71b9",
+      "updatedAt": "2026-08-17T22:05:36.177Z"
+    },
+    "onboard.ws.6.b3": {
+      "text": "عندما تحتاج إلى تشغيل تحليل كامل مرة أخرى",
+      "sourceHash": "30f05e6db135",
+      "updatedAt": "2026-08-17T22:05:36.177Z"
+    },
+    "onboard.ws.7.kicker": {
+      "text": "الخطوة 7 · ترجمة",
+      "sourceHash": "97ff8d3a52eb",
+      "updatedAt": "2026-08-17T22:05:36.177Z"
+    },
+    "onboard.ws.7.title": {
+      "text": "تبديل",
+      "sourceHash": "3e44c920427e",
+      "updatedAt": "2026-08-17T22:05:36.177Z"
+    },
+    "onboard.ws.7.accent": {
+      "text": "اللغة في أي وقت",
+      "sourceHash": "d29bfe062b1a",
+      "updatedAt": "2026-08-17T22:06:25.066Z"
+    },
+    "onboard.ws.7.tagline": {
+      "text": "كتالوجات في الوقت الفعلي من تحكم لغة الموقع.",
+      "sourceHash": "cca5a8c696b4",
+      "updatedAt": "2026-08-17T22:06:25.066Z"
+    },
+    "onboard.ws.7.desc": {
+      "text": "Octivate يستخدم كتالوجات i18n الدائمة — اختر منطقة لغوية من تحكم لغة الموقع العام وتحديث Chrome فوراً. لا توجد أداة ترجمة صفحات من طرف ثالث.",
+      "sourceHash": "e047844bf1ae",
+      "updatedAt": "2026-08-17T22:06:25.066Z"
+    },
+    "onboard.ws.7.b1.lead": {
+      "text": "اللغات",
+      "sourceHash": "db07be184479",
+      "updatedAt": "2026-08-17T22:06:25.066Z"
+    },
+    "onboard.ws.7.b1": {
+      "text": "تغطية الكاريبي والعروض التجريبية العالمية",
+      "sourceHash": "522d37e0e94c",
+      "updatedAt": "2026-08-17T22:06:25.066Z"
+    },
+    "onboard.ws.7.b2.lead": {
+      "text": "كتالوجات",
+      "sourceHash": "d99c226d02cb",
+      "updatedAt": "2026-08-17T22:06:25.066Z"
+    },
+    "onboard.ws.7.b2": {
+      "text": "المزامنة من OpenRouter وتخزين على الخادم",
+      "sourceHash": "106e3bc14187",
+      "updatedAt": "2026-08-17T22:06:25.066Z"
+    },
+    "onboard.ws.7.b3.lead": {
+      "text": "Chrome العام",
+      "sourceHash": "8a24037bce03",
+      "updatedAt": "2026-08-17T22:06:25.066Z"
+    },
+    "onboard.ws.7.b3": {
+      "text": "يحتوي على مُحدد اللغة في صفحات التسويق",
+      "sourceHash": "570b0a3feda1",
+      "updatedAt": "2026-08-17T22:12:09.382Z"
+    },
+    "onboard.ws.8.kicker": {
+      "text": "Step 8 · إضاءة",
+      "sourceHash": "a80faf25b3ce",
+      "updatedAt": "2026-08-17T22:12:09.382Z"
+    },
+    "onboard.ws.8.title": {
+      "text": "حدد ملفك",
+      "sourceHash": "277523aea813",
+      "updatedAt": "2026-08-17T22:12:09.382Z"
+    },
+    "onboard.ws.8.accent": {
+      "text": "الإضاءة",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T22:12:09.382Z"
+    },
+    "onboard.ws.8.tagline": {
+      "text": "ضوء أو ظلام — نفس لغة المنتج.",
+      "sourceHash": "d9336b5e71e3",
+      "updatedAt": "2026-08-17T22:12:09.382Z"
+    },
+    "onboard.ws.8.desc": {
+      "text": "تُحدث الإضاءة تبديل الثيمات بين الضوء والظلام عبر نظرة عامة، المشاريع، والشريط الجانبي. استخدم تحكم الشمس / القمر في شريط التنقل في الموقع العام أو التذييل — التي تجعل الخرائط والموجزات مريحة.",
+      "sourceHash": "b9b3db1a1087",
+      "updatedAt": "2026-08-17T22:12:09.382Z"
+    },
+    "onboard.ws.8.b1.lead": {
+      "text": "تبديل",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T22:12:09.382Z"
+    },
+    "onboard.ws.8.b1": {
+      "text": "يضبط إضاءة الشمس / القمر فورًا",
+      "sourceHash": "3731c411d0ff",
+      "updatedAt": "2026-08-17T22:12:09.382Z"
+    },
+    "onboard.ws.8.b2.lead": {
+      "text": "خرائط",
+      "sourceHash": "80071cd75107",
+      "updatedAt": "2026-08-17T22:12:18.613Z"
+    },
+    "onboard.ws.8.b2": {
+      "text": "اتبع المظهر النشط لتباين البلاط",
+      "sourceHash": "52dd87360f0a",
+      "updatedAt": "2026-08-17T22:12:18.613Z"
+    },
+    "onboard.ws.8.b3.lead": {
+      "text": "التفضيل",
+      "sourceHash": "97d9b2888847",
+      "updatedAt": "2026-08-17T22:12:18.613Z"
+    },
+    "onboard.ws.8.b3": {
+      "text": "يبقى مع جلسة المتصفح",
+      "sourceHash": "e5feed566b0f",
+      "updatedAt": "2026-08-17T22:12:18.613Z"
+    },
+    "onboard.ws.9.kicker": {
+      "text": "خطوة 9 · تنبيهات الدعم",
+      "sourceHash": "9a34fc8570e3",
+      "updatedAt": "2026-08-17T22:12:18.613Z"
+    },
+    "onboard.ws.9.title": {
+      "text": "بمساعدة؟",
+      "sourceHash": "864a198ed64a",
+      "updatedAt": "2026-08-17T22:12:18.613Z"
+    },
+    "onboard.ws.9.accent": {
+      "text": "مساعدة + تنبيهات",
+      "sourceHash": "5de10bb7b38b",
+      "updatedAt": "2026-08-17T22:12:18.613Z"
+    },
+    "onboard.ws.9.tagline": {
+      "text": "دعم مباشر للأعضاء مع تنبيهات الرد",
+      "sourceHash": "1be68997ca1c",
+      "updatedAt": "2026-08-17T22:12:18.613Z"
+    },
+    "onboard.ws.9.desc": {
+      "text": "أعضاء مساحة العمل يستخدمون درد المساعدة العائمة — وليس صندوق المشغل. عند رد الموظفين، يمكن لـ Octivate عرض تنبيهات الدعم حتى لا تفوت السلسلة. يرد المشغلون من دعم العملاء بدلاً من ذلك.",
+      "sourceHash": "77b21b62e2b9",
+      "updatedAt": "2026-08-17T22:12:28.118Z"
+    },
+    "onboard.ws.9.b1.lead": {
+      "text": "دردشة المساعدة",
+      "sourceHash": "7ba80729c84c",
+      "updatedAt": "2026-08-17T22:12:28.118Z"
+    },
+    "onboard.ws.9.b1": {
+      "text": "يفتح سلسلة دعم حسابك",
+      "sourceHash": "d9db0e6aba67",
+      "updatedAt": "2026-08-17T22:12:28.118Z"
+    },
+    "onboard.ws.9.b2.lead": {
+      "text": "تنبيهات",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T22:12:28.118Z"
+    },
+    "onboard.ws.9.b2": {
+      "text": "يُنبّهك عند رد الفريق",
+      "sourceHash": "f3cbe9b57721",
+      "updatedAt": "2026-08-17T22:12:28.118Z"
+    },
+    "onboard.ws.9.b3.lead": {
+      "text": "مواضيع سريعة",
+      "sourceHash": "df9701935ffd",
+      "updatedAt": "2026-08-17T22:12:28.118Z"
+    },
+    "onboard.ws.9.b3": {
+      "text": "تغطي الملخصات، المشاريع، العروض، والخطط",
+      "sourceHash": "a00b3d05a891",
+      "updatedAt": "2026-08-17T22:12:28.118Z"
+    },
+    "onboard.ws.10.kicker": {
+      "text": "الخطوة 10 · قانوني",
+      "sourceHash": "d35eeb64a72a",
+      "updatedAt": "2026-08-17T22:12:28.118Z"
+    },
+    "onboard.ws.10.title": {
+      "text": "سياسة الخصوصية",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T22:12:39.361Z"
+    },
+    "onboard.ws.10.accent": {
+      "text": "& شروط الخدمة",
+      "sourceHash": "f136e8bfcfcd",
+      "updatedAt": "2026-08-17T22:12:39.361Z"
+    },
+    "onboard.ws.10.tagline": {
+      "text": "فتح الصفحة إما من تذييل الشريط الجانبي.",
+      "sourceHash": "7470de490eb4",
+      "updatedAt": "2026-08-17T22:12:39.361Z"
+    },
+    "onboard.ws.10.desc": {
+      "text": "تتواجد سياسة الخصوصية وشروط الخدمة في تذييل الشريط الجانبي. اضغط على أي رابط في أي وقت لفتح الصفحة الكاملة العامة.",
+      "sourceHash": "5acee761c11a",
+      "updatedAt": "2026-08-17T22:12:39.361Z"
+    },
+    "onboard.ws.10.b1.lead": {
+      "text": "سياسة الخصوصية",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T22:12:39.361Z"
+    },
+    "onboard.ws.10.b1": {
+      "text": "يغطي استخدام البيانات وملفات تعريف الارتباط",
+      "sourceHash": "4ee048f7abbd",
+      "updatedAt": "2026-08-17T22:12:39.361Z"
+    },
+    "onboard.ws.10.b2.lead": {
+      "text": "شروط الخدمة",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T22:12:39.361Z"
+    },
+    "onboard.ws.10.b2": {
+      "text": "تغطي استخدام المنصة والحسابات",
+      "sourceHash": "8867a248339a",
+      "updatedAt": "2026-08-17T22:12:39.361Z"
+    },
+    "onboard.ws.10.b3.lead": {
+      "text": "تذييل الشريط الجانبي",
+      "sourceHash": "d6450b68a39a",
+      "updatedAt": "2026-08-17T22:16:58.042Z"
+    },
+    "onboard.ws.10.b3": {
+      "text": "يحتفظ بروابط الطرفين على بعد نقرة واحدة",
+      "sourceHash": "9e79f002da45",
+      "updatedAt": "2026-08-17T22:16:58.042Z"
+    },
+    "onboard.op.1.kicker": {
+      "text": "الخطوة 1 · Pulse",
+      "sourceHash": "69e8ed5685c2",
+      "updatedAt": "2026-08-17T22:16:58.042Z"
+    },
+    "onboard.op.1.title": {
+      "text": "ابدأ",
+      "sourceHash": "f6702a1554c6",
+      "updatedAt": "2026-08-17T22:16:58.042Z"
+    },
+    "onboard.op.1.accent": {
+      "text": "Pulse",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T22:16:58.042Z"
+    },
+    "onboard.op.1.tagline": {
+      "text": "الصحة الحية لأنابيب الإنتاج.",
+      "sourceHash": "60c7ce936d28",
+      "updatedAt": "2026-08-17T22:16:58.042Z"
+    },
+    "onboard.op.1.desc": {
+      "text": "Pulse هو المنزل للمشغل. افحص صحة الجلسة، وحرق الرموز، ومراجعة القوائم قبل الغوص في أعمق أدوات التحكم.",
+      "sourceHash": "a92cbe53d3c5",
+      "updatedAt": "2026-08-17T22:16:58.042Z"
+    },
+    "onboard.op.1.b1.lead": {
+      "text": "مؤشرات الأداء الرئيسية",
+      "sourceHash": "6911b88f3e2c",
+      "updatedAt": "2026-08-17T22:16:58.042Z"
+    },
+    "onboard.op.1.b1": {
+      "text": "عرض الرموز، الوكلاء، وحمل المراجعة",
+      "sourceHash": "d85127f0f3b1",
+      "updatedAt": "2026-08-17T22:21:13.868Z"
+    },
+    "onboard.op.1.b2.lead": {
+      "text": "تبويبات الهاش",
+      "sourceHash": "f235f2664aa1",
+      "updatedAt": "2026-08-17T22:21:13.868Z"
+    },
+    "onboard.op.1.b2": {
+      "text": "قفز إلى أي قسم من الكونسول فوراً",
+      "sourceHash": "1ba380c39f19",
+      "updatedAt": "2026-08-17T22:21:13.868Z"
+    },
+    "onboard.op.2.kicker": {
+      "text": "الخطوة 2 · تغطية المسرح",
+      "sourceHash": "32e579542860",
+      "updatedAt": "2026-08-17T22:21:13.868Z"
+    },
+    "onboard.op.2.title": {
+      "text": "يُرسِل Workspace",
+      "sourceHash": "fb40fd293dbf",
+      "updatedAt": "2026-08-17T22:21:13.868Z"
+    },
+    "onboard.op.2.accent": {
+      "text": "خريطة تغطية المسرح",
+      "sourceHash": "52060df656b1",
+      "updatedAt": "2026-08-17T22:21:13.868Z"
+    },
+    "onboard.op.2.tagline": {
+      "text": "يُشير فقط — يظل على كونسول المشغل.",
+      "sourceHash": "9b4f29cd12bd",
+      "updatedAt": "2026-08-17T22:21:13.868Z"
+    },
+    "onboard.op.2.desc": {
+      "text": "يرى الأعضاء خريطة تغطية المسرح الحية في مساحة العمل (نقطة جذب Leaflet حسب البلد). يواصل المشغلون العمل هنا؛ افتح وضع مساحة العمل عندما تريد معاينة الخريطة نفسها. تشير هذه الخطوة إلى الإضافة فقط.",
+      "sourceHash": "d6d28a804b12",
+      "updatedAt": "2026-08-17T22:21:13.868Z"
+    },
+    "onboard.op.2.b1.lead": {
+      "text": "خريطة عامة",
+      "sourceHash": "c7511c10a051",
+      "updatedAt": "2026-08-17T22:22:28.734Z"
+    },
+    "onboard.op.2.b1": {
+      "text": "يوجد على /dashboard للأعضاء",
+      "sourceHash": "1e1143c480cb",
+      "updatedAt": "2026-08-17T22:22:28.734Z"
+    },
+    "onboard.op.2.b2.lead": {
+      "text": "نقاط ساخنة",
+      "sourceHash": "dfaae54c27bc",
+      "updatedAt": "2026-08-17T22:22:28.734Z"
+    },
+    "onboard.op.2.b2": {
+      "text": "تعكس جغرافيا المشروع والعدديات",
+      "sourceHash": "76707569e685",
+      "updatedAt": "2026-08-17T22:22:28.734Z"
+    },
+    "onboard.op.2.b3.lead": {
+      "text": "لا تحويل",
+      "sourceHash": "37fe346e787e",
+      "updatedAt": "2026-08-17T22:22:28.734Z"
+    },
+    "onboard.op.2.b3": {
+      "text": "تبقى الجولة على لوحة قيادة المشغل",
+      "sourceHash": "0a35fadeb5cf",
+      "updatedAt": "2026-08-17T22:22:28.734Z"
+    },
+    "onboard.op.3.kicker": {
+      "text": "الخطوة 3 · عمليات",
+      "sourceHash": "cdff61105edd",
+      "updatedAt": "2026-08-17T22:22:28.734Z"
+    },
+    "onboard.op.3.title": {
+      "text": "واضح و",
+      "sourceHash": "6667043443c3",
+      "updatedAt": "2026-08-17T22:22:28.734Z"
+    },
+    "onboard.op.3.accent": {
+      "text": "متوسطة",
+      "sourceHash": "78cd1257c37f",
+      "updatedAt": "2026-08-17T22:22:43.657Z"
+    },
+    "onboard.op.3.tagline": {
+      "text": "تنظيف الجلسة، i18n sync، ونشر السجل",
+      "sourceHash": "3c858c894d26",
+      "updatedAt": "2026-08-17T22:22:43.657Z"
+    },
+    "onboard.op.3.desc": {
+      "text": "تغطي العمليات الصيانة — إزالة الجلسات العالقة، قوائم المراجعة، sync i18n للمجلدات، وناشر مستقبل السجل الكاريبي",
+      "sourceHash": "e8ffdad59fd2",
+      "updatedAt": "2026-08-17T22:22:43.657Z"
+    },
+    "onboard.op.3.b1.lead": {
+      "text": "استخدم بحذر",
+      "sourceHash": "2e4662c69cf1",
+      "updatedAt": "2026-08-17T22:22:43.657Z"
+    },
+    "onboard.op.3.b1": {
+      "text": "الإجراءات هنا تؤثر على حالة الإنتاج المباشر",
+      "sourceHash": "ebed7ca8f314",
+      "updatedAt": "2026-08-17T22:22:43.657Z"
+    },
+    "onboard.op.3.b2.lead": {
+      "text": "التدقيق",
+      "sourceHash": "fa1703dd78a0",
+      "updatedAt": "2026-08-17T22:22:43.657Z"
+    },
+    "onboard.op.3.b2": {
+      "text": "الأحداث تصل إلى Debug للأغراض الجنائية",
+      "sourceHash": "e2e5b567527e",
+      "updatedAt": "2026-08-17T22:22:43.657Z"
+    },
+    "onboard.op.4.kicker": {
+      "text": "الخطوة 4 · تحكم",
+      "sourceHash": "cf409a59474c",
+      "updatedAt": "2026-08-17T22:22:43.657Z"
+    },
+    "onboard.op.4.title": {
+      "text": "ضبط المنصة",
+      "sourceHash": "6c57929aaaff",
+      "updatedAt": "2026-08-17T22:24:38.001Z"
+    },
+    "onboard.op.4.accent": {
+      "text": "حدود",
+      "sourceHash": "9523ccbcc4c5",
+      "updatedAt": "2026-08-17T22:24:38.001Z"
+    },
+    "onboard.op.4.tagline": {
+      "text": "الرموز، التحميلات، الصور الرمزية، و سياسة المراجعة.",
+      "sourceHash": "324ca1ebc063",
+      "updatedAt": "2026-08-17T22:24:38.001Z"
+    },
+    "onboard.op.4.desc": {
+      "text": "ضبط حدود runtime: الرموز اليومية، الوكلاء المتزامنين، حجم التحميل، KB الصور، طول السيرة الذاتية، وسياسة المراجعة البشرية. يحفظ تلقائياً.",
+      "sourceHash": "89f1ae55703d",
+      "updatedAt": "2026-08-17T22:24:38.001Z"
+    },
+    "onboard.op.4.b1.lead": {
+      "text": "ملف التعريف",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T22:24:38.001Z"
+    },
+    "onboard.op.4.b1": {
+      "text": "KB الصور + أحرف السيرة للأعضاء",
+      "sourceHash": "1b67c63a6796",
+      "updatedAt": "2026-08-17T22:24:38.001Z"
+    },
+    "onboard.op.4.b2.lead": {
+      "text": "تبديلات السياسات",
+      "sourceHash": "f55fcb9621a8",
+      "updatedAt": "2026-08-17T22:24:38.001Z"
+    },
+    "onboard.op.4.b2": {
+      "text": "نماذج مميزة و مراجعة مطلوبة",
+      "sourceHash": "040dad7e7738",
+      "updatedAt": "2026-08-17T22:24:38.001Z"
+    },
+    "onboard.op.5.kicker": {
+      "text": "الخطوة 5 · كتالوج",
+      "sourceHash": "5aa04e638450",
+      "updatedAt": "2026-08-17T22:24:59.587Z"
+    },
+    "onboard.op.5.title": {
+      "text": "المصادر و",
+      "sourceHash": "802bb75da6d8",
+      "updatedAt": "2026-08-17T22:24:59.587Z"
+    },
+    "onboard.op.5.accent": {
+      "text": "إشارات",
+      "sourceHash": "0ab56c376c0a",
+      "updatedAt": "2026-08-17T22:24:59.587Z"
+    },
+    "onboard.op.5.tagline": {
+      "text": "استيراد وتنقيح مدخلات الأدلة.",
+      "sourceHash": "2a9d3f29bdd9",
+      "updatedAt": "2026-08-17T22:24:59.587Z"
+    },
+    "onboard.op.5.desc": {
+      "text": "يدير الكتالوج حزم المصادر والمستوردات التي تغذي عمليات المراقبة وأعمال التعليل. احتفظ بنظافة النسب قبل إرسال الملخصات.",
+      "sourceHash": "c33bc98d7906",
+      "updatedAt": "2026-08-17T22:24:59.587Z"
+    },
+    "onboard.op.5.b1.lead": {
+      "text": "استيراد",
+      "sourceHash": "d6fbc9d2bdd5",
+      "updatedAt": "2026-08-17T22:24:59.587Z"
+    },
+    "onboard.op.5.b2.lead": {
+      "text": "جودة في",
+      "sourceHash": "a4734cf2e252",
+      "updatedAt": "2026-08-17T22:24:59.587Z"
+    },
+    "onboard.op.5.b2": {
+      "text": "جودة الإخراج للملخصات الخلفية",
+      "sourceHash": "0cb55e852c48",
+      "updatedAt": "2026-08-17T22:25:28.532Z"
+    },
+    "onboard.op.6.kicker": {
+      "text": "الخطوة 6 · دعم العملاء",
+      "sourceHash": "d3b5d83837c6",
+      "updatedAt": "2026-08-17T22:25:28.532Z"
+    },
+    "onboard.op.6.title": {
+      "text": "فريق العمل",
+      "sourceHash": "a4730a22cf49",
+      "updatedAt": "2026-08-17T22:25:28.532Z"
+    },
+    "onboard.op.6.accent": {
+      "text": "دعم العملاء",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T22:25:28.532Z"
+    },
+    "onboard.op.6.tagline": {
+      "text": "خيوط عملاء مباشرة مع معاينات آمنة.",
+      "sourceHash": "50716a3366e6",
+      "updatedAt": "2026-08-17T22:25:28.532Z"
+    },
+    "onboard.op.6.desc": {
+      "text": "دعم العملاء هو صندوق بريد المؤسس. رد داخل الخيط، معاينة المرفقات في المتصفح، ولا تنزيل ملفات غير موثوقة محلياً. يستخدم الأعضاء دردشة المساعدة; تجيب هنا.",
+      "sourceHash": "541eec4450ce",
+      "updatedAt": "2026-08-17T22:25:28.532Z"
+    },
+    "onboard.op.6.b1.lead": {
+      "text": "بث مباشر",
+      "sourceHash": "d65e4dee2e51",
+      "updatedAt": "2026-08-17T22:25:28.532Z"
+    },
+    "onboard.op.6.b1": {
+      "text": "يحافظ على خيوط حالية تحت الحمل",
+      "sourceHash": "4b1e8af493f7",
+      "updatedAt": "2026-08-17T22:25:28.532Z"
+    },
+    "onboard.op.6.b2.lead": {
+      "text": "أفاتار",
+      "sourceHash": "fc022ebccbe9",
+      "updatedAt": "2026-08-17T22:26:41.515Z"
+    },
+    "onboard.op.6.b2": {
+      "text": "حدد سمويل، نيرفانا، وجادين",
+      "sourceHash": "48e873e8220f",
+      "updatedAt": "2026-08-17T22:26:41.515Z"
+    },
+    "onboard.op.7.kicker": {
+      "text": "الخطوة 7 · تنبيهات الدعم",
+      "sourceHash": "8372eb12faee",
+      "updatedAt": "2026-08-17T22:26:41.515Z"
+    },
+    "onboard.op.7.title": {
+      "text": "لا تفوت",
+      "sourceHash": "696735ef48a9",
+      "updatedAt": "2026-08-17T22:26:41.515Z"
+    },
+    "onboard.op.7.accent": {
+      "text": "رد العضو",
+      "sourceHash": "5ecb45f06be4",
+      "updatedAt": "2026-08-17T22:26:41.515Z"
+    },
+    "onboard.op.7.tagline": {
+      "text": "تبقى تنبيهات الخلفية مفعلة عبر تبويبات لوحة التحكم.",
+      "sourceHash": "933fce9bc803",
+      "updatedAt": "2026-08-17T22:26:41.515Z"
+    },
+    "onboard.op.7.desc": {
+      "text": "تعمل تنبيهات دعم المشغل في الخلفية. رسائل الأعضاء الجدد تُحفّز toasts وتربط رابطًا عميقًا في سلسلة دعم العملاء — حتى عندما تكون على نبض أو بريد.",
+      "sourceHash": "8055b84f84f5",
+      "updatedAt": "2026-08-17T22:26:41.515Z"
+    },
+    "onboard.op.7.b1.lead": {
+      "text": "toasts",
+      "sourceHash": "0b021d5f7dac",
+      "updatedAt": "2026-08-17T22:26:41.515Z"
+    },
+    "onboard.op.7.b1": {
+      "text": "عرض رسائل الأعضاء الجدد فورًا",
+      "sourceHash": "9aae82a3ea4b",
+      "updatedAt": "2026-08-17T22:26:59.383Z"
+    },
+    "onboard.op.9.title": {
+      "text": "إعداد لوحة التحكم",
+      "sourceHash": "e3cf75e3a804",
+      "updatedAt": "2026-08-17T22:26:59.383Z"
+    },
+    "onboard.op.9.accent": {
+      "text": "الإضاءة",
+      "sourceHash": "3eeb51742b25",
+      "updatedAt": "2026-08-17T22:26:59.383Z"
+    },
+    "onboard.op.9.tagline": {
+      "text": "إضاءة فاتحة أو داكنة لجلسات المشغل الطويلة.",
+      "sourceHash": "96665289ffd6",
+      "updatedAt": "2026-08-17T22:26:59.383Z"
+    },
+    "onboard.op.9.desc": {
+      "text": "تبديل الإضاءة بين الوضع الفاتح والداكن لصفحة المشغل ومنطقة العمل. استخدم التحكم بالشمس / القمر على شريط التنقل أو التذييل للموقع العام.",
+      "sourceHash": "191db2fb643b",
+      "updatedAt": "2026-08-17T22:26:59.383Z"
+    },
+    "onboard.op.9.b1.lead": {
+      "text": "تبديل",
+      "sourceHash": "d5e14b063514",
+      "updatedAt": "2026-08-17T22:26:59.383Z"
+    },
+    "onboard.op.9.b1": {
+      "text": "يظهر على الإطار التسويقي، وليس شريط المشغل الجانبي",
+      "sourceHash": "414d448ecba7",
+      "updatedAt": "2026-08-17T22:26:59.383Z"
+    },
+    "onboard.op.9.b2.lead": {
+      "text": "مشاركة",
+      "sourceHash": "50d0d8dd11a9",
+      "updatedAt": "2026-08-17T22:26:59.383Z"
+    },
+    "onboard.op.9.b2": {
+      "text": "ينقل تفضيلك للثيم إلى وضع مساحة العمل",
+      "sourceHash": "86985668defd",
+      "updatedAt": "2026-08-17T22:27:58.574Z"
+    },
+    "onboard.op.10.b1": {
+      "text": "يتم تعيينه افتراضياً إلى بريدك الإلكتروني للمشغل",
+      "sourceHash": "edef1599b4ef",
+      "updatedAt": "2026-08-17T22:27:58.574Z"
+    },
+    "onboard.op.10.b2.lead": {
+      "text": "فحص",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T22:27:58.574Z"
+    },
+    "onboard.op.10.b2": {
+      "text": "يقوم بتجميع تحذيرات وأخطاء هاراكا",
+      "sourceHash": "fea5242b81fb",
+      "updatedAt": "2026-08-17T22:27:58.574Z"
+    },
+    "onboard.op.11.kicker": {
+      "text": "الخطوة ١١ · المستخدمين",
+      "sourceHash": "ae43054a142a",
+      "updatedAt": "2026-08-17T22:27:58.574Z"
+    },
+    "onboard.op.11.title": {
+      "text": "عرض الأعضاء",
+      "sourceHash": "962ea526bfbe",
+      "updatedAt": "2026-08-17T22:27:58.574Z"
+    },
+    "onboard.op.11.accent": {
+      "text": "والبايوهات",
+      "sourceHash": "48e930db5788",
+      "updatedAt": "2026-08-17T22:27:58.574Z"
+    },
+    "onboard.op.11.tagline": {
+      "text": "العدد، إلغاء، وإعادة تعيين كلمات المرور.",
+      "sourceHash": "d17f62313435",
+      "updatedAt": "2026-08-17T22:27:58.574Z"
+    },
+    "onboard.op.11.desc": {
+      "text": "يعرض المستخدمون مزيج التسجيل، نشاط البريد، الأفاتار، والوصفات. يبقى مؤسسو العمليات محميين من الإلغاء/إعادة التعيين هنا.",
+      "sourceHash": "119d0bd4415b",
+      "updatedAt": "2026-08-17T22:28:20.727Z"
+    },
+    "onboard.op.11.b1.lead": {
+      "text": "إعادة تعيين كلمة المرور",
+      "sourceHash": "5c4bc97ee5d0",
+      "updatedAt": "2026-08-17T22:28:20.727Z"
+    },
+    "onboard.op.11.b1": {
+      "text": "نسخ سر مرة واحدة",
+      "sourceHash": "47b0fb92db14",
+      "updatedAt": "2026-08-17T22:28:20.727Z"
+    },
+    "onboard.op.11.b2.lead": {
+      "text": "المؤسسون",
+      "sourceHash": "9a7fd749d2d3",
+      "updatedAt": "2026-08-17T22:28:20.727Z"
+    },
+    "onboard.op.11.b2": {
+      "text": "لا يمكن moderation في هذا اللوحة",
+      "sourceHash": "d220867e9a43",
+      "updatedAt": "2026-08-17T22:28:20.727Z"
+    },
+    "onboard.op.12.kicker": {
+      "text": "خطوة 12 · تسعير",
+      "sourceHash": "618561daf8bd",
+      "updatedAt": "2026-08-17T22:28:20.727Z"
+    },
+    "onboard.op.12.title": {
+      "text": "تعديل الخطة",
+      "sourceHash": "2cdbc67066c5",
+      "updatedAt": "2026-08-17T22:28:20.727Z"
+    },
+    "onboard.op.12.accent": {
+      "text": "نسخ",
+      "sourceHash": "f84e2e2dadd8",
+      "updatedAt": "2026-08-17T22:28:20.727Z"
+    },
+    "onboard.op.12.tagline": {
+      "text": "بطاقات الأسعار العامة والملاحظات.",
+      "sourceHash": "8ff7aaafc31b",
+      "updatedAt": "2026-08-17T22:28:42.816Z"
+    },
+    "legal.terms.liability.title": {
+      "text": "قيود المسؤولية",
+      "sourceHash": "b1a6f886289a",
+      "updatedAt": "2026-08-17T22:28:42.816Z"
+    },
+    "legal.terms.liability.p1": {
+      "text": "بقدر ما يسمح به القانون، لن تكون CENSII وشركاتها التابعة مسؤولة عن أضرار غير مباشرة، عرضية، خاصة، تبعية، أو تأديبية، أو عن الأرباح المفقودة، البيانات، أو السمعة. ولن تتجاوز مسؤوليتنا الجماعية عن الخدمة الرسوم التي دفعتها لنا خلال الـ 12 شهراً السابقة على المطالبة.",
+      "sourceHash": "365dfc530ba0",
+      "updatedAt": "2026-08-17T22:28:42.816Z"
+    },
+    "legal.terms.termination.title": {
+      "text": "التعليق والإلغاء",
+      "sourceHash": "bd4963b1d885",
+      "updatedAt": "2026-08-17T22:28:42.816Z"
+    },
+    "legal.terms.termination.p1": {
+      "text": "يمكننا تعليق أو إنهاء الوصول إذا خرقت هذه الشروط أو إذا كان ذلك ضرورياً لحماية الخدمة أو المستخدمين الآخرين. يمكنك التوقف عن استخدام الخدمة في أي وقت. البنود التي يجب أن تستمر بطبيعتها (بما في ذلك الملكية الفكرية، التنصل، المسؤولية، والقانون الحاكم) ستستمر بعد الإنهاء.",
+      "sourceHash": "566454aef6a7",
+      "updatedAt": "2026-08-17T22:28:42.816Z"
+    },
+    "legal.terms.law.title": {
+      "text": "القانون الحاكم",
+      "sourceHash": "4676ad8df95e",
+      "updatedAt": "2026-08-17T22:28:42.816Z"
+    },
+    "legal.terms.law.p1": {
+      "text": "تُحكم هذه الشروط بقوانين ترينيداد وتوباغو، دون مراعاة قواعد تعارض القوانين، إلا إذا كانت حماية المستهلك الإلزامية في قضيتك تتطلب خلاف ذلك. وتختص محاكم ترينيداد وتوباغو بالاختصاص الحصري، بموجب تلك الحماية الإلزامية.",
+      "sourceHash": "8625634a95dc",
+      "updatedAt": "2026-08-17T22:28:42.816Z"
+    },
+    "legal.terms.contact.title": {
+      "text": "اتصال",
+      "sourceHash": "b37456c4530b",
+      "updatedAt": "2026-08-17T22:28:42.816Z"
     }
   }
 }

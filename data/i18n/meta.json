@@ -1,13 +1,8 @@
 {
-  "version": 3,
-  "updatedAt": "2026-08-17T20:57:26.742Z",
-  "lastSyncAt": "2026-08-17T20:57:26.742Z",
+  "version": 4,
+  "updatedAt": "2026-08-17T22:39:57.130Z",
+  "lastSyncAt": "2026-08-17T22:39:57.130Z",
   "lastSyncLocales": [
-    "ht",
-    "nl",
-    "pt",
-    "de",
-    "zh-CN",
     "ar",
     "hi"
   ]
