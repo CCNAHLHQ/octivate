@@ -1,7 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { hashSource } from "@/lib/i18n/hash";
-import { readObject, writeObject } from "@/lib/store/json-store";
 import type { MessageDict } from "@/lib/i18n/messages";
 
 export type LocaleEntry = {
@@ -24,20 +23,26 @@ export type I18nMeta = {
   lastSyncLocales?: string[];
 };
 
-const ROOT = path.join(process.cwd(), "data", "local", "i18n");
-const META_NAME = "i18n-meta";
-/** Legacy single-file cache — migrated once into per-locale files. */
-const LEGACY_CACHE = "i18n-cache";
+/**
+ * Durable catalogs — committed under data/i18n (NOT data/local).
+ * data/local is gitignored and was wiping/losing all translations on host resets.
+ */
+const ROOT = path.join(process.cwd(), "data", "i18n");
+const META_PATH = path.join(ROOT, "meta.json");
+const LEGACY_LOCAL_ROOT = path.join(process.cwd(), "data", "local", "i18n");
+const LEGACY_CACHE = path.join(process.cwd(), "data", "local", "i18n-cache.json");
+const LEGACY_META = path.join(process.cwd(), "data", "local", "i18n-meta.json");
 
 let writeChain: Promise<void> = Promise.resolve();
 let syncLocked = false;
+let migrated = false;
 
-function localePath(locale: string) {
-  return path.join(ROOT, "locales", `${locale}.json`);
+function localePath(locale: string, root = ROOT) {
+  return path.join(root, "locales", `${locale}.json`);
 }
 
-async function ensureDirs() {
-  await fs.mkdir(path.join(ROOT, "locales"), { recursive: true });
+async function ensureDirs(root = ROOT) {
+  await fs.mkdir(path.join(root, "locales"), { recursive: true });
 }
 
 function enqueueWrite<T>(fn: () => Promise<T>): Promise<T> {
@@ -49,15 +54,30 @@ function enqueueWrite<T>(fn: () => Promise<T>): Promise<T> {
   return run;
 }
 
+async function readJsonFile<T>(file: string, fallback: T): Promise<T> {
+  try {
+    const raw = await fs.readFile(file, "utf8");
+    return JSON.parse(raw) as T;
+  } catch {
+    return fallback;
+  }
+}
+
 export async function readMeta(): Promise<I18nMeta> {
-  return readObject<I18nMeta>(META_NAME, {
+  await ensureDirs();
+  return readJsonFile<I18nMeta>(META_PATH, {
     version: 1,
     updatedAt: new Date(0).toISOString(),
   });
 }
 
 export async function writeMeta(meta: I18nMeta): Promise<void> {
-  await enqueueWrite(() => writeObject(META_NAME, meta));
+  await enqueueWrite(async () => {
+    await ensureDirs();
+    const tmp = `${META_PATH}.${process.pid}.tmp`;
+    await fs.writeFile(tmp, JSON.stringify(meta, null, 2), "utf8");
+    await fs.rename(tmp, META_PATH);
+  });
 }
 
 export async function readLocaleFile(locale: string): Promise<LocaleFile> {
@@ -90,16 +110,49 @@ export function entryFresh(entry: LocaleEntry | undefined, source: string): bool
   return entry.sourceHash === hashSource(source);
 }
 
-/** One-time migrate from data/local/i18n-cache.json into per-locale files. */
-export async function migrateLegacyCacheOnce(): Promise<void> {
-  await ensureDirs();
+async function copyLocaleIfMissing(locale: string, fromRoot: string) {
+  const dest = localePath(locale);
   try {
-    const legacy = await readObject<{
+    await fs.access(dest);
+    return;
+  } catch {
+    /* missing — try legacy */
+  }
+  try {
+    const src = localePath(locale, fromRoot);
+    await fs.access(src);
+    await ensureDirs();
+    await fs.copyFile(src, dest);
+  } catch {
+    /* no legacy locale */
+  }
+}
+
+/** Migrate once from gitignored data/local paths into durable data/i18n. */
+export async function migrateLegacyCacheOnce(): Promise<void> {
+  if (migrated) return;
+  migrated = true;
+  await ensureDirs();
+
+  // Prefer per-locale files under data/local/i18n/locales.
+  try {
+    const legacyLocales = path.join(LEGACY_LOCAL_ROOT, "locales");
+    const names = await fs.readdir(legacyLocales);
+    for (const name of names) {
+      if (!name.endsWith(".json")) continue;
+      await copyLocaleIfMissing(name.replace(/\.json$/, ""), LEGACY_LOCAL_ROOT);
+    }
+  } catch {
+    /* no legacy dir */
+  }
+
+  // Legacy single-file cache.
+  try {
+    const legacy = await readJsonFile<{
       version?: number;
       locales?: Record<string, Record<string, LocaleEntry>>;
     }>(LEGACY_CACHE, { version: 1, locales: {} });
-    const locales = legacy.locales || {};
-    for (const [locale, entries] of Object.entries(locales)) {
+    for (const [locale, entries] of Object.entries(legacy.locales || {})) {
       const existing = await readLocaleFile(locale);
       if (Object.keys(existing.entries).length) continue;
       await writeLocaleFile({
@@ -111,6 +164,20 @@ export async function migrateLegacyCacheOnce(): Promise<void> {
     }
   } catch {
     /* no legacy file */
+  }
+
+  // Meta from old json-store file if durable meta is still default.
+  const meta = await readMeta();
+  if (!meta.lastSyncAt) {
+    const legacyMeta = await readJsonFile<I18nMeta | null>(LEGACY_META, null);
+    if (legacyMeta?.lastSyncAt || (legacyMeta && legacyMeta.version > 1)) {
+      await writeMeta({
+        version: Number(legacyMeta.version || 1),
+        updatedAt: legacyMeta.updatedAt || new Date().toISOString(),
+        lastSyncAt: legacyMeta.lastSyncAt,
+        lastSyncLocales: legacyMeta.lastSyncLocales,
+      });
+    }
   }
 }
 

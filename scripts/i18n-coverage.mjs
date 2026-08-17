@@ -14,7 +14,7 @@ const { hashSource } = jiti(path.join(ROOT, "lib/i18n/hash.ts"));
 
 const en = getEnglishSource();
 const enKeys = Object.keys(en);
-const localesDir = path.join(ROOT, "data/local/i18n/locales");
+const localesDir = path.join(ROOT, "data/i18n/locales");
 
 for (const f of fs.readdirSync(localesDir).filter((x) => x.endsWith(".json"))) {
   const data = JSON.parse(fs.readFileSync(path.join(localesDir, f), "utf8"));

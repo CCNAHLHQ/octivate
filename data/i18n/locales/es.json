@@ -1,0 +1,3527 @@
+{
+  "locale": "es",
+  "version": 90,
+  "updatedAt": "2026-08-17T12:27:34.572Z",
+  "entries": {
+    "nav.product": {
+      "text": "Producto",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T12:11:11.444Z"
+    },
+    "nav.why": {
+      "text": "Por qué Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T12:11:11.444Z"
+    },
+    "nav.how": {
+      "text": "Cómo funciona",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T12:11:11.444Z"
+    },
+    "nav.pricing": {
+      "text": "Precios",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T12:11:11.444Z"
+    },
+    "nav.team": {
+      "text": "Equipo",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T12:11:11.444Z"
+    },
+    "nav.about": {
+      "text": "Acerca de",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T12:11:11.444Z"
+    },
+    "nav.signIn": {
+      "text": "Iniciar sesión",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T12:11:11.444Z"
+    },
+    "nav.requestDemo": {
+      "text": "Comenzar",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T12:11:11.444Z"
+    },
+    "nav.returnWorkspace": {
+      "text": "Volver al espacio de trabajo",
+      "sourceHash": "74f11e0defca",
+      "updatedAt": "2026-08-17T12:11:25.041Z"
+    },
+    "nav.operatorDashboard": {
+      "text": "Panel de operador",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T12:11:25.041Z"
+    },
+    "nav.askQuestion": {
+      "text": "Hacer pregunta",
+      "sourceHash": "93a8a0c60e9c",
+      "updatedAt": "2026-08-17T12:11:25.041Z"
+    },
+    "nav.askQuestionLong": {
+      "text": "Hacer una pregunta",
+      "sourceHash": "cf94bdf39103",
+      "updatedAt": "2026-08-17T12:11:25.041Z"
+    },
+    "nav.skip": {
+      "text": "Saltar al contenido",
+      "sourceHash": "0a4470d64e9d",
+      "updatedAt": "2026-08-17T12:11:25.041Z"
+    },
+    "nav.explore": {
+      "text": "Explorar",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T12:11:25.041Z"
+    },
+    "nav.openMenu": {
+      "text": "Abrir menú",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T12:11:25.041Z"
+    },
+    "nav.closeMenu": {
+      "text": "Cerrar menú",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T12:11:25.041Z"
+    },
+    "nav.translate": {
+      "text": "Traducir",
+      "sourceHash": "2be17aa181d8",
+      "updatedAt": "2026-08-17T12:11:36.907Z"
+    },
+    "nav.translateHint": {
+      "text": "Cacheado en el servidor · Octivate i18n",
+      "sourceHash": "16abeab228fd",
+      "updatedAt": "2026-08-17T12:11:36.907Z"
+    },
+    "nav.primary": {
+      "text": "Principal",
+      "sourceHash": "a9a96ec01949",
+      "updatedAt": "2026-08-17T12:11:36.907Z"
+    },
+    "nav.mobile": {
+      "text": "Móvil",
+      "sourceHash": "b1d702459399",
+      "updatedAt": "2026-08-17T12:11:36.907Z"
+    },
+    "mailing.eyebrow": {
+      "text": "Mantente cerca",
+      "sourceHash": "c1abb6630b0e",
+      "updatedAt": "2026-08-17T12:11:36.907Z"
+    },
+    "mailing.title": {
+      "text": "Mantente cerca de lo que estamos construyendo.",
+      "sourceHash": "e415b8d83f68",
+      "updatedAt": "2026-08-17T12:11:36.907Z"
+    },
+    "mailing.lede": {
+      "text": "Actualizaciones ocasionales sobre Octivate, nuevas capacidades analíticas, perspectivas del contexto operativo caribeño y oportunidades para probar la plataforma.",
+      "sourceHash": "afa148dcdaae",
+      "updatedAt": "2026-08-17T12:11:36.907Z"
+    },
+    "mailing.benefit.updates": {
+      "text": "Actualizaciones de producto y nuevas capacidades.",
+      "sourceHash": "45397ac51acf",
+      "updatedAt": "2026-08-17T12:11:36.907Z"
+    },
+    "mailing.benefit.notes": {
+      "text": "Información seleccionada sobre el contexto operativo del Caribe.",
+      "sourceHash": "8ced50f6a103",
+      "updatedAt": "2026-08-17T12:12:01.897Z"
+    },
+    "mailing.benefit.unsubscribe": {
+      "text": "Acceso anticipado a pilotos, informes breves y oportunidades de prueba.",
+      "sourceHash": "e6df0dd5f574",
+      "updatedAt": "2026-08-17T12:12:01.897Z"
+    },
+    "mailing.email": {
+      "text": "Dirección de correo electrónico",
+      "sourceHash": "c94d3175a656",
+      "updatedAt": "2026-08-17T12:12:01.897Z"
+    },
+    "mailing.name": {
+      "text": "Nombre",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T12:12:01.897Z"
+    },
+    "mailing.nameOptional": {
+      "text": "(opcional)",
+      "sourceHash": "b16c7ac6faff",
+      "updatedAt": "2026-08-17T12:12:01.897Z"
+    },
+    "mailing.emailPlaceholder": {
+      "text": "you@organisation.org",
+      "sourceHash": "2210623ebf8b",
+      "updatedAt": "2026-08-17T12:12:01.897Z"
+    },
+    "mailing.namePlaceholder": {
+      "text": "Nombre",
+      "sourceHash": "7e568a90221d",
+      "updatedAt": "2026-08-17T12:12:01.897Z"
+    },
+    "mailing.consent": {
+      "text": "Acepto recibir correos electrónicos ocasionales de Octivate. Puedo darme de baja en cualquier momento.",
+      "sourceHash": "251b640d0e70",
+      "updatedAt": "2026-08-17T12:12:01.897Z"
+    },
+    "mailing.join": {
+      "text": "Únete a la lista",
+      "sourceHash": "04707f33d156",
+      "updatedAt": "2026-08-17T12:12:14.277Z"
+    },
+    "mailing.saving": {
+      "text": "Guardando…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T12:12:14.277Z"
+    },
+    "mailing.optOut": {
+      "text": "Cancelar suscripción",
+      "sourceHash": "39eb4312f1ff",
+      "updatedAt": "2026-08-17T12:12:14.277Z"
+    },
+    "mailing.fine": {
+      "text": "Tus datos se almacenan solo para esta lista de correo de Octivate y no se venden. Consulta nuestra Política de privacidad sobre cómo procesamos el correo electrónico.",
+      "sourceHash": "45f14a872fda",
+      "updatedAt": "2026-08-17T12:12:14.277Z"
+    },
+    "mailing.consentRequired": {
+      "text": "Por favor, confirma que quieres actualizaciones de producto.",
+      "sourceHash": "0bd437fefded",
+      "updatedAt": "2026-08-17T12:12:14.277Z"
+    },
+    "mailing.success": {
+      "text": "Estás en la lista — solo notas de producto ocasionales.",
+      "sourceHash": "fefa7875f49b",
+      "updatedAt": "2026-08-17T12:12:14.277Z"
+    },
+    "mailing.unsubscribed": {
+      "text": "Te has dado de baja de la lista. Puedes volver a unirte en cualquier momento.",
+      "sourceHash": "15eae8c5d42e",
+      "updatedAt": "2026-08-17T12:12:14.277Z"
+    },
+    "mailing.networkError": {
+      "text": "Error de red. Verifica tu conexión e inténtalo de nuevo.",
+      "sourceHash": "916c8a25c301",
+      "updatedAt": "2026-08-17T12:12:14.277Z"
+    },
+    "mailing.genericError": {
+      "text": "Algo salió mal. Inténtalo de nuevo.",
+      "sourceHash": "4244e822a06c",
+      "updatedAt": "2026-08-17T12:12:15.820Z"
+    },
+    "land.hero.title": {
+      "text": "Claridad para las decisiones que dan forma al Caribe.",
+      "sourceHash": "c977ff7e2f70",
+      "updatedAt": "2026-08-17T12:12:15.820Z"
+    },
+    "land.hero.body": {
+      "text": "En una región llena de señales competidoras, lo difícil es saber qué significan juntas. Octivate conecta la información regional dispersa, prueba lo que se puede confiar y la convierte en juicio basado en evidencia para las decisiones que no pueden esperar.",
+      "sourceHash": "e219cf53254c",
+      "updatedAt": "2026-08-17T12:12:15.820Z"
+    },
+    "land.hero.ctaPrimary": {
+      "text": "Comenzar",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T12:12:15.820Z"
+    },
+    "land.hero.ctaSample": {
+      "text": "Ver una Muestra de Informe",
+      "sourceHash": "bdf4ce16698a",
+      "updatedAt": "2026-08-17T12:12:15.820Z"
+    },
+    "land.why.eyebrow": {
+      "text": "Por qué Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T12:12:15.820Z"
+    },
+    "land.why.title": {
+      "text": "Construido para la forma en que realmente se mueve la información en el Caribe.",
+      "sourceHash": "f2f24843f23e",
+      "updatedAt": "2026-08-17T12:12:15.820Z"
+    },
+    "land.why.1": {
+      "text": "Las fuentes regionales están fragmentadas entre instituciones y jurisdicciones.",
+      "sourceHash": "6a2168b0edc0",
+      "updatedAt": "2026-08-17T12:12:15.820Z"
+    },
+    "land.why.2": {
+      "text": "El contexto importante a menudo aparece fuera de los conjuntos de datos formales.",
+      "sourceHash": "f24b4dfd9981",
+      "updatedAt": "2026-08-17T12:12:56.726Z"
+    },
+    "land.why.3": {
+      "text": "Las relaciones a pequeña escala pueden hacer que las acciones individuales sean extraordinariamente significativas.",
+      "sourceHash": "aa7f3c1348b3",
+      "updatedAt": "2026-08-17T12:12:56.726Z"
+    },
+    "land.why.4": {
+      "text": "Las dinámicas regionales, internacionales y domésticas se superponen con frecuencia.",
+      "sourceHash": "7d7279cd7d5b",
+      "updatedAt": "2026-08-17T12:12:56.726Z"
+    },
+    "land.why.close": {
+      "text": "Octivate está diseñado alrededor de esta realidad operativa en lugar de adaptar un producto global de inteligencia genérico a la región después.",
+      "sourceHash": "316ad433f656",
+      "updatedAt": "2026-08-17T12:12:56.726Z"
+    },
+    "land.lenses.title": {
+      "text": "Cómo Octivate lee el Caribe",
+      "sourceHash": "f2b8e64c1256",
+      "updatedAt": "2026-08-17T12:12:56.726Z"
+    },
+    "land.lenses.lede": {
+      "text": "Octivate examina cada pregunta a través de tres lentes interconectados, luego mira cómo se intersectan.",
+      "sourceHash": "700e2367b157",
+      "updatedAt": "2026-08-17T12:12:56.726Z"
+    },
+    "land.lenses.power": {
+      "text": "Poder",
+      "sourceHash": "7548ab52c3d1",
+      "updatedAt": "2026-08-17T12:12:56.726Z"
+    },
+    "land.lenses.power.q": {
+      "text": "¿Quién puede dar forma al resultado?",
+      "sourceHash": "0b0288ef46ce",
+      "updatedAt": "2026-08-17T12:12:56.726Z"
+    },
+    "land.lenses.power.body": {
+      "text": "Autoridad, influencia, incentivos, coaliciones y relaciones que afectan decisiones.",
+      "sourceHash": "34c4c47d1bce",
+      "updatedAt": "2026-08-17T12:13:18.905Z"
+    },
+    "land.lenses.systems": {
+      "text": "Sistemas",
+      "sourceHash": "e26dfc1f8d96",
+      "updatedAt": "2026-08-17T12:13:18.905Z"
+    },
+    "land.lenses.systems.q": {
+      "text": "¿Qué habilita o limita la acción?",
+      "sourceHash": "2c1c0efa8537",
+      "updatedAt": "2026-08-17T12:13:18.905Z"
+    },
+    "land.lenses.systems.body": {
+      "text": "Instituciones, regulación, infraestructura, capacidad e implementación.",
+      "sourceHash": "f38b6e3ee324",
+      "updatedAt": "2026-08-17T12:13:18.905Z"
+    },
+    "land.lenses.narratives": {
+      "text": "Narrativas",
+      "sourceHash": "1c26c2b8063a",
+      "updatedAt": "2026-08-17T12:13:18.905Z"
+    },
+    "land.lenses.narratives.q": {
+      "text": "¿Cómo se entiende el tema?",
+      "sourceHash": "af380e3bacdb",
+      "updatedAt": "2026-08-17T12:13:18.905Z"
+    },
+    "land.lenses.narratives.body": {
+      "text": "Encuadre, legitimidad, sentimiento público y las historias que moldean la percepción y el comportamiento.",
+      "sourceHash": "4ad73376c397",
+      "updatedAt": "2026-08-17T12:13:18.905Z"
+    },
+    "land.how.eyebrow": {
+      "text": "Cómo funciona Octivate",
+      "sourceHash": "fd1649f0e29c",
+      "updatedAt": "2026-08-17T12:13:18.905Z"
+    },
+    "land.how.title": {
+      "text": "Desde una pregunta de contexto operativo difícil hasta un juicio listo para decidir.",
+      "sourceHash": "e2a54852c40d",
+      "updatedAt": "2026-08-17T12:13:45.267Z"
+    },
+    "land.how.ctaSample": {
+      "text": "Ver una Muestra",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T12:13:45.267Z"
+    },
+    "land.disc.eyebrow": {
+      "text": "Seis disciplinas integradas",
+      "sourceHash": "5758b703370e",
+      "updatedAt": "2026-08-17T12:13:57.913Z"
+    },
+    "land.disc.title": {
+      "text": "Seis disciplinas. Un juicio integrado.",
+      "sourceHash": "ded00ef93dd7",
+      "updatedAt": "2026-08-17T12:13:57.913Z"
+    },
+    "land.disc.lede": {
+      "text": "Cada disciplina contribuye con una parte diferente del análisis. Juntas, convierten la evidencia fragmentada en una visión más clara de lo que importa, lo que podría suceder y cómo responder.",
+      "sourceHash": "05bd7f63cdb4",
+      "updatedAt": "2026-08-17T12:13:57.913Z"
+    },
+    "land.disc.1.title": {
+      "text": "Análisis de economía política y geopolítica",
+      "sourceHash": "dd28e1937d74",
+      "updatedAt": "2026-08-17T12:13:57.913Z"
+    },
+    "land.disc.1.body": {
+      "text": "Cómo la autoridad, los intereses económicos y las presiones externas moldean las decisiones y los resultados probables.",
+      "sourceHash": "8afd68a3d3ef",
+      "updatedAt": "2026-08-17T12:13:57.913Z"
+    },
+    "land.disc.2.title": {
+      "text": "Análisis de sistemas y anticipatorio",
+      "sourceHash": "253865fba412",
+      "updatedAt": "2026-08-17T12:13:57.913Z"
+    },
+    "land.disc.2.body": {
+      "text": "Cómo la autoridad, los intereses económicos y las presiones externas moldean las decisiones y los resultados probables.",
+      "sourceHash": "a4b68fecad0c",
+      "updatedAt": "2026-08-17T12:13:57.913Z"
+    },
+    "land.disc.3.title": {
+      "text": "Análisis de partes interesadas y compromiso",
+      "sourceHash": "fc1ee57068cc",
+      "updatedAt": "2026-08-17T12:13:57.913Z"
+    },
+    "land.disc.3.body": {
+      "text": "Quién puede influir, obstaculizar o legitimar una decisión, y cómo deben gestionarse estas relaciones.",
+      "sourceHash": "e4fa7ce7e339",
+      "updatedAt": "2026-08-17T12:14:26.407Z"
+    },
+    "land.disc.4.title": {
+      "text": "Monitoreo narrativo y comunicación estratégica",
+      "sourceHash": "67e865e68529",
+      "updatedAt": "2026-08-17T12:14:26.407Z"
+    },
+    "land.disc.4.body": {
+      "text": "Cómo el encuadre, la legitimidad y la interpretación pública influyen en el comportamiento, la implementación y la respuesta.",
+      "sourceHash": "98cb45abf1e1",
+      "updatedAt": "2026-08-17T12:14:26.407Z"
+    },
+    "land.disc.5.title": {
+      "text": "Inteligencia de código abierto y validación",
+      "sourceHash": "35756d94e827",
+      "updatedAt": "2026-08-17T12:14:26.407Z"
+    },
+    "land.disc.5.body": {
+      "text": "Recolección, verificación y comparación de evidencia para probar afirmaciones, identificar contradicciones y evaluar la autoridad de la fuente.",
+      "sourceHash": "42f7468221bb",
+      "updatedAt": "2026-08-17T12:14:26.407Z"
+    },
+    "land.disc.6.title": {
+      "text": "Análisis de decisiones y evaluación de opciones",
+      "sourceHash": "cc06adf088e1",
+      "updatedAt": "2026-08-17T12:14:26.407Z"
+    },
+    "land.disc.6.body": {
+      "text": "Unir la evidencia para comparar opciones, probar supuestos, evaluar compensaciones e identificar señales para monitorear.",
+      "sourceHash": "7108d1316127",
+      "updatedAt": "2026-08-17T12:14:26.407Z"
+    },
+    "land.cta.eyebrow": {
+      "text": "Comenzar",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T12:14:26.407Z"
+    },
+    "land.cta.title": {
+      "text": "¿Qué decisión estás intentando tomar?",
+      "sourceHash": "2ce1ab5a8081",
+      "updatedAt": "2026-08-17T12:14:37.459Z"
+    },
+    "land.cta.body": {
+      "text": "Crea una cuenta para llevar Octivate una pregunta real de contexto operativo, identifica la evidencia que importa y conviértela en análisis listo para tomar decisiones.",
+      "sourceHash": "11f71cd06f74",
+      "updatedAt": "2026-08-17T12:14:37.459Z"
+    },
+    "land.cta.create": {
+      "text": "Crear cuenta",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T12:14:37.459Z"
+    },
+    "land.cta.sample": {
+      "text": "Ver una Muestra",
+      "sourceHash": "24a9988d200a",
+      "updatedAt": "2026-08-17T12:14:37.459Z"
+    },
+    "land.cta.emailPrefix": {
+      "text": "O correo electrónico",
+      "sourceHash": "921d0ad714dc",
+      "updatedAt": "2026-08-17T12:14:37.459Z"
+    },
+    "land.about.body": {
+      "text": "Inteligencia de decisiones orientada a la acción para ambientes operativos complejos en el Caribe. Desarrollado por CENSII, Octivate reúne evidencia caribeña fragmentada en una visión estructurada para decisiones más claras.",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T12:14:37.459Z"
+    },
+    "land.about.censii": {
+      "text": "Sobre CENSII",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T12:14:37.459Z"
+    },
+    "land.about.team": {
+      "text": "Equipo",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T12:14:37.459Z"
+    },
+    "land.mail.fab": {
+      "text": "Unirse a la lista de correo",
+      "sourceHash": "dc46f4e0b25c",
+      "updatedAt": "2026-08-17T12:14:38.461Z"
+    },
+    "land.tech.heading": {
+      "text": "Tecnologías",
+      "sourceHash": "1310a448775a",
+      "updatedAt": "2026-08-17T12:14:38.461Z"
+    },
+    "land.tech.lede": {
+      "text": "Ruteo de modelos y asistentes para análisis — más pasarelas de pago para planes.",
+      "sourceHash": "d150c5578dfd",
+      "updatedAt": "2026-08-17T12:14:38.461Z"
+    },
+    "land.tech.demoCta": {
+      "text": "Ver una demo de 1 minuto",
+      "sourceHash": "db9b420f3fdb",
+      "updatedAt": "2026-08-17T12:14:38.461Z"
+    },
+    "land.tech.demoKicker": {
+      "text": "Recorrido del producto",
+      "sourceHash": "76b995c4422a",
+      "updatedAt": "2026-08-17T12:14:38.461Z"
+    },
+    "land.tech.demoTitle": {
+      "text": "Ver Octivate en un minuto",
+      "sourceHash": "20abdfb8380b",
+      "updatedAt": "2026-08-17T12:14:38.461Z"
+    },
+    "land.tech.demoBody": {
+      "text": "Un recorrido breve por enmarcar un teatro de decisiones caribeño, validar evidencia y abrir un informe listo para decisión.",
+      "sourceHash": "a9418180a664",
+      "updatedAt": "2026-08-17T12:14:38.461Z"
+    },
+    "land.tech.demoSample": {
+      "text": "Abrir muestra de brief",
+      "sourceHash": "5ed6e8105a32",
+      "updatedAt": "2026-08-17T12:14:38.461Z"
+    },
+    "land.tech.demoSignup": {
+      "text": "Crear cuenta",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T12:15:32.442Z"
+    },
+    "land.tech.demoClose": {
+      "text": "Cerrar demostración",
+      "sourceHash": "629a741a5ebc",
+      "updatedAt": "2026-08-17T12:15:32.442Z"
+    },
+    "land.ws.eyebrow": {
+      "text": "Dentro del espacio de trabajo",
+      "sourceHash": "2b4c8c6a7bc7",
+      "updatedAt": "2026-08-17T12:15:32.442Z"
+    },
+    "land.ws.title": {
+      "text": "Superficies de producto en vivo — explora sin iniciar sesión.",
+      "sourceHash": "37fc4592ccec",
+      "updatedAt": "2026-08-17T12:15:32.442Z"
+    },
+    "land.ws.lede": {
+      "text": "Desplaza gráficos, cambia pestañas y haz clic en teatros en el mapa. Esta demo usa datos de muestra del Caribe y refleja el estilo de Información general — sin acciones de cuenta.",
+      "sourceHash": "e46ccd61513d",
+      "updatedAt": "2026-08-17T12:15:32.442Z"
+    },
+    "land.ws.chromeLabel": {
+      "text": "Octivate · Información general",
+      "sourceHash": "af30e9554fe0",
+      "updatedAt": "2026-08-17T12:15:32.442Z"
+    },
+    "land.ws.tabsLabel": {
+      "text": "Pestañas del demo del espacio de trabajo",
+      "sourceHash": "4dfeacdbd87c",
+      "updatedAt": "2026-08-17T12:15:32.442Z"
+    },
+    "land.ws.tabInsights": {
+      "text": "Información",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T12:15:32.442Z"
+    },
+    "land.ws.tabCoverage": {
+      "text": "Cobertura",
+      "sourceHash": "80e13549b47a",
+      "updatedAt": "2026-08-17T12:15:43.289Z"
+    },
+    "land.ws.riskMix": {
+      "text": "Mezcla de riesgo",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T12:15:43.289Z"
+    },
+    "land.ws.avgConfidence": {
+      "text": "Confianza promedio",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T12:15:43.289Z"
+    },
+    "land.ws.briefs": {
+      "text": "Informes",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T12:15:43.289Z"
+    },
+    "land.ws.briefsFinal": {
+      "text": "Final",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T12:15:43.289Z"
+    },
+    "land.ws.briefsDraft": {
+      "text": "Borrador",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T12:15:43.289Z"
+    },
+    "land.ws.trends": {
+      "text": "Últimas tendencias",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T12:15:43.289Z"
+    },
+    "land.ws.recentBriefs": {
+      "text": "Informes recientes",
+      "sourceHash": "157c46a63c49",
+      "updatedAt": "2026-08-17T12:15:43.289Z"
+    },
+    "land.ws.colBrief": {
+      "text": "Resumen",
+      "sourceHash": "230e0f8d137e",
+      "updatedAt": "2026-08-17T12:16:57.519Z"
+    },
+    "land.ws.colCountry": {
+      "text": "País",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T12:16:57.519Z"
+    },
+    "land.ws.colRisk": {
+      "text": "Riesgo",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T12:16:57.519Z"
+    },
+    "land.ws.colConfidence": {
+      "text": "Nivel de confianza",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T12:16:57.519Z"
+    },
+    "land.ws.coverageSide": {
+      "text": "Teatro seleccionado",
+      "sourceHash": "1f2f630d6e6c",
+      "updatedAt": "2026-08-17T12:16:57.519Z"
+    },
+    "land.ws.coverageHint": {
+      "text": "Haz clic en un marcador de país para listar proyectos de muestra.",
+      "sourceHash": "75953108dd09",
+      "updatedAt": "2026-08-17T12:16:57.519Z"
+    },
+    "land.ws.coverageStats": {
+      "text": "{n} proyectos · {active} activo",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T12:16:57.519Z"
+    },
+    "land.ws.ctaSample": {
+      "text": "Explorar una muestra de resumen",
+      "sourceHash": "72048fd54a2e",
+      "updatedAt": "2026-08-17T12:16:57.519Z"
+    },
+    "footer.blurb": {
+      "text": "Inteligencia de decisiones orientada a la acción para entornos operativos complejos del Caribe. Desarrollado por CENSII, Octivate trae evidencia caribeña fragmentada en una visión estructurada única para decisiones más claras.",
+      "sourceHash": "023b67144ed4",
+      "updatedAt": "2026-08-17T12:17:30.555Z"
+    },
+    "footer.explore": {
+      "text": "Explorar",
+      "sourceHash": "b965ae66fcc4",
+      "updatedAt": "2026-08-17T12:17:30.555Z"
+    },
+    "footer.product": {
+      "text": "Producto",
+      "sourceHash": "dd3b86d1ef21",
+      "updatedAt": "2026-08-17T12:17:30.555Z"
+    },
+    "footer.why": {
+      "text": "Por qué Octivate",
+      "sourceHash": "a76245d7b85e",
+      "updatedAt": "2026-08-17T12:17:30.555Z"
+    },
+    "footer.how": {
+      "text": "Cómo funciona",
+      "sourceHash": "1dd6a17cb403",
+      "updatedAt": "2026-08-17T12:17:30.555Z"
+    },
+    "footer.disciplines": {
+      "text": "Seis disciplinas",
+      "sourceHash": "926d0eec2cb3",
+      "updatedAt": "2026-08-17T12:17:30.555Z"
+    },
+    "footer.sample": {
+      "text": "Muestra breve",
+      "sourceHash": "8ad8c7f36656",
+      "updatedAt": "2026-08-17T12:17:30.555Z"
+    },
+    "footer.takeAction": {
+      "text": "Tomar acción",
+      "sourceHash": "5ed99cd0b91e",
+      "updatedAt": "2026-08-17T12:17:30.555Z"
+    },
+    "footer.getStarted": {
+      "text": "Empezar",
+      "sourceHash": "bd2cb051773a",
+      "updatedAt": "2026-08-17T12:17:37.716Z"
+    },
+    "footer.signIn": {
+      "text": "Iniciar sesión",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T12:17:37.716Z"
+    },
+    "footer.pricing": {
+      "text": "Precios",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T12:17:37.716Z"
+    },
+    "footer.contact": {
+      "text": "Contacto",
+      "sourceHash": "4832e45812a2",
+      "updatedAt": "2026-08-17T12:17:37.716Z"
+    },
+    "footer.about": {
+      "text": "Acerca de",
+      "sourceHash": "6b21fb791ac0",
+      "updatedAt": "2026-08-17T12:17:37.716Z"
+    },
+    "footer.aboutCensii": {
+      "text": "Acerca de CENSII",
+      "sourceHash": "0a0653353a9b",
+      "updatedAt": "2026-08-17T12:17:37.716Z"
+    },
+    "footer.team": {
+      "text": "Equipo",
+      "sourceHash": "218887269ad5",
+      "updatedAt": "2026-08-17T12:17:37.716Z"
+    },
+    "footer.legal": {
+      "text": "Legal",
+      "sourceHash": "902c91d94e0f",
+      "updatedAt": "2026-08-17T12:17:37.716Z"
+    },
+    "footer.privacy": {
+      "text": "Política de privacidad",
+      "sourceHash": "9db108ba6b7f",
+      "updatedAt": "2026-08-17T12:17:38.914Z"
+    },
+    "footer.terms": {
+      "text": "Términos de servicio",
+      "sourceHash": "0c8a9a95e21a",
+      "updatedAt": "2026-08-17T12:17:38.914Z"
+    },
+    "footer.cookies": {
+      "text": "Aviso de cookies",
+      "sourceHash": "3611c731651f",
+      "updatedAt": "2026-08-17T12:17:38.914Z"
+    },
+    "footer.cookieSettings": {
+      "text": "Configuración de cookies",
+      "sourceHash": "9e0cba87adec",
+      "updatedAt": "2026-08-17T12:17:38.914Z"
+    },
+    "footer.seo": {
+      "text": "Octivate por CENSII brinda inteligencia de decisiones caribeña: Análisis de Potencia-Sistemas-Narrativas, validación de evidencia, evaluación de opciones y monitoreo para organizaciones que operan en Trinidad y Tobago, Jamaica, Barbados, Guyana, Surinam, la OECS y la región más amplia.",
+      "sourceHash": "0e3cd5403e35",
+      "updatedAt": "2026-08-17T12:17:38.914Z"
+    },
+    "footer.backToTop": {
+      "text": "Volver arriba",
+      "sourceHash": "d9c883a90573",
+      "updatedAt": "2026-08-17T12:17:38.914Z"
+    },
+    "footer.copyright": {
+      "text": "© 2026 CENSII · Octivate · octivate.io",
+      "sourceHash": "134a51892744",
+      "updatedAt": "2026-08-17T12:17:38.914Z"
+    },
+    "auth.signin.kicker": {
+      "text": "Acceso al espacio de trabajo",
+      "sourceHash": "9973694cce2b",
+      "updatedAt": "2026-08-17T12:17:38.914Z"
+    },
+    "auth.signin.title": {
+      "text": "Iniciar sesión en Octivate",
+      "sourceHash": "dd0e28bb0b7b",
+      "updatedAt": "2026-08-17T12:18:00.014Z"
+    },
+    "auth.signin.lede": {
+      "text": "Usa tu email o nombre de usuario de Octivate y tu contraseña para abrir el espacio de trabajo de inteligencia de decisiones.",
+      "sourceHash": "24e55d4e1216",
+      "updatedAt": "2026-08-17T12:18:00.014Z"
+    },
+    "auth.signin.submit": {
+      "text": "Iniciar sesión",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T12:18:00.014Z"
+    },
+    "auth.signin.switchText": {
+      "text": "No tienes una cuenta?",
+      "sourceHash": "f838dc11db15",
+      "updatedAt": "2026-08-17T12:18:00.014Z"
+    },
+    "auth.signin.switchLabel": {
+      "text": "Regístrate",
+      "sourceHash": "0b81497c8589",
+      "updatedAt": "2026-08-17T12:18:00.014Z"
+    },
+    "auth.signin.visualTitle": {
+      "text": "Claridad para decisiones caribeñas",
+      "sourceHash": "1294b968f5da",
+      "updatedAt": "2026-08-17T12:18:00.014Z"
+    },
+    "auth.signin.visualBody": {
+      "text": "Conecta señales regionales dispersas, prueba lo que se pueda confiar y avanza con juicio basado en evidencia.",
+      "sourceHash": "8847c4995d52",
+      "updatedAt": "2026-08-17T12:18:00.014Z"
+    },
+    "auth.signup.kicker": {
+      "text": "Nivel gratuito",
+      "sourceHash": "5305bc7bfd0f",
+      "updatedAt": "2026-08-17T12:18:00.014Z"
+    },
+    "auth.signup.title": {
+      "text": "Crear acceso a Octivate",
+      "sourceHash": "46146191c6b9",
+      "updatedAt": "2026-08-17T12:18:36.279Z"
+    },
+    "auth.signup.lede": {
+      "text": "Utilice los mismos campos de correo electrónico/usuario y contraseña que el inicio de sesión, o genere credenciales seguras cuando esté habilitado.",
+      "sourceHash": "4188f5813dcf",
+      "updatedAt": "2026-08-17T12:18:36.279Z"
+    },
+    "auth.signup.submit": {
+      "text": "Crear cuenta",
+      "sourceHash": "aaf374479756",
+      "updatedAt": "2026-08-17T12:18:36.279Z"
+    },
+    "auth.signup.switchText": {
+      "text": "¿Ya tiene una cuenta?",
+      "sourceHash": "8559034a07c9",
+      "updatedAt": "2026-08-17T12:18:36.279Z"
+    },
+    "auth.signup.switchLabel": {
+      "text": "Iniciar sesión",
+      "sourceHash": "ada2e9e96fa9",
+      "updatedAt": "2026-08-17T12:18:36.279Z"
+    },
+    "auth.signup.visualTitle": {
+      "text": "Inteligencia de decisiones, lista para ejecutar",
+      "sourceHash": "7428fa4a3e6b",
+      "updatedAt": "2026-08-17T12:18:36.279Z"
+    },
+    "auth.signup.visualBody": {
+      "text": "Estructione la pregunta, reúna evidencia a través de Power–Systems–Narratives y salga con opciones en las que pueda actuar.",
+      "sourceHash": "6ce5101d86c9",
+      "updatedAt": "2026-08-17T12:18:36.279Z"
+    },
+    "auth.email": {
+      "text": "Correo electrónico o usuario",
+      "sourceHash": "094f6a59348a",
+      "updatedAt": "2026-08-17T12:18:36.279Z"
+    },
+    "auth.password": {
+      "text": "Password",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T12:18:37.155Z"
+    },
+    "auth.forgot": {
+      "text": "Forgot password?",
+      "sourceHash": "4c29f7f03358",
+      "updatedAt": "2026-08-17T12:18:37.155Z"
+    },
+    "auth.showPassword": {
+      "text": "Show password",
+      "sourceHash": "044b852f30b6",
+      "updatedAt": "2026-08-17T12:18:37.155Z"
+    },
+    "auth.hidePassword": {
+      "text": "Hide password",
+      "sourceHash": "e40123b4e787",
+      "updatedAt": "2026-08-17T12:18:37.155Z"
+    },
+    "auth.back": {
+      "text": "Back",
+      "sourceHash": "b52b36b7269f",
+      "updatedAt": "2026-08-17T12:18:37.155Z"
+    },
+    "auth.busy": {
+      "text": "Please wait…",
+      "sourceHash": "5afeca73bef6",
+      "updatedAt": "2026-08-17T12:18:37.155Z"
+    },
+    "ws.section.workspace": {
+      "text": "Workspace",
+      "sourceHash": "4ca0a75c2b7f",
+      "updatedAt": "2026-08-17T12:18:37.155Z"
+    },
+    "ws.section.intelligence": {
+      "text": "Intelligence",
+      "sourceHash": "c698f940a03e",
+      "updatedAt": "2026-08-17T12:18:37.155Z"
+    },
+    "ws.section.analysis": {
+      "text": "Análisis",
+      "sourceHash": "62c7fcf46e27",
+      "updatedAt": "2026-08-17T12:18:41.675Z"
+    },
+    "ws.nav.overview": {
+      "text": "Resumen",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T12:18:41.675Z"
+    },
+    "ws.nav.projects": {
+      "text": "Proyectos",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T12:18:41.675Z"
+    },
+    "ws.nav.monitors": {
+      "text": "Monitores",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T12:18:41.675Z"
+    },
+    "ws.nav.sources": {
+      "text": "Fuentes",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T12:18:41.675Z"
+    },
+    "ws.nav.briefs": {
+      "text": "Informes",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T12:18:41.675Z"
+    },
+    "ws.nav.stakeholders": {
+      "text": "Partes interesadas",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T12:18:41.675Z"
+    },
+    "ws.mode.workspace": {
+      "text": "Modo de espacio de trabajo",
+      "sourceHash": "8ce322f49b05",
+      "updatedAt": "2026-08-17T12:18:41.675Z"
+    },
+    "ws.mode.operator": {
+      "text": "Modo operador",
+      "sourceHash": "594a7f797f7d",
+      "updatedAt": "2026-08-17T12:18:49.859Z"
+    },
+    "ws.askStrategic": {
+      "text": "Pregunta estratégica",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T12:18:49.859Z"
+    },
+    "ws.operatorDashboard": {
+      "text": "Panel de operador",
+      "sourceHash": "28794ba4236c",
+      "updatedAt": "2026-08-17T12:18:49.859Z"
+    },
+    "ws.collapseSidebar": {
+      "text": "Contraer barra lateral",
+      "sourceHash": "9e6876286e45",
+      "updatedAt": "2026-08-17T12:18:49.859Z"
+    },
+    "ws.expandSidebar": {
+      "text": "Expandir barra lateral",
+      "sourceHash": "f462e889fd88",
+      "updatedAt": "2026-08-17T12:18:49.859Z"
+    },
+    "ws.openMenu": {
+      "text": "Abrir menú",
+      "sourceHash": "197101e9db29",
+      "updatedAt": "2026-08-17T12:18:49.859Z"
+    },
+    "ws.closeMenu": {
+      "text": "Cerrar menú",
+      "sourceHash": "6c9fc9908984",
+      "updatedAt": "2026-08-17T12:18:49.859Z"
+    },
+    "ws.overview.title": {
+      "text": "Resumen",
+      "sourceHash": "0efc2e6be4c2",
+      "updatedAt": "2026-08-17T12:18:49.859Z"
+    },
+    "ws.overview.lede": {
+      "text": "Espacio de trabajo de inteligencia caribeña — tendencias, proyectos, informes, paquetes y uso.",
+      "sourceHash": "f89a3516e147",
+      "updatedAt": "2026-08-17T12:19:31.825Z"
+    },
+    "ws.overview.newAnalysis": {
+      "text": "Nuevo análisis",
+      "sourceHash": "3874bbceddf5",
+      "updatedAt": "2026-08-17T12:19:31.825Z"
+    },
+    "ws.overview.tab.insights": {
+      "text": "Informes",
+      "sourceHash": "b4510362a5c5",
+      "updatedAt": "2026-08-17T12:19:31.825Z"
+    },
+    "ws.overview.tab.pipeline": {
+      "text": "Embudo",
+      "sourceHash": "32b1d5a78493",
+      "updatedAt": "2026-08-17T12:19:31.825Z"
+    },
+    "ws.overview.riskMix": {
+      "text": "Mezcla de riesgo",
+      "sourceHash": "7e96bb603758",
+      "updatedAt": "2026-08-17T12:19:31.825Z"
+    },
+    "ws.overview.riskMixSub": {
+      "text": "Informes por nivel de riesgo",
+      "sourceHash": "ec9ed226c4fa",
+      "updatedAt": "2026-08-17T12:19:31.825Z"
+    },
+    "ws.overview.latestTrends": {
+      "text": "Últimas tendencias",
+      "sourceHash": "3ef5e8d05d39",
+      "updatedAt": "2026-08-17T12:19:31.825Z"
+    },
+    "ws.overview.avgConfidence": {
+      "text": "Confianza media",
+      "sourceHash": "efa008f21c94",
+      "updatedAt": "2026-08-17T12:19:31.825Z"
+    },
+    "ws.overview.briefs": {
+      "text": "Informes",
+      "sourceHash": "6a8639e306e1",
+      "updatedAt": "2026-08-17T12:19:44.474Z"
+    },
+    "ws.overview.briefsTotal": {
+      "text": "{n} total",
+      "sourceHash": "aeb6ea7ac893",
+      "updatedAt": "2026-08-17T12:19:44.474Z"
+    },
+    "ws.overview.final": {
+      "text": "Final",
+      "sourceHash": "672b22cc516e",
+      "updatedAt": "2026-08-17T12:19:44.474Z"
+    },
+    "ws.overview.draft": {
+      "text": "Borrador",
+      "sourceHash": "23d33e22acfc",
+      "updatedAt": "2026-08-17T12:19:44.474Z"
+    },
+    "ws.overview.countryPacks": {
+      "text": "Países",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T12:19:44.474Z"
+    },
+    "ws.overview.caribbeanMarkets": {
+      "text": "{n} mercados del Caribe",
+      "sourceHash": "9f1512466503",
+      "updatedAt": "2026-08-17T12:19:44.474Z"
+    },
+    "ws.overview.aiUsage": {
+      "text": "Uso de IA",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T12:19:44.474Z"
+    },
+    "ws.overview.tokens": {
+      "text": "tokens",
+      "sourceHash": "3391436a4e72",
+      "updatedAt": "2026-08-17T12:19:44.474Z"
+    },
+    "ws.overview.estCost": {
+      "text": "Costo estimado ${amount}",
+      "sourceHash": "f9dc4ad795a4",
+      "updatedAt": "2026-08-17T12:20:00.266Z"
+    },
+    "ws.overview.agenticPipeline": {
+      "text": "Pipeline de agentes",
+      "sourceHash": "a8b4a909f8ce",
+      "updatedAt": "2026-08-17T12:20:00.266Z"
+    },
+    "ws.overview.agenticLede": {
+      "text": "Ocho agentes especializados estructuran entrada → evidencia → PSN análisis → breve de decisión.",
+      "sourceHash": "d5d084c354a2",
+      "updatedAt": "2026-08-17T12:20:00.266Z"
+    },
+    "ws.overview.startWorkflow": {
+      "text": "Iniciar flujo de trabajo",
+      "sourceHash": "5d07bdb74e62",
+      "updatedAt": "2026-08-17T12:20:00.266Z"
+    },
+    "ws.overview.latestBriefs": {
+      "text": "Últimos breves",
+      "sourceHash": "52ce1d088ad9",
+      "updatedAt": "2026-08-17T12:20:00.266Z"
+    },
+    "ws.overview.viewAll": {
+      "text": "Ver todo",
+      "sourceHash": "931e1a4b152a",
+      "updatedAt": "2026-08-17T12:20:00.266Z"
+    },
+    "ws.overview.col.title": {
+      "text": "Título",
+      "sourceHash": "768e0c1c6957",
+      "updatedAt": "2026-08-17T12:20:00.266Z"
+    },
+    "ws.overview.col.country": {
+      "text": "País",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T12:20:00.266Z"
+    },
+    "ws.overview.col.risk": {
+      "text": "Riesgo",
+      "sourceHash": "5a8f23f567cd",
+      "updatedAt": "2026-08-17T12:20:25.854Z"
+    },
+    "ws.overview.col.confidence": {
+      "text": "Confianza",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T12:20:25.854Z"
+    },
+    "ws.overview.activeProjects": {
+      "text": "Proyectos activos",
+      "sourceHash": "f361946445f2",
+      "updatedAt": "2026-08-17T12:20:25.854Z"
+    },
+    "ws.overview.monitoring": {
+      "text": "Monitoreo",
+      "sourceHash": "a81434589757",
+      "updatedAt": "2026-08-17T12:20:25.854Z"
+    },
+    "ws.overview.briefsLabel": {
+      "text": "Informes",
+      "sourceHash": "81aad378d8e5",
+      "updatedAt": "2026-08-17T12:20:25.854Z"
+    },
+    "ws.overview.sourcesLabel": {
+      "text": "Fuentes",
+      "sourceHash": "bce16dd02608",
+      "updatedAt": "2026-08-17T12:20:25.854Z"
+    },
+    "ws.overview.runsLabel": {
+      "text": "Ejecuciones",
+      "sourceHash": "71b3f0bbe7d5",
+      "updatedAt": "2026-08-17T12:20:25.854Z"
+    },
+    "ws.overview.sessions": {
+      "text": "Sesiones",
+      "sourceHash": "e11e37a9253b",
+      "updatedAt": "2026-08-17T12:20:25.854Z"
+    },
+    "ws.overview.total": {
+      "text": "total",
+      "sourceHash": "5a537e209151",
+      "updatedAt": "2026-08-17T12:20:26.763Z"
+    },
+    "ws.overview.map.title": {
+      "text": "Theatre coverage",
+      "sourceHash": "597b741ee58c",
+      "updatedAt": "2026-08-17T12:20:26.763Z"
+    },
+    "ws.overview.map.lede": {
+      "text": "Live map of project theatres by country — hover for counts, click to open the project list.",
+      "sourceHash": "50dd24fff5fe",
+      "updatedAt": "2026-08-17T12:20:26.763Z"
+    },
+    "ws.overview.map.summary": {
+      "text": "{countries} countries · {projects} projects",
+      "sourceHash": "e09cdd8b4569",
+      "updatedAt": "2026-08-17T12:20:26.763Z"
+    },
+    "ws.overview.map.live": {
+      "text": "Live",
+      "sourceHash": "65c821a596ce",
+      "updatedAt": "2026-08-17T12:20:26.763Z"
+    },
+    "ws.overview.map.liveHint": {
+      "text": "Updates from workspace lightning refresh and soft poll",
+      "sourceHash": "de35b65a98de",
+      "updatedAt": "2026-08-17T12:20:26.763Z"
+    },
+    "ws.overview.map.updating": {
+      "text": "Updating",
+      "sourceHash": "ec6952e09b9c",
+      "updatedAt": "2026-08-17T12:20:26.763Z"
+    },
+    "ws.overview.map.updatingHint": {
+      "text": "Refreshing theatre coverage",
+      "sourceHash": "64415f399cc6",
+      "updatedAt": "2026-08-17T12:20:26.763Z"
+    },
+    "ws.overview.map.reset": {
+      "text": "Caribe",
+      "sourceHash": "4a2e3865acb4",
+      "updatedAt": "2026-08-17T12:20:27.751Z"
+    },
+    "ws.overview.map.resetHint": {
+      "text": "Restablecer el enfoque del mapa en el Caribe",
+      "sourceHash": "7d81dd21b898",
+      "updatedAt": "2026-08-17T12:20:27.751Z"
+    },
+    "ws.overview.map.hoverStats": {
+      "text": "{n} proyectos · {active} activos",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T12:20:27.751Z"
+    },
+    "ws.overview.map.clickHint": {
+      "text": "Haz clic para ver proyectos",
+      "sourceHash": "daaaa430f8b1",
+      "updatedAt": "2026-08-17T12:20:27.751Z"
+    },
+    "ws.overview.map.empty": {
+      "text": "Crea un proyecto para iluminar el mapa.",
+      "sourceHash": "40ee077e9f45",
+      "updatedAt": "2026-08-17T12:20:27.751Z"
+    },
+    "ws.overview.map.emptyCountry": {
+      "text": "No hay proyectos en este país todavía.",
+      "sourceHash": "561147a5f7cd",
+      "updatedAt": "2026-08-17T12:20:27.751Z"
+    },
+    "ws.overview.map.modalKicker": {
+      "text": "Teatros de país",
+      "sourceHash": "93a542767481",
+      "updatedAt": "2026-08-17T12:20:27.751Z"
+    },
+    "ws.overview.map.projectCount": {
+      "text": "{n} proyectos · {active} activos",
+      "sourceHash": "ea5882f9d3b2",
+      "updatedAt": "2026-08-17T12:20:27.751Z"
+    },
+    "ws.overview.map.close": {
+      "text": "Cerrar proyectos por país",
+      "sourceHash": "9dcfebb87cf3",
+      "updatedAt": "2026-08-17T12:20:50.110Z"
+    },
+    "ws.overview.map.projectsWord": {
+      "text": "proyectos",
+      "sourceHash": "b37b5674e3d0",
+      "updatedAt": "2026-08-17T12:20:50.110Z"
+    },
+    "ws.projects.title": {
+      "text": "Proyectos",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T12:20:50.110Z"
+    },
+    "ws.projects.lede": {
+      "text": "Define un teatro de decisiones por país y sector, luego ejecuta el flujo de trabajo del agente para producir un informe.",
+      "sourceHash": "89564efb1fce",
+      "updatedAt": "2026-08-17T12:20:50.110Z"
+    },
+    "ws.projects.sort.updated": {
+      "text": "Ordenar: Actualizado recientemente",
+      "sourceHash": "92e532b2ba41",
+      "updatedAt": "2026-08-17T12:20:50.110Z"
+    },
+    "ws.projects.sort.name": {
+      "text": "Ordenar: Nombre",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T12:20:50.110Z"
+    },
+    "ws.projects.sort.country": {
+      "text": "Ordenar: País",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T12:20:50.110Z"
+    },
+    "ws.projects.kpi.projects": {
+      "text": "Proyectos",
+      "sourceHash": "53e890d5f0ff",
+      "updatedAt": "2026-08-17T12:20:50.110Z"
+    },
+    "ws.projects.kpi.active": {
+      "text": "Activo",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T12:20:55.331Z"
+    },
+    "ws.projects.kpi.activeHint": {
+      "text": "En progreso",
+      "sourceHash": "b6bd42e4e730",
+      "updatedAt": "2026-08-17T12:20:55.331Z"
+    },
+    "ws.projects.kpi.withQuestion": {
+      "text": "Con pregunta",
+      "sourceHash": "adfd7bee4031",
+      "updatedAt": "2026-08-17T12:20:55.331Z"
+    },
+    "ws.projects.kpi.withQuestionHint": {
+      "text": "Listo para agentes",
+      "sourceHash": "1bace2d9eaed",
+      "updatedAt": "2026-08-17T12:20:55.331Z"
+    },
+    "ws.projects.kpi.countries": {
+      "text": "Países",
+      "sourceHash": "8467c0d99c79",
+      "updatedAt": "2026-08-17T12:20:55.331Z"
+    },
+    "ws.projects.filter.all": {
+      "text": "Todos",
+      "sourceHash": "6a72085653e4",
+      "updatedAt": "2026-08-17T12:20:55.331Z"
+    },
+    "ws.projects.filter.active": {
+      "text": "Activo",
+      "sourceHash": "a733b809d2f1",
+      "updatedAt": "2026-08-17T12:20:55.331Z"
+    },
+    "ws.projects.filter.needsQuestion": {
+      "text": "Necesita pregunta",
+      "sourceHash": "d47967177def",
+      "updatedAt": "2026-08-17T12:20:55.331Z"
+    },
+    "ws.projects.filter.archived": {
+      "text": "Archivado",
+      "sourceHash": "eddc813f35b1",
+      "updatedAt": "2026-08-17T12:21:02.915Z"
+    },
+    "ws.projects.search": {
+      "text": "Buscar proyectos, países, sectores…",
+      "sourceHash": "277b594595b9",
+      "updatedAt": "2026-08-17T12:21:02.915Z"
+    },
+    "ws.projects.new": {
+      "text": "Nuevo proyecto",
+      "sourceHash": "e5bcbe241fab",
+      "updatedAt": "2026-08-17T12:21:02.915Z"
+    },
+    "ws.projects.newHint": {
+      "text": "Abrir un teatro de decisiones",
+      "sourceHash": "08c180ad8a2b",
+      "updatedAt": "2026-08-17T12:21:02.915Z"
+    },
+    "ws.projects.newInvite": {
+      "text": "Comenzar aquí",
+      "sourceHash": "54acc2806d4d",
+      "updatedAt": "2026-08-17T12:21:02.915Z"
+    },
+    "ws.projects.newClose": {
+      "text": "Cerrar compositor",
+      "sourceHash": "49f1b7e9f2a5",
+      "updatedAt": "2026-08-17T12:21:02.915Z"
+    },
+    "ws.projects.newPanelLede": {
+      "text": "Nombre el teatro, establece país y sector, luego crea — puedes hacer la siguiente pregunta estratégica.",
+      "sourceHash": "8d7dc359b19a",
+      "updatedAt": "2026-08-17T12:21:02.915Z"
+    },
+    "ws.projects.name": {
+      "text": "Nombre del proyecto",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T12:21:02.915Z"
+    },
+    "ws.projects.namePlaceholder": {
+      "text": "p. ej. Guyana preparación energética",
+      "sourceHash": "6cc1d1132f94",
+      "updatedAt": "2026-08-17T12:21:16.558Z"
+    },
+    "ws.projects.country": {
+      "text": "País",
+      "sourceHash": "d523ebbd1014",
+      "updatedAt": "2026-08-17T12:21:16.558Z"
+    },
+    "ws.projects.sector": {
+      "text": "Sector",
+      "sourceHash": "39fd2070d41b",
+      "updatedAt": "2026-08-17T12:21:16.558Z"
+    },
+    "ws.projects.cancel": {
+      "text": "Cancelar",
+      "sourceHash": "77dfd2135f4d",
+      "updatedAt": "2026-08-17T12:21:16.558Z"
+    },
+    "ws.projects.create": {
+      "text": "Crear proyecto",
+      "sourceHash": "a8d8ff51e4c8",
+      "updatedAt": "2026-08-17T12:21:16.558Z"
+    },
+    "ws.projects.creating": {
+      "text": "Creando…",
+      "sourceHash": "94d7d8ee473f",
+      "updatedAt": "2026-08-17T12:21:16.558Z"
+    },
+    "ws.projects.empty": {
+      "text": "No hay proyectos aún",
+      "sourceHash": "cac330d7f9c7",
+      "updatedAt": "2026-08-17T12:21:16.558Z"
+    },
+    "ws.projects.emptyHint": {
+      "text": "Crear un proyecto para definir país, sector y la pregunta estratégica que tu equipo necesita responder.",
+      "sourceHash": "e44e10633ff5",
+      "updatedAt": "2026-08-17T12:21:16.558Z"
+    },
+    "ws.projects.noMatches": {
+      "text": "No hay coincidencias",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T12:21:17.475Z"
+    },
+    "ws.projects.noMatchesHint": {
+      "text": "Prueba una búsqueda o filtro diferente — o crea un nuevo proyecto.",
+      "sourceHash": "42a5a4c7b0f8",
+      "updatedAt": "2026-08-17T12:21:17.475Z"
+    },
+    "ws.projects.createdTitle": {
+      "text": "Proyecto creado",
+      "sourceHash": "76556f09a383",
+      "updatedAt": "2026-08-17T12:21:17.475Z"
+    },
+    "ws.projects.createdBody": {
+      "text": "Tu nuevo teatro de decisiones está listo.",
+      "sourceHash": "37fcd61e8ade",
+      "updatedAt": "2026-08-17T12:21:17.475Z"
+    },
+    "ws.projects.createFailed": {
+      "text": "No se pudo crear el proyecto",
+      "sourceHash": "373981fcc313",
+      "updatedAt": "2026-08-17T12:21:17.475Z"
+    },
+    "ws.projects.edit": {
+      "text": "Editar proyecto",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T12:21:17.475Z"
+    },
+    "ws.projects.delete": {
+      "text": "Eliminar proyecto",
+      "sourceHash": "af1456f256eb",
+      "updatedAt": "2026-08-17T12:21:17.475Z"
+    },
+    "ws.projects.deleted": {
+      "text": "Proyecto eliminado",
+      "sourceHash": "6b17c222a23a",
+      "updatedAt": "2026-08-17T12:21:17.475Z"
+    },
+    "ws.projects.updated": {
+      "text": "Proyecto actualizado",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T12:21:18.856Z"
+    },
+    "ws.projects.deleteConfirmTitle": {
+      "text": "¿Eliminar este proyecto?",
+      "sourceHash": "346956aef203",
+      "updatedAt": "2026-08-17T12:21:18.856Z"
+    },
+    "ws.projects.deleteConfirmBody": {
+      "text": "Los briefs, sesiones de trabajo y documentos subidos de este proyecto también se eliminarán. Esto no se puede deshacer.",
+      "sourceHash": "82d71fd44e99",
+      "updatedAt": "2026-08-17T12:21:18.856Z"
+    },
+    "ws.project.askStrategic": {
+      "text": "Pregunta estratégica",
+      "sourceHash": "88986b22d489",
+      "updatedAt": "2026-08-17T12:21:18.856Z"
+    },
+    "ws.project.depth.rapid": {
+      "text": "Rápido — verificar antes de actuar",
+      "sourceHash": "6b189c5ab71d",
+      "updatedAt": "2026-08-17T12:21:18.856Z"
+    },
+    "ws.project.depth.standard": {
+      "text": "Estándar — borrador equilibrado",
+      "sourceHash": "49d0af9134ee",
+      "updatedAt": "2026-08-17T12:21:18.856Z"
+    },
+    "ws.project.depth.deep": {
+      "text": "Profundización — escenarios más amplios",
+      "sourceHash": "ed533d1558c6",
+      "updatedAt": "2026-08-17T12:21:18.856Z"
+    },
+    "ws.project.depth.rapidShort": {
+      "text": "Rápido",
+      "sourceHash": "9a6ee6647c4c",
+      "updatedAt": "2026-08-17T12:21:18.856Z"
+    },
+    "ws.project.depth.standardShort": {
+      "text": "Estándar",
+      "sourceHash": "2dfa66079d9b",
+      "updatedAt": "2026-08-17T12:22:19.140Z"
+    },
+    "ws.project.depth.deepShort": {
+      "text": "Análisis profundo",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T12:22:19.140Z"
+    },
+    "ws.project.depth.rapidHint": {
+      "text": "Hallazgos orientativos; aún requiere revisión humana.",
+      "sourceHash": "5a5cdba724e2",
+      "updatedAt": "2026-08-17T12:22:19.140Z"
+    },
+    "ws.project.depth.standardHint": {
+      "text": "Borrador PSN equilibrado pendiente de revisión humana.",
+      "sourceHash": "15aa10c6c242",
+      "updatedAt": "2026-08-17T12:22:19.140Z"
+    },
+    "ws.project.depth.deepHint": {
+      "text": "Escenarios más amplios; nunca definitivo automático sin revisión.",
+      "sourceHash": "bb30efc3d878",
+      "updatedAt": "2026-08-17T12:22:19.140Z"
+    },
+    "ws.project.run": {
+      "text": "Ejecutar flujo de trabajo del agente",
+      "sourceHash": "7dd6527ed98b",
+      "updatedAt": "2026-08-17T12:22:19.140Z"
+    },
+    "ws.project.agentsRunning": {
+      "text": "Agentes en ejecución…",
+      "sourceHash": "e072b895cb8b",
+      "updatedAt": "2026-08-17T12:22:19.140Z"
+    },
+    "ws.project.rerunning": {
+      "text": "Vuelvo a ejecutar…",
+      "sourceHash": "53920a3e9816",
+      "updatedAt": "2026-08-17T12:22:19.140Z"
+    },
+    "ws.project.rerun": {
+      "text": "Reejecutar flujo de trabajo",
+      "sourceHash": "7792e8052528",
+      "updatedAt": "2026-08-17T12:22:27.691Z"
+    },
+    "ws.project.forceRerun": {
+      "text": "Forzar reejecución (atascado)",
+      "sourceHash": "26a80611d4e0",
+      "updatedAt": "2026-08-17T12:22:27.691Z"
+    },
+    "ws.project.linkedMonitors": {
+      "text": "Monitores vinculados",
+      "sourceHash": "2788d1641b22",
+      "updatedAt": "2026-08-17T12:22:27.691Z"
+    },
+    "ws.project.noMonitors": {
+      "text": "No hay monitores vinculados aún.",
+      "sourceHash": "b202f7c531ac",
+      "updatedAt": "2026-08-17T12:22:27.691Z"
+    },
+    "ws.project.briefReady": {
+      "text": "Resumen de decisión listo",
+      "sourceHash": "f94bed6f0fd1",
+      "updatedAt": "2026-08-17T12:22:27.691Z"
+    },
+    "ws.project.briefReadyBody": {
+      "text": "Su documento de resultado está disponible",
+      "sourceHash": "6f9a4a136283",
+      "updatedAt": "2026-08-17T12:22:27.691Z"
+    },
+    "ws.project.workflowFailed": {
+      "text": "El flujo de trabajo falló — ajusta la pregunta o las fuentes, luego vuelve a ejecutar.",
+      "sourceHash": "82ea50d7133a",
+      "updatedAt": "2026-08-17T12:22:27.691Z"
+    },
+    "ws.project.alreadyRunning": {
+      "text": "Un flujo de trabajo ya está en ejecución.",
+      "sourceHash": "5717f12dab7a",
+      "updatedAt": "2026-08-17T12:22:28.730Z"
+    },
+    "ws.project.workflowStarted": {
+      "text": "Flujo de trabajo iniciado — los agentes están en ejecución.",
+      "sourceHash": "ba2f05f6a246",
+      "updatedAt": "2026-08-17T12:22:28.730Z"
+    },
+    "ws.project.needQuestion": {
+      "text": "Agrega una pregunta estratégica (10+ caracteres) antes de reejecutar.",
+      "sourceHash": "c5855c7fedf6",
+      "updatedAt": "2026-08-17T12:22:28.730Z"
+    },
+    "ws.project.stuckRerun": {
+      "text": "El flujo de trabajo anterior parecía atascado — iniciando un flujo nuevo…",
+      "sourceHash": "7a06899218f0",
+      "updatedAt": "2026-08-17T12:22:28.730Z"
+    },
+    "ws.project.rerunningToast": {
+      "text": "Reejecutando el flujo de trabajo de agentes…",
+      "sourceHash": "2e84385a93af",
+      "updatedAt": "2026-08-17T12:22:28.730Z"
+    },
+    "ws.project.edit": {
+      "text": "Editar proyecto",
+      "sourceHash": "7cb145ffbdc7",
+      "updatedAt": "2026-08-17T12:22:28.730Z"
+    },
+    "ws.project.name": {
+      "text": "Nombre del proyecto",
+      "sourceHash": "ab9773fcf6b2",
+      "updatedAt": "2026-08-17T12:22:28.730Z"
+    },
+    "ws.project.save": {
+      "text": "Guardar cambios",
+      "sourceHash": "179359b39edb",
+      "updatedAt": "2026-08-17T12:22:28.730Z"
+    },
+    "ws.project.saving": {
+      "text": "Guardando…",
+      "sourceHash": "56a2285c5b11",
+      "updatedAt": "2026-08-17T12:22:32.423Z"
+    },
+    "ws.project.updated": {
+      "text": "Proyecto actualizado",
+      "sourceHash": "a0e9a7078f38",
+      "updatedAt": "2026-08-17T12:22:32.423Z"
+    },
+    "ws.project.archived": {
+      "text": "Proyecto archivado",
+      "sourceHash": "225209bf7dec",
+      "updatedAt": "2026-08-17T12:22:32.423Z"
+    },
+    "ws.project.restored": {
+      "text": "Proyecto restaurado",
+      "sourceHash": "cd1b8386c131",
+      "updatedAt": "2026-08-17T12:22:32.423Z"
+    },
+    "ws.project.notFound": {
+      "text": "Proyecto no encontrado",
+      "sourceHash": "3955a012ec3c",
+      "updatedAt": "2026-08-17T12:22:32.423Z"
+    },
+    "ws.project.loadFailed": {
+      "text": "Error al cargar",
+      "sourceHash": "af14db26285b",
+      "updatedAt": "2026-08-17T12:22:32.423Z"
+    },
+    "ws.project.closeSettings": {
+      "text": "Cerrar configuración del proyecto",
+      "sourceHash": "f24a1261f0cb",
+      "updatedAt": "2026-08-17T12:22:32.423Z"
+    },
+    "ws.project.restoreForAgents": {
+      "text": "Restaurar este proyecto para ejecutar el flujo de trabajo del agente.",
+      "sourceHash": "943965352a99",
+      "updatedAt": "2026-08-17T12:22:32.423Z"
+    },
+    "ws.project.restoreForDocs": {
+      "text": "Restaurar este proyecto para agregar documentos.",
+      "sourceHash": "76bb5e7cd3cd",
+      "updatedAt": "2026-08-17T12:22:33.307Z"
+    },
+    "ws.project.module.reset": {
+      "text": "Restablecer diseño del módulo",
+      "sourceHash": "43b548921a20",
+      "updatedAt": "2026-08-17T12:22:33.307Z"
+    },
+    "ws.project.liveAwaiting": {
+      "text": "En vivo · esperando clave",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T12:22:33.307Z"
+    },
+    "ws.project.module.question": {
+      "text": "Pregunta",
+      "sourceHash": "002ff598115d",
+      "updatedAt": "2026-08-17T12:22:33.307Z"
+    },
+    "ws.project.module.documents": {
+      "text": "Documentos",
+      "sourceHash": "687c82861c95",
+      "updatedAt": "2026-08-17T12:22:33.307Z"
+    },
+    "ws.project.module.monitors": {
+      "text": "Monitores",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T12:22:33.307Z"
+    },
+    "ws.project.module.agent": {
+      "text": "Agente",
+      "sourceHash": "5ce2e6f40299",
+      "updatedAt": "2026-08-17T12:22:33.307Z"
+    },
+    "ws.project.module.pulse": {
+      "text": "Pulso",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T12:22:33.307Z"
+    },
+    "ws.account.title": {
+      "text": "Configuración",
+      "sourceHash": "c7f73bb54d92",
+      "updatedAt": "2026-08-17T12:22:37.155Z"
+    },
+    "ws.account.lede": {
+      "text": "Perfil, seguridad, presencia, alertas y controles de sesión.",
+      "sourceHash": "8a35cc38fbac",
+      "updatedAt": "2026-08-17T12:22:37.155Z"
+    },
+    "ws.account.loading": {
+      "text": "Cargando la cuenta…",
+      "sourceHash": "c3ffe1ef49d0",
+      "updatedAt": "2026-08-17T12:22:37.155Z"
+    },
+    "ws.account.tab.profile": {
+      "text": "Perfil",
+      "sourceHash": "ff4fc0276e96",
+      "updatedAt": "2026-08-17T12:22:37.155Z"
+    },
+    "ws.account.tab.security": {
+      "text": "Seguridad",
+      "sourceHash": "f25ce1b8a399",
+      "updatedAt": "2026-08-17T12:22:37.155Z"
+    },
+    "ws.account.tab.presence": {
+      "text": "Presencia",
+      "sourceHash": "89a8a335a746",
+      "updatedAt": "2026-08-17T12:22:37.155Z"
+    },
+    "ws.account.tab.alerts": {
+      "text": "Alertas",
+      "sourceHash": "d0efe0b2c75c",
+      "updatedAt": "2026-08-17T12:22:37.155Z"
+    },
+    "ws.account.tab.session": {
+      "text": "Sesión",
+      "sourceHash": "f7f1997c6cd1",
+      "updatedAt": "2026-08-17T12:22:37.155Z"
+    },
+    "ws.account.uploadPhoto": {
+      "text": "Subir foto de perfil",
+      "sourceHash": "888d7bc45d2f",
+      "updatedAt": "2026-08-17T12:22:39.353Z"
+    },
+    "ws.account.remove": {
+      "text": "Eliminar",
+      "sourceHash": "e963907dac5c",
+      "updatedAt": "2026-08-17T12:22:39.353Z"
+    },
+    "ws.account.displayName": {
+      "text": "Nombre para mostrar",
+      "sourceHash": "c7874aaa0fab",
+      "updatedAt": "2026-08-17T12:22:39.353Z"
+    },
+    "ws.account.bio": {
+      "text": "Acerca de / biografía",
+      "sourceHash": "32b952c4847b",
+      "updatedAt": "2026-08-17T12:22:39.353Z"
+    },
+    "ws.account.saveProfile": {
+      "text": "Guardar perfil",
+      "sourceHash": "f597c0e8201d",
+      "updatedAt": "2026-08-17T12:22:39.353Z"
+    },
+    "ws.account.password": {
+      "text": "Contraseña",
+      "sourceHash": "8be3c943b160",
+      "updatedAt": "2026-08-17T12:22:39.353Z"
+    },
+    "ws.account.currentPassword": {
+      "text": "Contraseña actual",
+      "sourceHash": "19dff4dad0a7",
+      "updatedAt": "2026-08-17T12:22:39.353Z"
+    },
+    "ws.account.newPassword": {
+      "text": "Nueva contraseña",
+      "sourceHash": "d850ee188c7c",
+      "updatedAt": "2026-08-17T12:22:39.353Z"
+    },
+    "ws.account.updatePassword": {
+      "text": "Actualizar contraseña",
+      "sourceHash": "350c355e16e3",
+      "updatedAt": "2026-08-17T12:22:44.775Z"
+    },
+    "ws.account.signOut": {
+      "text": "Cerrar sesión",
+      "sourceHash": "dc1649a16c14",
+      "updatedAt": "2026-08-17T12:22:44.775Z"
+    },
+    "ws.account.presence": {
+      "text": "Estado de presencia",
+      "sourceHash": "a02b358912bf",
+      "updatedAt": "2026-08-17T12:22:44.775Z"
+    },
+    "ws.account.profileSaved": {
+      "text": "Perfil guardado",
+      "sourceHash": "e9983dc9ac3f",
+      "updatedAt": "2026-08-17T12:22:44.775Z"
+    },
+    "ws.account.saveFailed": {
+      "text": "Guardar falló",
+      "sourceHash": "0a4444676244",
+      "updatedAt": "2026-08-17T12:22:44.775Z"
+    },
+    "ws.account.passwordUpdated": {
+      "text": "Contraseña actualizada",
+      "sourceHash": "1de6d0816c54",
+      "updatedAt": "2026-08-17T12:22:44.775Z"
+    },
+    "ws.account.passwordFailed": {
+      "text": "Actualización de contraseña falló",
+      "sourceHash": "b651e6821043",
+      "updatedAt": "2026-08-17T12:22:44.775Z"
+    },
+    "ws.account.statusFailed": {
+      "text": "No se pudo actualizar el estado",
+      "sourceHash": "b1073af68cc9",
+      "updatedAt": "2026-08-17T12:22:44.775Z"
+    },
+    "ws.account.imageType": {
+      "text": "Use JPEG, PNG, o WebP",
+      "sourceHash": "64219c573743",
+      "updatedAt": "2026-08-17T12:22:45.711Z"
+    },
+    "ws.account.avatarUpdated": {
+      "text": "Avatar actualizado",
+      "sourceHash": "46e014bb0124",
+      "updatedAt": "2026-08-17T12:22:45.711Z"
+    },
+    "ws.account.uploadFailed": {
+      "text": "Subida fallida",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T12:22:45.711Z"
+    },
+    "ws.account.avatarRemoved": {
+      "text": "Avatar eliminado",
+      "sourceHash": "d9db37314bea",
+      "updatedAt": "2026-08-17T12:22:45.711Z"
+    },
+    "ws.account.removeFailed": {
+      "text": "Eliminar fallido",
+      "sourceHash": "debe01de259b",
+      "updatedAt": "2026-08-17T12:22:45.711Z"
+    },
+    "ws.account.signOutFailed": {
+      "text": "Cerrar sesión fallido",
+      "sourceHash": "b1287a61ef81",
+      "updatedAt": "2026-08-17T12:22:45.711Z"
+    },
+    "ws.account.readImageFailed": {
+      "text": "No se pudo leer la imagen",
+      "sourceHash": "68d60f7c8e85",
+      "updatedAt": "2026-08-17T12:22:45.711Z"
+    },
+    "ws.monitors.title": {
+      "text": "Monitores",
+      "sourceHash": "08cc50680045",
+      "updatedAt": "2026-08-17T12:22:45.711Z"
+    },
+    "ws.monitors.lede": {
+      "text": "Perfiles de vigilancia continua para palabras clave y jurisdicciones — alertas que se activan cuando las señales coinciden con el alcance de tu solicitud.",
+      "sourceHash": "96c578a78d41",
+      "updatedAt": "2026-08-17T12:23:02.307Z"
+    },
+    "ws.monitors.name": {
+      "text": "Nombre del monitor",
+      "sourceHash": "8f3d2b89f0f7",
+      "updatedAt": "2026-08-17T12:23:02.307Z"
+    },
+    "ws.monitors.keywords": {
+      "text": "Palabras clave (separadas por comas)",
+      "sourceHash": "4772c39c2fd8",
+      "updatedAt": "2026-08-17T12:23:02.307Z"
+    },
+    "ws.monitors.countries": {
+      "text": "Países (separados por comas)",
+      "sourceHash": "a6644ccc36eb",
+      "updatedAt": "2026-08-17T12:23:02.307Z"
+    },
+    "ws.monitors.linkProject": {
+      "text": "Enlace al proyecto (opcional)",
+      "sourceHash": "b377c0bd90d9",
+      "updatedAt": "2026-08-17T12:23:02.307Z"
+    },
+    "ws.monitors.keywordsPlaceholder": {
+      "text": "EPA, petróleo",
+      "sourceHash": "b0441f183a91",
+      "updatedAt": "2026-08-17T12:23:02.307Z"
+    },
+    "ws.monitors.sort.lastAlert": {
+      "text": "Ordenar: Última alerta",
+      "sourceHash": "871e1671f3cc",
+      "updatedAt": "2026-08-17T12:23:02.307Z"
+    },
+    "ws.monitors.sort.alertCount": {
+      "text": "Ordenar: Recuento de alertas",
+      "sourceHash": "30818550f03c",
+      "updatedAt": "2026-08-17T12:23:02.307Z"
+    },
+    "ws.monitors.sort.name": {
+      "text": "Ordenar: Nombre",
+      "sourceHash": "1f7a1df8abe5",
+      "updatedAt": "2026-08-17T12:23:03.336Z"
+    },
+    "ws.monitors.sort.country": {
+      "text": "Ordenar: País",
+      "sourceHash": "f32fd2bbf52d",
+      "updatedAt": "2026-08-17T12:23:03.336Z"
+    },
+    "ws.monitors.kpi.watching": {
+      "text": "Vigilando señales",
+      "sourceHash": "97cf17eaef54",
+      "updatedAt": "2026-08-17T12:23:03.336Z"
+    },
+    "ws.monitors.kpi.totalAlerts": {
+      "text": "Alertas totales",
+      "sourceHash": "fde0ecac2d4a",
+      "updatedAt": "2026-08-17T12:23:03.336Z"
+    },
+    "ws.monitors.kpi.withAlerts": {
+      "text": "Con alertas",
+      "sourceHash": "462e89938441",
+      "updatedAt": "2026-08-17T12:23:03.336Z"
+    },
+    "ws.monitors.search": {
+      "text": "Buscar monitores, palabras clave, países…",
+      "sourceHash": "5ec1da77d398",
+      "updatedAt": "2026-08-17T12:23:03.336Z"
+    },
+    "ws.monitors.add": {
+      "text": "Añadir monitor",
+      "sourceHash": "c7347370fdde",
+      "updatedAt": "2026-08-17T12:23:03.336Z"
+    },
+    "ws.monitors.adding": {
+      "text": "Añadiendo…",
+      "sourceHash": "ffb2e628b0e9",
+      "updatedAt": "2026-08-17T12:23:03.336Z"
+    },
+    "ws.monitors.empty": {
+      "text": "Aún no hay monitores",
+      "sourceHash": "01356e674f83",
+      "updatedAt": "2026-08-17T12:23:19.823Z"
+    },
+    "ws.monitors.emptyHint": {
+      "text": "Agrega un perfil de vigilancia para palabras clave y países que quieres rastrear entre ciclos breves.",
+      "sourceHash": "5e619550a5fb",
+      "updatedAt": "2026-08-17T12:23:19.823Z"
+    },
+    "ws.monitors.noMatches": {
+      "text": "No hay coincidencias",
+      "sourceHash": "cd0af6cfca75",
+      "updatedAt": "2026-08-17T12:23:19.823Z"
+    },
+    "ws.monitors.noMatchesHint": {
+      "text": "Ajusta la búsqueda o los filtros, o crea un nuevo monitor.",
+      "sourceHash": "29c9f7839ead",
+      "updatedAt": "2026-08-17T12:23:19.823Z"
+    },
+    "ws.monitors.created": {
+      "text": "Monitor creado",
+      "sourceHash": "395dbfc3b9df",
+      "updatedAt": "2026-08-17T12:23:19.823Z"
+    },
+    "ws.monitors.createFailed": {
+      "text": "No se pudo crear el monitor",
+      "sourceHash": "0e94667b5b74",
+      "updatedAt": "2026-08-17T12:23:19.823Z"
+    },
+    "ws.monitors.watchProfile": {
+      "text": "Perfil de vigilancia",
+      "sourceHash": "42032bba3d02",
+      "updatedAt": "2026-08-17T12:23:19.823Z"
+    },
+    "ws.monitors.lastAlert": {
+      "text": "Última alerta",
+      "sourceHash": "6badefe08b70",
+      "updatedAt": "2026-08-17T12:23:19.823Z"
+    },
+    "ws.monitors.trackedTerms": {
+      "text": "Terminos rastreados",
+      "sourceHash": "7c78071fa618",
+      "updatedAt": "2026-08-17T12:23:20.788Z"
+    },
+    "ws.monitors.liveFeed": {
+      "text": "Alerta en vivo",
+      "sourceHash": "3997a0cdb184",
+      "updatedAt": "2026-08-17T12:23:20.788Z"
+    },
+    "ws.monitors.linkedProject": {
+      "text": "Proyecto vinculado",
+      "sourceHash": "3998027f1c8f",
+      "updatedAt": "2026-08-17T12:23:20.788Z"
+    },
+    "ws.monitors.noProjectLinked": {
+      "text": "Aún no hay proyecto vinculado.",
+      "sourceHash": "777c518a716d",
+      "updatedAt": "2026-08-17T12:23:20.788Z"
+    },
+    "ws.monitors.noProject": {
+      "text": "Sin proyecto",
+      "sourceHash": "c326b75775bf",
+      "updatedAt": "2026-08-17T12:23:20.788Z"
+    },
+    "ws.monitors.quickLinks": {
+      "text": "Enlaces rápidos",
+      "sourceHash": "4b4e155ec7ba",
+      "updatedAt": "2026-08-17T12:23:20.788Z"
+    },
+    "ws.monitors.noAlerts": {
+      "text": "No hay alertas registradas aún",
+      "sourceHash": "d5dd400aa0b8",
+      "updatedAt": "2026-08-17T12:23:20.788Z"
+    },
+    "ws.monitors.loadFailed": {
+      "text": "Error al cargar el monitor",
+      "sourceHash": "e44ad0053813",
+      "updatedAt": "2026-08-17T12:23:20.788Z"
+    },
+    "ws.monitors.paused": {
+      "text": "Monitor pausado",
+      "sourceHash": "34e761133c86",
+      "updatedAt": "2026-08-17T12:23:25.829Z"
+    },
+    "ws.monitors.resumed": {
+      "text": "Monitor reanudado",
+      "sourceHash": "a7f27044c65b",
+      "updatedAt": "2026-08-17T12:23:25.829Z"
+    },
+    "ws.monitors.updateFailed": {
+      "text": "No se pudo actualizar el monitor",
+      "sourceHash": "ab01af3ab5c9",
+      "updatedAt": "2026-08-17T12:23:25.829Z"
+    },
+    "ws.monitors.linkUpdated": {
+      "text": "Enlace de proyecto actualizado",
+      "sourceHash": "ca3bc3b5862c",
+      "updatedAt": "2026-08-17T12:23:25.829Z"
+    },
+    "ws.monitors.linkFailed": {
+      "text": "No se pudo actualizar el enlace",
+      "sourceHash": "9d74e05e8301",
+      "updatedAt": "2026-08-17T12:23:25.829Z"
+    },
+    "ws.monitors.notFound": {
+      "text": "Monitor no encontrado",
+      "sourceHash": "dbab2107fb75",
+      "updatedAt": "2026-08-17T12:23:25.829Z"
+    },
+    "ws.monitors.pause": {
+      "text": "Pausar",
+      "sourceHash": "781961bc81c2",
+      "updatedAt": "2026-08-17T12:23:25.829Z"
+    },
+    "ws.monitors.resume": {
+      "text": "Reanudar",
+      "sourceHash": "b3bd0b5a7049",
+      "updatedAt": "2026-08-17T12:23:25.829Z"
+    },
+    "ws.briefs.title": {
+      "text": "Resúmenes de decisiones",
+      "sourceHash": "11f32f8cf0c4",
+      "updatedAt": "2026-08-17T12:23:38.538Z"
+    },
+    "ws.briefs.lede": {
+      "text": "Paquetes con respaldo de evidencia de tus ejecuciones de proyecto — revisa el juicio, lentes PSN y exporta.",
+      "sourceHash": "f2467f9e4c8c",
+      "updatedAt": "2026-08-17T12:23:38.538Z"
+    },
+    "ws.briefs.empty": {
+      "text": "No hay resúmenes de decisiones aún",
+      "sourceHash": "b515f47278a5",
+      "updatedAt": "2026-08-17T12:23:38.538Z"
+    },
+    "ws.briefs.emptyHint": {
+      "text": "Ejecuta un pipeline de proyecto para generar tu primer resumen de decisión.",
+      "sourceHash": "9bf4c6c5c58e",
+      "updatedAt": "2026-08-17T12:23:38.538Z"
+    },
+    "ws.briefs.pendingReview": {
+      "text": "En revisión",
+      "sourceHash": "6a80f44e3b2b",
+      "updatedAt": "2026-08-17T12:23:38.538Z"
+    },
+    "ws.briefs.approved": {
+      "text": "Aprobado",
+      "sourceHash": "41b81eb8db1b",
+      "updatedAt": "2026-08-17T12:23:38.538Z"
+    },
+    "ws.briefs.depthModes": {
+      "text": "Modos de profundidad",
+      "sourceHash": "68a8aded8a97",
+      "updatedAt": "2026-08-17T12:23:38.538Z"
+    },
+    "ws.briefs.openProjects": {
+      "text": "Proyectos abiertos",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T12:23:38.538Z"
+    },
+    "ws.briefs.back": {
+      "text": "← Volver a informes",
+      "sourceHash": "69ee29903a7e",
+      "updatedAt": "2026-08-17T12:23:51.265Z"
+    },
+    "ws.briefs.notFound": {
+      "text": "Informe no encontrado",
+      "sourceHash": "87fb798c28c9",
+      "updatedAt": "2026-08-17T12:23:51.265Z"
+    },
+    "ws.briefs.browse": {
+      "text": "Explorar informes",
+      "sourceHash": "f4d095dec924",
+      "updatedAt": "2026-08-17T12:23:51.265Z"
+    },
+    "ws.briefs.loadFailed": {
+      "text": "No se pudo cargar el informe",
+      "sourceHash": "c7557e0c36a9",
+      "updatedAt": "2026-08-17T12:23:51.265Z"
+    },
+    "ws.briefs.noData": {
+      "text": "No hay datos de informe disponibles.",
+      "sourceHash": "f1024a68f087",
+      "updatedAt": "2026-08-17T12:23:51.265Z"
+    },
+    "ws.briefs.reviewRecord": {
+      "text": "Registro de revisión",
+      "sourceHash": "b018182d0769",
+      "updatedAt": "2026-08-17T12:23:51.265Z"
+    },
+    "ws.briefs.approvedToast": {
+      "text": "Informe aprobado",
+      "sourceHash": "8881ea2feac8",
+      "updatedAt": "2026-08-17T12:23:51.265Z"
+    },
+    "ws.briefs.reviewFailed": {
+      "text": "Revisión fallida",
+      "sourceHash": "5522c937885e",
+      "updatedAt": "2026-08-17T12:23:51.265Z"
+    },
+    "ws.briefs.deepDive": {
+      "text": "Profundización",
+      "sourceHash": "f96539f6c344",
+      "updatedAt": "2026-08-17T12:23:57.359Z"
+    },
+    "ws.briefs.approve": {
+      "text": "Aprobar",
+      "sourceHash": "7b2c7f146aba",
+      "updatedAt": "2026-08-17T12:23:57.359Z"
+    },
+    "ws.briefs.needsRevision": {
+      "text": "Requiere revisión",
+      "sourceHash": "a75105d396fa",
+      "updatedAt": "2026-08-17T12:23:57.359Z"
+    },
+    "ws.briefs.reject": {
+      "text": "Rechazar",
+      "sourceHash": "2b03b59293b6",
+      "updatedAt": "2026-08-17T12:23:57.359Z"
+    },
+    "ws.briefs.openProject": {
+      "text": "Abrir proyecto vinculado",
+      "sourceHash": "11bdb0dc219d",
+      "updatedAt": "2026-08-17T12:23:57.359Z"
+    },
+    "ws.briefs.confidence": {
+      "text": "Confianza",
+      "sourceHash": "82fa7d52c89d",
+      "updatedAt": "2026-08-17T12:23:57.359Z"
+    },
+    "ws.briefs.pagination": {
+      "text": "Paginación de briefs",
+      "sourceHash": "ca1f68feb387",
+      "updatedAt": "2026-08-17T12:23:57.359Z"
+    },
+    "ws.briefs.prevPage": {
+      "text": "Página anterior de briefs",
+      "sourceHash": "5f855ab42223",
+      "updatedAt": "2026-08-17T12:23:57.359Z"
+    },
+    "ws.briefs.nextPage": {
+      "text": "Siguiente página de resúmenes",
+      "sourceHash": "12274555c7e6",
+      "updatedAt": "2026-08-17T12:24:16.320Z"
+    },
+    "ws.briefs.showing": {
+      "text": "Mostrando {from}–{to} de {total}",
+      "sourceHash": "d236a8e46b06",
+      "updatedAt": "2026-08-17T12:24:16.320Z"
+    },
+    "ws.sources.title": {
+      "text": "Fuentes",
+      "sourceHash": "2eb56be3c2d9",
+      "updatedAt": "2026-08-17T12:24:16.320Z"
+    },
+    "ws.sources.lede": {
+      "text": "Curar pasaportes de registro que alimentan monitores y doctrina.",
+      "sourceHash": "34da3d01d122",
+      "updatedAt": "2026-08-17T12:24:16.320Z"
+    },
+    "ws.sources.search": {
+      "text": "Nombre, país, etiquetas…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T12:24:16.320Z"
+    },
+    "ws.sources.empty": {
+      "text": "No fuentes coincidentes",
+      "sourceHash": "83f097b639cf",
+      "updatedAt": "2026-08-17T12:24:16.320Z"
+    },
+    "ws.sources.emptyHint": {
+      "text": "Intenta una búsqueda diferente o arrastra un CSV para importar el registro.",
+      "sourceHash": "bf5f1c857903",
+      "updatedAt": "2026-08-17T12:24:16.320Z"
+    },
+    "ws.sources.pagination": {
+      "text": "Paginación de fuentes",
+      "sourceHash": "50f66b346611",
+      "updatedAt": "2026-08-17T12:24:16.320Z"
+    },
+    "ws.usage.title": {
+      "text": "Uso de IA",
+      "sourceHash": "03b2de6e709d",
+      "updatedAt": "2026-08-17T12:24:17.209Z"
+    },
+    "ws.usage.tokenAllowance": {
+      "text": "Permiso de tokens",
+      "sourceHash": "178b070cb08a",
+      "updatedAt": "2026-08-17T12:24:17.209Z"
+    },
+    "ws.usage.activitySplit": {
+      "text": "Distribución de actividad",
+      "sourceHash": "1f236c8d7d6b",
+      "updatedAt": "2026-08-17T12:24:17.209Z"
+    },
+    "ws.usage.estimatedCost": {
+      "text": "Costo estimado",
+      "sourceHash": "516cbee26f0b",
+      "updatedAt": "2026-08-17T12:24:17.209Z"
+    },
+    "ws.packs.title": {
+      "text": "Países",
+      "sourceHash": "0551baeeea22",
+      "updatedAt": "2026-08-17T12:24:17.209Z"
+    },
+    "ws.packs.lede": {
+      "text": "Paquetes de inteligencia curados por mercado caribeño.",
+      "sourceHash": "a46f67498e2f",
+      "updatedAt": "2026-08-17T12:24:17.209Z"
+    },
+    "ws.packs.meta": {
+      "text": "fuentes · entidades",
+      "sourceHash": "61f1da33e909",
+      "updatedAt": "2026-08-17T12:24:17.209Z"
+    },
+    "ws.stakeholders.cause": {
+      "text": "La causa",
+      "sourceHash": "0cd812b85c20",
+      "updatedAt": "2026-08-17T12:24:17.209Z"
+    },
+    "ws.stakeholders.title": {
+      "text": "Stakeholders",
+      "sourceHash": "5493e68cb4d6",
+      "updatedAt": "2026-08-17T12:24:18.079Z"
+    },
+    "ws.stakeholders.lede": {
+      "text": "Institutions that sponsor and shape Caribbean decision work.",
+      "sourceHash": "f0330bbdd8c2",
+      "updatedAt": "2026-08-17T12:24:18.079Z"
+    },
+    "ws.toolbar.search": {
+      "text": "Search…",
+      "sourceHash": "f54fbca187d2",
+      "updatedAt": "2026-08-17T12:24:18.079Z"
+    },
+    "ws.toolbar.sortBy": {
+      "text": "Sort by",
+      "sourceHash": "a2a5bdeca939",
+      "updatedAt": "2026-08-17T12:24:18.079Z"
+    },
+    "ws.toolbar.filter": {
+      "text": "Filter",
+      "sourceHash": "d7decf1aa22b",
+      "updatedAt": "2026-08-17T12:24:18.079Z"
+    },
+    "ws.loading.workspace": {
+      "text": "Loading workspace…",
+      "sourceHash": "89f0dde329fa",
+      "updatedAt": "2026-08-17T12:24:18.079Z"
+    },
+    "ws.loading.overview": {
+      "text": "Preparing overview…",
+      "sourceHash": "f34393549cd4",
+      "updatedAt": "2026-08-17T12:24:18.079Z"
+    },
+    "ws.loading.operator": {
+      "text": "Preparing operator console…",
+      "sourceHash": "27a6688f18c0",
+      "updatedAt": "2026-08-17T12:24:18.079Z"
+    },
+    "ws.topics.title": {
+      "text": "Las señales caribeñas más calientes",
+      "sourceHash": "c02ae1c5f749",
+      "updatedAt": "2026-08-17T12:24:24.847Z"
+    },
+    "ws.topics.loading": {
+      "text": "Cargando plantillas de temas…",
+      "sourceHash": "3a6c843fbbe8",
+      "updatedAt": "2026-08-17T12:24:24.847Z"
+    },
+    "ws.topics.tapPlay": {
+      "text": "Tocar para cargar · reproducir para ejecutar",
+      "sourceHash": "bcd777dbdbbd",
+      "updatedAt": "2026-08-17T12:24:24.847Z"
+    },
+    "ws.topics.refresh": {
+      "text": "Refrescar señales",
+      "sourceHash": "4d77417615b4",
+      "updatedAt": "2026-08-17T12:24:24.847Z"
+    },
+    "ws.topics.runNow": {
+      "text": "Ejecutar ahora",
+      "sourceHash": "2af00e23c480",
+      "updatedAt": "2026-08-17T12:24:24.847Z"
+    },
+    "ws.topics.starting": {
+      "text": "Iniciando…",
+      "sourceHash": "e5f58095ac29",
+      "updatedAt": "2026-08-17T12:24:24.847Z"
+    },
+    "ws.topics.scraping": {
+      "text": "Raspando…",
+      "sourceHash": "97355d74fde9",
+      "updatedAt": "2026-08-17T12:24:24.847Z"
+    },
+    "ws.topics.questionLoaded": {
+      "text": "Pregunta cargada — haga clic en Ejecutar flujo de trabajo del agente",
+      "sourceHash": "b57e028d16d6",
+      "updatedAt": "2026-08-17T12:24:24.847Z"
+    },
+    "ws.topics.pipelineStarted": {
+      "text": "Pipeline iniciado",
+      "sourceHash": "f2d5ecf09040",
+      "updatedAt": "2026-08-17T12:24:29.100Z"
+    },
+    "ws.topics.projectReady": {
+      "text": "Proyecto listo",
+      "sourceHash": "0e47cf96af8d",
+      "updatedAt": "2026-08-17T12:24:29.100Z"
+    },
+    "ws.topics.workflowRunning": {
+      "text": "El flujo de trabajo del agente está en ejecución.",
+      "sourceHash": "bde7d40c5be3",
+      "updatedAt": "2026-08-17T12:24:29.100Z"
+    },
+    "ws.topics.readyContinue": {
+      "text": "Tu proyecto está listo para continuar.",
+      "sourceHash": "6e0428373274",
+      "updatedAt": "2026-08-17T12:24:29.100Z"
+    },
+    "ws.docs.clickUpload": {
+      "text": "Hacer clic para cargar",
+      "sourceHash": "c77c363d22ab",
+      "updatedAt": "2026-08-17T12:24:29.100Z"
+    },
+    "ws.docs.orDrag": {
+      "text": "o arrastrar y soltar",
+      "sourceHash": "9ddf49cdc8ed",
+      "updatedAt": "2026-08-17T12:24:29.100Z"
+    },
+    "ws.docs.uploadFailed": {
+      "text": "Carga fallida",
+      "sourceHash": "ad0d0603e2aa",
+      "updatedAt": "2026-08-17T12:24:29.100Z"
+    },
+    "ws.docs.noUploads": {
+      "text": "No hay subidas aún.",
+      "sourceHash": "11da33e0d997",
+      "updatedAt": "2026-08-17T12:24:29.100Z"
+    },
+    "ws.docs.readSummary": {
+      "text": "Resumen",
+      "sourceHash": "f7685ae9e39b",
+      "updatedAt": "2026-08-17T12:24:33.710Z"
+    },
+    "ws.docs.summarize": {
+      "text": "Resumir contenido",
+      "sourceHash": "365b99b5cffd",
+      "updatedAt": "2026-08-17T12:24:33.710Z"
+    },
+    "ws.docs.rework": {
+      "text": "Rehacer resumen",
+      "sourceHash": "bad6aa15f0ee",
+      "updatedAt": "2026-08-17T12:24:33.710Z"
+    },
+    "ws.docs.openSummary": {
+      "text": "Abrir resumen",
+      "sourceHash": "cbb4c597aff6",
+      "updatedAt": "2026-08-17T12:24:33.710Z"
+    },
+    "ws.docs.summaryReady": {
+      "text": "Resumen listo",
+      "sourceHash": "cedb562d4da5",
+      "updatedAt": "2026-08-17T12:24:33.710Z"
+    },
+    "ws.docs.reworkReady": {
+      "text": "Resumen rehacido listo",
+      "sourceHash": "2f61dbbae128",
+      "updatedAt": "2026-08-17T12:24:33.710Z"
+    },
+    "ws.docs.deleteConfirm": {
+      "text": "¿Eliminar este documento?",
+      "sourceHash": "1ce5593800b3",
+      "updatedAt": "2026-08-17T12:24:33.710Z"
+    },
+    "ws.docs.delete": {
+      "text": "Eliminar documento",
+      "sourceHash": "e8df0b79020b",
+      "updatedAt": "2026-08-17T12:24:33.710Z"
+    },
+    "ws.docs.deleted": {
+      "text": "Documento eliminado",
+      "sourceHash": "e4db4d66b499",
+      "updatedAt": "2026-08-17T12:24:46.280Z"
+    },
+    "ws.docs.downloadFailed": {
+      "text": "Descarga fallida",
+      "sourceHash": "01125e1be1f5",
+      "updatedAt": "2026-08-17T12:24:46.280Z"
+    },
+    "ws.docs.summary.pipeline": {
+      "text": "Resumen del pipeline",
+      "sourceHash": "b0647716ca0e",
+      "updatedAt": "2026-08-17T12:24:46.280Z"
+    },
+    "ws.docs.summary.extractHint": {
+      "text": "Extrae texto relevante para la decisión de la carga (Los archivos binarios solo usan metadatos).",
+      "sourceHash": "74117cd5dd45",
+      "updatedAt": "2026-08-17T12:24:46.280Z"
+    },
+    "ws.docs.summary.reviewHint": {
+      "text": "Abrir el resumen de solo lectura — la edición está desactivada intencionalmente.",
+      "sourceHash": "683c57d5a83f",
+      "updatedAt": "2026-08-17T12:24:46.280Z"
+    },
+    "ws.docs.summary.disabled": {
+      "text": "El resumen de documento está desactivado por el operador.",
+      "sourceHash": "499a1a5ea2ff",
+      "updatedAt": "2026-08-17T12:24:46.280Z"
+    },
+    "ws.docs.summary.reworkDisabled": {
+      "text": "La revisión está desactivada. Aún puedes abrir el resumen de solo lectura.",
+      "sourceHash": "66773a613619",
+      "updatedAt": "2026-08-17T12:24:46.280Z"
+    },
+    "ws.docs.summary.running": {
+      "text": "Ejecutando pipeline de documento…",
+      "sourceHash": "0fe516637573",
+      "updatedAt": "2026-08-17T12:24:46.280Z"
+    },
+    "ws.docs.summary.keepOpen": {
+      "text": "Extrae → sintetiza para este teatro. Mantén este panel abierto.",
+      "sourceHash": "b88686364225",
+      "updatedAt": "2026-08-17T12:24:58.433Z"
+    },
+    "ws.docs.summary.failed": {
+      "text": "La última ejecución falló. Ajusta las notas de enfoque si es necesario, luego vuelve a intentarlo.",
+      "sourceHash": "ec3c5129064e",
+      "updatedAt": "2026-08-17T12:24:58.433Z"
+    },
+    "ws.docs.summary.none": {
+      "text": "No hay texto de resumen disponible.",
+      "sourceHash": "217d2512f8ca",
+      "updatedAt": "2026-08-17T12:24:58.433Z"
+    },
+    "ws.docs.summary.focusPlaceholder": {
+      "text": "e.g. Énfasis en la vía reguladora, socios de capital y qué esto significa para la pregunta de decisión…",
+      "sourceHash": "4226d6321002",
+      "updatedAt": "2026-08-17T12:24:58.433Z"
+    },
+    "ws.docs.summary.relevance": {
+      "text": "Relevancia de la decisión",
+      "sourceHash": "bded871bb02a",
+      "updatedAt": "2026-08-17T12:24:58.433Z"
+    },
+    "ws.docs.summary.keyPoints": {
+      "text": "Puntos clave",
+      "sourceHash": "5d1855a1eaac",
+      "updatedAt": "2026-08-17T12:24:58.433Z"
+    },
+    "ws.docs.summary.gaps": {
+      "text": "Brechas de evidencia",
+      "sourceHash": "4285633d539c",
+      "updatedAt": "2026-08-17T12:24:58.433Z"
+    },
+    "ws.docs.summary.riskFlags": {
+      "text": "Banderas de riesgo",
+      "sourceHash": "024790205e21",
+      "updatedAt": "2026-08-17T12:24:58.433Z"
+    },
+    "ws.docs.summary.reviewFlags": {
+      "text": "Bandera de revisión",
+      "sourceHash": "c637c236e807",
+      "updatedAt": "2026-08-17T12:25:03.130Z"
+    },
+    "ws.docs.summary.operatorFocus": {
+      "text": "Enfoque de operador usado",
+      "sourceHash": "541e0f17e21c",
+      "updatedAt": "2026-08-17T12:25:03.130Z"
+    },
+    "ws.docs.summary.generate": {
+      "text": "Generar resumen",
+      "sourceHash": "edd0f4b8c42f",
+      "updatedAt": "2026-08-17T12:25:03.130Z"
+    },
+    "ws.docs.summary.regenerate": {
+      "text": "Regenerar resumen",
+      "sourceHash": "a4be29f8457d",
+      "updatedAt": "2026-08-17T12:25:03.130Z"
+    },
+    "ws.voice.tap": {
+      "text": "Toque para hablar",
+      "sourceHash": "4f4d692fb7a0",
+      "updatedAt": "2026-08-17T12:25:03.130Z"
+    },
+    "ws.voice.stop": {
+      "text": "Dejar de escuchar",
+      "sourceHash": "e134211eedf1",
+      "updatedAt": "2026-08-17T12:25:03.130Z"
+    },
+    "ws.voice.blocked": {
+      "text": "Micrófono bloqueado",
+      "sourceHash": "7b63697f6dc7",
+      "updatedAt": "2026-08-17T12:25:03.130Z"
+    },
+    "ws.voice.allow": {
+      "text": "Permitir micrófono y hablar",
+      "sourceHash": "f1132cb60ca8",
+      "updatedAt": "2026-08-17T12:25:03.130Z"
+    },
+    "ws.voice.startSpeaking": {
+      "text": "Habla — tus palabras aparecen aquí en vivo.",
+      "sourceHash": "99cd968419fe",
+      "updatedAt": "2026-08-17T12:25:14.902Z"
+    },
+    "ws.voice.tapThenSpeak": {
+      "text": "Toca el micrófono, luego habla — palabras aparecen aquí en vivo.",
+      "sourceHash": "32cbf9c484b9",
+      "updatedAt": "2026-08-17T12:25:14.902Z"
+    },
+    "ws.voice.placeholder": {
+      "text": "¿Qué decisión estratégica necesitas juicio basado en evidencia?",
+      "sourceHash": "cd88d0acf018",
+      "updatedAt": "2026-08-17T12:25:14.902Z"
+    },
+    "ws.voice.blockedToast": {
+      "text": "El acceso al micrófono fue bloqueado. Permite el micrófono para este sitio, luego vuelve a intentarlo.",
+      "sourceHash": "42117e1fcf00",
+      "updatedAt": "2026-08-17T12:25:14.902Z"
+    },
+    "ws.voice.unavailable": {
+      "text": "La dictación de voz no está disponible en este navegador — escribe en su lugar.",
+      "sourceHash": "4497fd5a6538",
+      "updatedAt": "2026-08-17T12:25:14.902Z"
+    },
+    "ws.voice.needsHttps": {
+      "text": "La voz necesita HTTPS (o localhost). Abra la URL segura del sitio.",
+      "sourceHash": "b3b6c9c79cc8",
+      "updatedAt": "2026-08-17T12:25:14.902Z"
+    },
+    "ws.voice.settingsBlocked": {
+      "text": "El micrófono está bloqueado en la configuración del navegador. Haga clic en el icono del candado → Configuración del sitio → Micrófono → Permitir.",
+      "sourceHash": "1b6c12cfa138",
+      "updatedAt": "2026-08-17T12:25:14.902Z"
+    },
+    "ws.pulse.title": {
+      "text": "Pulso del espacio de trabajo",
+      "sourceHash": "0d2a193b046d",
+      "updatedAt": "2026-08-17T12:25:14.902Z"
+    },
+    "ws.pulse.completedAgents": {
+      "text": "Completed agents",
+      "sourceHash": "8b06c1de3eb3",
+      "updatedAt": "2026-08-17T12:25:15.751Z"
+    },
+    "ws.pulse.awaitingRun": {
+      "text": "Awaiting run",
+      "sourceHash": "314aa3b51bbd",
+      "updatedAt": "2026-08-17T12:25:15.751Z"
+    },
+    "ws.pulse.onProject": {
+      "text": "On project",
+      "sourceHash": "8d6e72e7313f",
+      "updatedAt": "2026-08-17T12:25:15.751Z"
+    },
+    "ws.pulse.noSpend": {
+      "text": "No spend yet",
+      "sourceHash": "18ad8a4907a5",
+      "updatedAt": "2026-08-17T12:25:15.751Z"
+    },
+    "ws.pulse.metric.stages": {
+      "text": "Stages",
+      "sourceHash": "c1d33ad534e8",
+      "updatedAt": "2026-08-17T12:25:15.751Z"
+    },
+    "ws.pulse.metric.progress": {
+      "text": "Progress",
+      "sourceHash": "1b90271d66cf",
+      "updatedAt": "2026-08-17T12:25:15.751Z"
+    },
+    "ws.pulse.metric.tokens": {
+      "text": "Tokens",
+      "sourceHash": "c38c6c1f3a27",
+      "updatedAt": "2026-08-17T12:25:15.751Z"
+    },
+    "ws.pulse.onAgent": {
+      "text": "Live on the Agent card",
+      "sourceHash": "9e9662365193",
+      "updatedAt": "2026-08-17T12:25:15.751Z"
+    },
+    "ws.pulse.onAgentBody": {
+      "text": "Etapas, progreso, documentos y gasto ahora están en la tarjeta del Agente con el flujo de trabajo.",
+      "sourceHash": "0b1ec9b2b478",
+      "updatedAt": "2026-08-17T12:25:16.707Z"
+    },
+    "ws.pipeline.doctrine": {
+      "text": "Flujo de doctrina v0.2",
+      "sourceHash": "aa4272292b41",
+      "updatedAt": "2026-08-17T12:25:16.707Z"
+    },
+    "ws.pipeline.demo": {
+      "text": "Flujo de trabajo del Agente (demo)",
+      "sourceHash": "f8b8b59087a6",
+      "updatedAt": "2026-08-17T12:25:16.707Z"
+    },
+    "ws.pipeline.ready": {
+      "text": "Listo cuando estés",
+      "sourceHash": "aec1322315e6",
+      "updatedAt": "2026-08-17T12:25:16.707Z"
+    },
+    "ws.tour.replay": {
+      "text": "Reproducir recorrido del espacio de trabajo",
+      "sourceHash": "e200f425b045",
+      "updatedAt": "2026-08-17T12:25:16.707Z"
+    },
+    "ws.tour.tutorial": {
+      "text": "Tutorial",
+      "sourceHash": "2701a94c0eb5",
+      "updatedAt": "2026-08-17T12:25:16.707Z"
+    },
+    "ws.account.avatarRules": {
+      "text": "JPEG, PNG o WebP. El tamaño máximo está definido por el operador.",
+      "sourceHash": "1ffab77f5756",
+      "updatedAt": "2026-08-17T12:25:16.707Z"
+    },
+    "ws.account.passwordMin": {
+      "text": "La nueva contraseña debe tener al menos 8 caracteres.",
+      "sourceHash": "f36bc78e2e46",
+      "updatedAt": "2026-08-17T12:25:16.707Z"
+    },
+    "ws.account.signOutNote": {
+      "text": "Finaliza esta sesión de navegador en este dispositivo.",
+      "sourceHash": "798b10424390",
+      "updatedAt": "2026-08-17T12:25:18.051Z"
+    },
+    "ws.account.presence.available": {
+      "text": "Disponible",
+      "sourceHash": "7c62a1424469",
+      "updatedAt": "2026-08-17T12:25:18.051Z"
+    },
+    "ws.account.presence.availableHint": {
+      "text": "Listo para reclamar y manejar hilos de soporte",
+      "sourceHash": "f608d72be1eb",
+      "updatedAt": "2026-08-17T12:25:18.051Z"
+    },
+    "ws.account.presence.away": {
+      "text": "Ausente",
+      "sourceHash": "4fae89296662",
+      "updatedAt": "2026-08-17T12:25:18.051Z"
+    },
+    "ws.account.presence.awayHint": {
+      "text": "Disponibilidad limitada para soporte",
+      "sourceHash": "a2ae2ea4ecd3",
+      "updatedAt": "2026-08-17T12:25:18.051Z"
+    },
+    "ws.account.presence.busy": {
+      "text": "Ocupado",
+      "sourceHash": "592a9d1678c2",
+      "updatedAt": "2026-08-17T12:25:18.051Z"
+    },
+    "ws.account.presence.busyHint": {
+      "text": "En conversación — reclamaciones nuevas limitadas",
+      "sourceHash": "0e2a07ad911e",
+      "updatedAt": "2026-08-17T12:25:18.051Z"
+    },
+    "ws.account.presence.offline": {
+      "text": "Sin conexión",
+      "sourceHash": "e01fa717bacc",
+      "updatedAt": "2026-08-17T12:25:18.051Z"
+    },
+    "ws.account.presence.offlineHint": {
+      "text": "No manejando soporte en este momento",
+      "sourceHash": "5d54853ddb06",
+      "updatedAt": "2026-08-17T12:25:19.129Z"
+    },
+    "ws.account.presence.lede": {
+      "text": "Tu estado es visible para el personal de soporte y colaboradores del espacio de trabajo.",
+      "sourceHash": "b9e64e6d941b",
+      "updatedAt": "2026-08-17T12:25:19.129Z"
+    },
+    "ws.usage.lede": {
+      "text": "Tokens, créditos y costo estimado de OpenRouter para tu período de espacio de trabajo.",
+      "sourceHash": "98bfd9f1db1f",
+      "updatedAt": "2026-08-17T12:25:19.129Z"
+    },
+    "ws.monitors.kpi.paused": {
+      "text": "Pausado",
+      "sourceHash": "c7dfb6f1d9c5",
+      "updatedAt": "2026-08-17T12:25:19.129Z"
+    },
+    "ws.monitors.new": {
+      "text": "Nuevo monitor",
+      "sourceHash": "8bf83b0730ca",
+      "updatedAt": "2026-08-17T12:25:19.129Z"
+    },
+    "ws.topics.lede": {
+      "text": "Carga una señal caribeña en vivo en un teatro de proyecto, luego ejecuta agentes.",
+      "sourceHash": "889a75409945",
+      "updatedAt": "2026-08-17T12:25:19.129Z"
+    },
+    "ws.topics.starters": {
+      "text": "Starters",
+      "sourceHash": "7bfec88cf924",
+      "updatedAt": "2026-08-17T12:25:19.129Z"
+    },
+    "ws.topics.useHere": {
+      "text": "Usar aquí",
+      "sourceHash": "72c384afab37",
+      "updatedAt": "2026-08-17T12:25:19.129Z"
+    },
+    "ws.voice.listening": {
+      "text": "Escuchando…",
+      "sourceHash": "6c19a4761d7e",
+      "updatedAt": "2026-08-17T12:25:29.681Z"
+    },
+    "ws.voice.micBlockedShort": {
+      "text": "Micrófono bloqueado",
+      "sourceHash": "08f9ba43eef0",
+      "updatedAt": "2026-08-17T12:25:29.681Z"
+    },
+    "ws.voice.allowMicShort": {
+      "text": "Permitir micrófono",
+      "sourceHash": "43f5f6857d60",
+      "updatedAt": "2026-08-17T12:25:29.681Z"
+    },
+    "ws.voice.unavailableShort": {
+      "text": "Voz no disponible",
+      "sourceHash": "1aeefb24cc0d",
+      "updatedAt": "2026-08-17T12:25:29.681Z"
+    },
+    "ws.voice.spoken": {
+      "text": "Hablado",
+      "sourceHash": "77459e51c50c",
+      "updatedAt": "2026-08-17T12:25:29.681Z"
+    },
+    "ws.voice.deniedHint": {
+      "text": "Permita el micrófono, luego inténtelo de nuevo.",
+      "sourceHash": "5b0bc80e09a9",
+      "updatedAt": "2026-08-17T12:25:29.681Z"
+    },
+    "ws.project.analysisDepth": {
+      "text": "Profundidad del análisis",
+      "sourceHash": "903ec812ae6d",
+      "updatedAt": "2026-08-17T12:25:29.681Z"
+    },
+    "ws.project.paidModels": {
+      "text": "Permitir modelos pagos para esta ejecución",
+      "sourceHash": "06cd26ce7c61",
+      "updatedAt": "2026-08-17T12:25:29.681Z"
+    },
+    "ws.project.stuckHint": {
+      "text": "Si los agentes parecen atascados, fuerce una nueva ejecución.",
+      "sourceHash": "02d66d9bd268",
+      "updatedAt": "2026-08-17T12:25:30.602Z"
+    },
+    "ws.project.resetLayout": {
+      "text": "Restablecer diseño",
+      "sourceHash": "5179087c02b4",
+      "updatedAt": "2026-08-17T12:25:30.602Z"
+    },
+    "ws.project.archive": {
+      "text": "Archivar",
+      "sourceHash": "2621c6fd51a5",
+      "updatedAt": "2026-08-17T12:25:30.602Z"
+    },
+    "ws.project.restore": {
+      "text": "Restaurar",
+      "sourceHash": "3cbe6d6b9a8d",
+      "updatedAt": "2026-08-17T12:25:30.602Z"
+    },
+    "ws.project.briefRevealBody": {
+      "text": "Abrir el brief para revisar el juicio y la evidencia.",
+      "sourceHash": "fc1c1408e907",
+      "updatedAt": "2026-08-17T12:25:30.602Z"
+    },
+    "ws.docs.fileTypes": {
+      "text": "PDF, Word, texto e imágenes · Retención de 30 días",
+      "sourceHash": "c766e5559e6a",
+      "updatedAt": "2026-08-17T12:25:30.602Z"
+    },
+    "ws.docs.deleteShort": {
+      "text": "Eliminar",
+      "sourceHash": "f6fdbe48dc54",
+      "updatedAt": "2026-08-17T12:25:30.602Z"
+    },
+    "ws.docs.downloadShort": {
+      "text": "Descargar",
+      "sourceHash": "a479c9c34e87",
+      "updatedAt": "2026-08-17T12:25:30.602Z"
+    },
+    "op.section.production": {
+      "text": "Producción",
+      "sourceHash": "df70fc7991d3",
+      "updatedAt": "2026-08-17T12:25:37.687Z"
+    },
+    "op.brand": {
+      "text": "Octivate Operador",
+      "sourceHash": "c083a340a671",
+      "updatedAt": "2026-08-17T12:25:37.687Z"
+    },
+    "op.title": {
+      "text": "Centro de operaciones del operador",
+      "sourceHash": "f1ae56b9207a",
+      "updatedAt": "2026-08-17T12:25:37.687Z"
+    },
+    "op.subtitle": {
+      "text": "Métricas en vivo de tuberías, operaciones, plano de control, catálogo y precios — módulos de vista dividida, números API en tiempo real.",
+      "sourceHash": "cb9be5c7af4d",
+      "updatedAt": "2026-08-17T12:25:37.687Z"
+    },
+    "op.refresh": {
+      "text": "Actualizar",
+      "sourceHash": "56e3badc4e6c",
+      "updatedAt": "2026-08-17T12:25:37.687Z"
+    },
+    "op.tab.pulse": {
+      "text": "Pulso",
+      "sourceHash": "b3cc660b9187",
+      "updatedAt": "2026-08-17T12:25:37.687Z"
+    },
+    "op.tab.pulse.hint": {
+      "text": "Salud de la plataforma y actividad en vivo",
+      "sourceHash": "7158af122607",
+      "updatedAt": "2026-08-17T12:25:37.687Z"
+    },
+    "op.tab.operations": {
+      "text": "Operaciones",
+      "sourceHash": "a1fdaa6b2a84",
+      "updatedAt": "2026-08-17T12:25:37.687Z"
+    },
+    "op.tab.operations.hint": {
+      "text": "Costos y acciones operativas",
+      "sourceHash": "828625ff637a",
+      "updatedAt": "2026-08-17T12:25:40.818Z"
+    },
+    "op.tab.control": {
+      "text": "Control",
+      "sourceHash": "ea1d3df298ca",
+      "updatedAt": "2026-08-17T12:25:40.818Z"
+    },
+    "op.tab.control.hint": {
+      "text": "Límites, modelos y controles de plataforma",
+      "sourceHash": "7c76af9956eb",
+      "updatedAt": "2026-08-17T12:25:40.818Z"
+    },
+    "op.tab.catalog": {
+      "text": "Catálogo",
+      "sourceHash": "4a88d27bbae1",
+      "updatedAt": "2026-08-17T12:25:40.818Z"
+    },
+    "op.tab.catalog.hint": {
+      "text": "Herramientas de registro de origen y catálogo",
+      "sourceHash": "03e812eaa0b0",
+      "updatedAt": "2026-08-17T12:25:40.818Z"
+    },
+    "op.tab.support": {
+      "text": "Soporte al cliente",
+      "sourceHash": "83151dbe97f5",
+      "updatedAt": "2026-08-17T12:25:40.818Z"
+    },
+    "op.tab.support.hint": {
+      "text": "Buzón de soporte basado en cuentas y moderación",
+      "sourceHash": "e935dc49fec9",
+      "updatedAt": "2026-08-17T12:25:40.818Z"
+    },
+    "op.tab.mail": {
+      "text": "Correo",
+      "sourceHash": "92379cbb8ecf",
+      "updatedAt": "2026-08-17T12:25:40.818Z"
+    },
+    "op.tab.mail.hint": {
+      "text": "Correo saliente del operador y lista de correo",
+      "sourceHash": "89336a920d33",
+      "updatedAt": "2026-08-17T12:25:43.400Z"
+    },
+    "op.tab.users": {
+      "text": "Usuarios",
+      "sourceHash": "57f2b181d0a5",
+      "updatedAt": "2026-08-17T12:25:43.400Z"
+    },
+    "op.tab.users.hint": {
+      "text": "Cuentas de miembros y acceso",
+      "sourceHash": "cdcf5d5c424f",
+      "updatedAt": "2026-08-17T12:25:43.400Z"
+    },
+    "op.tab.pricing": {
+      "text": "Precios",
+      "sourceHash": "a0d9bbad5f93",
+      "updatedAt": "2026-08-17T12:25:43.400Z"
+    },
+    "op.tab.pricing.hint": {
+      "text": "Configuración de planes y precios",
+      "sourceHash": "c56f16d3a8b8",
+      "updatedAt": "2026-08-17T12:25:43.400Z"
+    },
+    "op.tab.merchants": {
+      "text": "Comerciantes",
+      "sourceHash": "37633677209d",
+      "updatedAt": "2026-08-17T12:25:43.400Z"
+    },
+    "op.tab.merchants.hint": {
+      "text": "Perfiles de facturación en el checkout y envíos de compras",
+      "sourceHash": "f74180193a8c",
+      "updatedAt": "2026-08-17T12:25:43.400Z"
+    },
+    "op.tab.automation": {
+      "text": "Automatización",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T12:25:43.400Z"
+    },
+    "op.tab.automation.hint": {
+      "text": "Media crawl, download, and local transcription",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T12:25:44.506Z"
+    },
+    "op.tab.parliament": {
+      "text": "Automation",
+      "sourceHash": "a15fde5173db",
+      "updatedAt": "2026-08-17T12:25:44.506Z"
+    },
+    "op.tab.parliament.hint": {
+      "text": "Media crawl, download, and local transcription",
+      "sourceHash": "1bf95d34536c",
+      "updatedAt": "2026-08-17T12:25:44.506Z"
+    },
+    "op.tab.exports": {
+      "text": "Exports",
+      "sourceHash": "0e16537914a0",
+      "updatedAt": "2026-08-17T12:25:44.506Z"
+    },
+    "op.tab.exports.hint": {
+      "text": "Export jobs and artifacts",
+      "sourceHash": "21dd275c3e12",
+      "updatedAt": "2026-08-17T12:25:44.506Z"
+    },
+    "op.tab.debug": {
+      "text": "Debug",
+      "sourceHash": "bd604d99e75e",
+      "updatedAt": "2026-08-17T12:25:44.506Z"
+    },
+    "op.tab.debug.hint": {
+      "text": "Ops event stream and diagnostics",
+      "sourceHash": "ad315fcae7e9",
+      "updatedAt": "2026-08-17T12:25:44.506Z"
+    },
+    "op.i18n.title": {
+      "text": "Translation catalogs",
+      "sourceHash": "e4dfce9a5e06",
+      "updatedAt": "2026-08-17T12:25:44.506Z"
+    },
+    "op.i18n.lede": {
+      "text": "Prebuild catálogos de locales permanentes vía OpenRouter. Las páginas nunca llaman al traductor.",
+      "sourceHash": "f41683cce4eb",
+      "updatedAt": "2026-08-17T12:25:45.588Z"
+    },
+    "op.i18n.sync": {
+      "text": "Sincronizar traducciones",
+      "sourceHash": "0a40962f0248",
+      "updatedAt": "2026-08-17T12:25:45.588Z"
+    },
+    "op.i18n.syncing": {
+      "text": "Sincronizando…",
+      "sourceHash": "221ca63005ea",
+      "updatedAt": "2026-08-17T12:25:45.588Z"
+    },
+    "op.i18n.refresh": {
+      "text": "Actualizar estado",
+      "sourceHash": "ade15a52e213",
+      "updatedAt": "2026-08-17T12:25:45.588Z"
+    },
+    "op.modules.liveKpis": {
+      "text": "KPIs en vivo",
+      "sourceHash": "864cca8d77e4",
+      "updatedAt": "2026-08-17T12:25:45.588Z"
+    },
+    "op.modules.liveKpisHint": {
+      "text": "Haz clic en una métrica para abrir su vista de consola",
+      "sourceHash": "d41d360e119d",
+      "updatedAt": "2026-08-17T12:25:45.588Z"
+    },
+    "op.modules.revisionQueue": {
+      "text": "Cola de revisiones",
+      "sourceHash": "0acf2dc1f773",
+      "updatedAt": "2026-08-17T12:25:45.588Z"
+    },
+    "op.modules.revisionHint": {
+      "text": "Brevies pendientes emparejados por cuenta de origen",
+      "sourceHash": "607fc44d0589",
+      "updatedAt": "2026-08-17T12:25:45.588Z"
+    },
+    "op.modules.noRevision": {
+      "text": "No hay solicitudes pendientes de revisión.",
+      "sourceHash": "d6dfa3886a0e",
+      "updatedAt": "2026-08-17T12:25:56.732Z"
+    },
+    "op.modules.sessionMix": {
+      "text": "Mezcla de sesiones",
+      "sourceHash": "341919f517c9",
+      "updatedAt": "2026-08-17T12:25:56.732Z"
+    },
+    "op.modules.sessionHint": {
+      "text": "Estados de flujo de trabajo del agente como barras de actividad",
+      "sourceHash": "c3f1f3eadcd5",
+      "updatedAt": "2026-08-17T12:25:56.732Z"
+    },
+    "op.modules.costByModel": {
+      "text": "Costos por modelo",
+      "sourceHash": "d281caa03bcc",
+      "updatedAt": "2026-08-17T12:25:56.732Z"
+    },
+    "op.modules.costHint": {
+      "text": "Gasto desde el ledger de costos como barras de actividad",
+      "sourceHash": "09f4a8a24cb9",
+      "updatedAt": "2026-08-17T12:25:56.732Z"
+    },
+    "op.modules.tokensConcurrency": {
+      "text": "Tokens & concurrencia",
+      "sourceHash": "fa26e388feb6",
+      "updatedAt": "2026-08-17T12:25:56.732Z"
+    },
+    "op.modules.tokenBudget": {
+      "text": "Presupuesto de tokens & barras de concurrencia",
+      "sourceHash": "4e046c938df1",
+      "updatedAt": "2026-08-17T12:25:56.732Z"
+    },
+    "op.modules.liveSystem": {
+      "text": "Estado del sistema en vivo — arrastrar para reorganizar",
+      "sourceHash": "57e91bf745c5",
+      "updatedAt": "2026-08-17T12:25:56.732Z"
+    },
+    "op.modules.controlPlane": {
+      "text": "Plano de control",
+      "sourceHash": "38f00e1ffa03",
+      "updatedAt": "2026-08-17T12:26:00.664Z"
+    },
+    "op.modules.controlHint": {
+      "text": "Límites de uso para ejecuciones en vivo — arrastrar para reorganizar",
+      "sourceHash": "f3fff5453ff9",
+      "updatedAt": "2026-08-17T12:26:00.664Z"
+    },
+    "op.modules.modelRouting": {
+      "text": "Ruteo de modelos",
+      "sourceHash": "06a48dd13470",
+      "updatedAt": "2026-08-17T12:26:00.664Z"
+    },
+    "op.modules.evidencePipeline": {
+      "text": "Pipeline de evidencia",
+      "sourceHash": "c8f16d4ea829",
+      "updatedAt": "2026-08-17T12:26:00.664Z"
+    },
+    "op.modules.liveConcurrency": {
+      "text": "Medidores de concurrencia en vivo",
+      "sourceHash": "e0709470392d",
+      "updatedAt": "2026-08-17T12:26:00.664Z"
+    },
+    "op.modules.probes": {
+      "text": "Sondas de disponibilidad & cadencia — arrastrar para reorganizar",
+      "sourceHash": "e645018146df",
+      "updatedAt": "2026-08-17T12:26:00.664Z"
+    },
+    "op.modules.sourceCapture": {
+      "text": "Captura de origen",
+      "sourceHash": "cd599f00b60c",
+      "updatedAt": "2026-08-17T12:26:00.664Z"
+    },
+    "op.modules.artifactQueue": {
+      "text": "Cola de artefactos & ruta — arrastrar para reorganizar",
+      "sourceHash": "2ae5335735e6",
+      "updatedAt": "2026-08-17T12:26:00.664Z"
+    },
+    "op.modules.liveRegistry": {
+      "text": "Registro en vivo — arrastrar para reorganizar",
+      "sourceHash": "544cb1f76259",
+      "updatedAt": "2026-08-17T12:26:12.156Z"
+    },
+    "op.modules.signalTicker": {
+      "text": "Indicador de señal",
+      "sourceHash": "e0fa7496c8b3",
+      "updatedAt": "2026-08-17T12:26:12.156Z"
+    },
+    "op.modules.tickerHint": {
+      "text": "Marquee en vivo del sitio — componer, previsualizar, encolar",
+      "sourceHash": "53c2b36d9e58",
+      "updatedAt": "2026-08-17T12:26:12.156Z"
+    },
+    "op.modules.unassigned": {
+      "text": "No asignado / semilla",
+      "sourceHash": "c15e034fd891",
+      "updatedAt": "2026-08-17T12:26:12.156Z"
+    },
+    "op.pulse.liveConsole": {
+      "text": "Consola en vivo",
+      "sourceHash": "99254e92d752",
+      "updatedAt": "2026-08-17T12:26:12.156Z"
+    },
+    "op.pulse.reload": {
+      "text": "Recargar todos los paneles de API del operador",
+      "sourceHash": "d9fb2ba01854",
+      "updatedAt": "2026-08-17T12:26:12.156Z"
+    },
+    "op.pulse.periodCost": {
+      "text": "Costo de período",
+      "sourceHash": "cb8a109f1f4b",
+      "updatedAt": "2026-08-17T12:26:12.156Z"
+    },
+    "op.pulse.periodCostHint": {
+      "text": "Gasto de período comprometido en el ledger + pipeline en tránsito (en vivo)",
+      "sourceHash": "59084279a9c0",
+      "updatedAt": "2026-08-17T12:26:12.156Z"
+    },
+    "op.pulse.tokenBudget": {
+      "text": "Presupuesto de tokens",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T12:26:24.775Z"
+    },
+    "op.pulse.tokenBudgetHint": {
+      "text": "Tokens del ledger de costos (sincronizado) · adiciones en vivo de sesiones en vuelo",
+      "sourceHash": "2769bcf48179",
+      "updatedAt": "2026-08-17T12:26:24.775Z"
+    },
+    "op.pulse.liveAwaiting": {
+      "text": "En vivo · esperando clave",
+      "sourceHash": "6342b95cc86e",
+      "updatedAt": "2026-08-17T12:26:24.775Z"
+    },
+    "op.pulse.openOpsSessions": {
+      "text": "Operaciones abiertas · cola de sesión de agente",
+      "sourceHash": "c0f238a02a7d",
+      "updatedAt": "2026-08-17T12:26:24.775Z"
+    },
+    "op.pulse.openCatalog": {
+      "text": "Catálogo abierto · registro de origen & ticker",
+      "sourceHash": "a238e6ce5284",
+      "updatedAt": "2026-08-17T12:26:24.775Z"
+    },
+    "op.pulse.openPulseReviews": {
+      "text": "Pulse abierto · revisiones breves pendientes",
+      "sourceHash": "d2b934845eee",
+      "updatedAt": "2026-08-17T12:26:24.775Z"
+    },
+    "op.pulse.openOpsModeration": {
+      "text": "Operaciones abiertas · inventario de moderación",
+      "sourceHash": "ae2238c4a37e",
+      "updatedAt": "2026-08-17T12:26:24.775Z"
+    },
+    "op.pulse.loadFailed": {
+      "text": "Falló al cargar la consola del operador",
+      "sourceHash": "52090fbc038a",
+      "updatedAt": "2026-08-17T12:26:24.775Z"
+    },
+    "op.pulse.autosaveFailed": {
+      "text": "No se pudieron guardar los límites automáticamente",
+      "sourceHash": "874eeff8b691",
+      "updatedAt": "2026-08-17T12:26:33.489Z"
+    },
+    "op.pulse.refreshed": {
+      "text": "Consola actualizada",
+      "sourceHash": "036e418d4072",
+      "updatedAt": "2026-08-17T12:26:33.489Z"
+    },
+    "op.pulse.refreshFailed": {
+      "text": "Actualización fallida",
+      "sourceHash": "3d1f4a6759f4",
+      "updatedAt": "2026-08-17T12:26:33.489Z"
+    },
+    "op.pulse.clearReviews": {
+      "text": "¿Eliminar todas las revisiones pendientes?",
+      "sourceHash": "6fdeaaa15241",
+      "updatedAt": "2026-08-17T12:26:33.489Z"
+    },
+    "op.pulse.clearStale": {
+      "text": "¿Eliminar revisiones semilla caducadas?",
+      "sourceHash": "df6187395702",
+      "updatedAt": "2026-08-17T12:26:33.489Z"
+    },
+    "op.pulse.clearReviewsHint": {
+      "text": "Marca cada revisión pendiente breve como rechazada y actualiza los registros de revisión humana. Propaga los cambios en vivo a los operadores.",
+      "sourceHash": "07afb627b450",
+      "updatedAt": "2026-08-17T12:26:33.489Z"
+    },
+    "op.pulse.clearStaleHint": {
+      "text": "Solo elimina revisiones pendientes sin cuenta propietaria (semilla/órfano).",
+      "sourceHash": "63a7081f3fd6",
+      "updatedAt": "2026-08-17T12:26:33.489Z"
+    },
+    "op.pulse.clearAllReviews": {
+      "text": "Eliminar todas las revisiones",
+      "sourceHash": "8aaf3beff76b",
+      "updatedAt": "2026-08-17T12:26:33.489Z"
+    },
+    "op.pulse.clearStaleBtn": {
+      "text": "Borrar stale",
+      "sourceHash": "c760db651884",
+      "updatedAt": "2026-08-17T12:26:46.218Z"
+    },
+    "op.pulse.nothingToClear": {
+      "text": "Nada por limpiar",
+      "sourceHash": "ec219a9ca961",
+      "updatedAt": "2026-08-17T12:26:46.218Z"
+    },
+    "op.pulse.clearFailed": {
+      "text": "Error al limpiar",
+      "sourceHash": "2e9b16afb091",
+      "updatedAt": "2026-08-17T12:26:46.218Z"
+    },
+    "op.pulse.resetLedger": {
+      "text": "Restablecer ledger de costos?",
+      "sourceHash": "34f8b9727821",
+      "updatedAt": "2026-08-17T12:26:46.218Z"
+    },
+    "op.pulse.resetLedgerHint": {
+      "text": "Elimina cada fila cost_ledger de Supabase y pone a cero el uso del período. Las sesiones en vuelo mantienen contadores locales hasta que se flujen.",
+      "sourceHash": "18f1d6f36043",
+      "updatedAt": "2026-08-17T12:26:46.218Z"
+    },
+    "op.pulse.clearLedger": {
+      "text": "Borrar ledger",
+      "sourceHash": "fe2640defa59",
+      "updatedAt": "2026-08-17T12:26:46.218Z"
+    },
+    "op.pulse.clearSessions": {
+      "text": "Borrar todas las sesiones?",
+      "sourceHash": "17f0d287182d",
+      "updatedAt": "2026-08-17T12:26:46.218Z"
+    },
+    "op.pulse.clearSessionsHint": {
+      "text": "Quita cada sesión de agente de Supabase y memoria. No elimina el ledger de costos (usar Limpiar ledger).",
+      "sourceHash": "295d68d41ceb",
+      "updatedAt": "2026-08-17T12:26:56.499Z"
+    },
+    "op.pulse.clearSessionsBtn": {
+      "text": "Limpiar sesiones",
+      "sourceHash": "5d82a79211cc",
+      "updatedAt": "2026-08-17T12:26:56.499Z"
+    },
+    "op.pulse.sessionClearFailed": {
+      "text": "Falló la limpieza de sesiones",
+      "sourceHash": "2d27d861520a",
+      "updatedAt": "2026-08-17T12:26:56.499Z"
+    },
+    "op.pulse.deleteConfirm": {
+      "text": "Este registro seleccionado se elimina permanentemente.\n\nNo se puede deshacer.",
+      "sourceHash": "0621d2ec0e04",
+      "updatedAt": "2026-08-17T12:26:56.499Z"
+    },
+    "op.pulse.deleteCancelled": {
+      "text": "Eliminación cancelada",
+      "sourceHash": "e10929fe22ea",
+      "updatedAt": "2026-08-17T12:26:56.499Z"
+    },
+    "op.pulse.deleteFailed": {
+      "text": "Error al eliminar",
+      "sourceHash": "64513b47d460",
+      "updatedAt": "2026-08-17T12:26:56.499Z"
+    },
+    "op.control.limitsTitle": {
+      "text": "Límites de la plataforma",
+      "sourceHash": "f81483fa3c52",
+      "updatedAt": "2026-08-17T12:26:56.499Z"
+    },
+    "op.control.limitsLede": {
+      "text": "Límites de cómputo, concurrencia, guardrails de carga y política de modelo para la tubería en vivo.",
+      "sourceHash": "2173dff3c43f",
+      "updatedAt": "2026-08-17T12:26:56.499Z"
+    },
+    "op.control.compute": {
+      "text": "Computación y rendimiento",
+      "sourceHash": "c547787d60e6",
+      "updatedAt": "2026-08-17T12:26:57.473Z"
+    },
+    "op.control.computeHint": {
+      "text": "Presupuesto diario de tokens y capacidad de agentes concurrentes.",
+      "sourceHash": "6abc96efeff9",
+      "updatedAt": "2026-08-17T12:26:57.473Z"
+    },
+    "op.control.uploadGuardrails": {
+      "text": "Subir guardrails",
+      "sourceHash": "195034829916",
+      "updatedAt": "2026-08-17T12:26:57.473Z"
+    },
+    "op.control.accountProfile": {
+      "text": "Perfil de cuenta",
+      "sourceHash": "50abcef6ad21",
+      "updatedAt": "2026-08-17T12:26:57.473Z"
+    },
+    "op.control.signup": {
+      "text": "Registro y provisión de cuenta",
+      "sourceHash": "ee7efccafaf3",
+      "updatedAt": "2026-08-17T12:26:57.473Z"
+    },
+    "op.control.modelPolicy": {
+      "text": "Política de modelos y cumplimiento",
+      "sourceHash": "81ab6ab50a50",
+      "updatedAt": "2026-08-17T12:26:57.473Z"
+    },
+    "op.control.tokensPerDay": {
+      "text": "Tokens por día",
+      "sourceHash": "9947717c245c",
+      "updatedAt": "2026-08-17T12:26:57.473Z"
+    },
+    "op.control.tokensPerDayHint": {
+      "text": "Límite duro de tokens de modelo consumidos en todas las sesiones.",
+      "sourceHash": "baaa97f25c29",
+      "updatedAt": "2026-08-17T12:26:57.473Z"
+    },
+    "op.control.concurrentAgents": {
+      "text": "Agentes concurrentes",
+      "sourceHash": "66802c8476b0",
+      "updatedAt": "2026-08-17T12:27:01.266Z"
+    },
+    "op.control.concurrentHint": {
+      "text": "Máximas ejecuciones simultáneas de pipelines de doctrina.",
+      "sourceHash": "5775a32b9fa6",
+      "updatedAt": "2026-08-17T12:27:01.266Z"
+    },
+    "op.control.uploadsPerProject": {
+      "text": "Subidas por proyecto",
+      "sourceHash": "f8fa8fd01015",
+      "updatedAt": "2026-08-17T12:27:01.266Z"
+    },
+    "op.control.uploadsHint": {
+      "text": "Máximos documentos fuente adjuntos a un proyecto único.",
+      "sourceHash": "a9dabf17039d",
+      "updatedAt": "2026-08-17T12:27:01.266Z"
+    },
+    "op.control.maxFileSize": {
+      "text": "Tamaño máximo de archivo",
+      "sourceHash": "9568dad88fad",
+      "updatedAt": "2026-08-17T12:27:01.266Z"
+    },
+    "op.control.maxFileHint": {
+      "text": "Límite superior para cada documento cargado.",
+      "sourceHash": "abbd0701335a",
+      "updatedAt": "2026-08-17T12:27:01.266Z"
+    },
+    "op.control.docRetention": {
+      "text": "Retención de documentos",
+      "sourceHash": "a079e024e8b0",
+      "updatedAt": "2026-08-17T12:27:01.266Z"
+    },
+    "op.control.docRetentionHint": {
+      "text": "Días hasta que las subidas expiren y se coloquen en cola para eliminación. Cambiar esto vuelve a calcular la expiración para cada archivo.",
+      "sourceHash": "cb4ebc4796b2",
+      "updatedAt": "2026-08-17T12:27:01.266Z"
+    },
+    "op.control.maxAvatar": {
+      "text": "Tamaño máximo de avatar",
+      "sourceHash": "e711d3b824bf",
+      "updatedAt": "2026-08-17T12:27:07.408Z"
+    },
+    "op.control.maxAvatarHint": {
+      "text": "Fotos de perfil JPEG / PNG / WebP. Predeterminado 2 MB; máximo de operador 10 MB.",
+      "sourceHash": "f5e78f1906f4",
+      "updatedAt": "2026-08-17T12:27:07.408Z"
+    },
+    "op.control.maxBio": {
+      "text": "Longitud máxima de biografía",
+      "sourceHash": "a0b891ea0ece",
+      "updatedAt": "2026-08-17T12:27:07.408Z"
+    },
+    "op.control.maxBioHint": {
+      "text": "Límite de caracteres para descripciones de perfil BBCode.",
+      "sourceHash": "63b69d9c925e",
+      "updatedAt": "2026-08-17T12:27:07.408Z"
+    },
+    "op.control.autogenAccounts": {
+      "text": "Generar cuentas automáticamente",
+      "sourceHash": "ea2935b73e48",
+      "updatedAt": "2026-08-17T12:27:07.408Z"
+    },
+    "op.control.premiumModels": {
+      "text": "Modelos premium",
+      "sourceHash": "1db84bd8860a",
+      "updatedAt": "2026-08-17T12:27:07.408Z"
+    },
+    "op.control.premiumHint": {
+      "text": "Permitir enrutamiento de modelos premium OpenRouter cuando esté configurado en el servidor.",
+      "sourceHash": "636f47dd34dc",
+      "updatedAt": "2026-08-17T12:27:07.408Z"
+    },
+    "op.control.requireReview": {
+      "text": "Exigir revisión humana",
+      "sourceHash": "1a4321561031",
+      "updatedAt": "2026-08-17T12:27:07.408Z"
+    },
+    "op.control.requireReviewHint": {
+      "text": "Los briefs en vivo permanecen en revisión hasta que un operador aprueba la publicación.",
+      "sourceHash": "a53e9fa17bed",
+      "updatedAt": "2026-08-17T12:27:13.512Z"
+    },
+    "op.control.tokenBudget": {
+      "text": "Presupuesto de tokens",
+      "sourceHash": "5f086d9c4b2a",
+      "updatedAt": "2026-08-17T12:27:13.512Z"
+    },
+    "op.control.agentSlots": {
+      "text": "Slots de agentes",
+      "sourceHash": "8c545cd72d5e",
+      "updatedAt": "2026-08-17T12:27:13.512Z"
+    },
+    "op.control.uploadsProject": {
+      "text": "Cargas / proyecto",
+      "sourceHash": "e603b0fdace5",
+      "updatedAt": "2026-08-17T12:27:13.512Z"
+    },
+    "op.control.maxDocs": {
+      "text": "Máximo de documentos por espacio de trabajo",
+      "sourceHash": "ca966660897f",
+      "updatedAt": "2026-08-17T12:27:13.512Z"
+    },
+    "op.control.perUpload": {
+      "text": "Límite por carga",
+      "sourceHash": "763167a3bcf8",
+      "updatedAt": "2026-08-17T12:27:13.512Z"
+    },
+    "op.control.docRetentionLabel": {
+      "text": "Retención de documentos",
+      "sourceHash": "137567a2e324",
+      "updatedAt": "2026-08-17T12:27:13.512Z"
+    },
+    "op.control.autoDelete": {
+      "text": "Eliminación automática después de expiración",
+      "sourceHash": "601cc273b93c",
+      "updatedAt": "2026-08-17T12:27:13.512Z"
+    },
+    "op.control.avatarCap": {
+      "text": "Avatar cap",
+      "sourceHash": "74c765571762",
+      "updatedAt": "2026-08-17T12:27:14.775Z"
+    },
+    "op.control.profilePhoto": {
+      "text": "Profile photo upload",
+      "sourceHash": "a2f3d60ff6b4",
+      "updatedAt": "2026-08-17T12:27:14.775Z"
+    },
+    "op.control.manualSignup": {
+      "text": "Manual signup",
+      "sourceHash": "4e9637c91d0e",
+      "updatedAt": "2026-08-17T12:27:14.775Z"
+    },
+    "op.control.standardOnly": {
+      "text": "Standard only",
+      "sourceHash": "aea090c61c44",
+      "updatedAt": "2026-08-17T12:27:14.775Z"
+    },
+    "op.control.loadingModels": {
+      "text": "Loading models…",
+      "sourceHash": "d23f24f3751f",
+      "updatedAt": "2026-08-17T12:27:14.775Z"
+    },
+    "op.control.docsMode": {
+      "text": "Docs mode",
+      "sourceHash": "3d8a8e32654b",
+      "updatedAt": "2026-08-17T12:27:14.775Z"
+    },
+    "op.control.docsModel": {
+      "text": "Docs model",
+      "sourceHash": "322636a90ca9",
+      "updatedAt": "2026-08-17T12:27:14.775Z"
+    },
+    "op.control.docsTokens": {
+      "text": "Docs tokens",
+      "sourceHash": "924f8ba06123",
+      "updatedAt": "2026-08-17T12:27:14.775Z"
+    },
+    "op.control.doctrineTokens": {
+      "text": "Tokens de doctrina",
+      "sourceHash": "e9758cad685c",
+      "updatedAt": "2026-08-17T12:27:19.168Z"
+    },
+    "op.control.reasoningTokens": {
+      "text": "Tokens de razonamiento",
+      "sourceHash": "6284e5999d12",
+      "updatedAt": "2026-08-17T12:27:19.168Z"
+    },
+    "op.control.reasoningBudget": {
+      "text": "Presupuesto de razonamiento",
+      "sourceHash": "4d7097470626",
+      "updatedAt": "2026-08-17T12:27:19.168Z"
+    },
+    "op.control.resetRouting": {
+      "text": "Restablecer enrutamiento de modelos",
+      "sourceHash": "aecd569180f1",
+      "updatedAt": "2026-08-17T12:27:19.168Z"
+    },
+    "op.control.modelsFailed": {
+      "text": "Falló al cargar los modelos",
+      "sourceHash": "4bef3a82f816",
+      "updatedAt": "2026-08-17T12:27:19.168Z"
+    },
+    "op.control.autosaveFailed": {
+      "text": "Falló el autosave",
+      "sourceHash": "6d939c6e7ddd",
+      "updatedAt": "2026-08-17T12:27:19.168Z"
+    },
+    "op.control.recommendedRestored": {
+      "text": "Modelos recomendados restaurados",
+      "sourceHash": "ffbbb4d61f68",
+      "updatedAt": "2026-08-17T12:27:19.168Z"
+    },
+    "op.control.resetFailed": {
+      "text": "Restablecimiento fallido",
+      "sourceHash": "ca42c6fe10d0",
+      "updatedAt": "2026-08-17T12:27:19.168Z"
+    },
+    "op.operations.costLedger": {
+      "text": "Registro de costos",
+      "sourceHash": "7af91996d5c5",
+      "updatedAt": "2026-08-17T12:27:26.510Z"
+    },
+    "op.operations.inventoryHint": {
+      "text": "Acciones de inventario y política · arrastrar para reorganizar",
+      "sourceHash": "5012fe617ecf",
+      "updatedAt": "2026-08-17T12:27:26.510Z"
+    },
+    "op.operations.ledgerSummary": {
+      "text": "Resumen del registro",
+      "sourceHash": "7cd55cb04aa7",
+      "updatedAt": "2026-08-17T12:27:26.510Z"
+    },
+    "op.operations.noCost": {
+      "text": "Aún no hay entradas de costo",
+      "sourceHash": "29e480e85bea",
+      "updatedAt": "2026-08-17T12:27:26.510Z"
+    },
+    "op.operations.noCostHint": {
+      "text": "Las filas aparecen cuando las sesiones en vivo consumen tokens.",
+      "sourceHash": "9dd655498920",
+      "updatedAt": "2026-08-17T12:27:26.510Z"
+    },
+    "op.operations.noSessions": {
+      "text": "No hay sesiones de agente",
+      "sourceHash": "883776c0ff81",
+      "updatedAt": "2026-08-17T12:27:26.510Z"
+    },
+    "op.operations.noSessionsHint": {
+      "text": "Ejecutar una pregunta desde un proyecto para poblar este registro.",
+      "sourceHash": "ec6e46dbc36f",
+      "updatedAt": "2026-08-17T12:27:26.510Z"
+    },
+    "op.operations.openProjects": {
+      "text": "Proyectos abiertos",
+      "sourceHash": "332b179b5a2a",
+      "updatedAt": "2026-08-17T12:27:26.510Z"
+    },
+    "op.operations.wipeLedger": {
+      "text": "Borrar Supabase cost_ledger + uso del período (en vivo a todos los operadores)",
+      "sourceHash": "8669767d1260",
+      "updatedAt": "2026-08-17T12:27:34.572Z"
+    },
+    "op.operations.deleteLedgerRow": {
+      "text": "Eliminar fila del ledger",
+      "sourceHash": "d333e4b0a85f",
+      "updatedAt": "2026-08-17T12:27:34.572Z"
+    },
+    "op.operations.deleteAllSessions": {
+      "text": "Eliminar cada sesión de agente de Supabase + memoria",
+      "sourceHash": "21052d012d71",
+      "updatedAt": "2026-08-17T12:27:34.572Z"
+    },
+    "op.operations.deleteSession": {
+      "text": "Eliminar sesión",
+      "sourceHash": "ca5747020239",
+      "updatedAt": "2026-08-17T12:27:34.572Z"
+    },
+    "op.catalog.sourceRegistry": {
+      "text": "Registro de fuentes",
+      "sourceHash": "941b018c3188",
+      "updatedAt": "2026-08-17T12:27:34.572Z"
+    },
+    "op.catalog.sourceLede": {
+      "text": "Haz clic en una tarjeta para volver a etiquetar y actualizar las URLs — las ediciones se guardan automáticamente; elimina cualquier fila CSV de la tarjeta.",
+      "sourceHash": "7c8b080747dc",
+      "updatedAt": "2026-08-17T12:27:34.572Z"
+    },
+    "op.catalog.registrySummary": {
+      "text": "Resumen del registro",
+      "sourceHash": "6011e3289ff5",
+      "updatedAt": "2026-08-17T12:27:34.572Z"
+    },
+    "op.catalog.search": {
+      "text": "Nombre, país, etiquetas…",
+      "sourceHash": "dc3035451f83",
+      "updatedAt": "2026-08-17T12:27:34.572Z"
+    }
+  }
+}

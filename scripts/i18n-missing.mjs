@@ -15,7 +15,7 @@ const { loadDynamicEnglish } = jiti(path.join(ROOT, "lib/i18n/dynamic.ts"));
 
 const en = { ...getEnglishSource(), ...(await loadDynamicEnglish()) };
 const locales = process.argv.slice(2);
-const localesDir = path.join(ROOT, "data/local/i18n/locales");
+const localesDir = path.join(ROOT, "data/i18n/locales");
 const targets = locales.length
   ? locales
   : fs.readdirSync(localesDir).map((f) => f.replace(/\.json$/, ""));
