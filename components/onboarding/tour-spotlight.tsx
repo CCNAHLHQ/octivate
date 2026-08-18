@@ -52,12 +52,30 @@ export function TourSpotlight({
     let debounceRaf = 0;
     let observedEl: Element | null = null;
     let resizeObs: ResizeObserver | null = null;
+    const observer = new MutationObserver(() => scheduleMeasure());
 
     const commit = (next: Rect | null) => {
       if (cancelled) return;
       if (sameRect(rectRef.current, next)) return;
       rectRef.current = next;
       setRect(next);
+    };
+
+    const observeTarget = () => {
+      const el = document.querySelector(target!);
+      if (!el) return;
+      observer.disconnect();
+      observer.observe(el, {
+        attributes: true,
+        attributeFilter: ["class", "style", "hidden", "aria-hidden", "aria-expanded"],
+      });
+      const shell = el.closest(".dash-shell, .dash-aside, .dash-main");
+      if (shell) {
+        observer.observe(shell, {
+          attributes: true,
+          attributeFilter: ["class", "data-mobile-open", "style"],
+        });
+      }
     };
 
     function measure() {
@@ -80,6 +98,7 @@ export function TourSpotlight({
           resizeObs = new ResizeObserver(() => scheduleMeasure());
           resizeObs.observe(el);
         }
+        observeTarget();
       }
 
       commit({
@@ -115,18 +134,8 @@ export function TourSpotlight({
 
     const onViewport = () => scheduleMeasure();
     window.addEventListener("resize", onViewport);
-    // Capture scroll from nested dashboard panes without listening to every mutation.
     window.addEventListener("scroll", onViewport, true);
-
-    // childList + class/style on shell so sidebar expand remeasures without
-    // thrashing on every React attribute write across the tree.
-    const observer = new MutationObserver(() => scheduleMeasure());
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ["class", "style", "data-mobile-open", "aria-expanded", "aria-hidden"],
-    });
+    observeTarget();
 
     return () => {
       cancelled = true;

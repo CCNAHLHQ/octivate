@@ -11,7 +11,6 @@ import {
   ShieldCheck,
   Zap,
 } from "lucide-react";
-import { AppShell } from "@/components/dashboard/app-shell";
 import {
   OperatorCatalogBoard,
   OperatorControlBoard,
@@ -651,7 +650,7 @@ export function OperatorConsole() {
   const coreReady = !loading && limits && summary && usage && health && charts;
 
   return (
-    <AppShell variant="operator">
+      <>
       <div
         className={cn(
           "op-page op-page-compact mx-auto space-y-5 p-4 sm:p-6",
@@ -893,6 +892,6 @@ export function OperatorConsole() {
 
       </div>
       {confirmDialog}
-    </AppShell>
+      </>
   );
 }

@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FolderKanban, Globe, Sparkles } from "lucide-react";
-import { AppShell } from "@/components/dashboard/app-shell";
 import { ProjectCard, ProjectCardSkeleton } from "@/components/projects/project-card";
 import { NewProjectComposer } from "@/components/projects/new-project-composer";
 import { WorkspaceEmptyState } from "@/components/workspace/workspace-empty-state";
@@ -167,7 +166,6 @@ export default function ProjectsPage() {
   const invite = !initialLoading && projects.length === 0;
 
   return (
-    <AppShell>
       <div className="mx-auto max-w-[1140px] space-y-5 p-4 sm:p-6">
         <WorkspacePageHeader
           eyebrow={t("ws.section.workspace")}
@@ -245,6 +243,5 @@ export default function ProjectsPage() {
           </LoadingBlur>
         )}
       </div>
-    </AppShell>
   );
 }

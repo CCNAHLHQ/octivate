@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { HeroDottedGlobe } from "@/components/landing/hero-dotted-globe";
 import { HERO_VIDEO_SRC } from "@/components/landing/hero-video-backdrop";
-import { bindAutoplayBackdrop } from "@/lib/media/autoplay-backdrop";
 import { useT } from "@/components/i18n/locale-provider";
 import type { AgentSession } from "@/lib/types";
 import "@/app/phase1-landing.css";
@@ -45,7 +44,28 @@ function PipelineVideoPlate() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    return bindAutoplayBackdrop(video, () => setReady(true));
+    let cancelled = false;
+    const markReady = () => {
+      if (!cancelled) setReady(true);
+    };
+    const tryPlay = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      const p = video.play();
+      if (p && typeof p.catch === "function") p.catch(() => undefined);
+    };
+    video.addEventListener("loadeddata", markReady);
+    video.addEventListener("playing", markReady);
+    video.addEventListener("canplay", tryPlay);
+    tryPlay();
+    return () => {
+      cancelled = true;
+      video.removeEventListener("loadeddata", markReady);
+      video.removeEventListener("playing", markReady);
+      video.removeEventListener("canplay", tryPlay);
+      video.pause();
+    };
   }, []);
 
   return (

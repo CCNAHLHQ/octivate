@@ -12,7 +12,6 @@ import {
   Pencil,
   RotateCw,
 } from "lucide-react";
-import { AppShell } from "@/components/dashboard/app-shell";
 import { AgentPipelineProgress } from "@/components/dashboard/agent-pipeline";
 import { DocumentDropzone } from "@/components/dashboard/document-dropzone";
 import { DocumentLibrary } from "@/components/dashboard/document-library";
@@ -499,19 +498,15 @@ export default function ProjectDetailPage() {
 
   if (loading) {
     return (
-      <AppShell>
         <div className="p-6">
           <Skeleton className="h-48" />
         </div>
-      </AppShell>
     );
   }
 
   if (!project) {
     return (
-      <AppShell>
         <div className="p-6 text-coral">{error || t("ws.project.notFound")}</div>
-      </AppShell>
     );
   }
 
@@ -630,7 +625,7 @@ export default function ProjectDetailPage() {
   };
 
   return (
-    <AppShell>
+      <>
       <ConfettiBurst fireKey={confettiKey} />
       <LoadingBlur active={refreshing} className="mx-auto max-w-[1280px]">
         <div className="ws-project-surface relative space-y-4 p-4 sm:p-6">
@@ -813,6 +808,6 @@ export default function ProjectDetailPage() {
           </div>
         </div>
       </LoadingBlur>
-    </AppShell>
+      </>
   );
 }

@@ -55,6 +55,15 @@ function setTourOpenFlag(open: boolean) {
   }
 }
 
+/** Retired workspace surfaces that hard-redirect — never push these from the tour. */
+const RETIRED_TOUR_ROUTES = new Set(["/dashboard/monitors", "/dashboard/sources"]);
+
+function isRetiredTourRoute(route?: string) {
+  if (!route) return false;
+  const base = route.split("#")[0] || route;
+  return RETIRED_TOUR_ROUTES.has(base);
+}
+
 export function WorkspaceIntroModal() {
   const t = useT();
   const titleId = useId();
@@ -86,9 +95,12 @@ export function WorkspaceIntroModal() {
     setNavReady(false);
   }, []);
 
-  // Always clear tour flag on unmount (operator↔workspace switch must not leave map polling paused).
+  // Keep tour flag if session is still open (layout remounts must not re-enable map polling).
   useEffect(() => {
-    return () => setTourOpenFlag(false);
+    return () => {
+      if (readIntroSession()?.open) return;
+      setTourOpenFlag(false);
+    };
   }, []);
 
   const openModal = useCallback(() => {
@@ -210,7 +222,7 @@ export function WorkspaceIntroModal() {
     };
 
     if (alreadyThere) {
-      // Arrived (or already on route) — do not push again.
+      // Arrived (or already on route) — do not push again or drop readiness.
       lastNavKeyRef.current = navKey;
       navigatingRef.current = false;
       markReadySoon();
@@ -239,6 +251,11 @@ export function WorkspaceIntroModal() {
     }
 
     async function syncRoute() {
+      if (isRetiredTourRoute(current.route)) {
+        markReady();
+        return;
+      }
+
       if (current.resolveProject) {
         try {
           const now = Date.now();
@@ -278,7 +295,11 @@ export function WorkspaceIntroModal() {
         return;
       }
 
-      if (current.route && !routeMatches(pathname, current.route, false, exactList)) {
+      if (
+        current.route &&
+        !isRetiredTourRoute(current.route) &&
+        !routeMatches(pathname, current.route, false, exactList)
+      ) {
         router.push(current.route);
       }
     }

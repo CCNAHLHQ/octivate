@@ -62,7 +62,7 @@ export function shouldAutoShowIntro(): boolean {
   return !readIntroState().seen;
 }
 
-/** Survive AppShell remounts during multi-route tour navigation. */
+/** Survive dashboard navigations while the intro session stays open. */
 export function readIntroSession(): IntroSessionState | null {
   if (typeof window === "undefined") return null;
   try {

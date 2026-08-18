@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AppShell } from "@/components/dashboard/app-shell";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/progress";
 import { useT } from "@/components/i18n/locale-provider";
@@ -25,7 +24,6 @@ export default function PacksPage() {
   }, []);
 
   return (
-    <AppShell>
       <div className="mx-auto max-w-[1100px] space-y-6 p-4 sm:p-6">
         <div>
           <h1 className="font-display text-2xl font-bold tracking-tight">
@@ -58,6 +56,5 @@ export default function PacksPage() {
           </div>
         )}
       </div>
-    </AppShell>
   );
 }

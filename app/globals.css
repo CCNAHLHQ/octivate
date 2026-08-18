@@ -733,22 +733,20 @@
   position: relative;
   flex: 1 1 auto;
   min-width: 0;
-  min-height: 0;
+  min-height: 100%;
   isolation: isolate;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-/* Fitted hero video plate (landing / agent plate) behind shell content.
-   Plate chrome stays dark (#05070f) in both themes — never var(--ink). */
+/* Fitted hero video plate (landing / agent plate) behind shell content */
 .dash-main-body.has-video-backdrop > .ws-shell-video {
   position: absolute;
   inset: 0;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  background: #05070f;
+  background: var(--ink, #05070f);
 }
 
 .ws-shell-video-el {
@@ -772,7 +770,7 @@
   inset: -2%;
   z-index: 1;
   pointer-events: none;
-  background: rgba(5, 7, 15, 0.12);
+  background: color-mix(in srgb, var(--ink, #05070f) 14%, transparent);
   backdrop-filter: blur(2.5px) saturate(1.05);
   -webkit-backdrop-filter: blur(2.5px) saturate(1.05);
   animation: ws-shell-blur-breathe 9s ease-in-out infinite;
@@ -810,13 +808,13 @@
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  /* Keep UI readable over the dark Caribbean plate without killing motion */
+  /* Keep UI readable over the dark Caribbean plate */
   background:
     linear-gradient(
       180deg,
-      rgba(5, 7, 15, 0.34) 0%,
-      rgba(5, 7, 15, 0.48) 42%,
-      rgba(5, 7, 15, 0.62) 100%
+      color-mix(in srgb, var(--ink, #05070f) 42%, transparent) 0%,
+      color-mix(in srgb, var(--ink, #05070f) 58%, transparent) 42%,
+      color-mix(in srgb, var(--ink, #05070f) 78%, transparent) 100%
     ),
     radial-gradient(
       ellipse at 72% 18%,
@@ -829,9 +827,9 @@
   background:
     linear-gradient(
       180deg,
-      rgba(5, 7, 15, 0.4) 0%,
-      rgba(5, 7, 15, 0.54) 45%,
-      rgba(5, 7, 15, 0.68) 100%
+      color-mix(in srgb, var(--ink, #05070f) 48%, transparent) 0%,
+      color-mix(in srgb, var(--ink, #05070f) 64%, transparent) 45%,
+      color-mix(in srgb, var(--ink, #05070f) 82%, transparent) 100%
     ),
     radial-gradient(
       ellipse at 70% 16%,
@@ -840,39 +838,34 @@
     );
 }
 
-/* Light UI: frost the plate lightly so foam text stays readable, plate still reads */
 [data-theme="light"] .dash-main-body.has-video-backdrop .ws-shell-video-scrim {
   background:
     linear-gradient(
       180deg,
-      rgba(244, 247, 252, 0.42) 0%,
-      rgba(244, 247, 252, 0.52) 45%,
-      rgba(244, 247, 252, 0.64) 100%
+      color-mix(in srgb, #f4f6fb 72%, transparent) 0%,
+      color-mix(in srgb, #f4f6fb 78%, transparent) 45%,
+      color-mix(in srgb, #f4f6fb 88%, transparent) 100%
     ),
     radial-gradient(
       ellipse at 70% 18%,
-      color-mix(in srgb, var(--violet, #8950ee) 10%, transparent),
+      color-mix(in srgb, var(--violet, #8950ee) 8%, transparent),
       transparent 55%
     );
 }
 
 [data-theme="light"] .dash-main-body.has-video-backdrop .ws-shell-video-el {
   opacity: 0;
-  filter: saturate(0.92) brightness(1.02);
+  filter: saturate(0.85) brightness(1.08);
 }
 
 [data-theme="light"] .dash-main-body.has-video-backdrop .ws-shell-video[data-ready="1"] .ws-shell-video-el {
-  opacity: 0.88;
+  opacity: 0.55;
 }
 
 .dash-main-content {
   position: relative;
   z-index: 1;
   min-width: 0;
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .dash-link-active {

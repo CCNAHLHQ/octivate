@@ -4,7 +4,6 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { AppShell } from "@/components/dashboard/app-shell";
 import { CountryActivityMap } from "@/components/dashboard/country-activity-map";
 import { CountryProjectsModal } from "@/components/dashboard/country-projects-modal";
 import { OverviewStatCard } from "@/components/dashboard/overview-stat-card";
@@ -260,7 +259,6 @@ export function OverviewDashboard() {
       ].filter((c) => c.node);
 
   return (
-    <AppShell>
       <div className="overview-page mx-auto max-w-[1280px] space-y-5 p-4 sm:p-6">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
@@ -486,6 +484,5 @@ export function OverviewDashboard() {
           onClose={() => setMapCountry(null)}
         />
       </div>
-    </AppShell>
   );
 }

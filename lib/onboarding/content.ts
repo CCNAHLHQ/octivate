@@ -1,6 +1,5 @@
 import type { LucideIcon } from "lucide-react";
 import {
-  Activity,
   FileText,
   FolderKanban,
   Headphones,
@@ -10,6 +9,7 @@ import {
   Scale,
   Sparkles,
   SunMoon,
+  Users,
 } from "lucide-react";
 
 export type IntroBullet = {
@@ -52,7 +52,7 @@ export type IntroStep = {
   resolveProject?: boolean;
 };
 
-export const WORKSPACE_INTRO_VERSION = "v7";
+export const WORKSPACE_INTRO_VERSION = "v8";
 export const WORKSPACE_INTRO_STORAGE_KEY = `octivate-workspace-intro-${WORKSPACE_INTRO_VERSION}`;
 
 export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
@@ -63,9 +63,9 @@ export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
     titleAccent: "workspace home",
     tagline: "Briefs, projects, coverage, and usage in one place.",
     description:
-      "Overview is home base for Caribbean decision work. Use the sidebar to move between Projects, Briefs, Monitors, and live Support — plus the Theatre coverage map for geographic context.",
+      "Overview is home base for Caribbean decision work. Use the sidebar to move between Projects, Briefs, and Stakeholders — plus the Theatre coverage map for geographic context.",
     bullets: [
-      { lead: "Sidebar", text: "jumps Overview, Projects, Briefs, and Monitors" },
+      { lead: "Sidebar", text: "jumps Overview, Projects, Briefs, and Stakeholders" },
       { lead: "Ask question", text: "opens a project theatre in one click" },
       { lead: "Replay", text: "this tour anytime from Workspace Tutorial" },
     ],
@@ -162,23 +162,23 @@ export const WORKSPACE_INTRO_STEPS: IntroStep[] = [
     requireSidebar: true,
   },
   {
-    id: "monitors",
-    kicker: "Step 6 · Monitors",
-    title: "Watch signals",
-    titleAccent: "between runs",
-    tagline: "Keyword and jurisdiction watches.",
+    id: "stakeholders",
+    kicker: "Step 6 · Stakeholders",
+    title: "Map who can",
+    titleAccent: "shape the outcome",
+    tagline: "Actors, influence, and relationships.",
     description:
-      "Monitors keep an eye on topics across Caribbean jurisdictions while you work. Create them from Monitors and check alerts between brief cycles.",
+      "Stakeholders captures who can influence, obstruct, or legitimise a decision. Open it from the sidebar when you need to organise actors around a theatre or brief.",
     bullets: [
-      { lead: "Create", text: "a watch from the Monitors toolbar" },
-      { lead: "Jurisdictions", text: "mirror the coverage marquee on the public site" },
+      { lead: "Sidebar", text: "opens the Stakeholders workspace surface" },
+      { lead: "Actors", text: "keep influence and relationship context close to the decision" },
       { lead: "Return here", text: "when you need a full analysis run again" },
     ],
-    icon: Activity,
+    icon: Users,
     art: "monitors",
     accent: "teal",
-    route: "/dashboard/monitors",
-    target: "[data-tour='nav-monitors']",
+    route: "/dashboard/stakeholders",
+    target: "[data-tour='nav-stakeholders']",
     demo: "highlight",
     requireSidebar: true,
   },
@@ -270,5 +270,5 @@ export const WORKSPACE_INTRO_PREFETCH_ROUTES = [
   "/dashboard",
   "/dashboard/projects",
   "/dashboard/briefs",
-  "/dashboard/monitors",
+  "/dashboard/stakeholders",
 ] as const;

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { AppShell } from "@/components/dashboard/app-shell";
 import { BriefDocument } from "@/components/briefs/brief-document";
 import { BriefExportBar } from "@/components/briefs/brief-export-bar";
 import { briefBadgeTone } from "@/components/briefs/brief-card";
@@ -86,7 +85,6 @@ export default function BriefDetailPage() {
   }
 
   return (
-    <AppShell>
       <div className="mx-auto max-w-[1040px] space-y-4 p-4 sm:p-6">
         <Link href="/dashboard/briefs" className="text-xs text-teal">
           ← Back to briefs
@@ -223,6 +221,5 @@ export default function BriefDetailPage() {
           </motion.div>
         )}
       </div>
-    </AppShell>
   );
 }

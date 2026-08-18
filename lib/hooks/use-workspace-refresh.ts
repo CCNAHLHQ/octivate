@@ -13,6 +13,9 @@ export function useWorkspaceRefresh(
 ) {
   useEffect(() => {
     const handler = (event: Event) => {
+      if (typeof document !== "undefined" && document.documentElement.dataset.workspaceTour === "1") {
+        return;
+      }
       const detail = (event as CustomEvent<{ scopes?: WorkspaceScope[] }>).detail;
       if (!matchesWorkspaceScope(detail?.scopes, scopes)) return;
       void onRefresh();

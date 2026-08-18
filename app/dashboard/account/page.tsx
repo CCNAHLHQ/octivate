@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Camera, LogOut, Trash2 } from "lucide-react";
 import { AlertsSettingsPanel } from "@/components/alerts/alerts-settings-panel";
-import { AppShell } from "@/components/dashboard/app-shell";
 import { BbcodeEditor } from "@/components/ui/bbcode-editor";
 import { useT } from "@/components/i18n/locale-provider";
 import { apiFetch, invalidateApiCache } from "@/lib/api-client";
@@ -215,7 +214,6 @@ export default function AccountPage() {
   const presence = presenceOf(user);
 
   return (
-    <AppShell>
       <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6">
         <header className="mb-6">
           <p className="font-mono text-[10px] uppercase tracking-widest text-faint">Account</p>
@@ -458,6 +456,5 @@ export default function AccountPage() {
           </div>
         )}
       </div>
-    </AppShell>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AppShell } from "@/components/dashboard/app-shell";
 import { OctivateLogoMark } from "@/components/brand/octivate-logo-mark";
 import { StakeholdersGallery } from "@/components/stakeholders/stakeholders-gallery";
 import { Skeleton } from "@/components/ui/progress";
@@ -29,7 +28,6 @@ export default function StakeholdersPage() {
   }, []);
 
   return (
-    <AppShell>
       <div className="sth-page">
         <div className="sth-page-inner">
           <header className="sth-hero">
@@ -46,6 +44,5 @@ export default function StakeholdersPage() {
           )}
         </div>
       </div>
-    </AppShell>
   );
 }

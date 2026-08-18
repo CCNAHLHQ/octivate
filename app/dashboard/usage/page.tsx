@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AppShell } from "@/components/dashboard/app-shell";
 import { Card } from "@/components/ui/card";
 import { ProgressBar, Skeleton } from "@/components/ui/progress";
 import { DonutChart } from "@/components/ui/charts";
@@ -28,7 +27,6 @@ export default function UsagePage() {
   const pct = usage ? Math.min(100, (usage.tokensUsed / usage.tokensLimit) * 100) : 0;
 
   return (
-    <AppShell>
       <div className="mx-auto max-w-[900px] space-y-6 p-4 sm:p-6">
         <div>
           <h1 className="font-display text-2xl font-bold tracking-tight">
@@ -76,6 +74,5 @@ export default function UsagePage() {
           </div>
         )}
       </div>
-    </AppShell>
   );
 }

@@ -370,7 +370,9 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
                               ? "nav-projects"
                               : item.href === "/dashboard/briefs"
                                 ? "nav-briefs"
-                                : undefined
+                                : item.href === "/dashboard/stakeholders"
+                                  ? "nav-stakeholders"
+                                  : undefined
                         }
                         onClick={(e) => onNavClick(e, item.href)}
                         className={cn(

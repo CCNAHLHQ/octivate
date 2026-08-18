@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, Clock3, FileText, Layers } from "lucide-react";
-import { AppShell } from "@/components/dashboard/app-shell";
 import { BriefCard, BriefCardSkeleton } from "@/components/briefs/brief-card";
 import { WorkspaceEmptyState } from "@/components/workspace/workspace-empty-state";
 import { WorkspaceKpiStrip } from "@/components/workspace/workspace-kpi-strip";
@@ -109,7 +108,6 @@ export default function BriefsPage() {
   }, [pageCount, safePage]);
 
   return (
-    <AppShell>
       <div className="mx-auto max-w-[1200px] space-y-5 p-4 sm:p-6">
         <WorkspacePageHeader
           eyebrow={t("ws.section.intelligence")}
@@ -204,6 +202,5 @@ export default function BriefsPage() {
           </LoadingBlur>
         )}
       </div>
-    </AppShell>
   );
 }
