@@ -1,19 +1,22 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ExternalLink, Users } from "lucide-react";
 import { useT } from "@/components/i18n/locale-provider";
-import type { StaffProfileId } from "@/lib/auth/types";
+import type { PresenceStatus, StaffProfileId } from "@/lib/auth/types";
 import {
   founderDescKey,
+  founderPresenceKey,
   founderRoleKey,
   type PublicFounder,
 } from "@/lib/support/founder-meta";
 import { cn } from "@/lib/utils";
 
-const POLL_MS = 12_000;
+/** Visible-tab cadence — snappy presence without hammering the API. */
+const POLL_VISIBLE_MS = 4_000;
+const POLL_HIDDEN_MS = 30_000;
 
 const TONE_ACCENT: Record<PublicFounder["tone"], string> = {
   violet: "var(--violet)",
@@ -53,29 +56,53 @@ function FounderAvatar({
   founder: PublicFounder;
   size?: "lg" | "sm";
 }) {
+  const t = useT();
   const [broken, setBroken] = useState(false);
   const showImg = Boolean(founder.avatarUrl) && !broken;
+  const presence = founder.presenceStatus || "available";
+
+  useEffect(() => {
+    setBroken(false);
+  }, [founder.avatarUrl]);
 
   return (
     <span
-      className={cn("support-avatar", size === "sm" && "is-sm", `is-${founder.tone}`)}
-      style={{ "--member-accent": TONE_ACCENT[founder.tone] } as React.CSSProperties}
-    >
-      {showImg ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={founder.avatarUrl!}
-          alt=""
-          className="support-avatar-img"
-          onError={() => setBroken(true)}
-        />
-      ) : (
-        <span className="support-avatar-fallback" aria-hidden>
-          {founder.initials}
-        </span>
+      className={cn(
+        "support-avatar",
+        size === "sm" && "is-sm",
+        `is-${founder.tone}`,
+        `is-presence-${presence}`
       )}
+      style={{ "--member-accent": TONE_ACCENT[founder.tone] } as React.CSSProperties}
+      title={`${founder.name} · ${t(founderPresenceKey(presence))}`}
+    >
+      <span className="support-avatar-face">
+        {showImg ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={founder.avatarUrl!}
+            alt=""
+            className="support-avatar-img"
+            onError={() => setBroken(true)}
+          />
+        ) : (
+          <span className="support-avatar-fallback" aria-hidden>
+            {founder.initials}
+          </span>
+        )}
+      </span>
+      <span
+        className={cn("support-avatar-presence", `is-${presence}`)}
+        aria-label={t(founderPresenceKey(presence))}
+      />
     </span>
   );
+}
+
+function signature(list: PublicFounder[]) {
+  return list
+    .map((f) => `${f.id}:${f.avatarUrl || ""}:${f.presenceStatus || "available"}`)
+    .join("|");
 }
 
 export function SupportPage() {
@@ -83,6 +110,7 @@ export function SupportPage() {
   const reduceMotion = useReducedMotion();
   useReveal();
   const [founders, setFounders] = useState<PublicFounder[]>([]);
+  const sigRef = useRef("");
 
   const loadFounders = useCallback(async (signal?: AbortSignal) => {
     try {
@@ -92,7 +120,11 @@ export function SupportPage() {
       });
       if (!res.ok) return;
       const data = (await res.json()) as { founders?: PublicFounder[] };
-      if (Array.isArray(data.founders)) setFounders(data.founders);
+      if (!Array.isArray(data.founders)) return;
+      const nextSig = signature(data.founders);
+      if (nextSig === sigRef.current) return;
+      sigRef.current = nextSig;
+      setFounders(data.founders);
     } catch {
       /* aborted / offline */
     }
@@ -101,16 +133,26 @@ export function SupportPage() {
   useEffect(() => {
     const ac = new AbortController();
     void loadFounders(ac.signal);
-    const tick = window.setInterval(() => {
-      if (document.visibilityState === "visible") void loadFounders();
-    }, POLL_MS);
+
+    let timer: number | null = null;
+    const schedule = () => {
+      if (timer) window.clearInterval(timer);
+      const ms =
+        document.visibilityState === "visible" ? POLL_VISIBLE_MS : POLL_HIDDEN_MS;
+      timer = window.setInterval(() => {
+        void loadFounders();
+      }, ms);
+    };
+    schedule();
+
     const onVis = () => {
+      schedule();
       if (document.visibilityState === "visible") void loadFounders();
     };
     document.addEventListener("visibilitychange", onVis);
     return () => {
       ac.abort();
-      window.clearInterval(tick);
+      if (timer) window.clearInterval(timer);
       document.removeEventListener("visibilitychange", onVis);
     };
   }, [loadFounders]);
@@ -125,6 +167,7 @@ export function SupportPage() {
           tone: (["violet", "tide", "coral"] as const)[i],
           avatarUrl: null,
           initials: id.slice(0, 2).toUpperCase(),
+          presenceStatus: "offline" as PresenceStatus,
         }));
 
   return (
@@ -159,27 +202,37 @@ export function SupportPage() {
         aria-label={t("support.page.meetTeam")}
       >
         <ul className="support-member-rows">
-          {ordered.map((member, i) => (
-            <motion.li
-              key={member.id}
-              className="support-member-row"
-              style={{ "--member-accent": TONE_ACCENT[member.tone] } as React.CSSProperties}
-              initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={reduceMotion ? { duration: 0 } : { ...spring, delay: 0.06 + i * 0.08 }}
-            >
-              <FounderAvatar founder={member} size="sm" />
-              <div className="support-member-row-body">
-                <div className="support-member-row-head">
-                  <h3 className="support-member-name">{member.name}</h3>
-                  <p className="support-member-role">
-                    {t(founderRoleKey(member.id))}
-                  </p>
+          {ordered.map((member, i) => {
+            const presence = member.presenceStatus || "available";
+            return (
+              <motion.li
+                key={member.id}
+                className="support-member-row"
+                style={{ "--member-accent": TONE_ACCENT[member.tone] } as React.CSSProperties}
+                initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={reduceMotion ? { duration: 0 } : { ...spring, delay: 0.06 + i * 0.08 }}
+              >
+                <FounderAvatar founder={member} size="sm" />
+                <div className="support-member-row-body">
+                  <div className="support-member-row-head">
+                    <h3 className="support-member-name">{member.name}</h3>
+                    <p className="support-member-role">
+                      {t(founderRoleKey(member.id))}
+                    </p>
+                    <span className={cn("support-member-status", `is-${presence}`)}>
+                      <span
+                        className={cn("support-member-status-dot", `is-${presence}`)}
+                        aria-hidden
+                      />
+                      {t(founderPresenceKey(presence))}
+                    </span>
+                  </div>
+                  <p className="support-member-line">{t(founderDescKey(member.id))}</p>
                 </div>
-                <p className="support-member-line">{t(founderDescKey(member.id))}</p>
-              </div>
-            </motion.li>
-          ))}
+              </motion.li>
+            );
+          })}
         </ul>
       </section>
 

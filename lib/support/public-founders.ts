@@ -1,4 +1,4 @@
-import { findUserByStaffProfileId } from "@/lib/auth/users";
+import { findUserByStaffProfileId, normalizePresence } from "@/lib/auth/users";
 import { STAFF_PROFILES } from "@/lib/support/staff";
 import {
   initialsOf,
@@ -8,11 +8,12 @@ import {
 export type { PublicFounder } from "@/lib/support/founder-meta";
 export {
   founderDescKey,
+  founderPresenceKey,
   founderRoleKey,
   initialsOf,
 } from "@/lib/support/founder-meta";
 
-/** Public-safe founder cards with live avatar URLs for Team page. */
+/** Public-safe founder cards with live avatar URLs + presence for Team page. */
 export async function listPublicFounders(): Promise<PublicFounder[]> {
   const out: PublicFounder[] = [];
   for (const profile of STAFF_PROFILES) {
@@ -28,6 +29,7 @@ export async function listPublicFounders(): Promise<PublicFounder[]> {
       tone: profile.tone,
       avatarUrl,
       initials: initialsOf(profile.name),
+      presenceStatus: normalizePresence(user?.presenceStatus),
     });
   }
   return out;

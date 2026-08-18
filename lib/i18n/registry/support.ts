@@ -44,6 +44,10 @@ export const SUPPORT_MESSAGES = {
   "support.page.foundersLede":
     "Coming from Caribbean operating contexts, product engineering, and the CENSII decision methodology, we built Octivate so teams can move from scattered signals to evidence-backed judgement — without drowning in slideware.",
   "support.page.meetTeam": "Meet the team",
+  "support.page.presence.available": "Available",
+  "support.page.presence.away": "Away",
+  "support.page.presence.busy": "Busy",
+  "support.page.presence.offline": "Offline",
   "support.page.role.founder": "Founder · Product & Domain",
   "support.page.role.founderDesc":
     "Product vision, Caribbean use cases, and the CENSII decision methodology.",

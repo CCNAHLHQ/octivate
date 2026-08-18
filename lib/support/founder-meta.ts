@@ -1,4 +1,4 @@
-import type { StaffProfileId } from "@/lib/auth/types";
+import type { PresenceStatus, StaffProfileId } from "@/lib/auth/types";
 
 export type PublicFounder = {
   id: StaffProfileId;
@@ -8,6 +8,8 @@ export type PublicFounder = {
   /** Public staff-avatar URL when the operator has uploaded a photo. */
   avatarUrl: string | null;
   initials: string;
+  /** Live operator presence from account settings. */
+  presenceStatus: PresenceStatus;
 };
 
 const ROLE_KEY: Record<StaffProfileId, string> = {
@@ -22,12 +24,23 @@ const DESC_KEY: Record<StaffProfileId, string> = {
   jaden: "support.page.role.techDesc",
 };
 
+const PRESENCE_KEY: Record<PresenceStatus, string> = {
+  available: "support.page.presence.available",
+  away: "support.page.presence.away",
+  busy: "support.page.presence.busy",
+  offline: "support.page.presence.offline",
+};
+
 export function founderRoleKey(id: StaffProfileId) {
   return ROLE_KEY[id];
 }
 
 export function founderDescKey(id: StaffProfileId) {
   return DESC_KEY[id];
+}
+
+export function founderPresenceKey(status: PresenceStatus) {
+  return PRESENCE_KEY[status];
 }
 
 export function initialsOf(name: string) {
