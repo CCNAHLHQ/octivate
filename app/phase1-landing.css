@@ -1123,6 +1123,155 @@
   padding: 1rem 1.05rem 1.1rem;
 }
 
+.land-tech-modal-panel.is-video.is-canvas {
+  width: min(64rem, calc(100vw - 1.5rem));
+  max-height: min(92vh, 48rem);
+  padding: 0;
+  overflow: hidden;
+  border-radius: 1.15rem;
+  border: 1px solid color-mix(in srgb, var(--line-strong) 70%, var(--violet));
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--abyss-2) 92%, #000) 0%,
+      color-mix(in srgb, var(--ink) 96%, #05070f) 100%
+    );
+  box-shadow:
+    var(--shadow-pop),
+    0 0 0 1px color-mix(in srgb, var(--violet) 18%, transparent);
+}
+
+.land-tech-canvas-chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem 0.55rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+  background: color-mix(in srgb, var(--foam) 3%, transparent);
+}
+
+.land-tech-canvas-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.land-tech-canvas-tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.65rem;
+  border-radius: 999px;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  border: 1px solid transparent;
+  user-select: none;
+}
+
+.land-tech-canvas-tab.is-active {
+  color: var(--foam);
+  border-color: color-mix(in srgb, var(--violet) 40%, var(--line));
+  background: color-mix(in srgb, var(--violet) 16%, transparent);
+}
+
+.land-tech-canvas-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.land-tech-canvas-export {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.7rem;
+  border-radius: 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--line-strong) 85%, var(--tide));
+  background: color-mix(in srgb, var(--tide) 12%, transparent);
+  color: var(--foam);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.land-tech-canvas-export:hover {
+  background: color-mix(in srgb, var(--tide) 22%, transparent);
+  border-color: color-mix(in srgb, var(--tide) 45%, var(--line));
+}
+
+.land-tech-canvas-stage {
+  position: relative;
+  padding: 0.55rem 0.55rem 0.65rem;
+}
+
+.land-tech-canvas-meta {
+  position: absolute;
+  z-index: 2;
+  left: 1rem;
+  bottom: 3.6rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.55rem;
+  border-radius: 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--foam) 14%, transparent);
+  background: color-mix(in srgb, var(--ink) 72%, transparent);
+  color: var(--foam);
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.land-tech-modal-panel.is-canvas .land-tech-modal-close {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-color: color-mix(in srgb, var(--line) 80%, transparent);
+  background: color-mix(in srgb, var(--foam) 4%, transparent);
+}
+
+.land-tech-modal-panel.is-canvas .land-tech-plyr {
+  border-radius: 0.75rem;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--foam) 8%, transparent);
+}
+
+.land-tech-modal-panel.is-canvas .land-tech-plyr .plyr--video .plyr__controls {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    color-mix(in srgb, var(--ink) 55%, transparent) 32%,
+    color-mix(in srgb, var(--ink) 94%, #000) 100%
+  );
+}
+
+@media (max-width: 640px) {
+  .land-tech-canvas-chrome {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .land-tech-canvas-actions {
+    justify-content: space-between;
+  }
+
+  .land-tech-canvas-meta {
+    bottom: 3.35rem;
+    left: 0.85rem;
+  }
+}
+
 .land-tech-modal-head {
   display: flex;
   align-items: flex-start;

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useId, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
 import { Play, X } from "lucide-react";
 import { useT } from "@/components/i18n/locale-provider";
 import { cn } from "@/lib/utils";
@@ -210,6 +211,13 @@ function DemoModal({
 
   if (!mounted || (!open && !leaving)) return null;
 
+  const canvasTabs = [
+    { id: "judgement", label: t("land.tech.canvas.judgement") },
+    { id: "coverage", label: t("land.tech.canvas.coverage") },
+    { id: "sources", label: t("land.tech.canvas.sources") },
+    { id: "brief", label: t("land.tech.canvas.brief") },
+  ] as const;
+
   return createPortal(
     <div
       className={cn(
@@ -226,26 +234,49 @@ function DemoModal({
         onClick={requestClose}
       />
       <div
-        className="land-tech-modal-panel is-video"
+        className="land-tech-modal-panel is-video is-canvas"
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
+        aria-label={t("land.tech.canvasLabel")}
       >
-        <header className="land-tech-modal-head">
-          <div>
-            <p className="land-tech-modal-kicker">{t("land.tech.demoKicker")}</p>
-            <h2 id={titleId}>{t("land.tech.demoTitle")}</h2>
+        <div className="land-tech-canvas-chrome">
+          <div className="land-tech-canvas-tabs" role="tablist" aria-label={t("land.tech.canvasLabel")}>
+            {canvasTabs.map((tab, i) => (
+              <span
+                key={tab.id}
+                role="tab"
+                aria-selected={i === 0}
+                className={cn("land-tech-canvas-tab", i === 0 && "is-active")}
+              >
+                {tab.label}
+              </span>
+            ))}
           </div>
-          <button
-            type="button"
-            className="land-tech-modal-close"
-            onClick={requestClose}
-            aria-label={t("land.tech.demoClose")}
-          >
-            <X className="h-4 w-4" />
-          </button>
-        </header>
-        <div className="land-tech-modal-body">
+          <div className="land-tech-canvas-actions">
+            <Link
+              href="/sample/brief"
+              className="land-tech-canvas-export"
+              onClick={requestClose}
+            >
+              {t("land.tech.demoSample")}
+            </Link>
+            <button
+              type="button"
+              className="land-tech-modal-close"
+              onClick={requestClose}
+              aria-label={t("land.tech.demoClose")}
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+
+        <div className="land-tech-canvas-stage">
+          <p id={titleId} className="sr-only">
+            {t("land.tech.demoTitle")}
+          </p>
+          <span className="land-tech-canvas-meta">{t("land.tech.demoMeta")}</span>
           <DemoVideoPlayer title={t("land.tech.demoTitle")} active={visible && !leaving} />
         </div>
       </div>

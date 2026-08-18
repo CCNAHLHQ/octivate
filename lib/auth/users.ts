@@ -82,6 +82,13 @@ export async function findUserById(id: string): Promise<AuthUser | null> {
   return users.find((u) => u.id === id) ?? null;
 }
 
+export async function findUserByStaffProfileId(
+  profileId: StaffProfileId
+): Promise<AuthUser | null> {
+  const users = await listUsers();
+  return users.find((u) => u.staffProfileId === profileId && !u.disabled) ?? null;
+}
+
 export async function saveUsers(users: AuthUser[]): Promise<void> {
   await writeCollection(COLLECTION, users);
 }

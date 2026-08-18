@@ -38,6 +38,12 @@ export const SUPPORT_MESSAGES = {
   "support.page.createAccount": "Create account",
   "support.page.openWorkspace": "Open workspace",
   "support.page.builtBy": "Built by CENSII",
+  "support.page.eyebrow": "Team",
+  "support.page.headline": "Built by operators and engineers.",
+  "support.page.foundersTitle": "We are the founders of Octivate.",
+  "support.page.foundersLede":
+    "Coming from Caribbean operating contexts, product engineering, and the CENSII decision methodology, we built Octivate so teams can move from scattered signals to evidence-backed judgement — without drowning in slideware.",
+  "support.page.meetTeam": "Meet the team",
   "support.page.role.founder": "Founder · Product & Domain",
   "support.page.role.founderDesc":
     "Product vision, Caribbean use cases, and the CENSII decision methodology.",

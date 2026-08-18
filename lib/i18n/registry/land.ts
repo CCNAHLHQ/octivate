@@ -91,6 +91,12 @@ export const LAND_MESSAGES = {
   "land.tech.demoSample": "Open sample brief",
   "land.tech.demoSignup": "Create account",
   "land.tech.demoClose": "Close demo",
+  "land.tech.demoMeta": "Octivate demo · 1 min",
+  "land.tech.canvas.judgement": "Judgement",
+  "land.tech.canvas.coverage": "Coverage",
+  "land.tech.canvas.sources": "Sources",
+  "land.tech.canvas.brief": "Brief",
+  "land.tech.canvasLabel": "Demo product canvas",
 
   "land.ws.eyebrow": "Inside the workspace",
   "land.ws.title": "Live product surfaces — explore without signing in.",
