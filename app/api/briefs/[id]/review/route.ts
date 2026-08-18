@@ -7,7 +7,7 @@ import { validateBriefForRelease } from "@/lib/briefs/release-validator";
 import { briefReviewSchema } from "@/lib/validation/schemas";
 import { SEED_BRIEFS } from "@/lib/mock/seed";
 import { appendAudit } from "@/lib/protocol/audit";
-import type { Brief, HumanReviewRecord, ProjectStateFact } from "@/lib/types";
+import type { Brief, HumanReviewRecord } from "@/lib/types";
 
 export async function GET(
   req: NextRequest,
@@ -62,15 +62,10 @@ export async function POST(
   const mapped = actionMap[parsed.data.action];
 
   if (parsed.data.action === "approve") {
-    let state = brief.currentStateFacts || [];
-    if (!state.length) {
-      try {
-        state = await readCollection<ProjectStateFact>("project-state-facts", []);
-      } catch {
-        state = [];
-      }
-    }
-    const release = validateBriefForRelease(brief, { currentState: state });
+    // Sole source: facts persisted on this brief — never a global shared collection.
+    const release = validateBriefForRelease(brief, {
+      currentState: brief.currentStateFacts || [],
+    });
     if (!release.ok) {
       await appendAudit({
         action: "release_blocked",

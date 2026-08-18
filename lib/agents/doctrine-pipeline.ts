@@ -146,16 +146,24 @@ function confidenceToNumber(label: string): number {
   return map[label] ?? 50;
 }
 
-/** Independent risk from validated consequence/exposure language — not confidence. */
+/** Independent risk from consequence/exposure language — never from confidence labels. */
 function assessIndependentRisk(opts: {
   recommendation?: RecommendationOutput;
   riskFlags?: string[];
   currentState?: ProjectStateFact[];
 }): Brief["riskLevel"] {
+  const CONFIDENCE_ONLY =
+    /^(high|moderate|low|plausible_unverified|insufficient_evidence)$/i;
   const blob = [
     ...(opts.riskFlags || []),
     ...(opts.recommendation?.tradeoffs || []),
-    ...(opts.recommendation?.options || []).map((o) => `${o.risk} ${o.description}`),
+    ...(opts.recommendation?.options || [])
+      .map((o) => {
+        // Ignore fields that are just epistemic confidence labels.
+        const risk = String(o.risk || "").trim();
+        if (CONFIDENCE_ONLY.test(risk)) return o.description || "";
+        return `${risk} ${o.description || ""}`;
+      }),
   ]
     .join(" ")
     .toLowerCase();
@@ -164,7 +172,7 @@ function assessIndependentRisk(opts: {
     return "critical";
   }
   if (/high risk|material exposure|political veto|sanctions/.test(blob)) return "high";
-  if (/moderate|medium|manageable/.test(blob)) return "medium";
+  if (/moderate risk|medium risk|manageable risk/.test(blob)) return "medium";
   if (/low risk|limited exposure/.test(blob)) return "low";
   if (hasUnknownDecisionCriticalState(opts.currentState || [])) return "high";
   return "unassessed";
@@ -795,7 +803,7 @@ function assembleBrief(
   }
   if (hasUnknownDecisionCriticalState(currentState)) {
     evidenceGaps.push(
-      "Current NGL O&M / procurement status not verified as of evaluation date — treat open/active assertions as unproven."
+      "Decision-critical procurement/opportunity status not verified as of evaluation date — treat open/active assertions as unproven."
     );
   }
 
@@ -1103,11 +1111,7 @@ export async function runDoctrinePipeline(
 
     const asOf = new Date().toISOString().slice(0, 10);
     const currentState = resolveCurrentState(newClaims, asOf);
-    try {
-      await writeCollection("project-state-facts", currentState.slice(0, 100));
-    } catch {
-      /* non-fatal */
-    }
+    // Facts travel on the brief only — do not overwrite a global shared collection.
 
     const lensCtx = [
       "Cite only these evidence claim IDs and source IDs; do not invent others.",
@@ -1164,23 +1168,31 @@ export async function runDoctrinePipeline(
     ]);
 
     const lensCoverage = assessPsnLensCoverage({
-      powerUsable: power.output_status !== "insufficient_evidence",
-      systemsUsable: systems.output_status !== "insufficient_evidence",
-      narrativeUsable: narrative.output_status !== "insufficient_evidence",
+      powerUsable:
+        power.output_status !== "insufficient_evidence" &&
+        (power.material_findings?.length || 0) > 0,
+      systemsUsable:
+        systems.output_status !== "insufficient_evidence" &&
+        (systems.material_findings?.length || 0) > 0,
+      narrativeUsable:
+        narrative.output_status !== "insufficient_evidence" &&
+        (narrative.material_findings?.length || 0) > 0,
     });
 
-    const gate2 = checkGate("PSN_SYNTHESIS", {
-      all_three_lens_outputs: lensCoverage.allThree,
-      explicit_insufficient_evidence_status:
-        [power, systems, narrative].some((o) => o.output_status === "insufficient_evidence"),
-    });
-
-    // Allow partial synthesis when at least one lens is usable; never invent absent lenses.
-    if (!gate2.ok && lensCoverage.usableCount === 0) {
+    // Hard-fail when no lens produced usable findings. Do not rely on workflow
+    // requires_one_of (all_three OR insufficient) which always passes when any
+    // lens is marked insufficient_evidence.
+    if (lensCoverage.usableCount === 0) {
       throw new Error(
         "PSN synthesis gate failed — Octivate could not evidence Power, Systems, or Narrative findings for this theatre. Add on-scope documents or refine the question, then rerun."
       );
     }
+
+    // Keep protocol audit trail; gate context reflects actual coverage.
+    checkGate("PSN_SYNTHESIS", {
+      all_three_lens_outputs: lensCoverage.allThree,
+      explicit_insufficient_evidence_status: lensCoverage.coverage !== "insufficient",
+    });
 
     const depthCaps = getDepthCaps(depth);
     const usableLensFindings =
@@ -1302,7 +1314,8 @@ export async function runDoctrinePipeline(
           option_title: title,
           finding_id: f.finding_id,
           description: findingText(f, "See structured findings"),
-          risk: f.confidence || "moderate",
+          // Never put epistemic confidence labels here — they leaked into risk scoring.
+          risk: "",
         };
       }),
       preferred_option: humanOptionTitle(recFindings[0], 0),

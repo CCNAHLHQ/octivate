@@ -86,6 +86,11 @@ export function WorkspaceIntroModal() {
     setNavReady(false);
   }, []);
 
+  // Always clear tour flag on unmount (operator↔workspace switch must not leave map polling paused).
+  useEffect(() => {
+    return () => setTourOpenFlag(false);
+  }, []);
+
   const openModal = useCallback(() => {
     setStep(0);
     setNavReady(false);
@@ -141,17 +146,19 @@ export function WorkspaceIntroModal() {
     setHydrated(true);
   }, [router]);
 
-  // Auto-show once per mount when never seen — do not re-fire on every pathname change.
+  // Auto-show once when never seen — only mark attempted after openModal actually runs.
   useEffect(() => {
     if (!hydrated) return;
     if (autoOpenedRef.current) return;
     if (pathname.startsWith("/dashboard/operator")) return;
     if (!shouldAutoShowIntro()) return;
     if (readIntroSession()?.open) return;
-    autoOpenedRef.current = true;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const delay = reduced ? 120 : 280;
-    const timer = window.setTimeout(() => openModal(), delay);
+    const timer = window.setTimeout(() => {
+      autoOpenedRef.current = true;
+      openModal();
+    }, delay);
     return () => window.clearTimeout(timer);
   }, [hydrated, openModal, pathname]);
 
@@ -182,12 +189,10 @@ export function WorkspaceIntroModal() {
     const exactList =
       current.target === "[data-tour='projects-new']" || current.route === "/dashboard";
 
-    const onProjectListFallback =
-      Boolean(current.resolveProject) && pathname === "/dashboard/projects";
-
-    const alreadyThere =
-      routeMatches(pathname, current.route, current.resolveProject, exactList) ||
-      onProjectListFallback;
+    // resolveProject: list URL is NOT terminal — we still try to enter a theatre.
+    const alreadyThere = current.resolveProject
+      ? routeMatches(pathname, current.route, true, exactList)
+      : routeMatches(pathname, current.route, false, exactList);
 
     const navKey = `${current.id}:${pathname}`;
 
@@ -244,8 +249,14 @@ export function WorkspaceIntroModal() {
               new Promise<null>((resolve) => window.setTimeout(() => resolve(null), 450)),
             ]);
             if (cancelled) return;
-            projects = res?.projects || [];
-            projectCacheRef.current = { at: Date.now(), projects };
+            if (res && Array.isArray(res.projects)) {
+              projects = res.projects;
+              projectCacheRef.current = { at: Date.now(), projects };
+            } else {
+              // Timeout / failed race — do not cache empty as truth.
+              projects = projectCacheRef.current?.projects;
+            }
+            if (!projects) projects = [];
           }
           if (cancelled) return;
           const active =

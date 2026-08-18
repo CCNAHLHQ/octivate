@@ -178,6 +178,7 @@ function labelRisk(risk: Brief["riskLevel"]) {
 function riskBadgeClass(risk: Brief["riskLevel"]) {
   if (risk === "critical" || risk === "high") return "high";
   if (risk === "medium") return "med";
+  if (risk === "unassessed") return "neutral";
   return "active";
 }
 
@@ -464,7 +465,13 @@ function buildRiskFactors(brief: Brief): { items: ExportRiskFactor[]; truncated:
     pushFactor(
       "Composite political-regulatory risk",
       riskBase[brief.riskLevel],
-      brief.riskLevel === "low" ? "ok" : brief.riskLevel === "medium" ? "warn" : "hot"
+      brief.riskLevel === "unassessed"
+        ? "ok"
+        : brief.riskLevel === "low"
+          ? "ok"
+          : brief.riskLevel === "medium"
+            ? "warn"
+            : "hot"
     );
     if (brief.confidence > 0) {
       pushFactor(

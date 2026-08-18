@@ -15,7 +15,7 @@ export type LifecycleState =
   | "unknown"
   | "planned";
 
-const DATE_RE =
+const DATE_PATTERN =
   /\b(?:(\d{1,2})\s+(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{4})|(\d{4})-(\d{2})-(\d{2}))\b/gi;
 
 const MONTH: Record<string, number> = {
@@ -44,15 +44,12 @@ const MONTH: Record<string, number> = {
   december: 11,
 };
 
-export function parseLooseDate(raw: string): string | null {
-  const s = String(raw || "").trim();
-  if (!s) return null;
-  const iso = Date.parse(s);
-  if (Number.isFinite(iso)) return new Date(iso).toISOString().slice(0, 10);
+function dateRegex() {
+  // Fresh instance every call — shared /g regex + nested exec causes infinite loops.
+  return new RegExp(DATE_PATTERN.source, DATE_PATTERN.flags);
+}
 
-  DATE_RE.lastIndex = 0;
-  const m = DATE_RE.exec(s);
-  if (!m) return null;
+function matchToIso(m: RegExpExecArray): string | null {
   if (m[4] && m[5] && m[6]) {
     return `${m[4]}-${m[5]}-${m[6]}`;
   }
@@ -60,16 +57,32 @@ export function parseLooseDate(raw: string): string | null {
   const mon = MONTH[String(m[2] || "").toLowerCase()];
   const year = Number(m[3]);
   if (!Number.isFinite(day) || mon == null || !Number.isFinite(year)) return null;
-  const d = new Date(Date.UTC(year, mon, day));
-  return d.toISOString().slice(0, 10);
+  return new Date(Date.UTC(year, mon, day)).toISOString().slice(0, 10);
+}
+
+export function parseLooseDate(raw: string): string | null {
+  const s = String(raw || "").trim();
+  if (!s) return null;
+  // Prefer explicit calendar forms over Date.parse (avoids TZ day-shift on date-only strings).
+  const re = dateRegex();
+  const m = re.exec(s);
+  if (m && m.index === 0) {
+    const iso = matchToIso(m);
+    if (iso) return iso;
+  }
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
+  const iso = Date.parse(s);
+  if (Number.isFinite(iso)) return new Date(iso).toISOString().slice(0, 10);
+  const any = dateRegex().exec(s);
+  return any ? matchToIso(any) : null;
 }
 
 function extractDates(text: string): string[] {
   const out: string[] = [];
-  DATE_RE.lastIndex = 0;
+  const re = dateRegex();
   let m: RegExpExecArray | null;
-  while ((m = DATE_RE.exec(text))) {
-    const parsed = parseLooseDate(m[0]);
+  while ((m = re.exec(text))) {
+    const parsed = matchToIso(m);
     if (parsed && !out.includes(parsed)) out.push(parsed);
   }
   return out;

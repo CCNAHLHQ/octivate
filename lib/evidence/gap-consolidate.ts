@@ -105,7 +105,8 @@ export function consolidateEvidenceGaps(raw: string[]): {
         !g.internal_only &&
         g.status === "unresolved" &&
         (g.materiality === "decision_critical" || g.materiality === "material") &&
-        g.category === "evidence_gap"
+        (g.category === "evidence_gap" ||
+          (g.category === "analytical_uncertainty" && g.materiality === "decision_critical"))
     )
     .map((g) => g.missing_information);
 

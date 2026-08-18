@@ -100,18 +100,24 @@ export function validateBriefForRelease(
     });
   }
 
-  // Also catch explicit past deadlines in recommendations without state facts.
-  if (
-    /15\s*May\s*2026|2026-05-15/i.test(clientText) &&
-    /prepare|pursue|act now|deadline/i.test(clientText) &&
-    brief.createdAt &&
-    brief.createdAt.slice(0, 10) > "2026-05-15"
-  ) {
-    hardBlocks.push({
-      code: "past_deadline_action",
-      severity: "hard",
-      message: "Brief recommends action against a deadline that is already past.",
-    });
+  // Generic past-deadline action: any state fact with deadline < brief asOf, presented as pursue/ACT NOW.
+  const asOf = (brief.createdAt || "").slice(0, 10);
+  if (asOf) {
+    for (const f of state) {
+      if (
+        f.deadlineAt &&
+        f.deadlineAt < asOf &&
+        (f.state === "expired" || f.state === "closed") &&
+        /\bact now\b|pursue now|currently open|prepare for .+ deadline/i.test(clientText)
+      ) {
+        hardBlocks.push({
+          code: "past_deadline_action",
+          severity: "hard",
+          message: "Brief recommends action against a deadline that is already past.",
+        });
+        break;
+      }
+    }
   }
 
   const cites = brief.citedSources || [];

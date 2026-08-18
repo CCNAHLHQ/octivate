@@ -5,6 +5,7 @@
 import assert from "node:assert/strict";
 import {
   latestStateByComponent,
+  parseLooseDate,
   resolveCurrentState,
 } from "../lib/evidence/current-state.ts";
 import { consolidateEvidenceGaps } from "../lib/evidence/gap-consolidate.ts";
@@ -33,6 +34,34 @@ function assessPsnLensCoverage(opts) {
     missingLenses: missing,
     usableCount,
   };
+}
+
+function testDateParseNoHang() {
+  const started = Date.now();
+  const multi =
+    "EOI closes 15 May 2026 and a later notice on 2026-07-01 supersedes the RFP issued 15 March 2026.";
+  const a = parseLooseDate("15 May 2026");
+  const b = parseLooseDate("2026-07-01");
+  assert.equal(a, "2026-05-15");
+  assert.equal(b, "2026-07-01");
+  // extractDates is exercised via resolveCurrentState on multi-date statements
+  resolveCurrentState(
+    [
+      {
+        claim_id: "claim_multi_dates",
+        statement: multi,
+        source_ids: ["s1"],
+        judgement_type: "fact",
+        decision_relevance: "timing",
+        confidence: "high",
+        component: "eoi",
+        deadlineAt: "2026-05-15",
+      },
+    ],
+    WALES_AS_OF
+  );
+  assert.ok(Date.now() - started < 2000, "date parse must not hang");
+  console.log("ok — date parse no hang");
 }
 
 function testTemporalState() {
@@ -286,6 +315,7 @@ function testPsnGateSemantics() {
 }
 
 function main() {
+  testDateParseNoHang();
   testTemporalState();
   testGapConsolidation();
   testTrendGeography();

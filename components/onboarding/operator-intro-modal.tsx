@@ -206,6 +206,13 @@ export function OperatorIntroModal() {
     } catch {
       /* ignore */
     }
+    return () => {
+      try {
+        delete document.documentElement.dataset.workspaceTour;
+      } catch {
+        /* ignore */
+      }
+    };
   }, [open]);
 
   useEffect(() => {

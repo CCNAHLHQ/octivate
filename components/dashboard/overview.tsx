@@ -32,12 +32,13 @@ import type { Brief, CountryPack, Project, Trend, UsageSnapshot } from "@/lib/ty
 import { setLocationHash } from "@/lib/navigation/hash";
 import { cn } from "@/lib/utils";
 
-const RISK_LEVELS = ["critical", "high", "medium", "low"] as const;
+const RISK_LEVELS = ["critical", "high", "medium", "low", "unassessed"] as const;
 const RISK_COLORS: Record<(typeof RISK_LEVELS)[number], string> = {
   critical: "#FF6B5B",
   high: "#F97316",
   medium: "#F5B84B",
   low: "#2DD4BF",
+  unassessed: "#94A3B8",
 };
 
 type OverviewTab = "insights" | "pipeline";

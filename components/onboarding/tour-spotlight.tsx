@@ -118,12 +118,14 @@ export function TourSpotlight({
     // Capture scroll from nested dashboard panes without listening to every mutation.
     window.addEventListener("scroll", onViewport, true);
 
-    // childList only — attribute churn from React must not re-measure constantly.
+    // childList + class/style on shell so sidebar expand remeasures without
+    // thrashing on every React attribute write across the tree.
     const observer = new MutationObserver(() => scheduleMeasure());
     observer.observe(document.body, {
       childList: true,
       subtree: true,
-      attributes: false,
+      attributes: true,
+      attributeFilter: ["class", "style", "data-mobile-open", "aria-expanded", "aria-hidden"],
     });
 
     return () => {
