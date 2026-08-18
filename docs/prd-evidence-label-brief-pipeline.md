@@ -2,7 +2,7 @@
 
 **Status:** Implemented (v1 foundation through UI/ops)  
 **Date:** 2026-08-01  
-**Default model:** `nvidia/nemotron-3-super-120b-a12b:free` (paid override via operator allow + project toggle)  
+**Default model:** `nvidia/nemotron-3.5-lightning:free` (premium `nvidia/nemotron-3-ultra-550b-a55b:free`; docs `deepseek/deepseek-v4-flash`; paid override via operator allow + project toggle)  
 **Companion canvas:** `evidence-pipeline-prd.canvas.tsx`
 
 ### Locked decisions

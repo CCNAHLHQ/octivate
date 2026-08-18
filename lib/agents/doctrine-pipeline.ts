@@ -32,12 +32,23 @@ import {
   selectTrendRecords,
 } from "@/lib/sources/select";
 import { loadCaptureEvidenceForSources } from "@/lib/evidence/capture-load";
-import { attachCitationPassages, findSupportingPassages } from "@/lib/evidence/citations";
+import { attachCitationPassages } from "@/lib/evidence/citations";
+import { buildCanonicalClaims } from "@/lib/evidence/claims-normalize";
+import {
+  formatCurrentStateForAgent,
+  hasUnknownDecisionCriticalState,
+  resolveCurrentState,
+} from "@/lib/evidence/current-state";
+import { consolidateEvidenceGaps } from "@/lib/evidence/gap-consolidate";
 import { buildEvidenceContextPack, enrichRecordRelevance } from "@/lib/evidence/context-pack";
 import { loadLocalEvidenceBundle } from "@/lib/evidence/index";
 import { readScoringPolicy } from "@/lib/evidence/scoring-policy";
 import { scoreBriefConfidence } from "@/lib/evidence/score-brief";
 import type { EvidenceDocument } from "@/lib/evidence/types";
+import {
+  assessPsnLensCoverage,
+  validateAgentOutput,
+} from "@/lib/agents/agent-schemas";
 import {
   buildDocumentEvidenceBundle,
   coverageNote,
@@ -57,6 +68,7 @@ import type {
   MaterialFinding,
   Source,
   Project,
+  ProjectStateFact,
   PsnInteraction,
   RecommendationOutput,
   SourceRecord,
@@ -134,10 +146,51 @@ function confidenceToNumber(label: string): number {
   return map[label] ?? 50;
 }
 
-function riskFromConfidence(n: number): Brief["riskLevel"] {
-  if (n >= 80) return "medium";
-  if (n >= 65) return "high";
-  return "critical";
+/** Independent risk from validated consequence/exposure language — not confidence. */
+function assessIndependentRisk(opts: {
+  recommendation?: RecommendationOutput;
+  riskFlags?: string[];
+  currentState?: ProjectStateFact[];
+}): Brief["riskLevel"] {
+  const blob = [
+    ...(opts.riskFlags || []),
+    ...(opts.recommendation?.tradeoffs || []),
+    ...(opts.recommendation?.options || []).map((o) => `${o.risk} ${o.description}`),
+  ]
+    .join(" ")
+    .toLowerCase();
+  if (!blob.trim() && !(opts.currentState || []).length) return "unassessed";
+  if (/critical|existential|severe exposure|nationalisation|expropriat/.test(blob)) {
+    return "critical";
+  }
+  if (/high risk|material exposure|political veto|sanctions/.test(blob)) return "high";
+  if (/moderate|medium|manageable/.test(blob)) return "medium";
+  if (/low risk|limited exposure/.test(blob)) return "low";
+  if (hasUnknownDecisionCriticalState(opts.currentState || [])) return "high";
+  return "unassessed";
+}
+
+/** Derive a short human-readable option title (never expose option_N / raw finding ids). */
+function humanOptionTitle(
+  f: Partial<MaterialFinding> | null | undefined,
+  index: number
+): string {
+  const extended = f as MaterialFinding & { option_title?: string; action_label?: string };
+  const explicit = extended?.option_title || extended?.action_label;
+  if (explicit && !/^option[_-]?\d+$/i.test(explicit) && !/^finding_/i.test(explicit)) {
+    return explicit.trim();
+  }
+  const text = findingText(f, "");
+  if (text) {
+    const words = text
+      .replace(/^[^a-zA-Z0-9]+/, "")
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 8);
+    if (words.length >= 3) return words.join(" ");
+    if (words.length) return words.join(" ");
+  }
+  return `Decision option ${index + 1}`;
 }
 
 async function loadSourceBundle(
@@ -224,7 +277,7 @@ async function loadSourceBundle(
   const trends = localOnly
     ? []
     : await readCollection<Trend>("trends", SEED_TRENDS).then((t) =>
-        selectTrendRecords(t, project, 4)
+        selectTrendRecords(t, project, 4, { question })
       );
 
   // Evidence scoped to selected + any upload/parl docs tied to this run
@@ -292,49 +345,19 @@ async function loadSourceBundle(
   };
 }
 
-/** Build claims grounded in local passage windows when evidence text exists. */
+/** @deprecated Prefer buildCanonicalClaims — kept as thin wrapper for tests. */
 function buildGroundedClaims(
   sourceRecords: SourceRecord[],
   evidence: EvidenceDocument[],
   project: Project,
   question: string
 ): EvidenceClaim[] {
-  const claims: EvidenceClaim[] = [];
-  for (const s of sourceRecords.slice(0, 8)) {
-    const ev = evidence.find((e) => e.sourceId === s.source_id);
-    if (ev?.text?.trim()) {
-      const passages = findSupportingPassages(ev.text, question, {
-        max: 1,
-        windowChars: 280,
-        title: s.title,
-      });
-      const anchor = passages[0]?.text || ev.text.replace(/\s+/g, " ").trim().slice(0, 220);
-      claims.push({
-        claim_id: uid("claim"),
-        statement: anchor,
-        source_ids: [s.source_id],
-        judgement_type: "fact",
-        decision_relevance: s.decision_relevance || `${project.sector} · ${project.country}`,
-        confidence: passages.length
-          ? s.reliability === "high"
-            ? "high"
-            : "moderate"
-          : "low",
-        evidence_ids: [ev.id],
-      });
-    } else {
-      // Registry-only stub — low confidence, no evidence_ids (citation engine may drop in local-only)
-      claims.push({
-        claim_id: uid("claim"),
-        statement: `${s.title}: ${s.decision_relevance || `Relevant to ${project.sector} decisions in ${project.country}`}`,
-        source_ids: [s.source_id],
-        judgement_type: "inference",
-        decision_relevance: s.decision_relevance || `${project.sector} · ${project.country}`,
-        confidence: "plausible_unverified",
-      });
-    }
-  }
-  return claims;
+  return buildCanonicalClaims({
+    sourceRecords,
+    evidence,
+    project,
+    question,
+  });
 }
 
 async function runAgent<T extends CommonAgentOutput>(
@@ -446,10 +469,69 @@ async function runAgent<T extends CommonAgentOutput>(
 
   assertNotSuperseded(session);
 
-  const validation = validateAgainstSchema("common_agent_output.schema.json", data);
-  if (!validation.valid) {
-    data.output_status = "partial";
-    data.review_flags = [...(data.review_flags || []), "schema_validation_warning"];
+  let validation = validateAgainstSchema("common_agent_output.schema.json", data);
+  let agentVal = validateAgentOutput(agent, data);
+
+  // One bounded repair/retry when decision-critical validation fails.
+  if ((!validation.valid || agentVal.blocked || agentVal.errors.length > 0) &&
+      ["power_analyst", "systems_analyst", "narrative_analyst", "psn_synthesiser", "scenario_recommendation"].includes(agent)) {
+    try {
+      const repair = await completeJson<T>(
+        client,
+        {
+          model,
+          maxTokens: Math.min(8_000, maxTokens),
+          messages: [
+            {
+              role: "system",
+              content:
+                "Repair the previous agent JSON so material_findings are valid, non-empty when evidence exists, and free of pipeline metadata. Return only JSON matching the common agent envelope.",
+            },
+            {
+              role: "user",
+              content: [
+                `Agent: ${agent}`,
+                `Validation errors:\n${[...(!validation.valid && "errors" in validation ? validation.errors : []), ...agentVal.errors].slice(0, 8).join("\n")}`,
+                `Previous output:\n${JSON.stringify(data).slice(0, 6_000)}`,
+              ].join("\n\n"),
+            },
+          ],
+        },
+        (raw) => raw as T
+      );
+      data = repair.data;
+      result = {
+        ...result,
+        totalTokens: result.totalTokens + repair.result.totalTokens,
+        costUsd: result.costUsd + repair.result.costUsd,
+        model: repair.result.model || result.model,
+        costSource: mergeCostSource(result.costSource, repair.result.costSource),
+      };
+      validation = validateAgainstSchema("common_agent_output.schema.json", data);
+      agentVal = validateAgentOutput(agent, data);
+    } catch {
+      /* keep original */
+    }
+  }
+
+  if (!validation.valid || agentVal.errors.length) {
+    data.output_status =
+      agentVal.blocked ? "insufficient_evidence" : data.output_status === "complete" ? "partial" : data.output_status;
+    data.review_flags = [
+      ...(data.review_flags || []),
+      validation.valid ? "schema_soft_warning" : "schema_validation_warning",
+      ...(agentVal.blocked ? ["schema_validation_failure", "hard_schema"] : []),
+    ];
+  }
+
+  // Only validated findings proceed downstream for decision-critical agents.
+  if (
+    agentVal.acceptedFindings.length &&
+    ["power_analyst", "systems_analyst", "narrative_analyst", "psn_synthesiser"].includes(agent)
+  ) {
+    data.material_findings = agentVal.acceptedFindings;
+  } else if (agentVal.blocked) {
+    data.material_findings = [];
   }
 
   await withSessionGate(session, async () => {
@@ -553,13 +635,33 @@ function buildPsnInteractions(
 
 function buildCitedSources(
   records: SourceRecord[],
-  _claims: EvidenceClaim[],
+  claims: EvidenceClaim[],
   evidence: EvidenceDocument[] = [],
   queries: string[] = [],
   opts?: { localOnlySources?: boolean }
 ): BriefCitedSource[] {
   const bySource = new Map(evidence.map((e) => [e.sourceId || "", e]));
-  const base: BriefCitedSource[] = records.slice(0, 16).map((s, i) => {
+  const claimBySource = new Map<string, string[]>();
+  for (const c of claims) {
+    for (const sid of c.source_ids || []) {
+      const list = claimBySource.get(sid) || [];
+      list.push(c.claim_id);
+      claimBySource.set(sid, list);
+    }
+  }
+
+  // Prefer sources that actually support material claims; fall back to claim-linked only.
+  const supportingIds = new Set(claimBySource.keys());
+  const ordered = [
+    ...records.filter((r) => supportingIds.has(r.source_id)),
+    ...records.filter((r) => !supportingIds.has(r.source_id)),
+  ];
+  const chosen = (supportingIds.size
+    ? ordered.filter((r) => supportingIds.has(r.source_id))
+    : ordered
+  ).slice(0, 16);
+
+  const base: BriefCitedSource[] = chosen.map((s, i) => {
     const ev = bySource.get(s.source_id);
     const matchedKeywords = (ev?.labels || [])
       .filter((l) => (l.hitCount || 0) > 0 || l.kind === "relevance")
@@ -584,6 +686,7 @@ function buildCitedSources(
       labels: ev?.labels?.slice(0, 8).map((l) => `${l.kind}:${l.value}`),
       matchedKeywords,
       relevanceScore,
+      supportedClaimIds: claimBySource.get(s.source_id) || [],
     };
   });
   return attachCitationPassages(base, evidence, queries, {
@@ -605,7 +708,9 @@ function assembleBrief(
   evidence: EvidenceDocument[] = [],
   scoreBreakdown?: Brief["scoreBreakdown"],
   localOnlySources = false,
-  docBundle?: DocumentEvidenceBundle | null
+  docBundle?: DocumentEvidenceBundle | null,
+  currentState: ProjectStateFact[] = [],
+  psnCoverage?: Brief["psnCoverage"]
 ): Brief {
   const caps = getDepthCaps(depth);
   const powerFindings = flattenFindings(outputs, "power_analyst").slice(
@@ -634,18 +739,12 @@ function assembleBrief(
   const judgement = recommendation?.analytical_judgement?.trim();
   const findingCount =
     powerFindings.length + systemsFindings.length + narrativeFindings.length;
-  const hintCount =
-    (docBundle?.psnHints.power.length || 0) +
-    (docBundle?.psnHints.systems.length || 0) +
-    (docBundle?.psnHints.narratives.length || 0);
   const uploadCount = docBundle?.documents.length || project.documents?.length || 0;
   const hasGroundedContent =
     findingCount > 0 ||
-    hintCount > 0 ||
     psnInteractions.length > 0 ||
     Boolean(judgement) ||
     uploadCount > 0;
-  /** True empty theatre — no lenses, no uploads, no hints. */
   const thinEvidence = !hasGroundedContent;
   const executiveSummary =
     judgement ||
@@ -656,7 +755,7 @@ function assembleBrief(
         ? "Octivate could not assemble decision-grade findings from the available corpus for this theatre. Refine scope or evidence and rerun — we will not invent coverage."
         : topInteraction
           ? `Key interaction: ${topInteraction.causal_interaction}`
-          : `${Math.max(findingCount, hintCount)} material signal(s) across PSN lenses.`,
+          : `${findingCount} material signal(s) across PSN lenses.`,
       uploadCount
         ? `Document bundle: ${uploadCount} upload(s) conditioned on the decision question.`
         : "",
@@ -679,19 +778,25 @@ function assembleBrief(
     localOnlySources,
   });
 
-  const STOCK_GAP_RE =
-    /add documents that speak directly|Keep the decision question specific to the theatre|Off-scope or unrelated uploads are not treated/i;
-
-  const evidenceGaps = coerceTextList([
+  const consolidated = consolidateEvidenceGaps([
     ...outputs.flatMap((o) => o.evidence_gaps || []),
     ...(docBundle?.gaps || []),
-  ]).filter((g) => !STOCK_GAP_RE.test(g));
+  ]);
+  const evidenceGaps = [...consolidated.clientGaps];
   const reviewFlags = coerceTextList(outputs.flatMap((o) => o.review_flags || []));
+  if (psnCoverage === "partial") {
+    reviewFlags.push("psn_partial_lens_coverage");
+  }
   if (!psnInteractions.length) {
     reviewFlags.push("psn_interactions_unavailable");
     if (!evidenceGaps.some((g) => /psn|interaction/i.test(g))) {
       evidenceGaps.push("No consequential PSN interaction could be evidenced from lens outputs");
     }
+  }
+  if (hasUnknownDecisionCriticalState(currentState)) {
+    evidenceGaps.push(
+      "Current NGL O&M / procurement status not verified as of evaluation date — treat open/active assertions as unproven."
+    );
   }
 
   const defaultGaps = thinEvidence
@@ -705,47 +810,40 @@ function assembleBrief(
     .filter((t): t is string => Boolean(t))
     .slice(0, caps.max_options);
 
-  const fromHints = (docBundle?.recommendationHints || [])
-    .map((h) => h.trim())
-    .filter((h) => h && !STOCK_GAP_RE.test(h) && !/Octivate recommendation:/i.test(h))
-    .slice(0, caps.max_options);
-
+  // Hints stay internal — do not promote as client recommendations.
   const recommendations = options.length
-    ? options.map((o) => `${o.label}: ${o.description}`)
+    ? options.map((o) => `${o.option_title || o.label}: ${o.description}`)
     : fromInteractions.length
-      ? fromInteractions.map((t, i) => `Option ${i + 1}: ${t}`)
-      : fromHints.length
-        ? fromHints
-        : thinEvidence
-          ? [
-              "No decision options could be grounded yet — once on-scope evidence is available, rerun to produce option-distinct recommendations.",
-            ]
-          : ["Review structured findings, PSN interactions, and evidence gaps before commitment"];
+      ? fromInteractions.map((t, i) => `Decision option ${i + 1}: ${t}`)
+      : thinEvidence
+        ? [
+            "No decision options could be grounded yet — once on-scope evidence is available, rerun to produce option-distinct recommendations.",
+          ]
+        : ["Review structured findings, PSN interactions, and evidence gaps before commitment"];
+
+  const powerTexts = powerFindings.map((f) => findingText(f)).filter(Boolean);
+  const systemsTexts = systemsFindings.map((f) => findingText(f)).filter(Boolean);
+  const narrativeTexts = narrativeFindings.map((f) => findingText(f)).filter(Boolean);
 
   return {
     id: uid("brief"),
     projectId: project.id,
     sessionId: session.id,
-    title: `${project.name} — ${project.country} · ${project.sector}`,
+    title: `${project.name} · ${project.country} · ${project.sector}`,
     country: project.country,
     sector: project.sector,
     executiveSummary,
     confidence: avgConf,
     recommendations,
     gaps: evidenceGaps.length ? evidenceGaps : defaultGaps,
-    power: [
-      ...powerFindings.map((f) => findingText(f)).filter(Boolean),
-      ...(docBundle?.psnHints.power || []).slice(0, 2),
-    ],
-    systems: [
-      ...systemsFindings.map((f) => findingText(f)).filter(Boolean),
-      ...(docBundle?.psnHints.systems || []).slice(0, 2),
-    ],
-    narratives: [
-      ...narrativeFindings.map((f) => findingText(f)).filter(Boolean),
-      ...(docBundle?.psnHints.narratives || []).slice(0, 2),
-    ],
-    riskLevel: riskFromConfidence(avgConf),
+    power: powerTexts.length ? powerTexts : ["No material Power findings"],
+    systems: systemsTexts.length ? systemsTexts : ["No material Systems findings"],
+    narratives: narrativeTexts.length ? narrativeTexts : ["No material Narrative findings"],
+    riskLevel: assessIndependentRisk({
+      recommendation,
+      riskFlags: docBundle?.riskFlags,
+      currentState,
+    }),
     createdAt: new Date().toISOString(),
     status: "draft",
     pipelineMode: "doctrine",
@@ -762,6 +860,8 @@ function assembleBrief(
     analyticalJudgement: recommendation?.analytical_judgement,
     tradeoffs: coerceTextList(recommendation?.tradeoffs || []),
     citedSources,
+    currentStateFacts: currentState,
+    psnCoverage,
     depthDisclaimer: depthDisclaimer(depth),
     scoreBreakdown,
     localOnlySources: localOnlySources || undefined,
@@ -980,7 +1080,7 @@ export async function runDoctrinePipeline(
 
     const evidenceCtxWithDocs = evidenceCtx;
 
-    await runAgent(
+    const evidenceManagerOut = await runAgent(
       session,
       project,
       question,
@@ -992,8 +1092,22 @@ export async function runDoctrinePipeline(
     );
 
     const evidenceClaims = await readCollection<EvidenceClaim>("evidence-claims", []);
-    const newClaims = buildGroundedClaims(sourceRecords, evidence, project, question);
+    const newClaims = buildCanonicalClaims({
+      evidenceManagerOutput: evidenceManagerOut,
+      sourceRecords,
+      evidence,
+      project,
+      question,
+    });
     await writeCollection("evidence-claims", [...newClaims, ...evidenceClaims].slice(0, 200));
+
+    const asOf = new Date().toISOString().slice(0, 10);
+    const currentState = resolveCurrentState(newClaims, asOf);
+    try {
+      await writeCollection("project-state-facts", currentState.slice(0, 100));
+    } catch {
+      /* non-fatal */
+    }
 
     const lensCtx = [
       "Cite only these evidence claim IDs and source IDs; do not invent others.",
@@ -1002,18 +1116,20 @@ export async function runDoctrinePipeline(
         ? "Local-sources-only mode: do not cite registry URL-only rows without local text."
         : "Prefer local capture / transcript / upload text when available.",
       "PSN findings must stay informational for the operator: explain Power, Systems, and Narrative interactions with enough context to decide — do not invent coverage.",
+      "Document-bundle PSN hints below are unvalidated internal context only — do not copy them verbatim as findings.",
+      formatCurrentStateForAgent(currentState),
       docBundle.psnHints.power.length
-        ? `Upload Power hints:\n${docBundle.psnHints.power.map((h) => `- ${h}`).join("\n")}`
+        ? `Upload Power hints (internal):\n${docBundle.psnHints.power.map((h) => `- ${h}`).join("\n")}`
         : "",
       docBundle.psnHints.systems.length
-        ? `Upload Systems hints:\n${docBundle.psnHints.systems.map((h) => `- ${h}`).join("\n")}`
+        ? `Upload Systems hints (internal):\n${docBundle.psnHints.systems.map((h) => `- ${h}`).join("\n")}`
         : "",
       docBundle.psnHints.narratives.length
-        ? `Upload Narrative hints:\n${docBundle.psnHints.narratives.map((h) => `- ${h}`).join("\n")}`
+        ? `Upload Narrative hints (internal):\n${docBundle.psnHints.narratives.map((h) => `- ${h}`).join("\n")}`
         : "",
       `Claims:\n${newClaims.map((c) => `- ${c.claim_id}: ${c.statement.slice(0, 280)} (sources: ${c.source_ids.join(", ")}${c.evidence_ids?.length ? `; evidence: ${c.evidence_ids.join(",")}` : ""})`).join("\n")}`,
       `Sources:\n${sourceRecords
-        .slice(0, 8)
+        .slice(0, 12)
         .map((s, i) => {
           const ev = evidence.find((e) => e.sourceId === s.source_id);
           const labelBits = ev?.labels
@@ -1030,7 +1146,7 @@ export async function runDoctrinePipeline(
         .join("\n")}`,
       evidence.length
         ? `Local evidence snippets:\n${evidence
-            .slice(0, 6)
+            .slice(0, 8)
             .map(
               (e) =>
                 `- [${e.sourceId}] ${e.text.replace(/\s+/g, " ").trim().slice(0, 500)}`
@@ -1047,16 +1163,20 @@ export async function runDoctrinePipeline(
       runAgent(session, project, question, "narrative_analyst", depth, model, lensCtx, docBundle),
     ]);
 
+    const lensCoverage = assessPsnLensCoverage({
+      powerUsable: power.output_status !== "insufficient_evidence",
+      systemsUsable: systems.output_status !== "insufficient_evidence",
+      narrativeUsable: narrative.output_status !== "insufficient_evidence",
+    });
+
     const gate2 = checkGate("PSN_SYNTHESIS", {
-      all_three_lens_outputs:
-        power.output_status !== "insufficient_evidence" ||
-        systems.output_status !== "insufficient_evidence" ||
-        narrative.output_status !== "insufficient_evidence",
+      all_three_lens_outputs: lensCoverage.allThree,
       explicit_insufficient_evidence_status:
         [power, systems, narrative].some((o) => o.output_status === "insufficient_evidence"),
     });
 
-    if (!gate2.ok) {
+    // Allow partial synthesis when at least one lens is usable; never invent absent lenses.
+    if (!gate2.ok && lensCoverage.usableCount === 0) {
       throw new Error(
         "PSN synthesis gate failed — Octivate could not evidence Power, Systems, or Narrative findings for this theatre. Add on-scope documents or refine the question, then rerun."
       );
@@ -1070,7 +1190,7 @@ export async function runDoctrinePipeline(
       0;
 
     let psnInteractions: PsnInteraction[] = [];
-    if (usableLensFindings) {
+    if (usableLensFindings && lensCoverage.usableCount > 0) {
       const psnOut = await runAgent(
         session,
         project,
@@ -1080,7 +1200,9 @@ export async function runDoctrinePipeline(
         model,
         [
           `Synthesise up to ${depthCaps.max_psn_interactions} consequential PSN interaction(s).`,
-          "Each finding must name power, systems, and narrative components (or label them clearly in the finding text).",
+          `Lens coverage: ${lensCoverage.coverage} (usable=${lensCoverage.usableCount}/3). Missing: ${lensCoverage.missingLenses.join(", ") || "none"}.`,
+          "Each finding must name power, systems, and narrative components when those lenses are usable; do not invent absent lens components.",
+          "Cap interaction confidence when coverage is partial.",
           "Do not invent interactions when lenses lack material findings.",
           "Stay informational: explain how Power × Systems × Narrative interact for this decision so the operator can act.",
           `Power findings:\n${(power.material_findings || []).map((f) => `- ${findingText(f)}`).join("\n") || "(none)"}`,
@@ -1096,6 +1218,11 @@ export async function runDoctrinePipeline(
         narrative.material_findings || [],
         depthCaps.max_psn_interactions
       );
+      if (lensCoverage.coverage === "partial") {
+        for (const row of psnInteractions) {
+          if (row.confidence === "high") row.confidence = "moderate";
+        }
+      }
     } else {
       const synthStage = session.stages.find((s) => s.name === "psn_synthesiser");
       if (synthStage) {
@@ -1122,10 +1249,12 @@ export async function runDoctrinePipeline(
         "Recommendations must be informational: clear options, tradeoffs, and what evidence supports each — so the operator can decide.",
         "When uploads or lens findings exist, ground every option in that evidence. Do NOT emit stock advice like “add documents that speak to this country/sector” or “keep the decision question specific to the theatre” — those are system UX messages, not decision recommendations.",
         "If lenses returned insufficient_evidence AND there is truly no usable upload/source corpus, say coverage is insufficient once in the judgement — still avoid boilerplate recommendation lines.",
+        "Respect canonical current-state: never recommend ACT NOW against an expired deadline; never treat RFP document existence as proof the RFP is open.",
         `Depth disclaimer for the user: ${depthDisclaimer(depth)}.`,
         `Respect max options: ${depthCaps.max_options}.`,
+        formatCurrentStateForAgent(currentState),
         docBundle.recommendationHints.length
-          ? `Hints from uploaded document bundle (ground options in these when supported):\n${docBundle.recommendationHints
+          ? `Hints from uploaded document bundle (internal grounding only — validate against claims/state):\n${docBundle.recommendationHints
               .slice(0, 10)
               .map((h) => `- ${h}`)
               .join("\n")}`
@@ -1148,12 +1277,12 @@ export async function runDoctrinePipeline(
         `Systems findings:\n${(systems.material_findings || []).map((f) => `- ${findingText(f)}`).join("\n") || "(none)"}`,
         `Narrative findings:\n${(narrative.material_findings || []).map((f) => `- ${findingText(f)}`).join("\n") || "(none)"}`,
         `Evidence gaps already flagged:\n${
-          coerceTextList([
+          consolidateEvidenceGaps([
             ...(power.evidence_gaps || []),
             ...(systems.evidence_gaps || []),
             ...(narrative.evidence_gaps || []),
             ...docBundle.gaps,
-          ])
+          ]).clientGaps
             .map((g) => `- ${g}`)
             .join("\n") || "(none)"
         }`,
@@ -1166,12 +1295,17 @@ export async function runDoctrinePipeline(
     const recFindings = (recOut.material_findings || []).filter(Boolean);
     const recommendation: RecommendationOutput = {
       analytical_judgement: findingText(recFindings[0], "Judgement pending operator review."),
-      options: recFindings.slice(0, depthCaps.max_options).map((f, i) => ({
-        label: f.finding_id || `option_${i + 1}`,
-        description: findingText(f, "See structured findings"),
-        risk: f.confidence || "moderate",
-      })),
-      preferred_option: recFindings[0]?.finding_id || "option_a",
+      options: recFindings.slice(0, depthCaps.max_options).map((f, i) => {
+        const title = humanOptionTitle(f, i);
+        return {
+          label: title,
+          option_title: title,
+          finding_id: f.finding_id,
+          description: findingText(f, "See structured findings"),
+          risk: f.confidence || "moderate",
+        };
+      }),
+      preferred_option: humanOptionTitle(recFindings[0], 0),
       tradeoffs: coerceTextList(recOut.evidence_gaps || []),
       reassessment_triggers: coerceTextList(recOut.additional_research_requests || []),
     };
@@ -1221,11 +1355,13 @@ export async function runDoctrinePipeline(
       sourceRecords,
       catalog: selected,
       evidence,
+      claims: newClaims,
+      currentState,
     });
     await appendAudit({
       action: "brief_scored",
       sessionId: session.id,
-      detail: `confidence=${scoreBreakdown.total}`,
+      detail: `confidence=${scoreBreakdown.total}${scoreBreakdown.hardCapped ? "·hardCapped" : ""}`,
     });
 
     const brief = assembleBrief(
@@ -1241,7 +1377,9 @@ export async function runDoctrinePipeline(
       evidence,
       scoreBreakdown,
       localOnlySources,
-      docBundle
+      docBundle,
+      currentState,
+      lensCoverage.coverage
     );
 
     const briefs = await readCollection<Brief>("briefs", SEED_BRIEFS);

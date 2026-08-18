@@ -72,6 +72,9 @@ export type BriefScoreBreakdown = {
     agentConf: number;
     triangulation: number;
     freshness: number;
+    provenance?: number;
+    currentState?: number;
   };
   policy: ScoringPolicy;
+  hardCapped?: boolean;
 };

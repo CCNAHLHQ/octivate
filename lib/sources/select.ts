@@ -83,29 +83,79 @@ export function selectCatalogSources(
   return ranked.slice(0, limit);
 }
 
+function trendCountryOk(trendCountry: string, projectCountry: string): boolean {
+  const tc = norm(trendCountry);
+  const pc = norm(projectCountry);
+  if (!tc || !pc) return false;
+  return tc === pc || tc.includes(pc) || pc.includes(tc);
+}
+
+function trendIsRegional(trendCountry: string): boolean {
+  const n = norm(trendCountry);
+  return n === "caricom" || n === "regional" || n.includes("multi country");
+}
+
+function trendQuestionRelevance(trend: Trend, project: Project, question?: string): number {
+  const hay = `${trend.title} ${trend.summary} ${trend.sector}`.toLowerCase();
+  const tokens = [
+    ...norm(project.country).split(/\s+/),
+    ...norm(project.sector).split(/\s+/),
+    ...norm(project.name || "").split(/\s+/),
+    ...norm(question || "")
+      .split(/\s+/)
+      .filter((w) => w.length >= 4)
+      .slice(0, 12),
+  ].filter(Boolean);
+  let hits = 0;
+  for (const t of tokens) {
+    if (t.length >= 3 && hay.includes(t)) hits += 1;
+  }
+  return hits;
+}
+
+/**
+ * Geography-first trend selection. Sector overlap ranks inside eligible geo —
+ * it must not admit Trinidad LNG into a Guyana Energy brief.
+ */
 export function selectTrendRecords(
   trends: Trend[],
   project: Project,
-  limit = 4
+  limit = 4,
+  opts?: { question?: string }
 ): SourceRecord[] {
-  return trends
-    .filter(
-      (t) =>
-        t.country === project.country ||
-        t.sector.toLowerCase().includes(project.sector.toLowerCase().slice(0, 6)) ||
-        t.country === "CARICOM"
-    )
-    .slice(0, limit)
-    .map((t) => ({
-      source_id: t.id,
-      title: t.title,
-      evidence_class: "public_discourse_signal" as const,
-      reliability: t.severity === "high" ? "moderate" : "low",
-      decision_relevance: t.summary,
-      country: t.country,
-      retrieved_at: t.publishedAt,
-      review_flags: ["open_source_signal"],
-    }));
+  const question = opts?.question || project.question || "";
+  const eligible = trends.filter((t) => {
+    if (trendCountryOk(t.country, project.country)) return true;
+    if (trendIsRegional(t.country)) {
+      // Regional/CARICOM only when explicitly relevant to this theatre/question.
+      return trendQuestionRelevance(t, project, question) >= 2;
+    }
+    return false;
+  });
+
+  const ranked = eligible
+    .map((t) => {
+      const exact = trendCountryOk(t.country, project.country) ? 2 : 1;
+      const sector = t.sector.toLowerCase().includes(project.sector.toLowerCase().slice(0, 6))
+        ? 1
+        : 0;
+      const q = trendQuestionRelevance(t, project, question);
+      return { t, score: exact * 1_000 + sector * 100 + q * 10 };
+    })
+    .sort((a, b) => b.score - a.score)
+    .map((x) => x.t)
+    .slice(0, limit);
+
+  return ranked.map((t) => ({
+    source_id: t.id,
+    title: t.title,
+    evidence_class: "public_discourse_signal" as const,
+    reliability: t.severity === "high" ? "moderate" : "low",
+    decision_relevance: t.summary,
+    country: t.country,
+    retrieved_at: t.publishedAt,
+    review_flags: ["open_source_signal"],
+  }));
 }
 
 export function buildEvidenceSourceContext(

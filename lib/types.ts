@@ -115,6 +115,56 @@ export interface EvidenceClaim {
   confidence?: ConfidenceLabel;
   /** Local evidence document ids that ground this claim. */
   evidence_ids?: string[];
+  /** Atomic claim structure for temporal / current-state resolution. */
+  subject?: string;
+  predicate?: string;
+  objectValue?: string;
+  eventDate?: string;
+  observedAt?: string;
+  issuedAt?: string;
+  deadlineAt?: string;
+  component?: string;
+  lifecycleState?: string;
+}
+
+/** Deterministic as-of opportunity / procurement state fact. */
+export interface ProjectStateFact {
+  fact_id: string;
+  subject: string;
+  component: string;
+  state: string;
+  issuedAt?: string;
+  deadlineAt?: string;
+  observedAt?: string;
+  validFrom?: string;
+  validTo?: string;
+  sourceIds: string[];
+  evidenceIds: string[];
+  claimIds: string[];
+  supersedesFactIds: string[];
+  confidence: number;
+  statusVerified: boolean;
+  asOf: string;
+  statement?: string;
+}
+
+export type EvidenceGapCategory =
+  | "evidence_gap"
+  | "pipeline_qa"
+  | "analytical_uncertainty"
+  | "non_gap";
+
+export interface EvidenceGap {
+  gap_id: string;
+  category: EvidenceGapCategory;
+  subject?: string;
+  missing_information: string;
+  decision_effect?: string;
+  materiality: "decision_critical" | "material" | "minor";
+  source_context?: string;
+  status: "unresolved" | "resolved" | "internal";
+  internal_only: boolean;
+  confidence: number;
 }
 
 export interface PsnInteraction {
@@ -130,7 +180,14 @@ export interface PsnInteraction {
 
 export interface RecommendationOutput {
   analytical_judgement: string;
-  options: { label: string; description: string; risk: string }[];
+  options: {
+    label: string;
+    description: string;
+    risk: string;
+    /** Client-facing title; finding_id stays internal via label only when needed for provenance. */
+    option_title?: string;
+    finding_id?: string;
+  }[];
   preferred_option: string;
   tradeoffs: string[];
   reassessment_triggers: string[];
@@ -247,7 +304,8 @@ export interface Brief {
   power: string[];
   systems: string[];
   narratives: string[];
-  riskLevel: "low" | "medium" | "high" | "critical";
+  /** Independent operating/commercial/political risk — not derived from confidence. */
+  riskLevel: "low" | "medium" | "high" | "critical" | "unassessed";
   createdAt: string;
   status: "draft" | "final";
   /** Doctrine pipeline fields */
@@ -266,6 +324,10 @@ export interface Brief {
   tradeoffs?: string[];
   /** Resolved citations for brief UI chips / export footnotes */
   citedSources?: BriefCitedSource[];
+  /** Deterministic current-state facts used for judgement / release gate. */
+  currentStateFacts?: ProjectStateFact[];
+  /** PSN lens coverage after gate (full | partial | insufficient). */
+  psnCoverage?: "full" | "partial" | "insufficient";
   /** User-facing depth caution shown before human review */
   depthDisclaimer?: string;
   /** Weighted confidence breakdown from ScoringPolicy. */
@@ -277,6 +339,8 @@ export interface Brief {
       agentConf: number;
       triangulation: number;
       freshness: number;
+      currentState?: number;
+      provenance?: number;
     };
     policy: {
       sourceScoreW: number;
@@ -285,6 +349,8 @@ export interface Brief {
       triangulationW: number;
       freshnessW: number;
     };
+    /** Hard-capped when decision-critical state is UNKNOWN. */
+    hardCapped?: boolean;
   };
   /** Run used local-only sources (capture / parl / uploads). */
   localOnlySources?: boolean;
@@ -330,7 +396,12 @@ export interface BriefCitedSource {
   ungrounded?: boolean;
   /** Matched relevance keywords for operator / chip display. */
   matchedKeywords?: string[];
+  /** Integer 0–100 relevance (do not multiply again in UI). */
   relevanceScore?: number;
+  /** Claim IDs this source actually supports in the brief. */
+  supportedClaimIds?: string[];
+  /** Finding IDs this source supports. */
+  supportedFindingIds?: string[];
 }
 
 export interface Monitor {

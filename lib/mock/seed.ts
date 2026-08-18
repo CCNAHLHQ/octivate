@@ -58,6 +58,46 @@ export const SEED_PROJECTS: Project[] = [
     updatedAt: "2026-07-18T14:20:00Z",
     status: "active",
   },
+  {
+    id: "proj_wales_gas_to_energy",
+    name: "Wales Gas to Energy project",
+    country: "Guyana",
+    sector: "Energy",
+    question:
+      "Should a Caribbean energy equipment and services supplier invest resources over the next 12 months to position for remaining and connected opportunities arising from the Wales Gas-to-Energy programme — pursue now, monitor, or deprioritise?",
+    documents: [
+      {
+        id: "doc_wales_eoi",
+        name: "Wales-EOI-deadline-15-May-2026.txt",
+        type: "text/plain",
+        uploadedAt: "2026-04-01T10:00:00Z",
+        summary:
+          "EOI for Wales Gas-to-Energy supplier positioning with submission deadline 15 May 2026.",
+        summaryStatus: "ready",
+      },
+      {
+        id: "doc_wales_rfp",
+        name: "NGL-OM-RFP-issued.txt",
+        type: "text/plain",
+        uploadedAt: "2026-03-15T10:00:00Z",
+        summary:
+          "NGL Operations & Maintenance RFP document issued for the Wales programme — issuance is not proof the RFP remains open.",
+        summaryStatus: "ready",
+      },
+      {
+        id: "doc_wales_award",
+        name: "Wales-NGL-OM-award-notice.txt",
+        type: "text/plain",
+        uploadedAt: "2026-07-01T10:00:00Z",
+        summary:
+          "Preferred bidder selected for NGL O&M package; later award evidence supersedes earlier open-RFP assumptions.",
+        summaryStatus: "ready",
+      },
+    ],
+    createdAt: "2026-03-01T10:00:00Z",
+    updatedAt: "2026-08-18T12:00:00Z",
+    status: "active",
+  },
 ];
 
 export const SEED_BRIEFS: Brief[] = [

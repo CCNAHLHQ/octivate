@@ -249,7 +249,7 @@ function CitedSources({ sources }: { sources: BriefCitedSource[] }) {
             {(s.relevanceScore != null || (s.matchedKeywords && s.matchedKeywords.length > 0)) ? (
               <div className="brief-cite-relevance">
                 {s.relevanceScore != null ? (
-                  <span>Relevance · {Math.round(s.relevanceScore * 100)}%</span>
+                  <span>Relevance · {Math.round(s.relevanceScore)}%</span>
                 ) : null}
                 {(s.matchedKeywords || []).slice(0, 8).map((kw) => (
                   <span key={kw}>{kw}</span>

@@ -171,6 +171,7 @@ const MAX_RISK = 10;
 const MAX_MONITOR = 10;
 
 function labelRisk(risk: Brief["riskLevel"]) {
+  if (!risk || risk === "unassessed") return "Unassessed";
   return risk.charAt(0).toUpperCase() + risk.slice(1);
 }
 
@@ -386,6 +387,7 @@ function buildMonitoring(brief: Brief) {
 
 function buildRiskFactors(brief: Brief): { items: ExportRiskFactor[]; truncated: number } {
   const riskBase: Record<Brief["riskLevel"], number> = {
+    unassessed: 0,
     low: 3.2,
     medium: 5.5,
     high: 7.2,
@@ -504,6 +506,7 @@ function coveragePercent(count: number, scaleMax: number): number {
 function buildCharts(brief: Brief): ExportChart[] {
   const confidence = brief.confidence;
   const riskMap: Record<Brief["riskLevel"], number> = {
+    unassessed: 0,
     low: 25,
     medium: 50,
     high: 75,

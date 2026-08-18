@@ -17,10 +17,16 @@ export type BundledDocumentSlice = {
   method: "summary_payload" | "extract_passages" | "summary_text" | "meta_only";
   summary: string;
   key_points: string[];
+  /** Substantive decision relevance only — never synthetic extraction labels. */
   decision_relevance: string;
   gaps: string[];
   risk_flags: string[];
   passages: string[];
+  /** Internal retrieval diagnostics — not client-facing. */
+  retrievalNote?: string;
+  overlapScore?: number;
+  extractionQuality?: "strong" | "weak" | "none";
+  internalFlags?: string[];
 };
 
 export type DocumentEvidenceBundle = {
@@ -309,19 +315,27 @@ async function buildSliceForDoc(
       ? passages.map((p) => p.text)
       : [extracted.text.replace(/\s+/g, " ").trim().slice(0, opts.maxPassageChars)];
 
+  const weakOverlap = passages.length === 0;
   return {
     docId: doc.id,
     name: doc.name,
     method: "extract_passages",
     summary: sanitizePlainText(fallback[0] || "", Math.min(2_000, soft)),
     key_points: fallback.slice(1, 4).map((p) => sanitizePlainText(p, Math.min(800, soft))),
+    // Substantive relevance = passage content only; never synthetic pipeline labels.
     decision_relevance: sanitizePlainText(
-      `Question-conditioned extract from ${doc.name} for: ${question.slice(0, 200)}`,
+      passages[0]?.text?.slice(0, 400) || "",
       Math.min(800, soft)
     ),
-    gaps: passages.length ? [] : ["Weak keyword overlap with decision question — treat cautiously."],
+    gaps: [],
     risk_flags: [],
     passages: fallback,
+    retrievalNote: weakOverlap
+      ? `Weak keyword overlap with decision question for ${doc.name}`
+      : `Question-conditioned extract from ${doc.name}`,
+    overlapScore: passages.length ? Math.min(1, passages[0].score || 0.5) : 0.15,
+    extractionQuality: weakOverlap ? "weak" : "strong",
+    internalFlags: weakOverlap ? ["weak_keyword_overlap"] : [],
   };
 }
 
@@ -380,16 +394,25 @@ export async function buildDocumentEvidenceBundle(
 
   for (const s of slices) {
     for (const kp of s.key_points) {
+      // Only substantive content becomes recommendation / PSN prompt context.
+      if (/question-conditioned extract|weak keyword overlap/i.test(kp)) continue;
       recommendationHints.push(`${s.name}: ${kp}`);
       const layer = classifyPsnHint(kp);
       if (layer && psnHints[layer].length < 6) psnHints[layer].push(kp);
     }
-    if (s.decision_relevance) {
-      recommendationHints.push(`${s.name} · relevance: ${s.decision_relevance}`);
+    if (
+      s.decision_relevance &&
+      !/question-conditioned extract|weak keyword overlap/i.test(s.decision_relevance)
+    ) {
+      recommendationHints.push(`${s.name}: ${s.decision_relevance}`);
       const layer = classifyPsnHint(s.decision_relevance);
       if (layer && psnHints[layer].length < 6) psnHints[layer].push(s.decision_relevance);
     }
-    gaps.push(...s.gaps.map((g) => `${s.name}: ${g}`));
+    // Real evidence-access failures only (ignore internalFlags / weak-overlap diagnostics).
+    for (const g of s.gaps) {
+      if (/weak keyword overlap|question-conditioned/i.test(g)) continue;
+      gaps.push(`${s.name}: ${g}`);
+    }
     riskFlags.push(...s.risk_flags.map((r) => `${s.name}: ${r}`));
   }
 

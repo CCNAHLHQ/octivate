@@ -27,6 +27,41 @@ Authorization: Bearer <OCTIVATE_API_KEY>
 
 **Pipeline modes:** `MOCK_OPENROUTER=true` (default) → fast demo; `false` + `OPENROUTER_API_KEY` → doctrine v0.2 agents with schema validation.
 
+### OpenRouter model routing (dynamic)
+
+Doctrine and docs models are resolved from the operator **model-config** store (ops DB key `model-config`), bootstrapped from env when empty, else falling back to recommended defaults:
+
+| Role | Recommended default |
+|------|---------------------|
+| Doctrine default | `nvidia/nemotron-3.5-lightning:free` |
+| Premium | `nvidia/nemotron-3-ultra-550b-a55b:free` |
+| Fallback | `nvidia/nemotron-3.5-lightning:free` |
+| Docs (summarize/extract) | `deepseek/deepseek-v4-flash` |
+
+**Precedence:** persisted operator config -> `OPENROUTER_*` env bootstrap -> `RECOMMENDED_MODEL_CONFIG` in code. Allowlist merges curated IDs with the live OpenRouter catalog (`catalogModelIds()`). Operator UI: `/api/operator/model-config`. Claude/GPT/Gemini remain allowlisted for opt-in; speed-first defaults prefer Nemotron Lightning + DeepSeek Flash.
+
+**Brief integrity:** doctrine agents validate against a common envelope plus agent-specific finding checks (one repair retry). Approve->Final runs `lib/briefs/release-validator.ts` hard blocks.
+
+### OpenRouter model routing (dynamic)
+
+Doctrine and docs models are resolved from the operator **model-config** store (ops DB key model-config), bootstrapped from env when empty, else falling back to recommended defaults:
+
+| Role | Recommended default |
+|------|---------------------|
+| Doctrine default | 
+vidia/nemotron-3.5-lightning:free |
+| Premium | 
+vidia/nemotron-3-ultra-550b-a55b:free |
+| Fallback | 
+vidia/nemotron-3.5-lightning:free |
+| Docs (summarize/extract) | deepseek/deepseek-v4-flash |
+
+**Precedence:** persisted operator config → OPENROUTER_* env bootstrap → RECOMMENDED_MODEL_CONFIG in code. Allowlist merges curated IDs with the live OpenRouter catalog (catalogModelIds()). Operator UI: /api/operator/model-config. Claude/GPT/Gemini remain allowlisted for opt-in; speed-first defaults prefer Nemotron Lightning + DeepSeek Flash.
+
+**Brief integrity:** doctrine agents validate against a common envelope plus agent-specific finding checks (one repair retry). Approve→Final runs lib/briefs/release-validator.ts hard blocks.
+
+
+
 ## Briefs
 
 - `GET /api/briefs`
