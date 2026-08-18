@@ -103,6 +103,10 @@ export function OverviewDashboard() {
 
   useWorkspaceRefresh(() => load(true), ["overview", "projects", "briefs"]);
 
+  const loadSoft = useCallback(() => {
+    void load(true);
+  }, [load]);
+
   function selectTab(next: OverviewTab) {
     setTab(next);
     setLocationHash(next);
@@ -316,7 +320,7 @@ export function OverviewDashboard() {
                     buckets={countryBuckets}
                     refreshing={refreshing}
                     onSelect={setMapCountry}
-                    onLiveRefresh={() => load(true)}
+                    onLiveRefresh={loadSoft}
                   />
 
                   <div className="overview-stat-grid is-primary">

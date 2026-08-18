@@ -156,28 +156,57 @@ export function OperatorIntroModal() {
   useEffect(() => {
     if (!open || !current || !onOperator) return;
     let cancelled = false;
-    const failSafe = window.setTimeout(() => {
-      if (!cancelled) setNavReady(true);
-    }, 700);
+    let failSafe = 0;
 
     if (current.requireSidebar) {
       window.dispatchEvent(new CustomEvent(WORKSPACE_TOUR_SIDEBAR_EVENT));
     }
 
     const targetHash = hashOf(current.route);
-    if ((window.location.hash || "#pulse") !== targetHash) {
-      startTransition(() => {
-        router.push(`/dashboard/operator${targetHash}`);
-      });
-    } else {
-      setNavReady(true);
+    const currentHash = window.location.hash || "#pulse";
+
+    const markReady = () => {
+      if (!cancelled) setNavReady(true);
+    };
+
+    if (currentHash === targetHash) {
+      markReady();
+      return () => {
+        cancelled = true;
+      };
     }
+
+    setNavReady(false);
+    failSafe = window.setTimeout(markReady, 900);
+    router.push(`/dashboard/operator${targetHash}`);
+
+    const onHash = () => {
+      if ((window.location.hash || "#pulse") === targetHash) markReady();
+    };
+    window.addEventListener("hashchange", onHash);
 
     return () => {
       cancelled = true;
       window.clearTimeout(failSafe);
+      window.removeEventListener("hashchange", onHash);
     };
   }, [open, current, onOperator, router]);
+
+  useEffect(() => {
+    if (!open) {
+      try {
+        delete document.documentElement.dataset.workspaceTour;
+      } catch {
+        /* ignore */
+      }
+      return;
+    }
+    try {
+      document.documentElement.dataset.workspaceTour = "1";
+    } catch {
+      /* ignore */
+    }
+  }, [open]);
 
   useEffect(() => {
     if (!open) return;

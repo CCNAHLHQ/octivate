@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useId, useMemo, useState, useTransition } from "react";
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Check, X } from "lucide-react";
@@ -46,16 +46,28 @@ function routeMatches(
   return pathname === stepRoute || pathname.startsWith(`${stepRoute}/`);
 }
 
+function setTourOpenFlag(open: boolean) {
+  try {
+    if (open) document.documentElement.dataset.workspaceTour = "1";
+    else delete document.documentElement.dataset.workspaceTour;
+  } catch {
+    /* ignore */
+  }
+}
+
 export function WorkspaceIntroModal() {
   const t = useT();
   const titleId = useId();
   const router = useRouter();
   const pathname = usePathname();
-  const [, startTransition] = useTransition();
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
   const [navReady, setNavReady] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const autoOpenedRef = useRef(false);
+  const navigatingRef = useRef(false);
+  const lastNavKeyRef = useRef("");
+  const projectCacheRef = useRef<{ at: number; projects: Project[] } | null>(null);
 
   const total = WORKSPACE_INTRO_STEPS.length;
   const current = WORKSPACE_INTRO_STEPS[step];
@@ -66,6 +78,9 @@ export function WorkspaceIntroModal() {
     if (complete) markIntroComplete();
     else clearIntroSession();
     writeIntroSession({ open: false, step: 0 });
+    setTourOpenFlag(false);
+    navigatingRef.current = false;
+    lastNavKeyRef.current = "";
     setOpen(false);
     setStep(0);
     setNavReady(false);
@@ -74,7 +89,10 @@ export function WorkspaceIntroModal() {
   const openModal = useCallback(() => {
     setStep(0);
     setNavReady(false);
+    navigatingRef.current = false;
+    lastNavKeyRef.current = "";
     setOpen(true);
+    setTourOpenFlag(true);
     writeIntroSession({ open: true, step: 0 });
     for (const route of WORKSPACE_INTRO_PREFETCH_ROUTES) {
       try {
@@ -88,8 +106,12 @@ export function WorkspaceIntroModal() {
   const goStep = useCallback(
     (next: number) => {
       const clamped = Math.max(0, Math.min(total - 1, next));
+      // Drop ready only when leaving the current step — avoids flicker on same-step re-renders.
       setNavReady(false);
-      startTransition(() => setStep(clamped));
+      navigatingRef.current = false;
+      lastNavKeyRef.current = "";
+      setStep(clamped);
+      writeIntroSession({ open: true, step: clamped });
       const upcoming = WORKSPACE_INTRO_STEPS[clamped + 1];
       if (upcoming?.route) {
         try {
@@ -107,6 +129,7 @@ export function WorkspaceIntroModal() {
     if (session?.open) {
       setOpen(true);
       setStep(session.step);
+      setTourOpenFlag(true);
       for (const route of WORKSPACE_INTRO_PREFETCH_ROUTES) {
         try {
           router.prefetch(route);
@@ -118,23 +141,25 @@ export function WorkspaceIntroModal() {
     setHydrated(true);
   }, [router]);
 
+  // Auto-show once per mount when never seen — do not re-fire on every pathname change.
   useEffect(() => {
     if (!hydrated) return;
+    if (autoOpenedRef.current) return;
     if (pathname.startsWith("/dashboard/operator")) return;
     if (!shouldAutoShowIntro()) return;
     if (readIntroSession()?.open) return;
+    autoOpenedRef.current = true;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const delay = reduced ? 120 : 280;
-    const t = window.setTimeout(() => {
-      openModal();
-    }, delay);
-    return () => window.clearTimeout(t);
+    const timer = window.setTimeout(() => openModal(), delay);
+    return () => window.clearTimeout(timer);
   }, [hydrated, openModal, pathname]);
 
   useEffect(() => {
     if (open) {
       markIntroSeen();
       writeIntroSession({ open: true, step });
+      setTourOpenFlag(true);
     }
   }, [open, step]);
 
@@ -144,105 +169,116 @@ export function WorkspaceIntroModal() {
     return () => window.removeEventListener(WORKSPACE_INTRO_EVENT, onOpen);
   }, [openModal]);
 
+  /**
+   * Navigate only when the step's route is wrong. Pathname updates must not
+   * re-push or clear readiness in a loop (that caused refresh/glitch feel).
+   */
   useEffect(() => {
     if (!open || !current) return;
     let cancelled = false;
-    let readyTimer = 0;
     let failSafe = 0;
+    let readyRaf = 0;
+
+    const exactList =
+      current.target === "[data-tour='projects-new']" || current.route === "/dashboard";
+
+    const onProjectListFallback =
+      Boolean(current.resolveProject) && pathname === "/dashboard/projects";
+
+    const alreadyThere =
+      routeMatches(pathname, current.route, current.resolveProject, exactList) ||
+      onProjectListFallback;
+
+    const navKey = `${current.id}:${pathname}`;
+
+    const markReady = () => {
+      if (cancelled) return;
+      navigatingRef.current = false;
+      setNavReady(true);
+    };
 
     const markReadySoon = () => {
-      window.clearTimeout(failSafe);
-      window.cancelAnimationFrame(readyTimer);
-      readyTimer = window.requestAnimationFrame(() => {
-        readyTimer = window.requestAnimationFrame(() => {
-          if (!cancelled) setNavReady(true);
-        });
+      window.cancelAnimationFrame(readyRaf);
+      readyRaf = window.requestAnimationFrame(() => {
+        readyRaf = window.requestAnimationFrame(markReady);
       });
     };
 
-    const pushRoute = (href: string) => {
-      startTransition(() => {
-        router.push(href);
-      });
-    };
+    if (alreadyThere) {
+      // Arrived (or already on route) — do not push again.
+      lastNavKeyRef.current = navKey;
+      navigatingRef.current = false;
+      markReadySoon();
+      return () => {
+        cancelled = true;
+        window.cancelAnimationFrame(readyRaf);
+      };
+    }
+
+    // Still navigating toward this step — avoid duplicate pushes for the same step+path attempt.
+    if (navigatingRef.current && lastNavKeyRef.current.startsWith(`${current.id}:`)) {
+      failSafe = window.setTimeout(markReady, 1200);
+      return () => {
+        cancelled = true;
+        window.clearTimeout(failSafe);
+      };
+    }
+
+    lastNavKeyRef.current = navKey;
+    navigatingRef.current = true;
+    setNavReady(false);
+    failSafe = window.setTimeout(markReady, 1200);
+
+    if (current.requireSidebar) {
+      window.dispatchEvent(new CustomEvent(WORKSPACE_TOUR_SIDEBAR_EVENT));
+    }
 
     async function syncRoute() {
-      setNavReady(false);
-      // Never leave the coachmark waiting on a stuck navigation.
-      failSafe = window.setTimeout(() => {
-        if (!cancelled) setNavReady(true);
-      }, 900);
-
-      if (current.requireSidebar) {
-        window.dispatchEvent(new CustomEvent(WORKSPACE_TOUR_SIDEBAR_EVENT));
-      }
-
-      const exactList =
-        current.target === "[data-tour='projects-new']" || current.route === "/dashboard";
-
       if (current.resolveProject) {
         try {
-          const res = await Promise.race([
-            apiFetch<{ projects: Project[] }>("/api/projects"),
-            new Promise<null>((resolve) => window.setTimeout(() => resolve(null), 450)),
-          ]);
+          const now = Date.now();
+          let projects = projectCacheRef.current?.projects;
+          if (!projects || now - (projectCacheRef.current?.at || 0) > 8_000) {
+            const res = await Promise.race([
+              apiFetch<{ projects: Project[] }>("/api/projects"),
+              new Promise<null>((resolve) => window.setTimeout(() => resolve(null), 450)),
+            ]);
+            if (cancelled) return;
+            projects = res?.projects || [];
+            projectCacheRef.current = { at: Date.now(), projects };
+          }
           if (cancelled) return;
-          const projects = res?.projects || [];
           const active =
             projects.find((p) => p.status !== "archived") || projects[0];
           if (active) {
-            // Prefer an existing project theatre for the run step.
-            if (!routeMatches(pathname, `/dashboard/projects/${active.id}`, true)) {
-              pushRoute(`/dashboard/projects/${active.id}`);
-              return;
+            const href = `/dashboard/projects/${active.id}`;
+            if (!routeMatches(pathname, href, true)) {
+              router.push(href);
             }
-            markReadySoon();
             return;
           }
         } catch {
-          /* fall through — spotlight Start a new project */
+          /* fall through */
         }
-
         if (cancelled) return;
-        // No project yet: stay on Projects and highlight Start a new project.
-        if (pathname === "/dashboard/projects") {
-          markReadySoon();
-          return;
+        if (pathname !== "/dashboard/projects") {
+          router.push("/dashboard/projects");
         }
-        pushRoute("/dashboard/projects");
         return;
       }
 
       if (current.route && !routeMatches(pathname, current.route, false, exactList)) {
-        pushRoute(current.route);
-        return;
+        router.push(current.route);
       }
-
-      markReadySoon();
     }
 
     void syncRoute();
     return () => {
       cancelled = true;
       window.clearTimeout(failSafe);
-      window.cancelAnimationFrame(readyTimer);
+      window.cancelAnimationFrame(readyRaf);
     };
   }, [open, current, pathname, router]);
-
-  useEffect(() => {
-    if (!open || !current) return;
-    const exactList =
-      current.target === "[data-tour='projects-new']" || current.route === "/dashboard";
-    const onProjectListFallback =
-      Boolean(current.resolveProject) && pathname === "/dashboard/projects";
-    if (
-      routeMatches(pathname, current.route, current.resolveProject, exactList) ||
-      onProjectListFallback
-    ) {
-      const t = window.requestAnimationFrame(() => setNavReady(true));
-      return () => window.cancelAnimationFrame(t);
-    }
-  }, [open, current, pathname]);
 
   useEffect(() => {
     if (!open) return;

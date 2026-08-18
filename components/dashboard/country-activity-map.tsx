@@ -63,6 +63,8 @@ export function CountryActivityMap({
   useEffect(() => {
     if (!onLiveRefresh) return;
     const id = window.setInterval(() => {
+      // Pause polling while workspace/operator tutorial is open — avoids map "refresh" glitches.
+      if (document.documentElement.dataset.workspaceTour === "1") return;
       void onLiveRefresh();
     }, 12_000);
     return () => window.clearInterval(id);
