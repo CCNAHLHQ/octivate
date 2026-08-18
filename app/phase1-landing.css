@@ -27,10 +27,13 @@
 
 /* Local MP4 hero — cover-fit canvas, dark-plate type, animated blur veil */
 .phase1-landing .hero.is-video-hero {
+  position: relative;
   isolation: isolate;
+  overflow: hidden;
   min-height: min(88vh, 860px);
   display: flex;
   align-items: center;
+  /* Plate stays dark in light theme (do not use var(--ink)) */
   background: #05070f;
 }
 
