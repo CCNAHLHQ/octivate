@@ -135,7 +135,7 @@ export const OPERATOR_INTRO_STEPS: IntroStep[] = [
       "Customer Support is the founder inbox. Reply in-thread, preview attachments in-browser, and never download untrusted files locally. Members use Help chat; you answer here.",
     bullets: [
       { lead: "Live stream", text: "keeps threads current under load" },
-      { lead: "Avatars", text: "identify Shemuel, Nirvana, and Jaden" },
+      { lead: "Avatars", text: "identify Shemuel and Jaden" },
     ],
     icon: LifeBuoy,
     art: "support",

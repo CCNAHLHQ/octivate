@@ -209,7 +209,7 @@ export const ONBOARD_MESSAGES = {
   "onboard.op.6.b1.lead": "Live stream",
   "onboard.op.6.b1": "keeps threads current under load",
   "onboard.op.6.b2.lead": "Avatars",
-  "onboard.op.6.b2": "identify Shemuel, Nirvana, and Jaden",
+  "onboard.op.6.b2": "identify Shemuel and Jaden",
 
   "onboard.op.7.kicker": "Step 7 · Support alerts",
   "onboard.op.7.title": "Never miss a",

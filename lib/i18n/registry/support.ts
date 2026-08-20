@@ -51,9 +51,6 @@ export const SUPPORT_MESSAGES = {
   "support.page.role.founder": "Founder · Product & Domain",
   "support.page.role.founderDesc":
     "Product vision, Caribbean use cases, and the CENSII decision methodology.",
-  "support.page.role.ai": "AI Workflow & Validation",
-  "support.page.role.aiDesc":
-    "Agent workflow design, evidence checks, and demo evaluation.",
   "support.page.role.tech": "Technical Architecture",
   "support.page.role.techDesc":
     "MVP architecture, prototype delivery, and platform execution.",

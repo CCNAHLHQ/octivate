@@ -160,11 +160,11 @@ export function SupportPage() {
   const ordered: PublicFounder[] =
     founders.length > 0
       ? founders
-      : (["shemuel", "nirvana", "jaden"] as StaffProfileId[]).map((id, i) => ({
+      : (["shemuel", "jaden"] as StaffProfileId[]).map((id, i) => ({
           id,
-          name: id === "shemuel" ? "Shemuel" : id === "nirvana" ? "Nirvana" : "Jaden",
+          name: id === "shemuel" ? "Shemuel" : "Jaden",
           role: "",
-          tone: (["violet", "tide", "coral"] as const)[i],
+          tone: (["violet", "coral"] as const)[i],
           avatarUrl: null,
           initials: id.slice(0, 2).toUpperCase(),
           presenceStatus: "offline" as PresenceStatus,

@@ -3,7 +3,7 @@
 
 **Status:** Internal working document  
 **Source documents:** Octivate Analytical Doctrine v0.1.1 and Octivate Machine-Operational Protocol v0.2  
-**Audience:** Jaden, Nirvana and future technical collaborators
+**Audience:** Jaden and future technical collaborators
 
 ---
 
@@ -442,10 +442,7 @@ The first working prototype should prove that:
 - source and evidence IDs;
 - audit trail;
 - approval gate;
-- model integration.
-
-### Nirvana
-
+- model integration;
 - prompts and charters;
 - materiality rules;
 - structured-output reliability;
@@ -453,7 +450,7 @@ The first working prototype should prove that:
 - compliance tests;
 - test cases and evaluation.
 
-Both should review the PSN Synthesis Agent.
+Jaden should also review the PSN Synthesis Agent.
 
 ---
 

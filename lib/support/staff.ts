@@ -1,4 +1,4 @@
-import { Compass, Cpu, ScrollText, type LucideIcon } from "lucide-react";
+import { Compass, Cpu, type LucideIcon } from "lucide-react";
 import type { StaffProfileId } from "@/lib/auth/types";
 
 export type StaffProfile = {
@@ -19,14 +19,6 @@ export const STAFF_PROFILES: StaffProfile[] = [
     role: "Founder / Product Lead / Domain Lead",
     tone: "violet",
     icon: Compass,
-  },
-  {
-    id: "nirvana",
-    name: "Nirvana",
-    email: "nirvana@octivate.io",
-    role: "AI Workflow & Validation Lead",
-    tone: "tide",
-    icon: ScrollText,
   },
   {
     id: "jaden",

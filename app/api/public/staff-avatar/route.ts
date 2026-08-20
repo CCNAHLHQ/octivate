@@ -8,7 +8,7 @@ import { staffById } from "@/lib/support/staff";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const ALLOWED: StaffProfileId[] = ["shemuel", "nirvana", "jaden"];
+const ALLOWED: StaffProfileId[] = ["shemuel", "jaden"];
 
 /**
  * Public read of staff/founder avatars only — never arbitrary member photos.

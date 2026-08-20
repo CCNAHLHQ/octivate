@@ -1,5 +1,5 @@
 /**
- * Seed founder operator accounts (Shemuel, Nirvana, Jaden).
+ * Seed founder operator accounts (Shemuel, Jaden).
  * Usage: node --env-file=.env scripts/seed-founders.mjs
  * Prints credentials once to stdout — do not commit the output.
  */
@@ -35,12 +35,6 @@ const FOUNDERS = [
     name: "Shemuel",
     email: "shemuel@octivate.io",
     username: "shemuel",
-  },
-  {
-    id: "nirvana",
-    name: "Nirvana",
-    email: "nirvana@octivate.io",
-    username: "nirvana",
   },
   {
     id: "jaden",

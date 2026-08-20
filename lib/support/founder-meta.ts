@@ -14,13 +14,11 @@ export type PublicFounder = {
 
 const ROLE_KEY: Record<StaffProfileId, string> = {
   shemuel: "support.page.role.founder",
-  nirvana: "support.page.role.ai",
   jaden: "support.page.role.tech",
 };
 
 const DESC_KEY: Record<StaffProfileId, string> = {
   shemuel: "support.page.role.founderDesc",
-  nirvana: "support.page.role.aiDesc",
   jaden: "support.page.role.techDesc",
 };
 

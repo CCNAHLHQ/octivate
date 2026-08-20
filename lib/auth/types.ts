@@ -1,6 +1,6 @@
 export type UserRole = "member" | "operator";
 
-export type StaffProfileId = "shemuel" | "nirvana" | "jaden";
+export type StaffProfileId = "shemuel" | "jaden";
 
 /** Global presence — also drives Customer Support readiness cues. */
 export type PresenceStatus = "available" | "away" | "busy" | "offline";
