@@ -1,2 +1,6 @@
-/** @deprecated Use BillingCheckout — kept as a stable import path. */
-export { BillingCheckout as PaymentModal, BillingCheckout } from "@/components/pricing/billing-checkout";
+/** @deprecated Prefer BillingCheckoutForm from billing-checkout. */
+export {
+  BillingCheckoutForm as PaymentModal,
+  BillingCheckoutForm as BillingCheckout,
+  BillingCheckoutForm,
+} from "@/components/pricing/billing-checkout";

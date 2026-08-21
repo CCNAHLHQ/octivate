@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Check,
@@ -24,7 +25,6 @@ import {
   formatMoney,
   resolvePrice,
 } from "@/lib/billing/plans";
-import { BillingCheckout } from "@/components/pricing/billing-checkout";
 import { apiFetch } from "@/lib/api-client";
 import { touchCheckoutNavigationTrail } from "@/lib/billing/client-context";
 
@@ -42,6 +42,19 @@ const PLAN_ICONS: Record<PlanId, typeof Sparkles> = {
   single: FileText,
   team: Users,
 };
+
+function checkoutHref(
+  planId: PlanId,
+  interval: BillingInterval,
+  opts?: { methodId?: PaymentMethodId }
+) {
+  const q = new URLSearchParams({
+    plan: planId,
+    interval,
+  });
+  if (opts?.methodId) q.set("method", opts.methodId);
+  return `/checkout?${q.toString()}`;
+}
 
 function useReveal(deps: unknown[]) {
   useEffect(() => {
@@ -93,7 +106,7 @@ function PaymentIcons({
 }
 
 export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }) {
-  const [checkout, setCheckout] = useState<CheckoutContext | null>(null);
+  const router = useRouter();
   const [plans, setPlans] = useState<PlanDefinition[]>(initialPlans);
   useReveal([plans]);
 
@@ -111,19 +124,19 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
       });
   }, []);
 
-  function openCheckout(
+  function goCheckout(
     planId: PlanId,
     interval?: BillingInterval,
     opts?: { methodId?: PaymentMethodId; extras?: CheckoutContext["extras"] }
   ) {
     const plan = plans.find((p) => p.id === planId);
     if (!plan?.requiresPayment) return;
-    setCheckout({
-      planId,
-      interval: interval ?? plan.defaultInterval,
-      methodId: opts?.methodId,
-      extras: opts?.extras,
-    });
+    void opts?.extras;
+    router.push(
+      checkoutHref(planId, interval ?? plan.defaultInterval, {
+        methodId: opts?.methodId,
+      })
+    );
   }
 
   const team = plans.find((p) => p.id === "team");
@@ -206,15 +219,14 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
                     ) : null}
 
                     {plan.requiresPayment ? (
-                      <button
-                        type="button"
+                      <Link
+                        href={checkoutHref(plan.id, interval)}
                         className={`btn ${plan.featured ? "btn-primary" : "btn-ghost"} price-cta glimmer-btn`}
-                        onClick={() => openCheckout(plan.id, interval)}
                       >
                         {plan.id === "team"
                           ? `${plan.ctaLabel} — ${priceLabel}/mo`
                           : `${plan.ctaLabel} — ${priceLabel}`}
-                      </button>
+                      </Link>
                     ) : (
                       <Link
                         href={plan.href || "/signup"}
@@ -251,7 +263,7 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
             <p className="pay-label">Pay with</p>
             <PaymentIcons
               onPick={(label) =>
-                openCheckout("team", "monthly", {
+                goCheckout("team", "monthly", {
                   methodId: ICON_TO_METHOD[label],
                   extras: { source: "payment-icons", icon: label },
                 })
@@ -267,13 +279,6 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
           </div>
         </div>
       </section>
-
-      <BillingCheckout
-        open={!!checkout}
-        context={checkout}
-        plans={plans}
-        onClose={() => setCheckout(null)}
-      />
     </div>
   );
 }

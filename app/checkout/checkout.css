@@ -1,0 +1,300 @@
+/* Dedicated /checkout split page — brand plate + form */
+
+.checkout-page {
+  position: relative;
+  min-height: calc(100dvh - var(--chrome-top, 104px) - 4rem);
+  background: #05070f;
+  color: #f4f7fb;
+}
+
+.checkout-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+  min-height: inherit;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.checkout-brand {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 28rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 2.25rem 2rem 2.5rem;
+  border-right: 1px solid color-mix(in srgb, #fff 10%, transparent);
+}
+
+.checkout-brand-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.checkout-brand-media .hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.checkout-brand-media .hero-video-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.checkout-brand-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 7, 15, 0.35) 0%,
+      rgba(5, 7, 15, 0.55) 42%,
+      rgba(5, 7, 15, 0.88) 100%
+    ),
+    radial-gradient(
+      120% 80% at 20% 10%,
+      color-mix(in srgb, var(--tide) 22%, transparent),
+      transparent 55%
+    );
+}
+
+.checkout-brand-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 0.85rem;
+  max-width: 28rem;
+}
+
+.checkout-brand-logo {
+  margin-bottom: 0.55rem;
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.35));
+}
+
+.checkout-brand-logo .octivate-logo,
+.checkout-brand-logo svg {
+  color: #fff;
+}
+
+.checkout-brand-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, #fff 72%, var(--tide));
+}
+
+.checkout-brand-title {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #fff;
+}
+
+.checkout-brand-price {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: color-mix(in srgb, #fff 92%, var(--tide));
+}
+
+.checkout-brand-lede {
+  margin: 0.15rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, #fff 72%, transparent);
+  max-width: 34ch;
+}
+
+.checkout-brand-points {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.checkout-brand-points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.88rem;
+  color: color-mix(in srgb, #fff 82%, transparent);
+}
+
+.checkout-brand-points svg {
+  color: color-mix(in srgb, var(--tide) 85%, #fff);
+  flex: none;
+}
+
+.checkout-panel {
+  position: relative;
+  background: color-mix(in srgb, #0b1220 92%, #05070f);
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 40rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.checkout-panel .bill-head {
+  border-bottom: 1px solid color-mix(in srgb, #fff 8%, transparent);
+  background: transparent;
+  padding: 1.35rem 1.5rem 1.15rem;
+}
+
+.checkout-panel .bill-body,
+.checkout-panel .bill-form {
+  flex: 1 1 auto;
+}
+
+.checkout-panel .bill-form {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.checkout-panel .bill-body {
+  padding: 1.25rem 1.5rem 1.1rem;
+  overflow: visible;
+  max-height: none;
+}
+
+.checkout-panel .bill-foot {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.checkout-panel .bill-done-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Inline offers (no floating bubble) */
+.checkout-offers,
+.bill-offers-inline {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.35rem;
+}
+
+.checkout-offers-label {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: 0.92rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.checkout-offers-hint {
+  margin: 0;
+  color: var(--mist);
+  font-size: 0.8rem;
+}
+
+.bill-offers-inline .bill-offer-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.75rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--foam) 3%, transparent);
+}
+
+.bill-offers-inline .bill-offer-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .checkout-split {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .checkout-brand {
+    min-height: 16.5rem;
+    border-right: 0;
+    border-bottom: 1px solid color-mix(in srgb, #fff 10%, transparent);
+    padding: 1.5rem 1.25rem 1.65rem;
+    align-items: flex-end;
+  }
+
+  .checkout-brand-title {
+    font-size: 1.7rem;
+  }
+
+  .checkout-brand-lede {
+    max-width: 42ch;
+  }
+
+  .checkout-brand-points {
+    display: none;
+  }
+
+  .checkout-panel .bill-head,
+  .checkout-panel .bill-body,
+  .checkout-panel .bill-foot {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .checkout-split {
+    width: min(1200px, 100%);
+  }
+
+  .checkout-brand {
+    padding: 2.75rem 2.4rem 3rem;
+  }
+
+  .checkout-panel .bill-head,
+  .checkout-panel .bill-body,
+  .checkout-panel .bill-foot {
+    padding-left: 1.85rem;
+    padding-right: 1.85rem;
+  }
+}
+
+[data-theme="light"] .checkout-page {
+  background: #f4f7fb;
+  color: #0f172a;
+}
+
+[data-theme="light"] .checkout-panel {
+  background: #fff;
+}
+
+[data-theme="light"] .checkout-panel .bill-head {
+  border-bottom-color: #e5e7eb;
+}
