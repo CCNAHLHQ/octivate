@@ -16,6 +16,7 @@ import {
 import { readBillingPlans } from "@/lib/billing/plans-store";
 import { validateCardCheckout } from "@/lib/billing/card-validation";
 import { enrichClientContextFromRequest } from "@/lib/billing/client-context";
+import { applyPromo, normalizePromoCode } from "@/lib/billing/promos";
 
 const PLAN_IDS = new Set<PlanId>(["free", "single", "team"]);
 const METHOD_IDS = new Set<PaymentMethodId>(
@@ -85,6 +86,30 @@ export async function POST(req: NextRequest) {
   if (!plan.requiresPayment) return jsonError("Plan does not require payment");
   const price = resolvePrice(plan, interval);
 
+  const promoRaw = body.promoCode;
+  const promoCode =
+    promoRaw == null || String(promoRaw).trim() === ""
+      ? ""
+      : normalizePromoCode(promoRaw);
+  let payableAmount = price.amount;
+  let listAmount = price.amount;
+  let discountAmount: number | undefined;
+  let storedPromo: string | undefined;
+
+  if (promoCode) {
+    const applied = applyPromo({
+      code: promoCode,
+      planId,
+      interval,
+      listAmount: price.amount,
+    });
+    if (!applied.ok) return jsonError(applied.error);
+    payableAmount = applied.payable;
+    listAmount = applied.listAmount;
+    discountAmount = applied.discount;
+    storedPromo = applied.code;
+  }
+
   let cardLast4: string | undefined;
   let cardBrand: string | undefined;
   let cardNiceType: string | undefined;
@@ -122,8 +147,11 @@ export async function POST(req: NextRequest) {
     paymentMethodId,
     planId,
     interval,
-    amount: price.amount,
+    amount: payableAmount,
     currency: price.currency,
+    listAmount,
+    promoCode: storedPromo,
+    discountAmount,
     cardLast4,
     cardBrand,
     cryptoAsset:
@@ -141,6 +169,9 @@ export async function POST(req: NextRequest) {
       requestedProvider: paymentMethodId,
       catalogueName: plan.name,
       ...(cardNiceType ? { cardNiceType } : {}),
+      ...(storedPromo
+        ? { promoCode: storedPromo, discountAmount: discountAmount ?? 0 }
+        : {}),
     },
   });
 
@@ -151,6 +182,9 @@ export async function POST(req: NextRequest) {
       planId: order.planId,
       amount: order.amount,
       currency: order.currency,
+      listAmount: order.listAmount,
+      promoCode: order.promoCode,
+      discountAmount: order.discountAmount,
       paymentMethodId: order.paymentMethodId,
       emails: order.emails,
       createdAt: order.createdAt,

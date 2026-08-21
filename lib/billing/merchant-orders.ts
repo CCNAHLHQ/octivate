@@ -36,6 +36,10 @@ export type MerchantOrder = {
   interval: BillingInterval;
   amount: number;
   currency: "USD";
+  /** Catalogue price before promo */
+  listAmount?: number;
+  promoCode?: string;
+  discountAmount?: number;
   /** Never store full PAN — last4 only when card path used */
   cardLast4?: string;
   cardBrand?: string;
@@ -65,6 +69,9 @@ export type MerchantOrderInput = {
   interval: BillingInterval;
   amount: number;
   currency?: "USD";
+  listAmount?: number;
+  promoCode?: string;
+  discountAmount?: number;
   cardLast4?: string;
   cardBrand?: string;
   cryptoAsset?: string;
@@ -110,6 +117,13 @@ export async function createMerchantOrder(
     interval: input.interval,
     amount: Number(input.amount) || 0,
     currency: input.currency || "USD",
+    listAmount:
+      input.listAmount != null ? Number(input.listAmount) || 0 : undefined,
+    promoCode: input.promoCode?.trim() || undefined,
+    discountAmount:
+      input.discountAmount != null
+        ? Number(input.discountAmount) || 0
+        : undefined,
     cardLast4: input.cardLast4,
     cardBrand: input.cardBrand,
     cryptoAsset: input.cryptoAsset,

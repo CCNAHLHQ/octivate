@@ -440,8 +440,11 @@ export function OperatorMerchantsPanel() {
                             ) : null}
                           </h3>
                           <p className="op-merchants-meta">
-                            {o.planId} · {formatMoney(o.amount)} ·{" "}
-                            {o.paymentMethodId}
+                            {o.planId} · {formatMoney(o.amount)}
+                            {o.promoCode
+                              ? ` · ${o.promoCode} (−${formatMoney(o.discountAmount || 0)})`
+                              : ""}{" "}
+                            · {o.paymentMethodId}
                           </p>
                         </div>
                         <div className="op-m-status-block">
