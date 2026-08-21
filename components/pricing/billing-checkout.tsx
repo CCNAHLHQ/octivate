@@ -12,14 +12,15 @@ import {
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  BadgePercent,
   Building2,
   Check,
   ChevronRight,
   CreditCard,
   Lock,
-  Percent,
   Plus,
   ShoppingBag,
+  TicketPercent,
   UserRound,
   X,
 } from "lucide-react";
@@ -34,9 +35,7 @@ import {
 } from "@/lib/billing/plans";
 import {
   type ApplyPromoOk,
-  DEFAULT_PROMO_CODE,
   applyPromo,
-  defaultPromoForPlan,
   listAvailablePromos,
   normalizePromoCode,
 } from "@/lib/billing/promos";
@@ -122,7 +121,7 @@ export function BillingCheckout({
   const [orderId, setOrderId] = useState<string | null>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [confettiKey, setConfettiKey] = useState<string | null>(null);
-  const [promoInput, setPromoInput] = useState(DEFAULT_PROMO_CODE);
+  const [promoInput, setPromoInput] = useState("");
   const [appliedPromo, setAppliedPromo] = useState<ApplyPromoOk | null>(null);
   const [offersOpen, setOffersOpen] = useState(false);
   const [promoError, setPromoError] = useState<string | null>(null);
@@ -262,55 +261,13 @@ export function BillingCheckout({
     setOffersOpen(false);
     setPromoError(null);
     setPromoBusy(false);
+    setAppliedPromo(null);
+    setPromoInput("");
   }, [open, context]); // eslint-disable-line react-hooks/exhaustive-deps -- don't reset draft fields on reopen
 
   useEffect(() => {
     if (methodId !== "card") setCardDetailsOpen(false);
   }, [methodId]);
-
-  /* Pre-apply default welcome promo when checkout opens */
-  useEffect(() => {
-    if (!open || !context || !plan || !price) return;
-    const local = defaultPromoForPlan(
-      context.planId,
-      context.interval,
-      price.amount
-    );
-    if (local) {
-      setAppliedPromo(local);
-      setPromoInput(local.code);
-    } else {
-      setAppliedPromo(null);
-      setPromoInput(DEFAULT_PROMO_CODE);
-    }
-    setPromoError(null);
-
-    let cancelled = false;
-    void (async () => {
-      try {
-        const res = await fetch("/api/billing/promo/validate", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            code: DEFAULT_PROMO_CODE,
-            planId: context.planId,
-            interval: context.interval,
-          }),
-        });
-        const data = await res.json().catch(() => ({}));
-        if (cancelled) return;
-        if (res.ok && data.promo) {
-          setAppliedPromo(data.promo as ApplyPromoOk);
-          setPromoInput(String(data.promo.code || DEFAULT_PROMO_CODE));
-        }
-      } catch {
-        /* keep local preview */
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [open, context, plan, price]);
 
   const requestClose = useCallback(() => {
     setLeaving((already) => {
@@ -457,6 +414,7 @@ export function BillingCheckout({
       setAppliedPromo(promo);
       setPromoInput(promo.code);
       setOffersOpen(false);
+      setConfettiKey(`promo-${promo.code}-${Date.now()}`);
     } catch (err) {
       setPromoError(err instanceof Error ? err.message : "Invalid promo code");
     } finally {
@@ -982,24 +940,30 @@ export function BillingCheckout({
                     onClick={() => setOffersOpen(true)}
                   >
                     <span className="bill-promo-summary-icon" aria-hidden>
-                      <Percent className="h-4 w-4" strokeWidth={2.25} />
+                      <BadgePercent className="h-[1.05rem] w-[1.05rem]" strokeWidth={2.1} />
                     </span>
                     <span className="bill-promo-summary-copy">
                       <strong>Offers &amp; discounts</strong>
                       <span>
                         {appliedPromo
                           ? "An offer is applied"
-                          : "Browse welcome offers"}
+                          : "See available offers"}
                       </span>
                     </span>
                     <span className="bill-promo-summary-meta">
                       {availableOffers.length}{" "}
                       {availableOffers.length === 1 ? "offer" : "offers"}
-                      <ChevronRight className="h-4 w-4" aria-hidden />
+                      <ChevronRight className="h-4 w-4" strokeWidth={2.25} aria-hidden />
                     </span>
                   </button>
 
-                  <div className="bill-promo-apply">
+                  <div
+                    className={cn(
+                      "bill-promo-field",
+                      promoError && "is-error",
+                      appliedPromo && "is-applied"
+                    )}
+                  >
                     <input
                       type="text"
                       value={promoInput}
@@ -1013,7 +977,7 @@ export function BillingCheckout({
                           void applyPromoCode();
                         }
                       }}
-                      placeholder="Promo code"
+                      placeholder="Enter promo code"
                       autoComplete="off"
                       spellCheck={false}
                       aria-label="Promo code"
@@ -1022,27 +986,30 @@ export function BillingCheckout({
                     <button
                       type="button"
                       className="bill-promo-apply-btn"
-                      disabled={promoBusy}
+                      disabled={promoBusy || !promoInput.trim()}
                       onClick={() => void applyPromoCode()}
                     >
                       {promoBusy ? "…" : "Apply"}
                     </button>
                   </div>
                   {promoError ? (
-                    <em className="bill-error">{promoError}</em>
+                    <em className="bill-error bill-promo-error">{promoError}</em>
                   ) : null}
 
                   {appliedPromo ? (
                     <p className="bill-promo-applied">
-                      <span>Applied coupon code:</span>
+                      <span className="bill-promo-applied-label">
+                        Applied coupon code :
+                      </span>
                       <span className="bill-promo-chip">
+                        <TicketPercent className="h-3.5 w-3.5" aria-hidden />
                         {appliedPromo.code}
                         <button
                           type="button"
                           aria-label={`Remove ${appliedPromo.code}`}
                           onClick={clearPromo}
                         >
-                          <X className="h-3 w-3" strokeWidth={2.5} />
+                          <X className="h-3 w-3" strokeWidth={2.75} />
                         </button>
                       </span>
                     </p>
@@ -1190,9 +1157,9 @@ export function BillingCheckout({
               >
                 <header className="bill-offers-head">
                   <span className="bill-promo-summary-icon" aria-hidden>
-                    <Percent className="h-4 w-4" strokeWidth={2.25} />
+                    <BadgePercent className="h-[1.05rem] w-[1.05rem]" strokeWidth={2.1} />
                   </span>
-                  <div>
+                  <div className="bill-offers-head-copy">
                     <h3>Available offers</h3>
                     <p>
                       Offers available now, plus the closest ones you can unlock.
@@ -1200,7 +1167,7 @@ export function BillingCheckout({
                   </div>
                   <button
                     type="button"
-                    className="bill-close"
+                    className="bill-offers-close"
                     onClick={() => setOffersOpen(false)}
                     aria-label="Close"
                   >
@@ -1216,19 +1183,16 @@ export function BillingCheckout({
                       const selected = appliedPromo?.code === offer.code;
                       return (
                         <li key={offer.code}>
-                          <button
-                            type="button"
+                          <div
                             className={cn(
                               "bill-offer-row",
                               selected && "is-selected"
                             )}
-                            disabled={promoBusy}
-                            onClick={() => void applyPromoCode(offer.code)}
                           >
                             <span className="bill-offer-icon" aria-hidden>
                               <ShoppingBag
                                 className="h-4 w-4"
-                                strokeWidth={2}
+                                strokeWidth={2.1}
                               />
                             </span>
                             <span className="bill-offer-copy">
@@ -1238,10 +1202,16 @@ export function BillingCheckout({
                             <span className="bill-offer-save">
                               {offer.saveLabel}
                             </span>
-                            <span className="bill-offer-go" aria-hidden>
-                              <ChevronRight className="h-4 w-4" />
-                            </span>
-                          </button>
+                            <button
+                              type="button"
+                              className="bill-offer-go"
+                              disabled={promoBusy}
+                              aria-label={`Apply ${offer.code}`}
+                              onClick={() => void applyPromoCode(offer.code)}
+                            >
+                              <ChevronRight className="h-4 w-4" strokeWidth={2.4} />
+                            </button>
+                          </div>
                         </li>
                       );
                     })}
