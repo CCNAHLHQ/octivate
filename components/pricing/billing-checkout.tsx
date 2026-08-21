@@ -1132,13 +1132,13 @@ export function BillingCheckout({
       {createPortal(
         <AnimatePresence>
           {offersOpen ? (
-            <motion.div
-              className="bill-email-layer"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.14 }}
-            >
+              <motion.div
+                className="bill-email-layer bill-offers-layer"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.14 }}
+              >
               <button
                 type="button"
                 className="bill-email-layer-backdrop"
@@ -1150,14 +1150,14 @@ export function BillingCheckout({
                 role="dialog"
                 aria-modal="true"
                 aria-label="Available offers"
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 6 }}
-                transition={{ duration: 0.16, ease: panelEase }}
+                initial={{ opacity: 0, y: 8, scale: 0.985 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 6, scale: 0.985 }}
+                transition={{ duration: 0.18, ease: panelEase }}
               >
                 <header className="bill-offers-head">
                   <span className="bill-promo-summary-icon" aria-hidden>
-                    <BadgePercent className="h-[1.05rem] w-[1.05rem]" strokeWidth={2.1} />
+                    <BadgePercent className="h-5 w-5" strokeWidth={2.05} />
                   </span>
                   <div className="bill-offers-head-copy">
                     <h3>Available offers</h3>
@@ -1175,47 +1175,56 @@ export function BillingCheckout({
                   </button>
                 </header>
 
-                <div className="bill-offers-section">
-                  <h4>Available now</h4>
-                  <p>Select an offer to apply it instantly.</p>
-                  <ul className="bill-offers-list">
-                    {availableOffers.map((offer) => {
-                      const selected = appliedPromo?.code === offer.code;
-                      return (
-                        <li key={offer.code}>
-                          <div
-                            className={cn(
-                              "bill-offer-row",
-                              selected && "is-selected"
-                            )}
-                          >
-                            <span className="bill-offer-icon" aria-hidden>
-                              <ShoppingBag
-                                className="h-4 w-4"
-                                strokeWidth={2.1}
-                              />
-                            </span>
-                            <span className="bill-offer-copy">
-                              <strong>{offer.label}</strong>
-                              <span>{offer.description}</span>
-                            </span>
-                            <span className="bill-offer-save">
-                              {offer.saveLabel}
-                            </span>
-                            <button
-                              type="button"
-                              className="bill-offer-go"
-                              disabled={promoBusy}
-                              aria-label={`Apply ${offer.code}`}
-                              onClick={() => void applyPromoCode(offer.code)}
+                <div className="bill-offers-body">
+                  <div className="bill-offers-section">
+                    <div className="bill-offers-section-head">
+                      <h4>Available now</h4>
+                      <p>Select an offer to apply it instantly.</p>
+                    </div>
+                    <ul className="bill-offers-list">
+                      {availableOffers.map((offer) => {
+                        const selected = appliedPromo?.code === offer.code;
+                        return (
+                          <li key={offer.code}>
+                            <div
+                              className={cn(
+                                "bill-offer-row",
+                                selected && "is-selected"
+                              )}
                             >
-                              <ChevronRight className="h-4 w-4" strokeWidth={2.4} />
-                            </button>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                              <span className="bill-offer-icon" aria-hidden>
+                                <ShoppingBag
+                                  className="h-[1.15rem] w-[1.15rem]"
+                                  strokeWidth={2.05}
+                                />
+                              </span>
+                              <span className="bill-offer-copy">
+                                <strong>{offer.label}</strong>
+                                <span>{offer.description}</span>
+                              </span>
+                              <span className="bill-offer-actions">
+                                <span className="bill-offer-save">
+                                  {offer.saveLabel}
+                                </span>
+                                <button
+                                  type="button"
+                                  className="bill-offer-go"
+                                  disabled={promoBusy}
+                                  aria-label={`Apply ${offer.code}`}
+                                  onClick={() => void applyPromoCode(offer.code)}
+                                >
+                                  <ChevronRight
+                                    className="h-4 w-4"
+                                    strokeWidth={2.4}
+                                  />
+                                </button>
+                              </span>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
