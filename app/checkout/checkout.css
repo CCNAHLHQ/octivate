@@ -16,13 +16,20 @@
 }
 
 .checkout-brand {
-  position: relative;
+  position: sticky;
+  top: var(--chrome-top, 104px);
+  align-self: start;
   isolation: isolate;
   overflow: hidden;
-  min-height: 28rem;
+  height: calc(100dvh - var(--chrome-top, 104px));
+  max-height: calc(100dvh - var(--chrome-top, 104px));
+  min-height: 24rem;
   display: flex;
-  align-items: flex-end;
-  padding: 2.25rem 2rem 2.5rem;
+  align-items: center;
+  padding:
+    2.25rem
+    2rem
+    max(2.5rem, env(safe-area-inset-bottom, 0px));
   border-right: 1px solid color-mix(in srgb, #fff 10%, transparent);
 }
 
@@ -54,10 +61,10 @@
   pointer-events: none;
   background:
     linear-gradient(
-      180deg,
-      rgba(5, 7, 15, 0.35) 0%,
-      rgba(5, 7, 15, 0.55) 42%,
-      rgba(5, 7, 15, 0.88) 100%
+      165deg,
+      rgba(5, 7, 15, 0.42) 0%,
+      rgba(5, 7, 15, 0.58) 48%,
+      rgba(5, 7, 15, 0.86) 100%
     ),
     radial-gradient(
       120% 80% at 20% 10%,
@@ -72,6 +79,7 @@
   display: grid;
   gap: 0.85rem;
   max-width: 28rem;
+  width: 100%;
 }
 
 .checkout-brand-logo {
@@ -242,6 +250,10 @@
   }
 
   .checkout-brand {
+    position: relative;
+    top: auto;
+    height: auto;
+    max-height: none;
     min-height: 16.5rem;
     border-right: 0;
     border-bottom: 1px solid color-mix(in srgb, #fff 10%, transparent);
@@ -266,6 +278,12 @@
   .checkout-panel .bill-foot {
     padding-left: 1.15rem;
     padding-right: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .checkout-brand {
+    scroll-margin-top: var(--chrome-top, 104px);
   }
 }
 
