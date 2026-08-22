@@ -24,7 +24,6 @@ import {
   type PlanId,
   PAYMENT_DISPLAY_ICONS,
   formatMoney,
-  intervalLabel,
   resolvePrice,
 } from "@/lib/billing/plans";
 import { apiFetch } from "@/lib/api-client";
@@ -163,8 +162,8 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
             <h1 className="reveal in">Plans built around the decision</h1>
             <p className="lede reveal in" data-delay="1">
               Explore free. Unlock a scoped decision brief for {singlePrice}, Team
-              workspace from {teamPrice}/mo, or Scale programme from {scalePrice} for
-              longer runway and higher throughput.
+              workspace from {teamPrice}/mo, or Scale from {scalePrice} for longer
+              runway and higher throughput.
             </p>
           </div>
 
@@ -221,31 +220,31 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
                       ))}
                     </ul>
 
-                    {plan.accessNote ? (
-                      <div className={`price-note is-${plan.accessNote.tone}`}>
-                        {plan.accessNote.body}
-                      </div>
-                    ) : null}
+                    <div className="price-foot">
+                      {plan.accessNote ? (
+                        <div className={`price-note is-${plan.accessNote.tone}`}>
+                          {plan.accessNote.body}
+                        </div>
+                      ) : null}
 
-                    {plan.requiresPayment ? (
-                      <Link
-                        href={checkoutHref(plan.id, interval)}
-                        className={`btn ${plan.featured ? "btn-primary" : "btn-ghost"} price-cta glimmer-btn`}
-                      >
-                        {plan.id === "team" && interval === "monthly"
-                          ? `${plan.ctaLabel} — ${priceLabel}/mo`
-                          : `${plan.ctaLabel} — ${priceLabel}${
-                              price.unitLabel ? ` ${intervalLabel(interval)}` : ""
-                            }`}
-                      </Link>
-                    ) : (
-                      <Link
-                        href={plan.href || "/signup"}
-                        className="btn btn-ghost price-cta glimmer-btn"
-                      >
-                        {plan.ctaLabel}
-                      </Link>
-                    )}
+                      {plan.requiresPayment ? (
+                        <Link
+                          href={checkoutHref(plan.id, interval)}
+                          className={`btn ${plan.featured ? "btn-primary" : "btn-ghost"} price-cta glimmer-btn`}
+                        >
+                          {plan.id === "team" && interval === "monthly"
+                            ? `${plan.ctaLabel} · ${priceLabel}/mo`
+                            : `${plan.ctaLabel} · ${priceLabel}`}
+                        </Link>
+                      ) : (
+                        <Link
+                          href={plan.href || "/signup"}
+                          className="btn btn-ghost price-cta glimmer-btn"
+                        >
+                          {plan.ctaLabel}
+                        </Link>
+                      )}
+                    </div>
                   </motion.article>
                 );
               })}

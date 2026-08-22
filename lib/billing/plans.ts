@@ -3,7 +3,7 @@
  * Bump CATALOGUE_VERSION when seed plans change so live stores refresh.
  */
 
-export const CATALOGUE_VERSION = 3;
+export const CATALOGUE_VERSION = 4;
 
 export type PlanId = "free" | "single" | "team" | "scale";
 export type BillingInterval = "one_time" | "monthly" | "annual" | "biennial";
@@ -143,7 +143,7 @@ export const PLANS: PlanDefinition[] = [
       body: "Subscription renews until you cancel. Delivered briefs remain in your workspace after cancellation; new agent runs pause.",
     },
     requiresPayment: true,
-    ctaLabel: "Start team access",
+    ctaLabel: "Start Team",
     featured: true,
     intervals: ["monthly", "annual"],
     defaultInterval: "monthly",
@@ -172,35 +172,35 @@ export const PLANS: PlanDefinition[] = [
   },
   {
     id: "scale",
-    name: "Scale programme",
-    badge: "EXTENDED",
+    name: "Scale",
+    badge: "2-YEAR",
     description:
-      "Longer runway and higher throughput for agencies and programmes that outgrow monthly Team access.",
+      "Higher throughput and a longer prepaid runway when Team monthly access is not enough.",
     features: [
       "Everything in Team workspace",
       "Up to 50 agent runs / billing period",
-      "Multi-seat programme access for extended engagements",
-      "Priority fulfilment and analyst review queue",
+      "Multi-seat access for extended engagements",
+      "Priority fulfilment and analyst review",
       "Annual or 2-year prepaid commitment",
     ],
     accessNote: {
       tone: "tide",
-      body: "Scale is prepaid for 12 or 24 months. Unused runs do not roll over after the commitment ends.",
+      body: "Prepaid for 12 or 24 months. Unused runs do not roll over after the commitment ends.",
     },
     requiresPayment: true,
-    ctaLabel: "Start scale access",
+    ctaLabel: "Get Scale",
     featured: true,
     intervals: ["annual", "biennial"],
     defaultInterval: "biennial",
     prices: {
       annual: {
-        amount: 449,
+        amount: 249,
         currency: "USD",
         interval: "annual",
         unitLabel: "per year",
       },
       biennial: {
-        amount: 799,
+        amount: 399,
         currency: "USD",
         interval: "biennial",
         unitLabel: "per 2 years",
@@ -211,7 +211,7 @@ export const PLANS: PlanDefinition[] = [
       tier: 3,
       seats: "programme",
       briefs: 50,
-      durationLabel: "1–2 year programme",
+      durationLabel: "1–2 years",
       catalogueVersion: CATALOGUE_VERSION,
     },
   },

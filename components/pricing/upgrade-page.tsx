@@ -212,38 +212,40 @@ export function UpgradePage({ initialPlans }: { initialPlans: PlanDefinition[] }
                   ))}
                 </ul>
 
-                {state === "unavailable" ? (
-                  <button type="button" className="btn btn-ghost price-cta" disabled>
-                    <Lock className="h-4 w-4" aria-hidden />
-                    Unavailable for operators
-                  </button>
-                ) : state === "current" || state === "owned" ? (
-                  <button type="button" className="btn btn-ghost price-cta" disabled>
-                    <Check className="h-4 w-4" aria-hidden />
-                    {state === "current" ? "Active on this account" : "Included below your tier"}
-                  </button>
-                ) : state === "explore" || !plan.requiresPayment ? (
-                  <Link href={plan.href || "/signup"} className="btn btn-ghost price-cta glimmer-btn">
-                    {plan.ctaLabel}
-                    <ArrowRight className="h-4 w-4" aria-hidden />
-                  </Link>
-                ) : (
-                  <Link
-                    href={
-                      signedIn
-                        ? checkoutHref
-                        : `/signin?next=${encodeURIComponent(checkoutHref)}`
-                    }
-                    className={cn(
-                      "btn price-cta glimmer-btn",
-                      plan.featured ? "btn-primary" : "btn-ghost"
-                    )}
-                    onClick={() => invalidateApiCache("/api/auth/me")}
-                  >
-                    {signedIn ? "Upgrade to this plan" : "Sign in to upgrade"}
-                    <ArrowRight className="h-4 w-4" aria-hidden />
-                  </Link>
-                )}
+                <div className="price-foot">
+                  {state === "unavailable" ? (
+                    <button type="button" className="btn btn-ghost price-cta" disabled>
+                      <Lock className="h-4 w-4" aria-hidden />
+                      Unavailable for operators
+                    </button>
+                  ) : state === "current" || state === "owned" ? (
+                    <button type="button" className="btn btn-ghost price-cta" disabled>
+                      <Check className="h-4 w-4" aria-hidden />
+                      {state === "current" ? "Active on this account" : "Included below your tier"}
+                    </button>
+                  ) : state === "explore" || !plan.requiresPayment ? (
+                    <Link href={plan.href || "/signup"} className="btn btn-ghost price-cta glimmer-btn">
+                      {plan.ctaLabel}
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                  ) : (
+                    <Link
+                      href={
+                        signedIn
+                          ? checkoutHref
+                          : `/signin?next=${encodeURIComponent(checkoutHref)}`
+                      }
+                      className={cn(
+                        "btn price-cta glimmer-btn",
+                        plan.featured ? "btn-primary" : "btn-ghost"
+                      )}
+                      onClick={() => invalidateApiCache("/api/auth/me")}
+                    >
+                      {signedIn ? "Upgrade to this plan" : "Sign in to upgrade"}
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                  )}
+                </div>
               </motion.article>
             );
           })}
