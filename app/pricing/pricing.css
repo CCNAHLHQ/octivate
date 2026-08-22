@@ -2181,6 +2181,27 @@
   text-align: center;
   padding: 1.75rem 0.75rem 1.5rem;
 }
+.bill-loading-premium {
+  min-height: 22rem;
+  gap: 1.15rem;
+  padding: 2.4rem 1rem 2rem;
+  background:
+    radial-gradient(
+      90% 70% at 50% 20%,
+      color-mix(in srgb, var(--tide) 12%, transparent),
+      transparent 60%
+    ),
+    color-mix(in srgb, var(--foam) 1.5%, transparent);
+  border-radius: 16px;
+}
+.bill-loading-sub {
+  margin: 0;
+  max-width: 28ch;
+  color: var(--mist);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
 .bill-email-list {
   min-width: 0;
   overflow: hidden;
@@ -2188,17 +2209,107 @@
   white-space: nowrap;
   color: var(--mist);
 }
+.bill-done {
+  gap: 0.85rem;
+  align-content: start;
+  justify-items: stretch;
+  text-align: left;
+  padding: 1.35rem 0.15rem 1.25rem;
+  max-width: 28rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.bill-done .bill-done-check {
+  justify-self: center;
+}
 .bill-done h3 {
   margin: 0;
   font-family: var(--f-display);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   letter-spacing: -0.03em;
   font-weight: 700;
+  text-align: center;
+}
+.bill-done-lede {
+  margin: 0;
+  color: var(--mist);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.bill-receipt {
+  margin: 0.55rem 0 0;
+  padding: 0.85rem 1rem;
+  display: grid;
+  gap: 0.65rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--foam) 3.5%, transparent);
+  list-style: none;
+}
+.bill-receipt > div {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 34%) minmax(0, 1fr);
+  gap: 0.55rem 0.85rem;
+  align-items: baseline;
+}
+.bill-receipt dt {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.bill-receipt dd {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 560;
+  color: var(--foam);
+  word-break: break-word;
+}
+.bill-receipt dd code {
+  font-family: var(--f-mono, ui-monospace, monospace);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+.bill-receipt-muted {
+  color: var(--mist);
+  font-weight: 500;
+}
+.bill-receipt-amount {
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.bill-done-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  width: 100%;
+  margin-top: 0.85rem;
 }
 .bill-done-btn {
-  margin-top: 0.35rem;
-  min-width: 9.5rem;
-  border-radius: 999px !important;
+  margin-top: 0;
+  min-width: 0;
+  width: 100%;
+  min-height: 2.7rem;
+  border-radius: 12px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-weight: 650;
+}
+@media (max-width: 420px) {
+  .bill-done-actions {
+    grid-template-columns: 1fr;
+  }
+  .bill-receipt > div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
 }
 .bill-track {
   display: grid;
@@ -2355,7 +2466,39 @@
 .bill-promo {
   display: grid;
   gap: 0.85rem;
-  margin: 0.35rem 0 1rem;
+  margin: 0.15rem 0 0.35rem;
+}
+.bill-promo-inline {
+  gap: 0.75rem;
+  margin: 0.1rem 0 0;
+  padding-top: 0.15rem;
+}
+.bill-promo-inline .bill-field {
+  gap: 0.35rem;
+}
+.bill-field-hint {
+  margin: 0;
+  color: var(--mist);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  font-weight: 500;
+}
+.bill-offers-field .bill-offers-list,
+.bill-offers-inline-list {
+  list-style: none;
+  margin: 0.15rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.bill-foot-checkout {
+  gap: 0.95rem;
+  padding-top: 1.05rem;
+  margin-top: 0.35rem;
+}
+.bill-foot-agree {
+  display: grid;
+  gap: 0.45rem;
 }
 .bill-promo-summary {
   display: grid;

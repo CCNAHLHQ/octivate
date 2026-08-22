@@ -193,40 +193,60 @@
 }
 
 .checkout-panel .bill-foot {
-  padding: 0 1.5rem 1.5rem;
+  padding: 1.05rem 1.5rem 1.65rem;
+  border-top: 1px solid color-mix(in srgb, #fff 8%, transparent);
+  background: transparent;
+  gap: 0.95rem;
+}
+
+.checkout-panel .bill-foot-checkout {
+  display: grid;
+  align-items: stretch;
+}
+
+.checkout-panel .bill-agree {
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.15rem 0.1rem;
+}
+
+.checkout-panel .bill-submit {
+  margin-top: 0.15rem;
+}
+
+.checkout-panel .bill-done {
+  padding: 1.5rem 1.5rem 1.75rem;
+  max-width: none;
 }
 
 .checkout-panel .bill-done-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.65rem;
-  justify-content: center;
-  margin-top: 1rem;
+  justify-content: stretch;
+  margin-top: 0.95rem;
 }
 
-/* Inline offers (no floating bubble) */
+.checkout-panel .bill-loading-premium {
+  min-height: 24rem;
+  margin: 0.5rem 0;
+}
+
+.checkout-panel .bill-promo-inline {
+  margin-top: 0.35rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid color-mix(in srgb, #fff 6%, transparent);
+}
+
 .checkout-offers,
 .bill-offers-inline {
   display: grid;
   gap: 0.55rem;
-  margin-top: 0.35rem;
+  margin-top: 0;
 }
 
-.checkout-offers-label {
-  margin: 0;
-  font-family: var(--f-display);
-  font-size: 0.92rem;
-  font-weight: 650;
-  letter-spacing: -0.02em;
-}
-
-.checkout-offers-hint {
-  margin: 0;
-  color: var(--mist);
-  font-size: 0.8rem;
-}
-
-.bill-offers-inline .bill-offer-row {
+.bill-offers-inline .bill-offer-row,
+.bill-offers-field .bill-offer-row {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 0.7rem;
@@ -237,10 +257,17 @@
   background: color-mix(in srgb, var(--foam) 3%, transparent);
 }
 
-.bill-offers-inline .bill-offer-actions {
+.bill-offers-inline .bill-offer-actions,
+.bill-offers-field .bill-offer-actions {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+@media (max-width: 420px) {
+  .checkout-panel .bill-done-actions {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px) {

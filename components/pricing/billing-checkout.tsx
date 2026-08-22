@@ -12,10 +12,13 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  ArrowLeft,
+  ArrowRight,
   Building2,
   Check,
   ChevronRight,
   CreditCard,
+  LayoutDashboard,
   Lock,
   Plus,
   ShoppingBag,
@@ -114,6 +117,20 @@ export function BillingCheckoutForm({
   const [agreed, setAgreed] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [orderId, setOrderId] = useState<string | null>(null);
+  const [receipt, setReceipt] = useState<{
+    createdAt: string;
+    planName: string;
+    interval: string;
+    listAmount: number;
+    amount: number;
+    currency: string;
+    promoCode?: string;
+    discountAmount?: number;
+    paymentMethod: string;
+    email: string;
+    billedTo: string;
+    country: string;
+  } | null>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [confettiKey, setConfettiKey] = useState<string | null>(null);
   const [promoInput, setPromoInput] = useState("");
@@ -248,6 +265,7 @@ export function BillingCheckoutForm({
     setErrors({});
     setSubmitError(null);
     setOrderId(null);
+    setReceipt(null);
     setConfettiKey(null);
     setAddEmailOpen(false);
     setPromoError(null);
@@ -309,6 +327,8 @@ export function BillingCheckoutForm({
     if (!validate()) return;
     setStep("submitting");
     setSubmitError(null);
+    const started = Date.now();
+    const minHoldMs = 2200;
     try {
       const res = await fetch("/api/billing/checkout", {
         method: "POST",
@@ -342,7 +362,50 @@ export function BillingCheckoutForm({
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Checkout failed");
       const id = data.order?.id || null;
+      const fallbackPayable = appliedPromo?.payable ?? price.amount;
+      const orderAmount =
+        typeof data.order?.amount === "number"
+          ? data.order.amount
+          : fallbackPayable;
+      const orderList =
+        typeof data.order?.listAmount === "number"
+          ? data.order.listAmount
+          : price.amount;
+      const primaryEmail =
+        (emails.length ? emails[0] : activeEmail) ||
+        (Array.isArray(data.order?.emails) ? data.order.emails[0] : "") ||
+        "";
+      const methodLabel =
+        METHODS.find((m) => m.id === methodId)?.shortLabel || methodId;
+      setReceipt({
+        createdAt:
+          typeof data.order?.createdAt === "string"
+            ? data.order.createdAt
+            : new Date().toISOString(),
+        planName: plan.name,
+        interval: context.interval.replace("_", " "),
+        listAmount: orderList,
+        amount: orderAmount,
+        currency: data.order?.currency || price.currency || "USD",
+        promoCode: data.order?.promoCode || appliedPromo?.code,
+        discountAmount:
+          typeof data.order?.discountAmount === "number"
+            ? data.order.discountAmount
+            : appliedPromo?.discount,
+        paymentMethod: methodLabel,
+        email: primaryEmail,
+        billedTo:
+          accountType === "company" && companyName.trim()
+            ? `${companyName.trim()} · ${firstName.trim()} ${lastName.trim()}`
+            : `${firstName.trim()} ${lastName.trim()}`,
+        country:
+          BILLING_COUNTRIES.find((c) => c.code === country)?.name || country,
+      });
       setOrderId(id);
+      const elapsed = Date.now() - started;
+      if (elapsed < minHoldMs) {
+        await new Promise((r) => window.setTimeout(r, minHoldMs - elapsed));
+      }
       setStep("done");
       setConfettiKey(id || `ok-${Date.now()}`);
     } catch (err) {
@@ -463,13 +526,16 @@ export function BillingCheckoutForm({
           {step === "submitting" ? (
             <motion.div
               key="loading"
-              className="bill-body bill-loading"
+              className="bill-body bill-loading bill-loading-premium"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.14 }}
+              transition={{ duration: 0.22, ease: panelEase }}
             >
-              <BrandLogoLoading label="Saving billing details…" />
+              <BrandLogoLoading label="Processing your purchase…" />
+              <p className="bill-loading-sub">
+                Confirming billing details and preparing your receipt.
+              </p>
             </motion.div>
           ) : null}
 
@@ -480,7 +546,7 @@ export function BillingCheckoutForm({
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.22, ease: panelEase }}
+              transition={{ duration: 0.28, ease: panelEase }}
             >
               <span className="bill-done-check" aria-hidden>
                 <svg viewBox="0 0 52 52" className="bill-done-check-svg">
@@ -492,22 +558,102 @@ export function BillingCheckoutForm({
                   />
                 </svg>
               </span>
-              <h3>Payment details saved</h3>
-              {orderId ? (
-                <div className="bill-track">
-                  <span className="bill-track-label">Tracking ID</span>
-                  <code className="bill-track-id">{orderId}</code>
-                </div>
-              ) : null}
+              <h3>Purchase successful</h3>
+              <p className="bill-done-lede">
+                Your order is confirmed. A copy of these details is held with your
+                merchant profile for fulfilment.
+              </p>
+              <dl className="bill-receipt">
+                {orderId ? (
+                  <div>
+                    <dt>Order ID</dt>
+                    <dd>
+                      <code>{orderId}</code>
+                    </dd>
+                  </div>
+                ) : null}
+                {receipt ? (
+                  <>
+                    <div>
+                      <dt>Date</dt>
+                      <dd>
+                        {new Intl.DateTimeFormat("en-US", {
+                          dateStyle: "medium",
+                          timeStyle: "short",
+                        }).format(new Date(receipt.createdAt))}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Plan</dt>
+                      <dd>
+                        {receipt.planName}
+                        <span className="bill-receipt-muted">
+                          {" "}
+                          · {receipt.interval}
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Billed to</dt>
+                      <dd>{receipt.billedTo}</dd>
+                    </div>
+                    <div>
+                      <dt>Email</dt>
+                      <dd>{receipt.email || "—"}</dd>
+                    </div>
+                    <div>
+                      <dt>Country</dt>
+                      <dd>{receipt.country || "—"}</dd>
+                    </div>
+                    <div>
+                      <dt>Payment method</dt>
+                      <dd>{receipt.paymentMethod}</dd>
+                    </div>
+                    {receipt.promoCode ? (
+                      <div>
+                        <dt>Promo</dt>
+                        <dd>
+                          {receipt.promoCode}
+                          {receipt.discountAmount
+                            ? ` (−${formatMoney(receipt.discountAmount)})`
+                            : ""}
+                        </dd>
+                      </div>
+                    ) : null}
+                    <div>
+                      <dt>Amount due</dt>
+                      <dd className="bill-receipt-amount">
+                        {receipt.discountAmount ? (
+                          <s className="bill-receipt-muted">
+                            {formatMoney(receipt.listAmount)}
+                          </s>
+                        ) : null}{" "}
+                        {formatMoney(receipt.amount)}
+                      </dd>
+                    </div>
+                  </>
+                ) : null}
+              </dl>
               <div className="bill-done-actions">
-                <Link href="/pricing" className="btn btn-ghost">
+                <Link href="/pricing" className="btn btn-ghost bill-done-btn">
+                  <ArrowLeft className="h-4 w-4" aria-hidden />
                   Back to pricing
                 </Link>
                 <Link
                   href={continueHref}
                   className="btn btn-primary glimmer-btn bill-done-btn"
                 >
-                  Continue
+                  {user ? (
+                    <>
+                      <LayoutDashboard className="h-4 w-4" aria-hidden />
+                      Open workspace
+                    </>
+                  ) : (
+                    <>
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                      Create account
+                    </>
+                  )}
                 </Link>
               </div>
             </motion.div>
@@ -866,153 +1012,160 @@ export function BillingCheckoutForm({
 
                   {errors.card ? <em className="bill-error">{errors.card}</em> : null}
                 </fieldset>
-              </div>
 
-              <section className="bill-promo" aria-label="Offers and discounts">
-                <div
-                  className={cn(
-                    "bill-promo-field",
-                    promoError && "is-error",
-                    appliedPromo && "is-applied"
-                  )}
-                >
-                  <input
-                    type="text"
-                    value={promoInput}
-                    onChange={(e) => {
-                      setPromoInput(e.target.value.toUpperCase());
-                      setPromoError(null);
-                    }}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        e.preventDefault();
-                        void applyPromoCode();
-                      }
-                    }}
-                    placeholder="Enter promo code"
-                    autoComplete="off"
-                    spellCheck={false}
-                    aria-label="Promo code"
-                    disabled={promoBusy}
-                  />
-                  <button
-                    type="button"
-                    className="bill-promo-apply-btn"
-                    disabled={promoBusy || !promoInput.trim()}
-                    onClick={() => void applyPromoCode()}
-                  >
-                    {promoBusy ? "…" : "Apply"}
-                  </button>
-                </div>
-                {promoError ? (
-                  <em className="bill-error bill-promo-error">{promoError}</em>
-                ) : null}
+                <section className="bill-promo bill-promo-inline" aria-label="Offers and discounts">
+                  {availableOffers.length > 0 ? (
+                    <div className="bill-field bill-offers-field">
+                      <span>Available offers</span>
+                      <p className="bill-field-hint">
+                        Select an offer to apply it instantly.
+                      </p>
+                      <ul className="bill-offers-list bill-offers-inline-list">
+                        {availableOffers.map((offer) => {
+                          const selected = appliedPromo?.code === offer.code;
+                          return (
+                            <li key={offer.code}>
+                              <div
+                                className={cn(
+                                  "bill-offer-row",
+                                  selected && "is-selected"
+                                )}
+                              >
+                                <span className="bill-offer-icon" aria-hidden>
+                                  <ShoppingBag
+                                    className="h-[1.15rem] w-[1.15rem]"
+                                    strokeWidth={2.05}
+                                  />
+                                </span>
+                                <span className="bill-offer-copy">
+                                  <strong>{offer.label}</strong>
+                                  <span>{offer.description}</span>
+                                </span>
+                                <span className="bill-offer-actions">
+                                  <span className="bill-offer-save">
+                                    {offer.saveLabel}
+                                  </span>
+                                  <button
+                                    type="button"
+                                    className="bill-offer-go"
+                                    disabled={promoBusy}
+                                    aria-label={`Apply ${offer.code}`}
+                                    onClick={() =>
+                                      void applyPromoCode(offer.code)
+                                    }
+                                  >
+                                    <ChevronRight
+                                      className="h-4 w-4"
+                                      strokeWidth={2.4}
+                                    />
+                                  </button>
+                                </span>
+                              </div>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  ) : null}
 
-                {appliedPromo ? (
-                  <p className="bill-promo-applied">
-                    <span className="bill-promo-applied-label">
-                      Applied coupon code :
-                    </span>
-                    <span className="bill-promo-chip">
-                      <TicketPercent className="h-3.5 w-3.5" aria-hidden />
-                      {appliedPromo.code}
+                  <div className="bill-field bill-promo-code-field">
+                    <span>Promo code</span>
+                    <div
+                      className={cn(
+                        "bill-promo-field",
+                        promoError && "is-error",
+                        appliedPromo && "is-applied"
+                      )}
+                    >
+                      <input
+                        type="text"
+                        value={promoInput}
+                        onChange={(e) => {
+                          setPromoInput(e.target.value.toUpperCase());
+                          setPromoError(null);
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") {
+                            e.preventDefault();
+                            void applyPromoCode();
+                          }
+                        }}
+                        placeholder="Enter promo code"
+                        autoComplete="off"
+                        spellCheck={false}
+                        aria-label="Promo code"
+                        disabled={promoBusy}
+                      />
                       <button
                         type="button"
-                        aria-label={`Remove ${appliedPromo.code}`}
-                        onClick={clearPromo}
+                        className="bill-promo-apply-btn"
+                        disabled={promoBusy || !promoInput.trim()}
+                        onClick={() => void applyPromoCode()}
                       >
-                        <X className="h-3 w-3" strokeWidth={2.75} />
+                        {promoBusy ? "…" : "Apply"}
                       </button>
-                    </span>
-                  </p>
-                ) : null}
-
-                {availableOffers.length > 0 ? (
-                  <div className="checkout-offers bill-offers-inline">
-                    <div className="bill-offers-section-head">
-                      <h4>Available offers</h4>
-                      <p>Select an offer to apply it instantly.</p>
                     </div>
-                    <ul className="bill-offers-list">
-                      {availableOffers.map((offer) => {
-                        const selected = appliedPromo?.code === offer.code;
-                        return (
-                          <li key={offer.code}>
-                            <div
-                              className={cn(
-                                "bill-offer-row",
-                                selected && "is-selected"
-                              )}
-                            >
-                              <span className="bill-offer-icon" aria-hidden>
-                                <ShoppingBag
-                                  className="h-[1.15rem] w-[1.15rem]"
-                                  strokeWidth={2.05}
-                                />
-                              </span>
-                              <span className="bill-offer-copy">
-                                <strong>{offer.label}</strong>
-                                <span>{offer.description}</span>
-                              </span>
-                              <span className="bill-offer-actions">
-                                <span className="bill-offer-save">
-                                  {offer.saveLabel}
-                                </span>
-                                <button
-                                  type="button"
-                                  className="bill-offer-go"
-                                  disabled={promoBusy}
-                                  aria-label={`Apply ${offer.code}`}
-                                  onClick={() => void applyPromoCode(offer.code)}
-                                >
-                                  <ChevronRight
-                                    className="h-4 w-4"
-                                    strokeWidth={2.4}
-                                  />
-                                </button>
-                              </span>
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                    {promoError ? (
+                      <em className="bill-error bill-promo-error">{promoError}</em>
+                    ) : null}
                   </div>
-                ) : null}
-              </section>
 
-              <footer className="bill-foot">
-                <label
-                  className={cn("bill-agree", agreed && "is-checked")}
-                  htmlFor={agreeId}
-                >
-                  <span className="bill-check">
-                    <input
-                      id={agreeId}
-                      type="checkbox"
-                      checked={agreed}
-                      onChange={(e) => setAgreed(e.target.checked)}
-                    />
-                    <span className="bill-check-box" aria-hidden>
-                      <Check className="bill-check-tick" strokeWidth={3} />
+                  {appliedPromo ? (
+                    <p className="bill-promo-applied">
+                      <span className="bill-promo-applied-label">
+                        Applied coupon code :
+                      </span>
+                      <span className="bill-promo-chip">
+                        <TicketPercent className="h-3.5 w-3.5" aria-hidden />
+                        {appliedPromo.code}
+                        <button
+                          type="button"
+                          aria-label={`Remove ${appliedPromo.code}`}
+                          onClick={clearPromo}
+                        >
+                          <X className="h-3 w-3" strokeWidth={2.75} />
+                        </button>
+                      </span>
+                    </p>
+                  ) : null}
+                </section>
+              </div>
+
+              <footer className="bill-foot bill-foot-checkout">
+                <div className="bill-foot-agree">
+                  <label
+                    className={cn("bill-agree", agreed && "is-checked")}
+                    htmlFor={agreeId}
+                  >
+                    <span className="bill-check">
+                      <input
+                        id={agreeId}
+                        type="checkbox"
+                        checked={agreed}
+                        onChange={(e) => setAgreed(e.target.checked)}
+                      />
+                      <span className="bill-check-box" aria-hidden>
+                        <Check className="bill-check-tick" strokeWidth={3} />
+                      </span>
                     </span>
-                  </span>
-                  <span className="bill-agree-text">
-                    I agree to the{" "}
-                    <a href="/terms" target="_blank" rel="noreferrer">
-                      Service Agreement
-                    </a>{" "}
-                    and{" "}
-                    <a href="/privacy" target="_blank" rel="noreferrer">
-                      Privacy Policy
-                    </a>
-                    .
-                  </span>
-                </label>
-                {errors.agreed ? <em className="bill-error">{errors.agreed}</em> : null}
-                {submitError ? <em className="bill-error">{submitError}</em> : null}
+                    <span className="bill-agree-text">
+                      I agree to the{" "}
+                      <a href="/terms" target="_blank" rel="noreferrer">
+                        Service Agreement
+                      </a>{" "}
+                      and{" "}
+                      <a href="/privacy" target="_blank" rel="noreferrer">
+                        Privacy Policy
+                      </a>
+                      .
+                    </span>
+                  </label>
+                  {errors.agreed ? <em className="bill-error">{errors.agreed}</em> : null}
+                  {submitError ? <em className="bill-error">{submitError}</em> : null}
+                </div>
                 <button type="submit" className="btn btn-primary glimmer-btn bill-submit">
                   <Lock className="h-4 w-4" aria-hidden />
-                  Save billing details
+                  Proceed to purchase
                 </button>
               </footer>
             </motion.form>
