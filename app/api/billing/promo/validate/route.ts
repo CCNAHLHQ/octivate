@@ -3,6 +3,8 @@ import { guardApi, jsonError, jsonOk } from "@/lib/security/guard";
 import {
   type BillingInterval,
   type PlanId,
+  ALL_INTERVALS,
+  PAID_PLAN_IDS,
   getPlan,
   resolvePrice,
 } from "@/lib/billing/plans";
@@ -13,8 +15,8 @@ import {
   normalizePromoCode,
 } from "@/lib/billing/promos";
 
-const PLAN_IDS = new Set<PlanId>(["free", "single", "team"]);
-const INTERVALS = new Set<BillingInterval>(["one_time", "monthly", "annual"]);
+const PLAN_IDS = new Set<PlanId>(PAID_PLAN_IDS);
+const INTERVALS = new Set<BillingInterval>(ALL_INTERVALS);
 
 export async function POST(req: NextRequest) {
   const denied = guardApi(req, { publicMutation: true });
@@ -31,7 +33,7 @@ export async function POST(req: NextRequest) {
   const interval = String(body.interval || "") as BillingInterval;
   const code = normalizePromoCode(body.code ?? body.promoCode);
 
-  if (!PLAN_IDS.has(planId) || planId === "free") {
+  if (!PLAN_IDS.has(planId)) {
     return jsonError("Invalid plan");
   }
   if (!INTERVALS.has(interval)) return jsonError("Invalid billing interval");
@@ -82,7 +84,7 @@ export async function GET(req: NextRequest) {
     searchParams.get("interval") || "monthly"
   ) as BillingInterval;
 
-  if (!PLAN_IDS.has(planId) || planId === "free") {
+  if (!PLAN_IDS.has(planId)) {
     return jsonError("Invalid plan");
   }
   if (!INTERVALS.has(interval)) return jsonError("Invalid billing interval");

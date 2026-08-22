@@ -9,6 +9,8 @@ import {
   type BillingInterval,
   type PaymentMethodId,
   type PlanId,
+  ALL_INTERVALS,
+  PAID_PLAN_IDS,
   PAYMENT_METHODS,
   getPlan,
   resolvePrice,
@@ -17,12 +19,14 @@ import { readBillingPlans } from "@/lib/billing/plans-store";
 import { validateCardCheckout } from "@/lib/billing/card-validation";
 import { enrichClientContextFromRequest } from "@/lib/billing/client-context";
 import { applyPromo, normalizePromoCode } from "@/lib/billing/promos";
+import { applyPlanEntitlement } from "@/lib/billing/entitlements";
+import { resolveRequestUser } from "@/lib/auth/scope";
 
-const PLAN_IDS = new Set<PlanId>(["free", "single", "team"]);
+const PLAN_IDS = new Set<PlanId>(PAID_PLAN_IDS);
 const METHOD_IDS = new Set<PaymentMethodId>(
   PAYMENT_METHODS.map((m) => m.id)
 );
-const INTERVALS = new Set<BillingInterval>(["one_time", "monthly", "annual"]);
+const INTERVALS = new Set<BillingInterval>(ALL_INTERVALS);
 
 function isEmail(v: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
@@ -31,6 +35,11 @@ function isEmail(v: string) {
 export async function POST(req: NextRequest) {
   const denied = guardApi(req, { publicMutation: true });
   if (denied) return denied;
+
+  const sessionUser = await resolveRequestUser(req);
+  if (sessionUser?.role === "operator") {
+    return jsonError("Operator accounts cannot purchase or upgrade plans", 403);
+  }
 
   let body: Record<string, unknown>;
   try {
@@ -72,7 +81,7 @@ export async function POST(req: NextRequest) {
   if (!emails.length || !emails.every(isEmail)) {
     return jsonError("Valid billing notification email required");
   }
-  if (!PLAN_IDS.has(planId) || planId === "free") {
+  if (!PLAN_IDS.has(planId)) {
     return jsonError("Invalid plan");
   }
   if (!INTERVALS.has(interval)) return jsonError("Invalid billing interval");
@@ -84,6 +93,9 @@ export async function POST(req: NextRequest) {
   const plans = await readBillingPlans();
   const plan = plans.find((p) => p.id === planId) || getPlan(planId);
   if (!plan.requiresPayment) return jsonError("Plan does not require payment");
+  if (!plan.intervals.includes(interval)) {
+    return jsonError("Interval not available for this plan");
+  }
   const price = resolvePrice(plan, interval);
 
   const promoRaw = body.promoCode;
@@ -165,6 +177,7 @@ export async function POST(req: NextRequest) {
     agreementAccepted: true,
     sourceIp: ip,
     clientContext,
+    userId: sessionUser?.id,
     providerMeta: {
       requestedProvider: paymentMethodId,
       catalogueName: plan.name,
@@ -173,6 +186,16 @@ export async function POST(req: NextRequest) {
         ? { promoCode: storedPromo, discountAmount: discountAmount ?? 0 }
         : {}),
     },
+  });
+
+  /* Provision entitlement immediately for authenticated members so Upgrade UI updates in real time. */
+  const entitled = await applyPlanEntitlement({
+    userId: sessionUser?.id,
+    emails,
+    planId,
+    interval,
+    orderId: order.id,
+    upgradeOnly: Boolean(sessionUser),
   });
 
   return jsonOk({
@@ -189,7 +212,8 @@ export async function POST(req: NextRequest) {
       emails: order.emails,
       createdAt: order.createdAt,
     },
+    user: entitled,
     message:
-      "Billing details saved. Provider checkout will complete when the gateway API is connected.",
+      "Purchase recorded. Your workspace plan updates immediately while provider settlement completes.",
   });
 }

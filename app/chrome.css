@@ -256,6 +256,7 @@
   align-items: center;
   gap: 0.5rem;
   z-index: 2;
+  margin-left: auto;
 }
 
 .site-nav-open {
@@ -291,7 +292,7 @@
   cursor: pointer;
 }
 
-button.site-nav-signout {
+a.site-nav-operator {
   display: inline-flex;
 }
 

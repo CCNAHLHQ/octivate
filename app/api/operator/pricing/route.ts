@@ -2,10 +2,11 @@ import { NextRequest } from "next/server";
 import { guardApi, jsonError, jsonOk } from "@/lib/security/guard";
 import { readBillingPlans, writeBillingPlans } from "@/lib/billing/plans-store";
 import type { PlanDefinition, PlanId } from "@/lib/billing/plans";
+import { ALL_PLAN_IDS } from "@/lib/billing/plans";
 
 function validatePlans(input: unknown): PlanDefinition[] | null {
   if (!Array.isArray(input) || input.length === 0) return null;
-  const ids = new Set<PlanId>(["free", "single", "team"]);
+  const ids = new Set<PlanId>(ALL_PLAN_IDS);
   for (const plan of input) {
     if (!plan || typeof plan !== "object") return null;
     const p = plan as PlanDefinition;

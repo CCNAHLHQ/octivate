@@ -21,8 +21,13 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-const PLAN_IDS = new Set<PlanId>(["single", "team"]);
-const INTERVALS = new Set<BillingInterval>(["one_time", "monthly", "annual"]);
+const PLAN_IDS = new Set<PlanId>(["single", "team", "scale"]);
+const INTERVALS = new Set<BillingInterval>([
+  "one_time",
+  "monthly",
+  "annual",
+  "biennial",
+]);
 const METHOD_IDS = new Set<PaymentMethodId>(
   PAYMENT_METHODS.filter((m) => m.enabled).map((m) => m.id)
 );

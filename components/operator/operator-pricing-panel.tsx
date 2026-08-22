@@ -131,8 +131,6 @@ export function OperatorPricingPanel() {
 
       <div className="pricing-grid op-pricing-grid">
         {plans.map((plan) => {
-          const interval = plan.defaultInterval;
-          const price = resolvePrice(plan, interval);
           return (
             <article
               key={plan.id}
@@ -165,26 +163,31 @@ export function OperatorPricingPanel() {
                 </div>
 
                 <div className="op-price-amount">
-                  <label className="op-price-field">
-                    <span className="op-price-label">
-                      <DollarSign className="h-3 w-3" aria-hidden />
-                      Amount (USD)
-                      <Tooltip content="Shown with currency formatting on /pricing">
-                        <Info className="h-3 w-3 text-faint" aria-hidden />
-                      </Tooltip>
-                    </span>
-                    <input
-                      className="op-price-input is-num"
-                      type="number"
-                      min={0}
-                      step={0.01}
-                      value={price.amount}
-                      onChange={(e) =>
-                        updatePrice(plan.id, interval, Number(e.target.value) || 0)
-                      }
-                    />
-                  </label>
-                  <span className="op-price-unit">{price.unitLabel || "free"}</span>
+                  {plan.intervals.map((interval) => {
+                    const price = resolvePrice(plan, interval);
+                    return (
+                      <label key={interval} className="op-price-field">
+                        <span className="op-price-label">
+                          <DollarSign className="h-3 w-3" aria-hidden />
+                          Amount (USD) · {interval.replace("_", " ")}
+                          <Tooltip content="Shown with currency formatting on /pricing">
+                            <Info className="h-3 w-3 text-faint" aria-hidden />
+                          </Tooltip>
+                        </span>
+                        <input
+                          className="op-price-input is-num"
+                          type="number"
+                          min={0}
+                          step={0.01}
+                          value={price.amount}
+                          onChange={(e) =>
+                            updatePrice(plan.id, interval, Number(e.target.value) || 0)
+                          }
+                        />
+                        <span className="op-price-unit">{price.unitLabel || "free"}</span>
+                      </label>
+                    );
+                  })}
                 </div>
 
                 <label className="op-price-field">

@@ -322,6 +322,83 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
+}
+
+.dash-account-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.dash-account-edit-name {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--mist);
+  cursor: pointer;
+}
+
+.dash-account-edit-name:hover:not(:disabled) {
+  color: var(--foam);
+  border-color: var(--line);
+  background: color-mix(in srgb, var(--foam) 5%, transparent);
+}
+
+.dash-account-rename {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  min-width: 0;
+  width: 100%;
+}
+
+.dash-account-rename-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--tide) 45%, var(--line));
+  background: color-mix(in srgb, var(--foam) 4%, transparent);
+  color: var(--foam);
+  padding: 0.28rem 0.45rem;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dash-account-rename-btn {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--foam) 4%, transparent);
+  color: var(--mist);
+  cursor: pointer;
+}
+
+.dash-account-rename-btn.is-ok {
+  color: color-mix(in srgb, var(--tide) 90%, #fff);
+  border-color: color-mix(in srgb, var(--tide) 40%, var(--line));
+}
+
+.dash-account-plan {
+  margin: 0.2rem 0 0;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--tide) 75%, var(--mist));
 }
 
 .dash-account-meta {

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { Camera, ChevronDown, LogOut, Settings } from "lucide-react";
+import { Camera, Check, ChevronDown, Pencil, Settings, X } from "lucide-react";
 import {
   setOptionalAuthUser,
   useOptionalAuth,
@@ -64,9 +64,12 @@ export function SidebarAccountCard({
   const inputRef = useRef<HTMLInputElement>(null);
   const statusBtnRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLUListElement>(null);
+  const nameInputRef = useRef<HTMLInputElement>(null);
   const [limits, setLimits] = useState<ProfileLimits>(FALLBACK_LIMITS);
   const [busy, setBusy] = useState(false);
   const [statusOpen, setStatusOpen] = useState(false);
+  const [editingName, setEditingName] = useState(false);
+  const [nameDraft, setNameDraft] = useState("");
   const [menuPos, setMenuPos] = useState<{ top: number; left: number; width: number } | null>(
     null
   );
@@ -85,6 +88,16 @@ export function SidebarAccountCard({
       cancelled = true;
     };
   }, [pathname]);
+
+  useEffect(() => {
+    if (user) setNameDraft(user.displayName || "");
+  }, [user?.displayName, user?.id]);
+
+  useEffect(() => {
+    if (!editingName) return;
+    nameInputRef.current?.focus();
+    nameInputRef.current?.select();
+  }, [editingName]);
 
   const placeMenu = useCallback(() => {
     const btn = statusBtnRef.current;
@@ -140,19 +153,6 @@ export function SidebarAccountCard({
     };
   }, [statusOpen]);
 
-  async function signOut() {
-    setBusy(true);
-    try {
-      await apiFetch("/api/auth/logout", { method: "POST", json: {} });
-      invalidateApiCache();
-      setOptionalAuthUser(null);
-      window.location.replace("/signin?signed_out=1");
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Sign out failed");
-      setBusy(false);
-    }
-  }
-
   async function setPresence(next: PresenceStatus) {
     setStatusOpen(false);
     if (!user || presenceOf(user) === next) return;
@@ -167,6 +167,34 @@ export function SidebarAccountCard({
       toast.success(`Status · ${PRESENCE_OPTIONS.find((p) => p.id === next)?.label}`);
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Could not update status");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function saveDisplayName() {
+    if (!user) return;
+    const next = nameDraft.trim();
+    if (next.length < 2) {
+      toast.error("Name must be at least 2 characters");
+      return;
+    }
+    if (next === user.displayName) {
+      setEditingName(false);
+      return;
+    }
+    setBusy(true);
+    try {
+      const res = await apiFetch<{ user: PublicUser }>("/api/auth/me", {
+        method: "PATCH",
+        json: { displayName: next },
+      });
+      setOptionalAuthUser(res.user);
+      invalidateApiCache("/api/auth/me");
+      setEditingName(false);
+      toast.success("Account name updated");
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Could not rename account");
     } finally {
       setBusy(false);
     }
@@ -223,6 +251,7 @@ export function SidebarAccountCard({
 
   const presence = presenceOf(user);
   const presenceMeta = PRESENCE_OPTIONS.find((p) => p.id === presence)!;
+  const planLabel = user.billingPlanId || "free";
 
   const statusMenu =
     mounted && statusOpen
@@ -294,11 +323,71 @@ export function SidebarAccountCard({
           />
 
           <div className="dash-account-text">
-            <p className="dash-account-name" title={user.displayName}>
-              {user.displayName}
-            </p>
+            {editingName ? (
+              <div className="dash-account-rename">
+                <input
+                  ref={nameInputRef}
+                  className="dash-account-rename-input"
+                  value={nameDraft}
+                  maxLength={64}
+                  disabled={busy}
+                  aria-label="Account display name"
+                  onChange={(e) => setNameDraft(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      void saveDisplayName();
+                    }
+                    if (e.key === "Escape") {
+                      setNameDraft(user.displayName);
+                      setEditingName(false);
+                    }
+                  }}
+                />
+                <button
+                  type="button"
+                  className="dash-account-rename-btn is-ok"
+                  disabled={busy}
+                  aria-label="Save name"
+                  onClick={() => void saveDisplayName()}
+                >
+                  <Check className="h-3.5 w-3.5" />
+                </button>
+                <button
+                  type="button"
+                  className="dash-account-rename-btn"
+                  disabled={busy}
+                  aria-label="Cancel rename"
+                  onClick={() => {
+                    setNameDraft(user.displayName);
+                    setEditingName(false);
+                  }}
+                >
+                  <X className="h-3.5 w-3.5" />
+                </button>
+              </div>
+            ) : (
+              <div className="dash-account-name-row">
+                <p className="dash-account-name" title={user.displayName}>
+                  {user.displayName}
+                </p>
+                <button
+                  type="button"
+                  className="dash-account-edit-name"
+                  disabled={busy}
+                  aria-label="Edit account name"
+                  title="Rename account"
+                  onClick={() => setEditingName(true)}
+                >
+                  <Pencil className="h-3 w-3" />
+                </button>
+              </div>
+            )}
             <p className="dash-account-meta" title={`@${user.username} · ${user.role}`}>
               @{user.username} · {user.role}
+            </p>
+            <p className="dash-account-plan" title={`Plan · ${planLabel}`}>
+              Plan · {planLabel}
             </p>
           </div>
 
@@ -331,16 +420,6 @@ export function SidebarAccountCard({
             <Settings className="h-4 w-4 shrink-0" />
             Settings
           </Link>
-
-          <button
-            type="button"
-            disabled={busy}
-            onClick={() => void signOut()}
-            className="dash-account-action is-danger"
-          >
-            <LogOut className="h-4 w-4 shrink-0" />
-            Sign out
-          </button>
         </div>
       </div>
     </div>

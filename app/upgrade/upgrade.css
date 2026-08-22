@@ -1,0 +1,164 @@
+/* Dashboard Upgrade — checkout-inspired hero + pricing cards */
+
+.upgrade-page {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.upgrade-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 18px;
+  min-height: 15.5rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.75rem 1.5rem 1.65rem;
+  border: 1px solid color-mix(in srgb, #fff 10%, transparent);
+  background: #05070f;
+  color: #f4f7fb;
+}
+
+.upgrade-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.upgrade-hero-media .hero-video,
+.upgrade-hero-media .hero-video-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upgrade-hero-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      165deg,
+      rgba(5, 7, 15, 0.35) 0%,
+      rgba(5, 7, 15, 0.62) 48%,
+      rgba(5, 7, 15, 0.9) 100%
+    ),
+    radial-gradient(
+      110% 80% at 12% 10%,
+      color-mix(in srgb, var(--tide) 24%, transparent),
+      transparent 55%
+    );
+}
+
+.upgrade-hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 0.55rem;
+  max-width: 40rem;
+}
+
+.upgrade-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, #fff 72%, var(--tide));
+}
+
+.upgrade-hero-content h1 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.upgrade-lede {
+  margin: 0;
+  color: color-mix(in srgb, #fff 74%, transparent);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 46ch;
+}
+
+.upgrade-live {
+  margin: 0.25rem 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--tide) 80%, #fff);
+}
+
+.upgrade-grid {
+  margin: 0;
+}
+
+.upgrade-card {
+  position: relative;
+}
+
+.upgrade-state-pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0.15rem 0 0.35rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  color: var(--mist);
+}
+
+.upgrade-state-pill.is-current {
+  border-color: color-mix(in srgb, var(--tide) 45%, var(--line));
+  color: color-mix(in srgb, var(--tide) 85%, #fff);
+  background: color-mix(in srgb, var(--tide) 12%, transparent);
+}
+
+.upgrade-state-pill.is-upgrade,
+.upgrade-state-pill.is-explore {
+  border-color: color-mix(in srgb, #f0b27a 45%, var(--line));
+  color: color-mix(in srgb, #f0b27a 90%, #fff);
+}
+
+.upgrade-state-pill.is-owned {
+  opacity: 0.85;
+}
+
+.upgrade-state-pill.is-unavailable {
+  border-color: color-mix(in srgb, var(--coral, #f87171) 40%, var(--line));
+  color: color-mix(in srgb, var(--coral, #f87171) 85%, #fff);
+}
+
+.upgrade-card.is-owned,
+.upgrade-card.is-unavailable {
+  opacity: 0.78;
+}
+
+.upgrade-card .price-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+@media (max-width: 720px) {
+  .upgrade-hero {
+    min-height: 13.5rem;
+    padding: 1.35rem 1.15rem 1.25rem;
+  }
+}

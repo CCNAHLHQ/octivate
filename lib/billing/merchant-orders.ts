@@ -52,6 +52,8 @@ export type MerchantOrder = {
   clientContext?: MerchantClientContext;
   /** Reserved for provider session / invoice ids */
   providerMeta?: Record<string, string | number | boolean | null>;
+  /** Linked Octivate account when checkout was authenticated */
+  userId?: string;
 };
 
 export type MerchantOrderInput = {
@@ -81,6 +83,7 @@ export type MerchantOrderInput = {
   sourceIp?: string;
   clientContext?: MerchantClientContext;
   providerMeta?: Record<string, string | number | boolean | null>;
+  userId?: string;
 };
 
 function uid() {
@@ -132,6 +135,7 @@ export async function createMerchantOrder(
     notes: input.notes,
     sourceIp: input.sourceIp || input.clientContext?.ip,
     clientContext: input.clientContext,
+    userId: input.userId,
     providerMeta: {
       gatewayReady: false,
       ...(input.providerMeta || {}),

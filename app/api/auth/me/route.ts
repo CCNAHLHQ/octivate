@@ -45,6 +45,7 @@ export async function PATCH(req: NextRequest) {
 
   let body: {
     displayName?: string;
+    email?: string;
     description?: string;
     presenceStatus?: string;
     currentPassword?: string;
@@ -78,11 +79,15 @@ export async function PATCH(req: NextRequest) {
 
     const patch: {
       displayName?: string;
+      email?: string;
       description?: string;
       presenceStatus?: PresenceStatus;
     } = {};
     if (body.displayName !== undefined) {
       patch.displayName = String(body.displayName);
+    }
+    if (body.email !== undefined) {
+      patch.email = String(body.email);
     }
     if (body.description !== undefined) {
       patch.description = sanitizeBbcodeSource(

@@ -3,10 +3,10 @@
  * Bump CATALOGUE_VERSION when seed plans change so live stores refresh.
  */
 
-export const CATALOGUE_VERSION = 2;
+export const CATALOGUE_VERSION = 3;
 
-export type PlanId = "free" | "single" | "team";
-export type BillingInterval = "one_time" | "monthly" | "annual";
+export type PlanId = "free" | "single" | "team" | "scale";
+export type BillingInterval = "one_time" | "monthly" | "annual" | "biennial";
 export type PaymentMethodId = "stripe" | "paypal" | "card" | "crypto" | "oxapay";
 
 export type PlanMeta = Record<string, string | number | boolean | null | undefined>;
@@ -50,6 +50,15 @@ export interface PaymentMethodDefinition {
   meta?: PlanMeta;
 }
 
+export const ALL_PLAN_IDS: PlanId[] = ["free", "single", "team", "scale"];
+export const PAID_PLAN_IDS: PlanId[] = ["single", "team", "scale"];
+export const ALL_INTERVALS: BillingInterval[] = [
+  "one_time",
+  "monthly",
+  "annual",
+  "biennial",
+];
+
 export const PLANS: PlanDefinition[] = [
   {
     id: "free",
@@ -74,17 +83,25 @@ export const PLANS: PlanDefinition[] = [
         unitLabel: "",
       },
     },
-    meta: { tier: 0, seats: 1, catalogueVersion: CATALOGUE_VERSION },
+    meta: {
+      tier: 0,
+      seats: 1,
+      briefs: 0,
+      durationLabel: "Ongoing free access",
+      catalogueVersion: CATALOGUE_VERSION,
+    },
   },
   {
     id: "single",
     name: "Decision brief",
     badge: "ONE SCOPE",
-    description: "One permanent, scoped decision brief with evidence and options.",
+    description:
+      "One permanent, scoped decision brief with evidence and options — ideal for a single strategic question.",
     features: [
-      "One scoped brief — PSN, evidence, gaps, and options",
+      "1 scoped brief — PSN, evidence, gaps, and options",
       "Monitoring plan so the question stays alive",
       "Optional human analyst review before release",
+      "Duration: one-time purchase · no recurring fee",
       "Buy additional briefs as separate one-time scopes",
     ],
     requiresPayment: true,
@@ -100,19 +117,26 @@ export const PLANS: PlanDefinition[] = [
         unitLabel: "one-time",
       },
     },
-    meta: { tier: 1, briefs: 1, catalogueVersion: CATALOGUE_VERSION },
+    meta: {
+      tier: 1,
+      seats: 1,
+      briefs: 1,
+      durationLabel: "One-time scope",
+      catalogueVersion: CATALOGUE_VERSION,
+    },
   },
   {
     id: "team",
     name: "Team workspace",
     badge: "FULL ACCESS",
-    description: "Ongoing agentic intelligence for teams who need the full stack.",
+    description:
+      "Ongoing agentic intelligence for teams who need the full stack every month.",
     features: [
       "Projects, briefs, monitors, stakeholders, and packs",
-      "Eight-agent pipeline within operator usage limits",
+      "Up to 12 agent runs / month within operator limits",
       "Live monitoring as conditions change",
       "Priority analyst review for sensitive briefs",
-      "Cancel any time from your account when billing is live",
+      "Monthly or annual billing · cancel any time when live",
     ],
     accessNote: {
       tone: "warm",
@@ -138,7 +162,58 @@ export const PLANS: PlanDefinition[] = [
         note: "Save ~17% vs monthly",
       },
     },
-    meta: { tier: 2, seats: "team", catalogueVersion: CATALOGUE_VERSION },
+    meta: {
+      tier: 2,
+      seats: "team",
+      briefs: 12,
+      durationLabel: "Monthly or annual",
+      catalogueVersion: CATALOGUE_VERSION,
+    },
+  },
+  {
+    id: "scale",
+    name: "Scale programme",
+    badge: "EXTENDED",
+    description:
+      "Longer runway and higher throughput for agencies and programmes that outgrow monthly Team access.",
+    features: [
+      "Everything in Team workspace",
+      "Up to 50 agent runs / billing period",
+      "Multi-seat programme access for extended engagements",
+      "Priority fulfilment and analyst review queue",
+      "Annual or 2-year prepaid commitment",
+    ],
+    accessNote: {
+      tone: "tide",
+      body: "Scale is prepaid for 12 or 24 months. Unused runs do not roll over after the commitment ends.",
+    },
+    requiresPayment: true,
+    ctaLabel: "Start scale access",
+    featured: true,
+    intervals: ["annual", "biennial"],
+    defaultInterval: "biennial",
+    prices: {
+      annual: {
+        amount: 449,
+        currency: "USD",
+        interval: "annual",
+        unitLabel: "per year",
+      },
+      biennial: {
+        amount: 799,
+        currency: "USD",
+        interval: "biennial",
+        unitLabel: "per 2 years",
+        note: "Best value vs two annuals",
+      },
+    },
+    meta: {
+      tier: 3,
+      seats: "programme",
+      briefs: 50,
+      durationLabel: "1–2 year programme",
+      catalogueVersion: CATALOGUE_VERSION,
+    },
   },
 ];
 
@@ -163,7 +238,7 @@ export const PAYMENT_METHODS: PaymentMethodDefinition[] = [
     description: "Pay with your PayPal balance or linked account.",
     logoSrc: "/payments/paypal-color.svg",
     logoAlt: "PayPal",
-    logoW: 60,
+    logoW: 80,
     logoH: 24,
     logoTone: "light",
     enabled: true,
@@ -211,11 +286,39 @@ export const PAYMENT_METHODS: PaymentMethodDefinition[] = [
 ];
 
 export const PAYMENT_DISPLAY_ICONS = [
-  { src: "/payments/paypal-color.svg", alt: "PayPal", label: "PayPal", w: 22, h: 22, tone: "light" as const },
+  {
+    src: "/payments/paypal-color.svg",
+    alt: "PayPal",
+    label: "PayPal",
+    w: 56,
+    h: 16,
+    tone: "light" as const,
+  },
   { src: "/payments/visa.svg", alt: "Visa", label: "Visa", w: 48, h: 16, tone: "light" as const },
-  { src: "/payments/mastercard.svg", alt: "Mastercard", label: "Mastercard", w: 36, h: 22, tone: "light" as const },
-  { src: "/payments/bitcoin.svg", alt: "Cryptocurrency", label: "Cryptocurrency", w: 22, h: 22, tone: "light" as const },
-  { src: "/payments/ethereum.svg", alt: "Ethereum", label: "Ethereum", w: 18, h: 22, tone: "light" as const },
+  {
+    src: "/payments/mastercard.svg",
+    alt: "Mastercard",
+    label: "Mastercard",
+    w: 36,
+    h: 22,
+    tone: "light" as const,
+  },
+  {
+    src: "/payments/bitcoin.svg",
+    alt: "Cryptocurrency",
+    label: "Cryptocurrency",
+    w: 22,
+    h: 22,
+    tone: "light" as const,
+  },
+  {
+    src: "/payments/ethereum.svg",
+    alt: "Ethereum",
+    label: "Ethereum",
+    w: 18,
+    h: 22,
+    tone: "light" as const,
+  },
 ];
 
 export function getPlan(id: PlanId): PlanDefinition {
@@ -240,6 +343,35 @@ export function formatMoney(amount: number, currency: "USD" = "USD"): string {
     minimumFractionDigits: amount % 1 === 0 ? 0 : 2,
     maximumFractionDigits: 2,
   }).format(amount);
+}
+
+export function planTierOf(planId?: PlanId | null): number {
+  if (!planId) return 0;
+  const hit = PLANS.find((p) => p.id === planId);
+  return Number(hit?.meta?.tier ?? 0) || 0;
+}
+
+export function canUpgradePlan(
+  currentPlanId: PlanId | null | undefined,
+  targetPlanId: PlanId
+): boolean {
+  if (targetPlanId === "free") return false;
+  return planTierOf(targetPlanId) > planTierOf(currentPlanId || "free");
+}
+
+export function intervalLabel(interval: BillingInterval): string {
+  switch (interval) {
+    case "one_time":
+      return "one-time";
+    case "monthly":
+      return "monthly";
+    case "annual":
+      return "annual";
+    case "biennial":
+      return "2-year";
+    default:
+      return interval;
+  }
 }
 
 export type CheckoutContext = {

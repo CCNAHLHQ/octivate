@@ -24,6 +24,7 @@ import {
   Mail,
   Store,
   Bot,
+  Rocket,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { OctivateLogo } from "@/components/brand";
@@ -63,6 +64,7 @@ const userNav = [
     sectionKey: "ws.section.analysis" as MessageKey,
     items: [
       { labelKey: "ws.nav.stakeholders" as MessageKey, href: "/dashboard/stakeholders", icon: Users },
+      { labelKey: "ws.nav.upgrade" as MessageKey, href: "/dashboard/upgrade", icon: Rocket },
     ],
   },
 ];
@@ -324,17 +326,6 @@ export function AppShell({ children, variant = "user" }: AppShellProps) {
                   {t("ws.askStrategic")}
                 </span>
               </Link>
-              {isOperatorUser ? (
-                <Link
-                  href="/dashboard/operator#pulse"
-                  onClick={(e) => onNavClick(e, "/dashboard/operator#pulse")}
-                >
-                  <span className="btn btn-ghost btn-sm dash-op-dash-btn">
-                    <Shield className="h-3.5 w-3.5" aria-hidden />
-                    {t("ws.operatorDashboard")}
-                  </span>
-                </Link>
-              ) : null}
             </div>
           ) : (
             <div className="dash-cta-stack">

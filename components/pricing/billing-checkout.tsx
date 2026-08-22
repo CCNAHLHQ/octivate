@@ -61,7 +61,12 @@ import { BrandLogoLoading } from "@/components/ui/brand-logo-loading";
 import { SmoothSelect } from "@/components/ui/smooth-select";
 import { ConfettiBurst } from "@/components/ui/confetti-burst";
 import { PaymentMethodMark } from "@/components/pricing/payment-method-marks";
-import { useOptionalAuth } from "@/components/auth/use-optional-auth";
+import {
+  setOptionalAuthUser,
+  useOptionalAuth,
+} from "@/components/auth/use-optional-auth";
+import { invalidateApiCache } from "@/lib/api-client";
+import type { PublicUser } from "@/lib/auth/types";
 import { cn } from "@/lib/utils";
 
 type Step = "details" | "submitting" | "done";
@@ -402,6 +407,10 @@ export function BillingCheckoutForm({
           BILLING_COUNTRIES.find((c) => c.code === country)?.name || country,
       });
       setOrderId(id);
+      if (data.user) {
+        setOptionalAuthUser(data.user as PublicUser);
+        invalidateApiCache("/api/auth/me");
+      }
       const elapsed = Date.now() - started;
       if (elapsed < minHoldMs) {
         await new Promise((r) => window.setTimeout(r, minHoldMs - elapsed));

@@ -198,12 +198,13 @@ export function SiteNavbar() {
             <SiteTranslate />
             <ThemeToggle variant="nav" />
             <SiteAlerts />
-            {!inApp && ready && signedIn && isOperator ? (
+            {ready && signedIn && isOperator ? (
               <Link className="site-nav-operator" href="/dashboard/operator">
-                {t("nav.operatorDashboard")}
+                <Shield className="site-nav-ico" aria-hidden strokeWidth={2.25} />
+                <span>{t("nav.operatorDashboard")}</span>
               </Link>
             ) : null}
-            {!inApp && ready && !signedIn ? (
+            {ready && !signedIn ? (
               <Link className="site-nav-signin" href="/signin">
                 {t("nav.signIn")}
               </Link>
@@ -277,7 +278,7 @@ export function SiteNavbar() {
           )}
 
           <div className="site-mobile-actions">
-            {!inApp && ready && signedIn && isOperator ? (
+            {ready && signedIn && isOperator ? (
               <Link
                 href="/dashboard/operator"
                 className="site-nav-link is-mobile"
@@ -287,7 +288,7 @@ export function SiteNavbar() {
                 <span className="site-nav-label">{t("nav.operatorDashboard")}</span>
               </Link>
             ) : null}
-            {!inApp && ready && !signedIn ? (
+            {ready && !signedIn ? (
               <Link
                 href="/signin"
                 className="site-nav-link is-mobile"

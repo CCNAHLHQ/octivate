@@ -1,3 +1,5 @@
+import type { BillingInterval, PlanId } from "@/lib/billing/plans";
+
 export type UserRole = "member" | "operator";
 
 export type StaffProfileId = "shemuel" | "jaden";
@@ -50,6 +52,11 @@ export type AuthUser = {
   /** Profile description stored as sanitized BBCode source. */
   description?: string;
   presenceStatus?: PresenceStatus;
+  /** Active billing catalogue plan (from checkout / paid merchant order). */
+  billingPlanId?: PlanId;
+  billingInterval?: BillingInterval;
+  billingUpdatedAt?: string;
+  billingOrderId?: string;
 };
 
 /** Safe shape returned to clients — never includes hashes/salts. */
@@ -67,6 +74,9 @@ export type PublicUser = {
   /** BBCode source for profile description. */
   description?: string;
   presenceStatus?: PresenceStatus;
+  billingPlanId?: PlanId;
+  billingInterval?: BillingInterval;
+  billingUpdatedAt?: string;
 };
 
 export type AuthSession = {

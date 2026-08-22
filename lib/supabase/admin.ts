@@ -79,6 +79,25 @@ export async function supabaseDisableUser(supabaseUserId: string): Promise<void>
   await client.auth.admin.updateUserById(supabaseUserId, { ban_duration: "876600h" });
 }
 
+export async function supabaseUpdateUserProfile(
+  supabaseUserId: string,
+  patch: { displayName?: string; email?: string }
+): Promise<boolean> {
+  const client = getSupabaseAdmin();
+  if (!client) return false;
+  const payload: {
+    email?: string;
+    user_metadata?: Record<string, string>;
+  } = {};
+  if (patch.email) payload.email = patch.email;
+  if (patch.displayName !== undefined) {
+    payload.user_metadata = { display_name: patch.displayName };
+  }
+  if (!payload.email && !payload.user_metadata) return true;
+  const { error } = await client.auth.admin.updateUserById(supabaseUserId, payload);
+  return !error;
+}
+
 export async function supabaseCountUsers(): Promise<number | null> {
   const client = getSupabaseAdmin();
   if (!client) return null;

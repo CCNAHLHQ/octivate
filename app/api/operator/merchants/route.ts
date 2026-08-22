@@ -6,6 +6,7 @@ import {
   updateMerchantOrderStatus,
   type MerchantOrderStatus,
 } from "@/lib/billing/merchant-orders";
+import { applyPlanEntitlement } from "@/lib/billing/entitlements";
 
 const STATUSES = new Set<MerchantOrderStatus>([
   "submitted",
@@ -75,5 +76,18 @@ export async function PATCH(req: NextRequest) {
 
   const updated = await updateMerchantOrderStatus(id, status);
   if (!updated) return jsonError("Order not found", 404);
-  return jsonOk({ order: updated });
+
+  let entitled = null;
+  if (status === "paid") {
+    entitled = await applyPlanEntitlement({
+      userId: updated.userId,
+      emails: updated.emails,
+      planId: updated.planId,
+      interval: updated.interval,
+      orderId: updated.id,
+      upgradeOnly: false,
+    });
+  }
+
+  return jsonOk({ order: updated, user: entitled });
 }

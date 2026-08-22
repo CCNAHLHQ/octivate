@@ -10,6 +10,7 @@ import {
   FileText,
   Layers,
   MonitorSmartphone,
+  Rocket,
   Sparkles,
   Users,
   ShieldCheck,
@@ -23,10 +24,12 @@ import {
   type PlanId,
   PAYMENT_DISPLAY_ICONS,
   formatMoney,
+  intervalLabel,
   resolvePrice,
 } from "@/lib/billing/plans";
 import { apiFetch } from "@/lib/api-client";
 import { touchCheckoutNavigationTrail } from "@/lib/billing/client-context";
+import { cn } from "@/lib/utils";
 
 const ICON_TO_METHOD: Record<string, PaymentMethodId> = {
   PayPal: "paypal",
@@ -41,6 +44,7 @@ const PLAN_ICONS: Record<PlanId, typeof Sparkles> = {
   free: Sparkles,
   single: FileText,
   team: Users,
+  scale: Rocket,
 };
 
 function checkoutHref(
@@ -95,7 +99,7 @@ function PaymentIcons({
           className="pay-item"
           onClick={() => onPick?.(m.label)}
         >
-          <span className="pay-logo">
+          <span className={cn("pay-logo", m.label === "PayPal" && "is-paypal")}>
             <Image src={m.src} alt={m.alt} width={m.w} height={m.h} unoptimized />
           </span>
           <span>{m.label}</span>
@@ -141,9 +145,13 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
 
   const team = plans.find((p) => p.id === "team");
   const single = plans.find((p) => p.id === "single");
+  const scale = plans.find((p) => p.id === "scale");
   const teamPrice = team ? formatMoney(resolvePrice(team, team.defaultInterval).amount) : "—";
   const singlePrice = single
     ? formatMoney(resolvePrice(single, single.defaultInterval).amount)
+    : "—";
+  const scalePrice = scale
+    ? formatMoney(resolvePrice(scale, scale.defaultInterval).amount)
     : "—";
 
   return (
@@ -154,8 +162,9 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
             <span className="eyebrow">Pricing</span>
             <h1 className="reveal in">Plans built around the decision</h1>
             <p className="lede reveal in" data-delay="1">
-              Explore free. Unlock a scoped decision brief for {singlePrice}, or Team
-              workspace for {teamPrice}/mo with the full agentic stack.
+              Explore free. Unlock a scoped decision brief for {singlePrice}, Team
+              workspace from {teamPrice}/mo, or Scale programme from {scalePrice} for
+              longer runway and higher throughput.
             </p>
           </div>
 
@@ -223,9 +232,11 @@ export function PricingPage({ initialPlans }: { initialPlans: PlanDefinition[] }
                         href={checkoutHref(plan.id, interval)}
                         className={`btn ${plan.featured ? "btn-primary" : "btn-ghost"} price-cta glimmer-btn`}
                       >
-                        {plan.id === "team"
+                        {plan.id === "team" && interval === "monthly"
                           ? `${plan.ctaLabel} — ${priceLabel}/mo`
-                          : `${plan.ctaLabel} — ${priceLabel}`}
+                          : `${plan.ctaLabel} — ${priceLabel}${
+                              price.unitLabel ? ` ${intervalLabel(interval)}` : ""
+                            }`}
                       </Link>
                     ) : (
                       <Link

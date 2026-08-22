@@ -12,7 +12,8 @@ import type {
   StaffProfileId,
   UserRole,
 } from "@/lib/auth/types";
-import { supabaseCreateUser, supabaseVerifyPassword } from "@/lib/supabase/admin";
+import { supabaseCreateUser, supabaseUpdateUserProfile, supabaseVerifyPassword } from "@/lib/supabase/admin";
+import type { BillingInterval, PlanId } from "@/lib/billing/plans";
 
 const COLLECTION = "users";
 
@@ -38,6 +39,9 @@ export function toPublicUser(u: AuthUser): PublicUser {
       : null,
     description: u.description || "",
     presenceStatus: normalizePresence(u.presenceStatus),
+    billingPlanId: u.billingPlanId || "free",
+    billingInterval: u.billingInterval,
+    billingUpdatedAt: u.billingUpdatedAt,
   };
 }
 
@@ -193,6 +197,7 @@ export async function updateUserProfile(
   userId: string,
   patch: {
     displayName?: string;
+    email?: string;
     description?: string;
     avatarExt?: string | null;
     avatarUpdatedAt?: string | null;
@@ -207,6 +212,17 @@ export async function updateUserProfile(
     const name = patch.displayName.replace(/[\u0000-\u001f<>]/g, "").trim().slice(0, 64);
     if (name.length < 2) throw new Error("Display name must be at least 2 characters");
     next.displayName = name;
+  }
+  if (patch.email !== undefined) {
+    const email = patch.email.trim().toLowerCase();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      throw new Error("Enter a valid email address");
+    }
+    const taken = users.find(
+      (u) => u.id !== userId && u.email?.toLowerCase() === email
+    );
+    if (taken) throw new Error("That email is already in use");
+    next.email = email;
   }
   if (patch.description !== undefined) {
     next.description = patch.description;
@@ -223,7 +239,36 @@ export async function updateUserProfile(
   }
   users[idx] = next;
   await writeCollection(COLLECTION, users);
+
+  if (next.supabaseUserId) {
+    await supabaseUpdateUserProfile(next.supabaseUserId, {
+      displayName: next.displayName,
+      email: patch.email !== undefined ? next.email : undefined,
+    });
+  }
   return next;
+}
+
+export async function updateUserBilling(
+  userId: string,
+  patch: {
+    billingPlanId: PlanId;
+    billingInterval: BillingInterval;
+    billingOrderId?: string;
+  }
+): Promise<AuthUser | null> {
+  const users = await listUsers();
+  const idx = users.findIndex((u) => u.id === userId);
+  if (idx < 0) return null;
+  users[idx] = {
+    ...users[idx],
+    billingPlanId: patch.billingPlanId,
+    billingInterval: patch.billingInterval,
+    billingUpdatedAt: new Date().toISOString(),
+    billingOrderId: patch.billingOrderId || users[idx].billingOrderId,
+  };
+  await writeCollection(COLLECTION, users);
+  return users[idx];
 }
 
 /** Set password without requiring the current one (forgot-password flow). */

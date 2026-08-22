@@ -13,6 +13,7 @@ import {
   type PresenceStatus,
   type PublicUser,
 } from "@/lib/auth/types";
+import { setOptionalAuthUser } from "@/components/auth/use-optional-auth";
 import { cn } from "@/lib/utils";
 
 type AccountTab = "profile" | "security" | "presence" | "alerts" | "session";
@@ -67,6 +68,7 @@ export default function AccountPage() {
   const [user, setUser] = useState<PublicUser | null>(null);
   const [limits, setLimits] = useState<ProfileLimits>(FALLBACK_LIMITS);
   const [displayName, setDisplayName] = useState("");
+  const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -86,6 +88,7 @@ export default function AccountPage() {
     }
     setUser(res.user);
     setDisplayName(res.user.displayName);
+    setEmail(res.user.email);
     setDescription(res.user.description || "");
     if (res.profileLimits) setLimits(res.profileLimits);
   }, [router]);
@@ -102,11 +105,13 @@ export default function AccountPage() {
         "/api/auth/me",
         {
           method: "PATCH",
-          json: { displayName, description },
+          json: { displayName, email, description },
         }
       );
       setUser(res.user);
+      setEmail(res.user.email);
       setDescription(res.user.description || "");
+      setOptionalAuthUser(res.user);
       if (res.profileLimits) setLimits(res.profileLimits);
       invalidateApiCache("/api/auth/me");
       toast.success(t("ws.account.profileSaved"));
@@ -315,8 +320,19 @@ export default function AccountPage() {
                       maxLength={64}
                     />
                   </label>
+                  <label className="mt-3 block text-[11px] font-mono uppercase tracking-wider text-faint">
+                    Email
+                    <input
+                      type="email"
+                      autoComplete="email"
+                      className="mt-1 w-full rounded-[10px] border border-[var(--line)] bg-[var(--abyss)] px-3 py-2 text-sm text-foam"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </label>
                   <p className="mt-2 font-mono text-[11px] text-faint">
-                    @{user.username} · {user.email} · {user.role}
+                    @{user.username} · {user.role}
+                    {user.billingPlanId ? ` · plan ${user.billingPlanId}` : ""}
                   </p>
 
                   <div className="mt-4">
@@ -331,7 +347,7 @@ export default function AccountPage() {
                   <button
                     type="button"
                     className="btn btn-primary btn-sm mt-4"
-                    disabled={busy || displayName.trim().length < 2}
+                    disabled={busy || displayName.trim().length < 2 || !email.trim()}
                     onClick={() => void saveProfile()}
                   >
                     {t("ws.account.saveProfile")}

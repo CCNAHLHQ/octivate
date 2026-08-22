@@ -28,7 +28,7 @@ export const PROMO_CATALOG: PromoDefinition[] = [
     currency: "USD",
     label: "OCTIVATE10",
     description: "Welcome discount on paid plans",
-    appliesTo: ["single", "team"],
+    appliesTo: ["single", "team", "scale"],
     active: true,
     defaultOffer: true,
   },

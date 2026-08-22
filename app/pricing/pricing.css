@@ -379,9 +379,13 @@
   object-fit: contain;
 }
 
-.pay-logo.is-brand,
-.pay-item:first-child .pay-logo {
+.pay-logo.is-brand {
   background: #635bff;
+}
+
+.pay-logo.is-paypal {
+  background: transparent;
+  box-shadow: none;
 }
 
 .pay-item {

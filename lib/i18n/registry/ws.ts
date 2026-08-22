@@ -9,6 +9,7 @@ export const WS_MESSAGES = {
   "ws.nav.sources": "Sources",
   "ws.nav.briefs": "Briefs",
   "ws.nav.stakeholders": "Stakeholders",
+  "ws.nav.upgrade": "Upgrade",
   "ws.mode.workspace": "Workspace mode",
   "ws.mode.operator": "Operator mode",
   "ws.askStrategic": "Ask strategic question",
